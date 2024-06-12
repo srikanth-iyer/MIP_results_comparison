@@ -1,0 +1,16 @@
+---
+title: Results
+listing: 
+    contents: notebooks 
+    sort: "title desc"
+    type: table 
+    categories: true 
+    sort-ui: false 
+    filter-ui: true 
+    exclude:
+        title: 
+            - "*thin*"
+            - "26 zone*"
+page-layout: full
+title-block-banner: true
+---

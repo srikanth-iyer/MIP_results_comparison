@@ -1,0 +1,47 @@
+distributed_gen_fn: nrel_cambium_distr_pv_2022_utc.parquet
+distributed_gen_scenario: MidCase
+
+# List the method to calculate total distributed generation in each region (not all
+# regions need to be listed here). Both methods use a normalized profile in the file
+# specified by "distributed_gen_profiles_fn". Values for each planning year/region
+# should be included in the "distributed_gen_values" parameter.
+# - "capacity": Use the capacity (MW) to scale up generation
+# - "fraction_load": Distributed generation is a specific fraction of total load
+# distributed_gen_method:
+#   BASN: capacity
+#   CANO: capacity
+#   CASO: capacity
+#   FRCC: capacity
+#   ISNE: capacity
+#   MISC: capacity
+#   MISE: capacity
+#   MISS: capacity
+#   MISW: capacity
+#   NWPP: capacity
+#   NYCW: capacity
+#   NYUP: capacity
+#   PJMC: capacity
+#   PJMD: capacity
+#   PJME: capacity
+#   PJMW: capacity
+#   RMRG: capacity
+#   SPPC: capacity
+#   SPPN: capacity
+#   SPPS: capacity
+#   SRCA: capacity
+#   SRCE: capacity
+#   SRSE: capacity
+#   SRSG: capacity
+#   TRE: capacity
+
+# Values - either MW or fraction of load - matching the methods listed for each region
+# in "distributed_gen_method". These can be varied by scenario by adding them to an
+# associated scenario in "settings_management".
+# distributed_gen_values:
+
+# Set this parameter to "true" if existing distributed generation in each region should
+# be represented as a resource rather than being subtracted from demand.
+dg_as_resource: true
+
+# Distribution loss used when subtracting distributed generation from total load.
+avg_distribution_loss: 0.0453

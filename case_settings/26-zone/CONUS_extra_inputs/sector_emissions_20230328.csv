@@ -1,0 +1,181 @@
+Run Name (copy),Sector || To (Combined) (group),Year,MMT
+IIJA,buildings,2022,657.587975
+IIJA,buildings,2024,652.0207109
+IIJA,buildings,2026,646.4099232
+IIJA,buildings,2028,641.7991012
+IIJA,buildings,2030,638.3927442
+IIJA,buildings,2032,635.1634622
+IIJA,buildings,2035,629.5127609
+IIJA,buildings,2040,626.4799428
+IIJA,buildings,2050,638.7297981
+"IRA, Conservative",buildings,2022,657.2647062
+"IRA, Conservative",buildings,2024,648.6210631
+"IRA, Conservative",buildings,2026,637.107842
+"IRA, Conservative",buildings,2028,621.6982443
+"IRA, Conservative",buildings,2030,605.7398028
+"IRA, Conservative",buildings,2032,592.1263487
+"IRA, Conservative",buildings,2035,569.7772889
+"IRA, Conservative",buildings,2040,548.8670391
+"IRA, Conservative",buildings,2050,578.8813935
+"IRA, Midrange",buildings,2022,657.2562709
+"IRA, Midrange",buildings,2024,648.6986029
+"IRA, Midrange",buildings,2026,635.2473932
+"IRA, Midrange",buildings,2028,612.4382206
+"IRA, Midrange",buildings,2030,589.9655565
+"IRA, Midrange",buildings,2032,567.1968415
+"IRA, Midrange",buildings,2035,531.0614808
+"IRA, Midrange",buildings,2040,491.7885546
+"IRA, Midrange",buildings,2050,477.4535665
+"IRA, Optimistic",buildings,2022,656.979355
+"IRA, Optimistic",buildings,2024,648.3392807
+"IRA, Optimistic",buildings,2026,633.9835304
+"IRA, Optimistic",buildings,2028,609.2523941
+"IRA, Optimistic",buildings,2030,582.7842891
+"IRA, Optimistic",buildings,2032,554.9639582
+"IRA, Optimistic",buildings,2035,511.6286024
+"IRA, Optimistic",buildings,2040,459.8775379
+"IRA, Optimistic",buildings,2050,429.1900831
+Net-Zero Pathway,buildings,2022,657.4631678
+Net-Zero Pathway,buildings,2024,640.0030987
+Net-Zero Pathway,buildings,2026,618.6353317
+Net-Zero Pathway,buildings,2028,643.868254
+Net-Zero Pathway,buildings,2030,596.2772109
+Net-Zero Pathway,buildings,2032,532.6654204
+Net-Zero Pathway,buildings,2035,465.8529605
+Net-Zero Pathway,buildings,2040,288.7750426
+Net-Zero Pathway,buildings,2050,84.28238655
+IIJA,industry,2022,891.5585891
+IIJA,industry,2024,914.8259558
+IIJA,industry,2026,919.9877721
+IIJA,industry,2028,930.828039
+IIJA,industry,2030,939.2698598
+IIJA,industry,2032,951.3075798
+IIJA,industry,2035,957.1708961
+IIJA,industry,2040,989.3149101
+IIJA,industry,2050,"1,055.00"
+"IRA, Conservative",industry,2022,891.4709852
+"IRA, Conservative",industry,2024,917.1801039
+"IRA, Conservative",industry,2026,888.0150183
+"IRA, Conservative",industry,2028,860.9819643
+"IRA, Conservative",industry,2030,850.9602783
+"IRA, Conservative",industry,2032,807.1142275
+"IRA, Conservative",industry,2035,760.3142133
+"IRA, Conservative",industry,2040,783.5223967
+"IRA, Conservative",industry,2050,873.8159798
+"IRA, Midrange",industry,2022,890.2221589
+"IRA, Midrange",industry,2024,917.9436717
+"IRA, Midrange",industry,2026,840.3700445
+"IRA, Midrange",industry,2028,832.7053319
+"IRA, Midrange",industry,2030,843.0962872
+"IRA, Midrange",industry,2032,799.4178064
+"IRA, Midrange",industry,2035,720.9691223
+"IRA, Midrange",industry,2040,768.881187
+"IRA, Midrange",industry,2050,843.4451611
+"IRA, Optimistic",industry,2022,889.9538481
+"IRA, Optimistic",industry,2024,916.8849518
+"IRA, Optimistic",industry,2026,842.8595026
+"IRA, Optimistic",industry,2028,830.2676026
+"IRA, Optimistic",industry,2030,837.7937835
+"IRA, Optimistic",industry,2032,797.2249986
+"IRA, Optimistic",industry,2035,704.7024174
+"IRA, Optimistic",industry,2040,762.1319036
+"IRA, Optimistic",industry,2050,841.6311375
+Net-Zero Pathway,industry,2022,890.9235686
+Net-Zero Pathway,industry,2024,905.5637166
+Net-Zero Pathway,industry,2026,853.2380925
+Net-Zero Pathway,industry,2028,806.804255
+Net-Zero Pathway,industry,2030,736.761183
+Net-Zero Pathway,industry,2032,680.4149381
+Net-Zero Pathway,industry,2035,560.5660759
+Net-Zero Pathway,industry,2040,389.5237422
+Net-Zero Pathway,industry,2050,-177.1800932
+IIJA,power,2022,"1,557.26"
+IIJA,power,2024,"1,574.51"
+IIJA,power,2026,"1,299.91"
+IIJA,power,2028,"1,146.25"
+IIJA,power,2030,980.9862768
+IIJA,power,2032,912.8421443
+IIJA,power,2035,775.1578568
+IIJA,power,2040,741.5695982
+IIJA,power,2050,732.9048465
+"IRA, Conservative",power,2022,"1,556.95"
+"IRA, Conservative",power,2024,"1,519.47"
+"IRA, Conservative",power,2026,"1,213.25"
+"IRA, Conservative",power,2028,"1,042.57"
+"IRA, Conservative",power,2030,694.1386905
+"IRA, Conservative",power,2032,597.6367609
+"IRA, Conservative",power,2035,337.1605463
+"IRA, Conservative",power,2040,507.6160801
+"IRA, Conservative",power,2050,820.1472877
+"IRA, Midrange",power,2022,"1,556.55"
+"IRA, Midrange",power,2024,"1,582.04"
+"IRA, Midrange",power,2026,"1,339.24"
+"IRA, Midrange",power,2028,"1,133.44"
+"IRA, Midrange",power,2030,740.8768452
+"IRA, Midrange",power,2032,619.5054749
+"IRA, Midrange",power,2035,369.7917836
+"IRA, Midrange",power,2040,554.8859907
+"IRA, Midrange",power,2050,790.2866793
+"IRA, Optimistic",power,2022,"1,555.42"
+"IRA, Optimistic",power,2024,"1,505.67"
+"IRA, Optimistic",power,2026,"1,152.91"
+"IRA, Optimistic",power,2028,"1,016.49"
+"IRA, Optimistic",power,2030,676.0934715
+"IRA, Optimistic",power,2032,561.2060508
+"IRA, Optimistic",power,2035,324.2624783
+"IRA, Optimistic",power,2040,515.5746961
+"IRA, Optimistic",power,2050,784.6309108
+Net-Zero Pathway,power,2022,"1,545.90"
+Net-Zero Pathway,power,2024,"1,105.55"
+Net-Zero Pathway,power,2026,589.3651298
+Net-Zero Pathway,power,2028,399.2065926
+Net-Zero Pathway,power,2030,185.8793422
+Net-Zero Pathway,power,2032,146.8148573
+Net-Zero Pathway,power,2035,130.1217967
+Net-Zero Pathway,power,2040,135.5327332
+Net-Zero Pathway,power,2050,90.51787302
+IIJA,transportation,2022,"1,859.49"
+IIJA,transportation,2024,"1,841.36"
+IIJA,transportation,2026,"1,769.91"
+IIJA,transportation,2028,"1,684.81"
+IIJA,transportation,2030,"1,598.38"
+IIJA,transportation,2032,"1,495.66"
+IIJA,transportation,2035,"1,347.55"
+IIJA,transportation,2040,"1,140.84"
+IIJA,transportation,2050,810.8400359
+"IRA, Conservative",transportation,2022,"1,859.43"
+"IRA, Conservative",transportation,2024,"1,840.93"
+"IRA, Conservative",transportation,2026,"1,767.35"
+"IRA, Conservative",transportation,2028,"1,683.24"
+"IRA, Conservative",transportation,2030,"1,583.89"
+"IRA, Conservative",transportation,2032,"1,471.58"
+"IRA, Conservative",transportation,2035,"1,320.12"
+"IRA, Conservative",transportation,2040,"1,096.50"
+"IRA, Conservative",transportation,2050,678.3233525
+"IRA, Midrange",transportation,2022,"1,859.50"
+"IRA, Midrange",transportation,2024,"1,838.50"
+"IRA, Midrange",transportation,2026,"1,741.75"
+"IRA, Midrange",transportation,2028,"1,641.80"
+"IRA, Midrange",transportation,2030,"1,519.32"
+"IRA, Midrange",transportation,2032,"1,362.46"
+"IRA, Midrange",transportation,2035,"1,141.32"
+"IRA, Midrange",transportation,2040,853.5331221
+"IRA, Midrange",transportation,2050,563.7552799
+"IRA, Optimistic",transportation,2022,"1,859.96"
+"IRA, Optimistic",transportation,2024,"1,835.93"
+"IRA, Optimistic",transportation,2026,"1,724.52"
+"IRA, Optimistic",transportation,2028,"1,607.17"
+"IRA, Optimistic",transportation,2030,"1,472.91"
+"IRA, Optimistic",transportation,2032,"1,290.59"
+"IRA, Optimistic",transportation,2035,"1,046.31"
+"IRA, Optimistic",transportation,2040,728.682496
+"IRA, Optimistic",transportation,2050,443.1008148
+Net-Zero Pathway,transportation,2022,"1,867.96"
+Net-Zero Pathway,transportation,2024,"1,858.54"
+Net-Zero Pathway,transportation,2026,"1,780.89"
+Net-Zero Pathway,transportation,2028,"1,573.30"
+Net-Zero Pathway,transportation,2030,"1,484.34"
+Net-Zero Pathway,transportation,2032,"1,328.20"
+Net-Zero Pathway,transportation,2035,"1,057.85"
+Net-Zero Pathway,transportation,2040,613.185849
+Net-Zero Pathway,transportation,2050,-46.76500588

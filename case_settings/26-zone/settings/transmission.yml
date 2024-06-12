@@ -1,0 +1,98 @@
+# Transmission financial information to calculate annual investment costs
+# capex_mw_mile: Capital cost per MW-mile for all (numeric) or each model region (dict).
+# WACC and investment years from https://www.sciencedirect.com/science/article/abs/pii/S0301421519305816
+transmission_investment_cost:
+  # If true, uses interconnect_annuity when available
+  use_total: true
+  spur:
+    capex_mw_mile:
+      BASN: 4333 # wecc
+      CANO: 9749 # ca
+      CASO: 9749 # ca
+      FRCC: 4555 # fl
+      ISNE: 9749 # ne
+      MISC: 4333 # dont have a good match, use wecc number
+      MISE: 4555 # great_lakes
+      MISS: 9749 # miso_s
+      MISW: 4555 # great_lakes
+      NWPP: 4333 # wecc
+      NYCW: 60660 # This is NYC, use 13.65 of wecc
+      NYUP: 9749 # ny
+      PJMC: 9749 # use any pjm number
+      PJMD: 9749 # pjm_s
+      PJME: 9749 # pjm_md_nj
+      PJMW: 9749 # use any pjm number
+      RMRG: 4333 # wecc
+      SPPC: 4222 # lower_midwest
+      SPPN: 4333 # upper_midwest
+      SPPS: 4222 # lower_midwest
+      SRCA: 4222 # vaca
+      SRCE: 4222 # tva
+      SRSE: 5499 # south
+      SRSG: 4333 # wecc
+      TRE: 4333 # tx
+      ERC_REST: 4333 # tx
+      ERC_WEST: 4333 # tx
+      ERC_PHDL: 4333 # tx
+      TRE_WEST: 4333 # tx
+    wacc: 0.044
+    investment_years: 60
+  offshore_spur:
+    # If missing, NREL ATB capex_mw_mile is used
+    capex_mw_mile:
+    wacc: 0.044
+    investment_years: 60
+
+# tx_costs_2013 = {
+#     "wecc": 1350,
+#     "ca": 1350 * 2.25,  # According to Reeds docs, CA is 2.25x the rest of WECC
+#     "tx": 1350,
+#     "upper_midwest": 900,
+#     "lower_midwest": 900,
+#     "miso_s": 1750,
+#     "great_lakes": 1050,
+#     "pjm_s": 1350,
+#     "pj_pa": 1750,
+#     "pjm_md_nj": 4250,  # Bins are $1500 wide - assume max bin is $750 above max
+#     "ny": 2750,
+#     "tva": 1050,
+#     "south": 1350,
+#     "fl": 1350,
+#     "vaca": 900,
+#     "ne": 4250,  # Bins are $1500 wide - assume max bin is $750 above max
+# }
+  tx:
+    capex_mw_mile: # Now the following are place holders
+      BASN: 1500 # wecc
+      CANO: 3375 # ca
+      CASO: 3375 # ca
+      FRCC: 1500 # fl
+      ISNE: 4722 # ne
+      MISC: 1500 # dont have a good match, use general wecc number
+      MISE: 1167 # great_lakes
+      MISS: 1944 # miso_s
+      MISW: 1167 # great_lakes
+      NWPP: 1500 # wecc
+      NYCW: 20475 # This is NYC, use 13.65 of wecc
+      NYUP: 3055 # ny
+      PJMC: 4722 # use any pjm number
+      PJMD: 1500 # pjm_s
+      PJME: 4722 # pjm_md_nj
+      PJMW: 4722 # use any pjm number
+      RMRG: 1500 # wecc
+      SPPC: 1000 # lower_midwest
+      SPPN: 1000 # upper_midwest
+      SPPS: 1000 # lower_midwest
+      SRCA: 1000 # vaca
+      SRCE: 1167 # tva
+      SRSE: 1500 # south
+      SRSG: 1500 # wecc
+      TRE: 1500 # tx
+      TRE_WEST: 1500 # tx
+    wacc: 0.044
+    investment_years: 60
+# Percent expansion in planning period above and beyond existing transmission
+tx_expansion_per_period: 100.0
+tx_expansion_mw_per_period: 100000
+
+tx_line_loss_100_miles: 0.01

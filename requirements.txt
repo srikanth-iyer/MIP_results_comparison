@@ -1,0 +1,9 @@
+
+altair==5.0.1
+pandas
+nbformat
+jupyter
+geopandas
+tabulate
+itables
+joblib

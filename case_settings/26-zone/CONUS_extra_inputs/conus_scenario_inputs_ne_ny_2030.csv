@@ -1,0 +1,3 @@
+case_id,year,demand_response,renewable_battery_capex_ccs,ng_price,dgsolar,limitedtransmission,ira,min_cap
+p01,2030,IRA_MID,renewable_mid_yesccs,reference,IRA_MID,no,no,none
+p02_m,2030,IRA_MID,renewable_mid_noccs,reference,IRA_MID,yes,yes,base

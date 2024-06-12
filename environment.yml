@@ -1,0 +1,17 @@
+name: mip_figures
+channels:
+  - conda-forge
+  # - defaults
+dependencies:
+  - python=3.10 # Remove for tox.ini & setup.py
+  - pip
+  - altair
+  - pandas
+  - geopandas
+  # - ipykernel
+  # - jupyter
+  - vl-convert-python
+  - nbformat
+  - jupyter
+  - typer
+  - bioconda::snakemake

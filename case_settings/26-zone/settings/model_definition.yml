@@ -1,0 +1,257 @@
+# REGIONS
+# Select the regions and any regional aggregations that should be performed.
+# This currenly only works for IPM regions, either as the regions used in GenX or as
+# aggregations.
+
+model_regions:
+  - BASN
+  - CANO
+  - CASO
+  - FRCC
+  - ISNE
+  - MISC
+  - MISE
+  - MISS
+  - MISW
+  - NWPP
+  - NYCW
+  - NYUP
+  - PJMC
+  - PJMD
+  - PJME
+  - PJMW
+  - RMRG
+  - SPPC
+  - SPPN
+  - SPPS
+  - SRCA
+  - SRCE
+  - SRSE
+  - SRSG
+  - TRE
+  - TRE_WEST
+
+# Comment out this setting if no aggregated regions are included in the study.
+region_aggregations:
+  BASN: [WECC_ID, WECC_UT, WECC_NNV, WECC_SNV]
+  CANO: [WEC_CALN, WEC_BANC]
+  CASO: [WECC_SCE, WEC_LADW, WEC_SDGE]
+  # FRCC
+  ISNE: [NENG_ME, NENGREST, NENG_CT]
+  MISC: [MIS_IL, MIS_MO, S_D_AECI, MIS_INKY]
+  MISE: [MIS_LMI]
+  MISS: [MIS_AMSO, MIS_WOTA, MIS_LA, MIS_AR, MIS_D_MS]
+  MISW: [MIS_MAPP, MIS_WUMS, MIS_MNWI, MIS_IA, MIS_MIDA]
+  NWPP: [WECC_PNW, WECC_MT]
+  NYCW: [NY_Z_J, NY_Z_K]
+  NYUP: [NY_Z_A, NY_Z_B, NY_Z_C&E, NY_Z_D, NY_Z_F, NY_Z_G-I] 
+  PJMC: [PJM_COMD]
+  PJMD: [PJM_Dom]
+  PJME: [PJM_WMAC, PJM_EMAC, PJM_SMAC, PJM_PENE]
+  PJMW: [PJM_West, PJM_AP, PJM_ATSI]
+  RMRG: [WECC_CO, WECC_WY]
+  SPPC: [SPP_N]
+  SPPN: [SPP_WAUE, SPP_NEBR]
+  SPPS: [SPP_WEST, SPP_SPS]
+  SRCA: [S_VACA]
+  SRSE: [S_SOU]
+  SRCE: [S_C_TVA, S_C_KY] # Note that S_C_KY technically belongs to PJM
+  SRSG: [WECC_IID, WECC_AZ, WECC_NM]
+  TRE: [ERC_REST]
+  TRE_WEST: [ERC_PHDL, ERC_WEST]
+
+# Dollar year that all outputs will be converted to
+target_usd_year: 2020
+
+# Model year(s) and first planning year(s)
+# Each of these parameters should be a list.
+# - "model_year": The final year in each planning period, used to calculate load
+# profiles, etc
+# - "model_first_planning_year": The first year of each planning period. Capex for
+# new-build generators from ATB are an average of costs from first to last (inclusive).
+model_year: [2025, 2030, 2035, 2040, 2045, 2050]
+model_first_planning_year: [2023, 2026, 2031, 2036, 2041, 2046]
+
+
+# HOURS OFFSET FROM UTC
+# All time profile data are stored in UTC. Provide an offset for the model timezone.
+# US East cost is UTC-5, Pacific is UTC-8
+utc_offset: -5
+
+## Page 40, use 2022 number
+## https://www.nerc.com/pa/RAPA/ra/Reliability%20Assessments%20DL/NERC_SRA_2022.pdf
+regional_capacity_reserves:
+  CapRes_1: ## WECC-CA = 16.9%
+    CANO: 0.169
+    CASO: 0.169
+  CapRes_2: ## WECC-SRSG = 10.2%
+    SRSG: 0.102
+  CapRes_3: ## WECC-NWPP = 16.1%
+    RMRG: 0.161
+    BASN: 0.161
+    NWPP: 0.161
+  CapRes_4: # SPP = 16.0%
+    SPPC: 0.16
+    SPPN: 0.16
+    SPPS: 0.16
+  CapRes_5: # ERCOT = 13.75%
+    TRE: 0.1375
+    TRE_WEST: 0.1375
+  CapRes_6: # MISO = 17.9%
+    MISC: 0.179
+    MISE: 0.179
+    MISS: 0.179
+    MISW: 0.179
+  CapRes_7: # SERC = 15.0%
+    SRCE: 0.15
+    SRCA: 0.15
+    SRSE: 0.15
+    FRCC: 0.15
+  CapRes_8: # PJM = 14.9%
+    PJMC: 0.149
+    PJME: 0.149
+    PJMD: 0.149
+    PJMW: 0.149
+  CapRes_9: # NYISO = 15.0%
+    NYCW: 0.15
+    NYUP: 0.15
+  CapRes_10: # ISONE = 14.3%
+    ISNE: 0.143
+cap_res_network_derate_default: 0.95
+
+
+######################################################################################
+# MODEL OUTPUTS
+
+# This is a list of all column names included in the final generators file.
+# Remove any columns that you don't want/need.
+generator_columns: [
+            "region",
+            "Resource",
+            "technology",
+            "cluster",
+            "R_ID",
+            "Zone",
+            "Num_VRE_Bins",
+            "THERM",
+            "VRE",
+            "MUST_RUN",
+            "STOR",
+            "FLEX",
+            "HYDRO",
+            "LDS",
+            # "ESR_1",
+            # "ESR_2",
+            # "ESR_3",
+            # "ESR_4",
+            # "ESR_5",
+            # "ESR_6",
+            # "ESR_7",
+            # "ESR_8",
+            # "MinCapTag_1",
+            # "MinCapTag_2",
+            # "MinCapTag_3",
+            # "MinCapTag_4",
+            # "MinCapTag_5",
+            # "MinCapTag_6",
+            # "MinCapTag_7",
+            # "MinCapTag_8",
+            # "MinCapTag_9",
+            # "MinCapTag_10",
+            # "MinCapTag_11",
+            # "MinCapTag_12",
+            # "MinCapTag_13",
+            # "MinCapTag_14",
+            # "MinCapTag_15",
+            # "MinCapTag_16",
+            # "MinCapTag_17",
+            # "MinCapTag_18",
+            # "MinCapTag_19",
+            # "MinCapTag_20",
+            # "MinCapTag_21",
+            "CapRes_1",
+            "CapRes_2",
+            "Min_Share",
+            "Max_Share",
+            "Existing_Cap_MWh",
+            "Existing_Cap_MW",
+            "Existing_Charge_Cap_MW",
+            "num_units",
+            "unmodified_existing_cap_mw",
+            "New_Build",
+            "Cap_Size",
+            "Min_Cap_MW",
+            "Max_Cap_MW",
+            "Max_Cap_MWh",
+            "Min_Cap_MWh",
+            "Max_Charge_Cap_MW",
+            "Min_Charge_Cap_MW",
+            "Min_Share_percent",
+            "Max_Share_percent",
+            "capex_mw",
+            "Inv_Cost_per_MWyr",
+            "Fixed_OM_Cost_per_MWyr",
+            "capex_mwh",
+            "Inv_Cost_per_MWhyr",
+            "Fixed_OM_Cost_per_MWhyr",
+            "Var_OM_Cost_per_MWh",
+            "Var_OM_Cost_per_MWh_In",
+            "Inv_Cost_Charge_per_MWyr",
+            "Fixed_OM_Cost_Charge_per_MWyr",
+            "Start_Cost_per_MW",
+            "Start_Fuel_MMBTU_per_MW",
+            "Heat_Rate_MMBTU_per_MWh",
+            "heat_rate_mmbtu_mwh_iqr",
+            "heat_rate_mmbtu_mwh_std",
+            "Fuel",
+            "Min_Power",
+            "Self_Disch",
+            "Eff_Up",
+            "Eff_Down",
+            "Hydro_Energy_to_Power_Ratio",
+            "Min_Duration",
+            "Max_Duration",
+            "Reg_Max",
+            "Rsv_Max",
+            "Reg_Cost",
+            "Rsv_Cost",
+            "Max_Flexible_Demand_Delay",
+            "Max_Flexible_Demand_Advance",
+            "Flexible_Demand_Energy_Eff",
+            "CO2_Capture_Rate",
+            "CO2_Capture_Cost_per_Metric_Ton",
+            "co2_pipeline_annuity_mw",
+            "co2_pipeline_capex_mw",
+            "storage_cost_tonne",
+            "tonne_co2_captured_mwh",
+            "co2_cost_mwh",
+            "Ramp_Up_Percentage",
+            "Ramp_Dn_Percentage",
+            "Up_Time",
+            "Down_Time",
+            "spur_miles",
+            "spur_capex",
+            "offshore_spur_miles",
+            "offshore_spur_capex",
+            "tx_miles",
+            "tx_capex",
+            "interconnect_annuity",
+            "interconnect_capex_mw",
+            "regional_cost_multiplier",
+            "cap_recovery_years",
+            "wacc_real",
+            # "ids",
+            # "MISO_CleanPower",
+            # "NY_CleanPower",
+            # "PJM_CleanPower",
+            # "SERC_CleanPower",
+            "variable_CF",
+            "RETRO",
+            "Num_RETRO_Sources",
+            "Retro1_Source",
+            "Retro1_Efficiency",
+            "Retro1_Inv_Cost_per_MWyr",
+            "Retro2_Source",
+            "Retro2_Efficiency",
+            "Retro2_Inv_Cost_per_MWyr"
+        ]

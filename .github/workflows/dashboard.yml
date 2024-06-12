@@ -1,0 +1,48 @@
+name: Publish Quarto Dashboard
+
+on: push
+permissions:
+  contents: write
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest  # You can choose a different runner if needed
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        # with:
+        #   fetch-depth: 2
+
+      - name: Unzip all .gz files in parallel
+        run: |
+          find . -type f -name '*.gz' | xargs -n 1 -P 4 sh -c 'gunzip "$0" || echo "Failed to gunzip $0" >> error.log'
+
+      - name: Upload Error Log
+        uses: actions/upload-artifact@v4
+        if: always()  # This ensures the step runs even if the previous step fails
+        with:
+          name: error-log
+          path: error.log
+          if-no-files-found: ignore  # This option prevents the step from failing if no error.log file is created
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
+      - name: Publish to GitHub Pages (and render) 
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

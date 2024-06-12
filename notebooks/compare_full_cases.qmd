@@ -1,0 +1,330 @@
+---
+title: "Compare 52-week scenario results"
+format: dashboard
+#   dashboard:
+#     scrolling: false
+jupyter: python3
+categories:
+    - Full
+    - Comparison
+    - Unit commit
+    - Endogenous retirement
+    - Current policies
+    - Foresight
+    - "No CCS"
+---
+
+```{python}
+# | output: false
+%load_ext autoreload
+%autoreload 2
+import os
+from typing import Dict, List
+import pandas as pd
+import altair as alt
+from pathlib import Path
+
+
+alt.renderers.enable("html")
+alt.data_transformers.disable_max_rows()
+
+cwd = Path.cwd()
+print(cwd)
+# data_path = cwd.parent
+```
+```{python}
+# | output: false
+from fig_functions import (
+    fix_tx_line_names,
+    load_genx_operations_data,
+    load_data,
+    chart_total_cap,
+    chart_regional_cap,
+    chart_total_gen,
+    chart_regional_gen,
+    chart_tx_expansion,
+    chart_emissions,
+    chart_dispatch,
+    chart_wind_dispatch,
+    chart_op_cost,
+    chart_op_nse,
+    chart_op_emiss,
+)
+
+data_folders = [
+    "full-base-200",
+    "full-base-200-retire",
+    "full-base-200-no-ccs",
+    "full-base-50",
+    "full-base-1000",
+    "full-current-policies",
+    "full-current-policies-retire",
+]
+order = [f.replace("full-", "") for f in data_folders]
+data_folders = [cwd.parent / f for f in data_folders]
+
+
+cap_list = []
+gen_list = []
+emiss_list = []
+tx_list = []
+tx_exp_list = []
+op_cost_list = []
+op_nse_list = []
+op_gen_list = []
+op_cap_list = []
+op_emiss_list = []
+for folder in data_folders:
+    case_id = folder.stem.split("short-")[-1]
+    cap_data = load_data(folder, "resource_capacity.csv")
+    cap_data = cap_data.query("unit=='MW' and not tech_type.isna()")
+    cap_data["case"] = case_id
+    cap_list.append(cap_data)
+
+    gen_data = load_data(folder, "generation.csv")
+    gen_data["case"] = case_id
+    gen_list.append(gen_data)
+
+    emiss_data = load_data(folder, "emissions.csv")
+    emiss_data.loc[emiss_data["unit"] == "kg", "value"] /= 1000
+    emiss_data["case"] = case_id
+    emiss_list.append(emiss_data)
+
+    tx_data = load_data(folder, "transmission.csv")
+    tx_data["case"] = case_id
+    tx_list.append(tx_data)
+
+    tx_exp_data = load_data(folder, "transmission_expansion.csv")
+    tx_exp_data["case"] = case_id
+    tx_exp_list.append(tx_exp_data)
+
+    try:
+        op_cost_data = load_genx_operations_data(folder, "costs.csv")
+        op_cost_data["case"] = case_id
+        op_cost_list.append(op_cost_data)
+
+        op_nse_data = load_genx_operations_data(folder, "nse.csv", hourly_data=True)
+        op_nse_data["case"] = case_id
+        op_nse_list.append(op_nse_data)
+    except:
+        pass
+
+    op_gen_cap_data = load_genx_operations_data(folder, "capacityfactor.csv")
+    if not op_gen_cap_data.empty:
+        op_gen_cap_data = op_gen_cap_data.query("~tech_type.str.contains('Other')")
+        op_gen_cap_data["case"] = case_id
+        op_gen_data = op_gen_cap_data[
+            [
+                "tech_type",
+                "planning_year",
+                "model",
+                "AnnualSum",
+                "resource_name",
+                "case",
+            ]
+        ].rename(columns={"AnnualSum": "value"})
+        op_cap_data = op_gen_cap_data[
+            ["tech_type", "planning_year", "model", "Capacity", "resource_name", "case"]
+        ].rename(columns={"Capacity": "end_value"})
+        op_cap_data["unit"] = "MW"
+        op_gen_list.append(op_gen_data)
+        op_cap_list.append(op_cap_data)
+
+    op_emiss_data = load_genx_operations_data(
+        folder, "emissions_plant.csv", hourly_data=True
+    )
+    try:
+        op_emiss_data = op_emiss_data.query("~tech_type.str.contains('Other')")
+    except:
+        pass
+    op_emiss_data["case"] = case_id
+    op_emiss_list.append(op_emiss_data)
+
+cap = pd.concat(cap_list, ignore_index=True)
+gen = pd.concat(gen_list, ignore_index=True)
+for hour in [2, 4, 6, 8]:
+    cap["resource_name"] = cap["resource_name"].str.replace(f"_{hour}hour", "")
+    gen["resource_name"] = gen["resource_name"].str.replace(f"_{hour}hour", "")
+emiss = pd.concat(emiss_list, ignore_index=True)
+tx = pd.concat(tx_list, ignore_index=True)
+tx_exp = pd.concat(tx_exp_list, ignore_index=True)
+op_costs = pd.concat(op_cost_list, ignore_index=True)
+op_nse = pd.concat(op_nse_list, ignore_index=True)
+op_emiss = pd.concat(op_emiss_list, ignore_index=True)
+if op_cap_list:
+    op_gen = pd.concat(op_gen_list, ignore_index=True)
+    op_cap = pd.concat(op_cap_list, ignore_index=True)
+else:
+    op_gen = pd.DataFrame()
+    op_cap = pd.DataFrame()
+
+tx["start_region"] = tx["line_name"].str.split("_to_").str[0]
+tx["dest_region"] = tx["line_name"].str.split("_to_").str[1]
+
+first_year = tx["planning_year"].min()
+starting_tx = tx.loc[tx["planning_year"] == first_year, :]
+starting_tx = starting_tx.rename(columns={"start_value": "value"})
+starting_tx["planning_year"] = 2023
+
+tx_exp["start_region"] = tx_exp["line_name"].str.split("_to_").str[0]
+tx_exp["dest_region"] = tx_exp["line_name"].str.split("_to_").str[1]
+
+
+```
+
+# Capacity
+
+## Row
+
+#### Column {.tabset}
+
+```{python}
+# | title: Total Capacity
+chart = chart_total_cap(cap, x_var="model", col_var="case", order=order)
+chart
+```
+
+```{python}
+# | title: 2050 Regional Capacity
+chart = chart_total_cap(
+    cap.query("planning_year==2050"),
+    x_var="case",
+    row_var="model",
+    col_var="agg_zone",
+    order=order,
+)
+chart
+```
+
+# Generation
+
+```{python}
+chart = chart_total_gen(gen, cap, x_var="model", col_var="case", order=order)
+chart
+```
+
+# Emissions
+
+```{python}
+chart = chart_emissions(emiss, x_var="model", col_var="case", order=order)
+chart
+```
+
+# Transmission view 1
+## Row
+
+#### Column {.tabset}
+
+```{python}
+# | title: Expansion by line
+tx_all = pd.concat([starting_tx, tx_exp])
+chart = chart_tx_expansion(
+    tx_all, x_var="case", facet_col=None, col_var="line_name", row_var="model", order=order
+)
+chart
+```
+
+```{python}
+# | title: Total expansion
+chart = chart_tx_expansion(
+    tx_all, x_var="case", facet_col=None, col_var="model", order=order
+)
+# chart = chart_tx_expansion(
+#     tx_all, x_var="model", facet_col=None, col_var="case", order=order
+# )
+chart
+```
+
+# Transmission view 2
+## Row
+
+#### Column {.tabset}
+
+```{python}
+# | title: GenX
+try:
+    tx_all = pd.concat([starting_tx, tx_exp])
+    chart = chart_tx_expansion(tx_all.query("model=='GenX'"), "case", order=order)
+    chart
+except:
+    pass
+```
+```{python}
+# | title: TEMOA
+try:
+    chart = chart_tx_expansion(tx_all.query("model=='TEMOA'"), "case", order=order)
+    chart
+except:
+    pass
+```
+```{python}
+# | title: SWITCH
+try:
+    chart = chart_tx_expansion(tx_all.query("model=='SWITCH'"), "case", order=order)
+    chart
+except:
+    pass
+```
+```{python}
+# | title: USENSYS
+try:
+    chart = chart_tx_expansion(tx_all.query("model=='USENSYS'"), "case", order=order)
+    chart
+except:
+    pass
+```
+
+
+# Operational Results
+## Row {.tabset}
+
+```{python}
+# | title: Operational costs
+chart = chart_op_cost(op_costs, "case", "model", "planning_year", order=order)
+chart
+```
+```{python}
+# | title: Operational NSE
+chart = chart_op_nse(op_nse, x_var="case", col_var="model", row_var="planning_year", order=order)
+chart
+```
+
+```{python}
+# | title: Generation
+try:
+    chart = chart_total_gen(
+        op_gen, op_cap, "case", "model", "planning_year", order=order
+    )
+    chart
+except:
+    pass
+```
+
+```{python}
+# | title: Emissions by tech
+chart = chart_op_emiss(
+    op_emiss, x_var="case", col_var="model", row_var="planning_year", color="tech_type", order=order
+)
+chart
+```
+
+```{python}
+# | title: Emissions by zone
+chart = chart_op_emiss(
+    op_emiss,
+    x_var="case",
+    col_var="model",
+    row_var="planning_year",
+    color="Region",
+    order=order,
+)
+chart
+```
+
+```{python}
+# | title: Power cost
+from fig_functions import chart_cost_mwh
+
+chart = chart_cost_mwh(op_costs, "case", "model", "planning_year", order=order)
+chart
+```

@@ -1,0 +1,59 @@
+name: Run Python Scripts
+
+on: push
+permissions:
+  contents: write
+jobs:
+  run_notebook:
+    runs-on: ubuntu-latest  # You can choose a different runner if needed
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Install Environment with Micromamba
+        uses: mamba-org/setup-micromamba@main
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+          init-shell: bash
+          post-cleanup: 'all'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+      
+      - name: Run Scripts
+        run: |
+          python run_py_scripts.py
+
+      - name: Capacity change calculations
+        run: |
+          cd bin
+          python extra_capacity_calcs.py
+
+      - name: Check for modified files
+        id: git-check
+        run: |
+          echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+          if git diff-index --quiet HEAD --; then echo "no changed files"; else echo "some changed files"; fi
+
+      - name: Add changes
+        if: steps.git-check.outputs.modified == 'true'
+        run: |
+          git pull --rebase
+          git add .
+          git commit -m "Update figures"
+          echo "Commit done"
+
+      - name: Push changes to repository
+        if: steps.git-check.outputs.modified == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

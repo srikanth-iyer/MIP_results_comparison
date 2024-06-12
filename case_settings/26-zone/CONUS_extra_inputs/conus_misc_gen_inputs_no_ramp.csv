@@ -1,0 +1,52 @@
+Resource,Min_Power,Self_Disch,Eff_Up,Eff_Down,Min_Duration,Max_Duration,Ramp_Up_Percentage,Ramp_Dn_Percentage,Up_Time,Down_Time,Min_Share_percent,Max_Share_percent,Existing_Charge_Cap_MW,Var_OM_Cost_per_MWh,Var_OM_Cost_per_MWh_In,Reg_Cost,Rsv_Cost,Reg_Max,Rsv_Max,gen_energy_source,gen_is_cogen,gen_is_baseload,gen_scheduled_outage_rate,gen_forced_outage_rate,gen_type,gen_ccs_capture_efficiency,gen_ccs_energy_load,_gen_scheduled_outage_rate,_gen_forced_outage_rate
+advnuclear_atb,0,0,1,1,0,0,1,1,24,24,0,0,0,,,0,0,0,0,Uranium,FALSE,FALSE,0,0,Nuclear,.,.,0.06,0.04
+batteries,0,0,0.92,0.92,1,10,1,1,0,0,0,0,0,0.15,0.15,0,0,0,0,Electricity,FALSE,FALSE,0,0,Storage,.,.,0.01,0.02
+battery,0,0,0.92,0.92,1,10,1,1,0,0,0,0,0,,,0,0,0,0,Electricity,FALSE,FALSE,0,0,Storage,.,.,0.01,0.02
+biomass,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Waste_biomass,FALSE,FALSE,0,0,Biomass,.,.,0.06,0.04
+commercial_space_heat_load_shifting,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+commercial_water_heat_load_shifting,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+conventional_hydroelectric,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Water,FALSE,FALSE,0,0,Hydro,.,.,0.05,0.05
+coal_ccs90,0,0,1,1,0,0,1,1,24,24,0,0,0,,,0,0,0.095,0.19,Coal,FALSE,FALSE,0,0,Coal,0.9,0,0.06,0.04
+conventional_steam_coal,0,0,1,1,0,0,1,1,24,24,0,0,0,,,0,0,0.095,0.19,Coal,FALSE,FALSE,0,0,Coal,.,.,0.06,0.04
+distributed_generation,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Solar,FALSE,FALSE,0,0,Solar,.,.,0,0
+ev_load_shifting,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+geothermal,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Heat,FALSE,FALSE,0,0,Geothermal,.,.,0.05,0.04
+hydroelectric_pumped_storage,0,0,0.866,0.866,1,20,1,1,0,0,0,0,0,,,0,0,0,0,Electricity,FALSE,FALSE,0,0,Hydro,.,.,0.05,0.05
+hydrogen_ccavgcf_moderate,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+hydrogen_ccavgcf_retrofitngcc,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+hydrogen_ctavgcf_moderate,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+hydrogen_ctavgcf_retrofitngct,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+landbasedwind,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Wind,FALSE,FALSE,0,0,Wind,.,.,0,0.05
+natural_gas_fired_combined_cycle,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+natural_gas_fired_combustion_turbine,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+natural_gas_internal_combustion_engine,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+natural_gas_steam_turbine,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.63,1.26,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+naturalgas_ccavgcf,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0,0,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+naturalgas_ccccsavgcf_conservative,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,0.9,0,0.06,0.04
+naturalgas_ccccsavgcf_repowercoal,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,0.9,0,0.06,0.04
+naturalgas_ccccsavgcf_retrofitngcc,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,0.9,0,0.06,0.04
+naturalgas_ctavgcf,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+nuclear,0,0,1,1,0,0,1,1,24,24,0,0,0,,,0,0,0.041666667,0.083333333,Uranium,FALSE,FALSE,0,0,Nuclear,.,.,0.06,0.04
+offshore_wind_turbine,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Wind,FALSE,FALSE,0,0,Wind,.,.,0,0.05
+offshorewind_,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Wind,FALSE,FALSE,0,0,Wind,.,.,0,0.05
+onshore_wind_turbine,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Wind,FALSE,FALSE,0,0,Wind,.,.,0,0
+petroleum liquids,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Distillate,FALSE,FALSE,0,0,Petroleum,.,.,0.06,0.04
+residential_space_heat_load_shifting,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+residential_water_heat_load_shifting,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+small_hydroelectric,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Water,FALSE,TRUE,0,0,Hydro,.,.,0.05,0.05
+solar_photovoltaic,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Solar,FALSE,FALSE,0,0,Solar,.,.,0,0
+storage_hydrogen,0,0,0.67,0.4,200,800,1,1,0,0,0,0,0,,,0,0,0,0,Electricity,FALSE,FALSE,0,0,Storage,.,.,0.01,0.02
+storage_metalair,0,0,0.65,0.65,50,200,1,1,0,0,0,0,0,,,0,0,0,0,Electricity,FALSE,FALSE,0,0,Storage,.,.,0.01,0.02
+utilitypv_class1,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Solar,FALSE,FALSE,0,0,Solar,.,.,0,0
+trans_light_duty,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+comm_water_heat,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+res_water_heat,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+comm_space_heat_cool,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+res_space_heat_cool,0,0,1,1,0,0,1,1,0,0,0,0,0,,,0,0,0,0,Flex Demand,FALSE,FALSE,0,0,Flex Demand,.,.,0,0
+hydrogen_h-frame cc_moderate,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+hydrogen_f-frame ct_moderate,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+naturalgas_h-frame cc_moderate,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0,0,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+naturalgas_h-frame cc 95% ccs,0,0,1,1,0,0,1,1,6,6,0,0,0,,,0,0,0.106666667,0.213333333,Naturalgas,FALSE,FALSE,0,0,Naturalgas,0.9,0,0.06,0.04
+naturalgas_f-frame ct_moderate,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04
+hydrogen_h-frame ct_moderate,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Hydrogen,FALSE,FALSE,0,0,Hydrogen,.,.,0.06,0.04
+naturalgas_h-frame ct_moderate,0,0,1,1,0,0,1,1,1,1,0,0,0,,,0,0,0,0,Naturalgas,FALSE,FALSE,0,0,Naturalgas,.,.,0.06,0.04

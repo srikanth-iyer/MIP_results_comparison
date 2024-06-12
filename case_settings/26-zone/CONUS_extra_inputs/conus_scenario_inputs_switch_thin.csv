@@ -1,0 +1,3 @@
+case_id,year,flex_resource,ng_price,limitedtransmission,ira,min_cap,dac,existing_clusters,hydrogen_gen,time_reduction,policies,period_years,vre_clusters
+cap_only_thin,2030,none,reference,no,no,none,no,thin,none,10_weeks,yes,ten,thin
+unconstrained_thin,2030,none,reference,no,no,none,no,thin,none,10_weeks,none,ten,thin

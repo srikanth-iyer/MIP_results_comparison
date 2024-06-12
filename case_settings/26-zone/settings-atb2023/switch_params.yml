@@ -1,0 +1,5 @@
+# used to amortize plant costs
+interest_rate: 0.05
+
+# used to discount future costs to NPV (only matters in foresight models)
+discount_rate: 0.05

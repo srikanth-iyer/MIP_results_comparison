@@ -1,0 +1,456 @@
+﻿region,technology,cluster,spur_miles,max_capacity
+BASN,advnuclear_atb,,50,-1
+CANO,advnuclear_atb,,50,-1
+CASO,advnuclear_atb,,50,-1
+FRCC,advnuclear_atb,,50,-1
+ISNE,advnuclear_atb,,50,-1
+MISC,advnuclear_atb,,50,-1
+MISE,advnuclear_atb,,50,-1
+MISS,advnuclear_atb,,50,-1
+MISW,advnuclear_atb,,50,-1
+NWPP,advnuclear_atb,,50,-1
+NYCW,advnuclear_atb,,50,-1
+NYUP,advnuclear_atb,,50,-1
+PJMC,advnuclear_atb,,50,-1
+PJMD,advnuclear_atb,,50,-1
+PJME,advnuclear_atb,,50,-1
+PJMW,advnuclear_atb,,50,-1
+RMRG,advnuclear_atb,,50,-1
+SPPC,advnuclear_atb,,50,-1
+SPPN,advnuclear_atb,,50,-1
+SPPS,advnuclear_atb,,50,-1
+SRCA,advnuclear_atb,,50,-1
+SRCE,advnuclear_atb,,50,-1
+SRSE,advnuclear_atb,,50,-1
+SRSG,advnuclear_atb,,50,-1
+TRE,advnuclear_atb,,50,-1
+BASN,battery,,0,-1
+CANO,battery,,0,-1
+CASO,battery,,0,-1
+FRCC,battery,,0,-1
+ISNE,battery,,0,-1
+MISC,battery,,0,-1
+MISE,battery,,0,-1
+MISS,battery,,0,-1
+MISW,battery,,0,-1
+NWPP,battery,,0,-1
+NYCW,battery,,0,-1
+NYUP,battery,,0,-1
+PJMC,battery,,0,-1
+PJMD,battery,,0,-1
+PJME,battery,,0,-1
+PJMW,battery,,0,-1
+RMRG,battery,,0,-1
+SPPC,battery,,0,-1
+SPPN,battery,,0,-1
+SPPS,battery,,0,-1
+SRCA,battery,,0,-1
+SRCE,battery,,0,-1
+SRSE,battery,,0,-1
+SRSG,battery,,0,-1
+TRE,battery,,0,-1
+TREW,battery,,0,-1
+BASN,hydrogen_ccavgcf_moderate,,10,-1
+CANO,hydrogen_ccavgcf_moderate,,10,-1
+CASO,hydrogen_ccavgcf_moderate,,10,-1
+FRCC,hydrogen_ccavgcf_moderate,,10,-1
+ISNE,hydrogen_ccavgcf_moderate,,10,-1
+MISC,hydrogen_ccavgcf_moderate,,10,-1
+MISE,hydrogen_ccavgcf_moderate,,10,-1
+MISS,hydrogen_ccavgcf_moderate,,10,-1
+MISW,hydrogen_ccavgcf_moderate,,10,-1
+NWPP,hydrogen_ccavgcf_moderate,,10,-1
+NYCW,hydrogen_ccavgcf_moderate,,10,-1
+NYUP,hydrogen_ccavgcf_moderate,,10,-1
+PJMC,hydrogen_ccavgcf_moderate,,10,-1
+PJMD,hydrogen_ccavgcf_moderate,,10,-1
+PJME,hydrogen_ccavgcf_moderate,,10,-1
+PJMW,hydrogen_ccavgcf_moderate,,10,-1
+RMRG,hydrogen_ccavgcf_moderate,,10,-1
+SPPC,hydrogen_ccavgcf_moderate,,10,-1
+SPPN,hydrogen_ccavgcf_moderate,,10,-1
+SPPS,hydrogen_ccavgcf_moderate,,10,-1
+SRCA,hydrogen_ccavgcf_moderate,,10,-1
+SRCE,hydrogen_ccavgcf_moderate,,10,-1
+SRSE,hydrogen_ccavgcf_moderate,,10,-1
+SRSG,hydrogen_ccavgcf_moderate,,10,-1
+TRE,hydrogen_ccavgcf_moderate,,10,-1
+BASN,hydrogen_ccavgcf_retrofitngcc,,0,-1
+CANO,hydrogen_ccavgcf_retrofitngcc,,0,-1
+CASO,hydrogen_ccavgcf_retrofitngcc,,0,-1
+FRCC,hydrogen_ccavgcf_retrofitngcc,,0,-1
+ISNE,hydrogen_ccavgcf_retrofitngcc,,0,-1
+MISC,hydrogen_ccavgcf_retrofitngcc,,0,-1
+MISE,hydrogen_ccavgcf_retrofitngcc,,0,-1
+MISS,hydrogen_ccavgcf_retrofitngcc,,0,-1
+MISW,hydrogen_ccavgcf_retrofitngcc,,0,-1
+NWPP,hydrogen_ccavgcf_retrofitngcc,,0,-1
+NYCW,hydrogen_ccavgcf_retrofitngcc,,0,-1
+NYUP,hydrogen_ccavgcf_retrofitngcc,,0,-1
+PJMC,hydrogen_ccavgcf_retrofitngcc,,0,-1
+PJMD,hydrogen_ccavgcf_retrofitngcc,,0,-1
+PJME,hydrogen_ccavgcf_retrofitngcc,,0,-1
+PJMW,hydrogen_ccavgcf_retrofitngcc,,0,-1
+RMRG,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SPPC,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SPPN,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SPPS,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SRCA,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SRCE,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SRSE,hydrogen_ccavgcf_retrofitngcc,,0,-1
+SRSG,hydrogen_ccavgcf_retrofitngcc,,0,-1
+TRE,hydrogen_ccavgcf_retrofitngcc,,0,-1
+BASN,hydrogen_ctavgcf_moderate,,10,-1
+CANO,hydrogen_ctavgcf_moderate,,10,-1
+CASO,hydrogen_ctavgcf_moderate,,10,-1
+FRCC,hydrogen_ctavgcf_moderate,,10,-1
+ISNE,hydrogen_ctavgcf_moderate,,10,-1
+MISC,hydrogen_ctavgcf_moderate,,10,-1
+MISE,hydrogen_ctavgcf_moderate,,10,-1
+MISS,hydrogen_ctavgcf_moderate,,10,-1
+MISW,hydrogen_ctavgcf_moderate,,10,-1
+NWPP,hydrogen_ctavgcf_moderate,,10,-1
+NYCW,hydrogen_ctavgcf_moderate,,10,-1
+NYUP,hydrogen_ctavgcf_moderate,,10,-1
+PJMC,hydrogen_ctavgcf_moderate,,10,-1
+PJMD,hydrogen_ctavgcf_moderate,,10,-1
+PJME,hydrogen_ctavgcf_moderate,,10,-1
+PJMW,hydrogen_ctavgcf_moderate,,10,-1
+RMRG,hydrogen_ctavgcf_moderate,,10,-1
+SPPC,hydrogen_ctavgcf_moderate,,10,-1
+SPPN,hydrogen_ctavgcf_moderate,,10,-1
+SPPS,hydrogen_ctavgcf_moderate,,10,-1
+SRCA,hydrogen_ctavgcf_moderate,,10,-1
+SRCE,hydrogen_ctavgcf_moderate,,10,-1
+SRSE,hydrogen_ctavgcf_moderate,,10,-1
+SRSG,hydrogen_ctavgcf_moderate,,10,-1
+TRE,hydrogen_ctavgcf_moderate,,10,-1
+BASN,hydrogen_ctavgcf_retrofitngct,,0,-1
+CANO,hydrogen_ctavgcf_retrofitngct,,0,-1
+CASO,hydrogen_ctavgcf_retrofitngct,,0,-1
+FRCC,hydrogen_ctavgcf_retrofitngct,,0,-1
+ISNE,hydrogen_ctavgcf_retrofitngct,,0,-1
+MISC,hydrogen_ctavgcf_retrofitngct,,0,-1
+MISE,hydrogen_ctavgcf_retrofitngct,,0,-1
+MISS,hydrogen_ctavgcf_retrofitngct,,0,-1
+MISW,hydrogen_ctavgcf_retrofitngct,,0,-1
+NWPP,hydrogen_ctavgcf_retrofitngct,,0,-1
+NYCW,hydrogen_ctavgcf_retrofitngct,,0,-1
+NYUP,hydrogen_ctavgcf_retrofitngct,,0,-1
+PJMC,hydrogen_ctavgcf_retrofitngct,,0,-1
+PJMD,hydrogen_ctavgcf_retrofitngct,,0,-1
+PJME,hydrogen_ctavgcf_retrofitngct,,0,-1
+PJMW,hydrogen_ctavgcf_retrofitngct,,0,-1
+RMRG,hydrogen_ctavgcf_retrofitngct,,0,-1
+SPPC,hydrogen_ctavgcf_retrofitngct,,0,-1
+SPPN,hydrogen_ctavgcf_retrofitngct,,0,-1
+SPPS,hydrogen_ctavgcf_retrofitngct,,0,-1
+SRCA,hydrogen_ctavgcf_retrofitngct,,0,-1
+SRCE,hydrogen_ctavgcf_retrofitngct,,0,-1
+SRSE,hydrogen_ctavgcf_retrofitngct,,0,-1
+SRSG,hydrogen_ctavgcf_retrofitngct,,0,-1
+TRE,hydrogen_ctavgcf_retrofitngct,,0,-1
+BASN,naturalgas_ccavgcf,,10,-1
+CANO,naturalgas_ccavgcf,,10,-1
+CASO,naturalgas_ccavgcf,,10,-1
+FRCC,naturalgas_ccavgcf,,10,-1
+ISNE,naturalgas_ccavgcf,,10,-1
+MISC,naturalgas_ccavgcf,,10,-1
+MISE,naturalgas_ccavgcf,,10,-1
+MISS,naturalgas_ccavgcf,,10,-1
+MISW,naturalgas_ccavgcf,,10,-1
+NWPP,naturalgas_ccavgcf,,10,-1
+NYCW,naturalgas_ccavgcf,,10,-1
+NYUP,naturalgas_ccavgcf,,10,-1
+PJMC,naturalgas_ccavgcf,,10,-1
+PJMD,naturalgas_ccavgcf,,10,-1
+PJME,naturalgas_ccavgcf,,10,-1
+PJMW,naturalgas_ccavgcf,,10,-1
+RMRG,naturalgas_ccavgcf,,10,-1
+SPPC,naturalgas_ccavgcf,,10,-1
+SPPN,naturalgas_ccavgcf,,10,-1
+SPPS,naturalgas_ccavgcf,,10,-1
+SRCA,naturalgas_ccavgcf,,10,-1
+SRCE,naturalgas_ccavgcf,,10,-1
+SRSE,naturalgas_ccavgcf,,10,-1
+SRSG,naturalgas_ccavgcf,,10,-1
+TRE,naturalgas_ccavgcf,,10,-1
+BASN,naturalgas_ccccsavgcf_conservative,,20,-1
+CANO,naturalgas_ccccsavgcf_conservative,,20,-1
+CASO,naturalgas_ccccsavgcf_conservative,,20,-1
+FRCC,naturalgas_ccccsavgcf_conservative,,20,-1
+ISNE,naturalgas_ccccsavgcf_conservative,,20,-1
+MISC,naturalgas_ccccsavgcf_conservative,,20,-1
+MISE,naturalgas_ccccsavgcf_conservative,,20,-1
+MISS,naturalgas_ccccsavgcf_conservative,,20,-1
+MISW,naturalgas_ccccsavgcf_conservative,,20,-1
+NWPP,naturalgas_ccccsavgcf_conservative,,20,-1
+NYCW,naturalgas_ccccsavgcf_conservative,,20,-1
+NYUP,naturalgas_ccccsavgcf_conservative,,20,-1
+PJMC,naturalgas_ccccsavgcf_conservative,,20,-1
+PJMD,naturalgas_ccccsavgcf_conservative,,20,-1
+PJME,naturalgas_ccccsavgcf_conservative,,20,-1
+PJMW,naturalgas_ccccsavgcf_conservative,,20,-1
+RMRG,naturalgas_ccccsavgcf_conservative,,20,-1
+SPPC,naturalgas_ccccsavgcf_conservative,,20,-1
+SPPN,naturalgas_ccccsavgcf_conservative,,20,-1
+SPPS,naturalgas_ccccsavgcf_conservative,,20,-1
+SRCA,naturalgas_ccccsavgcf_conservative,,20,-1
+SRCE,naturalgas_ccccsavgcf_conservative,,20,-1
+SRSE,naturalgas_ccccsavgcf_conservative,,20,-1
+SRSG,naturalgas_ccccsavgcf_conservative,,20,-1
+TRE,naturalgas_ccccsavgcf_conservative,,20,-1
+BASN,naturalgas_ccccsavgcf_repowercoal,,0,-1
+CANO,naturalgas_ccccsavgcf_repowercoal,,0,-1
+CASO,naturalgas_ccccsavgcf_repowercoal,,0,-1
+FRCC,naturalgas_ccccsavgcf_repowercoal,,0,-1
+ISNE,naturalgas_ccccsavgcf_repowercoal,,0,-1
+MISC,naturalgas_ccccsavgcf_repowercoal,,0,-1
+MISE,naturalgas_ccccsavgcf_repowercoal,,0,-1
+MISS,naturalgas_ccccsavgcf_repowercoal,,0,-1
+MISW,naturalgas_ccccsavgcf_repowercoal,,0,-1
+NWPP,naturalgas_ccccsavgcf_repowercoal,,0,-1
+NYCW,naturalgas_ccccsavgcf_repowercoal,,0,-1
+NYUP,naturalgas_ccccsavgcf_repowercoal,,0,-1
+PJMC,naturalgas_ccccsavgcf_repowercoal,,0,-1
+PJMD,naturalgas_ccccsavgcf_repowercoal,,0,-1
+PJME,naturalgas_ccccsavgcf_repowercoal,,0,-1
+PJMW,naturalgas_ccccsavgcf_repowercoal,,0,-1
+RMRG,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SPPC,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SPPN,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SPPS,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SRCA,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SRCE,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SRSE,naturalgas_ccccsavgcf_repowercoal,,0,-1
+SRSG,naturalgas_ccccsavgcf_repowercoal,,0,-1
+TRE,naturalgas_ccccsavgcf_repowercoal,,0,-1
+BASN,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+CANO,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+CASO,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+FRCC,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+ISNE,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+MISC,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+MISE,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+MISS,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+MISW,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+NWPP,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+NYCW,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+NYUP,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+PJMC,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+PJMD,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+PJME,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+PJMW,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+RMRG,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SPPC,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SPPN,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SPPS,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SRCA,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SRCE,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SRSE,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+SRSG,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+TRE,naturalgas_ccccsavgcf_retrofitngcc,,0,-1
+BASN,naturalgas_ctavgcf,,10,-1
+CANO,naturalgas_ctavgcf,,10,-1
+CASO,naturalgas_ctavgcf,,10,-1
+FRCC,naturalgas_ctavgcf,,10,-1
+ISNE,naturalgas_ctavgcf,,10,-1
+MISC,naturalgas_ctavgcf,,10,-1
+MISE,naturalgas_ctavgcf,,10,-1
+MISS,naturalgas_ctavgcf,,10,-1
+MISW,naturalgas_ctavgcf,,10,-1
+NWPP,naturalgas_ctavgcf,,10,-1
+NYCW,naturalgas_ctavgcf,,10,-1
+NYUP,naturalgas_ctavgcf,,10,-1
+PJMC,naturalgas_ctavgcf,,10,-1
+PJMD,naturalgas_ctavgcf,,10,-1
+PJME,naturalgas_ctavgcf,,10,-1
+PJMW,naturalgas_ctavgcf,,10,-1
+RMRG,naturalgas_ctavgcf,,10,-1
+SPPC,naturalgas_ctavgcf,,10,-1
+SPPN,naturalgas_ctavgcf,,10,-1
+SPPS,naturalgas_ctavgcf,,10,-1
+SRCA,naturalgas_ctavgcf,,10,-1
+SRCE,naturalgas_ctavgcf,,10,-1
+SRSE,naturalgas_ctavgcf,,10,-1
+SRSG,naturalgas_ctavgcf,,10,-1
+TRE,naturalgas_ctavgcf,,10,-1
+BASN,storage_hydrogen,,0,-1
+CANO,storage_hydrogen,,0,-1
+CASO,storage_hydrogen,,0,-1
+FRCC,storage_hydrogen,,0,-1
+ISNE,storage_hydrogen,,0,-1
+MISC,storage_hydrogen,,0,-1
+MISE,storage_hydrogen,,0,-1
+MISS,storage_hydrogen,,0,-1
+MISW,storage_hydrogen,,0,-1
+NWPP,storage_hydrogen,,0,-1
+NYCW,storage_hydrogen,,0,-1
+NYUP,storage_hydrogen,,0,-1
+PJMC,storage_hydrogen,,0,-1
+PJMD,storage_hydrogen,,0,-1
+PJME,storage_hydrogen,,0,-1
+PJMW,storage_hydrogen,,0,-1
+RMRG,storage_hydrogen,,0,-1
+SPPC,storage_hydrogen,,0,-1
+SPPN,storage_hydrogen,,0,-1
+SPPS,storage_hydrogen,,0,-1
+SRCA,storage_hydrogen,,0,-1
+SRCE,storage_hydrogen,,0,-1
+SRSE,storage_hydrogen,,0,-1
+SRSG,storage_hydrogen,,0,-1
+TRE,storage_hydrogen,,0,-1
+BASN,storage_metalair,,0,-1
+CANO,storage_metalair,,0,-1
+CASO,storage_metalair,,0,-1
+FRCC,storage_metalair,,0,-1
+ISNE,storage_metalair,,0,-1
+MISC,storage_metalair,,0,-1
+MISE,storage_metalair,,0,-1
+MISS,storage_metalair,,0,-1
+MISW,storage_metalair,,0,-1
+NWPP,storage_metalair,,0,-1
+NYCW,storage_metalair,,0,-1
+NYUP,storage_metalair,,0,-1
+PJMC,storage_metalair,,0,-1
+PJMD,storage_metalair,,0,-1
+PJME,storage_metalair,,0,-1
+PJMW,storage_metalair,,0,-1
+RMRG,storage_metalair,,0,-1
+SPPC,storage_metalair,,0,-1
+SPPN,storage_metalair,,0,-1
+SPPS,storage_metalair,,0,-1
+SRCA,storage_metalair,,0,-1
+SRCE,storage_metalair,,0,-1
+SRSE,storage_metalair,,0,-1
+SRSG,storage_metalair,,0,-1
+TRE,storage_metalair,,0,-1
+BASN,candgeothermal_hydroflash,,20,320
+CANO,candgeothermal_hydroflash,,20,420
+CASO,candgeothermal_hydroflash,,20,1290
+FRCC,candgeothermal_hydroflash,,20,0
+ISNE,candgeothermal_hydroflash,,20,0
+MISC,candgeothermal_hydroflash,,20,0
+MISE,candgeothermal_hydroflash,,20,0
+MISS,candgeothermal_hydroflash,,20,0
+MISW,candgeothermal_hydroflash,,20,0
+NWPP,candgeothermal_hydroflash,,20,660
+NYCW,candgeothermal_hydroflash,,20,0
+NYUP,candgeothermal_hydroflash,,20,0
+PJMC,candgeothermal_hydroflash,,20,0
+PJMD,candgeothermal_hydroflash,,20,0
+PJME,candgeothermal_hydroflash,,20,0
+PJMW,candgeothermal_hydroflash,,20,0
+RMRG,candgeothermal_hydroflash,,20,0
+SPPC,candgeothermal_hydroflash,,20,0
+SPPN,candgeothermal_hydroflash,,20,0
+SPPS,candgeothermal_hydroflash,,20,0
+SRCA,candgeothermal_hydroflash,,20,0
+SRCE,candgeothermal_hydroflash,,20,0
+SRSE,candgeothermal_hydroflash,,20,0
+SRSG,candgeothermal_hydroflash,,20,0
+TRE,candgeothermal_hydroflash,,20,0
+BASN,naturalgas_f-frame ct,,10,-1
+CANO,naturalgas_f-frame ct,,10,-1
+CASO,naturalgas_f-frame ct,,10,-1
+FRCC,naturalgas_f-frame ct,,10,-1
+ISNE,naturalgas_f-frame ct,,10,-1
+MISC,naturalgas_f-frame ct,,10,-1
+MISE,naturalgas_f-frame ct,,10,-1
+MISS,naturalgas_f-frame ct,,10,-1
+MISW,naturalgas_f-frame ct,,10,-1
+NWPP,naturalgas_f-frame ct,,10,-1
+NYCW,naturalgas_f-frame ct,,10,-1
+NYUP,naturalgas_f-frame ct,,10,-1
+PJMC,naturalgas_f-frame ct,,10,-1
+PJMD,naturalgas_f-frame ct,,10,-1
+PJME,naturalgas_f-frame ct,,10,-1
+PJMW,naturalgas_f-frame ct,,10,-1
+RMRG,naturalgas_f-frame ct,,10,-1
+SPPC,naturalgas_f-frame ct,,10,-1
+SPPN,naturalgas_f-frame ct,,10,-1
+SPPS,naturalgas_f-frame ct,,10,-1
+SRCA,naturalgas_f-frame ct,,10,-1
+SRCE,naturalgas_f-frame ct,,10,-1
+SRSE,naturalgas_f-frame ct,,10,-1
+SRSG,naturalgas_f-frame ct,,10,-1
+TRE,naturalgas_f-frame ct,,10,-1
+TREW,naturalgas_f-frame ct,,10,-1
+BASN,naturalgas_h-frame cc_moderate,,10,-1
+CANO,naturalgas_h-frame cc_moderate,,10,-1
+CASO,naturalgas_h-frame cc_moderate,,10,-1
+FRCC,naturalgas_h-frame cc_moderate,,10,-1
+ISNE,naturalgas_h-frame cc_moderate,,10,-1
+MISC,naturalgas_h-frame cc_moderate,,10,-1
+MISE,naturalgas_h-frame cc_moderate,,10,-1
+MISS,naturalgas_h-frame cc_moderate,,10,-1
+MISW,naturalgas_h-frame cc_moderate,,10,-1
+NWPP,naturalgas_h-frame cc_moderate,,10,-1
+NYCW,naturalgas_h-frame cc_moderate,,10,-1
+NYUP,naturalgas_h-frame cc_moderate,,10,-1
+PJMC,naturalgas_h-frame cc_moderate,,10,-1
+PJMD,naturalgas_h-frame cc_moderate,,10,-1
+PJME,naturalgas_h-frame cc_moderate,,10,-1
+PJMW,naturalgas_h-frame cc_moderate,,10,-1
+RMRG,naturalgas_h-frame cc_moderate,,10,-1
+SPPC,naturalgas_h-frame cc_moderate,,10,-1
+SPPN,naturalgas_h-frame cc_moderate,,10,-1
+SPPS,naturalgas_h-frame cc_moderate,,10,-1
+SRCA,naturalgas_h-frame cc_moderate,,10,-1
+SRCE,naturalgas_h-frame cc_moderate,,10,-1
+SRSE,naturalgas_h-frame cc_moderate,,10,-1
+SRSG,naturalgas_h-frame cc_moderate,,10,-1
+TRE,naturalgas_h-frame cc_moderate,,10,-1
+TREW,naturalgas_h-frame cc_moderate,,10,-1
+BASN,naturalgas_h-frame cc 95% ccs,,10,-1
+CANO,naturalgas_h-frame cc 95% ccs,,10,-1
+CASO,naturalgas_h-frame cc 95% ccs,,10,-1
+FRCC,naturalgas_h-frame cc 95% ccs,,10,-1
+ISNE,naturalgas_h-frame cc 95% ccs,,10,-1
+MISC,naturalgas_h-frame cc 95% ccs,,10,-1
+MISE,naturalgas_h-frame cc 95% ccs,,10,-1
+MISS,naturalgas_h-frame cc 95% ccs,,10,-1
+MISW,naturalgas_h-frame cc 95% ccs,,10,-1
+NWPP,naturalgas_h-frame cc 95% ccs,,10,-1
+NYCW,naturalgas_h-frame cc 95% ccs,,10,-1
+NYUP,naturalgas_h-frame cc 95% ccs,,10,-1
+PJMC,naturalgas_h-frame cc 95% ccs,,10,-1
+PJMD,naturalgas_h-frame cc 95% ccs,,10,-1
+PJME,naturalgas_h-frame cc 95% ccs,,10,-1
+PJMW,naturalgas_h-frame cc 95% ccs,,10,-1
+RMRG,naturalgas_h-frame cc 95% ccs,,10,-1
+SPPC,naturalgas_h-frame cc 95% ccs,,10,-1
+SPPN,naturalgas_h-frame cc 95% ccs,,10,-1
+SPPS,naturalgas_h-frame cc 95% ccs,,10,-1
+SRCA,naturalgas_h-frame cc 95% ccs,,10,-1
+SRCE,naturalgas_h-frame cc 95% ccs,,10,-1
+SRSE,naturalgas_h-frame cc 95% ccs,,10,-1
+SRSG,naturalgas_h-frame cc 95% ccs,,10,-1
+TRE,naturalgas_h-frame cc 95% ccs,,10,-1
+TREW,naturalgas_h-frame cc 95% ccs,,10,-1
+BASN,nuclear_nuclear,,50,-1
+CANO,nuclear_nuclear,,50,-1
+CASO,nuclear_nuclear,,50,-1
+FRCC,nuclear_nuclear,,50,-1
+ISNE,nuclear_nuclear,,50,-1
+MISC,nuclear_nuclear,,50,-1
+MISE,nuclear_nuclear,,50,-1
+MISS,nuclear_nuclear,,50,-1
+MISW,nuclear_nuclear,,50,-1
+NWPP,nuclear_nuclear,,50,-1
+NYCW,nuclear_nuclear,,50,-1
+NYUP,nuclear_nuclear,,50,-1
+PJMC,nuclear_nuclear,,50,-1
+PJMD,nuclear_nuclear,,50,-1
+PJME,nuclear_nuclear,,50,-1
+PJMW,nuclear_nuclear,,50,-1
+RMRG,nuclear_nuclear,,50,-1
+SPPC,nuclear_nuclear,,50,-1
+SPPN,nuclear_nuclear,,50,-1
+SPPS,nuclear_nuclear,,50,-1
+SRCA,nuclear_nuclear,,50,-1
+SRCE,nuclear_nuclear,,50,-1
+SRSE,nuclear_nuclear,,50,-1
+SRSG,nuclear_nuclear,,50,-1
+TRE,nuclear_nuclear,,50,-1
+TREW,nuclear_nuclear,,50,-1

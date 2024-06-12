@@ -1,0 +1,1483 @@
+# DATA YEAR
+# Pick one or more years of generator data to use when creating clusters. If
+# more than one year is used then things like heat rate will be calculated as the
+# average (weighted by generation per year).
+eia_data_years:
+  - 2021
+
+# CAPACITY TYPE
+capacity_col: winter_capacity_mw
+
+# CLUSTERING
+# Existing thermal power plants are clusted to reduce the number of distinct plants.
+# The existing method (for now) is to specify the number of clusters for each type
+# of thermal plant as a default and then specify specific values for any regions
+# that are different.
+
+retirement_ages: # TAYLOR - https://www.nrel.gov/docs/fy22osti/80641.pdf (pdf page 42)
+  Conventional Hydroelectric: 100 # TD update
+  Small Hydroelectric: 100 # TD update
+  Conventional Steam Coal: 65 # TD update
+  Natural Gas Fired Combined Cycle: 60 # TD update
+  Natural Gas Fired Combustion Turbine: 50 # TD update
+  Petroleum Liquids: 40
+  Natural Gas Internal Combustion Engine: 60 # TD update
+  Nuclear: 80 # TD update
+  Onshore Wind Turbine: 30 # TD checked/no change
+  Hydroelectric Pumped Storage: 100 # TD update
+  Natural Gas Steam Turbine: 50 # oil-gas-steam, nat gas combustion turbine is also 50
+  Solar Photovoltaic: 30 # TD update
+  Solar Thermal without Energy Storage: 30 # CSP in SWITCH
+  Geothermal: 30 # TD update
+  Municipal Solid Waste: 40
+  Landfill Gas: 40
+  Batteries: 15 # TD update
+  Wood/Wood Waste Biomass: 50 # TD update
+  Petroleum Coke: 40
+  All Other: 40
+  Natural Gas with Compressed Air Storage: 60 # assuming nat gas cs&ccs
+  Coal Integrated Gasification Combined Cycle: 65 # TD update
+  Other Waste Biomass: 50 # assuming biopower
+  Other Gases: 50 # asuming oil-gas-steam
+  Other Natural Gas: 50 # assuming oil-gas-steam
+  Solar Thermal with Energy Storage: 30 # solar items in table are 30
+  Flywheels: 40
+  Offshore Wind Turbine: 30 # TD checked/no change
+  Biomass: 50
+  NaturalGas_CCCCSAvgCF_Conservative: 30 # combined cycle and carbon capture sequestration
+  NaturalGas_CCAvgCF_Moderate: 30 # carbon capture
+  NaturalGas_CTAvgCF_Moderate: 30 # combustion turbine
+  Battery_*_Moderate: 15
+  NaturalGas_CCS100_Moderate: 30
+  UtilityPV_Class1_Moderate_100: 30
+  UtilityPV_Class1_Moderate: 30
+  LandbasedWind_Class1_Moderate: 30
+  LandbasedWind_Class1_Moderate_100: 30
+  UtilityPV_Class1_Moderate_50: 30
+  OffShoreWind_Class1_Moderate: 30
+  OffShoreWind_Class3_Moderate_fixed_1: 30
+  OffShoreWind_Class3_Moderate_fixed_0: 30
+  OffShoreWind_Class12_Moderate_floating_1: 30
+  OffShoreWind_Class12_Moderate_floating_0: 30
+  Coal_CCS90AvgCF_Moderate: 40
+  Nuclear_Nuclear_Moderate: 40
+  LandbasedWind_Class3_Moderate: 30
+  OffShoreWind_Class12_Moderate: 30
+  OffShoreWind_Class3_Moderate: 30
+  Hydrogen_CTAvgCF_Moderate: 30
+  Hydrogen_CCAvgCF_Moderate: 30
+  NaturalGas_H-Frame CC_Moderate: 30
+  Hydrogen_H-Frame CC_Moderate: 30
+  NaturalGas_F-Frame CT: 30
+  Hydrogen_F-Frame CT: 30
+  NaturalGas_H-Frame CC 95% CCS_Moderate: 30
+  distributed_generation: 100
+
+
+# Include units with planned/age-based retirements when determining clusters across periods
+cluster_with_retired_gens: true
+
+# ** Any technologies not included in num_clusters will be omitted **
+num_clusters:
+  Conventional Steam Coal: 2
+  Natural Gas Fired Combined Cycle: 2
+  Natural Gas Fired Combustion Turbine: 2
+  Natural Gas Internal Combustion Engine: 1
+  Natural Gas Steam Turbine: 1
+  Nuclear: 1
+  Conventional Hydroelectric: 1
+  Geothermal: 1
+  Solar Photovoltaic: 1
+  # Solar Thermal with Energy Storage: 1 # Ignored due to limited size
+  # Solar Thermal without Energy Storage: 1 # Ignored due to limited size
+  Onshore Wind Turbine: 1
+  Offshore Wind Turbine: 1
+  Petroleum Liquids: 1
+  # Petroleum Coke: 1 # Ignored in due to limited capacity
+  # Wood/Wood Waste Biomass: 1 # Aggregated into Biomass
+  # Landfill Gas: 1 # Aggregated into Biomass
+  # Municipal Solid Waste: 1 # Aggregated into Biomass
+  # Other Waste Biomass: 1 # Aggregated into Biomass
+  Hydroelectric Pumped Storage: 1
+  # Coal Integrated Gasification Combined Cycle: 1 # Ignored due to limited size
+  Batteries: 1
+  # Natural Gas with Compressed Air Storage: 1 # Ignored due to limited size
+  # Flywheels: 1 # Ignored
+  # Other Gases: 1 # Ignored
+  # Other Natural Gas: 1 # Ignored
+  # All Other: 1 # Ignored
+  ## All above is EIA Technologies, below are special teches defines in pjm study
+  Biomass: 2 # bio group tech, not exist in EIA
+  Small Hydroelectric: 1 ## small hydro defined in PG no in EIA
+
+cluster_by_age:
+  - Conventional Steam Coal
+
+# Group these technologies
+group_technologies: True
+tech_groups:
+  Biomass:
+    - Wood/Wood Waste Biomass
+    - Landfill Gas
+    - Municipal Solid Waste
+    - Other Waste Biomass
+
+# Use this to avoid grouping technologies in some regions
+regional_no_grouping: ~
+
+# Add code to ensure region names here are included above
+alt_num_clusters:
+  MISS:
+    # Natural Gas Fired Combined Cycle: 3
+    Natural Gas Steam Turbine: 2
+  MISW:
+    Natural Gas Fired Combustion Turbine: 3
+  NYCW:
+    # Natural Gas Fired Combined Cycle: 3
+    Natural Gas Fired Combustion Turbine: 3
+  PJMD:
+    Natural Gas Fired Combustion Turbine: 3
+  PJME:
+    Natural Gas Fired Combustion Turbine: 3
+  PJMW:
+    Conventional Steam Coal: 3
+    Natural Gas Fired Combustion Turbine: 3
+  SPPC:
+    Natural Gas Fired Combustion Turbine: 3
+  SPPS:
+    Natural Gas Fired Combustion Turbine: 3
+  SRCE:
+    Natural Gas Fired Combustion Turbine: 3
+  # SRSE:
+    # Natural Gas Fired Combined Cycle: 3
+  TRE:
+    # Natural Gas Fired Combined Cycle: 2
+    Natural Gas Fired Combustion Turbine: 2
+
+
+
+
+# CAPACITY FACTOR
+# Calculate the capacity factor of technology types listed here. If derate_capacity is
+# True, multiply the calculated capacity of each cluster by the CF
+capacity_factor_techs:
+  - Small Hydroelectric
+  - Biomass
+  - Geothermal
+
+# Default value to limit the years used to calculate capacity factors.
+# Use "~" (null, converted to None in Python) to use all data years. PUDL currently has
+# generation data from 2011 through the most recent final release of 923/860.
+capacity_factor_default_year_filter: [2016, 2017, 2018, 2019]
+
+# Select the year filters for specific technologies. Grouped technologies should be
+# used rather than in individual categories (e.g. Peaker rather than Combustion Turbine).
+# Again, use "~" to use all years.
+alt_year_filters:
+  Small Hydroelectric: ~
+  Conventional Hydroelectric: ~
+  Biomass: ~
+  Geothermal: ~
+
+derate_capacity: True
+derate_techs:
+  - Small Hydroelectric
+  - Biomass
+  - Geothermal
+
+
+# LABEL SMALL HYDRO
+small_hydro: True
+small_hydro_mw: 30
+small_hydro_regions:
+  - BASN
+  - CANO
+  - CASO
+  - FRCC
+  - ISNE
+  - MISC
+  - MISE
+  - MISS
+  - MISW
+  - NWPP
+  - NYCW
+  - NYUP
+  - PJMC
+  - PJMD
+  - PJME
+  - PJMW
+  - RMRG
+  - SPPC
+  - SPPN
+  - SPPS
+  - SRCA
+  - SRCE
+  - SRSE
+  - SRSG
+  - TRE
+  - TREW
+
+
+# Factors for calculating hydro energy to power ratio in GenX. The default factors is
+# numeric and will be applied to all regions. The regional factors are a dictionary mapping
+# model region names to specific regional factors. The factors are multiplied by average
+# annual inflow rates to determine the rated number of hours of reservoir hydro
+# storage at peak discharge power output.
+hydro_factor: 2
+
+regional_hydro_factor:
+  NWPP: 4
+
+
+# Energy storge duration. Provide a default value for existing resources of a given type.
+# The value of 15.5 for pumped hydro comes from https://sandia.gov/ess-ssl/gesdb/public/statistics.html
+# Default value can be numeric or a dictionary of region: numeric values. Technology names
+# here and in the dataframe are both converted to snake case and matches are made if this
+# name is contained in the dataframe technology name.
+energy_storage_duration:
+  Hydroelectric Pumped Storage: 15.5
+  Batteries:
+    BASN: 2
+    CANO: 4
+    CASO: 4
+    FRCC: 2
+    ISNE: 2
+    MISC: 2
+    MISE: 2
+    MISS: 2
+    MISW: 2
+    NWPP: 2
+    NYCW: 2
+    NYUP: 2
+    PJMC: 2
+    PJMD: 2
+    PJME: 2
+    PJMW: 2
+    RMRG: 2
+    SPPC: 2
+    SPPN: 2
+    SPPS: 2
+    SRCA: 2
+    SRCE: 2
+    SRSE: 2
+    SRSG: 2
+    TRE: 2
+    TREW: 2
+
+# Generator cost data from NREL ATB
+
+atb_data_year: 2023
+atb_financial_case: Market
+atb_cap_recovery_years: 30
+
+# Alternate capital recovery periods for specific technologies, which are used to calculate
+# the annual investment costs. The names are matched using str.contains rather than
+# exact matches. Set parameter value to none (~) if not used.
+alt_atb_cap_recovery_years:
+  Battery: 15
+  Nuclear: 40
+  Storage_: 25
+
+# The year of NREL ATB data to use for matching existing generators (O&M costs)
+atb_existing_year: 2021
+
+# ****UPDATE WITH ATB2021*****
+# ATB 2021 uses data from NETL for fossil fuel technologies, so it is no longer necessary
+# to modify NGCT and NGCC technologies.
+# ****************************
+# The atb_modifiers parameter is now used to add a VOM cost to battery technologies. PNNL
+# reports a 0.03 cents per kWh VOM, which is split between Var_OM_Cost_per_MWh and
+# Var_OM_Cost_per_MWh_In (https://www.pnnl.gov/main/publications/external/technical_reports/PNNL-28866.pdf).
+# Because Var_OM_Cost_per_MWh_In is not part of the ATB database the value should be set
+# directly rather than using a list of [operator, value]. Operators ("add", "mul",
+# "truediv", and "sub") can only be used to modify values that exist in the ATB database.
+atb_modifiers:
+  upv:
+    technology: UtilityPV
+    tech_detail: Class1
+  Landwind:
+    technology: LandbasedWind
+    tech_detail: Class3
+  Offwind:
+    technology: OffShoreWind
+    tech_detail: Class3
+  Offwind_floating:
+    technology: OffShoreWind
+    tech_detail: Class12
+  bat:
+    technology: Battery
+    tech_detail: "*"
+    Var_OM_Cost_per_MWh: [add, 0.15]
+    Var_OM_Cost_per_MWh_In: 0.15
+  nuclear:
+    technology: Nuclear
+    tech_detail: Nuclear
+  ngct:
+    technology: NaturalGas
+    tech_detail: F-Frame CT
+  ngcc:
+    technology: NaturalGas
+    tech_detail: H-Frame CC
+  ngccccs:
+    technology: NaturalGas
+    tech_detail: H-Frame CC 95% CCS
+  h2ct:
+    technology: Hydrogen
+    tech_detail: F-Frame CT
+  h2cc:
+    technology: Hydrogen
+    tech_detail: H-Frame CC
+
+
+# Copy and modify an existing ATB new generator. This takes place BEFORE any modifiers to
+# the ATB data in atb_modifiers. Set parameter to none (~) if not adding any modified generators.
+modified_atb_new_gen: ~
+
+# ATB doesn't have a WACC for battery tech. Need to provide a value here.
+atb_battery_wacc: UtilityPV
+
+# Format for ATB is <technology>_<tech_detail>, all are Mid cost case
+# Might want to change this to list format like the new generators below
+eia_atb_tech_map:
+  Batteries: Battery_*
+  Biomass: Biopower_Dedicated
+  Solar Thermal without Energy Storage: CSP_Class1
+  Conventional Steam Coal: [Coal_newAvgCF, Coal_New]
+  Natural Gas Fired Combined Cycle: [NaturalGas_CCAvgCF, NaturalGas_H-Frame CC, Hydrogen_H-Frame CC] #[NaturalGas_CCAvgCF, NETL_NGCC]
+  Natural Gas Fired Combustion Turbine: [NaturalGas_CTAvgCF, NaturalGas_F-Frame CT, Hydrogen_F-Frame CT]
+  Other_peaker: [NaturalGas_CTAvgCF, NaturalGas_F-Frame CT]
+  Natural Gas Internal Combustion Engine: [NaturalGas_CTAvgCF, NaturalGas_F-Frame CT]
+  Landfill Gas: [NaturalGas_CTAvgCF, NaturalGas_F-Frame CT]
+  Petroleum Liquids: [NaturalGas_CTAvgCF, NaturalGas_F-Frame CT]
+  Municipal Solid Waste: Biopower_Dedicated
+  Other Waste Biomass: Biopower_Dedicated
+  Wood/Wood Waste Biomass: Biopower_Dedicated
+  Solar Photovoltaic: UtilityPV_Class1
+  Geothermal: Geothermal_HydroFlash # assume installed capacity is dominated by flash
+
+  # Check head-height, which is difference between NSD2 and 4
+  Conventional Hydroelectric: Hydropower_NSD4 # Large variability based on choice
+  Hydroelectric Pumped Storage: Hydropower_NSD4 # Large variability based on choice
+  Small Hydroelectric: Hydropower_NSD3 # Large variability based on choice
+  Onshore Wind Turbine: LandbasedWind_Class4 # All onshore wind is the same
+  Offshore Wind Turbine: OffShoreWind_Class3 # Mid-range of floating offshore wind
+  Nuclear: [Nuclear_Nuclear, AdvNuclear_ATB]
+  Natural Gas Steam Turbine: [Coal_newAvgCF, Coal_New] # No gas steam turbines in ATB, using coal instead
+  Solar Thermal with Energy Storage: CSP_Class1 # NEED TO CHECK THIS DEFAULT
+  Hydrogen: [Hydrogen_CTAvgCF, Hydrogen_CTAvgCF, Hydrogen_retrofit, Hydrogen_F-Frame CT]
+
+# Offshore wind in the west will be floating - Class10 maybe.
+# Format for each list item is <technology>, <tech_detail>, <cost_case>, <size>
+atb_new_gen:
+  # - [Coal, CCS90AvgCF, Moderate, 500]
+  - [NaturalGas, H-Frame CC 95% CCS, Moderate, 500] # ATB CCCCS conservative case represents current technology.
+  - [NaturalGas, H-Frame CC, Moderate, 500]
+  - [NaturalGas, F-Frame CT, Moderate, 100]
+  - [LandbasedWind, Class3, Moderate, 1]
+  - [OffShoreWind, Class12, Moderate, 1]
+  - [OffShoreWind, Class3, Moderate, 1]
+  - [UtilityPV, Class1, Moderate, 1]
+  - [Battery, "*", Moderate, 1]
+  - [Nuclear, Nuclear, Moderate, 2000]
+
+co2_pipeline_cost_fn: co2_pipeline_cost_percentiles.csv
+co2_pipeline_filters:
+  # - technology: Coal
+  #   tech_detail: CCS90AvgCF
+  #   with_backbone: false
+  #   percentile: 25
+  #   capture_rate: 90
+  - technology: NaturalGas
+    tech_detail: H-Frame CC 95% CCS
+    with_backbone: false
+    percentile: 25
+    capture_rate: 95
+
+# Additional technologies can be specified in a csv file under data/additional_technologies
+# Provide the filename (no path needed) in the parameter below or "~" for none.
+# All technologies listed in the file will be included in the outputs unless they are
+# also included in "new_gen_not_available".
+additional_technologies_fn: ~
+
+additional_new_gen: ~
+
+
+# Dictionary of lists with model region as key and ATB tech (string matching) in list.
+# It isn't necessary to include wind/solar resources here. If they aren't included in
+# the renewables_clusters parameter below, they won't be included in the final generators
+# dataframe.
+new_gen_not_available: ~
+  # WECC_CO:
+  #   - OffShoreWind
+  # WECC_AZ:
+  #   - OffShoreWind
+  # WECC_NM:
+  #   - OffShoreWind
+  # WECC_SNV:
+  #   - OffShoreWind
+
+
+clustering_n_jobs: 1
+renewables_clusters:
+  - region: all
+    technology: landbasedwind
+    group:
+      - anyQual
+    filter:
+      - feature: lcoe
+        max: 80
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: BASN
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 100000
+    filter:
+      - feature: lcoe
+        max: 75
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: CANO
+    technology: landbasedwind
+    group:
+      - anyQual
+    filter:
+      - feature: lcoe
+        max: 90
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: CASO
+    technology: landbasedwind
+    group:
+      - anyQual
+    filter:
+      - feature: lcoe
+        max: 90
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: FRCC
+    technology: landbasedwind
+    group:
+      - anyQual
+    # filter:
+    #   - feature: lcoe
+    #     max: 150
+    bin:
+      - feature: lcoe
+        q: 4
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        n_clusters: 3
+        # mw_per_cluster: 15000
+        method: agg
+  - region: MISE
+    technology: landbasedwind
+    group:
+      - anyQual
+    # filter:
+    #   - feature: lcoe
+    #     max: 150
+    bin:
+      - feature: lcoe
+        q: 4
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        n_clusters: 3
+        # mw_per_cluster: 15000
+        method: agg
+  - region: MISW
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 200000
+    filter:
+      - feature: lcoe
+        max: 45
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: NWPP
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 100000
+    # filter:
+    #   - feature: lcoe
+    #     max: 45
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: NYUP
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 40000
+    # filter:
+    #   - feature: lcoe
+    #     max: 45
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: PJMD
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 20000
+    # filter:
+    #   - feature: lcoe
+    #     max: 135
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: PJME
+    technology: landbasedwind
+    group:
+      - anyQual
+    # filter:
+    #   - feature: lcoe
+    #     max: 150
+    bin:
+      - feature: lcoe
+        q: 3
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        n_clusters: 2
+        # mw_per_cluster: 15000
+        method: agg
+  - region: PJMW
+    technology: landbasedwind
+    group:
+      - anyQual
+    # filter:
+    #   - feature: lcoe
+    #     max: 150
+    bin:
+      - feature: lcoe
+        q: 5
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: RMRG
+    technology: landbasedwind
+    group:
+      - anyQual
+    # min_capacity: 150000
+    filter:
+      - feature: lcoe
+        max: 40
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: SPPN
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 50000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: SPPS
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 175000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: SRCA
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 20000
+    # filter:
+    #   - feature: lcoe
+    #     max: 125
+    bin:
+      - feature: lcoe
+        q: 5
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        n_clusters: 3
+        # mw_per_cluster: 15000
+        method: agg
+  - region: SRSG
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 100000
+    # filter:
+    #   - feature: lcoe
+    #     max: 125
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: TRE
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 200000
+    # filter:
+    #   - feature: lcoe
+    #     max: 125
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+  - region: TREW
+    technology: landbasedwind
+    group:
+      - anyQual
+    min_capacity: 100000
+    filter:
+      - feature: lcoe
+        max: 40
+    bin:
+      - feature: lcoe
+        q: 6
+        weights: "mw"
+    cluster:
+      - feature: cf #profile
+        # n_clusters: 4
+        mw_per_cluster: 5000
+        method: agg
+
+  - region: all
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 100000
+    filter:
+      - feature: lcoe
+        max: 40
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: BASN
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 100000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: CANO
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: FRCC
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    filter:
+      - feature: lcoe
+        max: 40
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: ISNE
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    # filter:
+    #   - feature: lcoe
+    #     max: 40
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: MISS
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 50000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: MISC
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 150000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: MISW
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: NWPP
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: NYUP
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 100000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: PJMC
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 50000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: PJMD
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 200000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: PJME
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 125000
+    filter:
+      - feature: lcoe
+        max: 40
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: PJMW
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 250000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: RMRG
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 400000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: SPPC
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 60000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: SPPN
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 300000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: SPPS
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 75000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: SRCA
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 150000
+    # filter:
+    #   - feature: lcoe
+    #     max: 30
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: SRCE
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 150000
+    # filter:
+    #   - feature: lcoe
+    #     max: 30
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+  - region: SRSE
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 150000
+    # filter:
+    #   - feature: lcoe
+    #     max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: SRSG
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 150000
+    filter:
+      - feature: lcoe
+        max: 35
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: longitude
+        mw_per_cluster: 10000
+        # n_clusters: 2
+        method: agg
+  - region: TREW
+    technology: utilitypv
+    group:
+      - anyQual
+    min_capacity: 50000
+    # filter:
+    #   - feature: lcoe
+    #     max: 30
+    bin:
+      - feature: lcoe
+        weights: mw
+        q: 5
+        # bins: [0, 27, 31, 41]
+    cluster:
+      - feature: cf
+        # n_clusters: 2
+        mw_per_cluster: 10000
+        method: agg
+
+  - region: all
+    technology: offshorewind
+    turbine_type: fixed
+    pref_site: 1
+    filter:
+      - feature: lcoe
+        max: 150
+      - feature: d_shore_m
+        min: 15
+    bin:
+      - feature: interconnect_capex_mw
+        q: 3
+        weights: "mw"
+  - region: all
+    technology: offshorewind
+    turbine_type: floating
+    pref_site: 1
+    filter:
+      - feature: lcoe
+        max: 150
+        weights: "mw"
+      - feature: d_shore_m
+        min: 15
+    bin:
+      - feature: interconnect_capex_mw
+        q: 3
+        weights: "mw"
+  - region: all
+    technology: offshorewind
+    turbine_type: fixed
+    pref_site: 0
+    filter:
+      - feature: lcoe
+        max: 150
+      - feature: d_shore_m
+        min: 15
+    bin:
+      - feature: interconnect_capex_mw
+        q: 3
+        weights: "mw"
+  - region: all
+    technology: offshorewind
+    turbine_type: floating
+    pref_site: 0
+    filter:
+      - feature: lcoe
+        max: 150
+      - feature: d_shore_m
+        min: 15
+    bin:
+      - feature: interconnect_capex_mw
+        q: 3
+        weights: "mw"
+
+# Map user-regions to AEO Electricity Market Module (EMM) regions for cost multipliers
+# IPM regions have been pre-populated in the lists below, but any user defined regions
+# must also be added. This cannot be mapped automatically since user regions might
+# cut across EMM regions.
+# See a map at https://www.eia.gov/outlooks/aeo/pdf/nerc_map.pdf
+cost_multiplier_region_map:
+  TRE: [ERC_PHDL, ERC_REST, ERC_WEST, TRE, TREW]
+  FRCC: [FRCC]
+  MISW: [MIS_WUMS, MIS_MNWI, MIS_IA, MISW]
+  MISE: [MIS_LMI, MISE]
+  PJMC: [PJM_COMD, PJMC]
+  MISC: [MIS_IL, MIS_MO, S_D_AECI, MIS_INKY, MISC]
+  SPPN: [MIS_MAPP, SPP_WAUE, SPP_NEBR, MIS_MIDA, SPPN]
+  SPPC: [SPP_N, SPPC]
+  SPPS: [SPP_WEST, SPP_SPS, SPPS]
+  MISS: [MIS_AMSO, MIS_WOTA, MIS_LA, MIS_AR, MIS_D_MS, MISS]
+  SRSE: [S_SOU, SRSE]
+  SRCA: [S_VACA, SRCA]
+  PJMD: [PJM_Dom, PJMD]
+  PJMW: [PJM_West, PJM_AP, PJM_ATSI, PJMW]
+  PJME: [PJM_WMAC, PJM_EMAC, PJM_SMAC, PJM_PENE, PJME]
+  SRCE: [S_C_TVA, S_C_KY, SRCE]
+  NYUP: [NY_Z_A, NY_Z_B, NY_Z_C&E, NY_Z_D, NY_Z_F, NY_Z_G-I, NYUP]
+  NYCW: [NY_Z_J, NY_Z_K, NYCW]
+  ISNE: [NENG_ME, NENGREST, NENG_CT, ISNE]
+  RMRG: [WECC_CO, RMRG]
+  BASN: [WECC_ID, WECC_WY, WECC_UT, WECC_NNV, BASN]
+  NWPP: [WECC_PNW, WECC_MT, NWPP]
+  CANO: [WEC_CALN, WEC_BANC, CA_N, CANO]
+  CASO: [WECC_IID, WECC_SCE, WEC_LADW, WEC_SDGE, CA_S, CASO]
+  SRSG: [WECC_AZ, WECC_NM, WECC_SNV, SRSG]
+
+# The keys in cost_multiplier_technology_map are technologies listed in EIA's capital
+# cost assumptions document. The 2020 version is available at
+# https://www.eia.gov/outlooks/archive/aeo20/assumptions/pdf/table_8.2.pdf
+# Values in the list are string-matched to technologies (`<tech>_<tech_detail>`) from ATB.
+# Be sure to include any custom technologies you are using from `additional_technologies_fn`
+# or `modified_atb_new_gen`.
+# If a value in one of the lists matches more than one technology, the cost multiplier
+# will only be applied to the first technology.
+# If you want to modify the regional cost corrections CSV, you can put your own copy in
+# the folder PowerGenome/data/cost_multipliers.
+cost_multiplier_fn: AEO_2020_regional_cost_corrections.csv
+cost_multiplier_technology_map:
+  Ultra-supercritical coal (USC): [Coal_newAvgCF, Coal_newHighCF]
+  IGCC: [Coal_IGCCAvgCF]
+  USC with 30% CCS: [Coal_CCS30AvgCF, Coal_CCS30HighCF]
+  USC with 90% CCS: [Coal_CCS90AvgCF, Coal_CCS90HighCF]
+  CT - aeroderivative: []
+  CT - industrial frame: [NaturalGas_CTAvgCF, NaturalGas_CTHighCF, Hydrogen_CTAvgCF_RetrofitNGCT, Hydrogen_CTAvgCF_Moderate, NaturalGas_F-Frame CT_Moderate, Hydrogen_F-Frame CT_Moderate]
+  CC - single shaft: []
+  CC - multi shaft: [NaturalGas_CCAvgCF, NaturalGas_CCHigh, Hydrogen_CCAvgCF_RetrofitNGCT, Hydrogen_CCAvgCF_Moderate, NaturalGas_H-Frame CC_moderate, Hydrogen_H-Frame CC_moderate]
+  CC with 90% CCS: [NaturalGas_CCCCSAvgCF_Conservative, NaturalGas_CCCCSHighCF, NaturalGas_CCCCSAvgCF_RepowerCoal, NaturalGas_CCCCSAvgCF_RetrofitNGCC, NaturalGas_H-Frame CC 95% CCS_moderate]
+  Fuel cells: []
+  Advanced nuclear: [Nuclear_*, Nuclear_mid, Nuclear_low, Nuclear_high, AdvNuclear_ATB, Nuclear_Nuclear]
+  Biomass: [Biopower_CofireOld, Biopower_CofireNew, Biopower_Dedicated]
+  MSW - landfill gas: []
+  Wind: [LandbasedWind, LandbasedWind_LTRG4, LandbasedWind_Class3]
+  Wind offshore: [OffShoreWind_OTRG13, OffShoreWind_Class1, OffShoreWind_Class10, OffShoreWind_Class3, OffShoreWind_Class12]
+  Solar thermal: [CSP]
+  Solar PV - tracking: [UtilityPV, CommPV, ResPV, UtilityPV_LosAngeles,UtilityPV_Class1]
+  Battery storage: [Battery_*, Storage_Hydrogen, Storage_MetalAir]
+  Geothermal: [Geothermal_HydroBinary, Geothermal_HydroFlash, Geothermal_NFEGSBinary, Geothermal_DeepEGSBinary, Geothermal_NFEGSFlash, Geothermal_DeepEGSFlash]
+  Conventional hydropower: [Hydropower]
+
+
+# PROPOSED GENERATOR VARIABLES
+
+eia_860m_fn: june_generator2023.xlsx
+
+# The status codes below exclude plants where regulatory approvals have not been
+# initiated or received. "Other" is also excluded.
+proposed_status_included:
+  - V # Under construction, more than 50 percent complete
+  - TS # Construction complete, but not yet in commercial operation
+  - U # Under construction, less than or equal to 50 percent complete
+  - T # Regulatory approvals received. Not under construction
+
+# Heat rates are from EIA's AEO 2019 Cost and Performace report (Table 8.2)
+# or NREL's 2018 ATB. ATB technologies use 2020 heat rate values.
+# All AEO heat rates are for advanced technologies and use values from the final
+# heat rate column
+proposed_gen_heat_rates:
+  Natural Gas Fired Combined Cycle: 6.41 # ATB
+  Natural Gas Fired Combustion Turbine: 9.66 # ATB
+  Natural Gas Internal Combustion Engine: 8.160 # AEO
+
+
+proposed_min_load:
+  Natural Gas Fired Combined Cycle: 0.3 # From GE
+  Natural Gas Fired Combustion Turbine: 0.3 # GE aero range is .15-.5, E3 has 0.3
+  Natural Gas Internal Combustion Engine: 0.18 # From E3 assumptions
+
+# EXTRA ADDITIONS AND RETIREMENTS
+
+# Use this section to hard-code retirements that are not included in the most recent
+# annual verion of EIA 860. The format is
+# [plant_id_eia, generator_id, planned_retirement_date]
+additional_retirements:
+  - [10377,GEN1,2019]
+  - [10377,GEN2,2019]
+  - [1355,1,2019]
+  - [1355,2,2019]
+  - [1382,1,2019]
+  - [1382,2,2019]
+  - [1743,1,2019]
+  - [1769,5,2019]
+  - [1769,6,2019]
+  - [1769,7,2019]
+  - [1769,8,2019]
+  - [1769,9,2019]
+  - [1843,1,2019]
+  - [1843,2,2019]
+  - [1843,3,2019]
+  - [2378,2,2019]
+  - [2535,1,2019]
+  - [2535,2,2019]
+  - [2706,1,2019]
+  - [2706,2,2019]
+  - [2840,5,2019]
+  - [2840,6,2019]
+  - [3149,11,2019]
+  - [3809,1,2019]
+  - [3809,2,2019]
+  - [50282,GEN1,2019]
+  - [50282,GEN2,2019]
+  - [52007,GEN1,2019]
+  - [52007,GEN2,2019]
+  - [56684,3,2019]
+  - [56684,4,2019]
+  - [6016,1,2019]
+  - [6094,1,2019]
+  - [6094,2,2019]
+  - [6094,3,2019]
+  - [861,1,2019]
+  - [861,2,2019]
+  - [891,6,2019]
+  - [892,1,2019]
+  - [892,2,2019]
+  - [10025,17TG,2020]
+  - [10025,22TG,2020]
+  - [10025,41TG,2020]
+  - [10025,42TG,2020]
+  - [10025,43TG,2020]
+  - [10025,44TG,2020]
+  - [10025,75TG,2020]
+  - [10143,COLV,2020]
+  - [10384,GEN1,2020]
+  - [10384,GEN2,2020]
+  - [10633,GT1,2020]
+  - [10641,GEN1,2020]
+  - [10743,Gen1,2020]
+  - [1374,1,2020]
+  - [1374,2,2020]
+  - [1378,3,2020]
+  - [1381,1,2020]
+  - [1381,2,2020]
+  - [1381,3,2020]
+  - [1554,2,2020]
+  - [1555,GT5,2020]
+  - [1555,GT6,2020]
+  - [1555,GT7,2020]
+  - [1555,GT8,2020]
+  - [1559,GT8,2020]
+  - [1572,2,2020]
+  - [1572,3,2020]
+  - [1572,ST1,2020]
+  - [1825,3,2020]
+  - [1831,4,2020]
+  - [1831,5,2020]
+  - [1831,6,2020]
+  - [2076,2,2020]
+  - [2554,1,2020]
+  - [2554,2,2020]
+  - [2554,3,2020]
+  - [2554,ST4,2020]
+  - [2837,6,2020]
+  - [2840,4,2020]
+  - [2866,1,2020]
+  - [2866,2,2020]
+  - [2866,3,2020]
+  - [2866,4,2020]
+  - [3803,GT2,2020]
+  - [50366,GEN1,2020]
+  - [50366,GEN2,2020]
+  - [50366,GEN5,2020]
+  - [50366,GEN6,2020]
+  - [50366,GEN7,2020]
+  - [50879,GEN1,2020]
+  - [54081,GEN1,2020]
+  - [54081,GEN2,2020]
+  - [54081,GEN3,2020]
+  - [54081,GEN4,2020]
+  - [55618,GEN1,2020]
+  - [55618,GEN2,2020]
+  - [56572,1,2020]
+  - [57433,1,2020]
+  - [57433,2,2020]
+  - [57433,3,2020]
+  - [6016,1,2020]
+  - [6082,1,2020]
+  - [6094,3,2020]
+  - [8011,1,2020]
+  - [861,2,2020]
+  - [892,1,2020]
+  - [892,2,2020]
+  - [963,1,2020]
+  - [963,2,2020]
+  - [1571,3,2021]
+  - [1571,4,2021]
+  - [2866,A1,2021]
+  - [2866,B1,2021]
+  - [2866,B2,2021]
+  - [2866,B3,2021]
+  - [2866,B4,2021]
+  - [3804,5,2021]
+  - [54081,GEN1,2021]
+  - [54081,GEN2,2021]
+  - [54081,GEN3,2021]
+  - [54081,GEN4,2021]
+  - [599,3,2021]
+  - [963,3,2021]
+  - [994,ST1,2021]
+  - [1008,2,2022]
+  - [1008,4,2022]
+  - [1740,1,2022]
+  - [1743,1,2022]
+  - [1743,2,2022]
+  - [1743,3,2022]
+  - [1743,6,2022]
+  - [1743,7,2022]
+  - [1745,1,2022]
+  - [2104,3,2022]
+  - [2104,4,2022]
+  - [6004,1,2022]
+  - [6004,2,2022]
+  - [856,2,2022]
+  - [1012,2,2023]
+  - [1702,1,2023]
+  - [1702,2,2023]
+  - [3396,1,2023]
+  - [3797,5,2023]
+  - [3797,6,2023]
+  - [55738,1,2023]
+  - [55738,2,2023]
+  - [6085,14,2023]
+  - [6085,15,2023]
+  - [6085,17,2023]
+  - [6085,18,2023]
+  - [6137,1,2023]
+  - [6137,2,2023]
+  - [6213,1,2023]
+  - [6213,2,2023]
+  - [994,ST2,2023]
+  - [2718,1,2024]
+  - [2718,2,2024]
+  - [2718,3,2024]
+  - [2718,4,2024]
+  - [2718,5,2024]
+  - [856, 2, 2022] # E D Edwards, MISO, IL, from EIA
+  - [856, 3, 2022] # E D Edwards, MISO, IL, from EIA
+  # - [889, 1, 2025] # Baldwin Energy Complex, MISO, IL, from EIA
+  # - [889, 2, 2025] # Baldwin Energy Complex, MISO, IL, from EIA
+  # - [876, 1, 2027] # Kincaid Generation LLC, PJM, IL, from EIA
+  # - [876, 2, 2027] # Kincaid Generation LLC, PJM, IL, from EIA
+  # - [6017, 1, 2027] # Newton, MISO, IL, from EIA
+  # - [976, 1, 2029] # Marion, IL, Qingyu Added, per IL law, they are going to be emission free by 2030
+  # - [976, 2, 2029] # Marion, IL, Qingyu Added, per IL law, they are going to be emission free by 2030
+  # - [976, 3, 2029] # Marion, IL, Qingyu Added, per IL law, they are going to be emission free by 2030
+  # - [879, 5, 2029] # Powerton, PJM, IL, per IL law, they are going to be emission free by 2030
+  # - [879, 6, 2029] # Powerton, PJM, IL, per IL law, they are going to be emission free by 2030
+  # - [1832,1,2025]
+  # - [6166,1,2028]
+  # - [997,12,2028]
+  # - [6034,ST1,2029]
+  # - [6034,ST2,2029]
