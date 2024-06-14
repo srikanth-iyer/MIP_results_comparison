@@ -1,26 +1,26 @@
 from pathlib import Path
 import hashlib
 
-from rules.common import md5, check_md5
+# from rules.common import md5, check_md5
 
-# def md5(fnames: [str]) -> str:
-#     """Calculate MD5 hash of a file."""
-#     hash_md5 = hashlib.md5()
-#     for fname in fnames:
-#         with open(fname, "rb") as f:
-#             for chunk in iter(lambda: f.read(4096), b""):
-#                 hash_md5.update(chunk)
-#     return hash_md5.hexdigest()
+def md5(fnames: [str]) -> str:
+    """Calculate MD5 hash of a file."""
+    hash_md5 = hashlib.md5()
+    for fname in fnames:
+        with open(fname, "rb") as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hash_md5.update(chunk)
+    return hash_md5.hexdigest()
 
-# def check_md5(input_file: [str], done_file: Path) -> bool:
-#     """Check if the MD5 hash of the input file matches the hash stored in the .done file."""
-#     if done_file.exists():
-#         with open(done_file, 'r') as file:
-#             old_hash = file.read().strip()
-#         new_hash = md5(input_file)
-#         if old_hash == new_hash:
-#             return True
-#     return False
+def check_md5(input_file: [str], done_file: Path) -> bool:
+    """Check if the MD5 hash of the input file matches the hash stored in the .done file."""
+    if done_file.exists():
+        with open(done_file, 'r') as file:
+            old_hash = file.read().strip()
+        new_hash = md5(input_file)
+        if old_hash == new_hash:
+            return True
+    return False
 
 
 def my_inputs(wildcards):
