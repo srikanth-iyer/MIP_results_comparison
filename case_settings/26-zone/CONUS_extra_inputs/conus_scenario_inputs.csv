@@ -128,9 +128,9 @@ base_52_week_no_ccs,2035,none,reference,no,no,none,none,greenfield,52_weeks,yes,
 base_52_week_no_ccs,2040,none,reference,no,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,no,none
 base_52_week_no_ccs,2045,none,reference,no,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,no,none
 base_52_week_no_ccs,2050,none,reference,no,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,no,none
-base_52_week_tx_15,2027,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
-base_52_week_tx_15,2030,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
-base_52_week_tx_15,2035,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
-base_52_week_tx_15,2040,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
-base_52_week_tx_15,2045,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
-base_52_week_tx_15,2050,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2027,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2030,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2035,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2040,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2045,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+base_52_week_tx_0,2050,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
