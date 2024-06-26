@@ -55,10 +55,15 @@ data_folders = [
     "full-base-200",
     "full-base-200-retire",
     "full-base-200-no-ccs",
+    "full-base-200-commit",
     "full-base-50",
     "full-base-1000",
     "full-current-policies",
     "full-current-policies-retire",
+    "full-current-policies-commit",
+    "full-base-200-tx-0",
+    "full-base-200-tx-15",
+    "full-base-200-tx-50",
 ]
 order = [f.replace("full-", "") for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]

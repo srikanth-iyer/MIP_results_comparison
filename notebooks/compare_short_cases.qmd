@@ -55,13 +55,12 @@ from fig_functions import (
 data_folders = [
     "short-base-200",
     "short-base-200-retire",
+    "short-base-200-commit",
     "short-base-200-no-ccs",
     "short-base-200-tx-15",
     "short-base-200-tx-50",
-    "short-current-policies-high-ccs",
-    "short-current-policies-retire-high-ccs",
-    "short-current-policies-low-ccs",
-    "short-current-policies-retire-low-ccs",
+    "short-current-policies",
+    "short-current-policies-retire",
 ]
 order = [f.replace("short-", "") for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
