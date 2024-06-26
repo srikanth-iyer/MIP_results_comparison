@@ -58,6 +58,7 @@ rule process_results_summary:
         # Hash both the input data file and the python script
         hash_files = input.input_files + [str(Path.cwd() / "bin" / "results_to_genx_inputs.py")]
         print(hash_files)
+        print(output.done_file)
         print(read_hash(output.done_file))
         print(md5(hash_files))
         if check_md5(hash_files, Path(output.done_file)):
