@@ -24,8 +24,13 @@ def check_md5(input_file: [str], done_file: Path) -> bool:
 
 
 def my_inputs(wildcards):
-    files = Path.cwd().rglob("*_results_summary")
-    return [f"{f.parts[-2]}/{f.parts[-1]}.done" for f in files if "26z" not in str(f) and ("full" in f.parts[-2] or "short" in f.parts[-2])]
+    folders = Path.cwd().rglob("*_results_summary")
+    files = []
+    for f in folders:
+        if "26z" not in str(f) and ("full" in f.parts[-2] or "short" in f.parts[-2] or "20-week" in f.parts[-2]):
+            if (f / "resource_capacity.csv").exists() and (f / "transmission_expansion.csv").exists():
+                files.append(f"{f.parts[-2]}/{f.parts[-1]}.done")
+    return files
 
 rule all:
     input:
