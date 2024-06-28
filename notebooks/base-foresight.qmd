@@ -1,5 +1,5 @@
 ---
-title: "52-week base $200"
+title: "Base foresight"
 format: dashboard
 #   dashboard:
 #     scrolling: false
