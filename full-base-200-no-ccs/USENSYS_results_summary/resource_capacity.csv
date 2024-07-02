@@ -2969,3 +2969,1791 @@ USENSYS,SRSG,SRSG_SRSG_battery_moderate_0,Battery,2040,full-base-200-no-ccs,MWh,
 USENSYS,SRSG,SRSG_SRSG_hydroelectric_pumped_storage_1,Hydro,2040,full-base-200-no-ccs,MWh,3353,3353
 USENSYS,TRE,TRE_TRE_battery_moderate_0,Battery,2040,full-base-200-no-ccs,MWh,1,1821
 USENSYS,TREW,TREW_TREW_battery_moderate_0,Battery,2040,full-base-200-no-ccs,MWh,0,2
+USENSYS,BASN,BASN_BASN_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2656,9381
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,810,9350
+USENSYS,BASN,BASN_BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,925,2165
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,3640,8710
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,5755,7798
+USENSYS,CANO,CANO_CANO_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,3095,10515
+USENSYS,CANO,CANO_CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,566,2264
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,14516,14708
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,9886
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_7_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,1774
+USENSYS,CASO,CASO_CASO_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,9834,18861
+USENSYS,CASO,CASO_CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,4853,6470
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,13017
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,4379
+USENSYS,FRCC,FRCC_FRCC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,3237,9810
+USENSYS,FRCC,FRCC_FRCC_nuclear_nuclear_moderate_0,Nuclear,2045,full-base-200-no-ccs,MW,7373,9356
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,6873
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_5_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,5621,16324
+USENSYS,ISNE,ISNE_ISNE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,8896,12574
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1430,4529
+USENSYS,ISNE,ISNE_ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,15669,16268
+USENSYS,ISNE,ISNE_ISNE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,13577,21625
+USENSYS,MISC,MISC_MISC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,316,7244
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_10_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,6156
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,2847
+USENSYS,MISC,MISC_MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,899
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,13651
+USENSYS,MISE,MISE_MISE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1380,3513
+USENSYS,MISE,MISE_MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,4348,6582
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_9_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,1049
+USENSYS,MISS,MISS_MISS_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2499,8784
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,705
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1075,3935
+USENSYS,MISS,MISS_MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,2784
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,3995
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,3705,5202
+USENSYS,MISW,MISW_MISW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,3765,12659
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_17_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,198,478
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_28_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,448,4671
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2571,7549
+USENSYS,MISW,MISW_MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,4277
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6736,10326
+USENSYS,NWPP,NWPP_NWPP_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,0,1896
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,1639
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_14_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,805
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,1444
+USENSYS,NWPP,NWPP_NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,2449
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,15209,21916
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,4949
+USENSYS,NYCW,NYCW_NYCW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,4512,5025
+USENSYS,NYCW,NYCW_NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,1718
+USENSYS,NYUP,NYUP_NYUP_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2,2436
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,4100
+USENSYS,PJMC,PJMC_PJMC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1006,1810
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_27_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,3058
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_35_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,651,737
+USENSYS,PJMC,PJMC_PJMC_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,3102
+USENSYS,PJMD,PJMD_PJMD_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2145,6692
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,248
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,8527,21748
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_7_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,26
+USENSYS,PJME,PJME_PJME_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1438,3542
+USENSYS,PJME,PJME_PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,18140,21859
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,1375
+USENSYS,PJMW,PJMW_PJMW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,6979,16437
+USENSYS,PJMW,PJMW_PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,7807,11540
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,13841
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_6_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,4895,11536
+USENSYS,RMRG,RMRG_RMRG_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1,2017
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_14_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,8495,9950
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_17_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,1619
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_23_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,4045
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_28_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,1344
+USENSYS,SPPC,SPPC_SPPC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1,20
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2456,2785
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_77_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6708,7004
+USENSYS,SPPC,SPPC_SPPC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6252,8532
+USENSYS,SPPC,SPPC_SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,3480
+USENSYS,SPPN,SPPN_SPPN_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,0,3
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4617,8002
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,269
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,0,3287
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,9320,9713
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_8_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,44
+USENSYS,SPPS,SPPS_SPPS_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1,5
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,887,5857
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_25_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,728,5543
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,1160
+USENSYS,SRCA,SRCA_SRCA_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2069,6821
+USENSYS,SRCA,SRCA_SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,6542,7959
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_3_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,5815,16393
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,3542
+USENSYS,SRCE,SRCE_SRCE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1468,9601
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_54_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2805,9520
+USENSYS,SRCE,SRCE_SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,1
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_3_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,4935,19491
+USENSYS,SRSE,SRSE_SRSE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2861,8004
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1909,5775
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,2649
+USENSYS,SRSE,SRSE_SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,131
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_3_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,5207,17293
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_8_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,823
+USENSYS,SRSG,SRSG_SRSG_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,2962,5965
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,6375
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,30,6009
+USENSYS,SRSG,SRSG_SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,0,17
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_3_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,7419
+USENSYS,TRE,TRE_TRE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,559,9600
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,161
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_18_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2912,4860
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_21_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,6193
+USENSYS,TRE,TRE_TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,6806,13591
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_19_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,0,7303
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_34_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,0,9318
+USENSYS,TREW,TREW_TREW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MW,1,7
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3550,4068
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2660,3218
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,0,2221
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,4398,7225
+USENSYS,BASN,BASN_BASN_biomass_1,Other,2045,full-base-200-no-ccs,MW,7,7
+USENSYS,BASN,BASN_BASN_biomass_2,Other,2045,full-base-200-no-ccs,MW,17,17
+USENSYS,BASN,BASN_BASN_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,1571,1571
+USENSYS,BASN,BASN_BASN_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,728,728
+USENSYS,BASN,BASN_BASN_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,471,471
+USENSYS,BASN,BASN_BASN_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,2027,2027
+USENSYS,BASN,BASN_BASN_geothermal_1,Geothermal,2045,full-base-200-no-ccs,MW,152,152
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8527,8527
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,8168,8168
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,9068,9068
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,7607,7607
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,735,735
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,6794,6794
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,1383,1383
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,236,236
+USENSYS,BASN,BASN_BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,221,221
+USENSYS,BASN,BASN_BASN_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,584,584
+USENSYS,BASN,BASN_BASN_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,12,12
+USENSYS,BASN,BASN_BASN_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,160,160
+USENSYS,BASN,BASN_BASN_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,7065,7065
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,11355,11355
+USENSYS,CANO,CANO_CANO_biomass_1,Other,2045,full-base-200-no-ccs,MW,31,31
+USENSYS,CANO,CANO_CANO_biomass_2,Other,2045,full-base-200-no-ccs,MW,36,36
+USENSYS,CANO,CANO_CANO_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,6456,6456
+USENSYS,CANO,CANO_CANO_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,6489,6489
+USENSYS,CANO,CANO_CANO_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,2277,2277
+USENSYS,CANO,CANO_CANO_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,511,511
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,3113,3113
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,8297,8297
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2000,2000
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,1114,1114
+USENSYS,CANO,CANO_CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,444,444
+USENSYS,CANO,CANO_CANO_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,CANO,CANO_CANO_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,115,115
+USENSYS,CANO,CANO_CANO_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,170,170
+USENSYS,CANO,CANO_CANO_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,201,201
+USENSYS,CANO,CANO_CANO_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,4662,4662
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,11602,11602
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,3885,3885
+USENSYS,CASO,CASO_CASO_biomass_1,Other,2045,full-base-200-no-ccs,MW,57,57
+USENSYS,CASO,CASO_CASO_biomass_2,Other,2045,full-base-200-no-ccs,MW,9,9
+USENSYS,CASO,CASO_CASO_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,955,955
+USENSYS,CASO,CASO_CASO_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,10080,10080
+USENSYS,CASO,CASO_CASO_geothermal_1,Geothermal,2045,full-base-200-no-ccs,MW,24,24
+USENSYS,CASO,CASO_CASO_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1665,1665
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,588,588
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,323,323
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,716,716
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,161,161
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,474,474
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,420,420
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1987,1987
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,7482,7482
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,1409,1409
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,3953,3953
+USENSYS,CASO,CASO_CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,49,49
+USENSYS,CASO,CASO_CASO_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,888,888
+USENSYS,CASO,CASO_CASO_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,CASO,CASO_CASO_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,67,67
+USENSYS,CASO,CASO_CASO_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,10708,10708
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,15656,15656
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,4392,4392
+USENSYS,FRCC,FRCC_FRCC_biomass_1,Other,2045,full-base-200-no-ccs,MW,32,32
+USENSYS,FRCC,FRCC_FRCC_biomass_2,Other,2045,full-base-200-no-ccs,MW,85,85
+USENSYS,FRCC,FRCC_FRCC_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,44,44
+USENSYS,FRCC,FRCC_FRCC_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,2549,2549
+USENSYS,FRCC,FRCC_FRCC_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,442,442
+USENSYS,FRCC,FRCC_FRCC_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,7346,7346
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2785,2785
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,779,779
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,19,19
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,6,6
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2164,2164
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_13_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1387,1387
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_14_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,182,182
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,112,112
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_16_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,71,71
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,6,6
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_18_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2389,2389
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_19_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1052,1052
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,310,310
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_20_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,332,332
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_21_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,53,53
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_22_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,51,51
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_23_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,92,92
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,36,36
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,5,5
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,61,61
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2302,2302
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_7_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,996,996
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,592,592
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,100,100
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,28738,28738
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,2336,2336
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,7162,7162
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,427,427
+USENSYS,FRCC,FRCC_FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,251,251
+USENSYS,FRCC,FRCC_FRCC_naturalgas_hframe_cc_moderate_0,FRCC_naturalgas_hframe_cc_moderate_0,2045,full-base-200-no-ccs,MW,1954,1954
+USENSYS,FRCC,FRCC_FRCC_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,3737,3737
+USENSYS,FRCC,FRCC_FRCC_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,48,48
+USENSYS,FRCC,FRCC_FRCC_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,9387,9387
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,15726,15726
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,17434,17434
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6613,6613
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,293,293
+USENSYS,ISNE,ISNE_ISNE_biomass_2,Other,2045,full-base-200-no-ccs,MW,39,39
+USENSYS,ISNE,ISNE_ISNE_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,517,517
+USENSYS,ISNE,ISNE_ISNE_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,5746,5746
+USENSYS,ISNE,ISNE_ISNE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1801,1801
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,9723,9723
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,274,274
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,9833,9833
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,189,189
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,9689,9689
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,273,273
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,206,206
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,3166,3166
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,10513,10513
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,1307,1307
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,390,390
+USENSYS,ISNE,ISNE_ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,51,51
+USENSYS,ISNE,ISNE_ISNE_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,10,10
+USENSYS,ISNE,ISNE_ISNE_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,3356,3356
+USENSYS,ISNE,ISNE_ISNE_offshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,29,29
+USENSYS,ISNE,ISNE_ISNE_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,549,549
+USENSYS,ISNE,ISNE_ISNE_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,763,763
+USENSYS,ISNE,ISNE_ISNE_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,223,223
+USENSYS,ISNE,ISNE_ISNE_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,2242,2242
+USENSYS,ISNE,ISNE_ISNE_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,593,593
+USENSYS,MISC,MISC_MISC_biomass_1,Other,2045,full-base-200-no-ccs,MW,28,28
+USENSYS,MISC,MISC_MISC_biomass_2,Other,2045,full-base-200-no-ccs,MW,42,42
+USENSYS,MISC,MISC_MISC_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,280,280
+USENSYS,MISC,MISC_MISC_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,836,836
+USENSYS,MISC,MISC_MISC_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,3842,3842
+USENSYS,MISC,MISC_MISC_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3656,3656
+USENSYS,MISC,MISC_MISC_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,471,471
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6115,6115
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2915,2915
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4027,4027
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4963,4963
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4155,4155
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4867,4867
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4240,4240
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4790,4790
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2885,2885
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,6090,6090
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1584,1584
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,3192,3192
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,458,458
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,8411,8411
+USENSYS,MISC,MISC_MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,35,35
+USENSYS,MISC,MISC_MISC_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,68,68
+USENSYS,MISC,MISC_MISC_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,2373,2373
+USENSYS,MISC,MISC_MISC_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,4786,4786
+USENSYS,MISC,MISC_MISC_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,66,66
+USENSYS,MISC,MISC_MISC_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,14,14
+USENSYS,MISC,MISC_MISC_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,3786,3786
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,19945,19945
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,2143,2143
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,7950,7950
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,2053,2053
+USENSYS,MISE,MISE_MISE_biomass_1,Other,2045,full-base-200-no-ccs,MW,29,29
+USENSYS,MISE,MISE_MISE_biomass_2,Other,2045,full-base-200-no-ccs,MW,17,17
+USENSYS,MISE,MISE_MISE_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1,1
+USENSYS,MISE,MISE_MISE_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,4104,4104
+USENSYS,MISE,MISE_MISE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,2115,2115
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,92,92
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,60,60
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,224,224
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,116,116
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,14,14
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_13_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,15,15
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5,5
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,558,558
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_16_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,374,374
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,556,556
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_18_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5,5
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_19_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4,4
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,87,87
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,379,379
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_21_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,767,767
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,369,369
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,674,674
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,469,469
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,149,149
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,105,105
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_7_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,16,16
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,50,50
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1018,1018
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,6017,6017
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,699,699
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,400,400
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,3894,3894
+USENSYS,MISE,MISE_MISE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,84,84
+USENSYS,MISE,MISE_MISE_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,7,7
+USENSYS,MISE,MISE_MISE_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,1161,1161
+USENSYS,MISE,MISE_MISE_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,2177,2177
+USENSYS,MISE,MISE_MISE_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,12,12
+USENSYS,MISE,MISE_MISE_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,11,11
+USENSYS,MISE,MISE_MISE_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,1178,1178
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,13577,13577
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,6482,6482
+USENSYS,MISS,MISS_MISS_biomass_1,Other,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,MISS,MISS_MISS_biomass_2,Other,2045,full-base-200-no-ccs,MW,40,40
+USENSYS,MISS,MISS_MISS_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,521,521
+USENSYS,MISS,MISS_MISS_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1574,1574
+USENSYS,MISS,MISS_MISS_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,3703,3703
+USENSYS,MISS,MISS_MISS_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,4177,4177
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1518,1518
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3114,3114
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1740,1740
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2906,2906
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,528,528
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4093,4093
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,17522,17522
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,2165,2165
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,4051,4051
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,670,670
+USENSYS,MISS,MISS_MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,108,108
+USENSYS,MISS,MISS_MISS_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,30,30
+USENSYS,MISS,MISS_MISS_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,5426,5426
+USENSYS,MISS,MISS_MISS_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,184,184
+USENSYS,MISS,MISS_MISS_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,39,39
+USENSYS,MISS,MISS_MISS_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,MISS,MISS_MISS_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,2208,2208
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6106,6106
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,3113,3113
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6308,6308
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,2901,2901
+USENSYS,MISW,MISW_MISW_biomass_1,Other,2045,full-base-200-no-ccs,MW,45,45
+USENSYS,MISW,MISW_MISW_biomass_2,Other,2045,full-base-200-no-ccs,MW,6,6
+USENSYS,MISW,MISW_MISW_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,82,82
+USENSYS,MISW,MISW_MISW_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,5286,5286
+USENSYS,MISW,MISW_MISW_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,331,331
+USENSYS,MISW,MISW_MISW_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,4981,4981
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6829,6829
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1164,1164
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,283,283
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1941,1941
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_16_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8954,8954
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_18_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,3004,3004
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8374,8374
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,918,918
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_24_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6140,6140
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_26_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1721,1721
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2138,2138
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5416,5416
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_34_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2744,2744
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8357,8357
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2034,2034
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1167,1167
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_7_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,7899,7899
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1110,1110
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,7025,7025
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,316,316
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,4109,4109
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,598,598
+USENSYS,MISW,MISW_MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,671,671
+USENSYS,MISW,MISW_MISW_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,48,48
+USENSYS,MISW,MISW_MISW_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,2928,2928
+USENSYS,MISW,MISW_MISW_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,11331,11331
+USENSYS,MISW,MISW_MISW_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,250,250
+USENSYS,MISW,MISW_MISW_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,345,345
+USENSYS,MISW,MISW_MISW_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,3124,3124
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,22015,22015
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,4291,4291
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,3195,3195
+USENSYS,NWPP,NWPP_NWPP_biomass_1,Other,2045,full-base-200-no-ccs,MW,29,29
+USENSYS,NWPP,NWPP_NWPP_biomass_2,Other,2045,full-base-200-no-ccs,MW,37,37
+USENSYS,NWPP,NWPP_NWPP_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,29601,29601
+USENSYS,NWPP,NWPP_NWPP_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1482,1482
+USENSYS,NWPP,NWPP_NWPP_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,148,148
+USENSYS,NWPP,NWPP_NWPP_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3145,3145
+USENSYS,NWPP,NWPP_NWPP_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,314,314
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,7667,7667
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5289,5289
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2327,2327
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_16_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1264,1264
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2489,2489
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_21_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,725,725
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1314,1314
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2056,2056
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,966,966
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,815,815
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,3200,3200
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1875,1875
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,4016,4016
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,412,412
+USENSYS,NWPP,NWPP_NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,310,310
+USENSYS,NWPP,NWPP_NWPP_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,NWPP,NWPP_NWPP_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,1172,1172
+USENSYS,NWPP,NWPP_NWPP_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,1849,1849
+USENSYS,NWPP,NWPP_NWPP_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,10,10
+USENSYS,NWPP,NWPP_NWPP_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,409,409
+USENSYS,NWPP,NWPP_NWPP_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,1610,1610
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,7445,7445
+USENSYS,NYCW,NYCW_NYCW_biomass_2,Other,2045,full-base-200-no-ccs,MW,1,1
+USENSYS,NYCW,NYCW_NYCW_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,1897,1897
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1503,1503
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,2828,2828
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,1037,1037
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,1011,1011
+USENSYS,NYCW,NYCW_NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,37,37
+USENSYS,NYCW,NYCW_NYCW_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,103,103
+USENSYS,NYCW,NYCW_NYCW_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,105,105
+USENSYS,NYUP,NYUP_NYUP_biomass_1,Other,2045,full-base-200-no-ccs,MW,54,54
+USENSYS,NYUP,NYUP_NYUP_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,3443,3443
+USENSYS,NYUP,NYUP_NYUP_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,1579,1579
+USENSYS,NYUP,NYUP_NYUP_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1407,1407
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,340,340
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3349,3349
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,850,850
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2801,2801
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1404,1404
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2305,2305
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2554,2554
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1081,1081
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,3347,3347
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,6566,6566
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,1837,1837
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,52,52
+USENSYS,NYUP,NYUP_NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,18,18
+USENSYS,NYUP,NYUP_NYUP_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,24,24
+USENSYS,NYUP,NYUP_NYUP_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,3358,3358
+USENSYS,NYUP,NYUP_NYUP_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,1640,1640
+USENSYS,NYUP,NYUP_NYUP_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,49,49
+USENSYS,NYUP,NYUP_NYUP_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,351,351
+USENSYS,NYUP,NYUP_NYUP_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,1713,1713
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,14810,14810
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,5284,5284
+USENSYS,PJMC,PJMC_PJMC_biomass_1,Other,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMC,PJMC_PJMC_biomass_2,Other,2045,full-base-200-no-ccs,MW,9,9
+USENSYS,PJMC,PJMC_PJMC_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,11,11
+USENSYS,PJMC,PJMC_PJMC_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,2152,2152
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2194,2194
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1627,1627
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,4839,4839
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,195,195
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,71,71
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,8524,8524
+USENSYS,PJMC,PJMC_PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,111,111
+USENSYS,PJMC,PJMC_PJMC_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMC,PJMC_PJMC_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,10898,10898
+USENSYS,PJMC,PJMC_PJMC_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,1671,1671
+USENSYS,PJMC,PJMC_PJMC_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,41,41
+USENSYS,PJMC,PJMC_PJMC_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,9,9
+USENSYS,PJMC,PJMC_PJMC_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,312,312
+USENSYS,PJMC,PJMC_PJMC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,7237,7237
+USENSYS,PJMD,PJMD_PJMD_biomass_1,Other,2045,full-base-200-no-ccs,MW,20,20
+USENSYS,PJMD,PJMD_PJMD_biomass_2,Other,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,PJMD,PJMD_PJMD_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,613,613
+USENSYS,PJMD,PJMD_PJMD_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,881,881
+USENSYS,PJMD,PJMD_PJMD_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3396,3396
+USENSYS,PJMD,PJMD_PJMD_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,3003,3003
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1248,1248
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,237,237
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1426,1426
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,37,37
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1346,1346
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,128,128
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1171,1171
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,302,302
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1234,1234
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,6969,6969
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,730,730
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,1119,1119
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,60,60
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,2240,2240
+USENSYS,PJMD,PJMD_PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMD,PJMD_PJMD_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMD,PJMD_PJMD_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,3708,3708
+USENSYS,PJMD,PJMD_PJMD_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,208,208
+USENSYS,PJMD,PJMD_PJMD_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,10,10
+USENSYS,PJMD,PJMD_PJMD_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,4,4
+USENSYS,PJMD,PJMD_PJMD_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,4539,4539
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,16576,16576
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,541,541
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,1160,1160
+USENSYS,PJME,PJME_PJME_biomass_1,Other,2045,full-base-200-no-ccs,MW,47,47
+USENSYS,PJME,PJME_PJME_biomass_2,Other,2045,full-base-200-no-ccs,MW,13,13
+USENSYS,PJME,PJME_PJME_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,579,579
+USENSYS,PJME,PJME_PJME_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1794,1794
+USENSYS,PJME,PJME_PJME_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,564,564
+USENSYS,PJME,PJME_PJME_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,9452,9452
+USENSYS,PJME,PJME_PJME_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1942,1942
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,206,206
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,87,87
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,583,583
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,97,97
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1663,1663
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,64,64
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,376,376
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,363,363
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1014,1014
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,279,279
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1178,1178
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_9_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,140,140
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,3781,3781
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,22981,22981
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,268,268
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,2660,2660
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,575,575
+USENSYS,PJME,PJME_PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,259,259
+USENSYS,PJME,PJME_PJME_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,89,89
+USENSYS,PJME,PJME_PJME_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,12829,12829
+USENSYS,PJME,PJME_PJME_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,38,38
+USENSYS,PJME,PJME_PJME_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,92,92
+USENSYS,PJME,PJME_PJME_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,68,68
+USENSYS,PJME,PJME_PJME_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,1563,1563
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,9642,9642
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,7533,7533
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,14910,14910
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,2253,2253
+USENSYS,PJMW,PJMW_PJMW_biomass_1,Other,2045,full-base-200-no-ccs,MW,13,13
+USENSYS,PJMW,PJMW_PJMW_biomass_2,Other,2045,full-base-200-no-ccs,MW,5,5
+USENSYS,PJMW,PJMW_PJMW_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,626,626
+USENSYS,PJMW,PJMW_PJMW_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,3030,3030
+USENSYS,PJMW,PJMW_PJMW_conventional_steam_coal_3,Coal,2045,full-base-200-no-ccs,MW,260,260
+USENSYS,PJMW,PJMW_PJMW_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,6782,6782
+USENSYS,PJMW,PJMW_PJMW_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,238,238
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1778,1778
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2618,2618
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,752,752
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3644,3644
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,458,458
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3934,3934
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,133,133
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4260,4260
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,139,139
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4250,4250
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,18211,18211
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,851,851
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,550,550
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,10182,10182
+USENSYS,PJMW,PJMW_PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,77,77
+USENSYS,PJMW,PJMW_PJMW_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,34,34
+USENSYS,PJMW,PJMW_PJMW_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,6326,6326
+USENSYS,PJMW,PJMW_PJMW_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,1872,1872
+USENSYS,PJMW,PJMW_PJMW_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,86,86
+USENSYS,PJMW,PJMW_PJMW_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,157,157
+USENSYS,PJMW,PJMW_PJMW_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,4054,4054
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,20982,20982
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,6500,6500
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,3452,3452
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,19091,19091
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_5_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,2952,2952
+USENSYS,RMRG,RMRG_RMRG_biomass_1,Other,2045,full-base-200-no-ccs,MW,6,6
+USENSYS,RMRG,RMRG_RMRG_biomass_2,Other,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,RMRG,RMRG_RMRG_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,656,656
+USENSYS,RMRG,RMRG_RMRG_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,2466,2466
+USENSYS,RMRG,RMRG_RMRG_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,1270,1270
+USENSYS,RMRG,RMRG_RMRG_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,2049,2049
+USENSYS,RMRG,RMRG_RMRG_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,581,581
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,14473,14473
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,3297,3297
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_13_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,928,928
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2227,2227
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6674,6674
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2276,2276
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,409,409
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,11270,11270
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,5721,5721
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2679,2679
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1606,1606
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,1955,1955
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2674,2674
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,342,342
+USENSYS,RMRG,RMRG_RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,243,243
+USENSYS,RMRG,RMRG_RMRG_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,7184,7184
+USENSYS,RMRG,RMRG_RMRG_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,2,2
+USENSYS,RMRG,RMRG_RMRG_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,87,87
+USENSYS,RMRG,RMRG_RMRG_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,2124,2124
+USENSYS,RMRG,RMRG_RMRG_utilitypv_class1_moderate_15_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,44,44
+USENSYS,RMRG,RMRG_RMRG_utilitypv_class1_moderate_7_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,5637,5637
+USENSYS,SPPC,SPPC_SPPC_biomass_1,Other,2045,full-base-200-no-ccs,MW,4,4
+USENSYS,SPPC,SPPC_SPPC_biomass_2,Other,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,SPPC,SPPC_SPPC_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,52,52
+USENSYS,SPPC,SPPC_SPPC_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1546,1546
+USENSYS,SPPC,SPPC_SPPC_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,877,877
+USENSYS,SPPC,SPPC_SPPC_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,1462,1462
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6708,6708
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,7930,7930
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3056,3056
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_47_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2848,2848
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1560,1560
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,313,313
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2530,2530
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,384,384
+USENSYS,SPPC,SPPC_SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,315,315
+USENSYS,SPPC,SPPC_SPPC_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,6,6
+USENSYS,SPPC,SPPC_SPPC_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,1255,1255
+USENSYS,SPPC,SPPC_SPPC_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,5162,5162
+USENSYS,SPPC,SPPC_SPPC_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,45,45
+USENSYS,SPPC,SPPC_SPPC_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,90,90
+USENSYS,SPPN,SPPN_SPPN_biomass_1,Other,2045,full-base-200-no-ccs,MW,4,4
+USENSYS,SPPN,SPPN_SPPN_biomass_2,Other,2045,full-base-200-no-ccs,MW,14,14
+USENSYS,SPPN,SPPN_SPPN_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,2415,2415
+USENSYS,SPPN,SPPN_SPPN_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,2304,2304
+USENSYS,SPPN,SPPN_SPPN_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,470,470
+USENSYS,SPPN,SPPN_SPPN_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,741,741
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6781,6781
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1601,1601
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8042,8042
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,316,316
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8229,8229
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,123,123
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,300,300
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,345,345
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2324,2324
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,120,120
+USENSYS,SPPN,SPPN_SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,335,335
+USENSYS,SPPN,SPPN_SPPN_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,SPPN,SPPN_SPPN_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,770,770
+USENSYS,SPPN,SPPN_SPPN_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,5675,5675
+USENSYS,SPPN,SPPN_SPPN_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,21,21
+USENSYS,SPPN,SPPN_SPPN_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,126,126
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,1218,1218
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,1742,1742
+USENSYS,SPPS,SPPS_SPPS_biomass_1,Other,2045,full-base-200-no-ccs,MW,1,1
+USENSYS,SPPS,SPPS_SPPS_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,1884,1884
+USENSYS,SPPS,SPPS_SPPS_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,1153,1153
+USENSYS,SPPS,SPPS_SPPS_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,1493,1493
+USENSYS,SPPS,SPPS_SPPS_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3018,3018
+USENSYS,SPPS,SPPS_SPPS_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,474,474
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,7864,7864
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8865,8865
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_10_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4540,4540
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3073,3073
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3877,3877
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4196,4196
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_20_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,2550,2550
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4378,4378
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,733,733
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3143,3143
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4983,4983
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_7_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,8623,8623
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,7182,7182
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_9_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,858,858
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,1543,1543
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,6888,6888
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,294,294
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,3067,3067
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,122,122
+USENSYS,SPPS,SPPS_SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,407,407
+USENSYS,SPPS,SPPS_SPPS_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,12107,12107
+USENSYS,SPPS,SPPS_SPPS_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,18,18
+USENSYS,SPPS,SPPS_SPPS_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,39,39
+USENSYS,SPPS,SPPS_SPPS_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,268,268
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,14140,14140
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,973,973
+USENSYS,SRCA,SRCA_SRCA_biomass_1,Other,2045,full-base-200-no-ccs,MW,29,29
+USENSYS,SRCA,SRCA_SRCA_biomass_2,Other,2045,full-base-200-no-ccs,MW,36,36
+USENSYS,SRCA,SRCA_SRCA_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,1031,1031
+USENSYS,SRCA,SRCA_SRCA_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,3942,3942
+USENSYS,SRCA,SRCA_SRCA_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,5875,5875
+USENSYS,SRCA,SRCA_SRCA_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,2876,2876
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,272,272
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,983,983
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,107,107
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,79,79
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,833,833
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_13_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,860,860
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_14_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,136,136
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,164,164
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_16_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,84,84
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,222,222
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_18_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,614,614
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1054,1054
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,806,806
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_20_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,452,452
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_21_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,17,17
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_22_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,96,96
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_23_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,41,41
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_24_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,1301,1301
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_26_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,294,294
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_27_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,280,280
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,116,116
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,95,95
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,27,27
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,305,305
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_7_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,894,894
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,818,818
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,112,112
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,9004,9004
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,101,101
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,750,750
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,8593,8593
+USENSYS,SRCA,SRCA_SRCA_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,416,416
+USENSYS,SRCA,SRCA_SRCA_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,12107,12107
+USENSYS,SRCA,SRCA_SRCA_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,82,82
+USENSYS,SRCA,SRCA_SRCA_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,23,23
+USENSYS,SRCA,SRCA_SRCA_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,6534,6534
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,9961,9961
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,17644,17644
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,2422,2422
+USENSYS,SRCE,SRCE_SRCE_biomass_1,Other,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,SRCE,SRCE_SRCE_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,2756,2756
+USENSYS,SRCE,SRCE_SRCE_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,2722,2722
+USENSYS,SRCE,SRCE_SRCE_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,490,490
+USENSYS,SRCE,SRCE_SRCE_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3151,3151
+USENSYS,SRCE,SRCE_SRCE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1684,1684
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6013,6013
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6347,6347
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,7592,7592
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,7194,7194
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_27_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4590,4590
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_35_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,8970,8970
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_44_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4098,4098
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5860,5860
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,7645,7645
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,3978,3978
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,7536,7536
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,4725,4725
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,120,120
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,full-base-200-no-ccs,MW,734,734
+USENSYS,SRCE,SRCE_SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,SRCE,SRCE_SRCE_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,47,47
+USENSYS,SRCE,SRCE_SRCE_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,8431,8431
+USENSYS,SRCE,SRCE_SRCE_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,31,31
+USENSYS,SRCE,SRCE_SRCE_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,1888,1888
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,10479,10479
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,9650,9650
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,9894,9894
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,10347,10347
+USENSYS,SRSE,SRSE_SRSE_biomass_1,Other,2045,full-base-200-no-ccs,MW,94,94
+USENSYS,SRSE,SRSE_SRSE_biomass_2,Other,2045,full-base-200-no-ccs,MW,34,34
+USENSYS,SRSE,SRSE_SRSE_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,3352,3352
+USENSYS,SRSE,SRSE_SRSE_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,2090,2090
+USENSYS,SRSE,SRSE_SRSE_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,2580,2580
+USENSYS,SRSE,SRSE_SRSE_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,2392,2392
+USENSYS,SRSE,SRSE_SRSE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,1896,1896
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4593,4593
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4025,4025
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,6130,6130
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2474,2474
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,5824,5824
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2727,2727
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,20107,20107
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,1336,1336
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,10199,10199
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,266,266
+USENSYS,SRSE,SRSE_SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,21,21
+USENSYS,SRSE,SRSE_SRSE_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,8080,8080
+USENSYS,SRSE,SRSE_SRSE_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,11,11
+USENSYS,SRSE,SRSE_SRSE_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,SRSE,SRSE_SRSE_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,6941,6941
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,16928,16928
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,8703,8703
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,4384,4384
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_4_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,7536,7536
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,5208,5208
+USENSYS,SRSG,SRSG_SRSG_biomass_1,Other,2045,full-base-200-no-ccs,MW,3,3
+USENSYS,SRSG,SRSG_SRSG_biomass_2,Other,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,SRSG,SRSG_SRSG_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,1931,1931
+USENSYS,SRSG,SRSG_SRSG_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,832,832
+USENSYS,SRSG,SRSG_SRSG_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,3147,3147
+USENSYS,SRSG,SRSG_SRSG_geothermal_1,Geothermal,2045,full-base-200-no-ccs,MW,41,41
+USENSYS,SRSG,SRSG_SRSG_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MW,216,216
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4771,4771
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,5156,5156
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,6800,6800
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,4656,4656
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,10557,10557
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,861,861
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,2813,2813
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,622,622
+USENSYS,SRSG,SRSG_SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,197,197
+USENSYS,SRSG,SRSG_SRSG_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,4003,4003
+USENSYS,SRSG,SRSG_SRSG_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,3528,3528
+USENSYS,SRSG,SRSG_SRSG_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,47,47
+USENSYS,SRSG,SRSG_SRSG_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,5236,5236
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,17641,17641
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,8134,8134
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,4282,4282
+USENSYS,TRE,TRE_TRE_biomass_1,Other,2045,full-base-200-no-ccs,MW,20,20
+USENSYS,TRE,TRE_TRE_biomass_2,Other,2045,full-base-200-no-ccs,MW,5,5
+USENSYS,TRE,TRE_TRE_conventional_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,282,282
+USENSYS,TRE,TRE_TRE_conventional_steam_coal_1,Coal,2045,full-base-200-no-ccs,MW,4478,4478
+USENSYS,TRE,TRE_TRE_conventional_steam_coal_2,Coal,2045,full-base-200-no-ccs,MW,698,698
+USENSYS,TRE,TRE_TRE_distributed_generation_1,Distributed Solar,2045,full-base-200-no-ccs,MW,8511,8511
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,full-base-200-no-ccs,MW,3240,3240
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,9889,9889
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1864,1864
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_14_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,5828,5828
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,9842,9842
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2001,2001
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,512,512
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,9322,9322
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_23_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3776,3776
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_24_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,1144,1144
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_28_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4176,4176
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_29_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,867,867
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4495,4495
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,9090,9090
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,2487,2487
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,3638,3638
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,5766,5766
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,29438,29438
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,5134,5134
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,6132,6132
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,1169,1169
+USENSYS,TRE,TRE_TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,900,900
+USENSYS,TRE,TRE_TRE_natural_gas_steam_turbine_1,Natural Gas,2045,full-base-200-no-ccs,MW,329,329
+USENSYS,TRE,TRE_TRE_nuclear_1,Nuclear,2045,full-base-200-no-ccs,MW,5120,5120
+USENSYS,TRE,TRE_TRE_onshore_wind_turbine_1,Wind,2045,full-base-200-no-ccs,MW,8660,8660
+USENSYS,TRE,TRE_TRE_petroleum_liquids_1,Other,2045,full-base-200-no-ccs,MW,114,114
+USENSYS,TRE,TRE_TRE_small_hydroelectric_1,Hydro,2045,full-base-200-no-ccs,MW,4,4
+USENSYS,TRE,TRE_TRE_solar_photovoltaic_1,Solar,2045,full-base-200-no-ccs,MW,12238,12238
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,15574,15574
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,4498,4498
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_9_anyQual_0,Solar,2045,full-base-200-no-ccs,MW,12664,12664
+USENSYS,TREW,TREW_TREW_distributed_generation_1,TREW_distributed_generation_1,2045,full-base-200-no-ccs,MW,463,463
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,9111,9111
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,full-base-200-no-ccs,MW,4571,4571
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,full-base-200-no-ccs,MW,3197,3197
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,full-base-200-no-ccs,MW,393,393
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,full-base-200-no-ccs,MW,336,336
+USENSYS,TREW,TREW_TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,full-base-200-no-ccs,MW,8,8
+USENSYS,TREW,TREW_TREW_onshore_wind_turbine_1,TREW_onshore_wind_turbine_1,2045,full-base-200-no-ccs,MW,13314,13314
+USENSYS,TREW,TREW_TREW_petroleum_liquids_1,TREW_petroleum_liquids_1,2045,full-base-200-no-ccs,MW,54,54
+USENSYS,TREW,TREW_TREW_solar_photovoltaic_1,TREW_solar_photovoltaic_1,2045,full-base-200-no-ccs,MW,9831,9831
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,full-base-200-no-ccs,MW,2881,2881
+USENSYS,BASN,BASN_BASN_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,8662,28261
+USENSYS,CANO,CANO_CANO_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,15247,50835
+USENSYS,CANO,CANO_CANO_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,35292,35292
+USENSYS,CASO,CASO_CASO_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,43436,85881
+USENSYS,CASO,CASO_CASO_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,25808,25808
+USENSYS,FRCC,FRCC_FRCC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,15526,51568
+USENSYS,ISNE,ISNE_ISNE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,40272,59332
+USENSYS,ISNE,ISNE_ISNE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,27916,27916
+USENSYS,MISC,MISC_MISC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,1029,20887
+USENSYS,MISC,MISC_MISC_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,7300,7300
+USENSYS,MISE,MISE_MISE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,4865,11455
+USENSYS,MISE,MISE_MISE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,32782,32782
+USENSYS,MISS,MISS_MISS_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,8152,29851
+USENSYS,MISW,MISW_MISW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,12278,34575
+USENSYS,NWPP,NWPP_NWPP_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,1,2061
+USENSYS,NWPP,NWPP_NWPP_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,4867,4867
+USENSYS,NYCW,NYCW_NYCW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,19295,22108
+USENSYS,NYUP,NYUP_NYUP_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,5,5960
+USENSYS,NYUP,NYUP_NYUP_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,21804,21804
+USENSYS,PJMC,PJMC_PJMC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,3281,5902
+USENSYS,PJMD,PJMD_PJMD_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,8737,29096
+USENSYS,PJMD,PJMD_PJMD_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,46546,46546
+USENSYS,PJME,PJME_PJME_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,4137,7699
+USENSYS,PJME,PJME_PJME_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,30101,30101
+USENSYS,PJMW,PJMW_PJMW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,29729,71260
+USENSYS,PJMW,PJMW_PJMW_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,3689,3689
+USENSYS,RMRG,RMRG_RMRG_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,4,4386
+USENSYS,RMRG,RMRG_RMRG_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,9002,9002
+USENSYS,SPPC,SPPC_SPPC_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,1,44
+USENSYS,SPPN,SPPN_SPPN_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,1,6
+USENSYS,SPPS,SPPS_SPPS_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,2,11
+USENSYS,SPPS,SPPS_SPPS_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,7347,7347
+USENSYS,SRCA,SRCA_SRCA_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,8996,32712
+USENSYS,SRCA,SRCA_SRCA_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,44578,44578
+USENSYS,SRCE,SRCE_SRCE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,4924,35679
+USENSYS,SRCE,SRCE_SRCE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,26099,26099
+USENSYS,SRSE,SRSE_SRSE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,12441,38600
+USENSYS,SRSE,SRSE_SRSE_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,29391,29391
+USENSYS,SRSG,SRSG_SRSG_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,9659,19964
+USENSYS,SRSG,SRSG_SRSG_hydroelectric_pumped_storage_1,Hydro,2045,full-base-200-no-ccs,MWh,3353,3353
+USENSYS,TRE,TRE_TRE_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,1821,24420
+USENSYS,TREW,TREW_TREW_battery_moderate_0,Battery,2045,full-base-200-no-ccs,MWh,2,14
+USENSYS,BASN,BASN_BASN_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,9381,14597
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,9350,9564
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,0,536
+USENSYS,BASN,BASN_BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,2165,3320
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,8444
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,1585
+USENSYS,CANO,CANO_CANO_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,10515,15296
+USENSYS,CANO,CANO_CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,2264,2500
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_5_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,10153
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,1774,3219
+USENSYS,CASO,CASO_CASO_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,18861,21708
+USENSYS,CASO,CASO_CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,6470,8397
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4379,6969
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,1777
+USENSYS,FRCC,FRCC_FRCC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,9809,19304
+USENSYS,FRCC,FRCC_FRCC_naturalgas_hframe_cc_moderate_0,FRCC_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,1954,2290
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,6873,10587
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,11465
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,1579
+USENSYS,ISNE,ISNE_ISNE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,9988,12896
+USENSYS,ISNE,ISNE_ISNE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,21625,25471
+USENSYS,ISNE,ISNE_ISNE_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,1216
+USENSYS,MISC,MISC_MISC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,7244,11800
+USENSYS,MISC,MISC_MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,899,5110
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,13651,14858
+USENSYS,MISE,MISE_MISE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,3513,6950
+USENSYS,MISE,MISE_MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,6582,6605
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_9_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,1049,7319
+USENSYS,MISS,MISS_MISS_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,8784,12046
+USENSYS,MISS,MISS_MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,2784,3385
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,788
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,3425
+USENSYS,MISW,MISW_MISW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,12659,22977
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_23_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,0,542
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_28_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4671,7480
+USENSYS,MISW,MISW_MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,4277,8666
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,5145
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,896
+USENSYS,NWPP,NWPP_NWPP_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,1896,6474
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_14_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,805,1645
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1444,3338
+USENSYS,NWPP,NWPP_NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,2449,5359
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,5739
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,1043
+USENSYS,NYCW,NYCW_NYCW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,2673,5309
+USENSYS,NYUP,NYUP_NYUP_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,2436,4368
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,676
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4100,7992
+USENSYS,PJMC,PJMC_PJMC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,1810,3245
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,0,2994
+USENSYS,PJMC,PJMC_PJMC_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,3102,6288
+USENSYS,PJMD,PJMD_PJMD_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,6692,10399
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_5_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,6036
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,26,738
+USENSYS,PJME,PJME_PJME_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,3542,6043
+USENSYS,PJME,PJME_PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,21859,24925
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,1375,12557
+USENSYS,PJMW,PJMW_PJMW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,16436,25058
+USENSYS,PJMW,PJMW_PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,11540,12207
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,13841,26437
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,5850
+USENSYS,RMRG,RMRG_RMRG_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,2017,3940
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_11_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,0,2424
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_17_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1619,2934
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_23_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4045,4761
+USENSYS,RMRG,RMRG_RMRG_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,3943
+USENSYS,SPPC,SPPC_SPPC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,20,2760
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_24_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,0,1547
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_9_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,0,2423
+USENSYS,SPPC,SPPC_SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,3480,3499
+USENSYS,SPPN,SPPN_SPPN_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,3,4
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3287,7947
+USENSYS,SPPS,SPPS_SPPS_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,5,1079
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5857,7632
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_20_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2550,2758
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_25_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5543,6676
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,1160,9327
+USENSYS,SRCA,SRCA_SRCA_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,6820,14526
+USENSYS,SRCA,SRCA_SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,7959,9153
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,3542,10626
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,2977
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_7_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,4202
+USENSYS,SRCE,SRCE_SRCE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,9601,16305
+USENSYS,SRCE,SRCE_SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,1,169
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_3_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,19491,19755
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,1571
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,9410
+USENSYS,SRSE,SRSE_SRSE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,8004,21506
+USENSYS,SRSE,SRSE_SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,131,893
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,7709
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_7_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,7968
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_8_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,823,6983
+USENSYS,SRSG,SRSG_SRSG_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,5965,12374
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6375,8702
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_3_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7419,13589
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,818
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_6_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,9303
+USENSYS,TRE,TRE_TRE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,9600,16625
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,161,4306
+USENSYS,TRE,TRE_TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,13591,16106
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_34_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,9318,12315
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_55_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,7737
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_83_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,5381
+USENSYS,TREW,TREW_TREW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MW,7,1286
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,0,2495
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2221,4677
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,0,6512
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,0,1665
+USENSYS,BASN,BASN_BASN_biomass_1,Other,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,BASN,BASN_BASN_biomass_2,Other,2050,full-base-200-no-ccs,MW,12,12
+USENSYS,BASN,BASN_BASN_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,1419,1419
+USENSYS,BASN,BASN_BASN_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,728,728
+USENSYS,BASN,BASN_BASN_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,2056,2056
+USENSYS,BASN,BASN_BASN_geothermal_1,Geothermal,2050,full-base-200-no-ccs,MW,56,56
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8527,8527
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,8168,8168
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,9068,9068
+USENSYS,BASN,BASN_BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,7607,7607
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,735,735
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,6794,6794
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1383,1383
+USENSYS,BASN,BASN_BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,236,236
+USENSYS,BASN,BASN_BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,204,204
+USENSYS,BASN,BASN_BASN_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,520,520
+USENSYS,BASN,BASN_BASN_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,142,142
+USENSYS,BASN,BASN_BASN_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,4272,4272
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,11355,11355
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,8710,8710
+USENSYS,BASN,BASN_BASN_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7798,7798
+USENSYS,CANO,CANO_CANO_biomass_1,Other,2050,full-base-200-no-ccs,MW,31,31
+USENSYS,CANO,CANO_CANO_biomass_2,Other,2050,full-base-200-no-ccs,MW,26,26
+USENSYS,CANO,CANO_CANO_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,5619,5619
+USENSYS,CANO,CANO_CANO_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,6550,6550
+USENSYS,CANO,CANO_CANO_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,2277,2277
+USENSYS,CANO,CANO_CANO_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,511,511
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,2492,2492
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,8297,8297
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1950,1950
+USENSYS,CANO,CANO_CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,997,997
+USENSYS,CANO,CANO_CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,434,434
+USENSYS,CANO,CANO_CANO_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,CANO,CANO_CANO_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,62,62
+USENSYS,CANO,CANO_CANO_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,151,151
+USENSYS,CANO,CANO_CANO_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,196,196
+USENSYS,CANO,CANO_CANO_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,2502,2502
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,14708,14708
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,11602,11602
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,3885,3885
+USENSYS,CANO,CANO_CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,9886,9886
+USENSYS,CASO,CASO_CASO_biomass_1,Other,2050,full-base-200-no-ccs,MW,56,56
+USENSYS,CASO,CASO_CASO_biomass_2,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,CASO,CASO_CASO_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,919,919
+USENSYS,CASO,CASO_CASO_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,10175,10175
+USENSYS,CASO,CASO_CASO_geothermal_1,Geothermal,2050,full-base-200-no-ccs,MW,24,24
+USENSYS,CASO,CASO_CASO_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1665,1665
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,588,588
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,323,323
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,716,716
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,161,161
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,474,474
+USENSYS,CASO,CASO_CASO_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,420,420
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1080,1080
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,7482,7482
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1404,1404
+USENSYS,CASO,CASO_CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,3953,3953
+USENSYS,CASO,CASO_CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,49,49
+USENSYS,CASO,CASO_CASO_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,416,416
+USENSYS,CASO,CASO_CASO_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,CASO,CASO_CASO_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,66,66
+USENSYS,CASO,CASO_CASO_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,6500,6500
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,15656,15656
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4392,4392
+USENSYS,CASO,CASO_CASO_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,13017,13017
+USENSYS,FRCC,FRCC_FRCC_biomass_1,Other,2050,full-base-200-no-ccs,MW,4,4
+USENSYS,FRCC,FRCC_FRCC_biomass_2,Other,2050,full-base-200-no-ccs,MW,79,79
+USENSYS,FRCC,FRCC_FRCC_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,44,44
+USENSYS,FRCC,FRCC_FRCC_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,467,467
+USENSYS,FRCC,FRCC_FRCC_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,7816,7816
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2785,2785
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,779,779
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,19,19
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6,6
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2164,2164
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_13_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1387,1387
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_14_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,182,182
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,112,112
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_16_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,71,71
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6,6
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_18_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2389,2389
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_19_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1052,1052
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,310,310
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_20_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,332,332
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_21_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,53,53
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_22_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,51,51
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_23_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,92,92
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,36,36
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,61,61
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2302,2302
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_7_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,996,996
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,592,592
+USENSYS,FRCC,FRCC_FRCC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,100,100
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,28738,28738
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,2280,2280
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,6701,6701
+USENSYS,FRCC,FRCC_FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,255,255
+USENSYS,FRCC,FRCC_FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,251,251
+USENSYS,FRCC,FRCC_FRCC_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,3737,3737
+USENSYS,FRCC,FRCC_FRCC_nuclear_nuclear_moderate_0,Nuclear,2050,full-base-200-no-ccs,MW,9356,9356
+USENSYS,FRCC,FRCC_FRCC_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,4,4
+USENSYS,FRCC,FRCC_FRCC_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,5878,5878
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,15726,15726
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,17434,17434
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,6613,6613
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,293,293
+USENSYS,FRCC,FRCC_FRCC_utilitypv_class1_moderate_5_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,16324,16324
+USENSYS,ISNE,ISNE_ISNE_biomass_2,Other,2050,full-base-200-no-ccs,MW,31,31
+USENSYS,ISNE,ISNE_ISNE_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,465,465
+USENSYS,ISNE,ISNE_ISNE_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,5926,5926
+USENSYS,ISNE,ISNE_ISNE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1801,1801
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,9723,9723
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,274,274
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,9833,9833
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,189,189
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,9689,9689
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,273,273
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4529,4529
+USENSYS,ISNE,ISNE_ISNE_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,206,206
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,2666,2666
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,10513,10513
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1302,1302
+USENSYS,ISNE,ISNE_ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,390,390
+USENSYS,ISNE,ISNE_ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,50,50
+USENSYS,ISNE,ISNE_ISNE_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,10,10
+USENSYS,ISNE,ISNE_ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,16268,16268
+USENSYS,ISNE,ISNE_ISNE_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,3356,3356
+USENSYS,ISNE,ISNE_ISNE_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,40,40
+USENSYS,ISNE,ISNE_ISNE_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,391,391
+USENSYS,ISNE,ISNE_ISNE_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,198,198
+USENSYS,ISNE,ISNE_ISNE_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1160,1160
+USENSYS,ISNE,ISNE_ISNE_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,593,593
+USENSYS,MISC,MISC_MISC_biomass_1,Other,2050,full-base-200-no-ccs,MW,17,17
+USENSYS,MISC,MISC_MISC_biomass_2,Other,2050,full-base-200-no-ccs,MW,37,37
+USENSYS,MISC,MISC_MISC_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,280,280
+USENSYS,MISC,MISC_MISC_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,196,196
+USENSYS,MISC,MISC_MISC_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,2502,2502
+USENSYS,MISC,MISC_MISC_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,4278,4278
+USENSYS,MISC,MISC_MISC_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,471,471
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6115,6115
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2915,2915
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_10_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6156,6156
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2847,2847
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4027,4027
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4963,4963
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4155,4155
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4867,4867
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4240,4240
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4790,4790
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2885,2885
+USENSYS,MISC,MISC_MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6090,6090
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1550,1550
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,3192,3192
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,310,310
+USENSYS,MISC,MISC_MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,5218,5218
+USENSYS,MISC,MISC_MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,35,35
+USENSYS,MISC,MISC_MISC_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,46,46
+USENSYS,MISC,MISC_MISC_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,2373,2373
+USENSYS,MISC,MISC_MISC_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,1568,1568
+USENSYS,MISC,MISC_MISC_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,36,36
+USENSYS,MISC,MISC_MISC_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,14,14
+USENSYS,MISC,MISC_MISC_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,3654,3654
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,19945,19945
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,2143,2143
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,7950,7950
+USENSYS,MISC,MISC_MISC_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,2053,2053
+USENSYS,MISE,MISE_MISE_biomass_1,Other,2050,full-base-200-no-ccs,MW,21,21
+USENSYS,MISE,MISE_MISE_biomass_2,Other,2050,full-base-200-no-ccs,MW,16,16
+USENSYS,MISE,MISE_MISE_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,MISE,MISE_MISE_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,4583,4583
+USENSYS,MISE,MISE_MISE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,2115,2115
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,92,92
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,60,60
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,224,224
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,116,116
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,14,14
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_13_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,15,15
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,558,558
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_16_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,374,374
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,556,556
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_18_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_19_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4,4
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,87,87
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,379,379
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_21_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,767,767
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,369,369
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,674,674
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,469,469
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,149,149
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,105,105
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_7_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,16,16
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,50,50
+USENSYS,MISE,MISE_MISE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1018,1018
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,3978,3978
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,667,667
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,264,264
+USENSYS,MISE,MISE_MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,2735,2735
+USENSYS,MISE,MISE_MISE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,81,81
+USENSYS,MISE,MISE_MISE_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,MISE,MISE_MISE_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,1161,1161
+USENSYS,MISE,MISE_MISE_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,1071,1071
+USENSYS,MISE,MISE_MISE_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,10,10
+USENSYS,MISE,MISE_MISE_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,977,977
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,13576,13576
+USENSYS,MISE,MISE_MISE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,6482,6482
+USENSYS,MISS,MISS_MISS_biomass_1,Other,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,MISS,MISS_MISS_biomass_2,Other,2050,full-base-200-no-ccs,MW,30,30
+USENSYS,MISS,MISS_MISS_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,521,521
+USENSYS,MISS,MISS_MISS_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,680,680
+USENSYS,MISS,MISS_MISS_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,4463,4463
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1518,1518
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3114,3114
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1740,1740
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2906,2906
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,528,528
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4093,4093
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,705,705
+USENSYS,MISS,MISS_MISS_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3935,3935
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,17424,17424
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,2165,2165
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3250,3250
+USENSYS,MISS,MISS_MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,549,549
+USENSYS,MISS,MISS_MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,108,108
+USENSYS,MISS,MISS_MISS_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,30,30
+USENSYS,MISS,MISS_MISS_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,5426,5426
+USENSYS,MISS,MISS_MISS_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,184,184
+USENSYS,MISS,MISS_MISS_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,MISS,MISS_MISS_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,MISS,MISS_MISS_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1834,1834
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,6106,6106
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,3113,3113
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,6308,6308
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,2901,2901
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,3995,3995
+USENSYS,MISS,MISS_MISS_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,5202,5202
+USENSYS,MISW,MISW_MISW_biomass_1,Other,2050,full-base-200-no-ccs,MW,38,38
+USENSYS,MISW,MISW_MISW_biomass_2,Other,2050,full-base-200-no-ccs,MW,6,6
+USENSYS,MISW,MISW_MISW_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,67,67
+USENSYS,MISW,MISW_MISW_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,2883,2883
+USENSYS,MISW,MISW_MISW_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,331,331
+USENSYS,MISW,MISW_MISW_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,5192,5192
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6829,6829
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1164,1164
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,283,283
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1941,1941
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_16_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8954,8954
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_17_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,478,478
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_18_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3004,3004
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8374,8374
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,918,918
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_24_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6140,6140
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_26_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1721,1721
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2138,2138
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5416,5416
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_34_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2744,2744
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8357,8357
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2034,2034
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1167,1167
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_7_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7899,7899
+USENSYS,MISW,MISW_MISW_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7549,7549
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1110,1110
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,6525,6525
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,101,101
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,3574,3574
+USENSYS,MISW,MISW_MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,492,492
+USENSYS,MISW,MISW_MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,665,665
+USENSYS,MISW,MISW_MISW_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,38,38
+USENSYS,MISW,MISW_MISW_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,2337,2337
+USENSYS,MISW,MISW_MISW_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,3473,3473
+USENSYS,MISW,MISW_MISW_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,184,184
+USENSYS,MISW,MISW_MISW_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,245,245
+USENSYS,MISW,MISW_MISW_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1893,1893
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,22015,22015
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,10326,10326
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,4291,4291
+USENSYS,MISW,MISW_MISW_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,3195,3195
+USENSYS,NWPP,NWPP_NWPP_biomass_1,Other,2050,full-base-200-no-ccs,MW,29,29
+USENSYS,NWPP,NWPP_NWPP_biomass_2,Other,2050,full-base-200-no-ccs,MW,22,22
+USENSYS,NWPP,NWPP_NWPP_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,28407,28407
+USENSYS,NWPP,NWPP_NWPP_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,742,742
+USENSYS,NWPP,NWPP_NWPP_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,148,148
+USENSYS,NWPP,NWPP_NWPP_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,3201,3201
+USENSYS,NWPP,NWPP_NWPP_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,314,314
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7667,7667
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5289,5289
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1639,1639
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2327,2327
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_16_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1264,1264
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2489,2489
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_21_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,725,725
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1314,1314
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2056,2056
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,966,966
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,815,815
+USENSYS,NWPP,NWPP_NWPP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3200,3200
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1875,1875
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,4016,4016
+USENSYS,NWPP,NWPP_NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,412,412
+USENSYS,NWPP,NWPP_NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,310,310
+USENSYS,NWPP,NWPP_NWPP_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,NWPP,NWPP_NWPP_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,1172,1172
+USENSYS,NWPP,NWPP_NWPP_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,749,749
+USENSYS,NWPP,NWPP_NWPP_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,NWPP,NWPP_NWPP_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,404,404
+USENSYS,NWPP,NWPP_NWPP_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1016,1016
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7445,7445
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,21916,21916
+USENSYS,NWPP,NWPP_NWPP_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4949,4949
+USENSYS,NYCW,NYCW_NYCW_biomass_2,Other,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,NYCW,NYCW_NYCW_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,2087,2087
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1444,1444
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,2828,2828
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,1037,1037
+USENSYS,NYCW,NYCW_NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,1011,1011
+USENSYS,NYCW,NYCW_NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,37,37
+USENSYS,NYCW,NYCW_NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,1718,1718
+USENSYS,NYCW,NYCW_NYCW_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,54,54
+USENSYS,NYCW,NYCW_NYCW_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,27,27
+USENSYS,NYUP,NYUP_NYUP_biomass_1,Other,2050,full-base-200-no-ccs,MW,19,19
+USENSYS,NYUP,NYUP_NYUP_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,3439,3439
+USENSYS,NYUP,NYUP_NYUP_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,1737,1737
+USENSYS,NYUP,NYUP_NYUP_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1407,1407
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,340,340
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3349,3349
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,850,850
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2801,2801
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1404,1404
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2305,2305
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2554,2554
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1081,1081
+USENSYS,NYUP,NYUP_NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3347,3347
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,6566,6566
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,1690,1690
+USENSYS,NYUP,NYUP_NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,52,52
+USENSYS,NYUP,NYUP_NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,18,18
+USENSYS,NYUP,NYUP_NYUP_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,24,24
+USENSYS,NYUP,NYUP_NYUP_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,2153,2153
+USENSYS,NYUP,NYUP_NYUP_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,1403,1403
+USENSYS,NYUP,NYUP_NYUP_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,37,37
+USENSYS,NYUP,NYUP_NYUP_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,344,344
+USENSYS,NYUP,NYUP_NYUP_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1139,1139
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,14810,14810
+USENSYS,NYUP,NYUP_NYUP_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,5284,5284
+USENSYS,PJMC,PJMC_PJMC_biomass_2,Other,2050,full-base-200-no-ccs,MW,7,7
+USENSYS,PJMC,PJMC_PJMC_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,11,11
+USENSYS,PJMC,PJMC_PJMC_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,2180,2180
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2194,2194
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1627,1627
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_27_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3058,3058
+USENSYS,PJMC,PJMC_PJMC_landbasedwind_class3_moderate_35_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,737,737
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,4839,4839
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,195,195
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,62,62
+USENSYS,PJMC,PJMC_PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,6237,6237
+USENSYS,PJMC,PJMC_PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,105,105
+USENSYS,PJMC,PJMC_PJMC_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMC,PJMC_PJMC_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,9954,9954
+USENSYS,PJMC,PJMC_PJMC_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,461,461
+USENSYS,PJMC,PJMC_PJMC_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,34,34
+USENSYS,PJMC,PJMC_PJMC_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,9,9
+USENSYS,PJMC,PJMC_PJMC_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,253,253
+USENSYS,PJMC,PJMC_PJMC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7237,7237
+USENSYS,PJMD,PJMD_PJMD_biomass_1,Other,2050,full-base-200-no-ccs,MW,12,12
+USENSYS,PJMD,PJMD_PJMD_biomass_2,Other,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,PJMD,PJMD_PJMD_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,613,613
+USENSYS,PJMD,PJMD_PJMD_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,881,881
+USENSYS,PJMD,PJMD_PJMD_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,3629,3629
+USENSYS,PJMD,PJMD_PJMD_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,3003,3003
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1248,1248
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,237,237
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1426,1426
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,37,37
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1346,1346
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,128,128
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1171,1171
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,302,302
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1234,1234
+USENSYS,PJMD,PJMD_PJMD_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,248,248
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,6969,6969
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,504,504
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1119,1119
+USENSYS,PJMD,PJMD_PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,1491,1491
+USENSYS,PJMD,PJMD_PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMD,PJMD_PJMD_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMD,PJMD_PJMD_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,3708,3708
+USENSYS,PJMD,PJMD_PJMD_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,PJMD,PJMD_PJMD_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,4,4
+USENSYS,PJMD,PJMD_PJMD_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,2449,2449
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,16576,16576
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,21748,21748
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,541,541
+USENSYS,PJMD,PJMD_PJMD_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,1160,1160
+USENSYS,PJME,PJME_PJME_biomass_1,Other,2050,full-base-200-no-ccs,MW,23,23
+USENSYS,PJME,PJME_PJME_biomass_2,Other,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,PJME,PJME_PJME_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,579,579
+USENSYS,PJME,PJME_PJME_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1159,1159
+USENSYS,PJME,PJME_PJME_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,564,564
+USENSYS,PJME,PJME_PJME_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,9468,9468
+USENSYS,PJME,PJME_PJME_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1942,1942
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,206,206
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,87,87
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,583,583
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,97,97
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1663,1663
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,64,64
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,376,376
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,363,363
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1014,1014
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,279,279
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1178,1178
+USENSYS,PJME,PJME_PJME_landbasedwind_class3_moderate_9_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,140,140
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,3500,3500
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,22416,22416
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,268,268
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,1882,1882
+USENSYS,PJME,PJME_PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,509,509
+USENSYS,PJME,PJME_PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,223,223
+USENSYS,PJME,PJME_PJME_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,31,31
+USENSYS,PJME,PJME_PJME_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,12829,12829
+USENSYS,PJME,PJME_PJME_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,78,78
+USENSYS,PJME,PJME_PJME_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,68,68
+USENSYS,PJME,PJME_PJME_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,786,786
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,9642,9642
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,7533,7533
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,14910,14910
+USENSYS,PJME,PJME_PJME_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,2253,2253
+USENSYS,PJMW,PJMW_PJMW_biomass_1,Other,2050,full-base-200-no-ccs,MW,10,10
+USENSYS,PJMW,PJMW_PJMW_biomass_2,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,PJMW,PJMW_PJMW_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,626,626
+USENSYS,PJMW,PJMW_PJMW_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1920,1920
+USENSYS,PJMW,PJMW_PJMW_conventional_steam_coal_3,Coal,2050,full-base-200-no-ccs,MW,260,260
+USENSYS,PJMW,PJMW_PJMW_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,7516,7516
+USENSYS,PJMW,PJMW_PJMW_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,238,238
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1778,1778
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2618,2618
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,752,752
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3644,3644
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,458,458
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3934,3934
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,133,133
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4260,4260
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,139,139
+USENSYS,PJMW,PJMW_PJMW_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4250,4250
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,18211,18211
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,851,851
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,145,145
+USENSYS,PJMW,PJMW_PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,8603,8603
+USENSYS,PJMW,PJMW_PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,76,76
+USENSYS,PJMW,PJMW_PJMW_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,34,34
+USENSYS,PJMW,PJMW_PJMW_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,6326,6326
+USENSYS,PJMW,PJMW_PJMW_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,807,807
+USENSYS,PJMW,PJMW_PJMW_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,66,66
+USENSYS,PJMW,PJMW_PJMW_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,157,157
+USENSYS,PJMW,PJMW_PJMW_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,3782,3782
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,20982,20982
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,6500,6500
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,3452,3452
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,19091,19091
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_5_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,2952,2952
+USENSYS,PJMW,PJMW_PJMW_utilitypv_class1_moderate_6_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,11536,11536
+USENSYS,RMRG,RMRG_RMRG_biomass_1,Other,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,RMRG,RMRG_RMRG_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,580,580
+USENSYS,RMRG,RMRG_RMRG_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,766,766
+USENSYS,RMRG,RMRG_RMRG_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,765,765
+USENSYS,RMRG,RMRG_RMRG_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,2206,2206
+USENSYS,RMRG,RMRG_RMRG_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,581,581
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,14473,14473
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3297,3297
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_13_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,928,928
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_14_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9950,9950
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2227,2227
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6674,6674
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_28_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1344,1344
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2276,2276
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,409,409
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,11270,11270
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5721,5721
+USENSYS,RMRG,RMRG_RMRG_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2679,2679
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1546,1546
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,1955,1955
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2354,2354
+USENSYS,RMRG,RMRG_RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,201,201
+USENSYS,RMRG,RMRG_RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,243,243
+USENSYS,RMRG,RMRG_RMRG_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,4287,4287
+USENSYS,RMRG,RMRG_RMRG_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,85,85
+USENSYS,RMRG,RMRG_RMRG_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1539,1539
+USENSYS,RMRG,RMRG_RMRG_utilitypv_class1_moderate_15_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,44,44
+USENSYS,RMRG,RMRG_RMRG_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,5637,5637
+USENSYS,SPPC,SPPC_SPPC_biomass_1,Other,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,SPPC,SPPC_SPPC_biomass_2,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,SPPC,SPPC_SPPC_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,52,52
+USENSYS,SPPC,SPPC_SPPC_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,275,275
+USENSYS,SPPC,SPPC_SPPC_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,877,877
+USENSYS,SPPC,SPPC_SPPC_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,1875,1875
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6708,6708
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7930,7930
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2785,2785
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3056,3056
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_47_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,2848,2848
+USENSYS,SPPC,SPPC_SPPC_landbasedwind_class3_moderate_77_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7004,7004
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1560,1560
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,313,313
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2228,2228
+USENSYS,SPPC,SPPC_SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,157,157
+USENSYS,SPPC,SPPC_SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,295,295
+USENSYS,SPPC,SPPC_SPPC_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,6,6
+USENSYS,SPPC,SPPC_SPPC_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,1255,1255
+USENSYS,SPPC,SPPC_SPPC_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,1765,1765
+USENSYS,SPPC,SPPC_SPPC_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,40,40
+USENSYS,SPPC,SPPC_SPPC_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,28,28
+USENSYS,SPPC,SPPC_SPPC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,8532,8532
+USENSYS,SPPN,SPPN_SPPN_biomass_2,Other,2050,full-base-200-no-ccs,MW,14,14
+USENSYS,SPPN,SPPN_SPPN_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,2395,2395
+USENSYS,SPPN,SPPN_SPPN_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1154,1154
+USENSYS,SPPN,SPPN_SPPN_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,293,293
+USENSYS,SPPN,SPPN_SPPN_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,835,835
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6781,6781
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1601,1601
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8042,8042
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,316,316
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8229,8229
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,123,123
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8002,8002
+USENSYS,SPPN,SPPN_SPPN_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,269,269
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,300,300
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,345,345
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2029,2029
+USENSYS,SPPN,SPPN_SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,120,120
+USENSYS,SPPN,SPPN_SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,330,330
+USENSYS,SPPN,SPPN_SPPN_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,8,8
+USENSYS,SPPN,SPPN_SPPN_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,770,770
+USENSYS,SPPN,SPPN_SPPN_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,2546,2546
+USENSYS,SPPN,SPPN_SPPN_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,14,14
+USENSYS,SPPN,SPPN_SPPN_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,94,94
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,1218,1218
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,1742,1742
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,9713,9713
+USENSYS,SPPN,SPPN_SPPN_utilitypv_class1_moderate_8_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,44,44
+USENSYS,SPPS,SPPS_SPPS_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,1802,1802
+USENSYS,SPPS,SPPS_SPPS_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,650,650
+USENSYS,SPPS,SPPS_SPPS_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,321,321
+USENSYS,SPPS,SPPS_SPPS_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,3418,3418
+USENSYS,SPPS,SPPS_SPPS_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,474,474
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7864,7864
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8865,8865
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_10_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4540,4540
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3073,3073
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3877,3877
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4196,4196
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4378,4378
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,733,733
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3143,3143
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4983,4983
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_7_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,8623,8623
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,7182,7182
+USENSYS,SPPS,SPPS_SPPS_landbasedwind_class3_moderate_9_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,858,858
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,1412,1412
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,6888,6888
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,294,294
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,2940,2940
+USENSYS,SPPS,SPPS_SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,122,122
+USENSYS,SPPS,SPPS_SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,407,407
+USENSYS,SPPS,SPPS_SPPS_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,5507,5507
+USENSYS,SPPS,SPPS_SPPS_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,8,8
+USENSYS,SPPS,SPPS_SPPS_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,31,31
+USENSYS,SPPS,SPPS_SPPS_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,64,64
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,14139,14139
+USENSYS,SPPS,SPPS_SPPS_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,973,973
+USENSYS,SRCA,SRCA_SRCA_biomass_1,Other,2050,full-base-200-no-ccs,MW,10,10
+USENSYS,SRCA,SRCA_SRCA_biomass_2,Other,2050,full-base-200-no-ccs,MW,29,29
+USENSYS,SRCA,SRCA_SRCA_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,1031,1031
+USENSYS,SRCA,SRCA_SRCA_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,2659,2659
+USENSYS,SRCA,SRCA_SRCA_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,6424,6424
+USENSYS,SRCA,SRCA_SRCA_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,2876,2876
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,272,272
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,983,983
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_10_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,107,107
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,79,79
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,833,833
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_13_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,860,860
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_14_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,136,136
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,164,164
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_16_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,84,84
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,222,222
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_18_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,614,614
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1054,1054
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,806,806
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_20_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,452,452
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_21_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,17,17
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_22_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,96,96
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_23_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,41,41
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_24_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,1301,1301
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_26_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,294,294
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_27_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,280,280
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,116,116
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,95,95
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,27,27
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,305,305
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_7_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,894,894
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,818,818
+USENSYS,SRCA,SRCA_SRCA_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,112,112
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,9004,9004
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,101,101
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,432,432
+USENSYS,SRCA,SRCA_SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,5587,5587
+USENSYS,SRCA,SRCA_SRCA_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,1,1
+USENSYS,SRCA,SRCA_SRCA_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,12107,12107
+USENSYS,SRCA,SRCA_SRCA_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,32,32
+USENSYS,SRCA,SRCA_SRCA_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,21,21
+USENSYS,SRCA,SRCA_SRCA_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,2829,2829
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,9961,9961
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,17644,17644
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,2422,2422
+USENSYS,SRCA,SRCA_SRCA_utilitypv_class1_moderate_3_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,16393,16393
+USENSYS,SRCE,SRCE_SRCE_biomass_1,Other,2050,full-base-200-no-ccs,MW,7,7
+USENSYS,SRCE,SRCE_SRCE_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,2176,2176
+USENSYS,SRCE,SRCE_SRCE_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1271,1271
+USENSYS,SRCE,SRCE_SRCE_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,475,475
+USENSYS,SRCE,SRCE_SRCE_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,4012,4012
+USENSYS,SRCE,SRCE_SRCE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1684,1684
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6013,6013
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6347,6347
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,7592,7592
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,7194,7194
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_27_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4590,4590
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_35_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,8970,8970
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_44_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4098,4098
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5860,5860
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_54_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9520,9520
+USENSYS,SRCE,SRCE_SRCE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,7645,7645
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,3978,3978
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,7536,7536
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3371,3371
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,82,82
+USENSYS,SRCE,SRCE_SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,full-base-200-no-ccs,MW,374,374
+USENSYS,SRCE,SRCE_SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,3,3
+USENSYS,SRCE,SRCE_SRCE_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,47,47
+USENSYS,SRCE,SRCE_SRCE_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,8431,8431
+USENSYS,SRCE,SRCE_SRCE_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,28,28
+USENSYS,SRCE,SRCE_SRCE_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,1640,1640
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,10479,10479
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,9650,9650
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,9894,9894
+USENSYS,SRCE,SRCE_SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,10347,10347
+USENSYS,SRSE,SRSE_SRSE_biomass_1,Other,2050,full-base-200-no-ccs,MW,69,69
+USENSYS,SRSE,SRSE_SRSE_biomass_2,Other,2050,full-base-200-no-ccs,MW,31,31
+USENSYS,SRSE,SRSE_SRSE_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,3258,3258
+USENSYS,SRSE,SRSE_SRSE_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,1397,1397
+USENSYS,SRSE,SRSE_SRSE_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,860,860
+USENSYS,SRSE,SRSE_SRSE_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,3104,3104
+USENSYS,SRSE,SRSE_SRSE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,1896,1896
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4593,4593
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4025,4025
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6130,6130
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2474,2474
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5824,5824
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2727,2727
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,5775,5775
+USENSYS,SRSE,SRSE_SRSE_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2649,2649
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,20107,20107
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,1336,1336
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,6610,6610
+USENSYS,SRSE,SRSE_SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,144,144
+USENSYS,SRSE,SRSE_SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,17,17
+USENSYS,SRSE,SRSE_SRSE_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,8080,8080
+USENSYS,SRSE,SRSE_SRSE_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,5,5
+USENSYS,SRSE,SRSE_SRSE_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,SRSE,SRSE_SRSE_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,4588,4588
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,16928,16928
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,8703,8703
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4384,4384
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_3_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,17293,17293
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_4_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7536,7536
+USENSYS,SRSE,SRSE_SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,5208,5208
+USENSYS,SRSG,SRSG_SRSG_biomass_1,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,SRSG,SRSG_SRSG_biomass_2,Other,2050,full-base-200-no-ccs,MW,8,8
+USENSYS,SRSG,SRSG_SRSG_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,1931,1931
+USENSYS,SRSG,SRSG_SRSG_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,832,832
+USENSYS,SRSG,SRSG_SRSG_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,3281,3281
+USENSYS,SRSG,SRSG_SRSG_geothermal_1,Geothermal,2050,full-base-200-no-ccs,MW,20,20
+USENSYS,SRSG,SRSG_SRSG_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MW,216,216
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4771,4771
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5156,5156
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6800,6800
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,4656,4656
+USENSYS,SRSG,SRSG_SRSG_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,6009,6009
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,10557,10557
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,861,861
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,2813,2813
+USENSYS,SRSG,SRSG_SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,617,617
+USENSYS,SRSG,SRSG_SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,193,193
+USENSYS,SRSG,SRSG_SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2050,full-base-200-no-ccs,MW,17,17
+USENSYS,SRSG,SRSG_SRSG_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,4003,4003
+USENSYS,SRSG,SRSG_SRSG_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,2004,2004
+USENSYS,SRSG,SRSG_SRSG_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,43,43
+USENSYS,SRSG,SRSG_SRSG_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,3198,3198
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,17641,17641
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,8134,8134
+USENSYS,SRSG,SRSG_SRSG_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4282,4282
+USENSYS,TRE,TRE_TRE_biomass_1,Other,2050,full-base-200-no-ccs,MW,20,20
+USENSYS,TRE,TRE_TRE_biomass_2,Other,2050,full-base-200-no-ccs,MW,2,2
+USENSYS,TRE,TRE_TRE_conventional_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,224,224
+USENSYS,TRE,TRE_TRE_conventional_steam_coal_1,Coal,2050,full-base-200-no-ccs,MW,3868,3868
+USENSYS,TRE,TRE_TRE_conventional_steam_coal_2,Coal,2050,full-base-200-no-ccs,MW,307,307
+USENSYS,TRE,TRE_TRE_distributed_generation_1,Distributed Solar,2050,full-base-200-no-ccs,MW,9589,9589
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3240,3240
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9889,9889
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1864,1864
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_14_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5828,5828
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9842,9842
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2001,2001
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_18_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4860,4860
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,512,512
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_21_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,6193,6193
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9322,9322
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_23_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3776,3776
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_24_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,1144,1144
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_28_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4176,4176
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_29_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,867,867
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4495,4495
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9090,9090
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,2487,2487
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,3638,3638
+USENSYS,TRE,TRE_TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,5766,5766
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,28728,28728
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,4185,4185
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,5500,5500
+USENSYS,TRE,TRE_TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,1076,1076
+USENSYS,TRE,TRE_TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,894,894
+USENSYS,TRE,TRE_TRE_natural_gas_steam_turbine_1,Natural Gas,2050,full-base-200-no-ccs,MW,286,286
+USENSYS,TRE,TRE_TRE_nuclear_1,Nuclear,2050,full-base-200-no-ccs,MW,5120,5120
+USENSYS,TRE,TRE_TRE_onshore_wind_turbine_1,Wind,2050,full-base-200-no-ccs,MW,3785,3785
+USENSYS,TRE,TRE_TRE_petroleum_liquids_1,Other,2050,full-base-200-no-ccs,MW,113,113
+USENSYS,TRE,TRE_TRE_small_hydroelectric_1,Hydro,2050,full-base-200-no-ccs,MW,4,4
+USENSYS,TRE,TRE_TRE_solar_photovoltaic_1,Solar,2050,full-base-200-no-ccs,MW,11600,11600
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,15574,15574
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_19_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,7303,7303
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,4498,4498
+USENSYS,TRE,TRE_TRE_utilitypv_class1_moderate_9_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,12664,12664
+USENSYS,TREW,TREW_TREW_distributed_generation_1,TREW_distributed_generation_1,2050,full-base-200-no-ccs,MW,522,522
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,9111,9111
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4571,4571
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,full-base-200-no-ccs,MW,4068,4068
+USENSYS,TREW,TREW_TREW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,full-base-200-no-ccs,MW,3218,3218
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,full-base-200-no-ccs,MW,3197,3197
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,full-base-200-no-ccs,MW,106,106
+USENSYS,TREW,TREW_TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,full-base-200-no-ccs,MW,336,336
+USENSYS,TREW,TREW_TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,full-base-200-no-ccs,MW,8,8
+USENSYS,TREW,TREW_TREW_onshore_wind_turbine_1,TREW_onshore_wind_turbine_1,2050,full-base-200-no-ccs,MW,6780,6780
+USENSYS,TREW,TREW_TREW_petroleum_liquids_1,TREW_petroleum_liquids_1,2050,full-base-200-no-ccs,MW,54,54
+USENSYS,TREW,TREW_TREW_solar_photovoltaic_1,TREW_solar_photovoltaic_1,2050,full-base-200-no-ccs,MW,5922,5922
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,full-base-200-no-ccs,MW,7225,7225
+USENSYS,TREW,TREW_TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,full-base-200-no-ccs,MW,2881,2881
+USENSYS,BASN,BASN_BASN_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,28261,49588
+USENSYS,CANO,CANO_CANO_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,50835,79591
+USENSYS,CANO,CANO_CANO_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,35292,35292
+USENSYS,CASO,CASO_CASO_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,85880,107578
+USENSYS,CASO,CASO_CASO_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,25808,25808
+USENSYS,FRCC,FRCC_FRCC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,51562,101744
+USENSYS,ISNE,ISNE_ISNE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,48605,59706
+USENSYS,ISNE,ISNE_ISNE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,27916,27916
+USENSYS,MISC,MISC_MISC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,20886,38289
+USENSYS,MISC,MISC_MISC_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,7300,7300
+USENSYS,MISE,MISE_MISE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,11453,27162
+USENSYS,MISE,MISE_MISE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,32782,32782
+USENSYS,MISS,MISS_MISS_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,29850,49202
+USENSYS,MISW,MISW_MISW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,34574,62334
+USENSYS,NWPP,NWPP_NWPP_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,2061,15211
+USENSYS,NWPP,NWPP_NWPP_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,4867,4867
+USENSYS,NYCW,NYCW_NYCW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,13267,22476
+USENSYS,NYUP,NYUP_NYUP_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,5959,14554
+USENSYS,NYUP,NYUP_NYUP_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,21804,21804
+USENSYS,PJMC,PJMC_PJMC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,5901,10581
+USENSYS,PJMD,PJMD_PJMD_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,29095,52935
+USENSYS,PJMD,PJMD_PJMD_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,46546,46546
+USENSYS,PJME,PJME_PJME_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,7698,17900
+USENSYS,PJME,PJME_PJME_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,30101,30101
+USENSYS,PJMW,PJMW_PJMW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,71258,120670
+USENSYS,PJMW,PJMW_PJMW_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,3689,3689
+USENSYS,RMRG,RMRG_RMRG_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,4386,12846
+USENSYS,RMRG,RMRG_RMRG_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,9002,9002
+USENSYS,SPPC,SPPC_SPPC_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,44,6000
+USENSYS,SPPN,SPPN_SPPN_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,5,12
+USENSYS,SPPS,SPPS_SPPS_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,11,2346
+USENSYS,SPPS,SPPS_SPPS_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,7347,7347
+USENSYS,SRCA,SRCA_SRCA_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,32710,63797
+USENSYS,SRCA,SRCA_SRCA_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,44578,44578
+USENSYS,SRCE,SRCE_SRCE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,35678,67252
+USENSYS,SRCE,SRCE_SRCE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,26099,26099
+USENSYS,SRSE,SRSE_SRSE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,38598,100447
+USENSYS,SRSE,SRSE_SRSE_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,29391,29391
+USENSYS,SRSG,SRSG_SRSG_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,19963,53799
+USENSYS,SRSG,SRSG_SRSG_hydroelectric_pumped_storage_1,Hydro,2050,full-base-200-no-ccs,MWh,3353,3353
+USENSYS,TRE,TRE_TRE_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,24419,54212
+USENSYS,TREW,TREW_TREW_battery_moderate_0,Battery,2050,full-base-200-no-ccs,MWh,14,2796
