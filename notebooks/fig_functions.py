@@ -1697,8 +1697,6 @@ def chart_cost_mwh(
         data["cost_mwh"] = data["Total"] / data["annual_demand"]
     else:
         demand = None
-    data = data.rename(columns={"planning_year": "Planning Year"})
-    col_var = "Planning Year"
     base = (
         alt.Chart()
         .mark_bar()
