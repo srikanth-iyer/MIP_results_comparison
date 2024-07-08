@@ -65,6 +65,7 @@ data_folders = [
     "full-base-200-tx-15",
     "full-base-200-tx-50",
     "20-week-foresight",
+    "20-week-myopic",
 ]
 order = [f.replace("full-", "") for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
