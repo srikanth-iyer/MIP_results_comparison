@@ -1,0 +1,11 @@
+model,line_name,planning_year,case,unit,value
+USENSYS,BASN_to_CASO,2027,full-base-200-tx-0,MW,-1
+USENSYS,BASN_to_SRSG,2027,full-base-200-tx-0,MW,-1
+USENSYS,CASO_to_SRSG,2027,full-base-200-tx-0,MW,-1
+USENSYS,MISC_to_PJMC,2027,full-base-200-tx-0,MW,-1
+USENSYS,MISC_to_PJMW,2027,full-base-200-tx-0,MW,-1
+USENSYS,MISS_to_SRCE,2027,full-base-200-tx-0,MW,-1
+USENSYS,MISW_to_SPPN,2027,full-base-200-tx-0,MW,-1
+USENSYS,PJMD_to_PJMW,2027,full-base-200-tx-0,MW,-1
+USENSYS,TRE_to_TREW,2027,full-base-200-tx-0,MW,-2
+USENSYS,TRE_to_TREW,2035,full-base-200-tx-0,MW,-1
