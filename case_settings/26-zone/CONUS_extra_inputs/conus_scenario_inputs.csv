@@ -134,3 +134,9 @@ base_52_week_tx_0,2035,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes
 base_52_week_tx_0,2040,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
 base_52_week_tx_0,2045,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
 base_52_week_tx_0,2050,none,reference,yes_0,no,none,none,greenfield,52_weeks,yes,five,no,standardize_5,no_ramp,base,yes,none
+current_policies_20_week,2027,none,reference,no,yes,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
+current_policies_20_week,2030,none,reference,no,yes,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
+current_policies_20_week,2035,none,reference,no,yes,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
+current_policies_20_week,2040,none,reference,no,yes,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
+current_policies_20_week,2045,none,reference,no,no,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
+current_policies_20_week,2050,none,reference,no,no,base,none,greenfield,20_weeks,existing,five,no,standardize_5,no_ramp,base,yes,high
