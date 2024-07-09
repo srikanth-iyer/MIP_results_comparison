@@ -1,4 +1,5 @@
 import os
+from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List
 
@@ -352,6 +353,30 @@ def load_genx_operations_data(
     return df
 
 
+@lru_cache
+def load_op_vom(period: str, load_base: bool = True) -> pd.DataFrame:
+    if load_base:
+        path = (
+            Path(__file__).parent.parent
+            / "genx-op-inputs"
+            / "base_52_week_commit"
+            / "Inputs"
+            / f"Inputs_{period}"
+            / "Generators_data.csv"
+        )
+    else:
+        path = (
+            Path(__file__).parent.parent
+            / "genx-op-inputs"
+            / "current_policies_52_week_commit"
+            / "Inputs"
+            / f"Inputs_{period}"
+            / "Generators_data.csv"
+        )
+    vom = pd.read_csv(path, usecols=["Resource", "Var_OM_Cost_per_MWh"])
+    return vom
+
+
 def _load_op_data(
     f: Path,
     hourly_data: bool,
@@ -376,15 +401,45 @@ def _load_op_data(
         else:
             raise ValueError(f"There is no hourly data function for file {fn}")
     if "Results_p" in str(f):
-        period = period_dict[f.parent.stem.split("_")[-1]]
+        period_str = f.parent.stem.split("_")[-1]
+        period = period_dict[period_str]
         _df.loc[:, "planning_year"] = period
         model_part = -4
     elif "Inputs_p" in str(f):
-        period = period_dict[f.parents[1].stem.split("_")[-1]]
+        period_str = f.parents[1].stem.split("_")[-1]
+        period = period_dict[period_str]
         _df.loc[:, "planning_year"] = period
         model_part = -5
     model = f.parts[model_part].split("_")[0]
     _df.loc[:, "model"] = model
+    if fn == "costs.csv":
+        annual_gen = pd.read_csv(f.parent / "capacityfactor.csv")
+        base_vom = load_op_vom(period_str, load_base=True)
+        current_vom = load_op_vom(period_str, load_base=False)
+        annual_gen_base = pd.merge(annual_gen, base_vom, on="Resource")
+        annual_gen_base["var_om"] = (
+            annual_gen_base["AnnualSum"] * annual_gen_base["Var_OM_Cost_per_MWh"]
+        )
+        total_vom_base = annual_gen_base["var_om"].sum()
+        annual_gen_current = pd.merge(annual_gen, current_vom, on="Resource")
+        annual_gen_current["var_om"] = (
+            annual_gen_current["AnnualSum"] * annual_gen_current["Var_OM_Cost_per_MWh"]
+        )
+        total_vom_current = annual_gen_current["var_om"].sum()
+        s = pd.DataFrame(
+            data={
+                "Costs": ["cVOM"],
+                "Total": [total_vom_base],
+                "planning_year": [period],
+                "model": [model],
+            }
+        )
+        _df = pd.concat([_df, s])
+        if "current" in str(f) or (_df["Total"] < 0).any():
+            _df.loc[_df["Costs"] == "cVar", "Total"] -= total_vom_current
+        else:
+            _df.loc[_df["Costs"] == "cVar", "Total"] -= total_vom_base
+
     return _df
 
 
