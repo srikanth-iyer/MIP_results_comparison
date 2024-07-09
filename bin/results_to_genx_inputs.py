@@ -40,6 +40,17 @@ def load_genx_inputs(path: Path) -> Dict[str, pd.DataFrame]:
     return inputs
 
 
+def fix_duplicate_region_in_resource_name(gens: pd.DataFrame) -> pd.DataFrame:
+    for zone in gens["zone"].unique():
+        double_name = f"{zone}_{zone}_"
+        single_name = f"{zone}_"
+        gens["resource_name"] = gens["resource_name"].str.replace(
+            double_name, single_name
+        )
+
+    return gens
+
+
 def load_final_capacity(path: Path, year: int) -> Dict[str, pd.DataFrame]:
     d = {}
     d["tx_exp"] = pd.read_csv(path / "transmission_expansion.csv")
@@ -51,6 +62,7 @@ def load_final_capacity(path: Path, year: int) -> Dict[str, pd.DataFrame]:
     )
     d["tx_exp"] = d["tx_exp"].rename(columns={"line_name": "transmission_path_name"})
     d["gens"] = pd.read_csv(path / "resource_capacity.csv")
+    d["gens"] = fix_duplicate_region_in_resource_name(d["gens"])
     for h in [2, 4, 6, 8, 10]:
         d["gens"].loc[:, "resource_name"] = d["gens"]["resource_name"].str.replace(
             f"_{h}hour", ""
