@@ -1,7 +1,7 @@
 import os
 from functools import lru_cache
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 import altair as alt
 import geopandas as gpd
@@ -41,7 +41,7 @@ TECH_MAP = {
     "small_hydroelectric": "Hydro",
     "solar_photovoltaic": "Solar",
     "hydroelectric_pumped_storage": "Hydro",
-    "nuclear": "Nuclear",
+    "nuclear_nuclear": "Nuclear",
     "nuclear_1": "Nuclear",
     "offshore_wind_turbine": "Wind",
     "distributed_generation": "Distributed Solar",
@@ -78,12 +78,41 @@ EXISTING_TECH_MAP = {
     "distributed_generation": "Distributed Solar",
 }
 
+
+def sort_nested_dict(d: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Given a nested dictionary, iterate through all levels to sort keys by length.
+    Dictionary values can be more nested dictionaries, strings, numbers, or lists.
+
+    Parameters
+    ----------
+    d : Dict[str, Any]
+        The nested dictionary to be sorted.
+
+    Returns
+    -------
+    Dict[str, Any]
+        The sorted dictionary where keys are sorted by length at each level.
+
+    """
+    sorted_dict = dict()
+
+    for key, value in sorted(d.items(), key=lambda x: len(str(x[0]))):
+        if isinstance(value, dict):
+            sorted_dict[key] = sort_nested_dict(value)
+        else:
+            sorted_dict[key] = value
+
+    return sorted_dict
+
+
 _TECH_MAP = {}
-for k, v in TECH_MAP.items():
+for k, v in sort_nested_dict(TECH_MAP).items():
     if k in EXISTING_TECH_MAP.keys():
         _TECH_MAP[k] = (v, True)
     else:
         _TECH_MAP[k] = (v, False)
+_TECH_MAP = sort_nested_dict(_TECH_MAP)
 
 
 def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
