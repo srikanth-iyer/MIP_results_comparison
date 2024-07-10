@@ -114,6 +114,7 @@ def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
     # Map the tech_type and existence to the DataFrame using vectorized operations
     df["tech_type"] = df["resource_name"].map(tech_type_map)
     df["existing"] = df["resource_name"].map(existence_map)
+    df["new_build"] = ~df["existing"]
 
     return df
 
@@ -568,6 +569,10 @@ def chart_total_cap(
     if row_var is not None:
         group_by.append(row_var)
         _tooltips.append(alt.Tooltip(row_var))
+    if "new_build" in cap.columns:
+        group_by.append("new_build")
+        _tooltips.append(alt.Tooltip("new_build").title("New Build"))
+    group_by = [c for c in group_by if c in cap.columns]
     cap_data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     cap_data["end_value"] /= 1000
     chart = (
@@ -587,6 +592,14 @@ def chart_total_cap(
         )
         .properties(width=width, height=height)
     )
+    if "new_build" in cap_data.columns:
+        chart = chart.encode(
+            opacity=alt.Opacity(
+                "new_build",
+                sort="descending",
+                scale=alt.Scale(domain=[False, True], range=[0.6, 1]),
+            ).title("New Build")
+        )
     if col_var is not None:
         chart = chart.encode(
             column=alt.Column(col_var)
@@ -658,11 +671,12 @@ def chart_total_gen(
 ) -> alt.Chart:
     if gen.empty:
         return None
-    merge_by = ["tech_type", "resource_name", x_var, "planning_year"]
-    group_by = ["tech_type", x_var, "planning_year"]
+    merge_by = ["tech_type", "resource_name", x_var, "planning_year", "new_build"]
+    group_by = ["tech_type", x_var, "planning_year", "new_build"]
     _tooltips = [
         alt.Tooltip("tech_type", title="Technology"),
         alt.Tooltip("value", title="Generation (TWh)", format=",.0f"),
+        alt.Tooltip("new_build", title="New Build"),
     ]
     if col_var is not None:
         group_by.append(col_var)
@@ -735,6 +749,14 @@ def chart_total_gen(
         )
         .properties(width=width, height=height)
     )
+    if "new_build" in data.columns:
+        chart = chart.encode(
+            opacity=alt.Opacity(
+                "new_build",
+                sort="descending",
+                scale=alt.Scale(domain=[False, True], range=[0.6, 1]),
+            ).title("New Build")
+        )
     if demand is not None:
         line = (
             alt.Chart()
@@ -768,6 +790,7 @@ def chart_total_gen(
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
+
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
