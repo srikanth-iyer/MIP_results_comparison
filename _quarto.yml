@@ -4,7 +4,7 @@ project:
     - "*.qmd"
     - "!more_figures_n_checks.qmd"
     - "!26z*.qmd"
-    - "!short*.qmd"
+    - "!*short*.qmd"
 
 website:
   title: "MIP"
