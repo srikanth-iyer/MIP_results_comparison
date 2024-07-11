@@ -700,13 +700,16 @@ def chart_total_gen(
 ) -> alt.Chart:
     if gen.empty:
         return None
-    merge_by = ["tech_type", "resource_name", x_var, "planning_year", "new_build"]
-    group_by = ["tech_type", x_var, "planning_year", "new_build"]
+    merge_by = ["tech_type", "resource_name", x_var, "planning_year"]
+    group_by = ["tech_type", x_var, "planning_year"]
     _tooltips = [
         alt.Tooltip("tech_type", title="Technology"),
         alt.Tooltip("value", title="Generation (TWh)", format=",.0f"),
-        alt.Tooltip("new_build", title="New Build"),
     ]
+    if "new_build" in gen.columns:
+        merge_by.append("new_build")
+        group_by.append("new_build")
+        _tooltips.append(alt.Tooltip("new_build", title="New Build"))
     if col_var is not None:
         group_by.append(col_var)
         merge_by.append(col_var)
