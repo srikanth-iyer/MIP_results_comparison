@@ -371,6 +371,7 @@ def load_genx_operations_data(
     if fn == "costs.csv":
         try:
             df = add_genx_op_network_cost(df, data_path).pipe(calc_op_percent_total)
+            df = append_npv_cost(df)
         except FileNotFoundError:
             pass
     if "Resource" in df.columns:
@@ -1272,15 +1273,57 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
     return chart
 
 
-def chart_op_cost(
-    op_costs: pd.DataFrame, x_var="model", col_var=None, row_var=None, order=None
+# Calculate NPV for each cost category
+def calculate_npv(df, period_len, discount_rate, base_year):
+    "From ChatGPT"
+    df["Total"] = 0.0
+    for index, row in df.iterrows():
+        annual_cost = row["annual_cost"]
+        planning_year = row["planning_year"]
+        length = period_len[planning_year]
+        npv = 0.0
+        for i in range(length):
+            year = planning_year - i
+            discount_factor = 1 / (1 + discount_rate) ** (year - base_year)
+            npv += annual_cost * discount_factor
+        df.at[index, "Total"] = npv
+    return df
+
+
+def append_npv_cost(op_costs: pd.DataFrame) -> pd.DataFrame:
+    period_len = {
+        2027: 4,
+        2030: 3,
+        2035: 5,
+        2040: 5,
+        2045: 5,
+        2050: 5,
+    }
+    discount_rate = 0.02
+    annual_costs = (
+        op_costs.groupby(["Costs", "planning_year", "model"], as_index=False)["Total"]
+        .sum()
+        .rename(columns={"Total": "annual_cost"})
+    )
+
+    npv_costs = (
+        calculate_npv(annual_costs, period_len, discount_rate, 2024)
+        .groupby(["model", "Costs"], as_index=False)["Total"]
+        .sum()
+        .pipe(calc_op_percent_total, ["model"])
+    )
+    npv_costs["planning_year"] = "NPV"
+
+    return pd.concat([op_costs, npv_costs])
+
+
+def single_op_cost_chart(
+    data, x_var="model", col_var=None, row_var=None, order=None
 ) -> alt.Chart:
-    if col_var is None and "planning_year" in op_costs.columns:
-        col_var = "planning_year"
     _tooltip = [alt.Tooltip("Total", format=",.0f")]
     chart_cols = ["Costs", "Total", x_var]
 
-    if "percent_total" in op_costs.columns:
+    if "percent_total" in data.columns:
         _tooltip.append(alt.Tooltip("percent_total:Q", format=".1%"))
         chart_cols.append("percent_total")
     if col_var is not None:
@@ -1290,10 +1333,7 @@ def chart_op_cost(
     if row_var is not None:
         _tooltip.append(alt.Tooltip(row_var))
         chart_cols.append(row_var)
-    if op_costs.empty:
-        return None
-    data = op_costs.copy()
-    data["Total"] /= 1e9
+
     base = (
         alt.Chart()
         .mark_bar()
@@ -1345,12 +1385,42 @@ def chart_op_cost(
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
         )
-    chart = (
-        chart.configure_axis(labelFontSize=15, titleFontSize=15)
+
+    return chart
+
+
+def chart_op_cost(
+    op_costs: pd.DataFrame, x_var="model", col_var=None, row_var=None, order=None
+) -> alt.Chart:
+    if "NPV" in op_costs["planning_year"].unique():
+        npv_costs = op_costs.loc[op_costs["planning_year"] == "NPV", :]
+        op_costs = op_costs.loc[~(op_costs["planning_year"] == "NPV"), :]
+    else:
+        npv_costs = pd.DataFrame()
+    if col_var is None and "planning_year" in op_costs.columns:
+        col_var = "planning_year"
+    if op_costs.empty:
+        return None
+    data = op_costs.copy()
+    data["Total"] /= 1e9
+
+    chart = single_op_cost_chart(data, x_var, col_var, row_var, order)
+    if not npv_costs.empty:
+        npv_data = npv_costs.copy()
+        npv_data["Total"] /= 1e9
+        npv_chart = single_op_cost_chart(npv_data, x_var, col_var, row_var, order)
+        if col_var == "planning_year":
+            final_chart = chart | npv_chart
+        elif row_var == "planning_year":
+            final_chart = chart & npv_chart
+        else:
+            final_chart = chart
+    final_chart = (
+        final_chart.configure_axis(labelFontSize=15, titleFontSize=15)
         .configure_axis(labelFontSize=15, titleFontSize=15)
         .configure_legend(titleFontSize=20, labelFontSize=16)
     )
-    return chart
+    return final_chart
 
 
 def chart_op_nse(
