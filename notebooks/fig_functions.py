@@ -1392,6 +1392,8 @@ def single_op_cost_chart(
 def chart_op_cost(
     op_costs: pd.DataFrame, x_var="model", col_var=None, row_var=None, order=None
 ) -> alt.Chart:
+    if op_costs.empty:
+        return None
     if "NPV" in op_costs["planning_year"].unique():
         npv_costs = op_costs.loc[op_costs["planning_year"] == "NPV", :]
         op_costs = op_costs.loc[~(op_costs["planning_year"] == "NPV"), :]
@@ -1399,8 +1401,7 @@ def chart_op_cost(
         npv_costs = pd.DataFrame()
     if col_var is None and "planning_year" in op_costs.columns:
         col_var = "planning_year"
-    if op_costs.empty:
-        return None
+
     data = op_costs.copy()
     data["Total"] /= 1e9
 
