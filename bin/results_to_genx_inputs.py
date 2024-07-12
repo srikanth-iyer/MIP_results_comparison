@@ -245,6 +245,7 @@ def weighted_avg_annuities(inputs_path: Path, output_path: Path):
     gen_data = {}
     existing_gen = {}
     new_gen = {}
+    period_fixed_costs = {}
 
     all_inputs_path = inputs_path.parent
     gen_files = all_inputs_path.rglob("Generators_data*")
@@ -264,10 +265,17 @@ def weighted_avg_annuities(inputs_path: Path, output_path: Path):
         assert len(gen_data[period]) == (
             len(existing_gen[period]) + len(new_gen[period])
         )
+        period_fixed_costs[period] = (
+            new_gen[period]
+            .loc[:, ["Fixed_OM_Cost_per_MWyr", "Fixed_OM_Cost_per_MWhyr"]]
+            .copy()
+        )
 
     for i, p in enumerate(periods):
         for kind in ["MW", "MWh"]:
-            new_gen[p] = period_weighted_avg_cost(new_gen, periods[: i + 1], kind=kind)
+            new_gen[p] = period_weighted_avg_cost(
+                new_gen, period_fixed_costs, periods[: i + 1], kind=kind
+            )
 
     for period in periods:
         fn = output_path.parent / f"Inputs_{period}" / "Generators_data.csv"
@@ -281,7 +289,10 @@ def weighted_avg_annuities(inputs_path: Path, output_path: Path):
 
 
 def period_weighted_avg_cost(
-    new_gen: Dict[str, pd.DataFrame], periods: List[str], kind: str
+    new_gen: Dict[str, pd.DataFrame],
+    period_fixed_costs: Dict[str, pd.DataFrame],
+    periods: List[str],
+    kind: str,
 ) -> pd.DataFrame:
     if len(periods) == 1:
         return new_gen[periods[0]]
@@ -306,7 +317,8 @@ def period_weighted_avg_cost(
         .replace(-np.inf, 0)
     )
     new_gen[final_period].loc[:, f"Fixed_OM_Cost_per_{kind}yr"] = (
-        new_gen[periods[0]][f"Fixed_OM_Cost_per_{kind}yr"] * frac_build[periods[0]]
+        period_fixed_costs[periods[0]][f"Fixed_OM_Cost_per_{kind}yr"]
+        * frac_build[periods[0]]
     ).astype(int)
 
     # Fraction built and fractional cost from subsequent periods
@@ -323,7 +335,8 @@ def period_weighted_avg_cost(
         )
 
         new_gen[final_period].loc[:, f"Fixed_OM_Cost_per_{kind}yr"] += (
-            new_gen["p1"][f"Fixed_OM_Cost_per_{kind}yr"] * frac_build[p2]
+            period_fixed_costs[p2].loc[:, f"Fixed_OM_Cost_per_{kind}yr"]
+            * frac_build[p2]
         ).astype(int)
 
     return new_gen[final_period]
