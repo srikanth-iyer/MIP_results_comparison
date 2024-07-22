@@ -1,5 +1,5 @@
 ---
-title: "Compare 52-week scenario results"
+title: "Compare foresight and 52-week scenario results"
 format: dashboard
 #   dashboard:
 #     scrolling: false
