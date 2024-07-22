@@ -89,6 +89,16 @@ chart = chart_total_cap(cap)
 chart
 ```
 ```{python}
+# | title: New-build Capacity
+chart = chart_total_cap(cap.loc[cap["new_build"] == True, :])
+chart
+```
+```{python}
+# | title: Existing Capacity
+chart = chart_total_cap(cap.loc[cap["new_build"] == False, :])
+chart
+```
+```{python}
 # | title: Total Capacity (wide)
 chart = chart_total_cap(cap, row_var=None, col_var="planning_year", width=250)
 chart
@@ -100,9 +110,24 @@ chart
 ```
 
 #### Column {.tabset}
+
 ```{python}
 # | title: Total Generation
 chart = chart_total_gen(gen, cap)
+chart
+```
+```{python}
+# | title: New-build Generation
+chart = chart_total_gen(
+    gen.loc[gen["new_build"] == True, :], cap.loc[cap["new_build"] == True, :]
+)
+chart
+```
+```{python}
+# | title: Existing Generation
+chart = chart_total_gen(
+    gen.loc[gen["new_build"] == False, :], cap.loc[cap["new_build"] == False, :]
+)
 chart
 ```
 ```{python}
