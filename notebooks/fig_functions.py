@@ -78,6 +78,21 @@ EXISTING_TECH_MAP = {
     "distributed_generation": "Distributed Solar",
 }
 
+COLOR_MAP = {
+    "Battery": "#4379AB",
+    "CCS": "#96CCEB",
+    "Coal": "#FF8900",
+    "Distributed Solar": "#FFBC71",
+    "Geothermal": "#3DA443",
+    "Hydro": "#76D472",
+    "Hydrogen": "#BA9900",
+    "Natural Gas CC": "#F7CD4B",
+    "Natural Gas CT": "#249A95",
+    "Nuclear": "#77BEB6",
+    "Solar": "#F14A54",
+    "Wind": "#FF9797",
+}
+
 
 def sort_nested_dict(d: Dict[str, Any]) -> Dict[str, Any]:
     """
@@ -611,8 +626,10 @@ def chart_total_cap(
         .encode(
             x=alt.X(x_var).sort(order).title(title_case(x_var)),
             y=alt.Y("sum(end_value)").title("Capacity (GW)"),
-            color=alt.Color("tech_type")
-            .scale(scheme="tableau20")
+            color=alt.Color("tech_type").scale(
+                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
+            )
+            # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
             # column="zone",
             # row=alt.Row(row_var)
@@ -664,8 +681,10 @@ def chart_regional_cap(
         .encode(
             x=alt.X(x_var).sort(order).title(title_case(x_var)),
             y=alt.Y("end_value").title("Capacity (GW)"),
-            color=alt.Color("tech_type")
-            .scale(scheme="tableau20")
+            color=alt.Color("tech_type").scale(
+                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
+            )
+            # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
             column=alt.Column("Region").header(labelFontSize=15, titleFontSize=20),
             row=alt.Row(row_var)
@@ -773,8 +792,10 @@ def chart_total_gen(
         .encode(
             x=alt.X(x_var).sort(order).title(title_case(x_var)),
             y=alt.Y("value").title("Generation (TWh)"),
-            color=alt.Color("tech_type")
-            .scale(scheme="tableau20")
+            color=alt.Color("tech_type").scale(
+                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
+            )
+            # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
             # column="zone",
             # row="planning_year:O",
@@ -884,8 +905,10 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
         .encode(
             x=alt.X("model").title("Model"),
             y=alt.Y("value").title("Generation (TWh)"),
-            color=alt.Color("tech_type")
-            .scale(scheme="tableau20")
+            color=alt.Color("tech_type").scale(
+                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
+            )
+            # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
             # column="agg_zone",
             # row="planning_year:O",
