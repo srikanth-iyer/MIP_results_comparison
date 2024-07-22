@@ -1,8 +1,6 @@
 ---
 title: "Compare foresight and 52-week scenario results"
 format: dashboard
-#   dashboard:
-#     scrolling: false
 jupyter: python3
 categories:
     - Full
