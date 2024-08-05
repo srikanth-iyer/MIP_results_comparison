@@ -1,5 +1,5 @@
 ---
-title: "52-week current policies"
+title: "52-week current policies unit commit"
 format: dashboard
 #   dashboard:
 #     scrolling: false
@@ -7,6 +7,7 @@ jupyter: python3
 categories:
     - 52-week
     - Current policies
+    - Unit commit
 ---
 
 ```{python}
