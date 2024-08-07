@@ -589,6 +589,59 @@ def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def calc_mean_annual_cap(
+    cap: pd.DataFrame, by_region: bool = False, new_build: bool = True
+) -> pd.DataFrame:
+    idx = pd.IndexSlice
+    years = sorted(cap.planning_year.unique(), reverse=True)
+    by = ["case", "tech_type", "model", "planning_year"]
+    if by_region:
+        by.append("zone")
+    if new_build:
+        _cap = cap.query("new_build == True and unit == 'MW'")
+    else:
+        _cap = cap.query("unit == 'MW'")
+    annual_cap = (
+        _cap.groupby(by, as_index=False)["end_value"]
+        .sum()
+        .set_index(["case", "tech_type", "model"])
+    )
+    if not new_build:
+        return (
+            annual_cap.reset_index()
+            .groupby(["case", "planning_year", "tech_type"], as_index=False)[
+                "end_value"
+            ]
+            .mean()
+            .round({"end_value": 1})
+        )
+    for year, prev_year in zip(years[:-1], years[1:]):
+        annual_cap.loc[
+            annual_cap["planning_year"] == year, "end_value"
+        ] = annual_cap.loc[annual_cap["planning_year"] == year, "end_value"].sub(
+            annual_cap.loc[annual_cap["planning_year"] == prev_year, "end_value"],
+            fill_value=0,
+        )
+
+    by = ["case", "tech_type", "planning_year"]
+    if by_region:
+        by.append("zone")
+    annual_cap_mean = pd.DataFrame(annual_cap.groupby(by)["end_value"].mean())
+
+    by = ["case", "tech_type", "model"]
+    min_max_by = ["case", "tech_type"]
+    if by_region:
+        by.append("zone")
+        min_max_by.append("zone")
+    annual_cap_mean.loc[idx[:, :, 2050], "min"] = (
+        annual_cap.groupby(by)["end_value"].sum().groupby(min_max_by).min().values
+    )
+    annual_cap_mean.loc[idx[:, :, 2050], "max"] = (
+        annual_cap.groupby(by)["end_value"].sum().groupby(min_max_by).max().values
+    )
+    return annual_cap_mean.round(1)
+
+
 def title_case(s: str) -> str:
     return s.replace("_", " ").title()
 
@@ -617,7 +670,7 @@ def chart_total_cap(
     # if "new_build" in cap.columns:
     #     group_by.append("new_build")
     #     _tooltips.append(alt.Tooltip("new_build").title("New Build"))
-    group_by = [c for c in group_by if c in cap.columns]
+    group_by = [c for c in set(group_by) if c in cap.columns]
     cap_data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     cap_data["end_value"] /= 1000
     chart = (
@@ -655,6 +708,70 @@ def chart_total_cap(
         )
     if row_var is not None:
         chart = chart.encode(
+            row=alt.Row(row_var)
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+        titleFontSize=20, labelFontSize=16
+    )
+    return chart
+
+
+def chart_avg_new_tech_variation(
+    annual_new_cap_mean: pd.DataFrame,
+    x_var: str = "tech_type",
+    col_var: str = "case",
+    row_var: str = None,
+    order=None,
+) -> alt.Chart:
+    data = annual_new_cap_mean.reset_index()
+    for col in ["end_value", "min", "max"]:
+        data[col] = (data[col] / 1000).round(1)
+
+    bars = (
+        alt.Chart()
+        .mark_bar()
+        .encode(
+            y=alt.Y("end_value").title("Capacity (GW)"),
+            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            color=alt.Color("tech_type")
+            .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
+            .title(title_case("tech_type")),
+            opacity=alt.Opacity("planning_year:O", sort="descending").title(
+                title_case("planning_year")
+            ),
+            order=alt.Order(
+                # Sort the segments of the bars by this field
+                "planning_year",
+                sort="ascending",
+            ),
+            tooltip=[
+                alt.Tooltip("tech_type", title="Technology"),
+                alt.Tooltip("planning_year", title="Planning Year"),
+                alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
+            ],
+        )
+    )
+
+    error_bars = (
+        alt.Chart()
+        .mark_errorbar()
+        .encode(
+            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            y=alt.Y("max").title("Capacity (GW)"),
+            y2=alt.Y2("min"),
+        )
+    )
+    chart = alt.layer(bars, error_bars, data=data)
+    if col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(col_var)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    if row_var is not None:
+        chart = chart.facet(
             row=alt.Row(row_var)
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
