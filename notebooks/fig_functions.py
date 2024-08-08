@@ -1742,7 +1742,7 @@ def chart_tx_map(tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame) -> alt.Chart:
                 longitude2="lon2",
                 strokeWidth="sum(value)",
                 color=alt.Color("sum(value):Q")
-                .scale(scheme="plasma")
+                .scale(scheme="plasma", reverse=True)
                 .title("Expansion (MW)"),
                 tooltip=[
                     alt.Tooltip("line_name"),
