@@ -19,7 +19,7 @@ except:
 region_map = {
     "WECC": ["BASN", "NWPP", "SRSG", "RMRG"],
     "CA": ["CANO", "CASO"],
-    "TRE": ["TRE", "TRE_WEST"],
+    "TRE": ["TRE", "TRE_WEST", "TREW"],
     "SPP": ["SPPC", "SPPN", "SPPS"],
     "MISO": ["MISC", "MISE", "MISS", "MISW", "SRCE"],
     "PJM": ["PJMC", "PJMW", "PJME", "PJMD"],
@@ -591,22 +591,28 @@ def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def calc_mean_annual_cap(
-    cap: pd.DataFrame, by_region: bool = False, new_build: bool = True
+    cap: pd.DataFrame,
+    by_region: bool = False,
+    by_agg_zone: bool = False,
+    new_build: bool = True,
 ) -> pd.DataFrame:
     idx = pd.IndexSlice
     years = sorted(cap.planning_year.unique(), reverse=True)
     by = ["case", "tech_type", "model", "planning_year"]
     if by_region:
         by.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
     if new_build:
         _cap = cap.query("new_build == True and unit == 'MW'")
     else:
         _cap = cap.query("unit == 'MW'")
-    annual_cap = (
-        _cap.groupby(by, as_index=False)["end_value"]
-        .sum()
-        .set_index(["case", "tech_type", "model"])
-    )
+    idx_cols = ["case", "tech_type", "model"]
+    if by_region:
+        idx_cols.append("zone")
+    if by_agg_zone:
+        idx_cols.append("agg_zone")
+    annual_cap = _cap.groupby(by, as_index=False)["end_value"].sum().set_index(idx_cols)
     if not new_build:
         return (
             annual_cap.reset_index()
@@ -627,6 +633,8 @@ def calc_mean_annual_cap(
     by = ["case", "tech_type", "planning_year"]
     if by_region:
         by.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
     annual_cap_mean = pd.DataFrame(annual_cap.groupby(by)["end_value"].mean())
 
     by = ["case", "tech_type", "model"]
@@ -634,6 +642,9 @@ def calc_mean_annual_cap(
     if by_region:
         by.append("zone")
         min_max_by.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
+        min_max_by.append("agg_zone")
     annual_cap_mean.loc[idx[:, :, 2050], "min"] = (
         annual_cap.groupby(by)["end_value"].sum().groupby(min_max_by).min().values
     )
@@ -726,10 +737,23 @@ def chart_avg_new_tech_variation(
     col_var: str = "case",
     row_var: str = None,
     order=None,
+    bars_only=False,
 ) -> alt.Chart:
     data = annual_new_cap_mean.reset_index()
     for col in ["end_value", "min", "max"]:
         data[col] = (data[col] / 1000).round(1)
+    tooltips = [
+        alt.Tooltip("planning_year", title="Planning Year"),
+        alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
+    ]
+    if x_var:
+        tooltips.append(alt.Tooltip(x_var, title=title_case(x_var)))
+    if col_var:
+        tooltips.append(alt.Tooltip(col_var, title=title_case(col_var)))
+    if row_var:
+        tooltips.append(alt.Tooltip(row_var, title=title_case(row_var)))
+    # if bars_only:
+    #     return bars
 
     bars = (
         alt.Chart()
@@ -748,11 +772,7 @@ def chart_avg_new_tech_variation(
                 "planning_year",
                 sort="ascending",
             ),
-            tooltip=[
-                alt.Tooltip("tech_type", title="Technology"),
-                alt.Tooltip("planning_year", title="Planning Year"),
-                alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
-            ],
+            tooltip=tooltips,
         )
     )
 
@@ -766,17 +786,28 @@ def chart_avg_new_tech_variation(
         )
     )
     chart = alt.layer(bars, error_bars, data=data)
-    if col_var is not None:
+    if col_var is not None and row_var is not None:
         chart = chart.facet(
             column=alt.Column(col_var)
+            .sort(order)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15),
+            row=alt.Row(row_var)
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
+        )
+    elif col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(col_var)
+            .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
-    if row_var is not None:
+    elif row_var is not None:
         chart = chart.facet(
             row=alt.Row(row_var)
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
         )
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
