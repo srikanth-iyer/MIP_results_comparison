@@ -784,6 +784,7 @@ def chart_avg_new_tech_variation(
             y=alt.Y("max").title("Capacity (GW)"),
             y2=alt.Y2("min"),
         )
+        .properties(width=175, height=200)
     )
     chart = alt.layer(bars, error_bars, data=data)
     if col_var is not None and row_var is not None:
@@ -1740,7 +1741,9 @@ gdf = gpd.read_file("conus_26z_latlon_simple.geojson")
 gdf = gdf.rename(columns={"model_region": "zone"})
 
 
-def chart_tx_map(tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame) -> alt.Chart:
+def chart_tx_map(
+    tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame, facet_col="model"
+) -> alt.Chart:
     gdf["lat"] = gdf.geometry.centroid.y
     gdf["lon"] = gdf.geometry.centroid.x
     tx_exp["lat1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lat"])
@@ -1751,7 +1754,7 @@ def chart_tx_map(tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame) -> alt.Chart:
     model_figs = []
     data = tx_exp.copy()
     # data["value"] /= 1000
-    for model in tx_exp.model.unique():
+    for model in tx_exp[facet_col].unique():
         background = (
             alt.Chart(gdf, title=f"{model}")
             .mark_geoshape(
@@ -1763,7 +1766,12 @@ def chart_tx_map(tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame) -> alt.Chart:
         )
         lines = (
             alt.Chart(
-                data.query("planning_year >= 2025 and model==@model and value > 0")
+                data.loc[
+                    (data["planning_year"] >= 2025)
+                    & (data[facet_col] == model)
+                    & (data["value"] >= 0),
+                    :,
+                ]
             )
             .mark_rule()
             .encode(

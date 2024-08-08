@@ -304,6 +304,19 @@ chart = chart_tx_expansion(
 chart
 ```
 
+```{python}
+# | title: Map by case
+chart = chart_tx_map(
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"].mean(),
+    gdf,
+    facet_col="case",
+)
+chart
+```
+
 # Transmission view 2
 ## Row
 
