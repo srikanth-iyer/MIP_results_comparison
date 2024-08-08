@@ -1,12 +1,11 @@
 ---
-title: "Compare transmission results"
+title: "Compare carbon price results"
 format: dashboard
 jupyter: python3
 categories:
     - Full
     - Comparison
     - Base
-    - Transmission
 ---
 
 ```{python}
@@ -47,10 +46,9 @@ from fig_functions import (
 )
 
 data_folders = [
+    "full-base-50",
     "full-base-200",
-    "full-base-200-tx-0",
-    "full-base-200-tx-15",
-    "full-base-200-tx-50",
+    "full-base-1000",
 ]
 order = [f for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
