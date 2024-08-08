@@ -704,6 +704,7 @@ def chart_total_cap(
     if col_var is not None:
         chart = chart.encode(
             column=alt.Column(col_var)
+            .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
