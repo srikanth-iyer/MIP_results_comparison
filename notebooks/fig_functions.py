@@ -17,7 +17,8 @@ except:
     pass
 
 region_map = {
-    "WECC": ["BASN", "CANO", "CASO", "NWPP", "SRSG", "RMRG"],
+    "WECC": ["BASN", "NWPP", "SRSG", "RMRG"],
+    "CA": ["CANO", "CASO"],
     "TRE": ["TRE", "TRE_WEST"],
     "SPP": ["SPPC", "SPPN", "SPPS"],
     "MISO": ["MISC", "MISE", "MISS", "MISW", "SRCE"],
