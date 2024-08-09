@@ -1,17 +1,11 @@
 ---
-title: "Compare 52-week scenario results"
+title: "Compare carbon price results"
 format: dashboard
-#   dashboard:
-#     scrolling: false
 jupyter: python3
 categories:
     - Full
     - Comparison
-    - Unit commit
-    - Endogenous retirement
-    - Current policies
-    - Foresight
-    - "No CCS"
+    - Base
 ---
 
 ```{python}
@@ -54,22 +48,9 @@ from fig_functions import (
 )
 
 data_folders = [
-    "full-base-200",
-    "full-base-200-retire",
-    "full-base-200-no-ccs",
-    "full-base-200-commit",
     "full-base-50",
+    "full-base-200",
     "full-base-1000",
-    "full-current-policies",
-    "full-current-policies-retire",
-    "full-current-policies-commit",
-    "full-base-200-tx-0",
-    "full-base-200-tx-15",
-    "full-base-200-tx-50",
-    "20-week-foresight",
-    "20-week-myopic",
-    "20-week-foresight-current-policy",
-    "20-week-myopic-current-policy",
 ]
 order = [f for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
@@ -221,6 +202,7 @@ chart = chart_total_cap(
 chart
 ```
 
+
 # Average Capacity by Case
 
 ## Row
@@ -283,6 +265,18 @@ chart = chart_avg_new_tech_variation(
 )
 chart
 ```
+
+```{python}
+# | title: New-build Capacity by Region and Type
+chart = chart_avg_new_tech_variation(
+    region_avg_new_cap,
+    row_var="agg_zone",
+    x_var="case",
+    col_var="tech_type",
+    order=order,
+)
+chart
+```
 # Generation
 
 ```{python}
@@ -319,6 +313,43 @@ chart = chart_tx_expansion(
 # chart = chart_tx_expansion(
 #     tx_all, x_var="model", facet_col=None, col_var="case", order=order
 # )
+chart
+```
+```{python}
+# | title: Map by case
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
+chart
+```
+
+```{python}
+# | title: Map by case, drop lines < 50 MW
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .query("value >= 50").sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
 chart
 ```
 

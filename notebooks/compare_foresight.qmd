@@ -44,17 +44,19 @@ from fig_functions import (
     chart_op_cost,
     chart_op_nse,
     chart_op_emiss,
+    chart_tx_map,
+    gdf,
 )
 
 data_folders = [
     "full-base-200",
-    "full-current-policies",
-    "20-week-foresight",
     "20-week-myopic",
-    "20-week-foresight-current-policy",
+    "20-week-foresight",
+    "full-current-policies",
     "20-week-myopic-current-policy",
+    "20-week-foresight-current-policy",
 ]
-order = [f.replace("full-", "") for f in data_folders]
+order = [f for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
 
 
@@ -166,7 +168,7 @@ tx_exp["dest_region"] = tx_exp["line_name"].str.split("_to_").str[1]
 
 ```
 
-# Capacity
+# Capacity by Model
 
 ## Row
 
@@ -227,10 +229,30 @@ chart
 ```
 ```{python}
 # | title: New-build Capacity
-total_new_cap = cap.query("new_build == True").groupby(["case", "planning_year", "tech_type", "model"], as_index=False)["end_value"].sum()
-mean_new_cap = total_new_cap.groupby(["case", "planning_year", "tech_type"], as_index=False)["end_value"].agg(["mean", "min", "max"]).rename(columns={"mean": "end_value"})
-chart = chart_total_cap(mean_new_cap, row_var=None, col_var="planning_year", x_var="case", order=order)
+total_new_cap = (
+    cap.query("new_build == True")
+    .groupby(["case", "planning_year", "tech_type", "model"], as_index=False)[
+        "end_value"
+    ]
+    .sum()
+)
+mean_new_cap = (
+    total_new_cap.groupby(["case", "planning_year", "tech_type"], as_index=False)[
+        "end_value"
+    ]
+    .agg(["mean", "min", "max"])
+    .rename(columns={"mean": "end_value"})
+)
+chart = chart_total_cap(
+    mean_new_cap, row_var=None, col_var="planning_year", x_var="case", order=order
+)
 chart
+```
+```{python}
+# | title: New-build Capacity by Region
+region_avg_new_cap = calc_mean_annual_cap(cap, by_agg_zone=True, new_build=True)
+region_chart = chart_total_cap(region_avg_new_cap.reset_index(), x_var="case", col_var="planning_year", row_var="agg_zone", order=order)
+region_chart
 ```
 ```{python}
 # | title: New-build Capacity by Type
@@ -239,6 +261,25 @@ chart = chart_avg_new_tech_variation(annual_new_cap_mean)
 chart
 ```
 
+```{python}
+# | title: New-build Capacity by Type and Region
+chart = chart_avg_new_tech_variation(
+    region_avg_new_cap, row_var="agg_zone", order=order
+)
+chart
+```
+
+```{python}
+# | title: New-build Capacity by Region and Type
+chart = chart_avg_new_tech_variation(
+    region_avg_new_cap,
+    row_var="agg_zone",
+    x_var="case",
+    col_var="tech_type",
+    order=order,
+)
+chart
+```
 # Generation
 
 ```{python}
@@ -275,6 +316,43 @@ chart = chart_tx_expansion(
 # chart = chart_tx_expansion(
 #     tx_all, x_var="model", facet_col=None, col_var="case", order=order
 # )
+chart
+```
+```{python}
+# | title: Map by case
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
+chart
+```
+
+```{python}
+# | title: Map by case, drop lines < 50 MW
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .query("value >= 50").sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
 chart
 ```
 
