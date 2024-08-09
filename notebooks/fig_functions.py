@@ -658,6 +658,25 @@ def title_case(s: str) -> str:
     return s.replace("_", " ").title()
 
 
+VAR_ABBR_MAP = {
+    "model": "m",
+    "case": "c",
+    "planning_year": "y",
+    "resource_name": "rn",
+    "agg_zone": "az",
+    "zone": "z",
+    "tech_type": "tt",
+    "value": "v",
+    "end_value": "ev",
+    "line_name": "ln",
+    "Region": "r",
+}
+
+VAR_ABBR_TITLE_MAP = {v: title_case(k) for k, v in VAR_ABBR_MAP.items()}
+VAR_ABBR_TITLE_MAP["v"] = "Capacity (GW)"
+VAR_ABBR_TITLE_MAP["v"] = "Generation (TWh)"
+
+
 def chart_total_cap(
     cap: pd.DataFrame,
     x_var="model",
@@ -669,35 +688,40 @@ def chart_total_cap(
 ) -> alt.Chart:
     group_by = ["tech_type", x_var]
     _tooltips = [
-        alt.Tooltip("tech_type", title="Technology"),
-        alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
-        alt.Tooltip(x_var),
+        alt.Tooltip(VAR_ABBR_MAP["tech_type"], title="Technology"),
+        alt.Tooltip(VAR_ABBR_MAP["end_value"], title="Capacity (GW)", format=",.0f"),
+        alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)),
     ]
     if col_var is not None:
         group_by.append(col_var)
-        _tooltips.append(alt.Tooltip(col_var))
+        _tooltips.append(
+            alt.Tooltip(
+                VAR_ABBR_MAP[col_var], title=VAR_ABBR_TITLE_MAP[VAR_ABBR_MAP[col_var]]
+            )
+        )
     if row_var is not None:
         group_by.append(row_var)
-        _tooltips.append(alt.Tooltip(row_var))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
     # if "new_build" in cap.columns:
     #     group_by.append("new_build")
     #     _tooltips.append(alt.Tooltip("new_build").title("New Build"))
     group_by = [c for c in set(group_by) if c in cap.columns]
     cap_data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     cap_data["end_value"] /= 1000
+    cap_data = cap_data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart(cap_data)
         .mark_bar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(end_value)").title("Capacity (GW)"),
-            color=alt.Color("tech_type").scale(
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("sum(ev)").title("Capacity (GW)"),
+            color=alt.Color("tt").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
             )
             # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
             # column="zone",
-            # row=alt.Row(row_var)
+            # row=alt.Row(VAR_ABBR_MAP[row_var]
             # .title(title_case(row_var))
             # .header(labelFontSize=15, titleFontSize=20),
             tooltip=_tooltips,
@@ -714,14 +738,14 @@ def chart_total_cap(
     #     )
     if col_var is not None:
         chart = chart.encode(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     if row_var is not None:
         chart = chart.encode(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -743,15 +767,15 @@ def chart_avg_new_tech_variation(
     for col in ["end_value", "min", "max"]:
         data[col] = (data[col] / 1000).round(1)
     tooltips = [
-        alt.Tooltip("planning_year", title="Planning Year"),
-        alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
+        alt.Tooltip("y", title="Planning Year"),
+        alt.Tooltip("ev", title="Capacity (GW)", format=",.0f"),
     ]
     if x_var:
-        tooltips.append(alt.Tooltip(x_var, title=title_case(x_var)))
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)))
     if col_var:
-        tooltips.append(alt.Tooltip(col_var, title=title_case(col_var)))
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var], title=title_case(col_var)))
     if row_var:
-        tooltips.append(alt.Tooltip(row_var, title=title_case(row_var)))
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
     # if bars_only:
     #     return bars
 
@@ -759,17 +783,17 @@ def chart_avg_new_tech_variation(
         alt.Chart()
         .mark_bar()
         .encode(
-            y=alt.Y("end_value").title("Capacity (GW)"),
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            color=alt.Color("tech_type")
+            y=alt.Y("ev").title("Capacity (GW)"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            color=alt.Color("tt")
             .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
             .title(title_case("tech_type")),
-            opacity=alt.Opacity("planning_year:O", sort="descending").title(
+            opacity=alt.Opacity("y:O", sort="descending").title(
                 title_case("planning_year")
             ),
             order=alt.Order(
                 # Sort the segments of the bars by this field
-                "planning_year",
+                "y",
                 sort="ascending",
             ),
             tooltip=tooltips,
@@ -780,33 +804,34 @@ def chart_avg_new_tech_variation(
         alt.Chart()
         .mark_errorbar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("max").title("Capacity (GW)"),
             y2=alt.Y2("min"),
         )
         .properties(width=175, height=200)
     )
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = alt.layer(bars, error_bars, data=data)
     if col_var is not None and row_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             # .sort(order)
             .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
         )
     elif col_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif row_var is not None:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             # .sort(order)
             .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
         )
@@ -825,28 +850,31 @@ def chart_regional_cap(
 ) -> alt.Chart:
     data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     data["end_value"] /= 1000
-    data = data.rename(columns={"agg_zone": "Region"})
+    # data = data.rename(columns={"agg_zone": "Region"})
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("end_value").title("Capacity (GW)"),
             color=alt.Color("tech_type").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
             )
             # .scale(scheme="tableau20")
             .title(title_case("tech_type")),
-            column=alt.Column("Region").header(labelFontSize=15, titleFontSize=20),
-            row=alt.Row(row_var)
+            column=alt.Column("az")
+            .title("Region")
+            .header(labelFontSize=15, titleFontSize=20),
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(labelFontSize=15, titleFontSize=20),
             tooltip=[
-                alt.Tooltip("tech_type", title="Technology"),
-                alt.Tooltip("end_value", title="Capacity (GW)", format=",.0f"),
-                alt.Tooltip("Region"),
-                alt.Tooltip(row_var, title=title_case(row_var)),
-                alt.Tooltip(x_var, title=title_case(x_var)),
+                alt.Tooltip("tt", title="Technology"),
+                alt.Tooltip("ev", title="Capacity (GW)", format=",.0f"),
+                alt.Tooltip("az"),
+                alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)),
+                alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)),
             ],
         )
         .properties(width=150, height=250)
@@ -874,8 +902,8 @@ def chart_total_gen(
     merge_by = ["tech_type", "resource_name", x_var, "planning_year"]
     group_by = ["tech_type", x_var, "planning_year"]
     _tooltips = [
-        alt.Tooltip("tech_type", title="Technology"),
-        alt.Tooltip("value", title="Generation (TWh)", format=",.0f"),
+        alt.Tooltip("tt", title="Technology"),
+        alt.Tooltip("v", title="Generation (TWh)", format=",.0f"),
     ]
     # if "new_build" in gen.columns:
     #     merge_by.append("new_build")
@@ -884,9 +912,9 @@ def chart_total_gen(
     if col_var is not None:
         group_by.append(col_var)
         merge_by.append(col_var)
-        _tooltips.append(alt.Tooltip(col_var))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
     if row_var is not None:
-        _tooltips.append(alt.Tooltip(row_var))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
         merge_by.append(row_var)
         group_by.append(row_var)
     merge_by = list(set(merge_by))
@@ -918,7 +946,7 @@ def chart_total_gen(
         _tooltips.extend(
             [
                 alt.Tooltip("capacity_factor", title="Capacity Factor"),
-                alt.Tooltip("end_value", title="Capacity (MW)", format=",.0f"),
+                alt.Tooltip("ev", title="Capacity (MW)", format=",.0f"),
             ]
         )
 
@@ -937,13 +965,14 @@ def chart_total_gen(
     else:
         demand = None
     data["value"] /= 1000000
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart()  # data)
         .mark_bar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y=alt.Y("value").title("Generation (TWh)"),
-            color=alt.Color("tech_type").scale(
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("v").title("Generation (TWh)"),
+            color=alt.Color("tt").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
             )
             # .scale(scheme="tableau20")
@@ -976,22 +1005,22 @@ def chart_total_gen(
         # )
     if col_var is not None and row_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15),
         )
     elif row_var is not None:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif col_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -1024,8 +1053,8 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
         )[["value", "potential_gen"]].sum()
         data["capacity_factor"] = (data["value"] / data["potential_gen"]).round(3)
         _tooltips = [
-            alt.Tooltip("tech_type", title="Technology"),
-            alt.Tooltip("value", title="Generation (TWh)", format=",.0f"),
+            alt.Tooltip("tt", title="Technology"),
+            alt.Tooltip("v", title="Generation (TWh)", format=",.0f"),
             alt.Tooltip("capacity_factor", title="Capacity Factor"),
         ]
     else:
@@ -1033,7 +1062,7 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
             ["agg_zone", "tech_type", "model", "planning_year"], as_index=False
         )["value"].sum()
         _tooltips = [
-            alt.Tooltip("tech_type", title="Technology"),
+            alt.Tooltip("tt", title="Technology"),
             alt.Tooltip("value", title="Generation (MWh)", format=",.0f"),
         ]
     if (Path.cwd() / "annual_demand.csv").exists():
@@ -1050,6 +1079,7 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
     else:
         demand = None
     data["value"] /= 1000000
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart()
         .mark_bar()
@@ -1078,10 +1108,10 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
             .properties(width=150, height=250)
         )
         chart = alt.layer(chart, line, data=data).facet(
-            column=alt.Column("agg_zone")
+            column=alt.Column("az")
             .title("Region")
             .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row("planning_year")
+            row=alt.Row("y")
             .title(title_case("planning_year"))
             .header(titleFontSize=20, labelFontSize=15),
         )
@@ -1106,8 +1136,8 @@ def chart_tx_expansion(
     if data.empty:
         return None
     _tooltip = [
-        alt.Tooltip("sum(value)", format=",.0f", title="Period GW"),
-        alt.Tooltip("planning_year", title=title_case("planning_year")),
+        alt.Tooltip("sum(v)", format=",.0f", title="Period GW"),
+        alt.Tooltip("y", title=title_case("planning_year")),
     ]
     data["line_name"] = data["line_name"].str.replace("_to_", " | ")
     if order is None:
@@ -1135,24 +1165,25 @@ def chart_tx_expansion(
 
     if x_var == "case":
         _tooltip.append(
-            alt.Tooltip("case"),
+            alt.Tooltip("c"),
         )
     data["value"] /= 1000
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(x_var).sort(order),
-            y=alt.Y("sum(value)").title("Transmission (GW)"),
-            color=alt.Color("model:N").title(title_case("model")),
-            opacity=alt.Opacity("planning_year:O", sort="descending").title(
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order),
+            y=alt.Y("sum(v)").title("Transmission (GW)"),
+            color=alt.Color("m:N").title(title_case("model")),
+            opacity=alt.Opacity("y:O", sort="descending").title(
                 title_case("planning_year")
             ),
             # facet=alt.Facet("line_name", columns=n_cols),
             order=alt.Order(
                 # Sort the segments of the bars by this field
-                "planning_year",
+                "y",
                 sort="ascending",
             ),
             tooltip=_tooltip,
@@ -1164,7 +1195,7 @@ def chart_tx_expansion(
     )
     if facet_col is not None:
         chart = chart.encode(
-            facet=alt.Facet(facet_col, columns=n_cols)
+            facet=alt.Facet(VAR_ABBR_MAP[facet_col], columns=n_cols)
             .title(title_case(facet_col))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -1173,21 +1204,21 @@ def chart_tx_expansion(
             alt.Chart()
             .mark_text(dy=-5, fontSize=14)
             .encode(
-                x=alt.X(x_var).sort(order).title(title_case(x_var)),
-                y="sum(value):Q",
-                text=alt.Text("sum(value):Q", format=".0f"),
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+                y="sum(v):Q",
+                text=alt.Text("sum(v):Q", format=".0f"),
             )
         )
         chart = alt.layer(chart, text, data=data).properties(width=width)
     if col_var is not None:
         chart = chart.encode(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     if row_var is not None:
         chart = chart.encode(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -1229,12 +1260,13 @@ def chart_emissions_intensity(
     data = pd.merge(emiss_data, gen_data, on=by)
     data["emissions_intensity"] = data["emissions"] / data["generation"]
     data["emissions_intensity"] *= 1000
+    data = data.rename(columns=VAR_ABBR_MAP)
 
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(x_var).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).title(title_case(x_var)),
             y=alt.Y("emissions_intensity").title("kg/MWh"),
         )
         .properties(height=150)
@@ -1252,13 +1284,13 @@ def chart_emissions_intensity(
     #     chart = alt.layer(chart, text, data=data).properties(width=width)
     if col_var is not None:
         chart = chart.encode(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     if row_var is not None:
         chart = chart.encode(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -1275,8 +1307,8 @@ def chart_emissions(
     if emiss.empty:
         return None
     _tooltips = [
-        alt.Tooltip("sum(value)", format=",.0f", title="Million Tonnes"),
-        alt.Tooltip("Region"),
+        alt.Tooltip("sum(v)", format=",.0f", title="Million Tonnes"),
+        alt.Tooltip("r", title="Region"),
     ]
     emiss["Region"] = emiss["zone"].map(rev_region_map)
     group_by = ["Region", x_var, "planning_year"]
@@ -1285,7 +1317,7 @@ def chart_emissions(
 
     data = emiss.groupby(group_by, as_index=False)["value"].sum()
     if col_var is not None:
-        _tooltips.append(alt.Tooltip(col_var))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
     if order is None:
         order = sorted(data[x_var].unique())
     data["value"] /= 1e6
@@ -1295,13 +1327,14 @@ def chart_emissions(
     data.loc[data["planning_year"] == 2035, "limit"] = 130
     data.loc[data["planning_year"] == 2040, "limit"] = 86.7
     data.loc[data["planning_year"] == 2045, "limit"] = 43.3
+    data = data.rename(columns=VAR_ABBR_MAP)
     base = (
         alt.Chart()
         .mark_bar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(value)").title("CO2 (Million Tonnes)"),
-            color=alt.Color("Region"),  # .scale(scheme="tableau20"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("sum(v)").title("CO2 (Million Tonnes)"),
+            color=alt.Color("r").title("Region"),  # .scale(scheme="tableau20"),
             # column="agg_zone",
             # row="planning_year:O",
             tooltip=_tooltips,
@@ -1313,9 +1346,9 @@ def chart_emissions(
         alt.Chart()
         .mark_text(dy=-5)
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y="sum(value):Q",
-            text=alt.Text("sum(value):Q", format=".0f"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y="sum(v):Q",
+            text=alt.Text("sum(v):Q", format=".0f"),
         )
     )  # .properties(width=350, height=250)
     if co2_limit:
@@ -1335,7 +1368,7 @@ def chart_emissions(
             alt.layer(base, text, line, data=data)
             .properties(width=350, height=250)
             .facet(
-                row=alt.Row("planning_year:O")
+                row=alt.Row("y:O")
                 .title(title_case("planning_year"))
                 .header(titleFontSize=20, labelFontSize=15)
             )
@@ -1345,10 +1378,10 @@ def chart_emissions(
             alt.layer(base, text, line, data=data)
             .properties(width=350, height=250)
             .facet(
-                row=alt.Row("planning_year:O")
+                row=alt.Row("y:O")
                 .title(title_case("planning_year"))
                 .header(titleFontSize=20, labelFontSize=15),
-                column=alt.Column(col_var)
+                column=alt.Column(VAR_ABBR_MAP[col_var])
                 .title(title_case(col_var))
                 .header(titleFontSize=20, labelFontSize=15),
             )
@@ -1495,25 +1528,25 @@ def single_op_cost_chart(
     data, x_var="model", col_var=None, row_var=None, order=None
 ) -> alt.Chart:
     _tooltip = [alt.Tooltip("Total", format=",.0f")]
-    chart_cols = ["Costs", "Total", x_var]
+    chart_cols = ["Costs", "Total", VAR_ABBR_MAP[x_var]]
 
     if "percent_total" in data.columns:
         _tooltip.append(alt.Tooltip("percent_total:Q", format=".1%"))
         chart_cols.append("percent_total")
     if col_var is not None:
-        _tooltip.append(alt.Tooltip(col_var))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
         _tooltip.append(alt.Tooltip("Costs"))
-        chart_cols.append(col_var)
+        chart_cols.append(VAR_ABBR_MAP[col_var])
     if row_var is not None:
-        _tooltip.append(alt.Tooltip(row_var))
-        chart_cols.append(row_var)
-
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
+        chart_cols.append(VAR_ABBR_MAP[row_var])
+    data = data.rename(columns=VAR_ABBR_MAP)
     base = (
         alt.Chart()
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("Total").title("Costs (Billion $)"),
             color="Costs:N",
             tooltip=_tooltip,
@@ -1524,7 +1557,7 @@ def single_op_cost_chart(
         alt.Chart()
         .mark_text(dy=-5, fontSize=11)
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y="sum(Total):Q",
             text=alt.Text("sum(Total):Q", format=".0f"),
         )
@@ -1540,22 +1573,22 @@ def single_op_cost_chart(
         return chart
     elif row_var is None and col_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif col_var is None and row_var is not None:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     else:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
         )
@@ -1578,10 +1611,12 @@ def chart_op_cost(
 
     data = op_costs.copy()
     data["Total"] /= 1e9
+    data = data.rename(columns=VAR_ABBR_MAP)
 
     chart = single_op_cost_chart(data, x_var, col_var, row_var, order)
     if not npv_costs.empty:
         npv_data = npv_costs.copy()
+        npv_data = npv_data.rename(columns=VAR_ABBR_MAP)
         npv_data["Total"] /= 1e9
         npv_chart = single_op_cost_chart(npv_data, x_var, col_var, row_var, order)
         if col_var == "planning_year":
@@ -1612,27 +1647,28 @@ def chart_op_nse(
         return None
     data = op_nse.copy()
     data["value"] /= 1000
+    data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(value)").title("Annual non-served GWh"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("sum(v)").title("Annual non-served GWh"),
             color=alt.Color("model:N").title(title_case("model")),
-            tooltip=alt.Tooltip("sum(value)", format=",.0f", title="NSE"),
+            tooltip=alt.Tooltip("sum(v)", format=",.0f", title="NSE"),
         )
         .properties(width=alt.Step(40), height=250)
     )
     if col_var is not None:
         chart = chart.encode(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     if row_var is not None:
         chart = chart.encode(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -1652,7 +1688,7 @@ def chart_op_emiss(
 ) -> alt.Chart:
     if op_emiss.empty:
         return None
-    op_emiss["Region"] = op_emiss["zone"].map(rev_region_map)
+    op_emiss["r"] = op_emiss["zone"].map(rev_region_map)
     if (
         col_var is None
         and "planning_year" in op_emiss.columns
@@ -1660,7 +1696,7 @@ def chart_op_emiss(
     ):
         col_var = "planning_year"
     _tooltip = [
-        alt.Tooltip("value", format=",.0f", title="Emissions"),
+        alt.Tooltip("v", format=",.0f", title="Emissions"),
         alt.Tooltip(color),
     ]
     by = [color, x_var]
@@ -1669,23 +1705,26 @@ def chart_op_emiss(
     if op_emiss[color].nunique() > 10:
         color_scale = "tableau20"
     if col_var is not None:
-        _tooltip.append(alt.Tooltip(col_var))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
         by.append(col_var)
     if row_var is not None:
-        _tooltip.append(alt.Tooltip(row_var))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
         by.append(row_var)
 
     by = list(set(by))
     data = op_emiss.groupby(by, as_index=False)["value"].sum().query("value>0")
     data["value"] /= 1e6
+    data = data.rename(columns=VAR_ABBR_MAP)
     base = (
         alt.Chart()
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y=alt.Y("value").title("CO2 (Million Tonnes)"),
-            color=alt.Color(color).scale(scheme=color_scale).title(title_case(color)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("v").title("CO2 (Million Tonnes)"),
+            color=alt.Color(VAR_ABBR_MAP[color])
+            .scale(scheme=color_scale)
+            .title(title_case(color)),
             tooltip=_tooltip,
         )
     )
@@ -1694,9 +1733,9 @@ def chart_op_emiss(
         alt.Chart()
         .mark_text(dy=-5, fontSize=11)
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
-            y="sum(value):Q",
-            text=alt.Text("sum(value):Q", format=".0f"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y="sum(v):Q",
+            text=alt.Text("sum(v):Q", format=".0f"),
         )
     )
 
@@ -1710,22 +1749,22 @@ def chart_op_emiss(
         return chart
     elif row_var is None and col_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif col_var is None and row_var is not None:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     else:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
         )
@@ -1896,7 +1935,7 @@ def chart_cap_factor_scatter(
         merge_by.append(col_var)
         # _tooltips.append(alt.Tooltip(col_var))
     if row_var is not None:
-        _tooltips.append(alt.Tooltip(row_var))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
         merge_by.append(row_var)
         group_by.append(row_var)
     merge_by = list(set(merge_by))
@@ -1973,13 +2012,13 @@ def chart_cap_factor_scatter(
             chart = chart.encode(column=alt.Column("y").title("Planning Year"))
         else:
             chart = chart.encode(
-                column=alt.Column(col_var)
+                column=alt.Column(VAR_ABBR_MAP[col_var])
                 .title(title_case(col_var))
                 .header(titleFontSize=20, labelFontSize=15)
             )
     if row_var is not None:
         chart = chart.encode(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
@@ -2023,13 +2062,13 @@ def chart_cap_factor_scatter(
                 )
             else:
                 timeseries = timeseries.encode(
-                    column=alt.Column(col_var)
+                    column=alt.Column(VAR_ABBR_MAP[col_var])
                     .title(title_case(col_var))
                     .header(titleFontSize=20, labelFontSize=15)
                 )
         if row_var is not None:
             timeseries = timeseries.encode(
-                row=alt.Row(row_var)
+                row=alt.Row(VAR_ABBR_MAP[row_var])
                 .title(title_case(row_var))
                 .header(titleFontSize=20, labelFontSize=15)
             )
@@ -2059,11 +2098,12 @@ def chart_cost_mwh(
         data["cost_mwh"] = data["Total"] / data["annual_demand"]
     else:
         demand = None
+    data = data.rename(columns=VAR_ABBR_MAP)
     base = (
         alt.Chart()
         .mark_bar()
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("cost_mwh").title("$/MWh"),
             # column="planning_year"
         )
@@ -2073,7 +2113,7 @@ def chart_cost_mwh(
         alt.Chart()
         .mark_text(dy=-5, fontSize=12)
         .encode(
-            x=alt.X(x_var).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("cost_mwh").title("$/MWh"),
             text=alt.Text("cost_mwh", format=".1f"),
         )
@@ -2089,22 +2129,22 @@ def chart_cost_mwh(
         return chart
     elif row_var is None and col_var is not None:
         chart = chart.facet(
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif col_var is None and row_var is not None:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     else:
         chart = chart.facet(
-            row=alt.Row(row_var)
+            row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column(col_var)
+            column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
         )
