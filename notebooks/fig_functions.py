@@ -1781,8 +1781,18 @@ gdf = gdf.rename(columns={"model_region": "zone"})
 
 
 def chart_tx_map(
-    tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame, facet_col="model"
+    tx_exp: pd.DataFrame,
+    gdf: gpd.GeoDataFrame,
+    facet_col="model",
+    colormap="magma",
+    reverse_colors=True,
+    **kwargs,
 ) -> alt.Chart:
+    geoshape_kwargs = {
+        "stroke": "white",
+        "fill": "silver",
+    }
+    geoshape_kwargs.update(kwargs)
     gdf["lat"] = gdf.geometry.centroid.y
     gdf["lon"] = gdf.geometry.centroid.x
     tx_exp["lat1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lat"])
@@ -1796,10 +1806,7 @@ def chart_tx_map(
     for model in tx_exp[facet_col].unique():
         background = (
             alt.Chart(gdf, title=f"{model}")
-            .mark_geoshape(
-                stroke="white",
-                fill="lightgray",
-            )
+            .mark_geoshape(**geoshape_kwargs)
             .project(type="albersUsa")
             .properties(height=325, width=400)
         )
@@ -1820,7 +1827,7 @@ def chart_tx_map(
                 longitude2="lon2",
                 strokeWidth="sum(value)",
                 color=alt.Color("sum(value):Q")
-                .scale(scheme="plasma", reverse=True)
+                .scale(scheme=colormap, reverse=reverse_colors)
                 .title("Expansion (MW)"),
                 tooltip=[
                     alt.Tooltip("line_name"),
@@ -1831,8 +1838,9 @@ def chart_tx_map(
         )
 
         model_figs.append(background + lines)
+    num_cols = int(len(model_figs) / 2)
     chart = alt.vconcat(
-        alt.hconcat(*model_figs[:2]), alt.hconcat(*model_figs[2:])
+        alt.hconcat(*model_figs[:num_cols]), alt.hconcat(*model_figs[num_cols:])
     ).configure_concat(spacing=-50)
     chart = (
         chart.configure_axis(labelFontSize=15, titleFontSize=15)
@@ -1843,7 +1851,7 @@ def chart_tx_map(
 
 
 def chart_tx_scenario_map(
-    tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame, order=list
+    tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame, order=list, colormap="plasma"
 ) -> alt.Chart:
     gdf["lat"] = gdf.geometry.centroid.y
     gdf["lon"] = gdf.geometry.centroid.x

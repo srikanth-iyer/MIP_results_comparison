@@ -345,14 +345,11 @@ tx_exp_data = (
         as_index=False,
     )["value"]
     .mean()
-    .query("value >= 50").sort_values("case")
+    .query("value >= 50")
+    .sort_values("case")
 )
 
-chart = chart_tx_map(
-    tx_exp_data,
-    gdf,
-    facet_col="case",
-)
+chart = chart_tx_map(tx_exp_data, gdf, facet_col="case")
 chart
 ```
 
