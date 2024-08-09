@@ -255,7 +255,7 @@ region_chart
 ```{python}
 # | title: New-build Capacity by Type
 annual_new_cap_mean = calc_mean_annual_cap(cap)
-chart = chart_avg_new_tech_variation(annual_new_cap_mean)
+chart = chart_avg_new_tech_variation(annual_new_cap_mean, order=order)
 chart
 ```
 

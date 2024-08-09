@@ -595,6 +595,7 @@ def calc_mean_annual_cap(
     by_region: bool = False,
     by_agg_zone: bool = False,
     new_build: bool = True,
+    value_col: str = "end_value",
 ) -> pd.DataFrame:
     idx = pd.IndexSlice
     years = sorted(cap.planning_year.unique(), reverse=True)
@@ -605,28 +606,28 @@ def calc_mean_annual_cap(
         by.append("agg_zone")
     if new_build:
         _cap = cap.query("new_build == True and unit == 'MW'")
-    else:
+    elif "unit" in cap.columns:
         _cap = cap.query("unit == 'MW'")
+    else:
+        _cap = cap.copy()
     idx_cols = ["case", "tech_type", "model"]
     if by_region:
         idx_cols.append("zone")
     if by_agg_zone:
         idx_cols.append("agg_zone")
-    annual_cap = _cap.groupby(by, as_index=False)["end_value"].sum().set_index(idx_cols)
+    annual_cap = _cap.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
     if not new_build:
         return (
             annual_cap.reset_index()
-            .groupby(["case", "planning_year", "tech_type"], as_index=False)[
-                "end_value"
-            ]
+            .groupby(["case", "planning_year", "tech_type"], as_index=False)[value_col]
             .mean()
             .round({"end_value": 1})
         )
     for year, prev_year in zip(years[:-1], years[1:]):
-        annual_cap.loc[
-            annual_cap["planning_year"] == year, "end_value"
-        ] = annual_cap.loc[annual_cap["planning_year"] == year, "end_value"].sub(
-            annual_cap.loc[annual_cap["planning_year"] == prev_year, "end_value"],
+        annual_cap.loc[annual_cap["planning_year"] == year, value_col] = annual_cap.loc[
+            annual_cap["planning_year"] == year, value_col
+        ].sub(
+            annual_cap.loc[annual_cap["planning_year"] == prev_year, value_col],
             fill_value=0,
         )
 
@@ -635,7 +636,7 @@ def calc_mean_annual_cap(
         by.append("zone")
     if by_agg_zone:
         by.append("agg_zone")
-    annual_cap_mean = pd.DataFrame(annual_cap.groupby(by)["end_value"].mean())
+    annual_cap_mean = pd.DataFrame(annual_cap.groupby(by)[value_col].mean())
 
     by = ["case", "tech_type", "model"]
     min_max_by = ["case", "tech_type"]
@@ -646,12 +647,78 @@ def calc_mean_annual_cap(
         by.append("agg_zone")
         min_max_by.append("agg_zone")
     annual_cap_mean.loc[idx[:, :, 2050], "min"] = (
-        annual_cap.groupby(by)["end_value"].sum().groupby(min_max_by).min().values
+        annual_cap.groupby(by)[value_col].sum().groupby(min_max_by).min().values
     )
     annual_cap_mean.loc[idx[:, :, 2050], "max"] = (
-        annual_cap.groupby(by)["end_value"].sum().groupby(min_max_by).max().values
+        annual_cap.groupby(by)[value_col].sum().groupby(min_max_by).max().values
     )
     return annual_cap_mean.round(1)
+
+
+def calc_mean_annual_gen(
+    gen: pd.DataFrame,
+    by_region: bool = False,
+    by_agg_zone: bool = False,
+    new_build: bool = False,
+    value_col: str = "value",
+) -> pd.DataFrame:
+    idx = pd.IndexSlice
+    years = sorted(gen.planning_year.unique(), reverse=True)
+    by = ["case", "tech_type", "model", "planning_year"]
+    if by_region:
+        by.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
+    if new_build:
+        _gen = gen.query("new_build == True")
+    else:
+        _gen = gen.copy()
+    idx_cols = ["case", "tech_type", "model"]
+    if by_region:
+        idx_cols.append("zone")
+    if by_agg_zone:
+        idx_cols.append("agg_zone")
+    annual_gen = _gen.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
+    # if not new_build:
+    by = ["case", "tech_type", "planning_year"]
+    if by_region:
+        by.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
+    avg_gen = pd.DataFrame(
+        annual_gen.reset_index().groupby(by)[value_col].agg(["mean", "min", "max"])
+    ).rename(columns={"mean": "value"})
+    return avg_gen
+    # for year, prev_year in zip(years[:-1], years[1:]):
+    #     annual_gen.loc[annual_gen["planning_year"] == year, value_col] = annual_gen.loc[
+    #         annual_gen["planning_year"] == year, value_col
+    #     ].sub(
+    #         annual_gen.loc[annual_gen["planning_year"] == prev_year, value_col],
+    #         fill_value=0,
+    #     )
+
+    # by = ["case", "tech_type", "planning_year"]
+    # if by_region:
+    #     by.append("zone")
+    # if by_agg_zone:
+    #     by.append("agg_zone")
+    # annual_cap_mean = pd.DataFrame(annual_gen.groupby(by)[value_col].mean())
+
+    # by = ["case", "tech_type", "model", "planning_year"]
+    # min_max_by = ["case", "tech_type", "planning_year"]
+    # if by_region:
+    #     by.append("zone")
+    #     min_max_by.append("zone")
+    # if by_agg_zone:
+    #     by.append("agg_zone")
+    #     min_max_by.append("agg_zone")
+    # annual_cap_mean.loc[idx[:, :, 2050], "min"] = (
+    #     annual_gen.groupby(by)[value_col].sum().groupby(min_max_by).min().values
+    # )
+    # annual_cap_mean.loc[idx[:, :, 2050], "max"] = (
+    #     annual_gen.groupby(by)[value_col].sum().groupby(min_max_by).max().values
+    # )
+    # return annual_cap_mean.round(1)
 
 
 def title_case(s: str) -> str:
@@ -1025,6 +1092,84 @@ def chart_total_gen(
             .header(titleFontSize=20, labelFontSize=15)
         )
 
+    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+        titleFontSize=20, labelFontSize=16
+    )
+    return chart
+
+
+def chart_avg_gen_variation(
+    annual_gen_mean: pd.DataFrame,
+    x_var: str = "tech_type",
+    col_var: str = "case",
+    row_var: str = None,
+    order=None,
+    bars_only=False,
+) -> alt.Chart:
+    data = annual_gen_mean.reset_index()
+    for col in ["value", "min", "max"]:
+        data[col] = (data[col] / 1000000).round(0)
+    tooltips = [
+        alt.Tooltip("y", title="Planning Year"),
+        alt.Tooltip("v", title="Generation (TWh)", format=",.0f"),
+    ]
+    if x_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)))
+    if col_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var], title=title_case(col_var)))
+    if row_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
+    # if bars_only:
+    #     return bars
+
+    bars = (
+        alt.Chart()
+        .mark_bar()
+        .encode(
+            y=alt.Y("sum(v)").title("Generation (TWh)"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            color=alt.Color("tt")
+            .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
+            .title(title_case("tech_type")),
+            tooltip=tooltips,
+        )
+    )
+
+    error_bars = (
+        alt.Chart()
+        .mark_errorbar()
+        .encode(
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            y=alt.Y("sum(max)").title("Generation (TWh)"),
+            y2=alt.Y2("sum(min)"),
+        )
+        .properties(width=175, height=200)
+    )
+    data = data.rename(columns=VAR_ABBR_MAP)
+    chart = alt.layer(bars, error_bars, data=data)
+    if col_var is not None and row_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15),
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
+        )
+    elif col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    elif row_var is not None:
+        chart = chart.facet(
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
+        )
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
