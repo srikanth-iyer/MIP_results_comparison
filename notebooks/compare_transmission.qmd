@@ -356,47 +356,6 @@ chart = chart_tx_map(
 chart
 ```
 
-
-# Transmission view 2
-## Row
-
-#### Column {.tabset}
-
-```{python}
-# | title: GenX
-try:
-    tx_all = pd.concat([starting_tx, tx_exp])
-    chart = chart_tx_expansion(tx_all.query("model=='GenX'"), "case", order=order)
-    chart
-except:
-    pass
-```
-```{python}
-# | title: TEMOA
-try:
-    chart = chart_tx_expansion(tx_all.query("model=='TEMOA'"), "case", order=order)
-    chart
-except:
-    pass
-```
-```{python}
-# | title: SWITCH
-try:
-    chart = chart_tx_expansion(tx_all.query("model=='SWITCH'"), "case", order=order)
-    chart
-except:
-    pass
-```
-```{python}
-# | title: USENSYS
-try:
-    chart = chart_tx_expansion(tx_all.query("model=='USENSYS'"), "case", order=order)
-    chart
-except:
-    pass
-```
-
-
 # Operational Results
 ## Row {.tabset}
 
