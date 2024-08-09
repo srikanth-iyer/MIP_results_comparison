@@ -43,6 +43,8 @@ from fig_functions import (
     chart_op_cost,
     chart_op_nse,
     chart_op_emiss,
+    chart_tx_map,
+    gdf,
 )
 
 data_folders = [
