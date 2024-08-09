@@ -308,16 +308,41 @@ chart
 
 ```{python}
 # | title: Map by case
-chart = chart_tx_map(
+tx_exp_data = (
     tx_exp.groupby(
         ["line_name", "planning_year", "case", "start_region", "dest_region"],
         as_index=False,
-    )["value"].mean(),
+    )["value"]
+    .mean()
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
     gdf,
     facet_col="case",
 )
 chart
 ```
+
+```{python}
+# | title: Map by case, drop lines < 50 MW
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .query("value >= 50").sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
+chart
+```
+
 
 # Transmission view 2
 ## Row
