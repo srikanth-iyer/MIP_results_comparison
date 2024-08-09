@@ -267,6 +267,18 @@ chart = chart_avg_new_tech_variation(
 )
 chart
 ```
+
+```{python}
+# | title: New-build Capacity by Region and Type
+chart = chart_avg_new_tech_variation(
+    region_avg_new_cap,
+    row_var="agg_zone",
+    x_var="case",
+    col_var="tech_type",
+    order=order,
+)
+chart
+```
 # Generation
 
 ```{python}
@@ -314,6 +326,7 @@ tx_exp_data = (
         as_index=False,
     )["value"]
     .mean()
+    .sort_values("case")
 )
 
 chart = chart_tx_map(

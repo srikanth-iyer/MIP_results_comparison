@@ -267,6 +267,17 @@ chart = chart_avg_new_tech_variation(
 chart
 ```
 
+```{python}
+# | title: New-build Capacity by Region and Type
+chart = chart_avg_new_tech_variation(
+    region_avg_new_cap,
+    row_var="agg_zone",
+    x_var="case",
+    col_var="tech_type",
+    order=order,
+)
+chart
+```
 # Generation
 
 ```{python}
@@ -303,6 +314,43 @@ chart = chart_tx_expansion(
 # chart = chart_tx_expansion(
 #     tx_all, x_var="model", facet_col=None, col_var="case", order=order
 # )
+chart
+```
+```{python}
+# | title: Map by case
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
+chart
+```
+
+```{python}
+# | title: Map by case, drop lines < 50 MW
+tx_exp_data = (
+    tx_exp.groupby(
+        ["line_name", "planning_year", "case", "start_region", "dest_region"],
+        as_index=False,
+    )["value"]
+    .mean()
+    .query("value >= 50").sort_values("case")
+)
+
+chart = chart_tx_map(
+    tx_exp_data,
+    gdf,
+    facet_col="case",
+)
 chart
 ```
 
