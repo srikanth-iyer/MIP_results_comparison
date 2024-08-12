@@ -722,7 +722,8 @@ def calc_mean_annual_gen(
 
 
 def title_case(s: str) -> str:
-    return s.replace("_", " ").title()
+    if isinstance(s, str):
+        return s.replace("_", " ").title()
 
 
 VAR_ABBR_MAP = {
@@ -828,6 +829,7 @@ def chart_avg_new_tech_variation(
     col_var: str = "case",
     row_var: str = None,
     order=None,
+    xOffset: str = None,
     bars_only=False,
 ) -> alt.Chart:
     data = annual_new_cap_mean.reset_index()
@@ -864,8 +866,13 @@ def chart_avg_new_tech_variation(
                 sort="ascending",
             ),
             tooltip=tooltips,
+            # xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)),
         )
     )
+    if xOffset:
+        bars.encode(
+            xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)),
+        )
 
     error_bars = (
         alt.Chart()
@@ -1103,8 +1110,12 @@ def chart_avg_gen_variation(
     x_var: str = "tech_type",
     col_var: str = "case",
     row_var: str = None,
+    xOffset: str = None,
+    color: str = "tech_type",
     order=None,
     bars_only=False,
+    height=200,
+    width=alt.Step(20),
 ) -> alt.Chart:
     data = annual_gen_mean.reset_index()
     for col in ["value", "min", "max"]:
@@ -1121,30 +1132,70 @@ def chart_avg_gen_variation(
         tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
     # if bars_only:
     #     return bars
-
-    bars = (
-        alt.Chart()
-        .mark_bar()
-        .encode(
-            y=alt.Y("sum(v)").title("Generation (TWh)"),
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            color=alt.Color("tt")
+    if color == "tech_type":
+        _color = (
+            alt.Color("tt")
             .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
-            .title(title_case("tech_type")),
-            tooltip=tooltips,
+            .title(title_case("tech_type"))
         )
-    )
+    else:
+        _color = alt.Color(VAR_ABBR_MAP.get(color)).title(title_case(color))
+    if xOffset is None:
+        bars = (
+            alt.Chart()
+            .mark_bar()
+            .encode(
+                y=alt.Y("sum(v)").title("Generation (TWh)"),
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+                color=_color,
+                tooltip=tooltips,
+            )
+            .properties(width=width, height=height)
+        )
 
-    error_bars = (
-        alt.Chart()
-        .mark_errorbar()
-        .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(max)").title("Generation (TWh)"),
-            y2=alt.Y2("sum(min)"),
+        error_bars = (
+            alt.Chart()
+            .mark_errorbar()
+            .encode(
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+                y=alt.Y("sum(max)").title("Generation (TWh)"),
+                y2=alt.Y2("sum(min)"),
+            )
+            .properties(width=width, height=height)
         )
-        .properties(width=175, height=200)
-    )
+
+    else:
+        bars = (
+            alt.Chart()
+            .mark_bar()
+            .encode(
+                y=alt.Y("sum(v)").title("Generation (TWh)"),
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+                color=_color,
+                tooltip=tooltips,
+                xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)).title(
+                    title_case(xOffset)
+                ),
+                opacity=alt.Opacity(VAR_ABBR_MAP.get(xOffset)).title(
+                    title_case(xOffset)
+                ),
+            )
+            .properties(width=width, height=height)
+        )
+
+        error_bars = (
+            alt.Chart()
+            .mark_errorbar()
+            .encode(
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+                y=alt.Y("sum(max)").title("Generation (TWh)"),
+                y2=alt.Y2("sum(min)"),
+                xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)).title(
+                    title_case(xOffset)
+                ),
+            )
+            .properties(width=width, height=height)
+        )
     data = data.rename(columns=VAR_ABBR_MAP)
     chart = alt.layer(bars, error_bars, data=data)
     if col_var is not None and row_var is not None:

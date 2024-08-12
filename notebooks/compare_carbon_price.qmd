@@ -288,46 +288,36 @@ chart
 ```
 
 ```{python}
-# | title: Average 2030 generation by region and tech
+# | title: Average generation by year and tech
 from fig_functions import chart_avg_gen_variation, calc_mean_annual_gen
 
-avg_annual_gen = calc_mean_annual_gen(gen, by_agg_zone=True)
+avg_annual_gen = calc_mean_annual_gen(gen, by_agg_zone=False)
 chart = chart_avg_gen_variation(
-    avg_annual_gen.query("planning_year==2030"),
+    avg_annual_gen,
     x_var="case",
     col_var="tech_type",
-    row_var="agg_zone",
-    order=order
+    xOffset="planning_year",
+    order=order,
+    height=125,
+    width=alt.Step(100),
 )
 chart
 ```
 
 ```{python}
-# | title: Average 2040 generation by region and tech
+# | title: Average generation by year, region and tech
 from fig_functions import chart_avg_gen_variation, calc_mean_annual_gen
 
 avg_annual_gen = calc_mean_annual_gen(gen, by_agg_zone=True)
 chart = chart_avg_gen_variation(
-    avg_annual_gen.query("planning_year==2040"),
+    avg_annual_gen,
     x_var="case",
     col_var="tech_type",
     row_var="agg_zone",
-    order=order
-)
-chart
-```
-
-```{python}
-# | title: Average 2050 generation by region and tech
-from fig_functions import chart_avg_gen_variation, calc_mean_annual_gen
-
-avg_annual_gen = calc_mean_annual_gen(gen, by_agg_zone=True)
-chart = chart_avg_gen_variation(
-    avg_annual_gen.query("planning_year==2050"),
-    x_var="case",
-    col_var="tech_type",
-    row_var="agg_zone",
-    order=order
+    xOffset="planning_year",
+    order=order,
+    height=125,
+    width=alt.Step(100),
 )
 chart
 ```
