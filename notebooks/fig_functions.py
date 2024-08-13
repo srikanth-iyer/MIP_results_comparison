@@ -986,9 +986,9 @@ def chart_total_gen(
     if col_var is not None:
         group_by.append(col_var)
         merge_by.append(col_var)
-        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var]).title(title_case(col_var)))
     if row_var is not None:
-        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
         merge_by.append(row_var)
         group_by.append(row_var)
     merge_by = list(set(merge_by))
@@ -1730,11 +1730,11 @@ def single_op_cost_chart(
         _tooltip.append(alt.Tooltip("percent_total:Q", format=".1%"))
         chart_cols.append("percent_total")
     if col_var is not None:
-        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]).title(title_case(col_var)))
         _tooltip.append(alt.Tooltip("Costs"))
         chart_cols.append(VAR_ABBR_MAP[col_var])
     if row_var is not None:
-        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
         chart_cols.append(VAR_ABBR_MAP[row_var])
     data = data.rename(columns=VAR_ABBR_MAP)
     base = (
@@ -1901,10 +1901,10 @@ def chart_op_emiss(
     if op_emiss[color].nunique() > 10:
         color_scale = "tableau20"
     if col_var is not None:
-        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]).title(title_case(col_var)))
         by.append(col_var)
     if row_var is not None:
-        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
+        _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
         by.append(row_var)
 
     by = list(set(by))
@@ -1972,7 +1972,9 @@ def chart_op_emiss(
     return chart
 
 
-gdf = gpd.read_file("conus_26z_latlon_simple.geojson")
+gdf = gpd.read_file(
+    "/Users/gs5183/Documents/MIP_results_comparison/notebooks/conus_26z_latlon_simple.geojson"
+)
 gdf = gdf.rename(columns={"model_region": "zone"})
 
 
@@ -2139,7 +2141,7 @@ def chart_cap_factor_scatter(
         merge_by.append(col_var)
         # _tooltips.append(alt.Tooltip(col_var))
     if row_var is not None:
-        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]))
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
         merge_by.append(row_var)
         group_by.append(row_var)
     merge_by = list(set(merge_by))
