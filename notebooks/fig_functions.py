@@ -401,7 +401,7 @@ def load_genx_operations_data(
 
 
 @lru_cache
-def load_op_vom(period: str, load_base: bool = True) -> pd.DataFrame:
+def load_op_gen_data(period: str, load_base: bool = True) -> pd.DataFrame:
     if load_base:
         path = (
             Path(__file__).parent.parent
@@ -420,8 +420,64 @@ def load_op_vom(period: str, load_base: bool = True) -> pd.DataFrame:
             / f"Inputs_{period}"
             / "Generators_data.csv"
         )
-    vom = pd.read_csv(path, usecols=["Resource", "Var_OM_Cost_per_MWh"])
+    vom = pd.read_csv(
+        path,
+        usecols=[
+            "Resource",
+            "Var_OM_Cost_per_MWh",
+            "Heat_Rate_MMBTU_per_MWh",
+            # "Fixed_OM_Cost_per_MWyr",
+            # "Fixed_OM_Cost_per_MWhyr",
+            # "base_Fixed_OM_Cost_per_MWyr",
+            # "base_Fixed_OM_Cost_per_MWhyr",
+            # "Existing_Cap_MW",
+            # "Existing_Cap_MWh",
+        ],
+    )
+    vom["co2_tonne_mwh"] = 0.0
+    vom.loc[vom["Resource"].str.contains("natural"), "co2_tonne_mwh"] = (
+        vom["Heat_Rate_MMBTU_per_MWh"] * 0.05306
+    )
+    vom.loc[vom["Resource"].str.contains("cc_95_ccs"), "co2_tonne_mwh"] *= 0.05
+    vom.loc[vom["Resource"].str.contains("coal"), "co2_tonne_mwh"] = (
+        vom["Heat_Rate_MMBTU_per_MWh"] * 0.09552
+    )
     return vom
+
+
+def load_op_generators_data(f: Path) -> pd.DataFrame:
+    try:
+        cols = [
+            "Resource",
+            "Fixed_OM_Cost_per_MWyr",
+            "Fixed_OM_Cost_per_MWhyr",
+            "base_Fixed_OM_Cost_per_MWyr",
+            "base_Fixed_OM_Cost_per_MWhyr",
+            "Existing_Cap_MW",
+            "Existing_Cap_MWh",
+        ]
+        df = pd.read_csv(f, usecols=cols)
+        df["fixed_costs"] = (df["Existing_Cap_MW"] * df["Fixed_OM_Cost_per_MWyr"]) + (
+            df["Existing_Cap_MWh"] * df["Fixed_OM_Cost_per_MWhyr"]
+        )
+        df["base_fixed_costs"] = (
+            df["Existing_Cap_MW"] * df["base_Fixed_OM_Cost_per_MWyr"]
+        ) + (df["Existing_Cap_MWh"] * df["base_Fixed_OM_Cost_per_MWhyr"])
+    except ValueError:
+        cols = [
+            "Resource",
+            "Fixed_OM_Cost_per_MWyr",
+            "Fixed_OM_Cost_per_MWhyr",
+            "Existing_Cap_MW",
+            "Existing_Cap_MWh",
+        ]
+        df = pd.read_csv(f, usecols=cols)
+        df["fixed_costs"] = (df["Existing_Cap_MW"] * df["Fixed_OM_Cost_per_MWyr"]) + (
+            df["Existing_Cap_MWh"] * df["Fixed_OM_Cost_per_MWhyr"]
+        )
+        df["base_fixed_costs"] = df["fixed_costs"].copy()
+
+    return df
 
 
 def _load_op_data(
@@ -460,17 +516,29 @@ def _load_op_data(
     model = f.parts[model_part].split("_")[0]
     _df.loc[:, "model"] = model
     if fn == "costs.csv":
+
+        # Need to modify so that model costs are reported, then subsidies are also reported
+        # as their own bars. Can use the difference between base/policy values.
+        fixed_gen_cost = load_op_generators_data(f.parents[1] / "Generators_data.csv")
+
         annual_gen = pd.read_csv(f.parent / "capacityfactor.csv")
-        base_vom = load_op_vom(period_str, load_base=True)
-        current_vom = load_op_vom(period_str, load_base=False)
-        annual_gen_base = pd.merge(annual_gen, base_vom, on="Resource")
+        annual_gen["co2_tonne"] = 0
+        base_gen_data = load_op_gen_data(period_str, load_base=True)
+        current_gen_data = load_op_gen_data(period_str, load_base=False)
+        annual_gen_base = pd.merge(annual_gen, base_gen_data, on="Resource")
         annual_gen_base["var_om"] = (
             annual_gen_base["AnnualSum"] * annual_gen_base["Var_OM_Cost_per_MWh"]
         )
+        annual_gen_base["co2_tonne"] = (
+            annual_gen_base["co2_tonne_mwh"] * annual_gen_base["AnnualSum"]
+        )
         total_vom_base = annual_gen_base["var_om"].sum()
-        annual_gen_current = pd.merge(annual_gen, current_vom, on="Resource")
+        annual_gen_current = pd.merge(annual_gen, current_gen_data, on="Resource")
         annual_gen_current["var_om"] = (
             annual_gen_current["AnnualSum"] * annual_gen_current["Var_OM_Cost_per_MWh"]
+        )
+        annual_gen_current["co2_tonne"] = (
+            annual_gen_current["co2_tonne_mwh"] * annual_gen_current["AnnualSum"]
         )
         total_vom_current = annual_gen_current["var_om"].sum()
         s = pd.DataFrame(
@@ -481,9 +549,44 @@ def _load_op_data(
                 "model": [model],
             }
         )
-        _df = pd.concat([_df, s])
+        if "base-50" in str(f):
+            social_cost = 50
+        elif "base-1000" in str(f):
+            social_cost = 1000
+        else:
+            social_cost = 200
+
+        co2_cost = pd.DataFrame(
+            data={
+                "Costs": ["cCO2"],
+                "Total": [annual_gen_base["co2_tonne"].sum() * social_cost],
+                "planning_year": [period],
+                "model": [model],
+            }
+        )
+        _df = pd.concat([_df, s, co2_cost])
+
+        # Take out unmet policy penalty costs since we are include full social cost of carbon
+        _df = _df.query("Costs != 'cUnmetPolicyPenalty'")
+
         if "current" in str(f) or (_df["Total"] < 0).any():
             _df.loc[_df["Costs"] == "cVar", "Total"] -= total_vom_current
+            policy_cost_ptc = total_vom_base - total_vom_current
+            policy_cost_itc = (
+                fixed_gen_cost["base_fixed_costs"].sum()
+                - fixed_gen_cost["fixed_costs"].sum()
+            )
+            _df.loc[_df["Costs"] == "cFix", "Total"] -= policy_cost_itc
+            s = pd.DataFrame(
+                data={
+                    "Costs": ["cPolicy_PTC", "cPolicy_ITC"],
+                    "Total": [policy_cost_ptc, policy_cost_itc],
+                    "planning_year": [period, period],
+                    "model": [model, model],
+                }
+            )
+            _df = pd.concat([_df, s])
+
         else:
             _df.loc[_df["Costs"] == "cVar", "Total"] -= total_vom_base
 
@@ -595,6 +698,7 @@ def calc_mean_annual_cap(
     by_region: bool = False,
     by_agg_zone: bool = False,
     new_build: bool = True,
+    existing: bool = False,
     value_col: str = "end_value",
 ) -> pd.DataFrame:
     idx = pd.IndexSlice
@@ -606,6 +710,8 @@ def calc_mean_annual_cap(
         by.append("agg_zone")
     if new_build:
         _cap = cap.query("new_build == True and unit == 'MW'")
+    elif existing:
+        _cap = cap.query("new_build == False and unit == 'MW'")
     elif "unit" in cap.columns:
         _cap = cap.query("unit == 'MW'")
     else:
@@ -616,7 +722,7 @@ def calc_mean_annual_cap(
     if by_agg_zone:
         idx_cols.append("agg_zone")
     annual_cap = _cap.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
-    if not new_build:
+    if not new_build and not by_agg_zone:
         return (
             annual_cap.reset_index()
             .groupby(["case", "planning_year", "tech_type"], as_index=False)[value_col]
