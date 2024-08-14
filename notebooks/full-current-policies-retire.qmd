@@ -142,7 +142,26 @@ chart
 chart = chart_regional_gen(gen, cap)
 chart
 ```
+# Retirements
 
+## Row
+
+#### Column {.tabset}
+```{python}
+# | title: Retired Capacity
+from fig_functions import calc_period_retirements, chart_retirements
+retire_cap = calc_period_retirements(cap, by_agg_zone=True, multi_case=False)
+chart = chart_retirements(retire_cap, col_var="tech_type", x_var="model")
+chart
+```
+
+```{python}
+# | title: Retired Regional Capacity
+chart = chart_retirements(
+    retire_cap, col_var="tech_type", x_var="model", row_var="agg_zone"
+)
+chart
+```
 # Capacity Tables
 
 ## Row

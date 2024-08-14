@@ -693,6 +693,72 @@ def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def calc_period_retirements(
+    cap: pd.DataFrame,
+    by_region: bool = False,
+    by_agg_zone: bool = False,
+    multi_case: bool = True,
+) -> pd.DataFrame:
+    idx = pd.IndexSlice
+    start_cap = cap.query(
+        "model == 'GenX' and new_build == False and planning_year==2027"
+    )
+    years = sorted(cap.planning_year.unique())
+    by = ["tech_type", "model", "planning_year"]
+    idx_cols = ["tech_type"]
+    if by_region:
+        by.append("zone")
+        idx_cols.append("zone")
+    if by_agg_zone:
+        by.append("agg_zone")
+        idx_cols.append("agg_zone")
+    if multi_case:
+        by.append("case")
+        idx_cols.append("case")
+
+    exist_cap = (
+        cap.query("new_build == False")
+        .groupby(by, as_index=False)[["start_value", "end_value"]]
+        .sum()
+        .set_index(idx_cols)
+    )
+    start_cap = exist_cap.query("model == 'GenX' and planning_year == 2027").drop(
+        columns="end_value"
+    )  # .set_index("tech_type")
+
+    retire_cap = exist_cap.copy()
+    retire_cap.loc[:, "end_value"] = 0
+    retire_cap = retire_cap  # .set_index("tech_type")
+
+    for model in cap.model.unique():
+        retire_idx = retire_cap["planning_year"] == years[0]
+        exist_start_idx = (exist_cap["planning_year"] == years[0]) & (
+            exist_cap["model"] == "GenX"
+        )
+        exist_end_idx = (exist_cap["planning_year"] == years[0]) & (
+            exist_cap["model"] == model
+        )
+        retire_cap.loc[retire_idx, "end_value"] = (
+            exist_cap.loc[exist_end_idx, "end_value"]
+            - exist_cap.loc[exist_end_idx, "start_value"]
+        )
+
+    idx_cols.append("model")
+    retire_cap = retire_cap.reset_index().set_index(idx_cols)
+    exist_cap = exist_cap.reset_index().set_index(idx_cols)
+    for year, prev_year in zip(years[1:], years[:-1]):
+        retire_cap.loc[
+            retire_cap["planning_year"] == year, "end_value"
+        ] = exist_cap.loc[exist_cap["planning_year"] == year, "end_value"].sub(
+            exist_cap.loc[exist_cap["planning_year"] == prev_year, "end_value"],
+            fill_value=0,
+        )
+
+    return retire_cap.query("tech_type != 'Distributed Solar'").rename(
+        columns={"end_value": "value"}
+    )
+
+
 def calc_mean_annual_cap(
     cap: pd.DataFrame,
     by_region: bool = False,
@@ -992,6 +1058,77 @@ def chart_avg_new_tech_variation(
     )
     data = data.rename(columns=VAR_ABBR_MAP)
     chart = alt.layer(bars, error_bars, data=data)
+    if col_var is not None and row_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15),
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
+        )
+    elif col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order)
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    elif row_var is not None:
+        chart = chart.facet(
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            # .sort(order)
+            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
+        )
+    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+        titleFontSize=20, labelFontSize=16
+    )
+    return chart
+
+
+def chart_retirements(
+    retire_cap: pd.DataFrame,
+    x_var: str = "tech_type",
+    col_var: str = "case",
+    row_var: str = None,
+    order=None,
+) -> alt.Chart:
+    data = retire_cap.reset_index()
+    data["value"] /= 1000
+    tooltips = [
+        alt.Tooltip("y", title="Planning Year"),
+        alt.Tooltip("sum(v)", title="Capacity (GW)", format=",.0f"),
+    ]
+    if x_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)))
+    if col_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var], title=title_case(col_var)))
+    if row_var:
+        tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
+    data = data.rename(columns=VAR_ABBR_MAP)
+    chart = (
+        alt.Chart(data)
+        .mark_bar()
+        .encode(
+            y=alt.Y("sum(v)").title("Capacity (GW)"),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            color=alt.Color("tt")
+            .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
+            .title(title_case("tech_type")),
+            opacity=alt.Opacity("y:O", sort="descending").title(
+                title_case("planning_year")
+            ),
+            order=alt.Order(
+                # Sort the segments of the bars by this field
+                "y",
+                sort="ascending",
+            ),
+            tooltip=tooltips,
+            # xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)),
+        )
+        .properties(height=150, width=150)
+    )
     if col_var is not None and row_var is not None:
         chart = chart.facet(
             column=alt.Column(VAR_ABBR_MAP[col_var])
