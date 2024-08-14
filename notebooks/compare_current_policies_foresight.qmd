@@ -1,5 +1,5 @@
 ---
-title: "Compare foresight and 52-week scenario results"
+title: "Compare current policies foresight and 52-week scenario results"
 format: dashboard
 jupyter: python3
 categories:
@@ -49,9 +49,6 @@ from fig_functions import (
 )
 
 data_folders = [
-    "full-base-200",
-    "20-week-myopic",
-    "20-week-foresight",
     "full-current-policies",
     "20-week-myopic-current-policy",
     "20-week-foresight-current-policy",
