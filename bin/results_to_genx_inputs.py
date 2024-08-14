@@ -133,6 +133,8 @@ def create_operational_genx_inputs(
     results_dict: Dict[str, pd.DataFrame],
     genx_dict: Dict[str, pd.DataFrame],
     co2_slack: int = 200,
+    fixed_om_prefix: str = "",
+    gen_data_only: bool = False,
 ) -> Dict[str, pd.DataFrame]:
 
     if "CO2_cap_slack" in genx_dict.keys():
@@ -153,11 +155,21 @@ def create_operational_genx_inputs(
     genx_dict["Generators_data"]["original_Fixed_OM_Cost_per_MWhyr"] = genx_dict[
         "Generators_data"
     ]["Fixed_OM_Cost_per_MWhyr"]
+
+    # Save base costs (without ITC)
+    if fixed_om_prefix:
+        genx_dict["Generators_data"].loc[
+            :, f"{fixed_om_prefix}Fixed_OM_Cost_per_MWyr"
+        ] = (genx_dict["Generators_data"].loc[:, "Fixed_OM_Cost_per_MWyr"].copy())
+        genx_dict["Generators_data"].loc[
+            :, f"{fixed_om_prefix}Fixed_OM_Cost_per_MWhyr"
+        ] = (genx_dict["Generators_data"].loc[:, "Fixed_OM_Cost_per_MWhyr"].copy())
+
     genx_dict["Generators_data"].loc[
-        new_build_idx, "Fixed_OM_Cost_per_MWyr"
+        new_build_idx, f"{fixed_om_prefix}Fixed_OM_Cost_per_MWyr"
     ] += genx_dict["Generators_data"].loc[new_build_idx, "Inv_Cost_per_MWyr"]
     genx_dict["Generators_data"].loc[
-        new_build_idx, "Fixed_OM_Cost_per_MWhyr"
+        new_build_idx, f"{fixed_om_prefix}Fixed_OM_Cost_per_MWhyr"
     ] += genx_dict["Generators_data"].loc[new_build_idx, "Inv_Cost_per_MWhyr"]
     genx_dict["Generators_data"]["New_Build"] = -1
 
@@ -196,6 +208,9 @@ def create_operational_genx_inputs(
     )
 
     genx_dict["Generators_data"].reset_index(inplace=True)
+
+    if gen_data_only:
+        return genx_dict
 
     # Check/fix transmission line names
     results_dict["tx_exp"]["transmission_path_name"] = fix_tx_line_names(
@@ -241,7 +256,9 @@ def write_genx_operational_files(genx_dict: Dict[str, pd.DataFrame], path: Path)
             df.to_csv(path / f"{name}.csv", index=False)
 
 
-def weighted_avg_annuities(inputs_path: Path, output_path: Path):
+def weighted_avg_annuities(
+    inputs_path: Path, output_path: Path, fixed_om_prefixs: str = [""]
+):
     gen_data = {}
     existing_gen = {}
     new_gen = {}
@@ -265,16 +282,29 @@ def weighted_avg_annuities(inputs_path: Path, output_path: Path):
         assert len(gen_data[period]) == (
             len(existing_gen[period]) + len(new_gen[period])
         )
+
+        fixed_cost_cols = []
+        for prefix in fixed_om_prefixs:
+            fixed_cost_cols.extend(
+                [f"{prefix}Fixed_OM_Cost_per_MWyr", f"{prefix}Fixed_OM_Cost_per_MWhyr"]
+            )
         period_fixed_costs[period] = (
             new_gen[period]
-            .loc[:, ["Fixed_OM_Cost_per_MWyr", "Fixed_OM_Cost_per_MWhyr"]]
+            .loc[
+                :,
+                fixed_cost_cols,
+            ]
             .copy()
         )
 
     for i, p in enumerate(periods):
         for kind in ["MW", "MWh"]:
             new_gen[p] = period_weighted_avg_cost(
-                new_gen, period_fixed_costs, periods[: i + 1], kind=kind
+                new_gen,
+                period_fixed_costs,
+                periods[: i + 1],
+                kind=kind,
+                fixed_om_prefixs=fixed_om_prefixs,
             )
 
     for period in periods:
@@ -293,6 +323,7 @@ def period_weighted_avg_cost(
     period_fixed_costs: Dict[str, pd.DataFrame],
     periods: List[str],
     kind: str,
+    fixed_om_prefixs: List[str] = [""],
 ) -> pd.DataFrame:
     if len(periods) == 1:
         return new_gen[periods[0]]
@@ -316,10 +347,11 @@ def period_weighted_avg_cost(
         .replace(np.inf, 0)
         .replace(-np.inf, 0)
     )
-    new_gen[final_period].loc[:, f"Fixed_OM_Cost_per_{kind}yr"] = (
-        period_fixed_costs[periods[0]][f"Fixed_OM_Cost_per_{kind}yr"]
-        * frac_build[periods[0]]
-    ).astype(int)
+    for prefix in fixed_om_prefixs:
+        new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] = (
+            period_fixed_costs[periods[0]][f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
+            * frac_build[periods[0]]
+        ).astype(int)
 
     # Fraction built and fractional cost from subsequent periods
     for p1, p2 in zip(periods[:-1], periods[1:]):
@@ -333,11 +365,11 @@ def period_weighted_avg_cost(
         frac_build[p2] = (
             (p_build[p2] / total_build).fillna(0).replace(np.inf, 0).replace(-np.inf, 0)
         )
-
-        new_gen[final_period].loc[:, f"Fixed_OM_Cost_per_{kind}yr"] += (
-            period_fixed_costs[p2].loc[:, f"Fixed_OM_Cost_per_{kind}yr"]
-            * frac_build[p2]
-        ).astype(int)
+        for prefix in fixed_om_prefixs:
+            new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] += (
+                period_fixed_costs[p2].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
+                * frac_build[p2]
+            ).astype(int)
 
     return new_gen[final_period]
 
@@ -367,12 +399,40 @@ def main(
     print("Loading model results")
     model_results = load_final_capacity(Path(results_path), year)
     print("Creating operational inputs")
-    operational_inputs = create_operational_genx_inputs(model_results, genx_inputs)
+    operational_inputs = create_operational_genx_inputs(
+        model_results, genx_inputs, fixed_om_prefix=""
+    )
+
+    if "current" in str(results_path):
+        fixed_om_prefix = "base_"
+        base_genx_inputs_path = Path(
+            genx_inputs_path.replace("current_policies", "base")
+        )
+        base_genx_inputs = load_genx_inputs(Path(base_genx_inputs_path))
+        base_operational_inputs = create_operational_genx_inputs(
+            model_results,
+            base_genx_inputs,
+            fixed_om_prefix=fixed_om_prefix,
+            gen_data_only=True,
+        )
+        for col in ["Fixed_OM_Cost_per_MWyr", "Fixed_OM_Cost_per_MWhyr"]:
+            operational_inputs["Generators_data"][f"{fixed_om_prefix}{col}"] = (
+                base_operational_inputs["Generators_data"][
+                    f"{fixed_om_prefix}{col}"
+                ].copy()
+            )
+
     print("Writing operational inputs")
     write_genx_operational_files(operational_inputs, Path(output_path))
 
     if year == 2050:
-        weighted_avg_annuities(Path(genx_inputs_path), Path(output_path))
+        if "current" in str(results_path):
+            fixed_om_prefixs = ["", "base_"]
+        else:
+            fixed_om_prefixs = [""]
+        weighted_avg_annuities(
+            Path(genx_inputs_path), Path(output_path), fixed_om_prefixs=fixed_om_prefixs
+        )
 
 
 if __name__ == "__main__":
