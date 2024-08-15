@@ -1174,8 +1174,8 @@ def chart_regional_cap(
         .mark_bar()
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            y=alt.Y("end_value").title("Capacity (GW)"),
-            color=alt.Color("tech_type").scale(
+            y=alt.Y("ev").title("Capacity (GW)"),
+            color=alt.Color("tt").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
             )
             # .scale(scheme="tableau20")
@@ -1523,9 +1523,9 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
         alt.Chart()
         .mark_bar()
         .encode(
-            x=alt.X("model").title("Model"),
-            y=alt.Y("value").title("Generation (TWh)"),
-            color=alt.Color("tech_type").scale(
+            x=alt.X("m").title("Model"),
+            y=alt.Y("v").title("Generation (TWh)"),
+            color=alt.Color("tt").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
             )
             # .scale(scheme="tableau20")
