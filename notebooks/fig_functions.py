@@ -716,12 +716,22 @@ def calc_period_retirements(
         by.append("case")
         idx_cols.append("case")
 
+    # Create a complete multi-index product of cols because some models
+    # do not report small or zero capacity values. Missing rows mess up the
+    # calculations and figures.
+    midx = pd.MultiIndex.from_product([cap[c].unique() for c in by], names=by)
     exist_cap = (
-        cap.query("new_build == False")
-        .groupby(by, as_index=False)[["start_value", "end_value"]]
-        .sum()
+        (
+            cap.query("new_build == False")
+            .groupby(by)[["start_value", "end_value"]]
+            .sum()
+            # .set_index(idx_cols)
+        )
+        .reindex(midx, fill_value=0)
+        .reset_index()
         .set_index(idx_cols)
     )
+
     start_cap = exist_cap.query("model == 'GenX' and planning_year == 2027").drop(
         columns="end_value"
     )  # .set_index("tech_type")
@@ -740,7 +750,7 @@ def calc_period_retirements(
         )
         retire_cap.loc[retire_idx, "end_value"] = (
             exist_cap.loc[exist_end_idx, "end_value"]
-            - exist_cap.loc[exist_end_idx, "start_value"]
+            - exist_cap.loc[exist_start_idx, "start_value"]
         )
 
     idx_cols.append("model")
