@@ -33,7 +33,16 @@ settings_management:
           - [UtilityPV, Class1, Moderate, 1]
           - [Battery, "*", Moderate, 1]
           - [Nuclear, Nuclear, Moderate, 2000]
-
+    misc_file:
+      ramp:
+        switch_module_list: modules_MIP_commit.txt
+      no_ramp:
+        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
+    alternative_carbon_slack:
+      none:
+        alternative_carbon_slack: []
+      "50_1000":
+        alternative_carbon_slack: [50, 1000]
     # tags below shouldn't cause any change from the default settings, but we
     # add empty keys to avoid warnings about them
     existing_clusters:
@@ -1130,7 +1139,7 @@ settings_management:
             capex_mwh: [mul, 0.63]
           nuclear:
             capex_mw: [mul, 0.63]
-      
+
       no: ~
     policies:
       yes: ~
@@ -1162,9 +1171,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
@@ -1424,9 +1430,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
@@ -1752,9 +1755,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
@@ -2076,9 +2076,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
@@ -2406,9 +2403,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
@@ -2726,9 +2720,6 @@ settings_management:
         carbon_cost_dollar_per_tco2: 200
       high:
         carbon_cost_dollar_per_tco2: 10000
-    misc_file:
-      no_ramp:
-        misc_gen_inputs_fn: conus_misc_gen_inputs_no_ramp.csv
     wacc:
       standardize_5:
         atb_modifiers:
