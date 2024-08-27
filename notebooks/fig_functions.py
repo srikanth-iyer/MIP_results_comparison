@@ -779,7 +779,7 @@ def calc_mean_annual_cap(
 ) -> pd.DataFrame:
     idx = pd.IndexSlice
     years = sorted(cap.planning_year.unique(), reverse=True)
-    by = ["case", "tech_type", "model", "planning_year"]
+    by = ["case", "tech_type", "planning_year"]
     if by_region:
         by.append("zone")
     if by_agg_zone:
@@ -792,12 +792,33 @@ def calc_mean_annual_cap(
         _cap = cap.query("unit == 'MW'")
     else:
         _cap = cap.copy()
-    idx_cols = ["case", "tech_type", "model"]
+    idx_cols = ["case", "tech_type"]
     if by_region:
         idx_cols.append("zone")
     if by_agg_zone:
         idx_cols.append("agg_zone")
-    annual_cap = _cap.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
+
+    df_list = []
+
+    # Need to make sure that all techs are in all regions for cases submitted by each
+    # model. Reindexing across all models screws up the min/max error bars when a model
+    # has not submitted a case because the minimum becomes 0.
+    for model in cap.model.unique():
+        _model_cap = _cap.query("model==@model")
+        midx = pd.MultiIndex.from_product(
+            [_model_cap[c].unique() for c in by], names=by
+        )
+        _annual_cap = (
+            _model_cap.query("model==@model")
+            .groupby(by)[value_col]
+            .sum()
+            .reindex(midx)  # , fill_value=0)
+            .reset_index()
+            .set_index(idx_cols)
+        )
+        _annual_cap["model"] = model
+        df_list.append(_annual_cap)
+    annual_cap = pd.concat(df_list)
     if not new_build and not by_agg_zone:
         return (
             annual_cap.reset_index()
