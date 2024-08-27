@@ -1623,7 +1623,7 @@ def chart_tx_expansion(
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("sum(v)").title("Transmission (GW)"),
             color=alt.Color("m:N").title(title_case("model")),
             opacity=alt.Opacity("y:O", sort="descending").title(
