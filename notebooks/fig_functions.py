@@ -826,6 +826,15 @@ def calc_mean_annual_cap(
             .mean()
             .round({"end_value": 1})
         )
+    elif not new_build and by_agg_zone:
+        return (
+            annual_cap.reset_index()
+            .groupby(
+                ["case", "planning_year", "tech_type", "agg_zone"], as_index=False
+            )[value_col]
+            .mean()
+            .round({"end_value": 1})
+        )
     for year, prev_year in zip(years[:-1], years[1:]):
         annual_cap.loc[annual_cap["planning_year"] == year, value_col] = annual_cap.loc[
             annual_cap["planning_year"] == year, value_col
