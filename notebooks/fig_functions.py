@@ -1644,7 +1644,7 @@ def chart_tx_expansion(
 
     if x_var == "case":
         _tooltip.append(
-            alt.Tooltip("c"),
+            alt.Tooltip("c").title("Case"),
         )
     data["value"] /= 1000
     data = data.rename(columns=VAR_ABBR_MAP)
