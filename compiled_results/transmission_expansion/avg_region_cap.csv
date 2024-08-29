@@ -1,0 +1,2305 @@
+case,planning_year,tech_type,agg_zone,end_value
+full-base-200,2027,Battery,CA,11550.5
+full-base-200,2027,Battery,MISO,200.8
+full-base-200,2027,Battery,NE,562.5
+full-base-200,2027,Battery,PJM,319.8
+full-base-200,2027,Battery,SOU,866.5
+full-base-200,2027,Battery,SPP,227.0
+full-base-200,2027,Battery,TRE,4699.0
+full-base-200,2027,Battery,WECC,3385.0
+full-base-200,2027,CCS,CA,0.0
+full-base-200,2027,CCS,MISO,0.0
+full-base-200,2027,CCS,NE,
+full-base-200,2027,CCS,PJM,0.0
+full-base-200,2027,CCS,SOU,0.0
+full-base-200,2027,CCS,SPP,0.0
+full-base-200,2027,CCS,TRE,0.0
+full-base-200,2027,CCS,WECC,0.0
+full-base-200,2027,Coal,CA,0.0
+full-base-200,2027,Coal,MISO,47060.5
+full-base-200,2027,Coal,NE,330.0
+full-base-200,2027,Coal,PJM,32620.2
+full-base-200,2027,Coal,SOU,27707.8
+full-base-200,2027,Coal,SPP,19924.8
+full-base-200,2027,Coal,TRE,12947.2
+full-base-200,2027,Coal,WECC,16354.0
+full-base-200,2027,Distributed Solar,CA,11430.5
+full-base-200,2027,Distributed Solar,MISO,5247.0
+full-base-200,2027,Distributed Solar,NE,5987.0
+full-base-200,2027,Distributed Solar,PJM,9884.5
+full-base-200,2027,Distributed Solar,SOU,5463.5
+full-base-200,2027,Distributed Solar,SPP,1242.0
+full-base-200,2027,Distributed Solar,TRE,2996.5
+full-base-200,2027,Distributed Solar,WECC,5470.0
+full-base-200,2027,Geothermal,CA,24.0
+full-base-200,2027,Geothermal,MISO,
+full-base-200,2027,Geothermal,NE,
+full-base-200,2027,Geothermal,PJM,
+full-base-200,2027,Geothermal,SOU,
+full-base-200,2027,Geothermal,SPP,
+full-base-200,2027,Geothermal,TRE,
+full-base-200,2027,Geothermal,WECC,689.2
+full-base-200,2027,Hydro,CA,12381.8
+full-base-200,2027,Hydro,MISO,10569.2
+full-base-200,2027,Hydro,NE,8269.2
+full-base-200,2027,Hydro,PJM,8031.2
+full-base-200,2027,Hydro,SOU,10017.2
+full-base-200,2027,Hydro,SPP,5143.5
+full-base-200,2027,Hydro,TRE,497.0
+full-base-200,2027,Hydro,WECC,39597.0
+full-base-200,2027,Hydrogen,CA,0.0
+full-base-200,2027,Hydrogen,MISO,0.0
+full-base-200,2027,Hydrogen,NE,1.0
+full-base-200,2027,Hydrogen,PJM,0.0
+full-base-200,2027,Hydrogen,SOU,0.0
+full-base-200,2027,Hydrogen,SPP,0.0
+full-base-200,2027,Hydrogen,TRE,0.0
+full-base-200,2027,Hydrogen,WECC,0.0
+full-base-200,2027,Natural Gas CC,CA,20984.5
+full-base-200,2027,Natural Gas CC,MISO,51504.0
+full-base-200,2027,Natural Gas CC,NE,28030.2
+full-base-200,2027,Natural Gas CC,PJM,59221.5
+full-base-200,2027,Natural Gas CC,SOU,64488.5
+full-base-200,2027,Natural Gas CC,SPP,11494.0
+full-base-200,2027,Natural Gas CC,TRE,41427.8
+full-base-200,2027,Natural Gas CC,WECC,30819.5
+full-base-200,2027,Natural Gas CT,CA,11093.2
+full-base-200,2027,Natural Gas CT,MISO,32944.0
+full-base-200,2027,Natural Gas CT,NE,3929.2
+full-base-200,2027,Natural Gas CT,PJM,29858.2
+full-base-200,2027,Natural Gas CT,SOU,32012.8
+full-base-200,2027,Natural Gas CT,SPP,9916.0
+full-base-200,2027,Natural Gas CT,TRE,10282.8
+full-base-200,2027,Natural Gas CT,WECC,10189.5
+full-base-200,2027,Nuclear,CA,0.0
+full-base-200,2027,Nuclear,MISO,20289.2
+full-base-200,2027,Nuclear,NE,6705.8
+full-base-200,2027,Nuclear,PJM,33761.0
+full-base-200,2027,Nuclear,SOU,23924.0
+full-base-200,2027,Nuclear,SPP,2019.8
+full-base-200,2027,Nuclear,TRE,5120.0
+full-base-200,2027,Nuclear,WECC,5172.0
+full-base-200,2027,Solar,CA,20130.5
+full-base-200,2027,Solar,MISO,12387.2
+full-base-200,2027,Solar,NE,4582.0
+full-base-200,2027,Solar,PJM,11461.5
+full-base-200,2027,Solar,SOU,24596.8
+full-base-200,2027,Solar,SPP,567.2
+full-base-200,2027,Solar,TRE,22379.0
+full-base-200,2027,Solar,WECC,19640.8
+full-base-200,2027,Wind,CA,5498.2
+full-base-200,2027,Wind,MISO,77561.5
+full-base-200,2027,Wind,NE,7133.8
+full-base-200,2027,Wind,PJM,21137.0
+full-base-200,2027,Wind,SOU,1448.2
+full-base-200,2027,Wind,SPP,49704.2
+full-base-200,2027,Wind,TRE,56900.5
+full-base-200,2027,Wind,WECC,53377.2
+full-base-200,2030,Battery,CA,11554.2
+full-base-200,2030,Battery,MISO,228.2
+full-base-200,2030,Battery,NE,577.0
+full-base-200,2030,Battery,PJM,224.8
+full-base-200,2030,Battery,SOU,881.5
+full-base-200,2030,Battery,SPP,245.0
+full-base-200,2030,Battery,TRE,4710.8
+full-base-200,2030,Battery,WECC,3402.2
+full-base-200,2030,CCS,CA,5645.8
+full-base-200,2030,CCS,MISO,13260.8
+full-base-200,2030,CCS,NE,
+full-base-200,2030,CCS,PJM,18738.5
+full-base-200,2030,CCS,SOU,28501.5
+full-base-200,2030,CCS,SPP,63.0
+full-base-200,2030,CCS,TRE,8519.5
+full-base-200,2030,CCS,WECC,46.0
+full-base-200,2030,Coal,CA,0.0
+full-base-200,2030,Coal,MISO,42624.8
+full-base-200,2030,Coal,NE,329.2
+full-base-200,2030,Coal,PJM,28364.8
+full-base-200,2030,Coal,SOU,26560.8
+full-base-200,2030,Coal,SPP,18690.0
+full-base-200,2030,Coal,TRE,10704.0
+full-base-200,2030,Coal,WECC,14828.8
+full-base-200,2030,Distributed Solar,CA,13601.5
+full-base-200,2030,Distributed Solar,MISO,9889.0
+full-base-200,2030,Distributed Solar,NE,7471.0
+full-base-200,2030,Distributed Solar,PJM,15935.5
+full-base-200,2030,Distributed Solar,SOU,9721.8
+full-base-200,2030,Distributed Solar,SPP,2341.0
+full-base-200,2030,Distributed Solar,TRE,5818.5
+full-base-200,2030,Distributed Solar,WECC,7745.5
+full-base-200,2030,Geothermal,CA,24.0
+full-base-200,2030,Geothermal,MISO,
+full-base-200,2030,Geothermal,NE,
+full-base-200,2030,Geothermal,PJM,
+full-base-200,2030,Geothermal,SOU,
+full-base-200,2030,Geothermal,SPP,
+full-base-200,2030,Geothermal,TRE,
+full-base-200,2030,Geothermal,WECC,630.0
+full-base-200,2030,Hydro,CA,12141.2
+full-base-200,2030,Hydro,MISO,10320.0
+full-base-200,2030,Hydro,NE,7844.5
+full-base-200,2030,Hydro,PJM,7699.5
+full-base-200,2030,Hydro,SOU,9472.8
+full-base-200,2030,Hydro,SPP,5143.5
+full-base-200,2030,Hydro,TRE,497.0
+full-base-200,2030,Hydro,WECC,39382.2
+full-base-200,2030,Hydrogen,CA,21.0
+full-base-200,2030,Hydrogen,MISO,59.0
+full-base-200,2030,Hydrogen,NE,39.0
+full-base-200,2030,Hydrogen,PJM,44.0
+full-base-200,2030,Hydrogen,SOU,36.0
+full-base-200,2030,Hydrogen,SPP,36.0
+full-base-200,2030,Hydrogen,TRE,26.0
+full-base-200,2030,Hydrogen,WECC,49.0
+full-base-200,2030,Natural Gas CC,CA,20967.5
+full-base-200,2030,Natural Gas CC,MISO,51161.8
+full-base-200,2030,Natural Gas CC,NE,29043.2
+full-base-200,2030,Natural Gas CC,PJM,59231.2
+full-base-200,2030,Natural Gas CC,SOU,63237.8
+full-base-200,2030,Natural Gas CC,SPP,11501.0
+full-base-200,2030,Natural Gas CC,TRE,41353.8
+full-base-200,2030,Natural Gas CC,WECC,30736.2
+full-base-200,2030,Natural Gas CT,CA,11090.0
+full-base-200,2030,Natural Gas CT,MISO,32256.2
+full-base-200,2030,Natural Gas CT,NE,3934.2
+full-base-200,2030,Natural Gas CT,PJM,29863.2
+full-base-200,2030,Natural Gas CT,SOU,31888.2
+full-base-200,2030,Natural Gas CT,SPP,9729.2
+full-base-200,2030,Natural Gas CT,TRE,10220.0
+full-base-200,2030,Natural Gas CT,WECC,10059.2
+full-base-200,2030,Nuclear,CA,4.0
+full-base-200,2030,Nuclear,MISO,20292.5
+full-base-200,2030,Nuclear,NE,6707.8
+full-base-200,2030,Nuclear,PJM,33763.8
+full-base-200,2030,Nuclear,SOU,23926.5
+full-base-200,2030,Nuclear,SPP,2021.8
+full-base-200,2030,Nuclear,TRE,5121.5
+full-base-200,2030,Nuclear,WECC,5174.2
+full-base-200,2030,Solar,CA,39979.0
+full-base-200,2030,Solar,MISO,70432.5
+full-base-200,2030,Solar,NE,14996.2
+full-base-200,2030,Solar,PJM,74417.8
+full-base-200,2030,Solar,SOU,77139.8
+full-base-200,2030,Solar,SPP,13014.0
+full-base-200,2030,Solar,TRE,31403.5
+full-base-200,2030,Solar,WECC,42165.0
+full-base-200,2030,Wind,CA,6365.0
+full-base-200,2030,Wind,MISO,132758.5
+full-base-200,2030,Wind,NE,32936.5
+full-base-200,2030,Wind,PJM,41164.0
+full-base-200,2030,Wind,SOU,25362.5
+full-base-200,2030,Wind,SPP,96844.0
+full-base-200,2030,Wind,TRE,83886.2
+full-base-200,2030,Wind,WECC,95623.2
+full-base-200,2035,Battery,CA,11094.0
+full-base-200,2035,Battery,MISO,208.5
+full-base-200,2035,Battery,NE,3310.2
+full-base-200,2035,Battery,PJM,170.5
+full-base-200,2035,Battery,SOU,844.5
+full-base-200,2035,Battery,SPP,233.0
+full-base-200,2035,Battery,TRE,4542.5
+full-base-200,2035,Battery,WECC,3343.0
+full-base-200,2035,CCS,CA,17788.8
+full-base-200,2035,CCS,MISO,44476.5
+full-base-200,2035,CCS,NE,
+full-base-200,2035,CCS,PJM,46404.8
+full-base-200,2035,CCS,SOU,47465.0
+full-base-200,2035,CCS,SPP,46.7
+full-base-200,2035,CCS,TRE,20927.2
+full-base-200,2035,CCS,WECC,553.7
+full-base-200,2035,Coal,CA,0.0
+full-base-200,2035,Coal,MISO,37354.5
+full-base-200,2035,Coal,NE,0.0
+full-base-200,2035,Coal,PJM,21701.8
+full-base-200,2035,Coal,SOU,22442.8
+full-base-200,2035,Coal,SPP,17743.5
+full-base-200,2035,Coal,TRE,10704.0
+full-base-200,2035,Coal,WECC,12112.5
+full-base-200,2035,Distributed Solar,CA,15741.0
+full-base-200,2035,Distributed Solar,MISO,16446.5
+full-base-200,2035,Distributed Solar,NE,8693.0
+full-base-200,2035,Distributed Solar,PJM,20116.0
+full-base-200,2035,Distributed Solar,SOU,13536.5
+full-base-200,2035,Distributed Solar,SPP,3750.0
+full-base-200,2035,Distributed Solar,TRE,8597.0
+full-base-200,2035,Distributed Solar,WECC,9887.0
+full-base-200,2035,Geothermal,CA,24.0
+full-base-200,2035,Geothermal,MISO,
+full-base-200,2035,Geothermal,NE,
+full-base-200,2035,Geothermal,PJM,
+full-base-200,2035,Geothermal,SOU,
+full-base-200,2035,Geothermal,SPP,
+full-base-200,2035,Geothermal,TRE,
+full-base-200,2035,Geothermal,WECC,598.5
+full-base-200,2035,Hydro,CA,12056.5
+full-base-200,2035,Hydro,MISO,10038.5
+full-base-200,2035,Hydro,NE,7790.2
+full-base-200,2035,Hydro,PJM,7480.0
+full-base-200,2035,Hydro,SOU,9395.0
+full-base-200,2035,Hydro,SPP,5127.5
+full-base-200,2035,Hydro,TRE,491.5
+full-base-200,2035,Hydro,WECC,39202.0
+full-base-200,2035,Hydrogen,CA,5.5
+full-base-200,2035,Hydrogen,MISO,11.0
+full-base-200,2035,Hydrogen,NE,21.7
+full-base-200,2035,Hydrogen,PJM,10.5
+full-base-200,2035,Hydrogen,SOU,5.0
+full-base-200,2035,Hydrogen,SPP,6.0
+full-base-200,2035,Hydrogen,TRE,4.0
+full-base-200,2035,Hydrogen,WECC,10.5
+full-base-200,2035,Natural Gas CC,CA,20966.5
+full-base-200,2035,Natural Gas CC,MISO,50819.8
+full-base-200,2035,Natural Gas CC,NE,37669.0
+full-base-200,2035,Natural Gas CC,PJM,58634.5
+full-base-200,2035,Natural Gas CC,SOU,62053.0
+full-base-200,2035,Natural Gas CC,SPP,11211.0
+full-base-200,2035,Natural Gas CC,TRE,40030.2
+full-base-200,2035,Natural Gas CC,WECC,29618.0
+full-base-200,2035,Natural Gas CT,CA,10555.2
+full-base-200,2035,Natural Gas CT,MISO,31446.2
+full-base-200,2035,Natural Gas CT,NE,3938.5
+full-base-200,2035,Natural Gas CT,PJM,29811.5
+full-base-200,2035,Natural Gas CT,SOU,31881.0
+full-base-200,2035,Natural Gas CT,SPP,9392.0
+full-base-200,2035,Natural Gas CT,TRE,9934.2
+full-base-200,2035,Natural Gas CT,WECC,9314.2
+full-base-200,2035,Nuclear,CA,2.0
+full-base-200,2035,Nuclear,MISO,20292.5
+full-base-200,2035,Nuclear,NE,6707.5
+full-base-200,2035,Nuclear,PJM,33763.8
+full-base-200,2035,Nuclear,SOU,23926.5
+full-base-200,2035,Nuclear,SPP,2022.0
+full-base-200,2035,Nuclear,TRE,5121.5
+full-base-200,2035,Nuclear,WECC,5174.5
+full-base-200,2035,Solar,CA,49122.2
+full-base-200,2035,Solar,MISO,91533.2
+full-base-200,2035,Solar,NE,23118.8
+full-base-200,2035,Solar,PJM,104122.0
+full-base-200,2035,Solar,SOU,102680.5
+full-base-200,2035,Solar,SPP,25127.5
+full-base-200,2035,Solar,TRE,44411.8
+full-base-200,2035,Solar,WECC,66707.0
+full-base-200,2035,Wind,CA,6379.5
+full-base-200,2035,Wind,MISO,139110.8
+full-base-200,2035,Wind,NE,41829.5
+full-base-200,2035,Wind,PJM,44689.5
+full-base-200,2035,Wind,SOU,27565.2
+full-base-200,2035,Wind,SPP,109282.8
+full-base-200,2035,Wind,TRE,92176.8
+full-base-200,2035,Wind,WECC,120121.8
+full-base-200,2040,Battery,CA,1531.5
+full-base-200,2040,Battery,MISO,180.7
+full-base-200,2040,Battery,NE,10828.8
+full-base-200,2040,Battery,PJM,2176.8
+full-base-200,2040,Battery,SOU,143.7
+full-base-200,2040,Battery,SPP,98.0
+full-base-200,2040,Battery,TRE,59.7
+full-base-200,2040,Battery,WECC,1794.0
+full-base-200,2040,CCS,CA,26610.8
+full-base-200,2040,CCS,MISO,58569.2
+full-base-200,2040,CCS,NE,
+full-base-200,2040,CCS,PJM,61230.8
+full-base-200,2040,CCS,SOU,56916.5
+full-base-200,2040,CCS,SPP,74.0
+full-base-200,2040,CCS,TRE,26464.2
+full-base-200,2040,CCS,WECC,6385.5
+full-base-200,2040,Coal,CA,0.0
+full-base-200,2040,Coal,MISO,27607.5
+full-base-200,2040,Coal,NE,0.0
+full-base-200,2040,Coal,PJM,8107.5
+full-base-200,2040,Coal,SOU,12969.5
+full-base-200,2040,Coal,SPP,14090.8
+full-base-200,2040,Coal,TRE,10704.0
+full-base-200,2040,Coal,WECC,8728.0
+full-base-200,2040,Distributed Solar,CA,16402.5
+full-base-200,2040,Distributed Solar,MISO,18451.2
+full-base-200,2040,Distributed Solar,NE,8821.8
+full-base-200,2040,Distributed Solar,PJM,20874.5
+full-base-200,2040,Distributed Solar,SOU,14990.5
+full-base-200,2040,Distributed Solar,SPP,4436.8
+full-base-200,2040,Distributed Solar,TRE,8863.8
+full-base-200,2040,Distributed Solar,WECC,10178.0
+full-base-200,2040,Geothermal,CA,24.0
+full-base-200,2040,Geothermal,MISO,
+full-base-200,2040,Geothermal,NE,
+full-base-200,2040,Geothermal,PJM,
+full-base-200,2040,Geothermal,SOU,
+full-base-200,2040,Geothermal,SPP,
+full-base-200,2040,Geothermal,TRE,
+full-base-200,2040,Geothermal,WECC,372.0
+full-base-200,2040,Hydro,CA,12053.5
+full-base-200,2040,Hydro,MISO,9436.5
+full-base-200,2040,Hydro,NE,7719.8
+full-base-200,2040,Hydro,PJM,7219.5
+full-base-200,2040,Hydro,SOU,9394.2
+full-base-200,2040,Hydro,SPP,4997.2
+full-base-200,2040,Hydro,TRE,446.0
+full-base-200,2040,Hydro,WECC,37658.5
+full-base-200,2040,Hydrogen,CA,5.5
+full-base-200,2040,Hydrogen,MISO,12.0
+full-base-200,2040,Hydrogen,NE,31.3
+full-base-200,2040,Hydrogen,PJM,12.0
+full-base-200,2040,Hydrogen,SOU,7.0
+full-base-200,2040,Hydrogen,SPP,7.5
+full-base-200,2040,Hydrogen,TRE,4.5
+full-base-200,2040,Hydrogen,WECC,13.0
+full-base-200,2040,Natural Gas CC,CA,20848.8
+full-base-200,2040,Natural Gas CC,MISO,50797.8
+full-base-200,2040,Natural Gas CC,NE,39956.2
+full-base-200,2040,Natural Gas CC,PJM,58634.2
+full-base-200,2040,Natural Gas CC,SOU,61476.5
+full-base-200,2040,Natural Gas CC,SPP,10929.8
+full-base-200,2040,Natural Gas CC,TRE,39377.0
+full-base-200,2040,Natural Gas CC,WECC,28861.2
+full-base-200,2040,Natural Gas CT,CA,8896.8
+full-base-200,2040,Natural Gas CT,MISO,30808.0
+full-base-200,2040,Natural Gas CT,NE,4590.0
+full-base-200,2040,Natural Gas CT,PJM,28697.2
+full-base-200,2040,Natural Gas CT,SOU,31647.0
+full-base-200,2040,Natural Gas CT,SPP,9004.0
+full-base-200,2040,Natural Gas CT,TRE,8011.2
+full-base-200,2040,Natural Gas CT,WECC,9228.5
+full-base-200,2040,Nuclear,CA,2.5
+full-base-200,2040,Nuclear,MISO,20293.0
+full-base-200,2040,Nuclear,NE,6707.5
+full-base-200,2040,Nuclear,PJM,33763.8
+full-base-200,2040,Nuclear,SOU,23926.5
+full-base-200,2040,Nuclear,SPP,2022.0
+full-base-200,2040,Nuclear,TRE,5121.5
+full-base-200,2040,Nuclear,WECC,5174.8
+full-base-200,2040,Solar,CA,53193.0
+full-base-200,2040,Solar,MISO,113161.5
+full-base-200,2040,Solar,NE,35643.5
+full-base-200,2040,Solar,PJM,122031.2
+full-base-200,2040,Solar,SOU,123213.5
+full-base-200,2040,Solar,SPP,28332.8
+full-base-200,2040,Solar,TRE,51379.0
+full-base-200,2040,Solar,WECC,89022.5
+full-base-200,2040,Wind,CA,6098.5
+full-base-200,2040,Wind,MISO,145115.0
+full-base-200,2040,Wind,NE,45355.2
+full-base-200,2040,Wind,PJM,41459.0
+full-base-200,2040,Wind,SOU,33061.5
+full-base-200,2040,Wind,SPP,117277.2
+full-base-200,2040,Wind,TRE,95889.2
+full-base-200,2040,Wind,WECC,129282.8
+full-base-200,2045,Battery,CA,4815.8
+full-base-200,2045,Battery,MISO,2736.5
+full-base-200,2045,Battery,NE,15957.0
+full-base-200,2045,Battery,PJM,10192.5
+full-base-200,2045,Battery,SOU,1020.7
+full-base-200,2045,Battery,SPP,163.3
+full-base-200,2045,Battery,TRE,112.7
+full-base-200,2045,Battery,WECC,13401.8
+full-base-200,2045,CCS,CA,34026.2
+full-base-200,2045,CCS,MISO,75683.8
+full-base-200,2045,CCS,NE,
+full-base-200,2045,CCS,PJM,72552.8
+full-base-200,2045,CCS,SOU,68016.0
+full-base-200,2045,CCS,SPP,88.7
+full-base-200,2045,CCS,TRE,30497.2
+full-base-200,2045,CCS,WECC,11344.8
+full-base-200,2045,Coal,CA,0.0
+full-base-200,2045,Coal,MISO,18738.2
+full-base-200,2045,Coal,NE,0.0
+full-base-200,2045,Coal,PJM,6512.5
+full-base-200,2045,Coal,SOU,11574.2
+full-base-200,2045,Coal,SPP,7823.2
+full-base-200,2045,Coal,TRE,5163.0
+full-base-200,2045,Coal,WECC,7378.2
+full-base-200,2045,Distributed Solar,CA,16591.8
+full-base-200,2045,Distributed Solar,MISO,20069.5
+full-base-200,2045,Distributed Solar,NE,9366.5
+full-base-200,2045,Distributed Solar,PJM,21883.8
+full-base-200,2045,Distributed Solar,SOU,15615.8
+full-base-200,2045,Distributed Solar,SPP,5220.2
+full-base-200,2045,Distributed Solar,TRE,8972.2
+full-base-200,2045,Distributed Solar,WECC,10364.8
+full-base-200,2045,Geothermal,CA,24.0
+full-base-200,2045,Geothermal,MISO,
+full-base-200,2045,Geothermal,NE,
+full-base-200,2045,Geothermal,PJM,
+full-base-200,2045,Geothermal,SOU,
+full-base-200,2045,Geothermal,SPP,
+full-base-200,2045,Geothermal,TRE,
+full-base-200,2045,Geothermal,WECC,195.5
+full-base-200,2045,Hydro,CA,11594.5
+full-base-200,2045,Hydro,MISO,8269.5
+full-base-200,2045,Hydro,NE,7711.0
+full-base-200,2045,Hydro,PJM,7219.0
+full-base-200,2045,Hydro,SOU,9204.5
+full-base-200,2045,Hydro,SPP,4874.2
+full-base-200,2045,Hydro,TRE,288.5
+full-base-200,2045,Hydro,WECC,35564.0
+full-base-200,2045,Hydrogen,CA,6.5
+full-base-200,2045,Hydrogen,MISO,13.5
+full-base-200,2045,Hydrogen,NE,37.3
+full-base-200,2045,Hydrogen,PJM,13.5
+full-base-200,2045,Hydrogen,SOU,7.0
+full-base-200,2045,Hydrogen,SPP,8.0
+full-base-200,2045,Hydrogen,TRE,5.0
+full-base-200,2045,Hydrogen,WECC,14.0
+full-base-200,2045,Natural Gas CC,CA,20848.8
+full-base-200,2045,Natural Gas CC,MISO,50760.0
+full-base-200,2045,Natural Gas CC,NE,41209.8
+full-base-200,2045,Natural Gas CC,PJM,58563.2
+full-base-200,2045,Natural Gas CC,SOU,61476.5
+full-base-200,2045,Natural Gas CC,SPP,10929.8
+full-base-200,2045,Natural Gas CC,TRE,38073.0
+full-base-200,2045,Natural Gas CC,WECC,28360.2
+full-base-200,2045,Natural Gas CT,CA,8456.0
+full-base-200,2045,Natural Gas CT,MISO,28427.8
+full-base-200,2045,Natural Gas CT,NE,4514.8
+full-base-200,2045,Natural Gas CT,PJM,26180.0
+full-base-200,2045,Natural Gas CT,SOU,27330.5
+full-base-200,2045,Natural Gas CT,SPP,8820.2
+full-base-200,2045,Natural Gas CT,TRE,7619.8
+full-base-200,2045,Natural Gas CT,WECC,8463.8
+full-base-200,2045,Nuclear,CA,3.0
+full-base-200,2045,Nuclear,MISO,20293.0
+full-base-200,2045,Nuclear,NE,6707.5
+full-base-200,2045,Nuclear,PJM,33764.0
+full-base-200,2045,Nuclear,SOU,23926.5
+full-base-200,2045,Nuclear,SPP,2022.0
+full-base-200,2045,Nuclear,TRE,5121.5
+full-base-200,2045,Nuclear,WECC,5174.8
+full-base-200,2045,Solar,CA,62414.2
+full-base-200,2045,Solar,MISO,138245.5
+full-base-200,2045,Solar,NE,45889.8
+full-base-200,2045,Solar,PJM,140883.8
+full-base-200,2045,Solar,SOU,142413.2
+full-base-200,2045,Solar,SPP,32309.0
+full-base-200,2045,Solar,TRE,60353.2
+full-base-200,2045,Solar,WECC,122983.8
+full-base-200,2045,Wind,CA,3116.0
+full-base-200,2045,Wind,MISO,151143.5
+full-base-200,2045,Wind,NE,46740.0
+full-base-200,2045,Wind,PJM,40300.5
+full-base-200,2045,Wind,SOU,39402.8
+full-base-200,2045,Wind,SPP,129051.8
+full-base-200,2045,Wind,TRE,103750.8
+full-base-200,2045,Wind,WECC,138891.5
+full-base-200,2050,Battery,CA,12914.5
+full-base-200,2050,Battery,MISO,16488.5
+full-base-200,2050,Battery,NE,19311.5
+full-base-200,2050,Battery,PJM,20457.0
+full-base-200,2050,Battery,SOU,9830.0
+full-base-200,2050,Battery,SPP,4791.8
+full-base-200,2050,Battery,TRE,4935.0
+full-base-200,2050,Battery,WECC,33605.5
+full-base-200,2050,CCS,CA,35114.0
+full-base-200,2050,CCS,MISO,87377.5
+full-base-200,2050,CCS,NE,
+full-base-200,2050,CCS,PJM,75940.8
+full-base-200,2050,CCS,SOU,71677.2
+full-base-200,2050,CCS,SPP,219.2
+full-base-200,2050,CCS,TRE,35454.5
+full-base-200,2050,CCS,WECC,13505.2
+full-base-200,2050,Coal,CA,0.0
+full-base-200,2050,Coal,MISO,8317.8
+full-base-200,2050,Coal,NE,0.0
+full-base-200,2050,Coal,PJM,4771.8
+full-base-200,2050,Coal,SOU,5369.2
+full-base-200,2050,Coal,SPP,3561.0
+full-base-200,2050,Coal,TRE,4164.5
+full-base-200,2050,Coal,WECC,3970.8
+full-base-200,2050,Distributed Solar,CA,16748.5
+full-base-200,2050,Distributed Solar,MISO,22530.0
+full-base-200,2050,Distributed Solar,NE,9910.2
+full-base-200,2050,Distributed Solar,PJM,22896.8
+full-base-200,2050,Distributed Solar,SOU,17348.0
+full-base-200,2050,Distributed Solar,SPP,6127.0
+full-base-200,2050,Distributed Solar,TRE,10109.8
+full-base-200,2050,Distributed Solar,WECC,10742.0
+full-base-200,2050,Geothermal,CA,24.0
+full-base-200,2050,Geothermal,MISO,
+full-base-200,2050,Geothermal,NE,
+full-base-200,2050,Geothermal,PJM,
+full-base-200,2050,Geothermal,SOU,
+full-base-200,2050,Geothermal,SPP,
+full-base-200,2050,Geothermal,TRE,
+full-base-200,2050,Geothermal,WECC,62.2
+full-base-200,2050,Hydro,CA,10718.2
+full-base-200,2050,Hydro,MISO,7588.8
+full-base-200,2050,Hydro,NE,7623.8
+full-base-200,2050,Hydro,PJM,7218.8
+full-base-200,2050,Hydro,SOU,9108.2
+full-base-200,2050,Hydro,SPP,4766.5
+full-base-200,2050,Hydro,TRE,230.5
+full-base-200,2050,Hydro,WECC,34114.8
+full-base-200,2050,Hydrogen,CA,6.5
+full-base-200,2050,Hydrogen,MISO,15.0
+full-base-200,2050,Hydrogen,NE,35.3
+full-base-200,2050,Hydrogen,PJM,14.5
+full-base-200,2050,Hydrogen,SOU,7.5
+full-base-200,2050,Hydrogen,SPP,8.5
+full-base-200,2050,Hydrogen,TRE,5.0
+full-base-200,2050,Hydrogen,WECC,15.5
+full-base-200,2050,Natural Gas CC,CA,19324.5
+full-base-200,2050,Natural Gas CC,MISO,48103.0
+full-base-200,2050,Natural Gas CC,NE,40513.0
+full-base-200,2050,Natural Gas CC,PJM,57493.0
+full-base-200,2050,Natural Gas CC,SOU,61421.0
+full-base-200,2050,Natural Gas CC,SPP,10802.5
+full-base-200,2050,Natural Gas CC,TRE,36204.0
+full-base-200,2050,Natural Gas CC,WECC,28304.8
+full-base-200,2050,Natural Gas CT,CA,8285.2
+full-base-200,2050,Natural Gas CT,MISO,20300.5
+full-base-200,2050,Natural Gas CT,NE,4508.8
+full-base-200,2050,Natural Gas CT,PJM,20317.5
+full-base-200,2050,Natural Gas CT,SOU,19695.5
+full-base-200,2050,Natural Gas CT,SPP,7890.0
+full-base-200,2050,Natural Gas CT,TRE,6913.0
+full-base-200,2050,Natural Gas CT,WECC,8005.5
+full-base-200,2050,Nuclear,CA,3.0
+full-base-200,2050,Nuclear,MISO,19709.2
+full-base-200,2050,Nuclear,NE,5511.0
+full-base-200,2050,Nuclear,PJM,32820.0
+full-base-200,2050,Nuclear,SOU,23926.8
+full-base-200,2050,Nuclear,SPP,2022.0
+full-base-200,2050,Nuclear,TRE,5121.5
+full-base-200,2050,Nuclear,WECC,5175.0
+full-base-200,2050,Solar,CA,79953.5
+full-base-200,2050,Solar,MISO,150267.0
+full-base-200,2050,Solar,NE,52234.8
+full-base-200,2050,Solar,PJM,161858.8
+full-base-200,2050,Solar,SOU,168679.8
+full-base-200,2050,Solar,SPP,37969.8
+full-base-200,2050,Solar,TRE,69864.8
+full-base-200,2050,Solar,WECC,144176.0
+full-base-200,2050,Wind,CA,2640.2
+full-base-200,2050,Wind,MISO,146654.5
+full-base-200,2050,Wind,NE,47456.0
+full-base-200,2050,Wind,PJM,38782.0
+full-base-200,2050,Wind,SOU,41397.2
+full-base-200,2050,Wind,SPP,127876.5
+full-base-200,2050,Wind,TRE,99890.8
+full-base-200,2050,Wind,WECC,142995.8
+full-base-200-tx-0,2027,Battery,CA,11550.5
+full-base-200-tx-0,2027,Battery,MISO,200.8
+full-base-200-tx-0,2027,Battery,NE,613.5
+full-base-200-tx-0,2027,Battery,PJM,319.8
+full-base-200-tx-0,2027,Battery,SOU,866.5
+full-base-200-tx-0,2027,Battery,SPP,226.8
+full-base-200-tx-0,2027,Battery,TRE,4699.2
+full-base-200-tx-0,2027,Battery,WECC,3384.5
+full-base-200-tx-0,2027,CCS,CA,0.0
+full-base-200-tx-0,2027,CCS,MISO,0.0
+full-base-200-tx-0,2027,CCS,NE,
+full-base-200-tx-0,2027,CCS,PJM,0.0
+full-base-200-tx-0,2027,CCS,SOU,0.0
+full-base-200-tx-0,2027,CCS,SPP,0.0
+full-base-200-tx-0,2027,CCS,TRE,0.0
+full-base-200-tx-0,2027,CCS,WECC,0.0
+full-base-200-tx-0,2027,Coal,CA,0.0
+full-base-200-tx-0,2027,Coal,MISO,47060.5
+full-base-200-tx-0,2027,Coal,NE,330.0
+full-base-200-tx-0,2027,Coal,PJM,32620.2
+full-base-200-tx-0,2027,Coal,SOU,27707.8
+full-base-200-tx-0,2027,Coal,SPP,19924.8
+full-base-200-tx-0,2027,Coal,TRE,12947.2
+full-base-200-tx-0,2027,Coal,WECC,16354.0
+full-base-200-tx-0,2027,Distributed Solar,CA,11430.5
+full-base-200-tx-0,2027,Distributed Solar,MISO,5247.0
+full-base-200-tx-0,2027,Distributed Solar,NE,5987.0
+full-base-200-tx-0,2027,Distributed Solar,PJM,9884.5
+full-base-200-tx-0,2027,Distributed Solar,SOU,5463.5
+full-base-200-tx-0,2027,Distributed Solar,SPP,1242.0
+full-base-200-tx-0,2027,Distributed Solar,TRE,2996.5
+full-base-200-tx-0,2027,Distributed Solar,WECC,5470.0
+full-base-200-tx-0,2027,Geothermal,CA,24.0
+full-base-200-tx-0,2027,Geothermal,MISO,
+full-base-200-tx-0,2027,Geothermal,NE,
+full-base-200-tx-0,2027,Geothermal,PJM,
+full-base-200-tx-0,2027,Geothermal,SOU,
+full-base-200-tx-0,2027,Geothermal,SPP,
+full-base-200-tx-0,2027,Geothermal,TRE,
+full-base-200-tx-0,2027,Geothermal,WECC,689.2
+full-base-200-tx-0,2027,Hydro,CA,12381.8
+full-base-200-tx-0,2027,Hydro,MISO,10569.2
+full-base-200-tx-0,2027,Hydro,NE,8269.2
+full-base-200-tx-0,2027,Hydro,PJM,8031.2
+full-base-200-tx-0,2027,Hydro,SOU,10017.2
+full-base-200-tx-0,2027,Hydro,SPP,5143.5
+full-base-200-tx-0,2027,Hydro,TRE,497.0
+full-base-200-tx-0,2027,Hydro,WECC,39597.0
+full-base-200-tx-0,2027,Hydrogen,CA,0.0
+full-base-200-tx-0,2027,Hydrogen,MISO,0.0
+full-base-200-tx-0,2027,Hydrogen,NE,1.0
+full-base-200-tx-0,2027,Hydrogen,PJM,0.0
+full-base-200-tx-0,2027,Hydrogen,SOU,0.0
+full-base-200-tx-0,2027,Hydrogen,SPP,0.0
+full-base-200-tx-0,2027,Hydrogen,TRE,0.0
+full-base-200-tx-0,2027,Hydrogen,WECC,0.0
+full-base-200-tx-0,2027,Natural Gas CC,CA,20984.5
+full-base-200-tx-0,2027,Natural Gas CC,MISO,51505.8
+full-base-200-tx-0,2027,Natural Gas CC,NE,31959.0
+full-base-200-tx-0,2027,Natural Gas CC,PJM,59221.5
+full-base-200-tx-0,2027,Natural Gas CC,SOU,64488.5
+full-base-200-tx-0,2027,Natural Gas CC,SPP,11494.0
+full-base-200-tx-0,2027,Natural Gas CC,TRE,41427.5
+full-base-200-tx-0,2027,Natural Gas CC,WECC,30819.5
+full-base-200-tx-0,2027,Natural Gas CT,CA,11093.2
+full-base-200-tx-0,2027,Natural Gas CT,MISO,32943.8
+full-base-200-tx-0,2027,Natural Gas CT,NE,3929.5
+full-base-200-tx-0,2027,Natural Gas CT,PJM,29857.5
+full-base-200-tx-0,2027,Natural Gas CT,SOU,32012.5
+full-base-200-tx-0,2027,Natural Gas CT,SPP,9915.5
+full-base-200-tx-0,2027,Natural Gas CT,TRE,10282.2
+full-base-200-tx-0,2027,Natural Gas CT,WECC,10188.8
+full-base-200-tx-0,2027,Nuclear,CA,0.0
+full-base-200-tx-0,2027,Nuclear,MISO,20289.2
+full-base-200-tx-0,2027,Nuclear,NE,6705.8
+full-base-200-tx-0,2027,Nuclear,PJM,33761.0
+full-base-200-tx-0,2027,Nuclear,SOU,23924.0
+full-base-200-tx-0,2027,Nuclear,SPP,2019.8
+full-base-200-tx-0,2027,Nuclear,TRE,5120.0
+full-base-200-tx-0,2027,Nuclear,WECC,5172.0
+full-base-200-tx-0,2027,Solar,CA,20132.2
+full-base-200-tx-0,2027,Solar,MISO,12391.0
+full-base-200-tx-0,2027,Solar,NE,4582.2
+full-base-200-tx-0,2027,Solar,PJM,11464.5
+full-base-200-tx-0,2027,Solar,SOU,24598.5
+full-base-200-tx-0,2027,Solar,SPP,571.0
+full-base-200-tx-0,2027,Solar,TRE,22379.5
+full-base-200-tx-0,2027,Solar,WECC,19649.5
+full-base-200-tx-0,2027,Wind,CA,5498.5
+full-base-200-tx-0,2027,Wind,MISO,77753.5
+full-base-200-tx-0,2027,Wind,NE,7337.8
+full-base-200-tx-0,2027,Wind,PJM,21137.0
+full-base-200-tx-0,2027,Wind,SOU,1487.8
+full-base-200-tx-0,2027,Wind,SPP,48538.5
+full-base-200-tx-0,2027,Wind,TRE,56535.5
+full-base-200-tx-0,2027,Wind,WECC,53406.5
+full-base-200-tx-0,2030,Battery,CA,11544.8
+full-base-200-tx-0,2030,Battery,MISO,202.2
+full-base-200-tx-0,2030,Battery,NE,630.8
+full-base-200-tx-0,2030,Battery,PJM,205.0
+full-base-200-tx-0,2030,Battery,SOU,867.5
+full-base-200-tx-0,2030,Battery,SPP,228.2
+full-base-200-tx-0,2030,Battery,TRE,4700.0
+full-base-200-tx-0,2030,Battery,WECC,3380.0
+full-base-200-tx-0,2030,CCS,CA,9945.2
+full-base-200-tx-0,2030,CCS,MISO,30909.8
+full-base-200-tx-0,2030,CCS,NE,
+full-base-200-tx-0,2030,CCS,PJM,20103.0
+full-base-200-tx-0,2030,CCS,SOU,33042.5
+full-base-200-tx-0,2030,CCS,SPP,4265.8
+full-base-200-tx-0,2030,CCS,TRE,15595.5
+full-base-200-tx-0,2030,CCS,WECC,1946.2
+full-base-200-tx-0,2030,Coal,CA,0.0
+full-base-200-tx-0,2030,Coal,MISO,42624.8
+full-base-200-tx-0,2030,Coal,NE,329.2
+full-base-200-tx-0,2030,Coal,PJM,28364.8
+full-base-200-tx-0,2030,Coal,SOU,26560.8
+full-base-200-tx-0,2030,Coal,SPP,18690.0
+full-base-200-tx-0,2030,Coal,TRE,10704.0
+full-base-200-tx-0,2030,Coal,WECC,14828.8
+full-base-200-tx-0,2030,Distributed Solar,CA,13601.5
+full-base-200-tx-0,2030,Distributed Solar,MISO,9889.0
+full-base-200-tx-0,2030,Distributed Solar,NE,7471.0
+full-base-200-tx-0,2030,Distributed Solar,PJM,15935.5
+full-base-200-tx-0,2030,Distributed Solar,SOU,9721.8
+full-base-200-tx-0,2030,Distributed Solar,SPP,2341.0
+full-base-200-tx-0,2030,Distributed Solar,TRE,5818.5
+full-base-200-tx-0,2030,Distributed Solar,WECC,7745.5
+full-base-200-tx-0,2030,Geothermal,CA,24.0
+full-base-200-tx-0,2030,Geothermal,MISO,
+full-base-200-tx-0,2030,Geothermal,NE,
+full-base-200-tx-0,2030,Geothermal,PJM,
+full-base-200-tx-0,2030,Geothermal,SOU,
+full-base-200-tx-0,2030,Geothermal,SPP,
+full-base-200-tx-0,2030,Geothermal,TRE,
+full-base-200-tx-0,2030,Geothermal,WECC,630.0
+full-base-200-tx-0,2030,Hydro,CA,12141.2
+full-base-200-tx-0,2030,Hydro,MISO,10320.0
+full-base-200-tx-0,2030,Hydro,NE,7844.5
+full-base-200-tx-0,2030,Hydro,PJM,7699.5
+full-base-200-tx-0,2030,Hydro,SOU,9472.8
+full-base-200-tx-0,2030,Hydro,SPP,5143.5
+full-base-200-tx-0,2030,Hydro,TRE,497.0
+full-base-200-tx-0,2030,Hydro,WECC,39382.2
+full-base-200-tx-0,2030,Hydrogen,CA,1.0
+full-base-200-tx-0,2030,Hydrogen,MISO,5.0
+full-base-200-tx-0,2030,Hydrogen,NE,3.5
+full-base-200-tx-0,2030,Hydrogen,PJM,4.0
+full-base-200-tx-0,2030,Hydrogen,SOU,3.0
+full-base-200-tx-0,2030,Hydrogen,SPP,3.0
+full-base-200-tx-0,2030,Hydrogen,TRE,2.0
+full-base-200-tx-0,2030,Hydrogen,WECC,4.0
+full-base-200-tx-0,2030,Natural Gas CC,CA,20945.0
+full-base-200-tx-0,2030,Natural Gas CC,MISO,51152.8
+full-base-200-tx-0,2030,Natural Gas CC,NE,38541.5
+full-base-200-tx-0,2030,Natural Gas CC,PJM,59204.5
+full-base-200-tx-0,2030,Natural Gas CC,SOU,63230.8
+full-base-200-tx-0,2030,Natural Gas CC,SPP,11494.5
+full-base-200-tx-0,2030,Natural Gas CC,TRE,41340.0
+full-base-200-tx-0,2030,Natural Gas CC,WECC,30727.2
+full-base-200-tx-0,2030,Natural Gas CT,CA,11087.8
+full-base-200-tx-0,2030,Natural Gas CT,MISO,32249.8
+full-base-200-tx-0,2030,Natural Gas CT,NE,3930.0
+full-base-200-tx-0,2030,Natural Gas CT,PJM,29858.5
+full-base-200-tx-0,2030,Natural Gas CT,SOU,31883.8
+full-base-200-tx-0,2030,Natural Gas CT,SPP,9725.0
+full-base-200-tx-0,2030,Natural Gas CT,TRE,10217.0
+full-base-200-tx-0,2030,Natural Gas CT,WECC,10053.5
+full-base-200-tx-0,2030,Nuclear,CA,0.0
+full-base-200-tx-0,2030,Nuclear,MISO,20289.2
+full-base-200-tx-0,2030,Nuclear,NE,6705.8
+full-base-200-tx-0,2030,Nuclear,PJM,33761.0
+full-base-200-tx-0,2030,Nuclear,SOU,23924.0
+full-base-200-tx-0,2030,Nuclear,SPP,2019.8
+full-base-200-tx-0,2030,Nuclear,TRE,5120.0
+full-base-200-tx-0,2030,Nuclear,WECC,5172.0
+full-base-200-tx-0,2030,Solar,CA,37953.8
+full-base-200-tx-0,2030,Solar,MISO,74737.5
+full-base-200-tx-0,2030,Solar,NE,14415.5
+full-base-200-tx-0,2030,Solar,PJM,76489.8
+full-base-200-tx-0,2030,Solar,SOU,79988.5
+full-base-200-tx-0,2030,Solar,SPP,20913.0
+full-base-200-tx-0,2030,Solar,TRE,37815.0
+full-base-200-tx-0,2030,Solar,WECC,36204.5
+full-base-200-tx-0,2030,Wind,CA,6381.0
+full-base-200-tx-0,2030,Wind,MISO,120709.5
+full-base-200-tx-0,2030,Wind,NE,26040.2
+full-base-200-tx-0,2030,Wind,PJM,40001.2
+full-base-200-tx-0,2030,Wind,SOU,27798.8
+full-base-200-tx-0,2030,Wind,SPP,59267.5
+full-base-200-tx-0,2030,Wind,TRE,72812.0
+full-base-200-tx-0,2030,Wind,WECC,95998.5
+full-base-200-tx-0,2035,Battery,CA,11133.0
+full-base-200-tx-0,2035,Battery,MISO,344.5
+full-base-200-tx-0,2035,Battery,NE,3941.0
+full-base-200-tx-0,2035,Battery,PJM,1717.5
+full-base-200-tx-0,2035,Battery,SOU,922.8
+full-base-200-tx-0,2035,Battery,SPP,355.8
+full-base-200-tx-0,2035,Battery,TRE,4589.5
+full-base-200-tx-0,2035,Battery,WECC,3440.2
+full-base-200-tx-0,2035,CCS,CA,21855.0
+full-base-200-tx-0,2035,CCS,MISO,60144.8
+full-base-200-tx-0,2035,CCS,NE,
+full-base-200-tx-0,2035,CCS,PJM,33235.2
+full-base-200-tx-0,2035,CCS,SOU,50877.5
+full-base-200-tx-0,2035,CCS,SPP,10831.2
+full-base-200-tx-0,2035,CCS,TRE,27993.5
+full-base-200-tx-0,2035,CCS,WECC,10694.2
+full-base-200-tx-0,2035,Coal,CA,0.0
+full-base-200-tx-0,2035,Coal,MISO,37354.5
+full-base-200-tx-0,2035,Coal,NE,0.0
+full-base-200-tx-0,2035,Coal,PJM,21701.8
+full-base-200-tx-0,2035,Coal,SOU,22442.8
+full-base-200-tx-0,2035,Coal,SPP,17743.5
+full-base-200-tx-0,2035,Coal,TRE,10704.0
+full-base-200-tx-0,2035,Coal,WECC,12112.5
+full-base-200-tx-0,2035,Distributed Solar,CA,15741.0
+full-base-200-tx-0,2035,Distributed Solar,MISO,16446.2
+full-base-200-tx-0,2035,Distributed Solar,NE,8692.5
+full-base-200-tx-0,2035,Distributed Solar,PJM,20115.8
+full-base-200-tx-0,2035,Distributed Solar,SOU,13536.5
+full-base-200-tx-0,2035,Distributed Solar,SPP,3750.0
+full-base-200-tx-0,2035,Distributed Solar,TRE,8597.0
+full-base-200-tx-0,2035,Distributed Solar,WECC,9886.8
+full-base-200-tx-0,2035,Geothermal,CA,24.0
+full-base-200-tx-0,2035,Geothermal,MISO,
+full-base-200-tx-0,2035,Geothermal,NE,
+full-base-200-tx-0,2035,Geothermal,PJM,
+full-base-200-tx-0,2035,Geothermal,SOU,
+full-base-200-tx-0,2035,Geothermal,SPP,
+full-base-200-tx-0,2035,Geothermal,TRE,
+full-base-200-tx-0,2035,Geothermal,WECC,598.5
+full-base-200-tx-0,2035,Hydro,CA,12056.5
+full-base-200-tx-0,2035,Hydro,MISO,10040.0
+full-base-200-tx-0,2035,Hydro,NE,7790.2
+full-base-200-tx-0,2035,Hydro,PJM,7480.0
+full-base-200-tx-0,2035,Hydro,SOU,9395.0
+full-base-200-tx-0,2035,Hydro,SPP,5127.5
+full-base-200-tx-0,2035,Hydro,TRE,491.5
+full-base-200-tx-0,2035,Hydro,WECC,39202.0
+full-base-200-tx-0,2035,Hydrogen,CA,5.0
+full-base-200-tx-0,2035,Hydrogen,MISO,15.5
+full-base-200-tx-0,2035,Hydrogen,NE,77.5
+full-base-200-tx-0,2035,Hydrogen,PJM,12.0
+full-base-200-tx-0,2035,Hydrogen,SOU,9.0
+full-base-200-tx-0,2035,Hydrogen,SPP,11.5
+full-base-200-tx-0,2035,Hydrogen,TRE,7.0
+full-base-200-tx-0,2035,Hydrogen,WECC,15.0
+full-base-200-tx-0,2035,Natural Gas CC,CA,20946.2
+full-base-200-tx-0,2035,Natural Gas CC,MISO,50801.5
+full-base-200-tx-0,2035,Natural Gas CC,NE,51521.0
+full-base-200-tx-0,2035,Natural Gas CC,PJM,66443.0
+full-base-200-tx-0,2035,Natural Gas CC,SOU,62047.8
+full-base-200-tx-0,2035,Natural Gas CC,SPP,11232.0
+full-base-200-tx-0,2035,Natural Gas CC,TRE,40026.2
+full-base-200-tx-0,2035,Natural Gas CC,WECC,29613.8
+full-base-200-tx-0,2035,Natural Gas CT,CA,10555.5
+full-base-200-tx-0,2035,Natural Gas CT,MISO,31447.2
+full-base-200-tx-0,2035,Natural Gas CT,NE,6237.0
+full-base-200-tx-0,2035,Natural Gas CT,PJM,29811.5
+full-base-200-tx-0,2035,Natural Gas CT,SOU,31882.2
+full-base-200-tx-0,2035,Natural Gas CT,SPP,9392.8
+full-base-200-tx-0,2035,Natural Gas CT,TRE,9934.8
+full-base-200-tx-0,2035,Natural Gas CT,WECC,9315.0
+full-base-200-tx-0,2035,Nuclear,CA,1.0
+full-base-200-tx-0,2035,Nuclear,MISO,20290.5
+full-base-200-tx-0,2035,Nuclear,NE,6707.5
+full-base-200-tx-0,2035,Nuclear,PJM,33770.8
+full-base-200-tx-0,2035,Nuclear,SOU,23925.5
+full-base-200-tx-0,2035,Nuclear,SPP,2020.8
+full-base-200-tx-0,2035,Nuclear,TRE,5120.5
+full-base-200-tx-0,2035,Nuclear,WECC,5173.5
+full-base-200-tx-0,2035,Solar,CA,49067.5
+full-base-200-tx-0,2035,Solar,MISO,102067.5
+full-base-200-tx-0,2035,Solar,NE,26552.5
+full-base-200-tx-0,2035,Solar,PJM,108647.5
+full-base-200-tx-0,2035,Solar,SOU,104368.2
+full-base-200-tx-0,2035,Solar,SPP,31568.0
+full-base-200-tx-0,2035,Solar,TRE,50897.2
+full-base-200-tx-0,2035,Solar,WECC,53079.8
+full-base-200-tx-0,2035,Wind,CA,6802.0
+full-base-200-tx-0,2035,Wind,MISO,133544.2
+full-base-200-tx-0,2035,Wind,NE,33326.8
+full-base-200-tx-0,2035,Wind,PJM,43038.0
+full-base-200-tx-0,2035,Wind,SOU,32680.0
+full-base-200-tx-0,2035,Wind,SPP,63426.0
+full-base-200-tx-0,2035,Wind,TRE,79070.0
+full-base-200-tx-0,2035,Wind,WECC,116667.8
+full-base-200-tx-0,2040,Battery,CA,1137.0
+full-base-200-tx-0,2040,Battery,MISO,1685.0
+full-base-200-tx-0,2040,Battery,NE,8179.5
+full-base-200-tx-0,2040,Battery,PJM,10067.0
+full-base-200-tx-0,2040,Battery,SOU,424.8
+full-base-200-tx-0,2040,Battery,SPP,972.8
+full-base-200-tx-0,2040,Battery,TRE,270.5
+full-base-200-tx-0,2040,Battery,WECC,6858.0
+full-base-200-tx-0,2040,CCS,CA,29712.8
+full-base-200-tx-0,2040,CCS,MISO,69083.8
+full-base-200-tx-0,2040,CCS,NE,
+full-base-200-tx-0,2040,CCS,PJM,38164.2
+full-base-200-tx-0,2040,CCS,SOU,57143.5
+full-base-200-tx-0,2040,CCS,SPP,13075.0
+full-base-200-tx-0,2040,CCS,TRE,30824.0
+full-base-200-tx-0,2040,CCS,WECC,18933.2
+full-base-200-tx-0,2040,Coal,CA,0.0
+full-base-200-tx-0,2040,Coal,MISO,27607.5
+full-base-200-tx-0,2040,Coal,NE,0.0
+full-base-200-tx-0,2040,Coal,PJM,8107.5
+full-base-200-tx-0,2040,Coal,SOU,12969.5
+full-base-200-tx-0,2040,Coal,SPP,14090.8
+full-base-200-tx-0,2040,Coal,TRE,10704.0
+full-base-200-tx-0,2040,Coal,WECC,8728.0
+full-base-200-tx-0,2040,Distributed Solar,CA,16402.2
+full-base-200-tx-0,2040,Distributed Solar,MISO,18451.2
+full-base-200-tx-0,2040,Distributed Solar,NE,8821.5
+full-base-200-tx-0,2040,Distributed Solar,PJM,20874.2
+full-base-200-tx-0,2040,Distributed Solar,SOU,14990.5
+full-base-200-tx-0,2040,Distributed Solar,SPP,4437.0
+full-base-200-tx-0,2040,Distributed Solar,TRE,8864.0
+full-base-200-tx-0,2040,Distributed Solar,WECC,10178.0
+full-base-200-tx-0,2040,Geothermal,CA,24.0
+full-base-200-tx-0,2040,Geothermal,MISO,
+full-base-200-tx-0,2040,Geothermal,NE,
+full-base-200-tx-0,2040,Geothermal,PJM,
+full-base-200-tx-0,2040,Geothermal,SOU,
+full-base-200-tx-0,2040,Geothermal,SPP,
+full-base-200-tx-0,2040,Geothermal,TRE,
+full-base-200-tx-0,2040,Geothermal,WECC,372.0
+full-base-200-tx-0,2040,Hydro,CA,12053.5
+full-base-200-tx-0,2040,Hydro,MISO,9437.8
+full-base-200-tx-0,2040,Hydro,NE,7720.0
+full-base-200-tx-0,2040,Hydro,PJM,7219.5
+full-base-200-tx-0,2040,Hydro,SOU,9394.2
+full-base-200-tx-0,2040,Hydro,SPP,4997.2
+full-base-200-tx-0,2040,Hydro,TRE,446.0
+full-base-200-tx-0,2040,Hydro,WECC,37659.8
+full-base-200-tx-0,2040,Hydrogen,CA,25.5
+full-base-200-tx-0,2040,Hydrogen,MISO,67.0
+full-base-200-tx-0,2040,Hydrogen,NE,557.8
+full-base-200-tx-0,2040,Hydrogen,PJM,56.5
+full-base-200-tx-0,2040,Hydrogen,SOU,39.5
+full-base-200-tx-0,2040,Hydrogen,SPP,47.0
+full-base-200-tx-0,2040,Hydrogen,TRE,28.0
+full-base-200-tx-0,2040,Hydrogen,WECC,81.0
+full-base-200-tx-0,2040,Natural Gas CC,CA,20835.2
+full-base-200-tx-0,2040,Natural Gas CC,MISO,50799.5
+full-base-200-tx-0,2040,Natural Gas CC,NE,57996.0
+full-base-200-tx-0,2040,Natural Gas CC,PJM,68907.0
+full-base-200-tx-0,2040,Natural Gas CC,SOU,61481.2
+full-base-200-tx-0,2040,Natural Gas CC,SPP,10969.8
+full-base-200-tx-0,2040,Natural Gas CC,TRE,39380.8
+full-base-200-tx-0,2040,Natural Gas CC,WECC,28913.0
+full-base-200-tx-0,2040,Natural Gas CT,CA,8909.8
+full-base-200-tx-0,2040,Natural Gas CT,MISO,30819.8
+full-base-200-tx-0,2040,Natural Gas CT,NE,7336.8
+full-base-200-tx-0,2040,Natural Gas CT,PJM,28707.2
+full-base-200-tx-0,2040,Natural Gas CT,SOU,31654.0
+full-base-200-tx-0,2040,Natural Gas CT,SPP,9012.2
+full-base-200-tx-0,2040,Natural Gas CT,TRE,8016.0
+full-base-200-tx-0,2040,Natural Gas CT,WECC,9241.8
+full-base-200-tx-0,2040,Nuclear,CA,5.0
+full-base-200-tx-0,2040,Nuclear,MISO,20296.2
+full-base-200-tx-0,2040,Nuclear,NE,6714.5
+full-base-200-tx-0,2040,Nuclear,PJM,33794.5
+full-base-200-tx-0,2040,Nuclear,SOU,23929.0
+full-base-200-tx-0,2040,Nuclear,SPP,2024.2
+full-base-200-tx-0,2040,Nuclear,TRE,5122.8
+full-base-200-tx-0,2040,Nuclear,WECC,5178.2
+full-base-200-tx-0,2040,Solar,CA,54181.5
+full-base-200-tx-0,2040,Solar,MISO,127126.0
+full-base-200-tx-0,2040,Solar,NE,36194.8
+full-base-200-tx-0,2040,Solar,PJM,132753.0
+full-base-200-tx-0,2040,Solar,SOU,128608.5
+full-base-200-tx-0,2040,Solar,SPP,36948.8
+full-base-200-tx-0,2040,Solar,TRE,60620.5
+full-base-200-tx-0,2040,Solar,WECC,69999.8
+full-base-200-tx-0,2040,Wind,CA,6130.0
+full-base-200-tx-0,2040,Wind,MISO,138361.5
+full-base-200-tx-0,2040,Wind,NE,35748.5
+full-base-200-tx-0,2040,Wind,PJM,44065.0
+full-base-200-tx-0,2040,Wind,SOU,36879.0
+full-base-200-tx-0,2040,Wind,SPP,64423.2
+full-base-200-tx-0,2040,Wind,TRE,81056.8
+full-base-200-tx-0,2040,Wind,WECC,123121.8
+full-base-200-tx-0,2045,Battery,CA,2984.2
+full-base-200-tx-0,2045,Battery,MISO,11197.2
+full-base-200-tx-0,2045,Battery,NE,11744.2
+full-base-200-tx-0,2045,Battery,PJM,21133.2
+full-base-200-tx-0,2045,Battery,SOU,2502.0
+full-base-200-tx-0,2045,Battery,SPP,5512.5
+full-base-200-tx-0,2045,Battery,TRE,2501.0
+full-base-200-tx-0,2045,Battery,WECC,23797.8
+full-base-200-tx-0,2045,CCS,CA,39090.0
+full-base-200-tx-0,2045,CCS,MISO,84968.5
+full-base-200-tx-0,2045,CCS,NE,
+full-base-200-tx-0,2045,CCS,PJM,43650.2
+full-base-200-tx-0,2045,CCS,SOU,66783.2
+full-base-200-tx-0,2045,CCS,SPP,17557.2
+full-base-200-tx-0,2045,CCS,TRE,36052.8
+full-base-200-tx-0,2045,CCS,WECC,25381.8
+full-base-200-tx-0,2045,Coal,CA,0.0
+full-base-200-tx-0,2045,Coal,MISO,18738.2
+full-base-200-tx-0,2045,Coal,NE,0.0
+full-base-200-tx-0,2045,Coal,PJM,6512.5
+full-base-200-tx-0,2045,Coal,SOU,11574.2
+full-base-200-tx-0,2045,Coal,SPP,7823.2
+full-base-200-tx-0,2045,Coal,TRE,5163.0
+full-base-200-tx-0,2045,Coal,WECC,7378.2
+full-base-200-tx-0,2045,Distributed Solar,CA,16592.0
+full-base-200-tx-0,2045,Distributed Solar,MISO,20070.8
+full-base-200-tx-0,2045,Distributed Solar,NE,9368.2
+full-base-200-tx-0,2045,Distributed Solar,PJM,21885.8
+full-base-200-tx-0,2045,Distributed Solar,SOU,15616.0
+full-base-200-tx-0,2045,Distributed Solar,SPP,5220.5
+full-base-200-tx-0,2045,Distributed Solar,TRE,8972.0
+full-base-200-tx-0,2045,Distributed Solar,WECC,10367.8
+full-base-200-tx-0,2045,Geothermal,CA,24.0
+full-base-200-tx-0,2045,Geothermal,MISO,
+full-base-200-tx-0,2045,Geothermal,NE,
+full-base-200-tx-0,2045,Geothermal,PJM,
+full-base-200-tx-0,2045,Geothermal,SOU,
+full-base-200-tx-0,2045,Geothermal,SPP,
+full-base-200-tx-0,2045,Geothermal,TRE,
+full-base-200-tx-0,2045,Geothermal,WECC,195.5
+full-base-200-tx-0,2045,Hydro,CA,11596.2
+full-base-200-tx-0,2045,Hydro,MISO,8269.5
+full-base-200-tx-0,2045,Hydro,NE,7711.2
+full-base-200-tx-0,2045,Hydro,PJM,7219.2
+full-base-200-tx-0,2045,Hydro,SOU,9204.5
+full-base-200-tx-0,2045,Hydro,SPP,4874.2
+full-base-200-tx-0,2045,Hydro,TRE,288.5
+full-base-200-tx-0,2045,Hydro,WECC,35564.8
+full-base-200-tx-0,2045,Hydrogen,CA,30.0
+full-base-200-tx-0,2045,Hydrogen,MISO,77.5
+full-base-200-tx-0,2045,Hydrogen,NE,817.8
+full-base-200-tx-0,2045,Hydrogen,PJM,63.5
+full-base-200-tx-0,2045,Hydrogen,SOU,42.0
+full-base-200-tx-0,2045,Hydrogen,SPP,61.5
+full-base-200-tx-0,2045,Hydrogen,TRE,30.5
+full-base-200-tx-0,2045,Hydrogen,WECC,105.5
+full-base-200-tx-0,2045,Natural Gas CC,CA,20836.5
+full-base-200-tx-0,2045,Natural Gas CC,MISO,50771.5
+full-base-200-tx-0,2045,Natural Gas CC,NE,61029.2
+full-base-200-tx-0,2045,Natural Gas CC,PJM,69301.0
+full-base-200-tx-0,2045,Natural Gas CC,SOU,61482.5
+full-base-200-tx-0,2045,Natural Gas CC,SPP,10985.2
+full-base-200-tx-0,2045,Natural Gas CC,TRE,38077.5
+full-base-200-tx-0,2045,Natural Gas CC,WECC,28432.2
+full-base-200-tx-0,2045,Natural Gas CT,CA,8471.8
+full-base-200-tx-0,2045,Natural Gas CT,MISO,28441.2
+full-base-200-tx-0,2045,Natural Gas CT,NE,7588.2
+full-base-200-tx-0,2045,Natural Gas CT,PJM,26187.2
+full-base-200-tx-0,2045,Natural Gas CT,SOU,27337.5
+full-base-200-tx-0,2045,Natural Gas CT,SPP,8835.8
+full-base-200-tx-0,2045,Natural Gas CT,TRE,7624.2
+full-base-200-tx-0,2045,Natural Gas CT,WECC,8484.8
+full-base-200-tx-0,2045,Nuclear,CA,5.0
+full-base-200-tx-0,2045,Nuclear,MISO,20296.2
+full-base-200-tx-0,2045,Nuclear,NE,6716.0
+full-base-200-tx-0,2045,Nuclear,PJM,33804.2
+full-base-200-tx-0,2045,Nuclear,SOU,23929.0
+full-base-200-tx-0,2045,Nuclear,SPP,2024.2
+full-base-200-tx-0,2045,Nuclear,TRE,5122.8
+full-base-200-tx-0,2045,Nuclear,WECC,5178.2
+full-base-200-tx-0,2045,Solar,CA,64074.8
+full-base-200-tx-0,2045,Solar,MISO,150211.2
+full-base-200-tx-0,2045,Solar,NE,43831.2
+full-base-200-tx-0,2045,Solar,PJM,163410.5
+full-base-200-tx-0,2045,Solar,SOU,149842.8
+full-base-200-tx-0,2045,Solar,SPP,44737.5
+full-base-200-tx-0,2045,Solar,TRE,71306.5
+full-base-200-tx-0,2045,Solar,WECC,102453.2
+full-base-200-tx-0,2045,Wind,CA,3257.0
+full-base-200-tx-0,2045,Wind,MISO,144572.2
+full-base-200-tx-0,2045,Wind,NE,38570.0
+full-base-200-tx-0,2045,Wind,PJM,46830.2
+full-base-200-tx-0,2045,Wind,SOU,42639.5
+full-base-200-tx-0,2045,Wind,SPP,65165.8
+full-base-200-tx-0,2045,Wind,TRE,85383.2
+full-base-200-tx-0,2045,Wind,WECC,134539.0
+full-base-200-tx-0,2050,Battery,CA,10076.2
+full-base-200-tx-0,2050,Battery,MISO,31385.2
+full-base-200-tx-0,2050,Battery,NE,13870.8
+full-base-200-tx-0,2050,Battery,PJM,34505.5
+full-base-200-tx-0,2050,Battery,SOU,14984.5
+full-base-200-tx-0,2050,Battery,SPP,11767.2
+full-base-200-tx-0,2050,Battery,TRE,7584.0
+full-base-200-tx-0,2050,Battery,WECC,42546.8
+full-base-200-tx-0,2050,CCS,CA,41002.2
+full-base-200-tx-0,2050,CCS,MISO,92271.2
+full-base-200-tx-0,2050,CCS,NE,
+full-base-200-tx-0,2050,CCS,PJM,46225.8
+full-base-200-tx-0,2050,CCS,SOU,70403.0
+full-base-200-tx-0,2050,CCS,SPP,17942.5
+full-base-200-tx-0,2050,CCS,TRE,37605.0
+full-base-200-tx-0,2050,CCS,WECC,30935.5
+full-base-200-tx-0,2050,Coal,CA,0.0
+full-base-200-tx-0,2050,Coal,MISO,8317.8
+full-base-200-tx-0,2050,Coal,NE,0.0
+full-base-200-tx-0,2050,Coal,PJM,4771.8
+full-base-200-tx-0,2050,Coal,SOU,5369.2
+full-base-200-tx-0,2050,Coal,SPP,3561.0
+full-base-200-tx-0,2050,Coal,TRE,4164.5
+full-base-200-tx-0,2050,Coal,WECC,3970.8
+full-base-200-tx-0,2050,Distributed Solar,CA,16746.8
+full-base-200-tx-0,2050,Distributed Solar,MISO,22529.5
+full-base-200-tx-0,2050,Distributed Solar,NE,9910.8
+full-base-200-tx-0,2050,Distributed Solar,PJM,22896.0
+full-base-200-tx-0,2050,Distributed Solar,SOU,17345.8
+full-base-200-tx-0,2050,Distributed Solar,SPP,6123.2
+full-base-200-tx-0,2050,Distributed Solar,TRE,10108.5
+full-base-200-tx-0,2050,Distributed Solar,WECC,10738.5
+full-base-200-tx-0,2050,Geothermal,CA,24.0
+full-base-200-tx-0,2050,Geothermal,MISO,
+full-base-200-tx-0,2050,Geothermal,NE,
+full-base-200-tx-0,2050,Geothermal,PJM,
+full-base-200-tx-0,2050,Geothermal,SOU,
+full-base-200-tx-0,2050,Geothermal,SPP,
+full-base-200-tx-0,2050,Geothermal,TRE,
+full-base-200-tx-0,2050,Geothermal,WECC,62.2
+full-base-200-tx-0,2050,Hydro,CA,10723.2
+full-base-200-tx-0,2050,Hydro,MISO,7588.5
+full-base-200-tx-0,2050,Hydro,NE,7624.0
+full-base-200-tx-0,2050,Hydro,PJM,7218.2
+full-base-200-tx-0,2050,Hydro,SOU,9110.0
+full-base-200-tx-0,2050,Hydro,SPP,4766.5
+full-base-200-tx-0,2050,Hydro,TRE,230.5
+full-base-200-tx-0,2050,Hydro,WECC,34115.0
+full-base-200-tx-0,2050,Hydrogen,CA,52.0
+full-base-200-tx-0,2050,Hydrogen,MISO,180.5
+full-base-200-tx-0,2050,Hydrogen,NE,844.0
+full-base-200-tx-0,2050,Hydrogen,PJM,116.5
+full-base-200-tx-0,2050,Hydrogen,SOU,84.0
+full-base-200-tx-0,2050,Hydrogen,SPP,154.5
+full-base-200-tx-0,2050,Hydrogen,TRE,58.5
+full-base-200-tx-0,2050,Hydrogen,WECC,227.5
+full-base-200-tx-0,2050,Natural Gas CC,CA,19320.5
+full-base-200-tx-0,2050,Natural Gas CC,MISO,48145.5
+full-base-200-tx-0,2050,Natural Gas CC,NE,60669.8
+full-base-200-tx-0,2050,Natural Gas CC,PJM,68252.0
+full-base-200-tx-0,2050,Natural Gas CC,SOU,61440.8
+full-base-200-tx-0,2050,Natural Gas CC,SPP,11252.8
+full-base-200-tx-0,2050,Natural Gas CC,TRE,36148.0
+full-base-200-tx-0,2050,Natural Gas CC,WECC,28446.8
+full-base-200-tx-0,2050,Natural Gas CT,CA,8312.5
+full-base-200-tx-0,2050,Natural Gas CT,MISO,20335.8
+full-base-200-tx-0,2050,Natural Gas CT,NE,7593.5
+full-base-200-tx-0,2050,Natural Gas CT,PJM,20339.2
+full-base-200-tx-0,2050,Natural Gas CT,SOU,19714.2
+full-base-200-tx-0,2050,Natural Gas CT,SPP,7924.5
+full-base-200-tx-0,2050,Natural Gas CT,TRE,6909.0
+full-base-200-tx-0,2050,Natural Gas CT,WECC,8057.8
+full-base-200-tx-0,2050,Nuclear,CA,8.5
+full-base-200-tx-0,2050,Nuclear,MISO,19716.2
+full-base-200-tx-0,2050,Nuclear,NE,5526.2
+full-base-200-tx-0,2050,Nuclear,PJM,32873.5
+full-base-200-tx-0,2050,Nuclear,SOU,23932.0
+full-base-200-tx-0,2050,Nuclear,SPP,2026.2
+full-base-200-tx-0,2050,Nuclear,TRE,5124.2
+full-base-200-tx-0,2050,Nuclear,WECC,5182.2
+full-base-200-tx-0,2050,Solar,CA,78715.0
+full-base-200-tx-0,2050,Solar,MISO,167872.2
+full-base-200-tx-0,2050,Solar,NE,50778.8
+full-base-200-tx-0,2050,Solar,PJM,186018.5
+full-base-200-tx-0,2050,Solar,SOU,178602.5
+full-base-200-tx-0,2050,Solar,SPP,50510.2
+full-base-200-tx-0,2050,Solar,TRE,81364.5
+full-base-200-tx-0,2050,Solar,WECC,126412.5
+full-base-200-tx-0,2050,Wind,CA,2831.5
+full-base-200-tx-0,2050,Wind,MISO,140440.0
+full-base-200-tx-0,2050,Wind,NE,39729.2
+full-base-200-tx-0,2050,Wind,PJM,45141.5
+full-base-200-tx-0,2050,Wind,SOU,42907.0
+full-base-200-tx-0,2050,Wind,SPP,61162.0
+full-base-200-tx-0,2050,Wind,TRE,84868.0
+full-base-200-tx-0,2050,Wind,WECC,140506.0
+full-base-200-tx-15,2027,Battery,CA,11546.3
+full-base-200-tx-15,2027,Battery,MISO,215.3
+full-base-200-tx-15,2027,Battery,NE,572.7
+full-base-200-tx-15,2027,Battery,PJM,331.0
+full-base-200-tx-15,2027,Battery,SOU,874.0
+full-base-200-tx-15,2027,Battery,SPP,236.0
+full-base-200-tx-15,2027,Battery,TRE,4703.0
+full-base-200-tx-15,2027,Battery,WECC,3395.0
+full-base-200-tx-15,2027,CCS,CA,4.0
+full-base-200-tx-15,2027,CCS,MISO,10.0
+full-base-200-tx-15,2027,CCS,NE,
+full-base-200-tx-15,2027,CCS,PJM,4.0
+full-base-200-tx-15,2027,CCS,SOU,6.0
+full-base-200-tx-15,2027,CCS,SPP,6.0
+full-base-200-tx-15,2027,CCS,TRE,4.0
+full-base-200-tx-15,2027,CCS,WECC,6.0
+full-base-200-tx-15,2027,Coal,CA,0.0
+full-base-200-tx-15,2027,Coal,MISO,47021.3
+full-base-200-tx-15,2027,Coal,NE,330.0
+full-base-200-tx-15,2027,Coal,PJM,32593.0
+full-base-200-tx-15,2027,Coal,SOU,27684.7
+full-base-200-tx-15,2027,Coal,SPP,19908.0
+full-base-200-tx-15,2027,Coal,TRE,12936.3
+full-base-200-tx-15,2027,Coal,WECC,16340.3
+full-base-200-tx-15,2027,Distributed Solar,CA,11436.0
+full-base-200-tx-15,2027,Distributed Solar,MISO,5247.3
+full-base-200-tx-15,2027,Distributed Solar,NE,6011.7
+full-base-200-tx-15,2027,Distributed Solar,PJM,9909.0
+full-base-200-tx-15,2027,Distributed Solar,SOU,5463.7
+full-base-200-tx-15,2027,Distributed Solar,SPP,1242.0
+full-base-200-tx-15,2027,Distributed Solar,TRE,2996.3
+full-base-200-tx-15,2027,Distributed Solar,WECC,5470.0
+full-base-200-tx-15,2027,Geothermal,CA,24.0
+full-base-200-tx-15,2027,Geothermal,MISO,
+full-base-200-tx-15,2027,Geothermal,NE,
+full-base-200-tx-15,2027,Geothermal,PJM,
+full-base-200-tx-15,2027,Geothermal,SOU,
+full-base-200-tx-15,2027,Geothermal,SPP,
+full-base-200-tx-15,2027,Geothermal,TRE,
+full-base-200-tx-15,2027,Geothermal,WECC,701.7
+full-base-200-tx-15,2027,Hydro,CA,12372.3
+full-base-200-tx-15,2027,Hydro,MISO,10539.7
+full-base-200-tx-15,2027,Hydro,NE,8257.0
+full-base-200-tx-15,2027,Hydro,PJM,8018.7
+full-base-200-tx-15,2027,Hydro,SOU,10008.7
+full-base-200-tx-15,2027,Hydro,SPP,5143.0
+full-base-200-tx-15,2027,Hydro,TRE,496.3
+full-base-200-tx-15,2027,Hydro,WECC,39590.3
+full-base-200-tx-15,2027,Hydrogen,CA,10.0
+full-base-200-tx-15,2027,Hydrogen,MISO,27.0
+full-base-200-tx-15,2027,Hydrogen,NE,26.0
+full-base-200-tx-15,2027,Hydrogen,PJM,21.0
+full-base-200-tx-15,2027,Hydrogen,SOU,18.0
+full-base-200-tx-15,2027,Hydrogen,SPP,18.0
+full-base-200-tx-15,2027,Hydrogen,TRE,12.0
+full-base-200-tx-15,2027,Hydrogen,WECC,25.0
+full-base-200-tx-15,2027,Natural Gas CC,CA,20982.3
+full-base-200-tx-15,2027,Natural Gas CC,MISO,51513.0
+full-base-200-tx-15,2027,Natural Gas CC,NE,29819.3
+full-base-200-tx-15,2027,Natural Gas CC,PJM,59222.3
+full-base-200-tx-15,2027,Natural Gas CC,SOU,64464.0
+full-base-200-tx-15,2027,Natural Gas CC,SPP,11496.0
+full-base-200-tx-15,2027,Natural Gas CC,TRE,41426.0
+full-base-200-tx-15,2027,Natural Gas CC,WECC,30800.3
+full-base-200-tx-15,2027,Natural Gas CT,CA,11086.0
+full-base-200-tx-15,2027,Natural Gas CT,MISO,32921.0
+full-base-200-tx-15,2027,Natural Gas CT,NE,3933.3
+full-base-200-tx-15,2027,Natural Gas CT,PJM,29836.7
+full-base-200-tx-15,2027,Natural Gas CT,SOU,31988.7
+full-base-200-tx-15,2027,Natural Gas CT,SPP,9910.7
+full-base-200-tx-15,2027,Natural Gas CT,TRE,10276.3
+full-base-200-tx-15,2027,Natural Gas CT,WECC,10185.0
+full-base-200-tx-15,2027,Nuclear,CA,2.0
+full-base-200-tx-15,2027,Nuclear,MISO,20281.0
+full-base-200-tx-15,2027,Nuclear,NE,6704.0
+full-base-200-tx-15,2027,Nuclear,PJM,33762.3
+full-base-200-tx-15,2027,Nuclear,SOU,23925.0
+full-base-200-tx-15,2027,Nuclear,SPP,2019.0
+full-base-200-tx-15,2027,Nuclear,TRE,5120.7
+full-base-200-tx-15,2027,Nuclear,WECC,5172.3
+full-base-200-tx-15,2027,Solar,CA,20156.3
+full-base-200-tx-15,2027,Solar,MISO,12441.3
+full-base-200-tx-15,2027,Solar,NE,4595.3
+full-base-200-tx-15,2027,Solar,PJM,11507.0
+full-base-200-tx-15,2027,Solar,SOU,24636.0
+full-base-200-tx-15,2027,Solar,SPP,602.7
+full-base-200-tx-15,2027,Solar,TRE,22396.3
+full-base-200-tx-15,2027,Solar,WECC,19750.3
+full-base-200-tx-15,2027,Wind,CA,5508.7
+full-base-200-tx-15,2027,Wind,MISO,77478.7
+full-base-200-tx-15,2027,Wind,NE,7970.3
+full-base-200-tx-15,2027,Wind,PJM,21169.3
+full-base-200-tx-15,2027,Wind,SOU,1375.3
+full-base-200-tx-15,2027,Wind,SPP,49147.0
+full-base-200-tx-15,2027,Wind,TRE,56552.3
+full-base-200-tx-15,2027,Wind,WECC,52870.7
+full-base-200-tx-15,2030,Battery,CA,11540.7
+full-base-200-tx-15,2030,Battery,MISO,216.0
+full-base-200-tx-15,2030,Battery,NE,570.0
+full-base-200-tx-15,2030,Battery,PJM,216.3
+full-base-200-tx-15,2030,Battery,SOU,874.0
+full-base-200-tx-15,2030,Battery,SPP,236.7
+full-base-200-tx-15,2030,Battery,TRE,4703.0
+full-base-200-tx-15,2030,Battery,WECC,3388.3
+full-base-200-tx-15,2030,CCS,CA,9043.7
+full-base-200-tx-15,2030,CCS,MISO,28611.7
+full-base-200-tx-15,2030,CCS,NE,
+full-base-200-tx-15,2030,CCS,PJM,19952.3
+full-base-200-tx-15,2030,CCS,SOU,32112.7
+full-base-200-tx-15,2030,CCS,SPP,1287.7
+full-base-200-tx-15,2030,CCS,TRE,14468.7
+full-base-200-tx-15,2030,CCS,WECC,1034.3
+full-base-200-tx-15,2030,Coal,CA,0.0
+full-base-200-tx-15,2030,Coal,MISO,42589.3
+full-base-200-tx-15,2030,Coal,NE,329.0
+full-base-200-tx-15,2030,Coal,PJM,28341.0
+full-base-200-tx-15,2030,Coal,SOU,26538.7
+full-base-200-tx-15,2030,Coal,SPP,18674.3
+full-base-200-tx-15,2030,Coal,TRE,10695.0
+full-base-200-tx-15,2030,Coal,WECC,14816.3
+full-base-200-tx-15,2030,Distributed Solar,CA,13608.0
+full-base-200-tx-15,2030,Distributed Solar,MISO,9889.7
+full-base-200-tx-15,2030,Distributed Solar,NE,7504.3
+full-base-200-tx-15,2030,Distributed Solar,PJM,15968.0
+full-base-200-tx-15,2030,Distributed Solar,SOU,9722.0
+full-base-200-tx-15,2030,Distributed Solar,SPP,2341.0
+full-base-200-tx-15,2030,Distributed Solar,TRE,5818.3
+full-base-200-tx-15,2030,Distributed Solar,WECC,7745.7
+full-base-200-tx-15,2030,Geothermal,CA,24.0
+full-base-200-tx-15,2030,Geothermal,MISO,
+full-base-200-tx-15,2030,Geothermal,NE,
+full-base-200-tx-15,2030,Geothermal,PJM,
+full-base-200-tx-15,2030,Geothermal,SOU,
+full-base-200-tx-15,2030,Geothermal,SPP,
+full-base-200-tx-15,2030,Geothermal,TRE,
+full-base-200-tx-15,2030,Geothermal,WECC,641.0
+full-base-200-tx-15,2030,Hydro,CA,12132.0
+full-base-200-tx-15,2030,Hydro,MISO,10295.3
+full-base-200-tx-15,2030,Hydro,NE,7833.7
+full-base-200-tx-15,2030,Hydro,PJM,7687.7
+full-base-200-tx-15,2030,Hydro,SOU,9465.0
+full-base-200-tx-15,2030,Hydro,SPP,5143.0
+full-base-200-tx-15,2030,Hydro,TRE,496.3
+full-base-200-tx-15,2030,Hydro,WECC,39376.0
+full-base-200-tx-15,2030,Hydrogen,CA,10.0
+full-base-200-tx-15,2030,Hydrogen,MISO,30.0
+full-base-200-tx-15,2030,Hydrogen,NE,26.0
+full-base-200-tx-15,2030,Hydrogen,PJM,23.0
+full-base-200-tx-15,2030,Hydrogen,SOU,20.0
+full-base-200-tx-15,2030,Hydrogen,SPP,20.0
+full-base-200-tx-15,2030,Hydrogen,TRE,15.0
+full-base-200-tx-15,2030,Hydrogen,WECC,27.0
+full-base-200-tx-15,2030,Natural Gas CC,CA,20955.0
+full-base-200-tx-15,2030,Natural Gas CC,MISO,51137.3
+full-base-200-tx-15,2030,Natural Gas CC,NE,35070.7
+full-base-200-tx-15,2030,Natural Gas CC,PJM,59199.3
+full-base-200-tx-15,2030,Natural Gas CC,SOU,63183.0
+full-base-200-tx-15,2030,Natural Gas CC,SPP,11496.3
+full-base-200-tx-15,2030,Natural Gas CC,TRE,41320.3
+full-base-200-tx-15,2030,Natural Gas CC,WECC,30708.3
+full-base-200-tx-15,2030,Natural Gas CT,CA,11080.0
+full-base-200-tx-15,2030,Natural Gas CT,MISO,32226.7
+full-base-200-tx-15,2030,Natural Gas CT,NE,3933.3
+full-base-200-tx-15,2030,Natural Gas CT,PJM,29836.7
+full-base-200-tx-15,2030,Natural Gas CT,SOU,31860.3
+full-base-200-tx-15,2030,Natural Gas CT,SPP,9713.7
+full-base-200-tx-15,2030,Natural Gas CT,TRE,10210.3
+full-base-200-tx-15,2030,Natural Gas CT,WECC,10049.3
+full-base-200-tx-15,2030,Nuclear,CA,2.0
+full-base-200-tx-15,2030,Nuclear,MISO,20281.0
+full-base-200-tx-15,2030,Nuclear,NE,6704.0
+full-base-200-tx-15,2030,Nuclear,PJM,33762.3
+full-base-200-tx-15,2030,Nuclear,SOU,23925.0
+full-base-200-tx-15,2030,Nuclear,SPP,2019.0
+full-base-200-tx-15,2030,Nuclear,TRE,5120.7
+full-base-200-tx-15,2030,Nuclear,WECC,5172.3
+full-base-200-tx-15,2030,Solar,CA,38273.0
+full-base-200-tx-15,2030,Solar,MISO,74572.7
+full-base-200-tx-15,2030,Solar,NE,16065.3
+full-base-200-tx-15,2030,Solar,PJM,75971.3
+full-base-200-tx-15,2030,Solar,SOU,79938.0
+full-base-200-tx-15,2030,Solar,SPP,19319.3
+full-base-200-tx-15,2030,Solar,TRE,37074.3
+full-base-200-tx-15,2030,Solar,WECC,37463.3
+full-base-200-tx-15,2030,Wind,CA,6402.3
+full-base-200-tx-15,2030,Wind,MISO,123431.0
+full-base-200-tx-15,2030,Wind,NE,27607.0
+full-base-200-tx-15,2030,Wind,PJM,40025.3
+full-base-200-tx-15,2030,Wind,SOU,28253.0
+full-base-200-tx-15,2030,Wind,SPP,64405.7
+full-base-200-tx-15,2030,Wind,TRE,73828.0
+full-base-200-tx-15,2030,Wind,WECC,96073.0
+full-base-200-tx-15,2035,Battery,CA,11149.3
+full-base-200-tx-15,2035,Battery,MISO,383.0
+full-base-200-tx-15,2035,Battery,NE,4107.3
+full-base-200-tx-15,2035,Battery,PJM,1024.7
+full-base-200-tx-15,2035,Battery,SOU,961.3
+full-base-200-tx-15,2035,Battery,SPP,359.0
+full-base-200-tx-15,2035,Battery,TRE,4601.7
+full-base-200-tx-15,2035,Battery,WECC,3475.0
+full-base-200-tx-15,2035,CCS,CA,21364.0
+full-base-200-tx-15,2035,CCS,MISO,58143.7
+full-base-200-tx-15,2035,CCS,NE,
+full-base-200-tx-15,2035,CCS,PJM,33972.3
+full-base-200-tx-15,2035,CCS,SOU,51113.3
+full-base-200-tx-15,2035,CCS,SPP,6178.0
+full-base-200-tx-15,2035,CCS,TRE,27145.3
+full-base-200-tx-15,2035,CCS,WECC,7812.0
+full-base-200-tx-15,2035,Coal,CA,0.0
+full-base-200-tx-15,2035,Coal,MISO,37323.3
+full-base-200-tx-15,2035,Coal,NE,0.0
+full-base-200-tx-15,2035,Coal,PJM,21683.7
+full-base-200-tx-15,2035,Coal,SOU,22424.0
+full-base-200-tx-15,2035,Coal,SPP,17728.7
+full-base-200-tx-15,2035,Coal,TRE,10695.0
+full-base-200-tx-15,2035,Coal,WECC,12102.3
+full-base-200-tx-15,2035,Distributed Solar,CA,15748.3
+full-base-200-tx-15,2035,Distributed Solar,MISO,16447.3
+full-base-200-tx-15,2035,Distributed Solar,NE,8734.3
+full-base-200-tx-15,2035,Distributed Solar,PJM,20151.3
+full-base-200-tx-15,2035,Distributed Solar,SOU,13537.0
+full-base-200-tx-15,2035,Distributed Solar,SPP,3750.0
+full-base-200-tx-15,2035,Distributed Solar,TRE,8596.7
+full-base-200-tx-15,2035,Distributed Solar,WECC,9887.0
+full-base-200-tx-15,2035,Geothermal,CA,24.0
+full-base-200-tx-15,2035,Geothermal,MISO,
+full-base-200-tx-15,2035,Geothermal,NE,
+full-base-200-tx-15,2035,Geothermal,PJM,
+full-base-200-tx-15,2035,Geothermal,SOU,
+full-base-200-tx-15,2035,Geothermal,SPP,
+full-base-200-tx-15,2035,Geothermal,TRE,
+full-base-200-tx-15,2035,Geothermal,WECC,609.0
+full-base-200-tx-15,2035,Hydro,CA,12047.7
+full-base-200-tx-15,2035,Hydro,MISO,10020.0
+full-base-200-tx-15,2035,Hydro,NE,7779.7
+full-base-200-tx-15,2035,Hydro,PJM,7469.0
+full-base-200-tx-15,2035,Hydro,SOU,9387.3
+full-base-200-tx-15,2035,Hydro,SPP,5127.0
+full-base-200-tx-15,2035,Hydro,TRE,491.0
+full-base-200-tx-15,2035,Hydro,WECC,39196.0
+full-base-200-tx-15,2035,Hydrogen,CA,6.0
+full-base-200-tx-15,2035,Hydrogen,MISO,17.0
+full-base-200-tx-15,2035,Hydrogen,NE,56.7
+full-base-200-tx-15,2035,Hydrogen,PJM,14.0
+full-base-200-tx-15,2035,Hydrogen,SOU,10.5
+full-base-200-tx-15,2035,Hydrogen,SPP,12.5
+full-base-200-tx-15,2035,Hydrogen,TRE,8.0
+full-base-200-tx-15,2035,Hydrogen,WECC,16.0
+full-base-200-tx-15,2035,Natural Gas CC,CA,20930.0
+full-base-200-tx-15,2035,Natural Gas CC,MISO,50771.0
+full-base-200-tx-15,2035,Natural Gas CC,NE,47850.7
+full-base-200-tx-15,2035,Natural Gas CC,PJM,64336.7
+full-base-200-tx-15,2035,Natural Gas CC,SOU,61999.3
+full-base-200-tx-15,2035,Natural Gas CC,SPP,11228.3
+full-base-200-tx-15,2035,Natural Gas CC,TRE,39995.3
+full-base-200-tx-15,2035,Natural Gas CC,WECC,29591.3
+full-base-200-tx-15,2035,Natural Gas CT,CA,10548.0
+full-base-200-tx-15,2035,Natural Gas CT,MISO,31423.0
+full-base-200-tx-15,2035,Natural Gas CT,NE,3971.3
+full-base-200-tx-15,2035,Natural Gas CT,PJM,29791.3
+full-base-200-tx-15,2035,Natural Gas CT,SOU,31857.3
+full-base-200-tx-15,2035,Natural Gas CT,SPP,9381.3
+full-base-200-tx-15,2035,Natural Gas CT,TRE,9927.7
+full-base-200-tx-15,2035,Natural Gas CT,WECC,9309.7
+full-base-200-tx-15,2035,Nuclear,CA,2.0
+full-base-200-tx-15,2035,Nuclear,MISO,20281.0
+full-base-200-tx-15,2035,Nuclear,NE,6705.3
+full-base-200-tx-15,2035,Nuclear,PJM,33767.0
+full-base-200-tx-15,2035,Nuclear,SOU,23925.3
+full-base-200-tx-15,2035,Nuclear,SPP,2019.0
+full-base-200-tx-15,2035,Nuclear,TRE,5120.7
+full-base-200-tx-15,2035,Nuclear,WECC,5172.3
+full-base-200-tx-15,2035,Solar,CA,49407.3
+full-base-200-tx-15,2035,Solar,MISO,100838.3
+full-base-200-tx-15,2035,Solar,NE,29421.7
+full-base-200-tx-15,2035,Solar,PJM,109066.7
+full-base-200-tx-15,2035,Solar,SOU,103900.0
+full-base-200-tx-15,2035,Solar,SPP,29720.0
+full-base-200-tx-15,2035,Solar,TRE,49897.3
+full-base-200-tx-15,2035,Solar,WECC,55198.7
+full-base-200-tx-15,2035,Wind,CA,6864.3
+full-base-200-tx-15,2035,Wind,MISO,138678.0
+full-base-200-tx-15,2035,Wind,NE,36629.3
+full-base-200-tx-15,2035,Wind,PJM,42971.3
+full-base-200-tx-15,2035,Wind,SOU,32583.0
+full-base-200-tx-15,2035,Wind,SPP,71867.7
+full-base-200-tx-15,2035,Wind,TRE,80719.7
+full-base-200-tx-15,2035,Wind,WECC,118585.3
+full-base-200-tx-15,2040,Battery,CA,1359.3
+full-base-200-tx-15,2040,Battery,MISO,491.0
+full-base-200-tx-15,2040,Battery,NE,8269.7
+full-base-200-tx-15,2040,Battery,PJM,9541.3
+full-base-200-tx-15,2040,Battery,SOU,324.7
+full-base-200-tx-15,2040,Battery,SPP,315.3
+full-base-200-tx-15,2040,Battery,TRE,178.7
+full-base-200-tx-15,2040,Battery,WECC,4201.3
+full-base-200-tx-15,2040,CCS,CA,28982.7
+full-base-200-tx-15,2040,CCS,MISO,65742.3
+full-base-200-tx-15,2040,CCS,NE,
+full-base-200-tx-15,2040,CCS,PJM,39404.7
+full-base-200-tx-15,2040,CCS,SOU,57537.7
+full-base-200-tx-15,2040,CCS,SPP,6881.0
+full-base-200-tx-15,2040,CCS,TRE,29988.0
+full-base-200-tx-15,2040,CCS,WECC,13612.3
+full-base-200-tx-15,2040,Coal,CA,0.0
+full-base-200-tx-15,2040,Coal,MISO,27584.3
+full-base-200-tx-15,2040,Coal,NE,0.0
+full-base-200-tx-15,2040,Coal,PJM,8100.7
+full-base-200-tx-15,2040,Coal,SOU,12958.7
+full-base-200-tx-15,2040,Coal,SPP,14079.0
+full-base-200-tx-15,2040,Coal,TRE,10695.0
+full-base-200-tx-15,2040,Coal,WECC,8720.7
+full-base-200-tx-15,2040,Distributed Solar,CA,16410.0
+full-base-200-tx-15,2040,Distributed Solar,MISO,18452.7
+full-base-200-tx-15,2040,Distributed Solar,NE,8864.7
+full-base-200-tx-15,2040,Distributed Solar,PJM,20909.3
+full-base-200-tx-15,2040,Distributed Solar,SOU,14991.3
+full-base-200-tx-15,2040,Distributed Solar,SPP,4437.0
+full-base-200-tx-15,2040,Distributed Solar,TRE,8863.3
+full-base-200-tx-15,2040,Distributed Solar,WECC,10178.0
+full-base-200-tx-15,2040,Geothermal,CA,24.0
+full-base-200-tx-15,2040,Geothermal,MISO,
+full-base-200-tx-15,2040,Geothermal,NE,
+full-base-200-tx-15,2040,Geothermal,PJM,
+full-base-200-tx-15,2040,Geothermal,SOU,
+full-base-200-tx-15,2040,Geothermal,SPP,
+full-base-200-tx-15,2040,Geothermal,TRE,
+full-base-200-tx-15,2040,Geothermal,WECC,371.3
+full-base-200-tx-15,2040,Hydro,CA,12044.3
+full-base-200-tx-15,2040,Hydro,MISO,9420.7
+full-base-200-tx-15,2040,Hydro,NE,7709.7
+full-base-200-tx-15,2040,Hydro,PJM,7209.3
+full-base-200-tx-15,2040,Hydro,SOU,9386.7
+full-base-200-tx-15,2040,Hydro,SPP,4997.0
+full-base-200-tx-15,2040,Hydro,TRE,446.7
+full-base-200-tx-15,2040,Hydro,WECC,37655.7
+full-base-200-tx-15,2040,Hydrogen,CA,7.0
+full-base-200-tx-15,2040,Hydrogen,MISO,15.5
+full-base-200-tx-15,2040,Hydrogen,NE,83.3
+full-base-200-tx-15,2040,Hydrogen,PJM,13.0
+full-base-200-tx-15,2040,Hydrogen,SOU,8.0
+full-base-200-tx-15,2040,Hydrogen,SPP,9.0
+full-base-200-tx-15,2040,Hydrogen,TRE,6.5
+full-base-200-tx-15,2040,Hydrogen,WECC,18.5
+full-base-200-tx-15,2040,Natural Gas CC,CA,20812.3
+full-base-200-tx-15,2040,Natural Gas CC,MISO,50749.0
+full-base-200-tx-15,2040,Natural Gas CC,NE,53547.0
+full-base-200-tx-15,2040,Natural Gas CC,PJM,66287.3
+full-base-200-tx-15,2040,Natural Gas CC,SOU,61423.3
+full-base-200-tx-15,2040,Natural Gas CC,SPP,10947.3
+full-base-200-tx-15,2040,Natural Gas CC,TRE,39342.7
+full-base-200-tx-15,2040,Natural Gas CC,WECC,28877.0
+full-base-200-tx-15,2040,Natural Gas CT,CA,8890.0
+full-base-200-tx-15,2040,Natural Gas CT,MISO,30784.3
+full-base-200-tx-15,2040,Natural Gas CT,NE,3938.3
+full-base-200-tx-15,2040,Natural Gas CT,PJM,28672.3
+full-base-200-tx-15,2040,Natural Gas CT,SOU,31621.3
+full-base-200-tx-15,2040,Natural Gas CT,SPP,8998.7
+full-base-200-tx-15,2040,Natural Gas CT,TRE,8005.0
+full-base-200-tx-15,2040,Natural Gas CT,WECC,9224.3
+full-base-200-tx-15,2040,Nuclear,CA,1.0
+full-base-200-tx-15,2040,Nuclear,MISO,20281.0
+full-base-200-tx-15,2040,Nuclear,NE,6706.0
+full-base-200-tx-15,2040,Nuclear,PJM,33767.0
+full-base-200-tx-15,2040,Nuclear,SOU,23925.3
+full-base-200-tx-15,2040,Nuclear,SPP,2019.3
+full-base-200-tx-15,2040,Nuclear,TRE,5120.7
+full-base-200-tx-15,2040,Nuclear,WECC,5172.3
+full-base-200-tx-15,2040,Solar,CA,53834.3
+full-base-200-tx-15,2040,Solar,MISO,125002.7
+full-base-200-tx-15,2040,Solar,NE,40113.7
+full-base-200-tx-15,2040,Solar,PJM,134073.0
+full-base-200-tx-15,2040,Solar,SOU,127779.3
+full-base-200-tx-15,2040,Solar,SPP,33459.7
+full-base-200-tx-15,2040,Solar,TRE,59263.7
+full-base-200-tx-15,2040,Solar,WECC,73703.3
+full-base-200-tx-15,2040,Wind,CA,6180.3
+full-base-200-tx-15,2040,Wind,MISO,145971.0
+full-base-200-tx-15,2040,Wind,NE,41337.7
+full-base-200-tx-15,2040,Wind,PJM,43168.7
+full-base-200-tx-15,2040,Wind,SOU,36657.3
+full-base-200-tx-15,2040,Wind,SPP,76020.3
+full-base-200-tx-15,2040,Wind,TRE,83221.0
+full-base-200-tx-15,2040,Wind,WECC,126317.3
+full-base-200-tx-15,2045,Battery,CA,3430.3
+full-base-200-tx-15,2045,Battery,MISO,6539.3
+full-base-200-tx-15,2045,Battery,NE,13258.3
+full-base-200-tx-15,2045,Battery,PJM,18737.7
+full-base-200-tx-15,2045,Battery,SOU,2167.7
+full-base-200-tx-15,2045,Battery,SPP,2550.7
+full-base-200-tx-15,2045,Battery,TRE,1538.0
+full-base-200-tx-15,2045,Battery,WECC,18002.3
+full-base-200-tx-15,2045,CCS,CA,37752.3
+full-base-200-tx-15,2045,CCS,MISO,80361.7
+full-base-200-tx-15,2045,CCS,NE,
+full-base-200-tx-15,2045,CCS,PJM,45890.0
+full-base-200-tx-15,2045,CCS,SOU,67461.3
+full-base-200-tx-15,2045,CCS,SPP,9421.7
+full-base-200-tx-15,2045,CCS,TRE,34579.7
+full-base-200-tx-15,2045,CCS,WECC,19094.7
+full-base-200-tx-15,2045,Coal,CA,0.0
+full-base-200-tx-15,2045,Coal,MISO,18722.7
+full-base-200-tx-15,2045,Coal,NE,0.0
+full-base-200-tx-15,2045,Coal,PJM,6507.0
+full-base-200-tx-15,2045,Coal,SOU,11564.7
+full-base-200-tx-15,2045,Coal,SPP,7816.7
+full-base-200-tx-15,2045,Coal,TRE,5158.7
+full-base-200-tx-15,2045,Coal,WECC,7372.0
+full-base-200-tx-15,2045,Distributed Solar,CA,16599.7
+full-base-200-tx-15,2045,Distributed Solar,MISO,20071.7
+full-base-200-tx-15,2045,Distributed Solar,NE,9417.3
+full-base-200-tx-15,2045,Distributed Solar,PJM,21920.7
+full-base-200-tx-15,2045,Distributed Solar,SOU,15617.0
+full-base-200-tx-15,2045,Distributed Solar,SPP,5221.7
+full-base-200-tx-15,2045,Distributed Solar,TRE,8972.0
+full-base-200-tx-15,2045,Distributed Solar,WECC,10368.7
+full-base-200-tx-15,2045,Geothermal,CA,24.0
+full-base-200-tx-15,2045,Geothermal,MISO,
+full-base-200-tx-15,2045,Geothermal,NE,
+full-base-200-tx-15,2045,Geothermal,PJM,
+full-base-200-tx-15,2045,Geothermal,SOU,
+full-base-200-tx-15,2045,Geothermal,SPP,
+full-base-200-tx-15,2045,Geothermal,TRE,
+full-base-200-tx-15,2045,Geothermal,WECC,196.3
+full-base-200-tx-15,2045,Hydro,CA,11585.3
+full-base-200-tx-15,2045,Hydro,MISO,8256.0
+full-base-200-tx-15,2045,Hydro,NE,7701.3
+full-base-200-tx-15,2045,Hydro,PJM,7209.3
+full-base-200-tx-15,2045,Hydro,SOU,9197.7
+full-base-200-tx-15,2045,Hydro,SPP,4877.7
+full-base-200-tx-15,2045,Hydro,TRE,289.3
+full-base-200-tx-15,2045,Hydro,WECC,35561.7
+full-base-200-tx-15,2045,Hydrogen,CA,14.0
+full-base-200-tx-15,2045,Hydrogen,MISO,38.5
+full-base-200-tx-15,2045,Hydrogen,NE,138.3
+full-base-200-tx-15,2045,Hydrogen,PJM,30.5
+full-base-200-tx-15,2045,Hydrogen,SOU,21.5
+full-base-200-tx-15,2045,Hydrogen,SPP,27.0
+full-base-200-tx-15,2045,Hydrogen,TRE,15.5
+full-base-200-tx-15,2045,Hydrogen,WECC,46.5
+full-base-200-tx-15,2045,Natural Gas CC,CA,20815.3
+full-base-200-tx-15,2045,Natural Gas CC,MISO,50718.0
+full-base-200-tx-15,2045,Natural Gas CC,NE,55154.7
+full-base-200-tx-15,2045,Natural Gas CC,PJM,66445.0
+full-base-200-tx-15,2045,Natural Gas CC,SOU,61426.0
+full-base-200-tx-15,2045,Natural Gas CC,SPP,10954.7
+full-base-200-tx-15,2045,Natural Gas CC,TRE,38043.0
+full-base-200-tx-15,2045,Natural Gas CC,WECC,28395.0
+full-base-200-tx-15,2045,Natural Gas CT,CA,8452.3
+full-base-200-tx-15,2045,Natural Gas CT,MISO,28417.3
+full-base-200-tx-15,2045,Natural Gas CT,NE,3890.0
+full-base-200-tx-15,2045,Natural Gas CT,PJM,26159.0
+full-base-200-tx-15,2045,Natural Gas CT,SOU,27313.0
+full-base-200-tx-15,2045,Natural Gas CT,SPP,8820.3
+full-base-200-tx-15,2045,Natural Gas CT,TRE,7617.0
+full-base-200-tx-15,2045,Natural Gas CT,WECC,8471.7
+full-base-200-tx-15,2045,Nuclear,CA,2.0
+full-base-200-tx-15,2045,Nuclear,MISO,20283.7
+full-base-200-tx-15,2045,Nuclear,NE,6709.0
+full-base-200-tx-15,2045,Nuclear,PJM,33772.7
+full-base-200-tx-15,2045,Nuclear,SOU,23927.0
+full-base-200-tx-15,2045,Nuclear,SPP,2021.0
+full-base-200-tx-15,2045,Nuclear,TRE,5122.0
+full-base-200-tx-15,2045,Nuclear,WECC,5175.0
+full-base-200-tx-15,2045,Solar,CA,63858.3
+full-base-200-tx-15,2045,Solar,MISO,147556.0
+full-base-200-tx-15,2045,Solar,NE,49982.0
+full-base-200-tx-15,2045,Solar,PJM,162847.0
+full-base-200-tx-15,2045,Solar,SOU,148393.7
+full-base-200-tx-15,2045,Solar,SPP,39313.7
+full-base-200-tx-15,2045,Solar,TRE,68889.3
+full-base-200-tx-15,2045,Solar,WECC,106079.7
+full-base-200-tx-15,2045,Wind,CA,3516.0
+full-base-200-tx-15,2045,Wind,MISO,156093.0
+full-base-200-tx-15,2045,Wind,NE,45481.3
+full-base-200-tx-15,2045,Wind,PJM,44379.0
+full-base-200-tx-15,2045,Wind,SOU,42669.7
+full-base-200-tx-15,2045,Wind,SPP,82133.0
+full-base-200-tx-15,2045,Wind,TRE,89287.7
+full-base-200-tx-15,2045,Wind,WECC,137097.3
+full-base-200-tx-15,2050,Battery,CA,11296.3
+full-base-200-tx-15,2050,Battery,MISO,24385.7
+full-base-200-tx-15,2050,Battery,NE,16658.0
+full-base-200-tx-15,2050,Battery,PJM,30629.7
+full-base-200-tx-15,2050,Battery,SOU,13624.3
+full-base-200-tx-15,2050,Battery,SPP,6714.7
+full-base-200-tx-15,2050,Battery,TRE,5101.3
+full-base-200-tx-15,2050,Battery,WECC,36296.0
+full-base-200-tx-15,2050,CCS,CA,39357.0
+full-base-200-tx-15,2050,CCS,MISO,86781.3
+full-base-200-tx-15,2050,CCS,NE,
+full-base-200-tx-15,2050,CCS,PJM,49524.3
+full-base-200-tx-15,2050,CCS,SOU,70756.7
+full-base-200-tx-15,2050,CCS,SPP,9473.0
+full-base-200-tx-15,2050,CCS,TRE,35616.3
+full-base-200-tx-15,2050,CCS,WECC,22368.7
+full-base-200-tx-15,2050,Coal,CA,0.0
+full-base-200-tx-15,2050,Coal,MISO,8310.7
+full-base-200-tx-15,2050,Coal,NE,0.0
+full-base-200-tx-15,2050,Coal,PJM,4767.7
+full-base-200-tx-15,2050,Coal,SOU,5364.7
+full-base-200-tx-15,2050,Coal,SPP,3558.0
+full-base-200-tx-15,2050,Coal,TRE,4161.0
+full-base-200-tx-15,2050,Coal,WECC,3967.3
+full-base-200-tx-15,2050,Distributed Solar,CA,16755.7
+full-base-200-tx-15,2050,Distributed Solar,MISO,22530.7
+full-base-200-tx-15,2050,Distributed Solar,NE,9963.7
+full-base-200-tx-15,2050,Distributed Solar,PJM,22930.3
+full-base-200-tx-15,2050,Distributed Solar,SOU,17349.0
+full-base-200-tx-15,2050,Distributed Solar,SPP,6126.0
+full-base-200-tx-15,2050,Distributed Solar,TRE,10109.3
+full-base-200-tx-15,2050,Distributed Solar,WECC,10741.0
+full-base-200-tx-15,2050,Geothermal,CA,24.0
+full-base-200-tx-15,2050,Geothermal,MISO,
+full-base-200-tx-15,2050,Geothermal,NE,
+full-base-200-tx-15,2050,Geothermal,PJM,
+full-base-200-tx-15,2050,Geothermal,SOU,
+full-base-200-tx-15,2050,Geothermal,SPP,
+full-base-200-tx-15,2050,Geothermal,TRE,
+full-base-200-tx-15,2050,Geothermal,WECC,57.7
+full-base-200-tx-15,2050,Hydro,CA,10712.3
+full-base-200-tx-15,2050,Hydro,MISO,7580.7
+full-base-200-tx-15,2050,Hydro,NE,7614.0
+full-base-200-tx-15,2050,Hydro,PJM,7209.0
+full-base-200-tx-15,2050,Hydro,SOU,9101.7
+full-base-200-tx-15,2050,Hydro,SPP,4770.7
+full-base-200-tx-15,2050,Hydro,TRE,231.3
+full-base-200-tx-15,2050,Hydro,WECC,34112.3
+full-base-200-tx-15,2050,Hydrogen,CA,44.5
+full-base-200-tx-15,2050,Hydrogen,MISO,135.0
+full-base-200-tx-15,2050,Hydrogen,NE,167.7
+full-base-200-tx-15,2050,Hydrogen,PJM,101.0
+full-base-200-tx-15,2050,Hydrogen,SOU,71.5
+full-base-200-tx-15,2050,Hydrogen,SPP,89.0
+full-base-200-tx-15,2050,Hydrogen,TRE,51.0
+full-base-200-tx-15,2050,Hydrogen,WECC,150.0
+full-base-200-tx-15,2050,Natural Gas CC,CA,19304.0
+full-base-200-tx-15,2050,Natural Gas CC,MISO,48115.3
+full-base-200-tx-15,2050,Natural Gas CC,NE,54489.3
+full-base-200-tx-15,2050,Natural Gas CC,PJM,65408.0
+full-base-200-tx-15,2050,Natural Gas CC,SOU,61391.0
+full-base-200-tx-15,2050,Natural Gas CC,SPP,10857.0
+full-base-200-tx-15,2050,Natural Gas CC,TRE,36215.3
+full-base-200-tx-15,2050,Natural Gas CC,WECC,28391.7
+full-base-200-tx-15,2050,Natural Gas CT,CA,8298.3
+full-base-200-tx-15,2050,Natural Gas CT,MISO,20324.7
+full-base-200-tx-15,2050,Natural Gas CT,NE,3900.3
+full-base-200-tx-15,2050,Natural Gas CT,PJM,20313.0
+full-base-200-tx-15,2050,Natural Gas CT,SOU,19687.3
+full-base-200-tx-15,2050,Natural Gas CT,SPP,7917.3
+full-base-200-tx-15,2050,Natural Gas CT,TRE,6906.3
+full-base-200-tx-15,2050,Natural Gas CT,WECC,8048.3
+full-base-200-tx-15,2050,Nuclear,CA,5.5
+full-base-200-tx-15,2050,Nuclear,MISO,19709.0
+full-base-200-tx-15,2050,Nuclear,NE,5520.0
+full-base-200-tx-15,2050,Nuclear,PJM,32834.3
+full-base-200-tx-15,2050,Nuclear,SOU,23931.3
+full-base-200-tx-15,2050,Nuclear,SPP,2024.7
+full-base-200-tx-15,2050,Nuclear,TRE,5124.3
+full-base-200-tx-15,2050,Nuclear,WECC,5180.7
+full-base-200-tx-15,2050,Solar,CA,79846.7
+full-base-200-tx-15,2050,Solar,MISO,165264.0
+full-base-200-tx-15,2050,Solar,NE,57792.7
+full-base-200-tx-15,2050,Solar,PJM,183369.0
+full-base-200-tx-15,2050,Solar,SOU,176382.3
+full-base-200-tx-15,2050,Solar,SPP,44350.3
+full-base-200-tx-15,2050,Solar,TRE,77905.7
+full-base-200-tx-15,2050,Solar,WECC,130434.3
+full-base-200-tx-15,2050,Wind,CA,3061.7
+full-base-200-tx-15,2050,Wind,MISO,151931.0
+full-base-200-tx-15,2050,Wind,NE,48667.0
+full-base-200-tx-15,2050,Wind,PJM,42743.0
+full-base-200-tx-15,2050,Wind,SOU,43402.0
+full-base-200-tx-15,2050,Wind,SPP,81821.3
+full-base-200-tx-15,2050,Wind,TRE,89887.7
+full-base-200-tx-15,2050,Wind,WECC,141971.0
+full-base-200-tx-50,2027,Battery,CA,11551.5
+full-base-200-tx-50,2027,Battery,MISO,203.2
+full-base-200-tx-50,2027,Battery,NE,615.5
+full-base-200-tx-50,2027,Battery,PJM,321.5
+full-base-200-tx-50,2027,Battery,SOU,868.0
+full-base-200-tx-50,2027,Battery,SPP,228.2
+full-base-200-tx-50,2027,Battery,TRE,4700.0
+full-base-200-tx-50,2027,Battery,WECC,3386.5
+full-base-200-tx-50,2027,CCS,CA,2.0
+full-base-200-tx-50,2027,CCS,MISO,5.0
+full-base-200-tx-50,2027,CCS,NE,
+full-base-200-tx-50,2027,CCS,PJM,2.0
+full-base-200-tx-50,2027,CCS,SOU,3.0
+full-base-200-tx-50,2027,CCS,SPP,3.0
+full-base-200-tx-50,2027,CCS,TRE,2.0
+full-base-200-tx-50,2027,CCS,WECC,3.0
+full-base-200-tx-50,2027,Coal,CA,0.0
+full-base-200-tx-50,2027,Coal,MISO,47060.5
+full-base-200-tx-50,2027,Coal,NE,330.0
+full-base-200-tx-50,2027,Coal,PJM,32620.2
+full-base-200-tx-50,2027,Coal,SOU,27707.8
+full-base-200-tx-50,2027,Coal,SPP,19924.8
+full-base-200-tx-50,2027,Coal,TRE,12947.2
+full-base-200-tx-50,2027,Coal,WECC,16354.0
+full-base-200-tx-50,2027,Distributed Solar,CA,11430.5
+full-base-200-tx-50,2027,Distributed Solar,MISO,5247.0
+full-base-200-tx-50,2027,Distributed Solar,NE,5987.0
+full-base-200-tx-50,2027,Distributed Solar,PJM,9884.5
+full-base-200-tx-50,2027,Distributed Solar,SOU,5463.5
+full-base-200-tx-50,2027,Distributed Solar,SPP,1242.0
+full-base-200-tx-50,2027,Distributed Solar,TRE,2996.5
+full-base-200-tx-50,2027,Distributed Solar,WECC,5470.0
+full-base-200-tx-50,2027,Geothermal,CA,24.0
+full-base-200-tx-50,2027,Geothermal,MISO,
+full-base-200-tx-50,2027,Geothermal,NE,
+full-base-200-tx-50,2027,Geothermal,PJM,
+full-base-200-tx-50,2027,Geothermal,SOU,
+full-base-200-tx-50,2027,Geothermal,SPP,
+full-base-200-tx-50,2027,Geothermal,TRE,
+full-base-200-tx-50,2027,Geothermal,WECC,689.2
+full-base-200-tx-50,2027,Hydro,CA,12381.8
+full-base-200-tx-50,2027,Hydro,MISO,10569.2
+full-base-200-tx-50,2027,Hydro,NE,8269.2
+full-base-200-tx-50,2027,Hydro,PJM,8031.2
+full-base-200-tx-50,2027,Hydro,SOU,10017.2
+full-base-200-tx-50,2027,Hydro,SPP,5143.5
+full-base-200-tx-50,2027,Hydro,TRE,497.0
+full-base-200-tx-50,2027,Hydro,WECC,39597.0
+full-base-200-tx-50,2027,Hydrogen,CA,4.0
+full-base-200-tx-50,2027,Hydrogen,MISO,10.0
+full-base-200-tx-50,2027,Hydrogen,NE,7.0
+full-base-200-tx-50,2027,Hydrogen,PJM,8.0
+full-base-200-tx-50,2027,Hydrogen,SOU,6.0
+full-base-200-tx-50,2027,Hydrogen,SPP,6.0
+full-base-200-tx-50,2027,Hydrogen,TRE,4.0
+full-base-200-tx-50,2027,Hydrogen,WECC,8.0
+full-base-200-tx-50,2027,Natural Gas CC,CA,20984.8
+full-base-200-tx-50,2027,Natural Gas CC,MISO,51504.5
+full-base-200-tx-50,2027,Natural Gas CC,NE,30435.8
+full-base-200-tx-50,2027,Natural Gas CC,PJM,59222.0
+full-base-200-tx-50,2027,Natural Gas CC,SOU,64489.2
+full-base-200-tx-50,2027,Natural Gas CC,SPP,11494.8
+full-base-200-tx-50,2027,Natural Gas CC,TRE,41428.0
+full-base-200-tx-50,2027,Natural Gas CC,WECC,30820.5
+full-base-200-tx-50,2027,Natural Gas CT,CA,11093.8
+full-base-200-tx-50,2027,Natural Gas CT,MISO,32945.0
+full-base-200-tx-50,2027,Natural Gas CT,NE,3930.0
+full-base-200-tx-50,2027,Natural Gas CT,PJM,29858.5
+full-base-200-tx-50,2027,Natural Gas CT,SOU,32013.2
+full-base-200-tx-50,2027,Natural Gas CT,SPP,9916.2
+full-base-200-tx-50,2027,Natural Gas CT,TRE,10282.8
+full-base-200-tx-50,2027,Natural Gas CT,WECC,10189.8
+full-base-200-tx-50,2027,Nuclear,CA,0.0
+full-base-200-tx-50,2027,Nuclear,MISO,20289.2
+full-base-200-tx-50,2027,Nuclear,NE,6705.8
+full-base-200-tx-50,2027,Nuclear,PJM,33761.0
+full-base-200-tx-50,2027,Nuclear,SOU,23924.0
+full-base-200-tx-50,2027,Nuclear,SPP,2019.8
+full-base-200-tx-50,2027,Nuclear,TRE,5120.0
+full-base-200-tx-50,2027,Nuclear,WECC,5172.0
+full-base-200-tx-50,2027,Solar,CA,20135.5
+full-base-200-tx-50,2027,Solar,MISO,12395.5
+full-base-200-tx-50,2027,Solar,NE,4583.5
+full-base-200-tx-50,2027,Solar,PJM,11472.2
+full-base-200-tx-50,2027,Solar,SOU,24603.5
+full-base-200-tx-50,2027,Solar,SPP,574.5
+full-base-200-tx-50,2027,Solar,TRE,22384.0
+full-base-200-tx-50,2027,Solar,WECC,19652.2
+full-base-200-tx-50,2027,Wind,CA,5498.2
+full-base-200-tx-50,2027,Wind,MISO,77410.2
+full-base-200-tx-50,2027,Wind,NE,7305.8
+full-base-200-tx-50,2027,Wind,PJM,21132.5
+full-base-200-tx-50,2027,Wind,SOU,1324.8
+full-base-200-tx-50,2027,Wind,SPP,49223.5
+full-base-200-tx-50,2027,Wind,TRE,56553.2
+full-base-200-tx-50,2027,Wind,WECC,53046.0
+full-base-200-tx-50,2030,Battery,CA,11545.5
+full-base-200-tx-50,2030,Battery,MISO,203.2
+full-base-200-tx-50,2030,Battery,NE,616.5
+full-base-200-tx-50,2030,Battery,PJM,206.0
+full-base-200-tx-50,2030,Battery,SOU,868.0
+full-base-200-tx-50,2030,Battery,SPP,228.2
+full-base-200-tx-50,2030,Battery,TRE,4700.0
+full-base-200-tx-50,2030,Battery,WECC,3381.0
+full-base-200-tx-50,2030,CCS,CA,8736.5
+full-base-200-tx-50,2030,CCS,MISO,26929.0
+full-base-200-tx-50,2030,CCS,NE,
+full-base-200-tx-50,2030,CCS,PJM,19913.5
+full-base-200-tx-50,2030,CCS,SOU,31421.8
+full-base-200-tx-50,2030,CCS,SPP,533.2
+full-base-200-tx-50,2030,CCS,TRE,13866.0
+full-base-200-tx-50,2030,CCS,WECC,954.2
+full-base-200-tx-50,2030,Coal,CA,0.0
+full-base-200-tx-50,2030,Coal,MISO,42624.8
+full-base-200-tx-50,2030,Coal,NE,329.2
+full-base-200-tx-50,2030,Coal,PJM,28364.8
+full-base-200-tx-50,2030,Coal,SOU,26560.8
+full-base-200-tx-50,2030,Coal,SPP,18690.0
+full-base-200-tx-50,2030,Coal,TRE,10704.0
+full-base-200-tx-50,2030,Coal,WECC,14828.8
+full-base-200-tx-50,2030,Distributed Solar,CA,13601.5
+full-base-200-tx-50,2030,Distributed Solar,MISO,9889.0
+full-base-200-tx-50,2030,Distributed Solar,NE,7471.0
+full-base-200-tx-50,2030,Distributed Solar,PJM,15935.5
+full-base-200-tx-50,2030,Distributed Solar,SOU,9721.8
+full-base-200-tx-50,2030,Distributed Solar,SPP,2341.0
+full-base-200-tx-50,2030,Distributed Solar,TRE,5818.5
+full-base-200-tx-50,2030,Distributed Solar,WECC,7745.5
+full-base-200-tx-50,2030,Geothermal,CA,24.0
+full-base-200-tx-50,2030,Geothermal,MISO,
+full-base-200-tx-50,2030,Geothermal,NE,
+full-base-200-tx-50,2030,Geothermal,PJM,
+full-base-200-tx-50,2030,Geothermal,SOU,
+full-base-200-tx-50,2030,Geothermal,SPP,
+full-base-200-tx-50,2030,Geothermal,TRE,
+full-base-200-tx-50,2030,Geothermal,WECC,630.0
+full-base-200-tx-50,2030,Hydro,CA,12141.5
+full-base-200-tx-50,2030,Hydro,MISO,10320.0
+full-base-200-tx-50,2030,Hydro,NE,7844.5
+full-base-200-tx-50,2030,Hydro,PJM,7699.5
+full-base-200-tx-50,2030,Hydro,SOU,9472.8
+full-base-200-tx-50,2030,Hydro,SPP,5143.5
+full-base-200-tx-50,2030,Hydro,TRE,497.0
+full-base-200-tx-50,2030,Hydro,WECC,39382.2
+full-base-200-tx-50,2030,Hydrogen,CA,4.0
+full-base-200-tx-50,2030,Hydrogen,MISO,10.0
+full-base-200-tx-50,2030,Hydrogen,NE,9.0
+full-base-200-tx-50,2030,Hydrogen,PJM,8.0
+full-base-200-tx-50,2030,Hydrogen,SOU,6.0
+full-base-200-tx-50,2030,Hydrogen,SPP,6.0
+full-base-200-tx-50,2030,Hydrogen,TRE,4.0
+full-base-200-tx-50,2030,Hydrogen,WECC,8.0
+full-base-200-tx-50,2030,Natural Gas CC,CA,20964.0
+full-base-200-tx-50,2030,Natural Gas CC,MISO,51152.2
+full-base-200-tx-50,2030,Natural Gas CC,NE,34830.8
+full-base-200-tx-50,2030,Natural Gas CC,PJM,59222.5
+full-base-200-tx-50,2030,Natural Gas CC,SOU,63232.0
+full-base-200-tx-50,2030,Natural Gas CC,SPP,11494.8
+full-base-200-tx-50,2030,Natural Gas CC,TRE,41348.2
+full-base-200-tx-50,2030,Natural Gas CC,WECC,30728.0
+full-base-200-tx-50,2030,Natural Gas CT,CA,11087.8
+full-base-200-tx-50,2030,Natural Gas CT,MISO,32249.8
+full-base-200-tx-50,2030,Natural Gas CT,NE,3930.0
+full-base-200-tx-50,2030,Natural Gas CT,PJM,29858.5
+full-base-200-tx-50,2030,Natural Gas CT,SOU,31883.8
+full-base-200-tx-50,2030,Natural Gas CT,SPP,9725.0
+full-base-200-tx-50,2030,Natural Gas CT,TRE,10217.0
+full-base-200-tx-50,2030,Natural Gas CT,WECC,10053.5
+full-base-200-tx-50,2030,Nuclear,CA,0.0
+full-base-200-tx-50,2030,Nuclear,MISO,20289.2
+full-base-200-tx-50,2030,Nuclear,NE,6705.8
+full-base-200-tx-50,2030,Nuclear,PJM,33761.0
+full-base-200-tx-50,2030,Nuclear,SOU,23924.0
+full-base-200-tx-50,2030,Nuclear,SPP,2019.8
+full-base-200-tx-50,2030,Nuclear,TRE,5120.0
+full-base-200-tx-50,2030,Nuclear,WECC,5172.0
+full-base-200-tx-50,2030,Solar,CA,38690.2
+full-base-200-tx-50,2030,Solar,MISO,74744.2
+full-base-200-tx-50,2030,Solar,NE,16694.2
+full-base-200-tx-50,2030,Solar,PJM,74297.8
+full-base-200-tx-50,2030,Solar,SOU,79868.2
+full-base-200-tx-50,2030,Solar,SPP,18756.0
+full-base-200-tx-50,2030,Solar,TRE,36860.5
+full-base-200-tx-50,2030,Solar,WECC,37631.5
+full-base-200-tx-50,2030,Wind,CA,6353.0
+full-base-200-tx-50,2030,Wind,MISO,125833.8
+full-base-200-tx-50,2030,Wind,NE,29923.5
+full-base-200-tx-50,2030,Wind,PJM,39996.8
+full-base-200-tx-50,2030,Wind,SOU,28489.2
+full-base-200-tx-50,2030,Wind,SPP,65784.0
+full-base-200-tx-50,2030,Wind,TRE,74003.8
+full-base-200-tx-50,2030,Wind,WECC,95084.2
+full-base-200-tx-50,2035,Battery,CA,11155.2
+full-base-200-tx-50,2035,Battery,MISO,383.8
+full-base-200-tx-50,2035,Battery,NE,4540.5
+full-base-200-tx-50,2035,Battery,PJM,2041.2
+full-base-200-tx-50,2035,Battery,SOU,958.2
+full-base-200-tx-50,2035,Battery,SPP,347.0
+full-base-200-tx-50,2035,Battery,TRE,4605.8
+full-base-200-tx-50,2035,Battery,WECC,3471.2
+full-base-200-tx-50,2035,CCS,CA,21361.0
+full-base-200-tx-50,2035,CCS,MISO,57697.5
+full-base-200-tx-50,2035,CCS,NE,
+full-base-200-tx-50,2035,CCS,PJM,36180.8
+full-base-200-tx-50,2035,CCS,SOU,51182.5
+full-base-200-tx-50,2035,CCS,SPP,5038.8
+full-base-200-tx-50,2035,CCS,TRE,27113.2
+full-base-200-tx-50,2035,CCS,WECC,7834.0
+full-base-200-tx-50,2035,Coal,CA,0.0
+full-base-200-tx-50,2035,Coal,MISO,37354.5
+full-base-200-tx-50,2035,Coal,NE,0.0
+full-base-200-tx-50,2035,Coal,PJM,21701.8
+full-base-200-tx-50,2035,Coal,SOU,22442.8
+full-base-200-tx-50,2035,Coal,SPP,17743.5
+full-base-200-tx-50,2035,Coal,TRE,10704.0
+full-base-200-tx-50,2035,Coal,WECC,12112.5
+full-base-200-tx-50,2035,Distributed Solar,CA,15741.0
+full-base-200-tx-50,2035,Distributed Solar,MISO,16446.2
+full-base-200-tx-50,2035,Distributed Solar,NE,8692.8
+full-base-200-tx-50,2035,Distributed Solar,PJM,20116.0
+full-base-200-tx-50,2035,Distributed Solar,SOU,13536.5
+full-base-200-tx-50,2035,Distributed Solar,SPP,3750.0
+full-base-200-tx-50,2035,Distributed Solar,TRE,8597.0
+full-base-200-tx-50,2035,Distributed Solar,WECC,9886.8
+full-base-200-tx-50,2035,Geothermal,CA,24.0
+full-base-200-tx-50,2035,Geothermal,MISO,
+full-base-200-tx-50,2035,Geothermal,NE,
+full-base-200-tx-50,2035,Geothermal,PJM,
+full-base-200-tx-50,2035,Geothermal,SOU,
+full-base-200-tx-50,2035,Geothermal,SPP,
+full-base-200-tx-50,2035,Geothermal,TRE,
+full-base-200-tx-50,2035,Geothermal,WECC,598.5
+full-base-200-tx-50,2035,Hydro,CA,12056.8
+full-base-200-tx-50,2035,Hydro,MISO,10039.8
+full-base-200-tx-50,2035,Hydro,NE,7790.2
+full-base-200-tx-50,2035,Hydro,PJM,7480.0
+full-base-200-tx-50,2035,Hydro,SOU,9395.0
+full-base-200-tx-50,2035,Hydro,SPP,5127.5
+full-base-200-tx-50,2035,Hydro,TRE,491.5
+full-base-200-tx-50,2035,Hydro,WECC,39202.0
+full-base-200-tx-50,2035,Hydrogen,CA,10.0
+full-base-200-tx-50,2035,Hydrogen,MISO,27.5
+full-base-200-tx-50,2035,Hydrogen,NE,61.0
+full-base-200-tx-50,2035,Hydrogen,PJM,23.0
+full-base-200-tx-50,2035,Hydrogen,SOU,18.0
+full-base-200-tx-50,2035,Hydrogen,SPP,18.5
+full-base-200-tx-50,2035,Hydrogen,TRE,12.5
+full-base-200-tx-50,2035,Hydrogen,WECC,25.5
+full-base-200-tx-50,2035,Natural Gas CC,CA,20947.2
+full-base-200-tx-50,2035,Natural Gas CC,MISO,50799.5
+full-base-200-tx-50,2035,Natural Gas CC,NE,46333.2
+full-base-200-tx-50,2035,Natural Gas CC,PJM,62130.2
+full-base-200-tx-50,2035,Natural Gas CC,SOU,62050.0
+full-base-200-tx-50,2035,Natural Gas CC,SPP,11233.0
+full-base-200-tx-50,2035,Natural Gas CC,TRE,40031.0
+full-base-200-tx-50,2035,Natural Gas CC,WECC,29624.5
+full-base-200-tx-50,2035,Natural Gas CT,CA,10557.0
+full-base-200-tx-50,2035,Natural Gas CT,MISO,31450.5
+full-base-200-tx-50,2035,Natural Gas CT,NE,5482.5
+full-base-200-tx-50,2035,Natural Gas CT,PJM,29814.0
+full-base-200-tx-50,2035,Natural Gas CT,SOU,31884.5
+full-base-200-tx-50,2035,Natural Gas CT,SPP,9395.0
+full-base-200-tx-50,2035,Natural Gas CT,TRE,9936.2
+full-base-200-tx-50,2035,Natural Gas CT,WECC,9317.8
+full-base-200-tx-50,2035,Nuclear,CA,2.0
+full-base-200-tx-50,2035,Nuclear,MISO,20292.0
+full-base-200-tx-50,2035,Nuclear,NE,6708.5
+full-base-200-tx-50,2035,Nuclear,PJM,33765.2
+full-base-200-tx-50,2035,Nuclear,SOU,23926.2
+full-base-200-tx-50,2035,Nuclear,SPP,2021.5
+full-base-200-tx-50,2035,Nuclear,TRE,5121.2
+full-base-200-tx-50,2035,Nuclear,WECC,5174.5
+full-base-200-tx-50,2035,Solar,CA,49279.5
+full-base-200-tx-50,2035,Solar,MISO,101108.2
+full-base-200-tx-50,2035,Solar,NE,31831.0
+full-base-200-tx-50,2035,Solar,PJM,106098.8
+full-base-200-tx-50,2035,Solar,SOU,103905.0
+full-base-200-tx-50,2035,Solar,SPP,29797.8
+full-base-200-tx-50,2035,Solar,TRE,49947.5
+full-base-200-tx-50,2035,Solar,WECC,55805.2
+full-base-200-tx-50,2035,Wind,CA,6843.5
+full-base-200-tx-50,2035,Wind,MISO,140918.2
+full-base-200-tx-50,2035,Wind,NE,40765.0
+full-base-200-tx-50,2035,Wind,PJM,42143.5
+full-base-200-tx-50,2035,Wind,SOU,32344.5
+full-base-200-tx-50,2035,Wind,SPP,73843.8
+full-base-200-tx-50,2035,Wind,TRE,80699.2
+full-base-200-tx-50,2035,Wind,WECC,117989.8
+full-base-200-tx-50,2040,Battery,CA,1083.8
+full-base-200-tx-50,2040,Battery,MISO,344.0
+full-base-200-tx-50,2040,Battery,NE,10057.0
+full-base-200-tx-50,2040,Battery,PJM,9813.2
+full-base-200-tx-50,2040,Battery,SOU,161.0
+full-base-200-tx-50,2040,Battery,SPP,208.3
+full-base-200-tx-50,2040,Battery,TRE,118.0
+full-base-200-tx-50,2040,Battery,WECC,4701.0
+full-base-200-tx-50,2040,CCS,CA,29133.5
+full-base-200-tx-50,2040,CCS,MISO,65410.8
+full-base-200-tx-50,2040,CCS,NE,
+full-base-200-tx-50,2040,CCS,PJM,42584.2
+full-base-200-tx-50,2040,CCS,SOU,57668.0
+full-base-200-tx-50,2040,CCS,SPP,5073.0
+full-base-200-tx-50,2040,CCS,TRE,29994.8
+full-base-200-tx-50,2040,CCS,WECC,14581.5
+full-base-200-tx-50,2040,Coal,CA,0.0
+full-base-200-tx-50,2040,Coal,MISO,27607.5
+full-base-200-tx-50,2040,Coal,NE,0.0
+full-base-200-tx-50,2040,Coal,PJM,8107.5
+full-base-200-tx-50,2040,Coal,SOU,12969.5
+full-base-200-tx-50,2040,Coal,SPP,14090.8
+full-base-200-tx-50,2040,Coal,TRE,10704.0
+full-base-200-tx-50,2040,Coal,WECC,8728.0
+full-base-200-tx-50,2040,Distributed Solar,CA,16402.5
+full-base-200-tx-50,2040,Distributed Solar,MISO,18451.5
+full-base-200-tx-50,2040,Distributed Solar,NE,8822.0
+full-base-200-tx-50,2040,Distributed Solar,PJM,20874.5
+full-base-200-tx-50,2040,Distributed Solar,SOU,14990.5
+full-base-200-tx-50,2040,Distributed Solar,SPP,4437.0
+full-base-200-tx-50,2040,Distributed Solar,TRE,8864.0
+full-base-200-tx-50,2040,Distributed Solar,WECC,10178.5
+full-base-200-tx-50,2040,Geothermal,CA,24.0
+full-base-200-tx-50,2040,Geothermal,MISO,
+full-base-200-tx-50,2040,Geothermal,NE,
+full-base-200-tx-50,2040,Geothermal,PJM,
+full-base-200-tx-50,2040,Geothermal,SOU,
+full-base-200-tx-50,2040,Geothermal,SPP,
+full-base-200-tx-50,2040,Geothermal,TRE,
+full-base-200-tx-50,2040,Geothermal,WECC,372.0
+full-base-200-tx-50,2040,Hydro,CA,12053.5
+full-base-200-tx-50,2040,Hydro,MISO,9437.8
+full-base-200-tx-50,2040,Hydro,NE,7720.0
+full-base-200-tx-50,2040,Hydro,PJM,7219.5
+full-base-200-tx-50,2040,Hydro,SOU,9394.2
+full-base-200-tx-50,2040,Hydro,SPP,4997.2
+full-base-200-tx-50,2040,Hydro,TRE,446.0
+full-base-200-tx-50,2040,Hydro,WECC,37660.5
+full-base-200-tx-50,2040,Hydrogen,CA,8.0
+full-base-200-tx-50,2040,Hydrogen,MISO,22.5
+full-base-200-tx-50,2040,Hydrogen,NE,63.2
+full-base-200-tx-50,2040,Hydrogen,PJM,19.5
+full-base-200-tx-50,2040,Hydrogen,SOU,12.0
+full-base-200-tx-50,2040,Hydrogen,SPP,15.0
+full-base-200-tx-50,2040,Hydrogen,TRE,9.5
+full-base-200-tx-50,2040,Hydrogen,WECC,21.5
+full-base-200-tx-50,2040,Natural Gas CC,CA,20829.8
+full-base-200-tx-50,2040,Natural Gas CC,MISO,50777.8
+full-base-200-tx-50,2040,Natural Gas CC,NE,50766.2
+full-base-200-tx-50,2040,Natural Gas CC,PJM,64511.2
+full-base-200-tx-50,2040,Natural Gas CC,SOU,61473.2
+full-base-200-tx-50,2040,Natural Gas CC,SPP,10952.0
+full-base-200-tx-50,2040,Natural Gas CC,TRE,39378.0
+full-base-200-tx-50,2040,Natural Gas CC,WECC,28894.5
+full-base-200-tx-50,2040,Natural Gas CT,CA,8897.5
+full-base-200-tx-50,2040,Natural Gas CT,MISO,30809.8
+full-base-200-tx-50,2040,Natural Gas CT,NE,6422.2
+full-base-200-tx-50,2040,Natural Gas CT,PJM,28699.0
+full-base-200-tx-50,2040,Natural Gas CT,SOU,31647.8
+full-base-200-tx-50,2040,Natural Gas CT,SPP,9004.8
+full-base-200-tx-50,2040,Natural Gas CT,TRE,8011.5
+full-base-200-tx-50,2040,Natural Gas CT,WECC,9230.8
+full-base-200-tx-50,2040,Nuclear,CA,2.0
+full-base-200-tx-50,2040,Nuclear,MISO,20292.2
+full-base-200-tx-50,2040,Nuclear,NE,6708.5
+full-base-200-tx-50,2040,Nuclear,PJM,33765.5
+full-base-200-tx-50,2040,Nuclear,SOU,23926.2
+full-base-200-tx-50,2040,Nuclear,SPP,2022.0
+full-base-200-tx-50,2040,Nuclear,TRE,5121.5
+full-base-200-tx-50,2040,Nuclear,WECC,5174.5
+full-base-200-tx-50,2040,Solar,CA,53726.0
+full-base-200-tx-50,2040,Solar,MISO,123914.5
+full-base-200-tx-50,2040,Solar,NE,44040.8
+full-base-200-tx-50,2040,Solar,PJM,132298.5
+full-base-200-tx-50,2040,Solar,SOU,127605.0
+full-base-200-tx-50,2040,Solar,SPP,32970.5
+full-base-200-tx-50,2040,Solar,TRE,59259.8
+full-base-200-tx-50,2040,Solar,WECC,74105.0
+full-base-200-tx-50,2040,Wind,CA,6089.8
+full-base-200-tx-50,2040,Wind,MISO,147594.8
+full-base-200-tx-50,2040,Wind,NE,46543.2
+full-base-200-tx-50,2040,Wind,PJM,40169.8
+full-base-200-tx-50,2040,Wind,SOU,36355.2
+full-base-200-tx-50,2040,Wind,SPP,79793.5
+full-base-200-tx-50,2040,Wind,TRE,82982.0
+full-base-200-tx-50,2040,Wind,WECC,124027.2
+full-base-200-tx-50,2045,Battery,CA,3229.8
+full-base-200-tx-50,2045,Battery,MISO,5944.0
+full-base-200-tx-50,2045,Battery,NE,16659.5
+full-base-200-tx-50,2045,Battery,PJM,17794.2
+full-base-200-tx-50,2045,Battery,SOU,1499.2
+full-base-200-tx-50,2045,Battery,SPP,2776.2
+full-base-200-tx-50,2045,Battery,TRE,1344.8
+full-base-200-tx-50,2045,Battery,WECC,20397.8
+full-base-200-tx-50,2045,CCS,CA,38072.2
+full-base-200-tx-50,2045,CCS,MISO,81178.8
+full-base-200-tx-50,2045,CCS,NE,
+full-base-200-tx-50,2045,CCS,PJM,50302.2
+full-base-200-tx-50,2045,CCS,SOU,67592.8
+full-base-200-tx-50,2045,CCS,SPP,7768.2
+full-base-200-tx-50,2045,CCS,TRE,34590.2
+full-base-200-tx-50,2045,CCS,WECC,19709.5
+full-base-200-tx-50,2045,Coal,CA,0.0
+full-base-200-tx-50,2045,Coal,MISO,18738.2
+full-base-200-tx-50,2045,Coal,NE,0.0
+full-base-200-tx-50,2045,Coal,PJM,6512.5
+full-base-200-tx-50,2045,Coal,SOU,11574.2
+full-base-200-tx-50,2045,Coal,SPP,7823.2
+full-base-200-tx-50,2045,Coal,TRE,5163.0
+full-base-200-tx-50,2045,Coal,WECC,7378.2
+full-base-200-tx-50,2045,Distributed Solar,CA,16592.0
+full-base-200-tx-50,2045,Distributed Solar,MISO,20070.8
+full-base-200-tx-50,2045,Distributed Solar,NE,9368.5
+full-base-200-tx-50,2045,Distributed Solar,PJM,21886.0
+full-base-200-tx-50,2045,Distributed Solar,SOU,15616.0
+full-base-200-tx-50,2045,Distributed Solar,SPP,5221.2
+full-base-200-tx-50,2045,Distributed Solar,TRE,8972.5
+full-base-200-tx-50,2045,Distributed Solar,WECC,10368.5
+full-base-200-tx-50,2045,Geothermal,CA,24.0
+full-base-200-tx-50,2045,Geothermal,MISO,
+full-base-200-tx-50,2045,Geothermal,NE,
+full-base-200-tx-50,2045,Geothermal,PJM,
+full-base-200-tx-50,2045,Geothermal,SOU,
+full-base-200-tx-50,2045,Geothermal,SPP,
+full-base-200-tx-50,2045,Geothermal,TRE,
+full-base-200-tx-50,2045,Geothermal,WECC,195.5
+full-base-200-tx-50,2045,Hydro,CA,11594.2
+full-base-200-tx-50,2045,Hydro,MISO,8270.0
+full-base-200-tx-50,2045,Hydro,NE,7711.5
+full-base-200-tx-50,2045,Hydro,PJM,7219.5
+full-base-200-tx-50,2045,Hydro,SOU,9204.5
+full-base-200-tx-50,2045,Hydro,SPP,4874.2
+full-base-200-tx-50,2045,Hydro,TRE,288.5
+full-base-200-tx-50,2045,Hydro,WECC,35564.5
+full-base-200-tx-50,2045,Hydrogen,CA,18.5
+full-base-200-tx-50,2045,Hydrogen,MISO,50.0
+full-base-200-tx-50,2045,Hydrogen,NE,110.2
+full-base-200-tx-50,2045,Hydrogen,PJM,41.0
+full-base-200-tx-50,2045,Hydrogen,SOU,27.0
+full-base-200-tx-50,2045,Hydrogen,SPP,35.5
+full-base-200-tx-50,2045,Hydrogen,TRE,21.0
+full-base-200-tx-50,2045,Hydrogen,WECC,56.5
+full-base-200-tx-50,2045,Natural Gas CC,CA,20832.5
+full-base-200-tx-50,2045,Natural Gas CC,MISO,50748.5
+full-base-200-tx-50,2045,Natural Gas CC,NE,51586.2
+full-base-200-tx-50,2045,Natural Gas CC,PJM,65746.5
+full-base-200-tx-50,2045,Natural Gas CC,SOU,61477.2
+full-base-200-tx-50,2045,Natural Gas CC,SPP,10960.0
+full-base-200-tx-50,2045,Natural Gas CC,TRE,38078.2
+full-base-200-tx-50,2045,Natural Gas CC,WECC,28410.2
+full-base-200-tx-50,2045,Natural Gas CT,CA,8459.2
+full-base-200-tx-50,2045,Natural Gas CT,MISO,28452.2
+full-base-200-tx-50,2045,Natural Gas CT,NE,6369.5
+full-base-200-tx-50,2045,Natural Gas CT,PJM,26184.0
+full-base-200-tx-50,2045,Natural Gas CT,SOU,27335.5
+full-base-200-tx-50,2045,Natural Gas CT,SPP,8833.0
+full-base-200-tx-50,2045,Natural Gas CT,TRE,7623.0
+full-base-200-tx-50,2045,Natural Gas CT,WECC,8476.8
+full-base-200-tx-50,2045,Nuclear,CA,3.0
+full-base-200-tx-50,2045,Nuclear,MISO,20293.0
+full-base-200-tx-50,2045,Nuclear,NE,6709.8
+full-base-200-tx-50,2045,Nuclear,PJM,33766.5
+full-base-200-tx-50,2045,Nuclear,SOU,23927.0
+full-base-200-tx-50,2045,Nuclear,SPP,2022.0
+full-base-200-tx-50,2045,Nuclear,TRE,5121.5
+full-base-200-tx-50,2045,Nuclear,WECC,5175.5
+full-base-200-tx-50,2045,Solar,CA,63783.0
+full-base-200-tx-50,2045,Solar,MISO,146738.2
+full-base-200-tx-50,2045,Solar,NE,55933.8
+full-base-200-tx-50,2045,Solar,PJM,158333.8
+full-base-200-tx-50,2045,Solar,SOU,147919.5
+full-base-200-tx-50,2045,Solar,SPP,38696.5
+full-base-200-tx-50,2045,Solar,TRE,68779.5
+full-base-200-tx-50,2045,Solar,WECC,107086.0
+full-base-200-tx-50,2045,Wind,CA,3301.5
+full-base-200-tx-50,2045,Wind,MISO,157054.0
+full-base-200-tx-50,2045,Wind,NE,50293.8
+full-base-200-tx-50,2045,Wind,PJM,39112.2
+full-base-200-tx-50,2045,Wind,SOU,42331.5
+full-base-200-tx-50,2045,Wind,SPP,86583.2
+full-base-200-tx-50,2045,Wind,TRE,89339.5
+full-base-200-tx-50,2045,Wind,WECC,134221.5
+full-base-200-tx-50,2050,Battery,CA,11149.8
+full-base-200-tx-50,2050,Battery,MISO,24412.2
+full-base-200-tx-50,2050,Battery,NE,19710.8
+full-base-200-tx-50,2050,Battery,PJM,27478.8
+full-base-200-tx-50,2050,Battery,SOU,12236.5
+full-base-200-tx-50,2050,Battery,SPP,7549.0
+full-base-200-tx-50,2050,Battery,TRE,5810.8
+full-base-200-tx-50,2050,Battery,WECC,39275.2
+full-base-200-tx-50,2050,CCS,CA,39629.2
+full-base-200-tx-50,2050,CCS,MISO,88342.0
+full-base-200-tx-50,2050,CCS,NE,
+full-base-200-tx-50,2050,CCS,PJM,53982.5
+full-base-200-tx-50,2050,CCS,SOU,71024.2
+full-base-200-tx-50,2050,CCS,SPP,7797.0
+full-base-200-tx-50,2050,CCS,TRE,35893.5
+full-base-200-tx-50,2050,CCS,WECC,22796.8
+full-base-200-tx-50,2050,Coal,CA,0.0
+full-base-200-tx-50,2050,Coal,MISO,8317.8
+full-base-200-tx-50,2050,Coal,NE,0.0
+full-base-200-tx-50,2050,Coal,PJM,4771.8
+full-base-200-tx-50,2050,Coal,SOU,5369.2
+full-base-200-tx-50,2050,Coal,SPP,3561.0
+full-base-200-tx-50,2050,Coal,TRE,4164.5
+full-base-200-tx-50,2050,Coal,WECC,3970.8
+full-base-200-tx-50,2050,Distributed Solar,CA,16748.2
+full-base-200-tx-50,2050,Distributed Solar,MISO,22530.0
+full-base-200-tx-50,2050,Distributed Solar,NE,9910.2
+full-base-200-tx-50,2050,Distributed Solar,PJM,22896.5
+full-base-200-tx-50,2050,Distributed Solar,SOU,17348.0
+full-base-200-tx-50,2050,Distributed Solar,SPP,6127.0
+full-base-200-tx-50,2050,Distributed Solar,TRE,10109.8
+full-base-200-tx-50,2050,Distributed Solar,WECC,10742.2
+full-base-200-tx-50,2050,Geothermal,CA,24.0
+full-base-200-tx-50,2050,Geothermal,MISO,
+full-base-200-tx-50,2050,Geothermal,NE,
+full-base-200-tx-50,2050,Geothermal,PJM,
+full-base-200-tx-50,2050,Geothermal,SOU,
+full-base-200-tx-50,2050,Geothermal,SPP,
+full-base-200-tx-50,2050,Geothermal,TRE,
+full-base-200-tx-50,2050,Geothermal,WECC,62.2
+full-base-200-tx-50,2050,Hydro,CA,10719.0
+full-base-200-tx-50,2050,Hydro,MISO,7588.8
+full-base-200-tx-50,2050,Hydro,NE,7624.0
+full-base-200-tx-50,2050,Hydro,PJM,7219.2
+full-base-200-tx-50,2050,Hydro,SOU,9110.8
+full-base-200-tx-50,2050,Hydro,SPP,4766.5
+full-base-200-tx-50,2050,Hydro,TRE,230.5
+full-base-200-tx-50,2050,Hydro,WECC,34115.0
+full-base-200-tx-50,2050,Hydrogen,CA,45.5
+full-base-200-tx-50,2050,Hydrogen,MISO,136.5
+full-base-200-tx-50,2050,Hydrogen,NE,120.2
+full-base-200-tx-50,2050,Hydrogen,PJM,104.5
+full-base-200-tx-50,2050,Hydrogen,SOU,73.5
+full-base-200-tx-50,2050,Hydrogen,SPP,88.0
+full-base-200-tx-50,2050,Hydrogen,TRE,52.0
+full-base-200-tx-50,2050,Hydrogen,WECC,150.5
+full-base-200-tx-50,2050,Natural Gas CC,CA,19316.2
+full-base-200-tx-50,2050,Natural Gas CC,MISO,48122.5
+full-base-200-tx-50,2050,Natural Gas CC,NE,50893.2
+full-base-200-tx-50,2050,Natural Gas CC,PJM,64705.2
+full-base-200-tx-50,2050,Natural Gas CC,SOU,61436.0
+full-base-200-tx-50,2050,Natural Gas CC,SPP,10850.0
+full-base-200-tx-50,2050,Natural Gas CC,TRE,36219.5
+full-base-200-tx-50,2050,Natural Gas CC,WECC,28390.5
+full-base-200-tx-50,2050,Natural Gas CT,CA,8300.2
+full-base-200-tx-50,2050,Natural Gas CT,MISO,20331.5
+full-base-200-tx-50,2050,Natural Gas CT,NE,6371.2
+full-base-200-tx-50,2050,Natural Gas CT,PJM,20316.2
+full-base-200-tx-50,2050,Natural Gas CT,SOU,19698.0
+full-base-200-tx-50,2050,Natural Gas CT,SPP,7910.0
+full-base-200-tx-50,2050,Natural Gas CT,TRE,6908.0
+full-base-200-tx-50,2050,Natural Gas CT,WECC,8040.0
+full-base-200-tx-50,2050,Nuclear,CA,6.5
+full-base-200-tx-50,2050,Nuclear,MISO,19715.0
+full-base-200-tx-50,2050,Nuclear,NE,5518.5
+full-base-200-tx-50,2050,Nuclear,PJM,32829.0
+full-base-200-tx-50,2050,Nuclear,SOU,23931.0
+full-base-200-tx-50,2050,Nuclear,SPP,2025.0
+full-base-200-tx-50,2050,Nuclear,TRE,5123.8
+full-base-200-tx-50,2050,Nuclear,WECC,5180.2
+full-base-200-tx-50,2050,Solar,CA,79697.5
+full-base-200-tx-50,2050,Solar,MISO,165194.2
+full-base-200-tx-50,2050,Solar,NE,67113.5
+full-base-200-tx-50,2050,Solar,PJM,174872.8
+full-base-200-tx-50,2050,Solar,SOU,175262.0
+full-base-200-tx-50,2050,Solar,SPP,44091.2
+full-base-200-tx-50,2050,Solar,TRE,77722.0
+full-base-200-tx-50,2050,Solar,WECC,131048.0
+full-base-200-tx-50,2050,Wind,CA,2826.2
+full-base-200-tx-50,2050,Wind,MISO,152182.0
+full-base-200-tx-50,2050,Wind,NE,50783.0
+full-base-200-tx-50,2050,Wind,PJM,37429.2
+full-base-200-tx-50,2050,Wind,SOU,42963.2
+full-base-200-tx-50,2050,Wind,SPP,87482.0
+full-base-200-tx-50,2050,Wind,TRE,89294.0
+full-base-200-tx-50,2050,Wind,WECC,139514.2
