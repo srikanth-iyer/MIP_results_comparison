@@ -37,6 +37,11 @@ jobs:
           cd bin
           python extra_capacity_calcs.py
 
+      - name: Create compilation data files
+        run: |
+          cd ../notebooks
+          python compile_comparison_results.py
+
       - name: Check for modified files
         id: git-check
         run: |
