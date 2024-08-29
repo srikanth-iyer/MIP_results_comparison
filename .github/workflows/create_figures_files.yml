@@ -36,10 +36,11 @@ jobs:
         run: |
           cd bin
           python extra_capacity_calcs.py
+          cd ..
 
       - name: Create compilation data files
         run: |
-          cd ../notebooks
+          cd notebooks
           python compile_comparison_results.py
 
       - name: Check for modified files
