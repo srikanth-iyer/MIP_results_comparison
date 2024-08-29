@@ -1612,13 +1612,24 @@ def chart_tx_expansion(
     height=200,
     width=alt.Step(20),
 ) -> alt.Chart:
-    if data.empty:
+    if tx_data.empty:
         return None
+    if tx_data[x_var].nunique() < 4:
+        width = 80
+    tx_data["line_name"] = tx_data["line_name"].str.replace("_to_", " | ")
+
+    by = [
+        c
+        for c in [x_var, facet_col, col_var, row_var, "planning_year"]
+        if c is not None
+    ]
+    data = tx_data.groupby(by, as_index=False)["value"].sum()
+
     _tooltip = [
         alt.Tooltip("sum(v)", format=",.0f", title="Period GW"),
         alt.Tooltip("y", title=title_case("planning_year")),
     ]
-    data["line_name"] = data["line_name"].str.replace("_to_", " | ")
+
     if order is None:
         order = sorted(data[x_var].unique())
     if col_var is None or row_var is None:
