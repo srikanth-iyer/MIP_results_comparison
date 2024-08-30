@@ -1602,7 +1602,7 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
 
 
 def chart_tx_expansion(
-    data: pd.DataFrame,
+    tx_data: pd.DataFrame,
     x_var="model",
     facet_col="line_name",
     n_cols=10,
