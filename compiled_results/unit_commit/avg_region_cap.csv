@@ -575,30 +575,30 @@ full-base-200,2050,Wind,SOU,41397.2
 full-base-200,2050,Wind,SPP,127876.5
 full-base-200,2050,Wind,TRE,99890.8
 full-base-200,2050,Wind,WECC,142995.8
-full-base-200-commit,2027,Battery,CA,11581.5
+full-base-200-commit,2027,Battery,CA,11580.0
 full-base-200-commit,2027,Battery,MISO,202.5
 full-base-200-commit,2027,Battery,NE,563.5
 full-base-200-commit,2027,Battery,PJM,321.0
 full-base-200-commit,2027,Battery,SOU,869.5
-full-base-200-commit,2027,Battery,SPP,230.0
-full-base-200-commit,2027,Battery,TRE,4725.0
+full-base-200-commit,2027,Battery,SPP,229.5
+full-base-200-commit,2027,Battery,TRE,4707.0
 full-base-200-commit,2027,Battery,WECC,3394.0
 full-base-200-commit,2027,CCS,CA,0.0
-full-base-200-commit,2027,CCS,MISO,2.0
+full-base-200-commit,2027,CCS,MISO,1.0
 full-base-200-commit,2027,CCS,NE,
-full-base-200-commit,2027,CCS,PJM,1.0
-full-base-200-commit,2027,CCS,SOU,1.0
+full-base-200-commit,2027,CCS,PJM,0.5
+full-base-200-commit,2027,CCS,SOU,0.5
 full-base-200-commit,2027,CCS,SPP,0.0
 full-base-200-commit,2027,CCS,TRE,0.0
 full-base-200-commit,2027,CCS,WECC,0.0
 full-base-200-commit,2027,Coal,CA,0.0
-full-base-200-commit,2027,Coal,MISO,47983.5
+full-base-200-commit,2027,Coal,MISO,47178.0
 full-base-200-commit,2027,Coal,NE,330.0
-full-base-200-commit,2027,Coal,PJM,33265.5
-full-base-200-commit,2027,Coal,SOU,28279.0
+full-base-200-commit,2027,Coal,PJM,32702.0
+full-base-200-commit,2027,Coal,SOU,27777.0
 full-base-200-commit,2027,Coal,SPP,19975.0
-full-base-200-commit,2027,Coal,TRE,13307.5
-full-base-200-commit,2027,Coal,WECC,17152.0
+full-base-200-commit,2027,Coal,TRE,12980.0
+full-base-200-commit,2027,Coal,WECC,16395.0
 full-base-200-commit,2027,Distributed Solar,CA,11430.5
 full-base-200-commit,2027,Distributed Solar,MISO,5247.0
 full-base-200-commit,2027,Distributed Solar,NE,5987.0
@@ -615,38 +615,38 @@ full-base-200-commit,2027,Geothermal,SOU,
 full-base-200-commit,2027,Geothermal,SPP,
 full-base-200-commit,2027,Geothermal,TRE,
 full-base-200-commit,2027,Geothermal,WECC,652.0
-full-base-200-commit,2027,Hydro,CA,12427.5
-full-base-200-commit,2027,Hydro,MISO,10647.0
-full-base-200-commit,2027,Hydro,NE,8324.0
-full-base-200-commit,2027,Hydro,PJM,8071.0
-full-base-200-commit,2027,Hydro,SOU,10123.5
+full-base-200-commit,2027,Hydro,CA,12410.0
+full-base-200-commit,2027,Hydro,MISO,10632.5
+full-base-200-commit,2027,Hydro,NE,8305.5
+full-base-200-commit,2027,Hydro,PJM,8070.0
+full-base-200-commit,2027,Hydro,SOU,10043.0
 full-base-200-commit,2027,Hydro,SPP,5155.5
-full-base-200-commit,2027,Hydro,TRE,502.0
-full-base-200-commit,2027,Hydro,WECC,39656.0
+full-base-200-commit,2027,Hydro,TRE,499.0
+full-base-200-commit,2027,Hydro,WECC,39617.0
 full-base-200-commit,2027,Hydrogen,CA,0.0
 full-base-200-commit,2027,Hydrogen,MISO,0.0
-full-base-200-commit,2027,Hydrogen,NE,2.0
+full-base-200-commit,2027,Hydrogen,NE,1.0
 full-base-200-commit,2027,Hydrogen,PJM,0.0
 full-base-200-commit,2027,Hydrogen,SOU,0.0
 full-base-200-commit,2027,Hydrogen,SPP,0.0
 full-base-200-commit,2027,Hydrogen,TRE,0.0
 full-base-200-commit,2027,Hydrogen,WECC,0.0
-full-base-200-commit,2027,Natural Gas CC,CA,21071.0
-full-base-200-commit,2027,Natural Gas CC,MISO,52620.5
-full-base-200-commit,2027,Natural Gas CC,NE,26942.5
-full-base-200-commit,2027,Natural Gas CC,PJM,59910.0
-full-base-200-commit,2027,Natural Gas CC,SOU,66481.0
-full-base-200-commit,2027,Natural Gas CC,SPP,11766.0
-full-base-200-commit,2027,Natural Gas CC,TRE,41624.5
-full-base-200-commit,2027,Natural Gas CC,WECC,31224.5
+full-base-200-commit,2027,Natural Gas CC,CA,20998.0
+full-base-200-commit,2027,Natural Gas CC,MISO,52863.5
+full-base-200-commit,2027,Natural Gas CC,NE,26953.0
+full-base-200-commit,2027,Natural Gas CC,PJM,59240.0
+full-base-200-commit,2027,Natural Gas CC,SOU,64579.5
+full-base-200-commit,2027,Natural Gas CC,SPP,11503.0
+full-base-200-commit,2027,Natural Gas CC,TRE,41445.0
+full-base-200-commit,2027,Natural Gas CC,WECC,30898.5
 full-base-200-commit,2027,Natural Gas CT,CA,11121.0
-full-base-200-commit,2027,Natural Gas CT,MISO,33061.0
+full-base-200-commit,2027,Natural Gas CT,MISO,33029.5
 full-base-200-commit,2027,Natural Gas CT,NE,3930.5
 full-base-200-commit,2027,Natural Gas CT,PJM,29934.0
-full-base-200-commit,2027,Natural Gas CT,SOU,32107.0
-full-base-200-commit,2027,Natural Gas CT,SPP,9973.0
-full-base-200-commit,2027,Natural Gas CT,TRE,10357.0
-full-base-200-commit,2027,Natural Gas CT,WECC,10241.0
+full-base-200-commit,2027,Natural Gas CT,SOU,32094.5
+full-base-200-commit,2027,Natural Gas CT,SPP,9941.5
+full-base-200-commit,2027,Natural Gas CT,TRE,10309.0
+full-base-200-commit,2027,Natural Gas CT,WECC,10216.0
 full-base-200-commit,2027,Nuclear,CA,0.0
 full-base-200-commit,2027,Nuclear,MISO,20319.0
 full-base-200-commit,2027,Nuclear,NE,6714.0
@@ -658,41 +658,41 @@ full-base-200-commit,2027,Nuclear,WECC,5175.0
 full-base-200-commit,2027,Solar,CA,20129.5
 full-base-200-commit,2027,Solar,MISO,12397.5
 full-base-200-commit,2027,Solar,NE,4582.0
-full-base-200-commit,2027,Solar,PJM,11466.0
+full-base-200-commit,2027,Solar,PJM,11464.0
 full-base-200-commit,2027,Solar,SOU,24601.0
 full-base-200-commit,2027,Solar,SPP,572.0
 full-base-200-commit,2027,Solar,TRE,22379.0
 full-base-200-commit,2027,Solar,WECC,19623.0
-full-base-200-commit,2027,Wind,CA,5504.5
-full-base-200-commit,2027,Wind,MISO,77390.5
-full-base-200-commit,2027,Wind,NE,7776.0
-full-base-200-commit,2027,Wind,PJM,21371.0
-full-base-200-commit,2027,Wind,SOU,1755.0
-full-base-200-commit,2027,Wind,SPP,49606.0
-full-base-200-commit,2027,Wind,TRE,55763.5
-full-base-200-commit,2027,Wind,WECC,53630.0
-full-base-200-commit,2030,Battery,CA,11576.0
-full-base-200-commit,2030,Battery,MISO,209.0
-full-base-200-commit,2030,Battery,NE,593.0
-full-base-200-commit,2030,Battery,PJM,252.5
-full-base-200-commit,2030,Battery,SOU,897.0
-full-base-200-commit,2030,Battery,SPP,232.5
-full-base-200-commit,2030,Battery,TRE,4709.0
+full-base-200-commit,2027,Wind,CA,5498.0
+full-base-200-commit,2027,Wind,MISO,78464.5
+full-base-200-commit,2027,Wind,NE,7775.5
+full-base-200-commit,2027,Wind,PJM,21653.0
+full-base-200-commit,2027,Wind,SOU,2218.0
+full-base-200-commit,2027,Wind,SPP,50188.5
+full-base-200-commit,2027,Wind,TRE,54905.0
+full-base-200-commit,2027,Wind,WECC,56193.5
+full-base-200-commit,2030,Battery,CA,11573.0
+full-base-200-commit,2030,Battery,MISO,213.5
+full-base-200-commit,2030,Battery,NE,867.0
+full-base-200-commit,2030,Battery,PJM,210.0
+full-base-200-commit,2030,Battery,SOU,1119.5
+full-base-200-commit,2030,Battery,SPP,234.0
+full-base-200-commit,2030,Battery,TRE,4710.0
 full-base-200-commit,2030,Battery,WECC,3391.0
-full-base-200-commit,2030,CCS,CA,6334.5
-full-base-200-commit,2030,CCS,MISO,14696.0
+full-base-200-commit,2030,CCS,CA,6448.0
+full-base-200-commit,2030,CCS,MISO,15592.5
 full-base-200-commit,2030,CCS,NE,
-full-base-200-commit,2030,CCS,PJM,21888.5
-full-base-200-commit,2030,CCS,SOU,30907.0
-full-base-200-commit,2030,CCS,SPP,11.0
-full-base-200-commit,2030,CCS,TRE,8598.5
-full-base-200-commit,2030,CCS,WECC,8.0
+full-base-200-commit,2030,CCS,PJM,25211.0
+full-base-200-commit,2030,CCS,SOU,33304.5
+full-base-200-commit,2030,CCS,SPP,6.5
+full-base-200-commit,2030,CCS,TRE,8231.0
+full-base-200-commit,2030,CCS,WECC,4.0
 full-base-200-commit,2030,Coal,CA,0.0
-full-base-200-commit,2030,Coal,MISO,42840.5
+full-base-200-commit,2030,Coal,MISO,42731.0
 full-base-200-commit,2030,Coal,NE,330.0
-full-base-200-commit,2030,Coal,PJM,28978.0
+full-base-200-commit,2030,Coal,PJM,28436.0
 full-base-200-commit,2030,Coal,SOU,26627.0
-full-base-200-commit,2030,Coal,SPP,18794.5
+full-base-200-commit,2030,Coal,SPP,18737.0
 full-base-200-commit,2030,Coal,TRE,10731.0
 full-base-200-commit,2030,Coal,WECC,14866.0
 full-base-200-commit,2030,Distributed Solar,CA,13601.5
@@ -710,40 +710,40 @@ full-base-200-commit,2030,Geothermal,PJM,
 full-base-200-commit,2030,Geothermal,SOU,
 full-base-200-commit,2030,Geothermal,SPP,
 full-base-200-commit,2030,Geothermal,TRE,
-full-base-200-commit,2030,Geothermal,WECC,609.5
-full-base-200-commit,2030,Hydro,CA,12172.5
-full-base-200-commit,2030,Hydro,MISO,10423.0
-full-base-200-commit,2030,Hydro,NE,8028.0
-full-base-200-commit,2030,Hydro,PJM,7736.0
-full-base-200-commit,2030,Hydro,SOU,9621.0
+full-base-200-commit,2030,Geothermal,WECC,596.5
+full-base-200-commit,2030,Hydro,CA,12169.0
+full-base-200-commit,2030,Hydro,MISO,10369.5
+full-base-200-commit,2030,Hydro,NE,7877.0
+full-base-200-commit,2030,Hydro,PJM,7735.5
+full-base-200-commit,2030,Hydro,SOU,9496.0
 full-base-200-commit,2030,Hydro,SPP,5155.5
 full-base-200-commit,2030,Hydro,TRE,499.0
-full-base-200-commit,2030,Hydro,WECC,39451.0
-full-base-200-commit,2030,Hydrogen,CA,4.0
-full-base-200-commit,2030,Hydrogen,MISO,10.0
-full-base-200-commit,2030,Hydrogen,NE,6.0
-full-base-200-commit,2030,Hydrogen,PJM,8.0
-full-base-200-commit,2030,Hydrogen,SOU,6.0
-full-base-200-commit,2030,Hydrogen,SPP,6.0
-full-base-200-commit,2030,Hydrogen,TRE,4.0
-full-base-200-commit,2030,Hydrogen,WECC,8.0
-full-base-200-commit,2030,Natural Gas CC,CA,21071.5
-full-base-200-commit,2030,Natural Gas CC,MISO,52445.0
-full-base-200-commit,2030,Natural Gas CC,NE,28508.5
-full-base-200-commit,2030,Natural Gas CC,PJM,59912.0
-full-base-200-commit,2030,Natural Gas CC,SOU,65348.5
-full-base-200-commit,2030,Natural Gas CC,SPP,11767.0
-full-base-200-commit,2030,Natural Gas CC,TRE,41626.5
-full-base-200-commit,2030,Natural Gas CC,WECC,30934.5
-full-base-200-commit,2030,Natural Gas CT,CA,11119.0
-full-base-200-commit,2030,Natural Gas CT,MISO,32368.5
+full-base-200-commit,2030,Hydro,WECC,39400.5
+full-base-200-commit,2030,Hydrogen,CA,2.0
+full-base-200-commit,2030,Hydrogen,MISO,5.0
+full-base-200-commit,2030,Hydrogen,NE,3.0
+full-base-200-commit,2030,Hydrogen,PJM,4.0
+full-base-200-commit,2030,Hydrogen,SOU,3.0
+full-base-200-commit,2030,Hydrogen,SPP,3.0
+full-base-200-commit,2030,Hydrogen,TRE,2.0
+full-base-200-commit,2030,Hydrogen,WECC,4.0
+full-base-200-commit,2030,Natural Gas CC,CA,20998.5
+full-base-200-commit,2030,Natural Gas CC,MISO,52578.5
+full-base-200-commit,2030,Natural Gas CC,NE,28153.0
+full-base-200-commit,2030,Natural Gas CC,PJM,59242.0
+full-base-200-commit,2030,Natural Gas CC,SOU,63392.5
+full-base-200-commit,2030,Natural Gas CC,SPP,11504.0
+full-base-200-commit,2030,Natural Gas CC,TRE,41447.0
+full-base-200-commit,2030,Natural Gas CC,WECC,30807.0
+full-base-200-commit,2030,Natural Gas CT,CA,11116.0
+full-base-200-commit,2030,Natural Gas CT,MISO,32332.5
 full-base-200-commit,2030,Natural Gas CT,NE,3931.0
 full-base-200-commit,2030,Natural Gas CT,PJM,29934.0
-full-base-200-commit,2030,Natural Gas CT,SOU,32029.5
+full-base-200-commit,2030,Natural Gas CT,SOU,31964.5
 full-base-200-commit,2030,Natural Gas CT,SPP,9767.5
 full-base-200-commit,2030,Natural Gas CT,TRE,10243.0
-full-base-200-commit,2030,Natural Gas CT,WECC,10111.5
-full-base-200-commit,2030,Nuclear,CA,2.0
+full-base-200-commit,2030,Natural Gas CT,WECC,10079.0
+full-base-200-commit,2030,Nuclear,CA,1.0
 full-base-200-commit,2030,Nuclear,MISO,20321.5
 full-base-200-commit,2030,Nuclear,NE,6715.0
 full-base-200-commit,2030,Nuclear,PJM,33763.0
@@ -751,43 +751,43 @@ full-base-200-commit,2030,Nuclear,SOU,23925.5
 full-base-200-commit,2030,Nuclear,SPP,2026.5
 full-base-200-commit,2030,Nuclear,TRE,5121.0
 full-base-200-commit,2030,Nuclear,WECC,5177.0
-full-base-200-commit,2030,Solar,CA,37826.0
-full-base-200-commit,2030,Solar,MISO,65385.5
-full-base-200-commit,2030,Solar,NE,13689.5
-full-base-200-commit,2030,Solar,PJM,63557.5
-full-base-200-commit,2030,Solar,SOU,66474.5
-full-base-200-commit,2030,Solar,SPP,13121.5
-full-base-200-commit,2030,Solar,TRE,31257.0
-full-base-200-commit,2030,Solar,WECC,41007.0
-full-base-200-commit,2030,Wind,CA,6301.5
-full-base-200-commit,2030,Wind,MISO,130525.5
-full-base-200-commit,2030,Wind,NE,32904.0
-full-base-200-commit,2030,Wind,PJM,41079.0
-full-base-200-commit,2030,Wind,SOU,25129.0
-full-base-200-commit,2030,Wind,SPP,97518.5
-full-base-200-commit,2030,Wind,TRE,84611.0
-full-base-200-commit,2030,Wind,WECC,96528.0
-full-base-200-commit,2035,Battery,CA,11230.5
-full-base-200-commit,2035,Battery,MISO,1874.0
-full-base-200-commit,2035,Battery,NE,6439.5
-full-base-200-commit,2035,Battery,PJM,3158.0
-full-base-200-commit,2035,Battery,SOU,3176.0
-full-base-200-commit,2035,Battery,SPP,219.5
-full-base-200-commit,2035,Battery,TRE,4589.0
-full-base-200-commit,2035,Battery,WECC,3310.5
-full-base-200-commit,2035,CCS,CA,18165.5
-full-base-200-commit,2035,CCS,MISO,46425.0
+full-base-200-commit,2030,Solar,CA,36063.5
+full-base-200-commit,2030,Solar,MISO,60902.0
+full-base-200-commit,2030,Solar,NE,12376.0
+full-base-200-commit,2030,Solar,PJM,52687.5
+full-base-200-commit,2030,Solar,SOU,55810.0
+full-base-200-commit,2030,Solar,SPP,13091.5
+full-base-200-commit,2030,Solar,TRE,30874.5
+full-base-200-commit,2030,Solar,WECC,41659.5
+full-base-200-commit,2030,Wind,CA,6302.0
+full-base-200-commit,2030,Wind,MISO,130467.5
+full-base-200-commit,2030,Wind,NE,33091.5
+full-base-200-commit,2030,Wind,PJM,40778.5
+full-base-200-commit,2030,Wind,SOU,25079.5
+full-base-200-commit,2030,Wind,SPP,99359.5
+full-base-200-commit,2030,Wind,TRE,86162.5
+full-base-200-commit,2030,Wind,WECC,97949.0
+full-base-200-commit,2035,Battery,CA,11089.5
+full-base-200-commit,2035,Battery,MISO,4584.5
+full-base-200-commit,2035,Battery,NE,9333.5
+full-base-200-commit,2035,Battery,PJM,6424.0
+full-base-200-commit,2035,Battery,SOU,6589.0
+full-base-200-commit,2035,Battery,SPP,215.5
+full-base-200-commit,2035,Battery,TRE,4537.0
+full-base-200-commit,2035,Battery,WECC,3311.0
+full-base-200-commit,2035,CCS,CA,18063.0
+full-base-200-commit,2035,CCS,MISO,46833.0
 full-base-200-commit,2035,CCS,NE,
-full-base-200-commit,2035,CCS,PJM,48973.0
-full-base-200-commit,2035,CCS,SOU,50075.5
-full-base-200-commit,2035,CCS,SPP,9.5
-full-base-200-commit,2035,CCS,TRE,20297.0
-full-base-200-commit,2035,CCS,WECC,684.5
+full-base-200-commit,2035,CCS,PJM,51395.5
+full-base-200-commit,2035,CCS,SOU,51752.5
+full-base-200-commit,2035,CCS,SPP,10.5
+full-base-200-commit,2035,CCS,TRE,19394.5
+full-base-200-commit,2035,CCS,WECC,542.5
 full-base-200-commit,2035,Coal,CA,0.0
-full-base-200-commit,2035,Coal,MISO,38290.0
+full-base-200-commit,2035,Coal,MISO,37448.0
 full-base-200-commit,2035,Coal,NE,0.0
-full-base-200-commit,2035,Coal,PJM,22199.0
-full-base-200-commit,2035,Coal,SOU,23000.0
+full-base-200-commit,2035,Coal,PJM,21756.0
+full-base-200-commit,2035,Coal,SOU,22499.0
 full-base-200-commit,2035,Coal,SPP,17788.0
 full-base-200-commit,2035,Coal,TRE,10731.0
 full-base-200-commit,2035,Coal,WECC,12143.0
@@ -806,15 +806,15 @@ full-base-200-commit,2035,Geothermal,PJM,
 full-base-200-commit,2035,Geothermal,SOU,
 full-base-200-commit,2035,Geothermal,SPP,
 full-base-200-commit,2035,Geothermal,TRE,
-full-base-200-commit,2035,Geothermal,WECC,574.5
+full-base-200-commit,2035,Geothermal,WECC,567.0
 full-base-200-commit,2035,Hydro,CA,12084.0
-full-base-200-commit,2035,Hydro,MISO,10077.5
-full-base-200-commit,2035,Hydro,NE,7823.0
-full-base-200-commit,2035,Hydro,PJM,7524.0
+full-base-200-commit,2035,Hydro,MISO,10076.0
+full-base-200-commit,2035,Hydro,NE,7822.0
+full-base-200-commit,2035,Hydro,PJM,7514.0
 full-base-200-commit,2035,Hydro,SOU,9418.0
-full-base-200-commit,2035,Hydro,SPP,5139.5
+full-base-200-commit,2035,Hydro,SPP,5131.5
 full-base-200-commit,2035,Hydro,TRE,492.5
-full-base-200-commit,2035,Hydro,WECC,39225.0
+full-base-200-commit,2035,Hydro,WECC,39220.0
 full-base-200-commit,2035,Hydrogen,CA,2.0
 full-base-200-commit,2035,Hydrogen,MISO,5.0
 full-base-200-commit,2035,Hydrogen,NE,4.0
@@ -823,22 +823,22 @@ full-base-200-commit,2035,Hydrogen,SOU,4.0
 full-base-200-commit,2035,Hydrogen,SPP,3.0
 full-base-200-commit,2035,Hydrogen,TRE,2.0
 full-base-200-commit,2035,Hydrogen,WECC,4.0
-full-base-200-commit,2035,Natural Gas CC,CA,21072.0
-full-base-200-commit,2035,Natural Gas CC,MISO,52054.0
-full-base-200-commit,2035,Natural Gas CC,NE,33964.5
-full-base-200-commit,2035,Natural Gas CC,PJM,59367.0
-full-base-200-commit,2035,Natural Gas CC,SOU,64574.5
-full-base-200-commit,2035,Natural Gas CC,SPP,11498.0
-full-base-200-commit,2035,Natural Gas CC,TRE,40472.5
-full-base-200-commit,2035,Natural Gas CC,WECC,29843.5
-full-base-200-commit,2035,Natural Gas CT,CA,10760.0
-full-base-200-commit,2035,Natural Gas CT,MISO,31544.5
+full-base-200-commit,2035,Natural Gas CC,CA,20999.0
+full-base-200-commit,2035,Natural Gas CC,MISO,52236.0
+full-base-200-commit,2035,Natural Gas CC,NE,31794.5
+full-base-200-commit,2035,Natural Gas CC,PJM,58645.5
+full-base-200-commit,2035,Natural Gas CC,SOU,62204.5
+full-base-200-commit,2035,Natural Gas CC,SPP,11235.0
+full-base-200-commit,2035,Natural Gas CC,TRE,40128.0
+full-base-200-commit,2035,Natural Gas CC,WECC,29686.0
+full-base-200-commit,2035,Natural Gas CT,CA,10582.0
+full-base-200-commit,2035,Natural Gas CT,MISO,31525.5
 full-base-200-commit,2035,Natural Gas CT,NE,3931.0
-full-base-200-commit,2035,Natural Gas CT,PJM,29904.5
+full-base-200-commit,2035,Natural Gas CT,PJM,29875.0
 full-base-200-commit,2035,Natural Gas CT,SOU,31961.5
-full-base-200-commit,2035,Natural Gas CT,SPP,9525.5
-full-base-200-commit,2035,Natural Gas CT,TRE,9978.0
-full-base-200-commit,2035,Natural Gas CT,WECC,9370.0
+full-base-200-commit,2035,Natural Gas CT,SPP,9430.5
+full-base-200-commit,2035,Natural Gas CT,TRE,9959.0
+full-base-200-commit,2035,Natural Gas CT,WECC,9337.0
 full-base-200-commit,2035,Nuclear,CA,1.0
 full-base-200-commit,2035,Nuclear,MISO,20321.5
 full-base-200-commit,2035,Nuclear,NE,6715.0
@@ -847,46 +847,46 @@ full-base-200-commit,2035,Nuclear,SOU,23925.5
 full-base-200-commit,2035,Nuclear,SPP,2026.5
 full-base-200-commit,2035,Nuclear,TRE,5121.0
 full-base-200-commit,2035,Nuclear,WECC,5177.0
-full-base-200-commit,2035,Solar,CA,46297.5
-full-base-200-commit,2035,Solar,MISO,84996.5
-full-base-200-commit,2035,Solar,NE,23985.5
-full-base-200-commit,2035,Solar,PJM,89053.0
-full-base-200-commit,2035,Solar,SOU,89956.0
-full-base-200-commit,2035,Solar,SPP,24661.5
-full-base-200-commit,2035,Solar,TRE,42601.0
-full-base-200-commit,2035,Solar,WECC,66216.5
-full-base-200-commit,2035,Wind,CA,6325.5
-full-base-200-commit,2035,Wind,MISO,138090.0
-full-base-200-commit,2035,Wind,NE,41341.5
-full-base-200-commit,2035,Wind,PJM,44690.0
-full-base-200-commit,2035,Wind,SOU,27764.0
-full-base-200-commit,2035,Wind,SPP,110581.5
-full-base-200-commit,2035,Wind,TRE,95355.5
-full-base-200-commit,2035,Wind,WECC,120251.0
-full-base-200-commit,2040,Battery,CA,7235.5
-full-base-200-commit,2040,Battery,MISO,6767.0
-full-base-200-commit,2040,Battery,NE,12583.5
-full-base-200-commit,2040,Battery,PJM,8036.5
-full-base-200-commit,2040,Battery,SOU,8878.0
-full-base-200-commit,2040,Battery,SPP,134.5
-full-base-200-commit,2040,Battery,TRE,2893.0
-full-base-200-commit,2040,Battery,WECC,4579.0
-full-base-200-commit,2040,CCS,CA,24269.0
-full-base-200-commit,2040,CCS,MISO,59186.5
+full-base-200-commit,2035,Solar,CA,43373.5
+full-base-200-commit,2035,Solar,MISO,79150.0
+full-base-200-commit,2035,Solar,NE,24052.5
+full-base-200-commit,2035,Solar,PJM,75071.5
+full-base-200-commit,2035,Solar,SOU,78949.5
+full-base-200-commit,2035,Solar,SPP,24036.0
+full-base-200-commit,2035,Solar,TRE,40767.5
+full-base-200-commit,2035,Solar,WECC,66543.5
+full-base-200-commit,2035,Wind,CA,6295.5
+full-base-200-commit,2035,Wind,MISO,139079.5
+full-base-200-commit,2035,Wind,NE,41499.5
+full-base-200-commit,2035,Wind,PJM,44691.0
+full-base-200-commit,2035,Wind,SOU,29040.0
+full-base-200-commit,2035,Wind,SPP,112503.5
+full-base-200-commit,2035,Wind,TRE,98284.0
+full-base-200-commit,2035,Wind,WECC,121710.5
+full-base-200-commit,2040,Battery,CA,11968.0
+full-base-200-commit,2040,Battery,MISO,14978.0
+full-base-200-commit,2040,Battery,NE,14488.5
+full-base-200-commit,2040,Battery,PJM,16172.0
+full-base-200-commit,2040,Battery,SOU,18558.5
+full-base-200-commit,2040,Battery,SPP,225.5
+full-base-200-commit,2040,Battery,TRE,6241.0
+full-base-200-commit,2040,Battery,WECC,7174.0
+full-base-200-commit,2040,CCS,CA,22264.0
+full-base-200-commit,2040,CCS,MISO,58411.5
 full-base-200-commit,2040,CCS,NE,
-full-base-200-commit,2040,CCS,PJM,62507.5
-full-base-200-commit,2040,CCS,SOU,57126.0
-full-base-200-commit,2040,CCS,SPP,45.0
-full-base-200-commit,2040,CCS,TRE,25316.0
-full-base-200-commit,2040,CCS,WECC,5940.0
+full-base-200-commit,2040,CCS,PJM,63158.5
+full-base-200-commit,2040,CCS,SOU,57246.0
+full-base-200-commit,2040,CCS,SPP,46.5
+full-base-200-commit,2040,CCS,TRE,23981.0
+full-base-200-commit,2040,CCS,WECC,4674.5
 full-base-200-commit,2040,Coal,CA,0.0
-full-base-200-commit,2040,Coal,MISO,28503.0
+full-base-200-commit,2040,Coal,MISO,27677.0
 full-base-200-commit,2040,Coal,NE,0.0
-full-base-200-commit,2040,Coal,PJM,8826.5
-full-base-200-commit,2040,Coal,SOU,13999.0
-full-base-200-commit,2040,Coal,SPP,14518.5
+full-base-200-commit,2040,Coal,PJM,8128.0
+full-base-200-commit,2040,Coal,SOU,13002.0
+full-base-200-commit,2040,Coal,SPP,14126.0
 full-base-200-commit,2040,Coal,TRE,10731.0
-full-base-200-commit,2040,Coal,WECC,8760.0
+full-base-200-commit,2040,Coal,WECC,8750.0
 full-base-200-commit,2040,Distributed Solar,CA,16402.5
 full-base-200-commit,2040,Distributed Solar,MISO,18451.5
 full-base-200-commit,2040,Distributed Solar,NE,8822.0
@@ -902,15 +902,15 @@ full-base-200-commit,2040,Geothermal,PJM,
 full-base-200-commit,2040,Geothermal,SOU,
 full-base-200-commit,2040,Geothermal,SPP,
 full-base-200-commit,2040,Geothermal,TRE,
-full-base-200-commit,2040,Geothermal,WECC,380.0
-full-base-200-commit,2040,Hydro,CA,12081.5
-full-base-200-commit,2040,Hydro,MISO,9554.5
-full-base-200-commit,2040,Hydro,NE,7775.5
-full-base-200-commit,2040,Hydro,PJM,7267.0
+full-base-200-commit,2040,Geothermal,WECC,374.0
+full-base-200-commit,2040,Hydro,CA,12081.0
+full-base-200-commit,2040,Hydro,MISO,9466.5
+full-base-200-commit,2040,Hydro,NE,7751.0
+full-base-200-commit,2040,Hydro,PJM,7250.5
 full-base-200-commit,2040,Hydro,SOU,9417.0
-full-base-200-commit,2040,Hydro,SPP,5042.5
-full-base-200-commit,2040,Hydro,TRE,447.0
-full-base-200-commit,2040,Hydro,WECC,37679.0
+full-base-200-commit,2040,Hydro,SPP,5000.5
+full-base-200-commit,2040,Hydro,TRE,444.0
+full-base-200-commit,2040,Hydro,WECC,37672.5
 full-base-200-commit,2040,Hydrogen,CA,7.0
 full-base-200-commit,2040,Hydrogen,MISO,17.5
 full-base-200-commit,2040,Hydrogen,NE,17.5
@@ -919,22 +919,22 @@ full-base-200-commit,2040,Hydrogen,SOU,10.5
 full-base-200-commit,2040,Hydrogen,SPP,10.5
 full-base-200-commit,2040,Hydrogen,TRE,7.0
 full-base-200-commit,2040,Hydrogen,WECC,15.5
-full-base-200-commit,2040,Natural Gas CC,CA,20956.0
-full-base-200-commit,2040,Natural Gas CC,MISO,51961.0
-full-base-200-commit,2040,Natural Gas CC,NE,36301.0
-full-base-200-commit,2040,Natural Gas CC,PJM,59319.0
-full-base-200-commit,2040,Natural Gas CC,SOU,64137.5
-full-base-200-commit,2040,Natural Gas CC,SPP,11219.5
-full-base-200-commit,2040,Natural Gas CC,TRE,39970.5
-full-base-200-commit,2040,Natural Gas CC,WECC,29122.5
-full-base-200-commit,2040,Natural Gas CT,CA,9026.5
-full-base-200-commit,2040,Natural Gas CT,MISO,31002.5
-full-base-200-commit,2040,Natural Gas CT,NE,3905.0
-full-base-200-commit,2040,Natural Gas CT,PJM,29033.0
-full-base-200-commit,2040,Natural Gas CT,SOU,31747.0
-full-base-200-commit,2040,Natural Gas CT,SPP,9145.5
-full-base-200-commit,2040,Natural Gas CT,TRE,8207.0
-full-base-200-commit,2040,Natural Gas CT,WECC,9273.0
+full-base-200-commit,2040,Natural Gas CC,CA,20883.0
+full-base-200-commit,2040,Natural Gas CC,MISO,52219.5
+full-base-200-commit,2040,Natural Gas CC,NE,34404.0
+full-base-200-commit,2040,Natural Gas CC,PJM,58649.5
+full-base-200-commit,2040,Natural Gas CC,SOU,61630.0
+full-base-200-commit,2040,Natural Gas CC,SPP,10956.5
+full-base-200-commit,2040,Natural Gas CC,TRE,39475.0
+full-base-200-commit,2040,Natural Gas CC,WECC,28917.0
+full-base-200-commit,2040,Natural Gas CT,CA,8921.0
+full-base-200-commit,2040,Natural Gas CT,MISO,30890.5
+full-base-200-commit,2040,Natural Gas CT,NE,3883.0
+full-base-200-commit,2040,Natural Gas CT,PJM,28782.0
+full-base-200-commit,2040,Natural Gas CT,SOU,31729.5
+full-base-200-commit,2040,Natural Gas CT,SPP,9029.5
+full-base-200-commit,2040,Natural Gas CT,TRE,8033.0
+full-base-200-commit,2040,Natural Gas CT,WECC,9255.0
 full-base-200-commit,2040,Nuclear,CA,2.0
 full-base-200-commit,2040,Nuclear,MISO,20324.0
 full-base-200-commit,2040,Nuclear,NE,6718.0
@@ -943,46 +943,46 @@ full-base-200-commit,2040,Nuclear,SOU,23928.5
 full-base-200-commit,2040,Nuclear,SPP,2028.0
 full-base-200-commit,2040,Nuclear,TRE,5122.0
 full-base-200-commit,2040,Nuclear,WECC,5179.0
-full-base-200-commit,2040,Solar,CA,54119.0
-full-base-200-commit,2040,Solar,MISO,106001.5
-full-base-200-commit,2040,Solar,NE,34879.0
-full-base-200-commit,2040,Solar,PJM,110672.5
-full-base-200-commit,2040,Solar,SOU,114981.5
-full-base-200-commit,2040,Solar,SPP,29064.0
-full-base-200-commit,2040,Solar,TRE,51774.0
-full-base-200-commit,2040,Solar,WECC,87774.5
-full-base-200-commit,2040,Wind,CA,6037.5
-full-base-200-commit,2040,Wind,MISO,142874.5
-full-base-200-commit,2040,Wind,NE,44854.0
-full-base-200-commit,2040,Wind,PJM,41556.5
-full-base-200-commit,2040,Wind,SOU,33437.5
-full-base-200-commit,2040,Wind,SPP,119096.0
-full-base-200-commit,2040,Wind,TRE,98181.5
-full-base-200-commit,2040,Wind,WECC,131241.5
-full-base-200-commit,2045,Battery,CA,11776.0
-full-base-200-commit,2045,Battery,MISO,13586.0
-full-base-200-commit,2045,Battery,NE,17024.0
-full-base-200-commit,2045,Battery,PJM,15465.5
-full-base-200-commit,2045,Battery,SOU,15364.5
-full-base-200-commit,2045,Battery,SPP,588.5
-full-base-200-commit,2045,Battery,TRE,4336.5
-full-base-200-commit,2045,Battery,WECC,15494.0
-full-base-200-commit,2045,CCS,CA,31331.5
-full-base-200-commit,2045,CCS,MISO,73978.0
+full-base-200-commit,2040,Solar,CA,53955.0
+full-base-200-commit,2040,Solar,MISO,100107.0
+full-base-200-commit,2040,Solar,NE,34442.5
+full-base-200-commit,2040,Solar,PJM,101223.5
+full-base-200-commit,2040,Solar,SOU,107297.0
+full-base-200-commit,2040,Solar,SPP,29631.0
+full-base-200-commit,2040,Solar,TRE,51802.0
+full-base-200-commit,2040,Solar,WECC,89463.5
+full-base-200-commit,2040,Wind,CA,5969.5
+full-base-200-commit,2040,Wind,MISO,142977.5
+full-base-200-commit,2040,Wind,NE,45755.5
+full-base-200-commit,2040,Wind,PJM,41000.0
+full-base-200-commit,2040,Wind,SOU,34427.0
+full-base-200-commit,2040,Wind,SPP,121781.5
+full-base-200-commit,2040,Wind,TRE,100664.0
+full-base-200-commit,2040,Wind,WECC,133476.0
+full-base-200-commit,2045,Battery,CA,18419.0
+full-base-200-commit,2045,Battery,MISO,25671.0
+full-base-200-commit,2045,Battery,NE,19351.5
+full-base-200-commit,2045,Battery,PJM,23577.0
+full-base-200-commit,2045,Battery,SOU,30435.0
+full-base-200-commit,2045,Battery,SPP,1156.0
+full-base-200-commit,2045,Battery,TRE,9307.0
+full-base-200-commit,2045,Battery,WECC,19152.5
+full-base-200-commit,2045,CCS,CA,28571.0
+full-base-200-commit,2045,CCS,MISO,72034.0
 full-base-200-commit,2045,CCS,NE,
-full-base-200-commit,2045,CCS,PJM,75075.5
-full-base-200-commit,2045,CCS,SOU,66224.0
-full-base-200-commit,2045,CCS,SPP,55.0
-full-base-200-commit,2045,CCS,TRE,29233.0
-full-base-200-commit,2045,CCS,WECC,9925.0
+full-base-200-commit,2045,CCS,PJM,75396.0
+full-base-200-commit,2045,CCS,SOU,64752.0
+full-base-200-commit,2045,CCS,SPP,57.0
+full-base-200-commit,2045,CCS,TRE,27650.0
+full-base-200-commit,2045,CCS,WECC,8944.0
 full-base-200-commit,2045,Coal,CA,0.0
-full-base-200-commit,2045,Coal,MISO,19789.0
+full-base-200-commit,2045,Coal,MISO,18785.0
 full-base-200-commit,2045,Coal,NE,0.0
-full-base-200-commit,2045,Coal,PJM,7196.5
-full-base-200-commit,2045,Coal,SOU,11958.5
-full-base-200-commit,2045,Coal,SPP,8788.0
-full-base-200-commit,2045,Coal,TRE,5763.5
-full-base-200-commit,2045,Coal,WECC,7620.0
+full-base-200-commit,2045,Coal,PJM,6529.0
+full-base-200-commit,2045,Coal,SOU,11603.0
+full-base-200-commit,2045,Coal,SPP,7843.0
+full-base-200-commit,2045,Coal,TRE,5176.0
+full-base-200-commit,2045,Coal,WECC,7397.0
 full-base-200-commit,2045,Distributed Solar,CA,16592.0
 full-base-200-commit,2045,Distributed Solar,MISO,20071.0
 full-base-200-commit,2045,Distributed Solar,NE,9368.5
@@ -998,15 +998,15 @@ full-base-200-commit,2045,Geothermal,PJM,
 full-base-200-commit,2045,Geothermal,SOU,
 full-base-200-commit,2045,Geothermal,SPP,
 full-base-200-commit,2045,Geothermal,TRE,
-full-base-200-commit,2045,Geothermal,WECC,211.0
+full-base-200-commit,2045,Geothermal,WECC,193.0
 full-base-200-commit,2045,Hydro,CA,11621.0
-full-base-200-commit,2045,Hydro,MISO,8432.5
+full-base-200-commit,2045,Hydro,MISO,8294.0
 full-base-200-commit,2045,Hydro,NE,7742.0
 full-base-200-commit,2045,Hydro,PJM,7250.5
 full-base-200-commit,2045,Hydro,SOU,9225.0
 full-base-200-commit,2045,Hydro,SPP,4866.5
-full-base-200-commit,2045,Hydro,TRE,311.0
-full-base-200-commit,2045,Hydro,WECC,35603.5
+full-base-200-commit,2045,Hydro,TRE,286.0
+full-base-200-commit,2045,Hydro,WECC,35573.0
 full-base-200-commit,2045,Hydrogen,CA,9.5
 full-base-200-commit,2045,Hydrogen,MISO,26.0
 full-base-200-commit,2045,Hydrogen,NE,23.0
@@ -1015,22 +1015,22 @@ full-base-200-commit,2045,Hydrogen,SOU,12.5
 full-base-200-commit,2045,Hydrogen,SPP,17.5
 full-base-200-commit,2045,Hydrogen,TRE,12.5
 full-base-200-commit,2045,Hydrogen,WECC,20.0
-full-base-200-commit,2045,Natural Gas CC,CA,20959.0
-full-base-200-commit,2045,Natural Gas CC,MISO,51930.0
-full-base-200-commit,2045,Natural Gas CC,NE,37274.5
-full-base-200-commit,2045,Natural Gas CC,PJM,59281.5
-full-base-200-commit,2045,Natural Gas CC,SOU,64127.5
-full-base-200-commit,2045,Natural Gas CC,SPP,11224.5
-full-base-200-commit,2045,Natural Gas CC,TRE,38976.5
-full-base-200-commit,2045,Natural Gas CC,WECC,28538.0
-full-base-200-commit,2045,Natural Gas CT,CA,8528.0
-full-base-200-commit,2045,Natural Gas CT,MISO,28963.0
-full-base-200-commit,2045,Natural Gas CT,NE,3831.5
-full-base-200-commit,2045,Natural Gas CT,PJM,26473.0
-full-base-200-commit,2045,Natural Gas CT,SOU,28410.5
-full-base-200-commit,2045,Natural Gas CT,SPP,8900.5
-full-base-200-commit,2045,Natural Gas CT,TRE,7730.0
-full-base-200-commit,2045,Natural Gas CT,WECC,8529.0
+full-base-200-commit,2045,Natural Gas CC,CA,20886.0
+full-base-200-commit,2045,Natural Gas CC,MISO,52188.5
+full-base-200-commit,2045,Natural Gas CC,NE,34970.5
+full-base-200-commit,2045,Natural Gas CC,PJM,58572.0
+full-base-200-commit,2045,Natural Gas CC,SOU,61632.5
+full-base-200-commit,2045,Natural Gas CC,SPP,10961.5
+full-base-200-commit,2045,Natural Gas CC,TRE,38170.5
+full-base-200-commit,2045,Natural Gas CC,WECC,28413.5
+full-base-200-commit,2045,Natural Gas CT,CA,8480.0
+full-base-200-commit,2045,Natural Gas CT,MISO,28497.5
+full-base-200-commit,2045,Natural Gas CT,NE,3808.0
+full-base-200-commit,2045,Natural Gas CT,PJM,26257.0
+full-base-200-commit,2045,Natural Gas CT,SOU,27404.5
+full-base-200-commit,2045,Natural Gas CT,SPP,8848.5
+full-base-200-commit,2045,Natural Gas CT,TRE,7642.0
+full-base-200-commit,2045,Natural Gas CT,WECC,8491.0
 full-base-200-commit,2045,Nuclear,CA,2.5
 full-base-200-commit,2045,Nuclear,MISO,20325.5
 full-base-200-commit,2045,Nuclear,NE,6720.0
@@ -1039,44 +1039,44 @@ full-base-200-commit,2045,Nuclear,SOU,23929.5
 full-base-200-commit,2045,Nuclear,SPP,2028.0
 full-base-200-commit,2045,Nuclear,TRE,5124.5
 full-base-200-commit,2045,Nuclear,WECC,5180.5
-full-base-200-commit,2045,Solar,CA,63458.0
-full-base-200-commit,2045,Solar,MISO,128303.0
-full-base-200-commit,2045,Solar,NE,44398.5
-full-base-200-commit,2045,Solar,PJM,130330.5
-full-base-200-commit,2045,Solar,SOU,137677.0
-full-base-200-commit,2045,Solar,SPP,33921.5
-full-base-200-commit,2045,Solar,TRE,60770.0
-full-base-200-commit,2045,Solar,WECC,121578.0
-full-base-200-commit,2045,Wind,CA,3372.5
-full-base-200-commit,2045,Wind,MISO,150248.5
-full-base-200-commit,2045,Wind,NE,46174.5
-full-base-200-commit,2045,Wind,PJM,40337.5
-full-base-200-commit,2045,Wind,SOU,39370.0
-full-base-200-commit,2045,Wind,SPP,131174.0
-full-base-200-commit,2045,Wind,TRE,106352.5
-full-base-200-commit,2045,Wind,WECC,140958.5
-full-base-200-commit,2050,Battery,CA,19471.0
-full-base-200-commit,2050,Battery,MISO,26987.5
-full-base-200-commit,2050,Battery,NE,19899.5
-full-base-200-commit,2050,Battery,PJM,23442.0
-full-base-200-commit,2050,Battery,SOU,27854.0
-full-base-200-commit,2050,Battery,SPP,3470.0
-full-base-200-commit,2050,Battery,TRE,8797.0
-full-base-200-commit,2050,Battery,WECC,33438.5
-full-base-200-commit,2050,CCS,CA,32726.0
-full-base-200-commit,2050,CCS,MISO,79823.5
+full-base-200-commit,2045,Solar,CA,64138.0
+full-base-200-commit,2045,Solar,MISO,122108.5
+full-base-200-commit,2045,Solar,NE,43915.5
+full-base-200-commit,2045,Solar,PJM,122111.5
+full-base-200-commit,2045,Solar,SOU,133239.0
+full-base-200-commit,2045,Solar,SPP,34895.5
+full-base-200-commit,2045,Solar,TRE,60709.0
+full-base-200-commit,2045,Solar,WECC,122480.5
+full-base-200-commit,2045,Wind,CA,3231.5
+full-base-200-commit,2045,Wind,MISO,150022.0
+full-base-200-commit,2045,Wind,NE,47300.0
+full-base-200-commit,2045,Wind,PJM,40557.5
+full-base-200-commit,2045,Wind,SOU,39965.5
+full-base-200-commit,2045,Wind,SPP,133568.5
+full-base-200-commit,2045,Wind,TRE,108544.5
+full-base-200-commit,2045,Wind,WECC,143710.0
+full-base-200-commit,2050,Battery,CA,25889.0
+full-base-200-commit,2050,Battery,MISO,40637.5
+full-base-200-commit,2050,Battery,NE,22170.5
+full-base-200-commit,2050,Battery,PJM,31602.0
+full-base-200-commit,2050,Battery,SOU,45870.0
+full-base-200-commit,2050,Battery,SPP,3005.5
+full-base-200-commit,2050,Battery,TRE,13670.0
+full-base-200-commit,2050,Battery,WECC,35717.0
+full-base-200-commit,2050,CCS,CA,29637.0
+full-base-200-commit,2050,CCS,MISO,75040.0
 full-base-200-commit,2050,CCS,NE,
-full-base-200-commit,2050,CCS,PJM,79041.0
-full-base-200-commit,2050,CCS,SOU,68809.0
-full-base-200-commit,2050,CCS,SPP,139.5
-full-base-200-commit,2050,CCS,TRE,32122.0
-full-base-200-commit,2050,CCS,WECC,12360.0
+full-base-200-commit,2050,CCS,PJM,80448.0
+full-base-200-commit,2050,CCS,SOU,66663.0
+full-base-200-commit,2050,CCS,SPP,141.5
+full-base-200-commit,2050,CCS,TRE,29733.0
+full-base-200-commit,2050,CCS,WECC,11073.5
 full-base-200-commit,2050,Coal,CA,0.0
-full-base-200-commit,2050,Coal,MISO,8351.5
+full-base-200-commit,2050,Coal,MISO,8339.0
 full-base-200-commit,2050,Coal,NE,0.0
-full-base-200-commit,2050,Coal,PJM,4802.0
-full-base-200-commit,2050,Coal,SOU,5729.5
-full-base-200-commit,2050,Coal,SPP,3816.0
+full-base-200-commit,2050,Coal,PJM,4784.0
+full-base-200-commit,2050,Coal,SOU,5383.0
+full-base-200-commit,2050,Coal,SPP,3570.0
 full-base-200-commit,2050,Coal,TRE,4175.0
 full-base-200-commit,2050,Coal,WECC,3981.0
 full-base-200-commit,2050,Distributed Solar,CA,16748.5
@@ -1094,15 +1094,15 @@ full-base-200-commit,2050,Geothermal,PJM,
 full-base-200-commit,2050,Geothermal,SOU,
 full-base-200-commit,2050,Geothermal,SPP,
 full-base-200-commit,2050,Geothermal,TRE,
-full-base-200-commit,2050,Geothermal,WECC,88.0
-full-base-200-commit,2050,Hydro,CA,10841.5
-full-base-200-commit,2050,Hydro,MISO,7707.5
-full-base-200-commit,2050,Hydro,NE,7678.0
+full-base-200-commit,2050,Geothermal,WECC,76.0
+full-base-200-commit,2050,Hydro,CA,10741.5
+full-base-200-commit,2050,Hydro,MISO,7600.5
+full-base-200-commit,2050,Hydro,NE,7654.5
 full-base-200-commit,2050,Hydro,PJM,7250.5
-full-base-200-commit,2050,Hydro,SOU,9164.5
-full-base-200-commit,2050,Hydro,SPP,4780.5
-full-base-200-commit,2050,Hydro,TRE,237.0
-full-base-200-commit,2050,Hydro,WECC,34400.5
+full-base-200-commit,2050,Hydro,SOU,9128.0
+full-base-200-commit,2050,Hydro,SPP,4756.5
+full-base-200-commit,2050,Hydro,TRE,228.0
+full-base-200-commit,2050,Hydro,WECC,34122.0
 full-base-200-commit,2050,Hydrogen,CA,22.5
 full-base-200-commit,2050,Hydrogen,MISO,62.0
 full-base-200-commit,2050,Hydrogen,NE,51.0
@@ -1111,46 +1111,46 @@ full-base-200-commit,2050,Hydrogen,SOU,39.0
 full-base-200-commit,2050,Hydrogen,SPP,39.0
 full-base-200-commit,2050,Hydrogen,TRE,26.5
 full-base-200-commit,2050,Hydrogen,WECC,58.0
-full-base-200-commit,2050,Natural Gas CC,CA,19609.0
-full-base-200-commit,2050,Natural Gas CC,MISO,50155.5
-full-base-200-commit,2050,Natural Gas CC,NE,36877.0
-full-base-200-commit,2050,Natural Gas CC,PJM,58612.0
-full-base-200-commit,2050,Natural Gas CC,SOU,64055.0
-full-base-200-commit,2050,Natural Gas CC,SPP,11109.0
-full-base-200-commit,2050,Natural Gas CC,TRE,37120.5
-full-base-200-commit,2050,Natural Gas CC,WECC,28535.5
-full-base-200-commit,2050,Natural Gas CT,CA,8316.0
-full-base-200-commit,2050,Natural Gas CT,MISO,22582.0
-full-base-200-commit,2050,Natural Gas CT,NE,3815.5
-full-base-200-commit,2050,Natural Gas CT,PJM,22225.0
-full-base-200-commit,2050,Natural Gas CT,SOU,22564.5
-full-base-200-commit,2050,Natural Gas CT,SPP,8131.5
-full-base-200-commit,2050,Natural Gas CT,TRE,7006.0
-full-base-200-commit,2050,Natural Gas CT,WECC,8239.0
+full-base-200-commit,2050,Natural Gas CC,CA,19366.0
+full-base-200-commit,2050,Natural Gas CC,MISO,49505.5
+full-base-200-commit,2050,Natural Gas CC,NE,34283.5
+full-base-200-commit,2050,Natural Gas CC,PJM,57521.0
+full-base-200-commit,2050,Natural Gas CC,SOU,61592.5
+full-base-200-commit,2050,Natural Gas CC,SPP,10846.0
+full-base-200-commit,2050,Natural Gas CC,TRE,36235.5
+full-base-200-commit,2050,Natural Gas CC,WECC,28381.0
+full-base-200-commit,2050,Natural Gas CT,CA,8313.5
+full-base-200-commit,2050,Natural Gas CT,MISO,20348.0
+full-base-200-commit,2050,Natural Gas CT,NE,3813.0
+full-base-200-commit,2050,Natural Gas CT,PJM,20338.0
+full-base-200-commit,2050,Natural Gas CT,SOU,19745.5
+full-base-200-commit,2050,Natural Gas CT,SPP,7907.5
+full-base-200-commit,2050,Natural Gas CT,TRE,6924.0
+full-base-200-commit,2050,Natural Gas CT,WECC,8040.5
 full-base-200-commit,2050,Nuclear,CA,6.0
-full-base-200-commit,2050,Nuclear,MISO,20039.0
-full-base-200-commit,2050,Nuclear,NE,5810.0
-full-base-200-commit,2050,Nuclear,PJM,33302.0
+full-base-200-commit,2050,Nuclear,MISO,19743.5
+full-base-200-commit,2050,Nuclear,NE,5519.5
+full-base-200-commit,2050,Nuclear,PJM,32830.0
 full-base-200-commit,2050,Nuclear,SOU,23935.0
 full-base-200-commit,2050,Nuclear,SPP,2034.0
 full-base-200-commit,2050,Nuclear,TRE,5132.5
 full-base-200-commit,2050,Nuclear,WECC,5188.5
-full-base-200-commit,2050,Solar,CA,79294.0
-full-base-200-commit,2050,Solar,MISO,147406.5
-full-base-200-commit,2050,Solar,NE,49900.5
-full-base-200-commit,2050,Solar,PJM,148515.5
-full-base-200-commit,2050,Solar,SOU,165208.5
-full-base-200-commit,2050,Solar,SPP,40030.0
-full-base-200-commit,2050,Solar,TRE,69389.0
-full-base-200-commit,2050,Solar,WECC,144573.0
-full-base-200-commit,2050,Wind,CA,2929.0
-full-base-200-commit,2050,Wind,MISO,146309.0
-full-base-200-commit,2050,Wind,NE,47334.5
-full-base-200-commit,2050,Wind,PJM,39647.0
-full-base-200-commit,2050,Wind,SOU,41942.5
-full-base-200-commit,2050,Wind,SPP,130033.0
-full-base-200-commit,2050,Wind,TRE,104450.5
-full-base-200-commit,2050,Wind,WECC,145790.0
+full-base-200-commit,2050,Solar,CA,79032.5
+full-base-200-commit,2050,Solar,MISO,146745.5
+full-base-200-commit,2050,Solar,NE,50872.0
+full-base-200-commit,2050,Solar,PJM,137539.0
+full-base-200-commit,2050,Solar,SOU,163407.0
+full-base-200-commit,2050,Solar,SPP,42594.0
+full-base-200-commit,2050,Solar,TRE,68246.5
+full-base-200-commit,2050,Solar,WECC,145992.0
+full-base-200-commit,2050,Wind,CA,3422.5
+full-base-200-commit,2050,Wind,MISO,145979.5
+full-base-200-commit,2050,Wind,NE,48177.5
+full-base-200-commit,2050,Wind,PJM,40057.5
+full-base-200-commit,2050,Wind,SOU,42420.0
+full-base-200-commit,2050,Wind,SPP,132179.5
+full-base-200-commit,2050,Wind,TRE,108180.5
+full-base-200-commit,2050,Wind,WECC,148892.5
 full-current-policies,2027,Battery,CA,11545.0
 full-current-policies,2027,Battery,MISO,212.0
 full-current-policies,2027,Battery,NE,568.7
