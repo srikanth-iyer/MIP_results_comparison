@@ -393,11 +393,21 @@ def main(
 
     year = int(year)
     Path(output_path).mkdir(parents=True, exist_ok=True)
+
+    print("Loading model results")
+    model_results = load_final_capacity(Path(results_path), year)
+    if (
+        "SPPC_landbasedwind_class3_moderate_139_anyQual_1"
+        not in model_results["gens"]["Resource"].to_list()
+    ):
+        # Some results have different resource names because of a PG bug. Use corrected
+        # inputs where results don't have the very high cluster number
+        genx_inputs_path = genx_inputs_path.replace("commit", "commit_corrected")
+
     print("Loading GenX inputs")
     genx_inputs = load_genx_inputs(Path(genx_inputs_path))
     genx_inputs["Network"].to_csv(Path(output_path) / "original_network.csv")
-    print("Loading model results")
-    model_results = load_final_capacity(Path(results_path), year)
+
     print("Creating operational inputs")
     operational_inputs = create_operational_genx_inputs(
         model_results, genx_inputs, fixed_om_prefix=""
