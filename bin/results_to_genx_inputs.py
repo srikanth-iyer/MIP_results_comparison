@@ -374,6 +374,17 @@ def period_weighted_avg_cost(
     return new_gen[final_period]
 
 
+def shrink_model_size(output_path: Path):
+    "Remove resources with capacity of 0 to reduce model size"
+    all_outputs_path = output_path.parent
+    gen_files = all_outputs_path.rglob("Generators_data*")
+
+    for gen_path in gen_files:
+        gen_data = pd.read_csv(gen_path, na_filter=False)
+        gen_data = gen_data.loc[gen_data["Existing_Cap_MW"] >= 10, :]
+        gen_data.to_csv(gen_path, index=False)
+
+
 def main(
     results_path: str,
     genx_inputs_path: str,
@@ -444,6 +455,8 @@ def main(
         weighted_avg_annuities(
             Path(genx_inputs_path), Path(output_path), fixed_om_prefixs=fixed_om_prefixs
         )
+        print("Removing small generators")
+        shrink_model_size(Path(output_path))
 
 
 if __name__ == "__main__":
