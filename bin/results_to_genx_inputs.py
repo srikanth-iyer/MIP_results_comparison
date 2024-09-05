@@ -1,7 +1,7 @@
 "Use the results of a model to create genx inputs for an operational run"
 
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
@@ -51,7 +51,7 @@ def fix_duplicate_region_in_resource_name(gens: pd.DataFrame) -> pd.DataFrame:
     return gens
 
 
-def load_final_capacity(path: Path, year: int) -> Dict[str, pd.DataFrame]:
+def load_final_capacity(path: Path, year: int) -> Tuple[Dict[str, pd.DataFrame], bool]:
     d = {}
     d["tx_exp"] = pd.read_csv(path / "transmission_expansion.csv")
     d["tx_exp"] = (
@@ -62,6 +62,17 @@ def load_final_capacity(path: Path, year: int) -> Dict[str, pd.DataFrame]:
     )
     d["tx_exp"] = d["tx_exp"].rename(columns={"line_name": "transmission_path_name"})
     d["gens"] = pd.read_csv(path / "resource_capacity.csv")
+
+    # Check for resources with cluster numbers that were due to a bug and fixed in some inputs
+    corrected_inputs = True
+    for resource in [
+        "SPPC_landbasedwind_class3_moderate_115_anyQual_0",
+        "PJMC_landbasedwind_class3_moderate_14_anyQual_0",
+        "SRCE_landbasedwind_class3_moderate_14_anyQual_0",
+    ]:
+        if resource in d["gens"]["resource_name"].unique():
+            corrected_inputs = False
+
     d["gens"] = fix_duplicate_region_in_resource_name(d["gens"])
     for h in [2, 4, 6, 8, 10]:
         d["gens"].loc[:, "resource_name"] = d["gens"]["resource_name"].str.replace(
@@ -81,7 +92,7 @@ def load_final_capacity(path: Path, year: int) -> Dict[str, pd.DataFrame]:
         .sum()
     )
 
-    return d
+    return d, corrected_inputs
 
 
 def reverse_line_name(s: str) -> str:
@@ -265,12 +276,13 @@ def weighted_avg_annuities(
     period_fixed_costs = {}
 
     all_inputs_path = inputs_path.parent
-    gen_files = all_inputs_path.rglob("Generators_data*")
+    all_outputs_path = output_path.parent
+    gen_files = list(all_inputs_path.rglob("Generators_data*"))
     periods = sorted([f.parts[-2].split("_")[-1] for f in gen_files])
     # periods = ["p1", "p2", "p3", "p4", "p5", "p6"]
     for period in periods:
         gen_data[period] = pd.read_csv(
-            output_path.parent / f"Inputs_{period}" / "Generators_data.csv",
+            all_outputs_path / f"Inputs_{period}" / "Generators_data.csv",
             na_filter=False,
         ).set_index("Resource")
         existing_gen[period] = gen_data[period].loc[
@@ -351,7 +363,7 @@ def period_weighted_avg_cost(
         new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] = (
             period_fixed_costs[periods[0]][f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
             * frac_build[periods[0]]
-        ).round(0)
+        ).astype(int)
 
     # Fraction built and fractional cost from subsequent periods
     for p1, p2 in zip(periods[:-1], periods[1:]):
@@ -369,7 +381,7 @@ def period_weighted_avg_cost(
             new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] += (
                 period_fixed_costs[p2].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
                 * frac_build[p2]
-            ).round(0)
+            ).astype(int)
 
     return new_gen[final_period]
 
@@ -396,6 +408,8 @@ def main(
     co2_slack: int = 200,
     year: int = 2050,
 ):
+    if "test" in results_path:
+        return None
     if not Path(results_path).exists():
         folder_name = Path(results_path).stem
         if " " in folder_name:
@@ -410,13 +424,12 @@ def main(
     Path(output_path).mkdir(parents=True, exist_ok=True)
 
     print("Loading model results")
-    model_results = load_final_capacity(Path(results_path), year)
-    if (
-        "SPPC_landbasedwind_class3_moderate_139_anyQual_1"
-        not in model_results["gens"].reset_index()["Resource"].to_list()
-    ):
+    print(results_path)
+    model_results, corrected_inputs = load_final_capacity(Path(results_path), year)
+    if corrected_inputs:
         # Some results have different resource names because of a PG bug. Use corrected
         # inputs where results don't have the very high cluster number
+        print("Using corrected inputs")
         genx_inputs_path = genx_inputs_path.replace("commit", "commit_corrected")
 
     print("Loading GenX inputs")

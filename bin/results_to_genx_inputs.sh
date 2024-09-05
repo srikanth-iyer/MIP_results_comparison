@@ -5,15 +5,18 @@ PERIODS=( "p1" "p2" "p3" "p4" "p5" "p6" ) # "p1" "p2" "p3"
 folder=$1
 model=$2
 
- if [[ "$folder" == *"current"* ]]; then
+if [[ "$folder" == *"current"* ]]; then
     input_folder="current_policies_52_week_commit"
+    co2_slack=200
+elif [[ "$folder" == "20-week"* ]]; then
+    input_folder="base_52_week_commit"
     co2_slack=200
 else
     input_folder="base_52_week_commit"
     # Thanks chatGPT!
     co2_slack=$(echo "$folder" | awk -F'-' '{for (i=1; i<=NF; i++) if ($i ~ /^[0-9]+$/) {print $i; exit}}')
-    echo "CO2 slack is ${co2_slack}"
 fi
+echo "CO2 slack is ${co2_slack}"
 
 echo "${folder}"
 echo "${input_folder}"

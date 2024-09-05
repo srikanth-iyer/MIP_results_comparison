@@ -30,7 +30,8 @@ jobs:
 
       - name: Find directories and run script using snakemake
         run: |
-          snakemake -c2
+          cd bin
+          python refresh_op_inputs.py
 
       - name: Check for modified files
         id: git-check
