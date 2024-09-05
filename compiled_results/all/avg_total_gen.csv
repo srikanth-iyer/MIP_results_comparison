@@ -1001,78 +1001,78 @@ full-current-policies,Wind,2035,1667135523.3333333,1634408749.0,1705024758.0
 full-current-policies,Wind,2040,1920335050.3333333,1888949479.0,1948471804.0
 full-current-policies,Wind,2045,1876062080.6666667,1846281598.0,1906179960.0
 full-current-policies,Wind,2050,1795556584.6666667,1771881205.0,1824186579.0
-full-current-policies-commit,Battery,2027,15459659.5,14267850.0,16651469.0
-full-current-policies-commit,Battery,2030,20999576.5,20485914.0,21513239.0
-full-current-policies-commit,Battery,2035,35699026.0,32736131.0,38661921.0
-full-current-policies-commit,Battery,2040,87503515.5,86539885.0,88467146.0
-full-current-policies-commit,Battery,2045,81823570.5,71961436.0,91685705.0
-full-current-policies-commit,Battery,2050,97576588.5,96049841.0,99103336.0
-full-current-policies-commit,CCS,2027,633794.0,107393.0,1160195.0
-full-current-policies-commit,CCS,2030,561254.0,115065.0,1007443.0
-full-current-policies-commit,CCS,2035,1071724.5,294695.0,1848754.0
-full-current-policies-commit,CCS,2040,34591353.5,29516313.0,39666394.0
-full-current-policies-commit,CCS,2045,11527914.5,8274061.0,14781768.0
-full-current-policies-commit,CCS,2050,8760277.5,7717679.0,9802876.0
-full-current-policies-commit,Coal,2027,1034568015.5,1012865152.0,1056270879.0
-full-current-policies-commit,Coal,2030,921325214.0,869027072.0,973623356.0
-full-current-policies-commit,Coal,2035,764170068.5,726778860.0,801561277.0
-full-current-policies-commit,Coal,2040,486823797.5,476780595.0,496867000.0
-full-current-policies-commit,Coal,2045,383990895.0,368663374.0,399318416.0
-full-current-policies-commit,Coal,2050,192637687.0,189822429.0,195452945.0
-full-current-policies-commit,Distributed Solar,2027,92220404.5,91751519.0,92689290.0
-full-current-policies-commit,Distributed Solar,2030,137729024.5,137705247.0,137752802.0
-full-current-policies-commit,Distributed Solar,2035,178023968.5,177208633.0,178839304.0
-full-current-policies-commit,Distributed Solar,2040,182881205.5,181986151.0,183776260.0
-full-current-policies-commit,Distributed Solar,2045,200607128.5,200082039.0,201132218.0
-full-current-policies-commit,Distributed Solar,2050,214989419.0,214876804.0,215102034.0
-full-current-policies-commit,Geothermal,2027,5894230.5,5894147.0,5894314.0
-full-current-policies-commit,Geothermal,2030,5461602.0,5346895.0,5576309.0
-full-current-policies-commit,Geothermal,2035,5112072.0,4971143.0,5253001.0
-full-current-policies-commit,Geothermal,2040,3237474.5,3220420.0,3254529.0
-full-current-policies-commit,Geothermal,2045,2019499.5,1832837.0,2206162.0
-full-current-policies-commit,Geothermal,2050,971243.5,864043.0,1078444.0
-full-current-policies-commit,Hydro,2027,281060627.5,275564994.0,286556261.0
-full-current-policies-commit,Hydro,2030,281792446.0,274338089.0,289246803.0
-full-current-policies-commit,Hydro,2035,292131741.5,287731931.0,296531552.0
-full-current-policies-commit,Hydro,2040,290626444.0,289847258.0,291405630.0
-full-current-policies-commit,Hydro,2045,272312222.5,269081156.0,275543289.0
-full-current-policies-commit,Hydro,2050,260083876.0,259770017.0,260397735.0
-full-current-policies-commit,Hydrogen,2027,87527.5,40186.0,134869.0
-full-current-policies-commit,Hydrogen,2030,82630.5,35741.0,129520.0
-full-current-policies-commit,Hydrogen,2035,37317.0,31024.0,43610.0
-full-current-policies-commit,Hydrogen,2040,48725.0,39996.0,57454.0
-full-current-policies-commit,Hydrogen,2045,442542.0,46945.0,838139.0
-full-current-policies-commit,Hydrogen,2050,90805.5,62471.0,119140.0
-full-current-policies-commit,Natural Gas CC,2027,758008156.0,680429990.0,835586322.0
-full-current-policies-commit,Natural Gas CC,2030,687475880.0,554017297.0,820934463.0
-full-current-policies-commit,Natural Gas CC,2035,929861557.0,799324025.0,1060399089.0
-full-current-policies-commit,Natural Gas CC,2040,1118729163.5,947931451.0,1289526876.0
-full-current-policies-commit,Natural Gas CC,2045,1910518400.5,1681566561.0,2139470240.0
-full-current-policies-commit,Natural Gas CC,2050,2331813368.0,2002828568.0,2660798168.0
-full-current-policies-commit,Natural Gas CT,2027,3121832.5,2688908.0,3554757.0
-full-current-policies-commit,Natural Gas CT,2030,3531607.5,1634439.0,5428776.0
-full-current-policies-commit,Natural Gas CT,2035,24102293.0,13269863.0,34934723.0
-full-current-policies-commit,Natural Gas CT,2040,34532234.0,24513999.0,44550469.0
-full-current-policies-commit,Natural Gas CT,2045,29241631.5,19195476.0,39287787.0
-full-current-policies-commit,Natural Gas CT,2050,17016731.0,13317250.0,20716212.0
-full-current-policies-commit,Nuclear,2027,828068890.5,821628180.0,834509601.0
-full-current-policies-commit,Nuclear,2030,764345866.5,703152839.0,825538894.0
-full-current-policies-commit,Nuclear,2035,793948706.5,778366459.0,809530954.0
-full-current-policies-commit,Nuclear,2040,758321336.0,719285821.0,797356851.0
-full-current-policies-commit,Nuclear,2045,777161280.5,732331046.0,821991515.0
-full-current-policies-commit,Nuclear,2050,783839721.0,761051247.0,806628195.0
-full-current-policies-commit,Solar,2027,285501409.5,277947875.0,293054944.0
-full-current-policies-commit,Solar,2030,406001326.5,347742252.0,464260401.0
-full-current-policies-commit,Solar,2035,786895676.5,687465239.0,886326114.0
-full-current-policies-commit,Solar,2040,1185310547.0,1005492300.0,1365128794.0
-full-current-policies-commit,Solar,2045,1228185355.5,1032842063.0,1423528648.0
-full-current-policies-commit,Solar,2050,1406608667.0,1152954613.0,1660262721.0
-full-current-policies-commit,Wind,2027,978556023.0,883605318.0,1073506728.0
-full-current-policies-commit,Wind,2030,1380740608.5,1177515500.0,1583965717.0
-full-current-policies-commit,Wind,2035,1715048109.0,1616637351.0,1813458867.0
-full-current-policies-commit,Wind,2040,1963231459.5,1900171228.0,2026291691.0
-full-current-policies-commit,Wind,2045,1938372821.5,1860665516.0,2016080127.0
-full-current-policies-commit,Wind,2050,1878366086.5,1768512045.0,1988220128.0
+full-current-policies-commit,Battery,2027,17114962.0,16651469.0,17578455.0
+full-current-policies-commit,Battery,2030,21197840.5,20485914.0,21909767.0
+full-current-policies-commit,Battery,2035,41997701.5,38661921.0,45333482.0
+full-current-policies-commit,Battery,2040,96506773.5,88467146.0,104546401.0
+full-current-policies-commit,Battery,2045,100800509.0,91685705.0,109915313.0
+full-current-policies-commit,Battery,2050,112153288.0,99103336.0,125203240.0
+full-current-policies-commit,CCS,2027,55740.0,4087.0,107393.0
+full-current-policies-commit,CCS,2030,59486.5,3908.0,115065.0
+full-current-policies-commit,CCS,2035,150256.0,5817.0,294695.0
+full-current-policies-commit,CCS,2040,23557195.5,7447997.0,39666394.0
+full-current-policies-commit,CCS,2045,9160776.0,3539784.0,14781768.0
+full-current-policies-commit,CCS,2050,6551748.0,3300620.0,9802876.0
+full-current-policies-commit,Coal,2027,1052396817.0,1048522755.0,1056270879.0
+full-current-policies-commit,Coal,2030,966105870.5,958588385.0,973623356.0
+full-current-policies-commit,Coal,2035,797334939.0,793108601.0,801561277.0
+full-current-policies-commit,Coal,2040,494870697.5,492874395.0,496867000.0
+full-current-policies-commit,Coal,2045,367173564.0,365683754.0,368663374.0
+full-current-policies-commit,Coal,2050,195879826.5,195452945.0,196306708.0
+full-current-policies-commit,Distributed Solar,2027,92085162.0,91751519.0,92418805.0
+full-current-policies-commit,Distributed Solar,2030,138246089.0,137705247.0,138786931.0
+full-current-policies-commit,Distributed Solar,2035,177576663.0,177208633.0,177944693.0
+full-current-policies-commit,Distributed Solar,2040,184118694.0,183776260.0,184461128.0
+full-current-policies-commit,Distributed Solar,2045,200972186.0,200082039.0,201862333.0
+full-current-policies-commit,Distributed Solar,2050,215531490.5,214876804.0,216186177.0
+full-current-policies-commit,Geothermal,2027,5892887.0,5891627.0,5894147.0
+full-current-policies-commit,Geothermal,2030,5340217.5,5333540.0,5346895.0
+full-current-policies-commit,Geothermal,2035,4949153.5,4927164.0,4971143.0
+full-current-policies-commit,Geothermal,2040,3227054.5,3220420.0,3233689.0
+full-current-policies-commit,Geothermal,2045,1841407.0,1832837.0,1849977.0
+full-current-policies-commit,Geothermal,2050,867406.5,864043.0,870770.0
+full-current-policies-commit,Hydro,2027,283330768.0,280105275.0,286556261.0
+full-current-policies-commit,Hydro,2030,285569945.5,281893088.0,289246803.0
+full-current-policies-commit,Hydro,2035,293215361.5,289899171.0,296531552.0
+full-current-policies-commit,Hydro,2040,288607821.0,285810012.0,291405630.0
+full-current-policies-commit,Hydro,2045,272275485.5,269007682.0,275543289.0
+full-current-policies-commit,Hydro,2050,258396742.0,256395749.0,260397735.0
+full-current-policies-commit,Hydrogen,2027,20870.0,1554.0,40186.0
+full-current-policies-commit,Hydrogen,2030,18701.0,1661.0,35741.0
+full-current-policies-commit,Hydrogen,2035,22537.0,1464.0,43610.0
+full-current-policies-commit,Hydrogen,2040,29638.5,1823.0,57454.0
+full-current-policies-commit,Hydrogen,2045,420323.0,2507.0,838139.0
+full-current-policies-commit,Hydrogen,2050,66875.5,14611.0,119140.0
+full-current-policies-commit,Natural Gas CC,2027,845301391.5,835586322.0,855016461.0
+full-current-policies-commit,Natural Gas CC,2030,832965284.0,820934463.0,844996105.0
+full-current-policies-commit,Natural Gas CC,2035,1071399002.5,1060399089.0,1082398916.0
+full-current-policies-commit,Natural Gas CC,2040,1309811681.0,1289526876.0,1330096486.0
+full-current-policies-commit,Natural Gas CC,2045,2153553317.0,2139470240.0,2167636394.0
+full-current-policies-commit,Natural Gas CC,2050,2663410007.5,2660798168.0,2666021847.0
+full-current-policies-commit,Natural Gas CT,2027,4210579.0,3554757.0,4866401.0
+full-current-policies-commit,Natural Gas CT,2030,6536370.0,5428776.0,7643964.0
+full-current-policies-commit,Natural Gas CT,2035,37598308.5,34934723.0,40261894.0
+full-current-policies-commit,Natural Gas CT,2040,45823871.0,44550469.0,47097273.0
+full-current-policies-commit,Natural Gas CT,2045,37712001.5,36136216.0,39287787.0
+full-current-policies-commit,Natural Gas CT,2050,19901917.5,19087623.0,20716212.0
+full-current-policies-commit,Nuclear,2027,833849592.0,833189583.0,834509601.0
+full-current-policies-commit,Nuclear,2030,824543738.0,823548582.0,825538894.0
+full-current-policies-commit,Nuclear,2035,808203770.5,806876587.0,809530954.0
+full-current-policies-commit,Nuclear,2040,796136956.5,794917062.0,797356851.0
+full-current-policies-commit,Nuclear,2045,821208644.5,820425774.0,821991515.0
+full-current-policies-commit,Nuclear,2050,805030748.5,803433302.0,806628195.0
+full-current-policies-commit,Solar,2027,277928405.0,277908935.0,277947875.0
+full-current-policies-commit,Solar,2030,349875500.0,347742252.0,352008748.0
+full-current-policies-commit,Solar,2035,697470073.0,687465239.0,707474907.0
+full-current-policies-commit,Solar,2040,1019661029.0,1005492300.0,1033829758.0
+full-current-policies-commit,Solar,2045,1046556132.5,1032842063.0,1060270202.0
+full-current-policies-commit,Solar,2050,1172078401.0,1152954613.0,1191202189.0
+full-current-policies-commit,Wind,2027,876830032.0,870054746.0,883605318.0
+full-current-policies-commit,Wind,2030,1169184969.0,1160854438.0,1177515500.0
+full-current-policies-commit,Wind,2035,1598025007.5,1579412664.0,1616637351.0
+full-current-policies-commit,Wind,2040,1881470394.0,1862769560.0,1900171228.0
+full-current-policies-commit,Wind,2045,1839806010.0,1818946504.0,1860665516.0
+full-current-policies-commit,Wind,2050,1750275045.0,1732038045.0,1768512045.0
 full-current-policies-retire,Battery,2027,13654188.0,13518666.0,13815904.0
 full-current-policies-retire,Battery,2030,19721573.333333332,19068455.0,20740004.0
 full-current-policies-retire,Battery,2035,39668660.333333336,35280399.0,43730054.0

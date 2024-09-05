@@ -7433,540 +7433,540 @@ full-current-policies,Wind,2050,SOU,74053930.0,71679219.0,78535334.0
 full-current-policies,Wind,2050,SPP,305279422.6666667,287675394.0,324708271.0
 full-current-policies,Wind,2050,TRE,282566411.6666667,278367670.0,284704931.0
 full-current-policies,Wind,2050,WECC,331618594.3333333,328741377.0,334688507.0
-full-current-policies-commit,Battery,2027,CA,8911289.5,7278885.0,10543694.0
-full-current-policies-commit,Battery,2027,MISO,333367.0,139409.0,527325.0
-full-current-policies-commit,Battery,2027,NE,488585.5,403827.0,573344.0
-full-current-policies-commit,Battery,2027,PJM,297837.0,165884.0,429790.0
-full-current-policies-commit,Battery,2027,SOU,258959.0,248506.0,269412.0
-full-current-policies-commit,Battery,2027,SPP,322603.0,175554.0,469652.0
-full-current-policies-commit,Battery,2027,TRE,2965208.5,2786863.0,3143554.0
-full-current-policies-commit,Battery,2027,WECC,1881810.0,1831041.0,1932579.0
-full-current-policies-commit,Battery,2030,CA,12794285.0,12254281.0,13334289.0
-full-current-policies-commit,Battery,2030,MISO,455429.0,168235.0,742623.0
-full-current-policies-commit,Battery,2030,NE,668831.0,505200.0,832462.0
-full-current-policies-commit,Battery,2030,PJM,304488.5,128823.0,480154.0
-full-current-policies-commit,Battery,2030,SOU,513763.0,386649.0,640877.0
-full-current-policies-commit,Battery,2030,SPP,556703.5,194332.0,919075.0
-full-current-policies-commit,Battery,2030,TRE,3228886.5,3137933.0,3319840.0
-full-current-policies-commit,Battery,2030,WECC,2477190.0,2448546.0,2505834.0
-full-current-policies-commit,Battery,2035,CA,15135624.0,14555740.0,15715508.0
-full-current-policies-commit,Battery,2035,MISO,3878511.5,2084726.0,5672297.0
-full-current-policies-commit,Battery,2035,NE,9238764.5,7392752.0,11084777.0
-full-current-policies-commit,Battery,2035,PJM,195808.5,179768.0,211849.0
-full-current-policies-commit,Battery,2035,SOU,652989.0,623429.0,682549.0
-full-current-policies-commit,Battery,2035,SPP,301230.5,211421.0,391040.0
-full-current-policies-commit,Battery,2035,TRE,3534554.5,3530585.0,3538524.0
-full-current-policies-commit,Battery,2035,WECC,2761543.5,2719183.0,2803904.0
-full-current-policies-commit,Battery,2040,CA,12060126.5,9861806.0,14258447.0
-full-current-policies-commit,Battery,2040,MISO,20179361.5,17622611.0,22736112.0
-full-current-policies-commit,Battery,2040,NE,16095020.0,15210460.0,16979580.0
-full-current-policies-commit,Battery,2040,PJM,24543350.5,10806932.0,38279769.0
-full-current-policies-commit,Battery,2040,SOU,3826567.0,545248.0,7107886.0
-full-current-policies-commit,Battery,2040,SPP,155545.0,54786.0,256304.0
-full-current-policies-commit,Battery,2040,TRE,3587047.0,180956.0,6993138.0
-full-current-policies-commit,Battery,2040,WECC,7056498.0,4582731.0,9530265.0
-full-current-policies-commit,Battery,2045,CA,11923766.0,9697649.0,14149883.0
-full-current-policies-commit,Battery,2045,MISO,16391238.5,10880134.0,21902343.0
-full-current-policies-commit,Battery,2045,NE,18527172.5,17775355.0,19278990.0
-full-current-policies-commit,Battery,2045,PJM,19050825.0,10417847.0,27683803.0
-full-current-policies-commit,Battery,2045,SOU,4022318.5,628747.0,7415890.0
-full-current-policies-commit,Battery,2045,SPP,395410.5,152688.0,638133.0
-full-current-policies-commit,Battery,2045,TRE,3815920.0,110060.0,7521780.0
-full-current-policies-commit,Battery,2045,WECC,7696919.5,5033000.0,10360839.0
-full-current-policies-commit,Battery,2050,CA,12407251.5,9712248.0,15102255.0
-full-current-policies-commit,Battery,2050,MISO,14882149.0,13469182.0,16295116.0
-full-current-policies-commit,Battery,2050,NE,22853074.5,20416684.0,25289465.0
-full-current-policies-commit,Battery,2050,PJM,20712932.5,12567551.0,28858314.0
-full-current-policies-commit,Battery,2050,SOU,7831926.5,5485337.0,10178516.0
-full-current-policies-commit,Battery,2050,SPP,955853.5,841888.0,1069819.0
-full-current-policies-commit,Battery,2050,TRE,3673584.0,101180.0,7245988.0
-full-current-policies-commit,Battery,2050,WECC,14259817.0,12292227.0,16227407.0
-full-current-policies-commit,CCS,2027,CA,86836.5,11532.0,162141.0
-full-current-policies-commit,CCS,2027,MISO,169003.5,29258.0,308749.0
-full-current-policies-commit,CCS,2027,PJM,93258.5,10818.0,175699.0
-full-current-policies-commit,CCS,2027,SOU,60095.0,18486.0,101704.0
-full-current-policies-commit,CCS,2027,SPP,80256.0,13628.0,146884.0
-full-current-policies-commit,CCS,2027,TRE,64378.0,10395.0,118361.0
-full-current-policies-commit,CCS,2027,WECC,79966.5,13276.0,146657.0
-full-current-policies-commit,CCS,2030,CA,98182.5,12132.0,184233.0
-full-current-policies-commit,CCS,2030,MISO,178402.0,31626.0,325178.0
-full-current-policies-commit,CCS,2030,PJM,26186.0,11210.0,41162.0
-full-current-policies-commit,CCS,2030,SOU,36108.0,20018.0,52198.0
-full-current-policies-commit,CCS,2030,SPP,83302.5,15331.0,151274.0
-full-current-policies-commit,CCS,2030,TRE,71055.0,11046.0,131064.0
-full-current-policies-commit,CCS,2030,WECC,68018.0,13702.0,122334.0
-full-current-policies-commit,CCS,2035,CA,142725.5,28605.0,256846.0
-full-current-policies-commit,CCS,2035,MISO,324853.0,117039.0,532667.0
-full-current-policies-commit,CCS,2035,PJM,128821.0,47367.0,210275.0
-full-current-policies-commit,CCS,2035,SOU,150523.5,45899.0,255148.0
-full-current-policies-commit,CCS,2035,SPP,109587.0,18662.0,200512.0
-full-current-policies-commit,CCS,2035,TRE,101913.0,14363.0,189463.0
-full-current-policies-commit,CCS,2035,WECC,113301.5,22760.0,203843.0
-full-current-policies-commit,CCS,2040,CA,10199237.0,9279353.0,11119121.0
-full-current-policies-commit,CCS,2040,MISO,3006019.0,521728.0,5490310.0
-full-current-policies-commit,CCS,2040,PJM,20811510.5,17054017.0,24569004.0
-full-current-policies-commit,CCS,2040,SOU,216090.5,200547.0,231634.0
-full-current-policies-commit,CCS,2040,SPP,127777.5,32438.0,223117.0
-full-current-policies-commit,CCS,2040,TRE,108546.0,27852.0,189240.0
-full-current-policies-commit,CCS,2040,WECC,122173.0,35803.0,208543.0
-full-current-policies-commit,CCS,2045,CA,6009209.5,4814184.0,7204235.0
-full-current-policies-commit,CCS,2045,MISO,1087820.5,186956.0,1988685.0
-full-current-policies-commit,CCS,2045,PJM,3886218.5,700839.0,7071598.0
-full-current-policies-commit,CCS,2045,SOU,180702.0,82508.0,278896.0
-full-current-policies-commit,CCS,2045,SPP,143638.0,39069.0,248207.0
-full-current-policies-commit,CCS,2045,TRE,97138.0,35713.0,158563.0
-full-current-policies-commit,CCS,2045,WECC,123188.0,24741.0,221635.0
-full-current-policies-commit,CCS,2050,CA,5163117.0,3986290.0,6339944.0
-full-current-policies-commit,CCS,2050,MISO,561150.0,148454.0,973846.0
-full-current-policies-commit,CCS,2050,PJM,2844753.0,1134594.0,4554912.0
-full-current-policies-commit,CCS,2050,SOU,52447.5,11580.0,93315.0
-full-current-policies-commit,CCS,2050,SPP,58025.0,30814.0,85236.0
-full-current-policies-commit,CCS,2050,TRE,41966.5,31374.0,52559.0
-full-current-policies-commit,CCS,2050,WECC,38818.5,20919.0,56718.0
+full-current-policies-commit,Battery,2027,CA,10734913.0,10543694.0,10926132.0
+full-current-policies-commit,Battery,2027,MISO,136633.0,133857.0,139409.0
+full-current-policies-commit,Battery,2027,NE,431934.5,403827.0,460042.0
+full-current-policies-commit,Battery,2027,PJM,176110.0,165884.0,186336.0
+full-current-policies-commit,Battery,2027,SOU,271141.0,248506.0,293776.0
+full-current-policies-commit,Battery,2027,SPP,176216.5,175554.0,176879.0
+full-current-policies-commit,Battery,2027,TRE,3248372.5,3143554.0,3353191.0
+full-current-policies-commit,Battery,2027,WECC,1939641.5,1831041.0,2048242.0
+full-current-policies-commit,Battery,2030,CA,13826928.5,13334289.0,14319568.0
+full-current-policies-commit,Battery,2030,MISO,165076.5,161918.0,168235.0
+full-current-policies-commit,Battery,2030,NE,535474.5,505200.0,565749.0
+full-current-policies-commit,Battery,2030,PJM,140241.0,128823.0,151659.0
+full-current-policies-commit,Battery,2030,SOU,418541.5,386649.0,450434.0
+full-current-policies-commit,Battery,2030,SPP,195351.5,194332.0,196371.0
+full-current-policies-commit,Battery,2030,TRE,3425079.0,3319840.0,3530318.0
+full-current-policies-commit,Battery,2030,WECC,2491148.0,2448546.0,2533750.0
+full-current-policies-commit,Battery,2035,CA,15130949.0,14555740.0,15706158.0
+full-current-policies-commit,Battery,2035,MISO,6801132.0,5672297.0,7929967.0
+full-current-policies-commit,Battery,2035,NE,11886152.0,11084777.0,12687527.0
+full-current-policies-commit,Battery,2035,PJM,869921.5,179768.0,1560075.0
+full-current-policies-commit,Battery,2035,SOU,638763.0,623429.0,654097.0
+full-current-policies-commit,Battery,2035,SPP,205284.0,199147.0,211421.0
+full-current-policies-commit,Battery,2035,TRE,3635346.5,3530585.0,3740108.0
+full-current-policies-commit,Battery,2035,WECC,2830153.5,2803904.0,2856403.0
+full-current-policies-commit,Battery,2040,CA,15171350.5,14258447.0,16084254.0
+full-current-policies-commit,Battery,2040,MISO,25455995.5,22736112.0,28175879.0
+full-current-policies-commit,Battery,2040,NE,18245016.0,16979580.0,19510452.0
+full-current-policies-commit,Battery,2040,PJM,11248889.5,10806932.0,11690847.0
+full-current-policies-commit,Battery,2040,SOU,8562825.0,7107886.0,10017764.0
+full-current-policies-commit,Battery,2040,SPP,29348.0,3910.0,54786.0
+full-current-policies-commit,Battery,2040,TRE,7833942.0,6993138.0,8674746.0
+full-current-policies-commit,Battery,2040,WECC,9959407.0,9530265.0,10388549.0
+full-current-policies-commit,Battery,2045,CA,15042674.0,14149883.0,15935465.0
+full-current-policies-commit,Battery,2045,MISO,24234042.5,21902343.0,26565742.0
+full-current-policies-commit,Battery,2045,NE,21514065.0,19278990.0,23749140.0
+full-current-policies-commit,Battery,2045,PJM,10821007.5,10417847.0,11224168.0
+full-current-policies-commit,Battery,2045,SOU,8891099.5,7415890.0,10366309.0
+full-current-policies-commit,Battery,2045,SPP,321572.0,5011.0,638133.0
+full-current-policies-commit,Battery,2045,TRE,8266646.5,7521780.0,9011513.0
+full-current-policies-commit,Battery,2045,WECC,11709402.0,10360839.0,13057965.0
+full-current-policies-commit,Battery,2050,CA,15924292.0,15102255.0,16746329.0
+full-current-policies-commit,Battery,2050,MISO,18184116.5,16295116.0,20073117.0
+full-current-policies-commit,Battery,2050,NE,26875257.0,20416684.0,33333830.0
+full-current-policies-commit,Battery,2050,PJM,12144381.0,11721211.0,12567551.0
+full-current-policies-commit,Battery,2050,SOU,11177870.5,10178516.0,12177225.0
+full-current-policies-commit,Battery,2050,SPP,1296533.5,1069819.0,1523248.0
+full-current-policies-commit,Battery,2050,TRE,8182708.0,7245988.0,9119428.0
+full-current-policies-commit,Battery,2050,WECC,18368129.5,16227407.0,20508852.0
+full-current-policies-commit,CCS,2027,CA,5992.0,452.0,11532.0
+full-current-policies-commit,CCS,2027,MISO,15150.5,1043.0,29258.0
+full-current-policies-commit,CCS,2027,PJM,5593.0,368.0,10818.0
+full-current-policies-commit,CCS,2027,SOU,9611.5,737.0,18486.0
+full-current-policies-commit,CCS,2027,SPP,7072.0,516.0,13628.0
+full-current-policies-commit,CCS,2027,TRE,5422.5,450.0,10395.0
+full-current-policies-commit,CCS,2027,WECC,6898.5,521.0,13276.0
+full-current-policies-commit,CCS,2030,CA,6288.5,445.0,12132.0
+full-current-policies-commit,CCS,2030,MISO,16286.0,946.0,31626.0
+full-current-policies-commit,CCS,2030,PJM,5757.0,304.0,11210.0
+full-current-policies-commit,CCS,2030,SOU,10419.5,821.0,20018.0
+full-current-policies-commit,CCS,2030,SPP,7890.5,450.0,15331.0
+full-current-policies-commit,CCS,2030,TRE,5768.0,490.0,11046.0
+full-current-policies-commit,CCS,2030,WECC,7077.0,452.0,13702.0
+full-current-policies-commit,CCS,2035,CA,14649.5,694.0,28605.0
+full-current-policies-commit,CCS,2035,MISO,59349.0,1659.0,117039.0
+full-current-policies-commit,CCS,2035,PJM,24131.0,895.0,47367.0
+full-current-policies-commit,CCS,2035,SOU,23465.0,1031.0,45899.0
+full-current-policies-commit,CCS,2035,SPP,9561.5,461.0,18662.0
+full-current-policies-commit,CCS,2035,TRE,7461.5,560.0,14363.0
+full-current-policies-commit,CCS,2035,WECC,11638.5,517.0,22760.0
+full-current-policies-commit,CCS,2040,CA,8358355.0,7437357.0,9279353.0
+full-current-policies-commit,CCS,2040,MISO,2746661.0,3012.0,5490310.0
+full-current-policies-commit,CCS,2040,PJM,12285823.5,2643.0,24569004.0
+full-current-policies-commit,CCS,2040,SOU,117110.5,2587.0,231634.0
+full-current-policies-commit,CCS,2040,SPP,16558.0,678.0,32438.0
+full-current-policies-commit,CCS,2040,TRE,14352.0,852.0,27852.0
+full-current-policies-commit,CCS,2040,WECC,18335.5,868.0,35803.0
+full-current-policies-commit,CCS,2045,CA,4174575.0,3534966.0,4814184.0
+full-current-policies-commit,CCS,2045,MISO,995020.5,1356.0,1988685.0
+full-current-policies-commit,CCS,2045,PJM,3536269.5,941.0,7071598.0
+full-current-policies-commit,CCS,2045,SOU,139901.0,906.0,278896.0
+full-current-policies-commit,CCS,2045,SPP,124340.5,474.0,248207.0
+full-current-policies-commit,CCS,2045,TRE,79570.5,578.0,158563.0
+full-current-policies-commit,CCS,2045,WECC,111099.0,563.0,221635.0
+full-current-policies-commit,CCS,2050,CA,3640894.0,3295498.0,3986290.0
+full-current-policies-commit,CCS,2050,MISO,487673.5,1501.0,973846.0
+full-current-policies-commit,CCS,2050,PJM,2277905.0,898.0,4554912.0
+full-current-policies-commit,CCS,2050,SOU,47119.0,923.0,93315.0
+full-current-policies-commit,CCS,2050,SPP,42905.0,574.0,85236.0
+full-current-policies-commit,CCS,2050,TRE,26596.5,634.0,52559.0
+full-current-policies-commit,CCS,2050,WECC,28655.0,592.0,56718.0
 full-current-policies-commit,Coal,2027,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2027,MISO,299171280.0,276716181.0,321626379.0
-full-current-policies-commit,Coal,2027,NE,2862683.5,2860964.0,2864403.0
-full-current-policies-commit,Coal,2027,PJM,226983078.5,222289529.0,231676628.0
-full-current-policies-commit,Coal,2027,SOU,199116923.5,198526412.0,199707435.0
-full-current-policies-commit,Coal,2027,SPP,104083988.0,100210938.0,107957038.0
-full-current-policies-commit,Coal,2027,TRE,82800562.5,81054857.0,84546268.0
-full-current-policies-commit,Coal,2027,WECC,119549499.5,118464289.0,120634710.0
+full-current-policies-commit,Coal,2027,MISO,320225598.0,318824817.0,321626379.0
+full-current-policies-commit,Coal,2027,NE,2858388.0,2855812.0,2860964.0
+full-current-policies-commit,Coal,2027,PJM,220749287.5,219209046.0,222289529.0
+full-current-policies-commit,Coal,2027,SOU,197795967.0,197065522.0,198526412.0
+full-current-policies-commit,Coal,2027,SPP,107773170.0,107589302.0,107957038.0
+full-current-policies-commit,Coal,2027,TRE,84417095.0,84287922.0,84546268.0
+full-current-policies-commit,Coal,2027,WECC,118577311.5,118464289.0,118690334.0
 full-current-policies-commit,Coal,2030,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2030,MISO,270417083.0,239954965.0,300879201.0
-full-current-policies-commit,Coal,2030,NE,2708664.0,2695779.0,2721549.0
-full-current-policies-commit,Coal,2030,PJM,211326525.0,200248301.0,222404749.0
-full-current-policies-commit,Coal,2030,SOU,186965210.0,175826117.0,198104303.0
-full-current-policies-commit,Coal,2030,SPP,91224364.0,80504160.0,101944568.0
-full-current-policies-commit,Coal,2030,TRE,61314907.5,55729742.0,66900073.0
-full-current-policies-commit,Coal,2030,WECC,97368460.5,91911560.0,102825361.0
+full-current-policies-commit,Coal,2030,MISO,298777720.5,296676240.0,300879201.0
+full-current-policies-commit,Coal,2030,NE,2710455.5,2699362.0,2721549.0
+full-current-policies-commit,Coal,2030,PJM,198042834.0,195837367.0,200248301.0
+full-current-policies-commit,Coal,2030,SOU,196635135.5,195165968.0,198104303.0
+full-current-policies-commit,Coal,2030,SPP,101217818.5,100491069.0,101944568.0
+full-current-policies-commit,Coal,2030,TRE,66653191.0,66406309.0,66900073.0
+full-current-policies-commit,Coal,2030,WECC,102068715.5,101312070.0,102825361.0
 full-current-policies-commit,Coal,2035,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2035,MISO,229304875.0,212605168.0,246004582.0
+full-current-policies-commit,Coal,2035,MISO,244451827.0,242899072.0,246004582.0
 full-current-policies-commit,Coal,2035,NE,0.0,0.0,0.0
-full-current-policies-commit,Coal,2035,PJM,149896411.5,147121962.0,152670861.0
-full-current-policies-commit,Coal,2035,SOU,156272384.5,146775040.0,165769729.0
-full-current-policies-commit,Coal,2035,SPP,88285618.5,81514622.0,95056615.0
-full-current-policies-commit,Coal,2035,TRE,61068056.0,58196922.0,63939190.0
-full-current-policies-commit,Coal,2035,WECC,79342723.0,75016247.0,83669199.0
+full-current-policies-commit,Coal,2035,PJM,146852905.0,146583848.0,147121962.0
+full-current-policies-commit,Coal,2035,SOU,165648101.0,165526473.0,165769729.0
+full-current-policies-commit,Coal,2035,SPP,94054700.5,93052786.0,95056615.0
+full-current-policies-commit,Coal,2035,TRE,63768553.0,63597916.0,63939190.0
+full-current-policies-commit,Coal,2035,WECC,82558852.5,81448506.0,83669199.0
 full-current-policies-commit,Coal,2040,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2040,MISO,161349959.0,153082082.0,169617836.0
+full-current-policies-commit,Coal,2040,MISO,168491134.5,167364433.0,169617836.0
 full-current-policies-commit,Coal,2040,NE,0.0,0.0,0.0
-full-current-policies-commit,Coal,2040,PJM,47708585.5,45157320.0,50259851.0
-full-current-policies-commit,Coal,2040,SOU,95509406.5,93974448.0,97044365.0
-full-current-policies-commit,Coal,2040,SPP,70028698.5,67879173.0,72178224.0
-full-current-policies-commit,Coal,2040,TRE,58049140.5,55540857.0,60557424.0
-full-current-policies-commit,Coal,2040,WECC,54178007.5,52974267.0,55381748.0
+full-current-policies-commit,Coal,2040,PJM,45544373.5,45157320.0,45931427.0
+full-current-policies-commit,Coal,2040,SOU,94079396.5,93974448.0,94184345.0
+full-current-policies-commit,Coal,2040,SPP,71360526.0,70542828.0,72178224.0
+full-current-policies-commit,Coal,2040,TRE,60225439.0,59893454.0,60557424.0
+full-current-policies-commit,Coal,2040,WECC,55169828.0,54957908.0,55381748.0
 full-current-policies-commit,Coal,2045,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2045,MISO,129181977.5,126338485.0,132025470.0
+full-current-policies-commit,Coal,2045,MISO,125793786.5,125249088.0,126338485.0
 full-current-policies-commit,Coal,2045,NE,0.0,0.0,0.0
-full-current-policies-commit,Coal,2045,PJM,32200012.0,24155443.0,40244581.0
-full-current-policies-commit,Coal,2045,SOU,74347284.0,70808646.0,77885922.0
-full-current-policies-commit,Coal,2045,SPP,52635608.0,49020025.0,56251191.0
-full-current-policies-commit,Coal,2045,TRE,37841543.0,34424120.0,41258966.0
-full-current-policies-commit,Coal,2045,WECC,57784470.5,56839379.0,58729562.0
+full-current-policies-commit,Coal,2045,PJM,23849534.5,23543626.0,24155443.0
+full-current-policies-commit,Coal,2045,SOU,77892048.0,77885922.0,77898174.0
+full-current-policies-commit,Coal,2045,SPP,48647048.5,48274072.0,49020025.0
+full-current-policies-commit,Coal,2045,TRE,33996926.5,33569733.0,34424120.0
+full-current-policies-commit,Coal,2045,WECC,56994220.0,56839379.0,57149061.0
 full-current-policies-commit,Coal,2050,CA,0.0,0.0,0.0
-full-current-policies-commit,Coal,2050,MISO,54534048.5,49919469.0,59148628.0
+full-current-policies-commit,Coal,2050,MISO,58313944.0,57479260.0,59148628.0
 full-current-policies-commit,Coal,2050,NE,0.0,0.0,0.0
-full-current-policies-commit,Coal,2050,PJM,15660143.5,14296070.0,17024217.0
-full-current-policies-commit,Coal,2050,SOU,37126306.5,34030462.0,40222151.0
-full-current-policies-commit,Coal,2050,SPP,23636737.0,22464966.0,24808508.0
-full-current-policies-commit,Coal,2050,TRE,30349050.0,29787227.0,30910873.0
-full-current-policies-commit,Coal,2050,WECC,31331401.5,30404399.0,32258404.0
-full-current-policies-commit,Distributed Solar,2027,CA,26362399.5,26324133.0,26400666.0
-full-current-policies-commit,Distributed Solar,2027,MISO,8882686.5,8853973.0,8911400.0
-full-current-policies-commit,Distributed Solar,2027,NE,9732496.0,9602587.0,9862405.0
-full-current-policies-commit,Distributed Solar,2027,PJM,16345534.0,16222611.0,16468457.0
-full-current-policies-commit,Distributed Solar,2027,SOU,10628359.5,10627561.0,10629158.0
-full-current-policies-commit,Distributed Solar,2027,SPP,2270658.5,2255829.0,2285488.0
-full-current-policies-commit,Distributed Solar,2027,TRE,6057480.0,5936632.0,6178328.0
-full-current-policies-commit,Distributed Solar,2027,WECC,11940790.5,11926596.0,11954985.0
-full-current-policies-commit,Distributed Solar,2030,CA,32063922.0,32004421.0,32123423.0
-full-current-policies-commit,Distributed Solar,2030,MISO,16231777.0,16038427.0,16425127.0
-full-current-policies-commit,Distributed Solar,2030,NE,12089491.0,11815137.0,12363845.0
-full-current-policies-commit,Distributed Solar,2030,PJM,26122912.0,26065967.0,26179857.0
-full-current-policies-commit,Distributed Solar,2030,SOU,19276150.5,19268306.0,19283995.0
-full-current-policies-commit,Distributed Solar,2030,SPP,3995882.5,3870912.0,4120853.0
-full-current-policies-commit,Distributed Solar,2030,TRE,11668430.5,11587092.0,11749769.0
-full-current-policies-commit,Distributed Solar,2030,WECC,16280459.0,16158263.0,16402655.0
-full-current-policies-commit,Distributed Solar,2035,CA,37204268.0,37033214.0,37375322.0
-full-current-policies-commit,Distributed Solar,2035,MISO,25975070.5,25923412.0,26026729.0
-full-current-policies-commit,Distributed Solar,2035,NE,14182998.0,13950610.0,14415386.0
-full-current-policies-commit,Distributed Solar,2035,PJM,33187965.5,32977674.0,33398257.0
-full-current-policies-commit,Distributed Solar,2035,SOU,24601036.0,24469490.0,24732582.0
-full-current-policies-commit,Distributed Solar,2035,SPP,5972911.0,5569600.0,6376222.0
-full-current-policies-commit,Distributed Solar,2035,TRE,16653152.5,16454019.0,16852286.0
-full-current-policies-commit,Distributed Solar,2035,WECC,20246567.0,19657583.0,20835551.0
-full-current-policies-commit,Distributed Solar,2040,CA,37264402.0,36977361.0,37551443.0
-full-current-policies-commit,Distributed Solar,2040,MISO,28716453.5,28629367.0,28803540.0
-full-current-policies-commit,Distributed Solar,2040,NE,14165554.0,13930820.0,14400288.0
-full-current-policies-commit,Distributed Solar,2040,PJM,34083582.5,33418191.0,34748974.0
-full-current-policies-commit,Distributed Solar,2040,SOU,27198193.5,26945131.0,27451256.0
-full-current-policies-commit,Distributed Solar,2040,SPP,7073270.5,6695986.0,7450555.0
-full-current-policies-commit,Distributed Solar,2040,TRE,16242376.5,15830937.0,16653816.0
-full-current-policies-commit,Distributed Solar,2040,WECC,18137373.0,17759886.0,18514860.0
-full-current-policies-commit,Distributed Solar,2045,CA,36531008.0,36468866.0,36593150.0
-full-current-policies-commit,Distributed Solar,2045,MISO,33939615.0,33856850.0,34022380.0
-full-current-policies-commit,Distributed Solar,2045,NE,15401074.0,15126137.0,15676011.0
-full-current-policies-commit,Distributed Solar,2045,PJM,36262288.0,36259514.0,36265062.0
-full-current-policies-commit,Distributed Solar,2045,SOU,28699451.5,28667288.0,28731615.0
-full-current-policies-commit,Distributed Solar,2045,SPP,9715033.0,9553368.0,9876698.0
-full-current-policies-commit,Distributed Solar,2045,TRE,19010562.5,18924851.0,19096274.0
-full-current-policies-commit,Distributed Solar,2045,WECC,21048096.5,20901835.0,21194358.0
-full-current-policies-commit,Distributed Solar,2050,CA,36487545.0,36435079.0,36540011.0
-full-current-policies-commit,Distributed Solar,2050,MISO,38215603.5,38179212.0,38251995.0
-full-current-policies-commit,Distributed Solar,2050,NE,16183707.5,15887378.0,16480037.0
-full-current-policies-commit,Distributed Solar,2050,PJM,37891672.0,37783323.0,38000021.0
-full-current-policies-commit,Distributed Solar,2050,SOU,31997228.0,31991008.0,32003448.0
-full-current-policies-commit,Distributed Solar,2050,SPP,11498752.5,11339289.0,11658216.0
-full-current-policies-commit,Distributed Solar,2050,TRE,20874930.0,20814943.0,20934917.0
-full-current-policies-commit,Distributed Solar,2050,WECC,21839980.5,21838164.0,21841797.0
-full-current-policies-commit,Geothermal,2027,CA,205605.5,205522.0,205689.0
-full-current-policies-commit,Geothermal,2027,WECC,5688625.0,5688458.0,5688792.0
-full-current-policies-commit,Geothermal,2030,CA,203122.5,202898.0,203347.0
-full-current-policies-commit,Geothermal,2030,WECC,5258479.5,5143548.0,5373411.0
-full-current-policies-commit,Geothermal,2035,CA,200433.0,196401.0,204465.0
-full-current-policies-commit,Geothermal,2035,WECC,4911639.0,4774742.0,5048536.0
-full-current-policies-commit,Geothermal,2040,CA,188990.0,188496.0,189484.0
-full-current-policies-commit,Geothermal,2040,WECC,3048484.5,3030936.0,3066033.0
-full-current-policies-commit,Geothermal,2045,CA,203200.5,199766.0,206635.0
-full-current-policies-commit,Geothermal,2045,WECC,1816299.0,1633071.0,1999527.0
-full-current-policies-commit,Geothermal,2050,CA,205706.5,204769.0,206644.0
-full-current-policies-commit,Geothermal,2050,WECC,765537.0,659274.0,871800.0
-full-current-policies-commit,Hydro,2027,CA,25537182.5,24827806.0,26246559.0
-full-current-policies-commit,Hydro,2027,MISO,25224854.0,23977350.0,26472358.0
-full-current-policies-commit,Hydro,2027,NE,30333688.0,29925633.0,30741743.0
-full-current-policies-commit,Hydro,2027,PJM,11259982.0,9659325.0,12860639.0
-full-current-policies-commit,Hydro,2027,SOU,9174871.0,7895099.0,10454643.0
-full-current-policies-commit,Hydro,2027,SPP,13904394.0,13664706.0,14144082.0
-full-current-policies-commit,Hydro,2027,TRE,549657.0,545331.0,553983.0
-full-current-policies-commit,Hydro,2027,WECC,165075999.0,165069744.0,165082254.0
-full-current-policies-commit,Hydro,2030,CA,27440101.0,26705366.0,28174836.0
-full-current-policies-commit,Hydro,2030,MISO,25795478.0,24118615.0,27472341.0
-full-current-policies-commit,Hydro,2030,NE,30028734.0,29908479.0,30148989.0
-full-current-policies-commit,Hydro,2030,PJM,11179450.0,8660238.0,13698662.0
-full-current-policies-commit,Hydro,2030,SOU,9417303.0,7894394.0,10940212.0
-full-current-policies-commit,Hydro,2030,SPP,13283545.0,12601052.0,13966038.0
-full-current-policies-commit,Hydro,2030,TRE,518915.0,490279.0,547551.0
-full-current-policies-commit,Hydro,2030,WECC,164128920.0,163959666.0,164298174.0
-full-current-policies-commit,Hydro,2035,CA,30428937.0,29690250.0,31167624.0
-full-current-policies-commit,Hydro,2035,MISO,27920563.0,26918687.0,28922439.0
-full-current-policies-commit,Hydro,2035,NE,29115108.5,28833297.0,29396920.0
-full-current-policies-commit,Hydro,2035,PJM,14264742.0,13040616.0,15488868.0
-full-current-policies-commit,Hydro,2035,SOU,13191652.5,12511070.0,13872235.0
-full-current-policies-commit,Hydro,2035,SPP,13663480.0,13595085.0,13731875.0
-full-current-policies-commit,Hydro,2035,TRE,492328.0,481028.0,503628.0
-full-current-policies-commit,Hydro,2035,WECC,163054930.5,162661898.0,163447963.0
-full-current-policies-commit,Hydro,2040,CA,31614829.0,31523828.0,31705830.0
-full-current-policies-commit,Hydro,2040,MISO,26186006.5,25302761.0,27069252.0
-full-current-policies-commit,Hydro,2040,NE,29874868.5,29667493.0,30082244.0
-full-current-policies-commit,Hydro,2040,PJM,16094784.5,15383493.0,16806076.0
-full-current-policies-commit,Hydro,2040,SOU,15399594.5,14632821.0,16166368.0
-full-current-policies-commit,Hydro,2040,SPP,13124466.0,12945156.0,13303776.0
-full-current-policies-commit,Hydro,2040,TRE,384644.5,365210.0,404079.0
-full-current-policies-commit,Hydro,2040,WECC,157947250.5,157744208.0,158150293.0
-full-current-policies-commit,Hydro,2045,CA,29617650.5,29117622.0,30117679.0
-full-current-policies-commit,Hydro,2045,MISO,21632965.5,20890272.0,22375659.0
-full-current-policies-commit,Hydro,2045,NE,29223159.0,28746189.0,29700129.0
-full-current-policies-commit,Hydro,2045,PJM,13889931.5,13240840.0,14539023.0
-full-current-policies-commit,Hydro,2045,SOU,14174852.0,13839705.0,14509999.0
-full-current-policies-commit,Hydro,2045,SPP,13204775.5,12909550.0,13500001.0
-full-current-policies-commit,Hydro,2045,TRE,252674.5,250989.0,254360.0
-full-current-policies-commit,Hydro,2045,WECC,150316214.0,150085989.0,150546439.0
-full-current-policies-commit,Hydro,2050,CA,26969664.0,26420921.0,27518407.0
-full-current-policies-commit,Hydro,2050,MISO,18210297.5,18166752.0,18253843.0
-full-current-policies-commit,Hydro,2050,NE,29813705.5,29728247.0,29899164.0
-full-current-policies-commit,Hydro,2050,PJM,14884955.0,14082142.0,15687768.0
-full-current-policies-commit,Hydro,2050,SOU,12705117.0,12532320.0,12877914.0
-full-current-policies-commit,Hydro,2050,SPP,13208064.5,13170107.0,13246022.0
-full-current-policies-commit,Hydro,2050,TRE,210782.5,209314.0,212251.0
-full-current-policies-commit,Hydro,2050,WECC,144081290.0,143854588.0,144307992.0
-full-current-policies-commit,Hydrogen,2027,CA,7141.0,3115.0,11167.0
-full-current-policies-commit,Hydrogen,2027,MISO,16461.5,7661.0,25262.0
-full-current-policies-commit,Hydrogen,2027,NE,10540.5,4414.0,16667.0
-full-current-policies-commit,Hydrogen,2027,PJM,13709.0,6151.0,21267.0
-full-current-policies-commit,Hydrogen,2027,SOU,9736.5,4804.0,14669.0
-full-current-policies-commit,Hydrogen,2027,SPP,9695.0,4536.0,14854.0
-full-current-policies-commit,Hydrogen,2027,TRE,6404.5,3167.0,9642.0
-full-current-policies-commit,Hydrogen,2027,WECC,13839.5,6338.0,21341.0
-full-current-policies-commit,Hydrogen,2030,CA,7660.5,2763.0,12558.0
-full-current-policies-commit,Hydrogen,2030,MISO,13122.5,6836.0,19409.0
-full-current-policies-commit,Hydrogen,2030,NE,11287.0,4209.0,18365.0
-full-current-policies-commit,Hydrogen,2030,PJM,12779.0,5492.0,20066.0
-full-current-policies-commit,Hydrogen,2030,SOU,8647.0,4248.0,13046.0
-full-current-policies-commit,Hydrogen,2030,SPP,6799.5,3997.0,9602.0
-full-current-policies-commit,Hydrogen,2030,TRE,7746.5,2705.0,12788.0
-full-current-policies-commit,Hydrogen,2030,WECC,14588.5,5491.0,23686.0
-full-current-policies-commit,Hydrogen,2035,CA,2796.0,2265.0,3327.0
-full-current-policies-commit,Hydrogen,2035,MISO,6703.5,5234.0,8173.0
-full-current-policies-commit,Hydrogen,2035,NE,5814.0,5607.0,6021.0
-full-current-policies-commit,Hydrogen,2035,PJM,6280.0,5755.0,6805.0
-full-current-policies-commit,Hydrogen,2035,SOU,4195.0,3362.0,5028.0
-full-current-policies-commit,Hydrogen,2035,SPP,3130.0,1599.0,4661.0
-full-current-policies-commit,Hydrogen,2035,TRE,2861.0,2420.0,3302.0
-full-current-policies-commit,Hydrogen,2035,WECC,5537.5,4368.0,6707.0
-full-current-policies-commit,Hydrogen,2040,CA,3893.0,3416.0,4370.0
-full-current-policies-commit,Hydrogen,2040,MISO,9328.5,7883.0,10774.0
-full-current-policies-commit,Hydrogen,2040,NE,7709.0,7548.0,7870.0
-full-current-policies-commit,Hydrogen,2040,PJM,6770.5,4873.0,8668.0
-full-current-policies-commit,Hydrogen,2040,SOU,4524.0,2403.0,6645.0
-full-current-policies-commit,Hydrogen,2040,SPP,5060.5,3936.0,6185.0
-full-current-policies-commit,Hydrogen,2040,TRE,3605.0,3041.0,4169.0
-full-current-policies-commit,Hydrogen,2040,WECC,7834.5,6896.0,8773.0
-full-current-policies-commit,Hydrogen,2045,CA,33203.5,3667.0,62740.0
-full-current-policies-commit,Hydrogen,2045,MISO,80348.5,8252.0,152445.0
-full-current-policies-commit,Hydrogen,2045,NE,65013.5,8800.0,121227.0
-full-current-policies-commit,Hydrogen,2045,PJM,64010.0,5641.0,122379.0
-full-current-policies-commit,Hydrogen,2045,SOU,49737.0,4387.0,95087.0
-full-current-policies-commit,Hydrogen,2045,SPP,48731.0,4915.0,92547.0
-full-current-policies-commit,Hydrogen,2045,TRE,32284.0,3287.0,61281.0
-full-current-policies-commit,Hydrogen,2045,WECC,69214.5,7996.0,130433.0
-full-current-policies-commit,Hydrogen,2050,CA,6109.0,3937.0,8281.0
-full-current-policies-commit,Hydrogen,2050,MISO,13308.5,7344.0,19273.0
-full-current-policies-commit,Hydrogen,2050,NE,25331.0,24681.0,25981.0
-full-current-policies-commit,Hydrogen,2050,PJM,10646.5,5486.0,15807.0
-full-current-policies-commit,Hydrogen,2050,SOU,7341.0,3398.0,11284.0
-full-current-policies-commit,Hydrogen,2050,SPP,8787.0,4987.0,12587.0
-full-current-policies-commit,Hydrogen,2050,TRE,5894.5,4214.0,7575.0
-full-current-policies-commit,Hydrogen,2050,WECC,13388.0,8424.0,18352.0
-full-current-policies-commit,Natural Gas CC,2027,CA,81798018.5,80969765.0,82626272.0
-full-current-policies-commit,Natural Gas CC,2027,MISO,107399606.0,85418229.0,129380983.0
-full-current-policies-commit,Natural Gas CC,2027,NE,66772568.5,66631976.0,66913161.0
-full-current-policies-commit,Natural Gas CC,2027,PJM,169705377.5,142968312.0,196442443.0
-full-current-policies-commit,Natural Gas CC,2027,SOU,191545760.5,175641484.0,207450037.0
-full-current-policies-commit,Natural Gas CC,2027,SPP,11438754.5,10118532.0,12758977.0
-full-current-policies-commit,Natural Gas CC,2027,TRE,79218475.5,71102800.0,87334151.0
-full-current-policies-commit,Natural Gas CC,2027,WECC,50129595.0,47578892.0,52680298.0
-full-current-policies-commit,Natural Gas CC,2030,CA,73260190.5,69784974.0,76735407.0
-full-current-policies-commit,Natural Gas CC,2030,MISO,96382808.5,66398175.0,126367442.0
-full-current-policies-commit,Natural Gas CC,2030,NE,49346989.0,48736995.0,49956983.0
-full-current-policies-commit,Natural Gas CC,2030,PJM,177812336.5,148429098.0,207195575.0
-full-current-policies-commit,Natural Gas CC,2030,SOU,173732169.5,130265125.0,217199214.0
-full-current-policies-commit,Natural Gas CC,2030,SPP,11777772.0,9634628.0,13920916.0
-full-current-policies-commit,Natural Gas CC,2030,TRE,65291716.5,48801834.0,81781599.0
-full-current-policies-commit,Natural Gas CC,2030,WECC,39871897.5,31966468.0,47777327.0
-full-current-policies-commit,Natural Gas CC,2035,CA,97504127.0,91716435.0,103291819.0
-full-current-policies-commit,Natural Gas CC,2035,MISO,130738046.5,104400924.0,157075169.0
-full-current-policies-commit,Natural Gas CC,2035,NE,74032101.0,72499434.0,75564768.0
-full-current-policies-commit,Natural Gas CC,2035,PJM,233679539.5,197948319.0,269410760.0
-full-current-policies-commit,Natural Gas CC,2035,SOU,224861146.0,183002603.0,266719689.0
-full-current-policies-commit,Natural Gas CC,2035,SPP,18079399.0,16192385.0,19966413.0
-full-current-policies-commit,Natural Gas CC,2035,TRE,80572347.5,70512777.0,90631918.0
-full-current-policies-commit,Natural Gas CC,2035,WECC,70394850.5,63051148.0,77738553.0
-full-current-policies-commit,Natural Gas CC,2040,CA,121756354.5,120437715.0,123074994.0
-full-current-policies-commit,Natural Gas CC,2040,MISO,194239552.5,168196971.0,220282134.0
-full-current-policies-commit,Natural Gas CC,2040,NE,83693209.0,77943622.0,89442796.0
-full-current-policies-commit,Natural Gas CC,2040,PJM,279786547.0,184658558.0,374914536.0
-full-current-policies-commit,Natural Gas CC,2040,SOU,257536625.0,229286832.0,285786418.0
-full-current-policies-commit,Natural Gas CC,2040,SPP,20051320.0,18496236.0,21606404.0
-full-current-policies-commit,Natural Gas CC,2040,TRE,79312586.5,72694265.0,85930908.0
-full-current-policies-commit,Natural Gas CC,2040,WECC,82352969.0,73579973.0,91125965.0
-full-current-policies-commit,Natural Gas CC,2045,CA,200592062.5,196553089.0,204631036.0
-full-current-policies-commit,Natural Gas CC,2045,MISO,434694013.5,375782112.0,493605915.0
-full-current-policies-commit,Natural Gas CC,2045,NE,101862362.0,100196032.0,103528692.0
-full-current-policies-commit,Natural Gas CC,2045,PJM,410664996.5,325080853.0,496249140.0
-full-current-policies-commit,Natural Gas CC,2045,SOU,372682045.0,321106167.0,424257923.0
-full-current-policies-commit,Natural Gas CC,2045,SPP,27037339.0,18837443.0,35237235.0
-full-current-policies-commit,Natural Gas CC,2045,TRE,180008441.0,166393679.0,193623203.0
-full-current-policies-commit,Natural Gas CC,2045,WECC,182977141.0,177617186.0,188337096.0
-full-current-policies-commit,Natural Gas CC,2050,CA,229654839.5,220711317.0,238598362.0
-full-current-policies-commit,Natural Gas CC,2050,MISO,575397316.5,459966804.0,690827829.0
-full-current-policies-commit,Natural Gas CC,2050,NE,89015327.5,84008830.0,94021825.0
-full-current-policies-commit,Natural Gas CC,2050,PJM,438656826.0,332275310.0,545038342.0
-full-current-policies-commit,Natural Gas CC,2050,SOU,470472325.0,411902367.0,529042283.0
-full-current-policies-commit,Natural Gas CC,2050,SPP,48814393.5,28968463.0,68660324.0
-full-current-policies-commit,Natural Gas CC,2050,TRE,243045195.5,236327871.0,249762520.0
-full-current-policies-commit,Natural Gas CC,2050,WECC,236757144.5,228667606.0,244846683.0
-full-current-policies-commit,Natural Gas CT,2027,CA,54024.0,21632.0,86416.0
-full-current-policies-commit,Natural Gas CT,2027,MISO,1129541.5,902330.0,1356753.0
-full-current-policies-commit,Natural Gas CT,2027,NE,616240.5,493591.0,738890.0
-full-current-policies-commit,Natural Gas CT,2027,PJM,525445.0,360655.0,690235.0
-full-current-policies-commit,Natural Gas CT,2027,SOU,56790.5,35151.0,78430.0
-full-current-policies-commit,Natural Gas CT,2027,SPP,125926.5,91110.0,160743.0
-full-current-policies-commit,Natural Gas CT,2027,TRE,536266.0,478580.0,593952.0
-full-current-policies-commit,Natural Gas CT,2027,WECC,77598.5,27034.0,128163.0
-full-current-policies-commit,Natural Gas CT,2030,CA,38878.0,21373.0,56383.0
-full-current-policies-commit,Natural Gas CT,2030,MISO,1638297.0,541906.0,2734688.0
-full-current-policies-commit,Natural Gas CT,2030,NE,615995.5,480053.0,751938.0
-full-current-policies-commit,Natural Gas CT,2030,PJM,742418.0,295255.0,1189581.0
-full-current-policies-commit,Natural Gas CT,2030,SOU,59382.0,37205.0,81559.0
-full-current-policies-commit,Natural Gas CT,2030,SPP,76562.5,40624.0,112501.0
-full-current-policies-commit,Natural Gas CT,2030,TRE,303872.0,96019.0,511725.0
-full-current-policies-commit,Natural Gas CT,2030,WECC,56202.5,25411.0,86994.0
-full-current-policies-commit,Natural Gas CT,2035,CA,3001036.5,1818501.0,4183572.0
-full-current-policies-commit,Natural Gas CT,2035,MISO,7724118.0,4981566.0,10466670.0
-full-current-policies-commit,Natural Gas CT,2035,NE,1435254.5,1048530.0,1821979.0
-full-current-policies-commit,Natural Gas CT,2035,PJM,5856214.5,3131077.0,8581352.0
-full-current-policies-commit,Natural Gas CT,2035,SOU,2814886.0,395419.0,5234353.0
-full-current-policies-commit,Natural Gas CT,2035,SPP,377145.5,249588.0,504703.0
-full-current-policies-commit,Natural Gas CT,2035,TRE,2446148.5,1449631.0,3442666.0
-full-current-policies-commit,Natural Gas CT,2035,WECC,447489.5,195551.0,699428.0
-full-current-policies-commit,Natural Gas CT,2040,CA,4014279.0,2608203.0,5420355.0
-full-current-policies-commit,Natural Gas CT,2040,MISO,9965502.5,7629462.0,12301543.0
-full-current-policies-commit,Natural Gas CT,2040,NE,1564472.5,1487097.0,1641848.0
-full-current-policies-commit,Natural Gas CT,2040,PJM,6138745.0,4067234.0,8210256.0
-full-current-policies-commit,Natural Gas CT,2040,SOU,7402779.5,3990091.0,10815468.0
-full-current-policies-commit,Natural Gas CT,2040,SPP,1153590.0,1085580.0,1221600.0
-full-current-policies-commit,Natural Gas CT,2040,TRE,3419750.5,2835554.0,4003947.0
-full-current-policies-commit,Natural Gas CT,2040,WECC,873115.0,810778.0,935452.0
-full-current-policies-commit,Natural Gas CT,2045,CA,2956804.5,1572994.0,4340615.0
-full-current-policies-commit,Natural Gas CT,2045,MISO,7962830.5,5570907.0,10354754.0
-full-current-policies-commit,Natural Gas CT,2045,NE,1489218.5,1487605.0,1490832.0
-full-current-policies-commit,Natural Gas CT,2045,PJM,5350139.5,3196336.0,7503943.0
-full-current-policies-commit,Natural Gas CT,2045,SOU,5487552.5,3399393.0,7575712.0
-full-current-policies-commit,Natural Gas CT,2045,SPP,1889008.0,1131361.0,2646655.0
-full-current-policies-commit,Natural Gas CT,2045,TRE,3116436.5,2246605.0,3986268.0
-full-current-policies-commit,Natural Gas CT,2045,WECC,989641.5,590275.0,1389008.0
-full-current-policies-commit,Natural Gas CT,2050,CA,2310905.0,1266848.0,3354962.0
-full-current-policies-commit,Natural Gas CT,2050,MISO,3948738.0,3415377.0,4482099.0
-full-current-policies-commit,Natural Gas CT,2050,NE,1131013.0,1009604.0,1252422.0
-full-current-policies-commit,Natural Gas CT,2050,PJM,2953872.5,2135418.0,3772327.0
-full-current-policies-commit,Natural Gas CT,2050,SOU,2604388.0,2364682.0,2844094.0
-full-current-policies-commit,Natural Gas CT,2050,SPP,1293430.5,993891.0,1592970.0
-full-current-policies-commit,Natural Gas CT,2050,TRE,2154845.0,1653365.0,2656325.0
-full-current-policies-commit,Natural Gas CT,2050,WECC,619539.0,478065.0,761013.0
-full-current-policies-commit,Nuclear,2027,CA,16956.5,3822.0,30091.0
-full-current-policies-commit,Nuclear,2027,MISO,171545075.5,167490857.0,175599294.0
-full-current-policies-commit,Nuclear,2027,NE,54483741.5,53688125.0,55279358.0
-full-current-policies-commit,Nuclear,2027,PJM,293069559.5,292886973.0,293252146.0
-full-current-policies-commit,Nuclear,2027,SOU,208960653.0,208935450.0,208985856.0
-full-current-policies-commit,Nuclear,2027,SPP,15910927.5,15487527.0,16334328.0
-full-current-policies-commit,Nuclear,2027,TRE,39075810.0,37991930.0,40159690.0
-full-current-policies-commit,Nuclear,2027,WECC,45006167.0,44895107.0,45117227.0
-full-current-policies-commit,Nuclear,2030,CA,17624.0,3880.0,31368.0
-full-current-policies-commit,Nuclear,2030,MISO,157258351.0,140440969.0,174075733.0
-full-current-policies-commit,Nuclear,2030,NE,52083183.5,50835037.0,53331330.0
-full-current-policies-commit,Nuclear,2030,PJM,252570317.0,214151772.0,290988862.0
-full-current-policies-commit,Nuclear,2030,SOU,208233333.5,207496930.0,208969737.0
-full-current-policies-commit,Nuclear,2030,SPP,14246164.0,12787404.0,15704924.0
-full-current-policies-commit,Nuclear,2030,TRE,36648553.0,34534210.0,38762896.0
-full-current-policies-commit,Nuclear,2030,WECC,43288340.5,42875149.0,43701532.0
-full-current-policies-commit,Nuclear,2035,CA,34086.5,5159.0,63014.0
-full-current-policies-commit,Nuclear,2035,MISO,164002930.0,159873378.0,168132482.0
-full-current-policies-commit,Nuclear,2035,NE,52170414.5,50637054.0,53703775.0
-full-current-policies-commit,Nuclear,2035,PJM,283206659.0,279842256.0,286571062.0
-full-current-policies-commit,Nuclear,2035,SOU,203841460.0,201384845.0,206298075.0
-full-current-policies-commit,Nuclear,2035,SPP,14027570.0,12817038.0,15238102.0
-full-current-policies-commit,Nuclear,2035,TRE,36041849.5,34300444.0,37783255.0
-full-current-policies-commit,Nuclear,2035,WECC,40623737.0,39448430.0,41799044.0
-full-current-policies-commit,Nuclear,2040,CA,36875.5,6550.0,67201.0
-full-current-policies-commit,Nuclear,2040,MISO,155819689.0,147434167.0,164205211.0
-full-current-policies-commit,Nuclear,2040,NE,52954485.5,50598212.0,55310759.0
-full-current-policies-commit,Nuclear,2040,PJM,265913713.5,246180342.0,285647085.0
-full-current-policies-commit,Nuclear,2040,SOU,196523185.0,192568998.0,200477372.0
-full-current-policies-commit,Nuclear,2040,SPP,13436461.5,12151338.0,14721585.0
-full-current-policies-commit,Nuclear,2040,TRE,34772711.0,32803677.0,36741745.0
-full-current-policies-commit,Nuclear,2040,WECC,38864215.0,37481886.0,40246544.0
-full-current-policies-commit,Nuclear,2045,CA,70259.0,65635.0,74883.0
-full-current-policies-commit,Nuclear,2045,MISO,169146022.5,167460604.0,170831441.0
-full-current-policies-commit,Nuclear,2045,NE,54593497.5,53391780.0,55795215.0
-full-current-policies-commit,Nuclear,2045,PJM,252313466.0,213757153.0,290869779.0
-full-current-policies-commit,Nuclear,2045,SOU,203975581.5,202880784.0,205070379.0
-full-current-policies-commit,Nuclear,2045,SPP,15675615.0,15014849.0,16336381.0
-full-current-policies-commit,Nuclear,2045,TRE,38626508.5,37456108.0,39796909.0
-full-current-policies-commit,Nuclear,2045,WECC,42760330.5,42294885.0,43225776.0
-full-current-policies-commit,Nuclear,2050,CA,80948.5,70984.0,90913.0
-full-current-policies-commit,Nuclear,2050,MISO,164083878.0,160075663.0,168092093.0
-full-current-policies-commit,Nuclear,2050,NE,47087754.0,45932661.0,48242847.0
-full-current-policies-commit,Nuclear,2050,PJM,268925465.0,254319124.0,283531806.0
-full-current-policies-commit,Nuclear,2050,SOU,204262486.0,201312642.0,207212330.0
-full-current-policies-commit,Nuclear,2050,SPP,15996370.0,15083062.0,16909678.0
-full-current-policies-commit,Nuclear,2050,TRE,40493325.0,39798290.0,41188360.0
-full-current-policies-commit,Nuclear,2050,WECC,42909494.5,42148635.0,43670354.0
-full-current-policies-commit,Solar,2027,CA,47381763.0,46981936.0,47781590.0
-full-current-policies-commit,Solar,2027,MISO,26403047.0,26037381.0,26768713.0
-full-current-policies-commit,Solar,2027,NE,33648032.5,32604075.0,34691990.0
-full-current-policies-commit,Solar,2027,PJM,26758556.5,23783996.0,29733117.0
-full-current-policies-commit,Solar,2027,SOU,50881375.5,48880461.0,52882290.0
-full-current-policies-commit,Solar,2027,SPP,1496236.5,1304439.0,1688034.0
-full-current-policies-commit,Solar,2027,TRE,50007524.5,49971592.0,50043457.0
-full-current-policies-commit,Solar,2027,WECC,48924874.0,48312130.0,49537618.0
-full-current-policies-commit,Solar,2030,CA,79182403.5,73593748.0,84771059.0
-full-current-policies-commit,Solar,2030,MISO,40984157.5,29018371.0,52949944.0
-full-current-policies-commit,Solar,2030,NE,43612008.0,42348966.0,44875050.0
-full-current-policies-commit,Solar,2030,PJM,30932357.0,29564884.0,32299830.0
-full-current-policies-commit,Solar,2030,SOU,97009995.0,62887167.0,131132823.0
-full-current-policies-commit,Solar,2030,SPP,12703462.0,1274213.0,24132711.0
-full-current-policies-commit,Solar,2030,TRE,48496112.0,48144959.0,48847265.0
-full-current-policies-commit,Solar,2030,WECC,53080831.5,48688971.0,57472692.0
-full-current-policies-commit,Solar,2035,CA,127038694.5,115892613.0,138184776.0
-full-current-policies-commit,Solar,2035,MISO,142170984.5,132635074.0,151706895.0
-full-current-policies-commit,Solar,2035,NE,43912356.0,42587183.0,45237529.0
-full-current-policies-commit,Solar,2035,PJM,104804687.5,75888258.0,133721117.0
-full-current-policies-commit,Solar,2035,SOU,184090038.5,131101381.0,237078696.0
-full-current-policies-commit,Solar,2035,SPP,15288463.5,6508336.0,24068591.0
-full-current-policies-commit,Solar,2035,TRE,54140917.0,48829396.0,59452438.0
-full-current-policies-commit,Solar,2035,WECC,115449535.0,104328135.0,126570935.0
-full-current-policies-commit,Solar,2040,CA,139764780.5,134114338.0,145415223.0
-full-current-policies-commit,Solar,2040,MISO,203278664.0,197451822.0,209105506.0
-full-current-policies-commit,Solar,2040,NE,68033407.0,67944695.0,68122119.0
-full-current-policies-commit,Solar,2040,PJM,264015734.0,120860030.0,407171438.0
-full-current-policies-commit,Solar,2040,SOU,219192179.5,201979693.0,236404666.0
-full-current-policies-commit,Solar,2040,SPP,24326202.5,23750853.0,24901552.0
-full-current-policies-commit,Solar,2040,TRE,90493078.5,88216957.0,92769200.0
-full-current-policies-commit,Solar,2040,WECC,176206501.0,170023213.0,182389789.0
-full-current-policies-commit,Solar,2045,CA,139863259.0,129980150.0,149746368.0
-full-current-policies-commit,Solar,2045,MISO,226006401.0,198323277.0,253689525.0
-full-current-policies-commit,Solar,2045,NE,84357276.0,82250862.0,86463690.0
-full-current-policies-commit,Solar,2045,PJM,227066433.5,120671732.0,333461135.0
-full-current-policies-commit,Solar,2045,SOU,247279541.5,200091469.0,294467614.0
-full-current-policies-commit,Solar,2045,SPP,26704545.5,24308518.0,29100573.0
-full-current-policies-commit,Solar,2045,TRE,95423766.5,93993014.0,96854519.0
-full-current-policies-commit,Solar,2045,WECC,181484132.5,178430986.0,184537279.0
-full-current-policies-commit,Solar,2050,CA,158701516.5,141762791.0,175640242.0
-full-current-policies-commit,Solar,2050,MISO,268936804.0,194402048.0,343471560.0
-full-current-policies-commit,Solar,2050,NE,104119395.5,101352621.0,106886170.0
-full-current-policies-commit,Solar,2050,PJM,268408498.0,141834621.0,394982375.0
-full-current-policies-commit,Solar,2050,SOU,239488890.0,199312350.0,279665430.0
-full-current-policies-commit,Solar,2050,SPP,32211413.5,23915126.0,40507701.0
-full-current-policies-commit,Solar,2050,TRE,99140902.5,96775561.0,101506244.0
-full-current-policies-commit,Solar,2050,WECC,235601247.0,232276237.0,238926257.0
-full-current-policies-commit,Wind,2027,CA,15041673.0,14920524.0,15162822.0
-full-current-policies-commit,Wind,2027,MISO,240674828.5,194259762.0,287089895.0
-full-current-policies-commit,Wind,2027,NE,87814535.0,86689429.0,88939641.0
-full-current-policies-commit,Wind,2027,PJM,115132525.0,94186378.0,136078672.0
-full-current-policies-commit,Wind,2027,SOU,12007473.5,1119583.0,22895364.0
-full-current-policies-commit,Wind,2027,SPP,156260843.0,149913780.0,162607906.0
-full-current-policies-commit,Wind,2027,TRE,190234610.5,179209924.0,201259297.0
-full-current-policies-commit,Wind,2027,WECC,161389534.5,161055726.0,161723343.0
-full-current-policies-commit,Wind,2030,CA,14668637.5,14548636.0,14788639.0
-full-current-policies-commit,Wind,2030,MISO,322829698.0,263750123.0,381909273.0
-full-current-policies-commit,Wind,2030,NE,134598312.0,133576136.0,135620488.0
-full-current-policies-commit,Wind,2030,PJM,141469066.5,122363302.0,160574831.0
-full-current-policies-commit,Wind,2030,SOU,25717069.5,12835964.0,38598175.0
-full-current-policies-commit,Wind,2030,SPP,341542501.5,191761087.0,491323916.0
-full-current-policies-commit,Wind,2030,TRE,201532858.5,187315987.0,215749730.0
-full-current-policies-commit,Wind,2030,WECC,198382465.0,175878760.0,220886170.0
-full-current-policies-commit,Wind,2035,CA,14583185.0,13857597.0,15308773.0
-full-current-policies-commit,Wind,2035,MISO,373694198.0,363091240.0,384297156.0
-full-current-policies-commit,Wind,2035,NE,179769666.5,174956818.0,184582515.0
-full-current-policies-commit,Wind,2035,PJM,185360832.5,168839821.0,201881844.0
-full-current-policies-commit,Wind,2035,SOU,41388532.0,40770854.0,42006210.0
-full-current-policies-commit,Wind,2035,SPP,382731536.5,290599888.0,474863185.0
-full-current-policies-commit,Wind,2035,TRE,266336271.0,262033439.0,270639103.0
-full-current-policies-commit,Wind,2035,WECC,271183887.5,259562618.0,282805157.0
-full-current-policies-commit,Wind,2040,CA,13784639.0,12885795.0,14683483.0
-full-current-policies-commit,Wind,2040,MISO,432712383.0,426959259.0,438465507.0
-full-current-policies-commit,Wind,2040,NE,184674827.5,183657558.0,185692097.0
-full-current-policies-commit,Wind,2040,PJM,222999247.5,185870293.0,260128202.0
-full-current-policies-commit,Wind,2040,SOU,66894178.5,60987983.0,72800374.0
-full-current-policies-commit,Wind,2040,SPP,404615863.5,341187227.0,468044500.0
-full-current-policies-commit,Wind,2040,TRE,294617192.0,283647522.0,305586862.0
-full-current-policies-commit,Wind,2040,WECC,342933128.5,318474624.0,367391633.0
-full-current-policies-commit,Wind,2045,CA,5564438.5,4852812.0,6276065.0
-full-current-policies-commit,Wind,2045,MISO,426675895.5,413019288.0,440332503.0
-full-current-policies-commit,Wind,2045,NE,195368892.0,193953011.0,196784773.0
-full-current-policies-commit,Wind,2045,PJM,216461273.0,183708532.0,249214014.0
-full-current-policies-commit,Wind,2045,SOU,70149080.0,67349456.0,72948704.0
-full-current-policies-commit,Wind,2045,SPP,396790041.0,329539752.0,464040330.0
-full-current-policies-commit,Wind,2045,TRE,290535555.0,282612527.0,298458583.0
-full-current-policies-commit,Wind,2045,WECC,336827646.5,313725474.0,359929819.0
-full-current-policies-commit,Wind,2050,CA,3686054.0,2561480.0,4810628.0
-full-current-policies-commit,Wind,2050,MISO,426170409.0,383098470.0,469242348.0
-full-current-policies-commit,Wind,2050,NE,211286664.0,207233915.0,215339413.0
-full-current-policies-commit,Wind,2050,PJM,211609751.5,178578732.0,244640771.0
-full-current-policies-commit,Wind,2050,SOU,70262388.5,67378138.0,73146639.0
-full-current-policies-commit,Wind,2050,SPP,363296308.5,290421582.0,436171035.0
-full-current-policies-commit,Wind,2050,TRE,262222847.0,250699727.0,273745967.0
-full-current-policies-commit,Wind,2050,WECC,329831664.0,310292714.0,349370614.0
+full-current-policies-commit,Coal,2050,PJM,14187197.0,14078324.0,14296070.0
+full-current-policies-commit,Coal,2050,SOU,35973909.0,34030462.0,37917356.0
+full-current-policies-commit,Coal,2050,SPP,24534700.5,24260893.0,24808508.0
+full-current-policies-commit,Coal,2050,TRE,30618122.0,30325371.0,30910873.0
+full-current-policies-commit,Coal,2050,WECC,32251954.0,32245504.0,32258404.0
+full-current-policies-commit,Distributed Solar,2027,CA,26363131.0,26324133.0,26402129.0
+full-current-policies-commit,Distributed Solar,2027,MISO,8852208.5,8850444.0,8853973.0
+full-current-policies-commit,Distributed Solar,2027,NE,9723146.5,9602587.0,9843706.0
+full-current-policies-commit,Distributed Solar,2027,PJM,16346578.5,16222611.0,16470546.0
+full-current-policies-commit,Distributed Solar,2027,SOU,10630393.5,10629158.0,10631629.0
+full-current-policies-commit,Distributed Solar,2027,SPP,2252529.5,2249230.0,2255829.0
+full-current-policies-commit,Distributed Solar,2027,TRE,5969633.5,5936632.0,6002635.0
+full-current-policies-commit,Distributed Solar,2027,WECC,11947541.0,11926596.0,11968486.0
+full-current-policies-commit,Distributed Solar,2030,CA,32062784.0,32004421.0,32121147.0
+full-current-policies-commit,Distributed Solar,2030,MISO,16494704.0,16425127.0,16564281.0
+full-current-policies-commit,Distributed Solar,2030,NE,12029688.5,11815137.0,12244240.0
+full-current-policies-commit,Distributed Solar,2030,PJM,26230248.0,26065967.0,26394529.0
+full-current-policies-commit,Distributed Solar,2030,SOU,19286377.5,19283995.0,19288760.0
+full-current-policies-commit,Distributed Solar,2030,SPP,4130373.5,4120853.0,4139894.0
+full-current-policies-commit,Distributed Solar,2030,TRE,11630412.0,11587092.0,11673732.0
+full-current-policies-commit,Distributed Solar,2030,WECC,16381501.5,16360348.0,16402655.0
+full-current-policies-commit,Distributed Solar,2035,CA,37104614.0,37033214.0,37176014.0
+full-current-policies-commit,Distributed Solar,2035,MISO,25827522.0,25628315.0,26026729.0
+full-current-policies-commit,Distributed Solar,2035,NE,14214450.5,13950610.0,14478291.0
+full-current-policies-commit,Distributed Solar,2035,PJM,33153445.5,32977674.0,33329217.0
+full-current-policies-commit,Distributed Solar,2035,SOU,24735015.5,24732582.0,24737449.0
+full-current-policies-commit,Distributed Solar,2035,SPP,6352730.5,6329239.0,6376222.0
+full-current-policies-commit,Distributed Solar,2035,TRE,16466193.5,16454019.0,16478368.0
+full-current-policies-commit,Distributed Solar,2035,WECC,19722691.5,19657583.0,19787800.0
+full-current-policies-commit,Distributed Solar,2040,CA,37629427.0,37551443.0,37707411.0
+full-current-policies-commit,Distributed Solar,2040,MISO,28753237.0,28702934.0,28803540.0
+full-current-policies-commit,Distributed Solar,2040,NE,14213716.5,13930820.0,14496613.0
+full-current-policies-commit,Distributed Solar,2040,PJM,34924388.5,34748974.0,35099803.0
+full-current-policies-commit,Distributed Solar,2040,SOU,26706644.5,26468158.0,26945131.0
+full-current-policies-commit,Distributed Solar,2040,SPP,7423670.0,7396785.0,7450555.0
+full-current-policies-commit,Distributed Solar,2040,TRE,15902516.5,15830937.0,15974096.0
+full-current-policies-commit,Distributed Solar,2040,WECC,18565094.0,18514860.0,18615328.0
+full-current-policies-commit,Distributed Solar,2045,CA,36529755.0,36468866.0,36590644.0
+full-current-policies-commit,Distributed Solar,2045,MISO,33919554.0,33856850.0,33982258.0
+full-current-policies-commit,Distributed Solar,2045,NE,15404374.0,15126137.0,15682611.0
+full-current-policies-commit,Distributed Solar,2045,PJM,36437596.5,36259514.0,36615679.0
+full-current-policies-commit,Distributed Solar,2045,SOU,28702720.5,28667288.0,28738153.0
+full-current-policies-commit,Distributed Solar,2045,SPP,9953121.0,9876698.0,10029544.0
+full-current-policies-commit,Distributed Solar,2045,TRE,18997137.5,18924851.0,19069424.0
+full-current-policies-commit,Distributed Solar,2045,WECC,21027927.5,20901835.0,21154020.0
+full-current-policies-commit,Distributed Solar,2050,CA,36488631.0,36435079.0,36542183.0
+full-current-policies-commit,Distributed Solar,2050,MISO,38265637.5,38251995.0,38279280.0
+full-current-policies-commit,Distributed Solar,2050,NE,16203044.5,15887378.0,16518711.0
+full-current-policies-commit,Distributed Solar,2050,PJM,38176805.0,38000021.0,38353589.0
+full-current-policies-commit,Distributed Solar,2050,SOU,32005048.5,31991008.0,32019089.0
+full-current-policies-commit,Distributed Solar,2050,SPP,11699664.5,11658216.0,11741113.0
+full-current-policies-commit,Distributed Solar,2050,TRE,20852708.5,20814943.0,20890474.0
+full-current-policies-commit,Distributed Solar,2050,WECC,21839951.0,21838164.0,21841738.0
+full-current-policies-commit,Geothermal,2027,CA,205998.5,205689.0,206308.0
+full-current-policies-commit,Geothermal,2027,WECC,5686888.5,5685319.0,5688458.0
+full-current-policies-commit,Geothermal,2030,CA,202856.5,202366.0,203347.0
+full-current-policies-commit,Geothermal,2030,WECC,5137361.0,5131174.0,5143548.0
+full-current-policies-commit,Geothermal,2035,CA,193495.0,190589.0,196401.0
+full-current-policies-commit,Geothermal,2035,WECC,4755658.5,4736575.0,4774742.0
+full-current-policies-commit,Geothermal,2040,CA,186836.0,184188.0,189484.0
+full-current-policies-commit,Geothermal,2040,WECC,3040218.5,3030936.0,3049501.0
+full-current-policies-commit,Geothermal,2045,CA,201970.0,199766.0,204174.0
+full-current-policies-commit,Geothermal,2045,WECC,1639437.0,1633071.0,1645803.0
+full-current-policies-commit,Geothermal,2050,CA,205751.5,204769.0,206734.0
+full-current-policies-commit,Geothermal,2050,WECC,661655.0,659274.0,664036.0
+full-current-policies-commit,Hydro,2027,CA,25952257.5,25657956.0,26246559.0
+full-current-policies-commit,Hydro,2027,MISO,24678158.5,22883959.0,26472358.0
+full-current-policies-commit,Hydro,2027,NE,30882536.5,30741743.0,31023330.0
+full-current-policies-commit,Hydro,2027,PJM,12695746.0,12530853.0,12860639.0
+full-current-policies-commit,Hydro,2027,SOU,9259774.5,8064906.0,10454643.0
+full-current-policies-commit,Hydro,2027,SPP,14393534.0,14144082.0,14642986.0
+full-current-policies-commit,Hydro,2027,TRE,550878.5,547774.0,553983.0
+full-current-policies-commit,Hydro,2027,WECC,164917882.5,164753511.0,165082254.0
+full-current-policies-commit,Hydro,2030,CA,27869202.5,27563569.0,28174836.0
+full-current-policies-commit,Hydro,2030,MISO,25311543.5,23150746.0,27472341.0
+full-current-policies-commit,Hydro,2030,NE,30622931.5,30148989.0,31096874.0
+full-current-policies-commit,Hydro,2030,PJM,13592845.5,13487029.0,13698662.0
+full-current-policies-commit,Hydro,2030,SOU,9268361.0,7596510.0,10940212.0
+full-current-policies-commit,Hydro,2030,SPP,14202673.5,13966038.0,14439309.0
+full-current-policies-commit,Hydro,2030,TRE,542693.5,537836.0,547551.0
+full-current-policies-commit,Hydro,2030,WECC,164159694.5,164021215.0,164298174.0
+full-current-policies-commit,Hydro,2035,CA,30988831.5,30810039.0,31167624.0
+full-current-policies-commit,Hydro,2035,MISO,27158696.0,25394953.0,28922439.0
+full-current-policies-commit,Hydro,2035,NE,29788449.0,29396920.0,30179978.0
+full-current-policies-commit,Hydro,2035,PJM,15773462.5,15488868.0,16058057.0
+full-current-policies-commit,Hydro,2035,SOU,11789676.0,9707117.0,13872235.0
+full-current-policies-commit,Hydro,2035,SPP,13954956.0,13731875.0,14178037.0
+full-current-policies-commit,Hydro,2035,TRE,502535.5,501443.0,503628.0
+full-current-policies-commit,Hydro,2035,WECC,163258755.0,163069547.0,163447963.0
+full-current-policies-commit,Hydro,2040,CA,32009144.5,31705830.0,32312459.0
+full-current-policies-commit,Hydro,2040,MISO,25321189.5,23573127.0,27069252.0
+full-current-policies-commit,Hydro,2040,NE,29998485.0,29667493.0,30329477.0
+full-current-policies-commit,Hydro,2040,PJM,15692827.0,15383493.0,16002161.0
+full-current-policies-commit,Hydro,2040,SOU,13814123.0,11461878.0,16166368.0
+full-current-policies-commit,Hydro,2040,SPP,13585233.0,13303776.0,13866690.0
+full-current-policies-commit,Hydro,2040,TRE,367981.0,365210.0,370752.0
+full-current-policies-commit,Hydro,2040,WECC,157818838.0,157744208.0,157893468.0
+full-current-policies-commit,Hydro,2045,CA,30190565.5,30117679.0,30263452.0
+full-current-policies-commit,Hydro,2045,MISO,20842170.0,19308681.0,22375659.0
+full-current-policies-commit,Hydro,2045,NE,29760104.5,29700129.0,29820080.0
+full-current-policies-commit,Hydro,2045,PJM,14717079.0,14539023.0,14895135.0
+full-current-policies-commit,Hydro,2045,SOU,12402345.5,10294692.0,14509999.0
+full-current-policies-commit,Hydro,2045,SPP,13614007.0,13500001.0,13728013.0
+full-current-policies-commit,Hydro,2045,TRE,255341.0,254360.0,256322.0
+full-current-policies-commit,Hydro,2045,WECC,150493873.0,150441307.0,150546439.0
+full-current-policies-commit,Hydro,2050,CA,27800915.5,27518407.0,28083424.0
+full-current-policies-commit,Hydro,2050,MISO,17246773.0,16239703.0,18253843.0
+full-current-policies-commit,Hydro,2050,NE,29983204.5,29899164.0,30067245.0
+full-current-policies-commit,Hydro,2050,PJM,14409412.0,14082142.0,14736682.0
+full-current-policies-commit,Hydro,2050,SOU,11081181.0,9284448.0,12877914.0
+full-current-policies-commit,Hydro,2050,SPP,13328202.5,13246022.0,13410383.0
+full-current-policies-commit,Hydro,2050,TRE,212257.0,212251.0,212263.0
+full-current-policies-commit,Hydro,2050,WECC,144334796.5,144307992.0,144361601.0
+full-current-policies-commit,Hydrogen,2027,CA,1617.5,120.0,3115.0
+full-current-policies-commit,Hydrogen,2027,MISO,3978.5,296.0,7661.0
+full-current-policies-commit,Hydrogen,2027,NE,2296.0,178.0,4414.0
+full-current-policies-commit,Hydrogen,2027,PJM,3192.0,233.0,6151.0
+full-current-policies-commit,Hydrogen,2027,SOU,2495.5,187.0,4804.0
+full-current-policies-commit,Hydrogen,2027,SPP,2355.0,174.0,4536.0
+full-current-policies-commit,Hydrogen,2027,TRE,1643.5,120.0,3167.0
+full-current-policies-commit,Hydrogen,2027,WECC,3292.0,246.0,6338.0
+full-current-policies-commit,Hydrogen,2030,CA,1446.5,130.0,2763.0
+full-current-policies-commit,Hydrogen,2030,MISO,3556.0,276.0,6836.0
+full-current-policies-commit,Hydrogen,2030,NE,2204.0,199.0,4209.0
+full-current-policies-commit,Hydrogen,2030,PJM,2844.5,197.0,5492.0
+full-current-policies-commit,Hydrogen,2030,SOU,2247.5,247.0,4248.0
+full-current-policies-commit,Hydrogen,2030,SPP,2092.0,187.0,3997.0
+full-current-policies-commit,Hydrogen,2030,TRE,1434.5,164.0,2705.0
+full-current-policies-commit,Hydrogen,2030,WECC,2876.0,261.0,5491.0
+full-current-policies-commit,Hydrogen,2035,CA,1717.5,108.0,3327.0
+full-current-policies-commit,Hydrogen,2035,MISO,4217.5,262.0,8173.0
+full-current-policies-commit,Hydrogen,2035,NE,2904.5,202.0,5607.0
+full-current-policies-commit,Hydrogen,2035,PJM,3502.5,200.0,6805.0
+full-current-policies-commit,Hydrogen,2035,SOU,2596.0,164.0,5028.0
+full-current-policies-commit,Hydrogen,2035,SPP,2406.5,152.0,4661.0
+full-current-policies-commit,Hydrogen,2035,TRE,1732.0,162.0,3302.0
+full-current-policies-commit,Hydrogen,2035,WECC,3460.5,214.0,6707.0
+full-current-policies-commit,Hydrogen,2040,CA,2269.5,169.0,4370.0
+full-current-policies-commit,Hydrogen,2040,MISO,5532.5,291.0,10774.0
+full-current-policies-commit,Hydrogen,2040,NE,4074.5,279.0,7870.0
+full-current-policies-commit,Hydrogen,2040,PJM,4443.5,219.0,8668.0
+full-current-policies-commit,Hydrogen,2040,SOU,3402.0,159.0,6645.0
+full-current-policies-commit,Hydrogen,2040,SPP,3185.5,186.0,6185.0
+full-current-policies-commit,Hydrogen,2040,TRE,2175.0,181.0,4169.0
+full-current-policies-commit,Hydrogen,2040,WECC,4556.0,339.0,8773.0
+full-current-policies-commit,Hydrogen,2045,CA,31482.5,225.0,62740.0
+full-current-policies-commit,Hydrogen,2045,MISO,76416.0,387.0,152445.0
+full-current-policies-commit,Hydrogen,2045,NE,60813.5,400.0,121227.0
+full-current-policies-commit,Hydrogen,2045,PJM,61336.5,294.0,122379.0
+full-current-policies-commit,Hydrogen,2045,SOU,47653.5,220.0,95087.0
+full-current-policies-commit,Hydrogen,2045,SPP,46404.0,261.0,92547.0
+full-current-policies-commit,Hydrogen,2045,TRE,30777.0,273.0,61281.0
+full-current-policies-commit,Hydrogen,2045,WECC,65440.0,447.0,130433.0
+full-current-policies-commit,Hydrogen,2050,CA,4243.0,205.0,8281.0
+full-current-policies-commit,Hydrogen,2050,MISO,9872.0,471.0,19273.0
+full-current-policies-commit,Hydrogen,2050,NE,19183.5,12386.0,25981.0
+full-current-policies-commit,Hydrogen,2050,PJM,8078.5,350.0,15807.0
+full-current-policies-commit,Hydrogen,2050,SOU,5769.5,255.0,11284.0
+full-current-policies-commit,Hydrogen,2050,SPP,6440.5,294.0,12587.0
+full-current-policies-commit,Hydrogen,2050,TRE,3908.5,242.0,7575.0
+full-current-policies-commit,Hydrogen,2050,WECC,9380.0,408.0,18352.0
+full-current-policies-commit,Natural Gas CC,2027,CA,84797743.5,82626272.0,86969215.0
+full-current-policies-commit,Natural Gas CC,2027,MISO,132451617.0,129380983.0,135522251.0
+full-current-policies-commit,Natural Gas CC,2027,NE,67331379.5,66913161.0,67749598.0
+full-current-policies-commit,Natural Gas CC,2027,PJM,197370434.5,196442443.0,198298426.0
+full-current-policies-commit,Natural Gas CC,2027,SOU,210080287.0,207450037.0,212710537.0
+full-current-policies-commit,Natural Gas CC,2027,SPP,12643505.5,12528034.0,12758977.0
+full-current-policies-commit,Natural Gas CC,2027,TRE,87163555.5,86992960.0,87334151.0
+full-current-policies-commit,Natural Gas CC,2027,WECC,53462869.0,52680298.0,54245440.0
+full-current-policies-commit,Natural Gas CC,2030,CA,78848937.5,76735407.0,80962468.0
+full-current-policies-commit,Natural Gas CC,2030,MISO,129007158.0,126367442.0,131646874.0
+full-current-policies-commit,Natural Gas CC,2030,NE,50389976.5,49956983.0,50822970.0
+full-current-policies-commit,Natural Gas CC,2030,PJM,209270670.0,207195575.0,211345765.0
+full-current-policies-commit,Natural Gas CC,2030,SOU,220222157.0,217199214.0,223245100.0
+full-current-policies-commit,Natural Gas CC,2030,SPP,13965867.0,13920916.0,14010818.0
+full-current-policies-commit,Natural Gas CC,2030,TRE,83016706.0,81781599.0,84251813.0
+full-current-policies-commit,Natural Gas CC,2030,WECC,48243812.0,47777327.0,48710297.0
+full-current-policies-commit,Natural Gas CC,2035,CA,105168799.0,103291819.0,107045779.0
+full-current-policies-commit,Natural Gas CC,2035,MISO,161733629.0,157075169.0,166392089.0
+full-current-policies-commit,Natural Gas CC,2035,NE,75798907.0,75564768.0,76033046.0
+full-current-policies-commit,Natural Gas CC,2035,PJM,268092041.5,266773323.0,269410760.0
+full-current-policies-commit,Natural Gas CC,2035,SOU,270388519.0,266719689.0,274057349.0
+full-current-policies-commit,Natural Gas CC,2035,SPP,20127094.5,19966413.0,20287776.0
+full-current-policies-commit,Natural Gas CC,2035,TRE,91877107.5,90631918.0,93122297.0
+full-current-policies-commit,Natural Gas CC,2035,WECC,78212905.0,77738553.0,78687257.0
+full-current-policies-commit,Natural Gas CC,2040,CA,125445546.0,120437715.0,130453377.0
+full-current-policies-commit,Natural Gas CC,2040,MISO,222746547.0,220282134.0,225210960.0
+full-current-policies-commit,Natural Gas CC,2040,NE,90291933.5,89442796.0,91141071.0
+full-current-policies-commit,Natural Gas CC,2040,PJM,384641820.0,374914536.0,394369104.0
+full-current-policies-commit,Natural Gas CC,2040,SOU,291767599.0,285786418.0,297748780.0
+full-current-policies-commit,Natural Gas CC,2040,SPP,21685054.5,21606404.0,21763705.0
+full-current-policies-commit,Natural Gas CC,2040,TRE,86337915.5,85930908.0,86744923.0
+full-current-policies-commit,Natural Gas CC,2040,WECC,86895265.5,82664566.0,91125965.0
+full-current-policies-commit,Natural Gas CC,2045,CA,210855723.5,204631036.0,217080411.0
+full-current-policies-commit,Natural Gas CC,2045,MISO,487738952.5,481871990.0,493605915.0
+full-current-policies-commit,Natural Gas CC,2045,NE,105941474.0,103528692.0,108354256.0
+full-current-policies-commit,Natural Gas CC,2045,PJM,501167219.0,496249140.0,506085298.0
+full-current-policies-commit,Natural Gas CC,2045,SOU,427088298.0,424257923.0,429918673.0
+full-current-policies-commit,Natural Gas CC,2045,SPP,40481663.0,35237235.0,45726091.0
+full-current-policies-commit,Natural Gas CC,2045,TRE,191348451.0,189073699.0,193623203.0
+full-current-policies-commit,Natural Gas CC,2045,WECC,188931536.0,188337096.0,189525976.0
+full-current-policies-commit,Natural Gas CC,2050,CA,241730360.0,238598362.0,244862358.0
+full-current-policies-commit,Natural Gas CC,2050,MISO,680702042.0,670576255.0,690827829.0
+full-current-policies-commit,Natural Gas CC,2050,NE,95546933.5,94021825.0,97072042.0
+full-current-policies-commit,Natural Gas CC,2050,PJM,549126473.0,545038342.0,553214604.0
+full-current-policies-commit,Natural Gas CC,2050,SOU,531325559.5,529042283.0,533608836.0
+full-current-policies-commit,Natural Gas CC,2050,SPP,71874062.5,68660324.0,75087801.0
+full-current-policies-commit,Natural Gas CC,2050,TRE,247746530.0,245730540.0,249762520.0
+full-current-policies-commit,Natural Gas CC,2050,WECC,245358047.0,244846683.0,245869411.0
+full-current-policies-commit,Natural Gas CT,2027,CA,11154.0,676.0,21632.0
+full-current-policies-commit,Natural Gas CT,2027,MISO,1815075.5,1356753.0,2273398.0
+full-current-policies-commit,Natural Gas CT,2027,NE,792366.0,738890.0,845842.0
+full-current-policies-commit,Natural Gas CT,2027,PJM,819079.5,690235.0,947924.0
+full-current-policies-commit,Natural Gas CT,2027,SOU,34434.5,33718.0,35151.0
+full-current-policies-commit,Natural Gas CT,2027,SPP,87063.0,83016.0,91110.0
+full-current-policies-commit,Natural Gas CT,2027,TRE,637415.5,593952.0,680879.0
+full-current-policies-commit,Natural Gas CT,2027,WECC,13991.0,948.0,27034.0
+full-current-policies-commit,Natural Gas CT,2030,CA,10951.0,529.0,21373.0
+full-current-policies-commit,Natural Gas CT,2030,MISO,3508660.5,2734688.0,4282633.0
+full-current-policies-commit,Natural Gas CT,2030,NE,813709.5,751938.0,875481.0
+full-current-policies-commit,Natural Gas CT,2030,PJM,1439444.0,1189581.0,1689307.0
+full-current-policies-commit,Natural Gas CT,2030,SOU,89131.0,81559.0,96703.0
+full-current-policies-commit,Natural Gas CT,2030,SPP,106945.0,101389.0,112501.0
+full-current-policies-commit,Natural Gas CT,2030,TRE,554437.5,511725.0,597150.0
+full-current-policies-commit,Natural Gas CT,2030,WECC,13091.5,772.0,25411.0
+full-current-policies-commit,Natural Gas CT,2035,CA,3973773.0,3763974.0,4183572.0
+full-current-policies-commit,Natural Gas CT,2035,MISO,11377978.0,10466670.0,12289286.0
+full-current-policies-commit,Natural Gas CT,2035,NE,1862230.5,1821979.0,1902482.0
+full-current-policies-commit,Natural Gas CT,2035,PJM,9281099.5,8581352.0,9980847.0
+full-current-policies-commit,Natural Gas CT,2035,SOU,6265855.0,5234353.0,7297357.0
+full-current-policies-commit,Natural Gas CT,2035,SPP,534913.5,504703.0,565124.0
+full-current-policies-commit,Natural Gas CT,2035,TRE,3593536.0,3442666.0,3744406.0
+full-current-policies-commit,Natural Gas CT,2035,WECC,708923.0,699428.0,718418.0
+full-current-policies-commit,Natural Gas CT,2040,CA,5369079.0,5317803.0,5420355.0
+full-current-policies-commit,Natural Gas CT,2040,MISO,12863413.0,12301543.0,13425283.0
+full-current-policies-commit,Natural Gas CT,2040,NE,1576302.0,1510756.0,1641848.0
+full-current-policies-commit,Natural Gas CT,2040,PJM,8361153.0,8210256.0,8512050.0
+full-current-policies-commit,Natural Gas CT,2040,SOU,11526160.5,10815468.0,12236853.0
+full-current-policies-commit,Natural Gas CT,2040,SPP,1150249.0,1078898.0,1221600.0
+full-current-policies-commit,Natural Gas CT,2040,TRE,3966000.0,3928053.0,4003947.0
+full-current-policies-commit,Natural Gas CT,2040,WECC,1011514.5,935452.0,1087577.0
+full-current-policies-commit,Natural Gas CT,2045,CA,3840883.0,3341151.0,4340615.0
+full-current-policies-commit,Natural Gas CT,2045,MISO,10259000.0,10163246.0,10354754.0
+full-current-policies-commit,Natural Gas CT,2045,NE,1318834.0,1146836.0,1490832.0
+full-current-policies-commit,Natural Gas CT,2045,PJM,7536846.5,7503943.0,7569750.0
+full-current-policies-commit,Natural Gas CT,2045,SOU,7511037.0,7446362.0,7575712.0
+full-current-policies-commit,Natural Gas CT,2045,SPP,2329748.5,2012842.0,2646655.0
+full-current-policies-commit,Natural Gas CT,2045,TRE,3857382.0,3728496.0,3986268.0
+full-current-policies-commit,Natural Gas CT,2045,WECC,1058270.5,727533.0,1389008.0
+full-current-policies-commit,Natural Gas CT,2050,CA,3046963.5,2738965.0,3354962.0
+full-current-policies-commit,Natural Gas CT,2050,MISO,4492051.0,4482099.0,4502003.0
+full-current-policies-commit,Natural Gas CT,2050,NE,1101072.5,949723.0,1252422.0
+full-current-policies-commit,Natural Gas CT,2050,PJM,3747372.5,3722418.0,3772327.0
+full-current-policies-commit,Natural Gas CT,2050,SOU,2607044.0,2369994.0,2844094.0
+full-current-policies-commit,Natural Gas CT,2050,SPP,1540229.0,1487488.0,1592970.0
+full-current-policies-commit,Natural Gas CT,2050,TRE,2678101.0,2656325.0,2699877.0
+full-current-policies-commit,Natural Gas CT,2050,WECC,689084.0,617155.0,761013.0
+full-current-policies-commit,Nuclear,2027,CA,1997.5,173.0,3822.0
+full-current-policies-commit,Nuclear,2027,MISO,175567731.5,175536169.0,175599294.0
+full-current-policies-commit,Nuclear,2027,NE,54964081.0,54648804.0,55279358.0
+full-current-policies-commit,Nuclear,2027,PJM,293021246.5,292790347.0,293252146.0
+full-current-policies-commit,Nuclear,2027,SOU,208887980.0,208790104.0,208985856.0
+full-current-policies-commit,Nuclear,2027,SPP,16330170.0,16326012.0,16334328.0
+full-current-policies-commit,Nuclear,2027,TRE,40144723.0,40129756.0,40159690.0
+full-current-policies-commit,Nuclear,2027,WECC,44931662.5,44895107.0,44968218.0
+full-current-policies-commit,Nuclear,2030,CA,2030.5,181.0,3880.0
+full-current-policies-commit,Nuclear,2030,MISO,173987330.5,173898928.0,174075733.0
+full-current-policies-commit,Nuclear,2030,NE,52928463.0,52525596.0,53331330.0
+full-current-policies-commit,Nuclear,2030,PJM,290698377.0,290407892.0,290988862.0
+full-current-policies-commit,Nuclear,2030,SOU,208767425.0,208565113.0,208969737.0
+full-current-policies-commit,Nuclear,2030,SPP,15700999.5,15697075.0,15704924.0
+full-current-policies-commit,Nuclear,2030,TRE,38746290.0,38729684.0,38762896.0
+full-current-policies-commit,Nuclear,2030,WECC,43712822.5,43701532.0,43724113.0
+full-current-policies-commit,Nuclear,2035,CA,2669.0,179.0,5159.0
+full-current-policies-commit,Nuclear,2035,MISO,167912503.5,167692525.0,168132482.0
+full-current-policies-commit,Nuclear,2035,NE,53594587.0,53485399.0,53703775.0
+full-current-policies-commit,Nuclear,2035,PJM,286335935.0,286100808.0,286571062.0
+full-current-policies-commit,Nuclear,2035,SOU,205817218.5,205336362.0,206298075.0
+full-current-policies-commit,Nuclear,2035,SPP,15158675.5,15079249.0,15238102.0
+full-current-policies-commit,Nuclear,2035,TRE,37775113.5,37766972.0,37783255.0
+full-current-policies-commit,Nuclear,2035,WECC,41607068.5,41415093.0,41799044.0
+full-current-policies-commit,Nuclear,2040,CA,3388.5,227.0,6550.0
+full-current-policies-commit,Nuclear,2040,MISO,164032998.5,163860786.0,164205211.0
+full-current-policies-commit,Nuclear,2040,NE,55188457.0,55066155.0,55310759.0
+full-current-policies-commit,Nuclear,2040,PJM,285431350.0,285215615.0,285647085.0
+full-current-policies-commit,Nuclear,2040,SOU,199989412.5,199501453.0,200477372.0
+full-current-policies-commit,Nuclear,2040,SPP,14645104.5,14568624.0,14721585.0
+full-current-policies-commit,Nuclear,2040,TRE,36694676.0,36647607.0,36741745.0
+full-current-policies-commit,Nuclear,2040,WECC,40151569.5,40056595.0,40246544.0
+full-current-policies-commit,Nuclear,2045,CA,32917.0,199.0,65635.0
+full-current-policies-commit,Nuclear,2045,MISO,170665699.5,170499958.0,170831441.0
+full-current-policies-commit,Nuclear,2045,NE,55632311.5,55469408.0,55795215.0
+full-current-policies-commit,Nuclear,2045,PJM,290785084.5,290700390.0,290869779.0
+full-current-policies-commit,Nuclear,2045,SOU,204720643.5,204370908.0,205070379.0
+full-current-policies-commit,Nuclear,2045,SPP,16277454.0,16218527.0,16336381.0
+full-current-policies-commit,Nuclear,2045,TRE,39786417.5,39775926.0,39796909.0
+full-current-policies-commit,Nuclear,2045,WECC,43308117.0,43225776.0,43390458.0
+full-current-policies-commit,Nuclear,2050,CA,45569.5,226.0,90913.0
+full-current-policies-commit,Nuclear,2050,MISO,167717785.0,167343477.0,168092093.0
+full-current-policies-commit,Nuclear,2050,NE,45888206.0,45843751.0,45932661.0
+full-current-policies-commit,Nuclear,2050,PJM,283069941.0,282608076.0,283531806.0
+full-current-policies-commit,Nuclear,2050,SOU,206771346.0,206330362.0,207212330.0
+full-current-policies-commit,Nuclear,2050,SPP,16781331.0,16652984.0,16909678.0
+full-current-policies-commit,Nuclear,2050,TRE,41161823.5,41135287.0,41188360.0
+full-current-policies-commit,Nuclear,2050,WECC,43594746.5,43519139.0,43670354.0
+full-current-policies-commit,Solar,2027,CA,46969231.5,46956527.0,46981936.0
+full-current-policies-commit,Solar,2027,MISO,26007033.0,25976685.0,26037381.0
+full-current-policies-commit,Solar,2027,NE,32772488.0,32604075.0,32940901.0
+full-current-policies-commit,Solar,2027,PJM,23759845.5,23735695.0,23783996.0
+full-current-policies-commit,Solar,2027,SOU,48865723.5,48850986.0,48880461.0
+full-current-policies-commit,Solar,2027,SPP,1294148.5,1283858.0,1304439.0
+full-current-policies-commit,Solar,2027,TRE,49934603.0,49825749.0,50043457.0
+full-current-policies-commit,Solar,2027,WECC,48325332.0,48312130.0,48338534.0
+full-current-policies-commit,Solar,2030,CA,75512920.5,73593748.0,77432093.0
+full-current-policies-commit,Solar,2030,MISO,29696997.0,29018371.0,30375623.0
+full-current-policies-commit,Solar,2030,NE,42614641.0,42348966.0,42880316.0
+full-current-policies-commit,Solar,2030,PJM,32306098.0,32299830.0,32312366.0
+full-current-policies-commit,Solar,2030,SOU,63362922.0,62887167.0,63838677.0
+full-current-policies-commit,Solar,2030,SPP,1258183.5,1242154.0,1274213.0
+full-current-policies-commit,Solar,2030,TRE,48836004.0,48824743.0,48847265.0
+full-current-policies-commit,Solar,2030,WECC,56287734.0,55102776.0,57472692.0
+full-current-policies-commit,Solar,2035,CA,117991922.5,115892613.0,120091232.0
+full-current-policies-commit,Solar,2035,MISO,155357722.0,151706895.0,159008549.0
+full-current-policies-commit,Solar,2035,NE,42865882.0,42587183.0,43144581.0
+full-current-policies-commit,Solar,2035,PJM,76862285.0,75888258.0,77836312.0
+full-current-policies-commit,Solar,2035,SOU,128204197.0,125307013.0,131101381.0
+full-current-policies-commit,Solar,2035,SPP,6917015.5,6508336.0,7325695.0
+full-current-policies-commit,Solar,2035,TRE,61125784.5,59452438.0,62799131.0
+full-current-policies-commit,Solar,2035,WECC,108145264.5,104328135.0,111962394.0
+full-current-policies-commit,Solar,2040,CA,134360265.5,134114338.0,134606193.0
+full-current-policies-commit,Solar,2040,MISO,201579210.0,197451822.0,205706598.0
+full-current-policies-commit,Solar,2040,NE,68793423.0,67944695.0,69642151.0
+full-current-policies-commit,Solar,2040,PJM,124394578.5,120860030.0,127929127.0
+full-current-policies-commit,Solar,2040,SOU,201262625.0,200545557.0,201979693.0
+full-current-policies-commit,Solar,2040,SPP,26009286.0,24901552.0,27117020.0
+full-current-policies-commit,Solar,2040,TRE,90589632.0,88216957.0,92962307.0
+full-current-policies-commit,Solar,2040,WECC,172672009.0,170023213.0,175320805.0
+full-current-policies-commit,Solar,2045,CA,129813533.5,129646917.0,129980150.0
+full-current-policies-commit,Solar,2045,MISO,202206651.0,198323277.0,206090025.0
+full-current-policies-commit,Solar,2045,NE,82852330.0,82250862.0,83453798.0
+full-current-policies-commit,Solar,2045,PJM,123450467.0,120671732.0,126229202.0
+full-current-policies-commit,Solar,2045,SOU,199823282.5,199555096.0,200091469.0
+full-current-policies-commit,Solar,2045,SPP,29533820.0,29100573.0,29967067.0
+full-current-policies-commit,Solar,2045,TRE,96368082.5,93993014.0,98743151.0
+full-current-policies-commit,Solar,2045,WECC,182507966.0,178430986.0,186584946.0
+full-current-policies-commit,Solar,2050,CA,145474728.0,141762791.0,149186665.0
+full-current-policies-commit,Solar,2050,MISO,198072333.5,194402048.0,201742619.0
+full-current-policies-commit,Solar,2050,NE,104984926.0,101352621.0,108617231.0
+full-current-policies-commit,Solar,2050,PJM,143787561.5,141834621.0,145740502.0
+full-current-policies-commit,Solar,2050,SOU,199195882.0,199079414.0,199312350.0
+full-current-policies-commit,Solar,2050,SPP,43891526.5,40507701.0,47275352.0
+full-current-policies-commit,Solar,2050,TRE,103209358.5,101506244.0,104912473.0
+full-current-policies-commit,Solar,2050,WECC,233462085.0,232276237.0,234647933.0
+full-current-policies-commit,Wind,2027,CA,14916340.5,14912157.0,14920524.0
+full-current-policies-commit,Wind,2027,MISO,191485227.5,188710693.0,194259762.0
+full-current-policies-commit,Wind,2027,NE,88808787.0,88677933.0,88939641.0
+full-current-policies-commit,Wind,2027,PJM,94179726.5,94173075.0,94186378.0
+full-current-policies-commit,Wind,2027,SOU,1095277.0,1070971.0,1119583.0
+full-current-policies-commit,Wind,2027,SPP,146901936.0,143890092.0,149913780.0
+full-current-policies-commit,Wind,2027,TRE,181058621.5,179209924.0,182907319.0
+full-current-policies-commit,Wind,2027,WECC,158384116.0,155712506.0,161055726.0
+full-current-policies-commit,Wind,2030,CA,14552496.0,14548636.0,14556356.0
+full-current-policies-commit,Wind,2030,MISO,264010097.5,263750123.0,264270072.0
+full-current-policies-commit,Wind,2030,NE,134791478.5,133962469.0,135620488.0
+full-current-policies-commit,Wind,2030,PJM,122328540.0,122293778.0,122363302.0
+full-current-policies-commit,Wind,2030,SOU,12795380.0,12754796.0,12835964.0
+full-current-policies-commit,Wind,2030,SPP,186815349.5,181869612.0,191761087.0
+full-current-policies-commit,Wind,2030,TRE,213996374.5,212243019.0,215749730.0
+full-current-policies-commit,Wind,2030,WECC,219895253.0,218904336.0,220886170.0
+full-current-policies-commit,Wind,2035,CA,15891563.5,15308773.0,16474354.0
+full-current-policies-commit,Wind,2035,MISO,357953653.5,352816067.0,363091240.0
+full-current-policies-commit,Wind,2035,NE,183489309.5,182396104.0,184582515.0
+full-current-policies-commit,Wind,2035,PJM,169503423.5,168839821.0,170167026.0
+full-current-policies-commit,Wind,2035,SOU,40725596.0,40680338.0,40770854.0
+full-current-policies-commit,Wind,2035,SPP,281213368.5,271826849.0,290599888.0
+full-current-policies-commit,Wind,2035,TRE,268960030.5,267280958.0,270639103.0
+full-current-policies-commit,Wind,2035,WECC,280288062.5,277770968.0,282805157.0
+full-current-policies-commit,Wind,2040,CA,14680914.0,14678345.0,14683483.0
+full-current-policies-commit,Wind,2040,MISO,428587885.0,426959259.0,430216511.0
+full-current-policies-commit,Wind,2040,NE,185073625.5,184455154.0,185692097.0
+full-current-policies-commit,Wind,2040,PJM,182920237.5,179970182.0,185870293.0
+full-current-policies-commit,Wind,2040,SOU,76782896.0,72800374.0,80765418.0
+full-current-policies-commit,Wind,2040,SPP,327118698.0,313050169.0,341187227.0
+full-current-policies-commit,Wind,2040,TRE,303150574.5,300714287.0,305586862.0
+full-current-policies-commit,Wind,2040,WECC,363155563.5,358919494.0,367391633.0
+full-current-policies-commit,Wind,2045,CA,6224111.5,6172158.0,6276065.0
+full-current-policies-commit,Wind,2045,MISO,414002262.0,413019288.0,414985236.0
+full-current-policies-commit,Wind,2045,NE,196011949.5,195239126.0,196784773.0
+full-current-policies-commit,Wind,2045,PJM,180577420.0,177446308.0,183708532.0
+full-current-policies-commit,Wind,2045,SOU,76950074.5,72948704.0,80951445.0
+full-current-policies-commit,Wind,2045,SPP,314632881.5,299726011.0,329539752.0
+full-current-policies-commit,Wind,2045,TRE,296045436.0,293632289.0,298458583.0
+full-current-policies-commit,Wind,2045,WECC,355361875.0,350793931.0,359929819.0
+full-current-policies-commit,Wind,2050,CA,4731823.0,4653018.0,4810628.0
+full-current-policies-commit,Wind,2050,MISO,383939647.5,383098470.0,384780825.0
+full-current-policies-commit,Wind,2050,NE,211440977.0,207542541.0,215339413.0
+full-current-policies-commit,Wind,2050,PJM,176460860.5,174342989.0,178578732.0
+full-current-policies-commit,Wind,2050,SOU,77158857.5,73146639.0,81171076.0
+full-current-policies-commit,Wind,2050,SPP,280722405.0,271023228.0,290421582.0
+full-current-policies-commit,Wind,2050,TRE,270638743.0,267531519.0,273745967.0
+full-current-policies-commit,Wind,2050,WECC,345181731.5,340992849.0,349370614.0
 full-current-policies-retire,Battery,2027,CA,8435557.0,7487503.0,9047640.0
 full-current-policies-retire,Battery,2027,MISO,148496.66666666666,70999.0,282573.0
 full-current-policies-retire,Battery,2027,NE,372798.0,314994.0,470506.0

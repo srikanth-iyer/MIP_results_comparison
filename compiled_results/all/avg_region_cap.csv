@@ -8063,30 +8063,30 @@ full-current-policies,2050,Wind,SOU,23719.3
 full-current-policies,2050,Wind,SPP,72991.3
 full-current-policies,2050,Wind,TRE,70703.7
 full-current-policies,2050,Wind,WECC,85857.3
-full-current-policies-commit,2027,Battery,CA,11611.5
-full-current-policies-commit,2027,Battery,MISO,282.0
-full-current-policies-commit,2027,Battery,NE,613.0
-full-current-policies-commit,2027,Battery,PJM,383.5
-full-current-policies-commit,2027,Battery,SOU,914.5
-full-current-policies-commit,2027,Battery,SPP,281.0
-full-current-policies-commit,2027,Battery,TRE,4759.0
-full-current-policies-commit,2027,Battery,WECC,3457.5
-full-current-policies-commit,2027,CCS,CA,16.0
-full-current-policies-commit,2027,CCS,MISO,36.5
+full-current-policies-commit,2027,Battery,CA,11581.0
+full-current-policies-commit,2027,Battery,MISO,205.0
+full-current-policies-commit,2027,Battery,NE,565.0
+full-current-policies-commit,2027,Battery,PJM,323.0
+full-current-policies-commit,2027,Battery,SOU,871.0
+full-current-policies-commit,2027,Battery,SPP,231.0
+full-current-policies-commit,2027,Battery,TRE,4708.0
+full-current-policies-commit,2027,Battery,WECC,3396.0
+full-current-policies-commit,2027,CCS,CA,1.0
+full-current-policies-commit,2027,CCS,MISO,2.5
 full-current-policies-commit,2027,CCS,NE,
-full-current-policies-commit,2027,CCS,PJM,17.0
-full-current-policies-commit,2027,CCS,SOU,18.5
-full-current-policies-commit,2027,CCS,SPP,21.0
-full-current-policies-commit,2027,CCS,TRE,15.0
-full-current-policies-commit,2027,CCS,WECC,21.0
+full-current-policies-commit,2027,CCS,PJM,1.0
+full-current-policies-commit,2027,CCS,SOU,1.5
+full-current-policies-commit,2027,CCS,SPP,1.5
+full-current-policies-commit,2027,CCS,TRE,1.0
+full-current-policies-commit,2027,CCS,WECC,1.5
 full-current-policies-commit,2027,Coal,CA,0.0
-full-current-policies-commit,2027,Coal,MISO,47983.5
+full-current-policies-commit,2027,Coal,MISO,47178.0
 full-current-policies-commit,2027,Coal,NE,330.0
-full-current-policies-commit,2027,Coal,PJM,33265.5
-full-current-policies-commit,2027,Coal,SOU,28279.0
+full-current-policies-commit,2027,Coal,PJM,32702.0
+full-current-policies-commit,2027,Coal,SOU,27777.0
 full-current-policies-commit,2027,Coal,SPP,19975.0
-full-current-policies-commit,2027,Coal,TRE,13307.5
-full-current-policies-commit,2027,Coal,WECC,17152.0
+full-current-policies-commit,2027,Coal,TRE,12980.0
+full-current-policies-commit,2027,Coal,WECC,16395.0
 full-current-policies-commit,2027,Distributed Solar,CA,11430.5
 full-current-policies-commit,2027,Distributed Solar,MISO,5247.0
 full-current-policies-commit,2027,Distributed Solar,NE,5987.0
@@ -8103,84 +8103,84 @@ full-current-policies-commit,2027,Geothermal,SOU,
 full-current-policies-commit,2027,Geothermal,SPP,
 full-current-policies-commit,2027,Geothermal,TRE,
 full-current-policies-commit,2027,Geothermal,WECC,652.0
-full-current-policies-commit,2027,Hydro,CA,12427.5
-full-current-policies-commit,2027,Hydro,MISO,10647.0
-full-current-policies-commit,2027,Hydro,NE,8324.0
-full-current-policies-commit,2027,Hydro,PJM,8071.0
-full-current-policies-commit,2027,Hydro,SOU,10123.5
+full-current-policies-commit,2027,Hydro,CA,12410.0
+full-current-policies-commit,2027,Hydro,MISO,10632.5
+full-current-policies-commit,2027,Hydro,NE,8305.5
+full-current-policies-commit,2027,Hydro,PJM,8070.0
+full-current-policies-commit,2027,Hydro,SOU,10043.0
 full-current-policies-commit,2027,Hydro,SPP,5155.5
-full-current-policies-commit,2027,Hydro,TRE,502.0
-full-current-policies-commit,2027,Hydro,WECC,39656.0
-full-current-policies-commit,2027,Hydrogen,CA,27.5
-full-current-policies-commit,2027,Hydrogen,MISO,78.5
-full-current-policies-commit,2027,Hydrogen,NE,47.0
-full-current-policies-commit,2027,Hydrogen,PJM,58.5
-full-current-policies-commit,2027,Hydrogen,SOU,49.5
-full-current-policies-commit,2027,Hydrogen,SPP,49.0
-full-current-policies-commit,2027,Hydrogen,TRE,35.0
-full-current-policies-commit,2027,Hydrogen,WECC,67.5
-full-current-policies-commit,2027,Natural Gas CC,CA,21092.0
-full-current-policies-commit,2027,Natural Gas CC,MISO,52082.0
-full-current-policies-commit,2027,Natural Gas CC,NE,26877.5
-full-current-policies-commit,2027,Natural Gas CC,PJM,59946.0
-full-current-policies-commit,2027,Natural Gas CC,SOU,66514.0
-full-current-policies-commit,2027,Natural Gas CC,SPP,11797.0
-full-current-policies-commit,2027,Natural Gas CC,TRE,41649.0
-full-current-policies-commit,2027,Natural Gas CC,WECC,31274.5
-full-current-policies-commit,2027,Natural Gas CT,CA,11134.0
-full-current-policies-commit,2027,Natural Gas CT,MISO,33094.5
-full-current-policies-commit,2027,Natural Gas CT,NE,3949.5
-full-current-policies-commit,2027,Natural Gas CT,PJM,29959.0
-full-current-policies-commit,2027,Natural Gas CT,SOU,32128.0
-full-current-policies-commit,2027,Natural Gas CT,SPP,9994.5
-full-current-policies-commit,2027,Natural Gas CT,TRE,10372.0
-full-current-policies-commit,2027,Natural Gas CT,WECC,10271.0
-full-current-policies-commit,2027,Nuclear,CA,4.0
-full-current-policies-commit,2027,Nuclear,MISO,20329.0
-full-current-policies-commit,2027,Nuclear,NE,6719.5
-full-current-policies-commit,2027,Nuclear,PJM,33770.0
-full-current-policies-commit,2027,Nuclear,SOU,23930.5
-full-current-policies-commit,2027,Nuclear,SPP,2032.0
-full-current-policies-commit,2027,Nuclear,TRE,5125.0
-full-current-policies-commit,2027,Nuclear,WECC,5185.0
-full-current-policies-commit,2027,Solar,CA,20295.0
-full-current-policies-commit,2027,Solar,MISO,12551.0
-full-current-policies-commit,2027,Solar,NE,16441.0
-full-current-policies-commit,2027,Solar,PJM,12865.0
-full-current-policies-commit,2027,Solar,SOU,25545.5
-full-current-policies-commit,2027,Solar,SPP,654.5
-full-current-policies-commit,2027,Solar,TRE,22409.0
-full-current-policies-commit,2027,Solar,WECC,19882.5
-full-current-policies-commit,2027,Wind,CA,5546.0
-full-current-policies-commit,2027,Wind,MISO,75794.0
-full-current-policies-commit,2027,Wind,NE,23809.0
-full-current-policies-commit,2027,Wind,PJM,35760.0
-full-current-policies-commit,2027,Wind,SOU,4035.0
-full-current-policies-commit,2027,Wind,SPP,47215.5
-full-current-policies-commit,2027,Wind,TRE,58704.5
-full-current-policies-commit,2027,Wind,WECC,48827.5
-full-current-policies-commit,2030,Battery,CA,11607.0
-full-current-policies-commit,2030,Battery,MISO,283.5
-full-current-policies-commit,2030,Battery,NE,655.0
-full-current-policies-commit,2030,Battery,PJM,310.0
-full-current-policies-commit,2030,Battery,SOU,914.5
-full-current-policies-commit,2030,Battery,SPP,290.5
-full-current-policies-commit,2030,Battery,TRE,4751.5
-full-current-policies-commit,2030,Battery,WECC,3458.5
-full-current-policies-commit,2030,CCS,CA,20.0
-full-current-policies-commit,2030,CCS,MISO,45.0
+full-current-policies-commit,2027,Hydro,TRE,499.0
+full-current-policies-commit,2027,Hydro,WECC,39617.0
+full-current-policies-commit,2027,Hydrogen,CA,2.0
+full-current-policies-commit,2027,Hydrogen,MISO,5.0
+full-current-policies-commit,2027,Hydrogen,NE,3.0
+full-current-policies-commit,2027,Hydrogen,PJM,4.0
+full-current-policies-commit,2027,Hydrogen,SOU,3.0
+full-current-policies-commit,2027,Hydrogen,SPP,3.0
+full-current-policies-commit,2027,Hydrogen,TRE,2.0
+full-current-policies-commit,2027,Hydrogen,WECC,4.0
+full-current-policies-commit,2027,Natural Gas CC,CA,20998.0
+full-current-policies-commit,2027,Natural Gas CC,MISO,51519.0
+full-current-policies-commit,2027,Natural Gas CC,NE,26622.0
+full-current-policies-commit,2027,Natural Gas CC,PJM,59238.0
+full-current-policies-commit,2027,Natural Gas CC,SOU,64578.0
+full-current-policies-commit,2027,Natural Gas CC,SPP,11502.5
+full-current-policies-commit,2027,Natural Gas CC,TRE,41445.0
+full-current-policies-commit,2027,Natural Gas CC,WECC,30899.0
+full-current-policies-commit,2027,Natural Gas CT,CA,11122.0
+full-current-policies-commit,2027,Natural Gas CT,MISO,33029.5
+full-current-policies-commit,2027,Natural Gas CT,NE,3930.5
+full-current-policies-commit,2027,Natural Gas CT,PJM,29934.0
+full-current-policies-commit,2027,Natural Gas CT,SOU,32094.5
+full-current-policies-commit,2027,Natural Gas CT,SPP,9941.5
+full-current-policies-commit,2027,Natural Gas CT,TRE,10309.0
+full-current-policies-commit,2027,Natural Gas CT,WECC,10216.0
+full-current-policies-commit,2027,Nuclear,CA,0.0
+full-current-policies-commit,2027,Nuclear,MISO,20319.0
+full-current-policies-commit,2027,Nuclear,NE,6714.0
+full-current-policies-commit,2027,Nuclear,PJM,33761.0
+full-current-policies-commit,2027,Nuclear,SOU,23924.0
+full-current-policies-commit,2027,Nuclear,SPP,2025.0
+full-current-policies-commit,2027,Nuclear,TRE,5120.0
+full-current-policies-commit,2027,Nuclear,WECC,5175.0
+full-current-policies-commit,2027,Solar,CA,20129.5
+full-current-policies-commit,2027,Solar,MISO,12380.5
+full-current-policies-commit,2027,Solar,NE,16033.5
+full-current-policies-commit,2027,Solar,PJM,11467.5
+full-current-policies-commit,2027,Solar,SOU,24595.5
+full-current-policies-commit,2027,Solar,SPP,563.0
+full-current-policies-commit,2027,Solar,TRE,22379.0
+full-current-policies-commit,2027,Solar,WECC,19620.0
+full-current-policies-commit,2027,Wind,CA,5498.0
+full-current-policies-commit,2027,Wind,MISO,61853.0
+full-current-policies-commit,2027,Wind,NE,24086.5
+full-current-policies-commit,2027,Wind,PJM,29573.0
+full-current-policies-commit,2027,Wind,SOU,278.0
+full-current-policies-commit,2027,Wind,SPP,45206.0
+full-current-policies-commit,2027,Wind,TRE,56398.5
+full-current-policies-commit,2027,Wind,WECC,48079.0
+full-current-policies-commit,2030,Battery,CA,11573.0
+full-current-policies-commit,2030,Battery,MISO,205.0
+full-current-policies-commit,2030,Battery,NE,566.0
+full-current-policies-commit,2030,Battery,PJM,204.0
+full-current-policies-commit,2030,Battery,SOU,871.0
+full-current-policies-commit,2030,Battery,SPP,231.0
+full-current-policies-commit,2030,Battery,TRE,4708.0
+full-current-policies-commit,2030,Battery,WECC,3390.0
+full-current-policies-commit,2030,CCS,CA,1.0
+full-current-policies-commit,2030,CCS,MISO,2.5
 full-current-policies-commit,2030,CCS,NE,
-full-current-policies-commit,2030,CCS,PJM,17.0
-full-current-policies-commit,2030,CCS,SOU,21.0
-full-current-policies-commit,2030,CCS,SPP,26.0
-full-current-policies-commit,2030,CCS,TRE,19.5
-full-current-policies-commit,2030,CCS,WECC,25.0
+full-current-policies-commit,2030,CCS,PJM,1.0
+full-current-policies-commit,2030,CCS,SOU,1.5
+full-current-policies-commit,2030,CCS,SPP,1.5
+full-current-policies-commit,2030,CCS,TRE,1.0
+full-current-policies-commit,2030,CCS,WECC,1.5
 full-current-policies-commit,2030,Coal,CA,0.0
-full-current-policies-commit,2030,Coal,MISO,42840.5
+full-current-policies-commit,2030,Coal,MISO,42731.0
 full-current-policies-commit,2030,Coal,NE,330.0
-full-current-policies-commit,2030,Coal,PJM,28978.0
+full-current-policies-commit,2030,Coal,PJM,28436.0
 full-current-policies-commit,2030,Coal,SOU,26627.0
-full-current-policies-commit,2030,Coal,SPP,18794.5
+full-current-policies-commit,2030,Coal,SPP,18737.0
 full-current-policies-commit,2030,Coal,TRE,10731.0
 full-current-policies-commit,2030,Coal,WECC,14866.0
 full-current-policies-commit,2030,Distributed Solar,CA,13601.5
@@ -8198,84 +8198,84 @@ full-current-policies-commit,2030,Geothermal,PJM,
 full-current-policies-commit,2030,Geothermal,SOU,
 full-current-policies-commit,2030,Geothermal,SPP,
 full-current-policies-commit,2030,Geothermal,TRE,
-full-current-policies-commit,2030,Geothermal,WECC,609.5
-full-current-policies-commit,2030,Hydro,CA,12172.5
-full-current-policies-commit,2030,Hydro,MISO,10423.0
-full-current-policies-commit,2030,Hydro,NE,8028.0
-full-current-policies-commit,2030,Hydro,PJM,7736.0
-full-current-policies-commit,2030,Hydro,SOU,9621.0
+full-current-policies-commit,2030,Geothermal,WECC,596.5
+full-current-policies-commit,2030,Hydro,CA,12169.0
+full-current-policies-commit,2030,Hydro,MISO,10369.5
+full-current-policies-commit,2030,Hydro,NE,7877.0
+full-current-policies-commit,2030,Hydro,PJM,7735.5
+full-current-policies-commit,2030,Hydro,SOU,9496.0
 full-current-policies-commit,2030,Hydro,SPP,5155.5
 full-current-policies-commit,2030,Hydro,TRE,499.0
-full-current-policies-commit,2030,Hydro,WECC,39451.0
-full-current-policies-commit,2030,Hydrogen,CA,34.0
-full-current-policies-commit,2030,Hydrogen,MISO,93.5
-full-current-policies-commit,2030,Hydrogen,NE,76.0
-full-current-policies-commit,2030,Hydrogen,PJM,69.0
-full-current-policies-commit,2030,Hydrogen,SOU,57.0
-full-current-policies-commit,2030,Hydrogen,SPP,57.5
-full-current-policies-commit,2030,Hydrogen,TRE,46.0
-full-current-policies-commit,2030,Hydrogen,WECC,84.0
-full-current-policies-commit,2030,Natural Gas CC,CA,21098.5
-full-current-policies-commit,2030,Natural Gas CC,MISO,51919.5
-full-current-policies-commit,2030,Natural Gas CC,NE,26909.5
-full-current-policies-commit,2030,Natural Gas CC,PJM,59956.0
-full-current-policies-commit,2030,Natural Gas CC,SOU,65389.0
-full-current-policies-commit,2030,Natural Gas CC,SPP,11804.5
-full-current-policies-commit,2030,Natural Gas CC,TRE,41655.5
-full-current-policies-commit,2030,Natural Gas CC,WECC,30995.0
-full-current-policies-commit,2030,Natural Gas CT,CA,11134.5
-full-current-policies-commit,2030,Natural Gas CT,MISO,32412.0
-full-current-policies-commit,2030,Natural Gas CT,NE,3967.5
-full-current-policies-commit,2030,Natural Gas CT,PJM,29967.0
-full-current-policies-commit,2030,Natural Gas CT,SOU,32057.0
-full-current-policies-commit,2030,Natural Gas CT,SPP,9795.0
-full-current-policies-commit,2030,Natural Gas CT,TRE,10263.0
-full-current-policies-commit,2030,Natural Gas CT,WECC,10150.5
-full-current-policies-commit,2030,Nuclear,CA,5.0
-full-current-policies-commit,2030,Nuclear,MISO,20331.5
-full-current-policies-commit,2030,Nuclear,NE,6721.0
-full-current-policies-commit,2030,Nuclear,PJM,33770.5
-full-current-policies-commit,2030,Nuclear,SOU,23931.5
-full-current-policies-commit,2030,Nuclear,SPP,2032.5
-full-current-policies-commit,2030,Nuclear,TRE,5126.0
-full-current-policies-commit,2030,Nuclear,WECC,5187.0
-full-current-policies-commit,2030,Solar,CA,32515.0
-full-current-policies-commit,2030,Solar,MISO,19477.5
-full-current-policies-commit,2030,Solar,NE,21137.5
-full-current-policies-commit,2030,Solar,PJM,14799.5
-full-current-policies-commit,2030,Solar,SOU,47079.0
-full-current-policies-commit,2030,Solar,SPP,5407.0
-full-current-policies-commit,2030,Solar,TRE,22426.0
-full-current-policies-commit,2030,Solar,WECC,21695.5
-full-current-policies-commit,2030,Wind,CA,5432.5
-full-current-policies-commit,2030,Wind,MISO,98369.5
-full-current-policies-commit,2030,Wind,NE,35301.5
-full-current-policies-commit,2030,Wind,PJM,42855.0
-full-current-policies-commit,2030,Wind,SOU,8046.0
-full-current-policies-commit,2030,Wind,SPP,91884.0
-full-current-policies-commit,2030,Wind,TRE,63462.5
-full-current-policies-commit,2030,Wind,WECC,59997.0
-full-current-policies-commit,2035,Battery,CA,11246.0
-full-current-policies-commit,2035,Battery,MISO,3987.0
-full-current-policies-commit,2035,Battery,NE,9777.0
-full-current-policies-commit,2035,Battery,PJM,197.0
-full-current-policies-commit,2035,Battery,SOU,852.5
-full-current-policies-commit,2035,Battery,SPP,258.0
-full-current-policies-commit,2035,Battery,TRE,4607.0
-full-current-policies-commit,2035,Battery,WECC,3351.0
-full-current-policies-commit,2035,CCS,CA,21.0
-full-current-policies-commit,2035,CCS,MISO,50.5
+full-current-policies-commit,2030,Hydro,WECC,39400.5
+full-current-policies-commit,2030,Hydrogen,CA,2.0
+full-current-policies-commit,2030,Hydrogen,MISO,5.0
+full-current-policies-commit,2030,Hydrogen,NE,3.0
+full-current-policies-commit,2030,Hydrogen,PJM,4.0
+full-current-policies-commit,2030,Hydrogen,SOU,3.0
+full-current-policies-commit,2030,Hydrogen,SPP,3.0
+full-current-policies-commit,2030,Hydrogen,TRE,2.0
+full-current-policies-commit,2030,Hydrogen,WECC,4.0
+full-current-policies-commit,2030,Natural Gas CC,CA,20998.0
+full-current-policies-commit,2030,Natural Gas CC,MISO,51235.5
+full-current-policies-commit,2030,Natural Gas CC,NE,26622.5
+full-current-policies-commit,2030,Natural Gas CC,PJM,59238.0
+full-current-policies-commit,2030,Natural Gas CC,SOU,63391.0
+full-current-policies-commit,2030,Natural Gas CC,SPP,11502.5
+full-current-policies-commit,2030,Natural Gas CC,TRE,41445.0
+full-current-policies-commit,2030,Natural Gas CC,WECC,30806.5
+full-current-policies-commit,2030,Natural Gas CT,CA,11116.0
+full-current-policies-commit,2030,Natural Gas CT,MISO,32332.5
+full-current-policies-commit,2030,Natural Gas CT,NE,3931.0
+full-current-policies-commit,2030,Natural Gas CT,PJM,29934.0
+full-current-policies-commit,2030,Natural Gas CT,SOU,31964.5
+full-current-policies-commit,2030,Natural Gas CT,SPP,9767.5
+full-current-policies-commit,2030,Natural Gas CT,TRE,10243.0
+full-current-policies-commit,2030,Natural Gas CT,WECC,10079.0
+full-current-policies-commit,2030,Nuclear,CA,0.0
+full-current-policies-commit,2030,Nuclear,MISO,20319.0
+full-current-policies-commit,2030,Nuclear,NE,6714.0
+full-current-policies-commit,2030,Nuclear,PJM,33761.0
+full-current-policies-commit,2030,Nuclear,SOU,23924.0
+full-current-policies-commit,2030,Nuclear,SPP,2025.0
+full-current-policies-commit,2030,Nuclear,TRE,5120.0
+full-current-policies-commit,2030,Nuclear,WECC,5175.0
+full-current-policies-commit,2030,Solar,CA,31088.0
+full-current-policies-commit,2030,Solar,MISO,14107.5
+full-current-policies-commit,2030,Solar,NE,20702.0
+full-current-policies-commit,2030,Solar,PJM,15356.0
+full-current-policies-commit,2030,Solar,SOU,31336.5
+full-current-policies-commit,2030,Solar,SPP,572.0
+full-current-policies-commit,2030,Solar,TRE,22389.0
+full-current-policies-commit,2030,Solar,WECC,22772.0
+full-current-policies-commit,2030,Wind,CA,5387.5
+full-current-policies-commit,2030,Wind,MISO,81075.0
+full-current-policies-commit,2030,Wind,NE,35575.5
+full-current-policies-commit,2030,Wind,PJM,36716.5
+full-current-policies-commit,2030,Wind,SOU,3520.0
+full-current-policies-commit,2030,Wind,SPP,54694.0
+full-current-policies-commit,2030,Wind,TRE,65395.0
+full-current-policies-commit,2030,Wind,WECC,65309.0
+full-current-policies-commit,2035,Battery,CA,11088.0
+full-current-policies-commit,2035,Battery,MISO,6403.0
+full-current-policies-commit,2035,Battery,NE,11194.0
+full-current-policies-commit,2035,Battery,PJM,963.0
+full-current-policies-commit,2035,Battery,SOU,816.0
+full-current-policies-commit,2035,Battery,SPP,206.5
+full-current-policies-commit,2035,Battery,TRE,4527.5
+full-current-policies-commit,2035,Battery,WECC,3307.0
+full-current-policies-commit,2035,CCS,CA,2.0
+full-current-policies-commit,2035,CCS,MISO,8.0
 full-current-policies-commit,2035,CCS,NE,
-full-current-policies-commit,2035,CCS,PJM,19.5
-full-current-policies-commit,2035,CCS,SOU,23.0
-full-current-policies-commit,2035,CCS,SPP,26.0
-full-current-policies-commit,2035,CCS,TRE,19.5
-full-current-policies-commit,2035,CCS,WECC,25.5
+full-current-policies-commit,2035,CCS,PJM,3.5
+full-current-policies-commit,2035,CCS,SOU,3.5
+full-current-policies-commit,2035,CCS,SPP,1.5
+full-current-policies-commit,2035,CCS,TRE,1.0
+full-current-policies-commit,2035,CCS,WECC,2.0
 full-current-policies-commit,2035,Coal,CA,0.0
-full-current-policies-commit,2035,Coal,MISO,38290.0
+full-current-policies-commit,2035,Coal,MISO,37448.0
 full-current-policies-commit,2035,Coal,NE,0.0
-full-current-policies-commit,2035,Coal,PJM,22199.0
-full-current-policies-commit,2035,Coal,SOU,23000.0
+full-current-policies-commit,2035,Coal,PJM,21756.0
+full-current-policies-commit,2035,Coal,SOU,22499.0
 full-current-policies-commit,2035,Coal,SPP,17788.0
 full-current-policies-commit,2035,Coal,TRE,10731.0
 full-current-policies-commit,2035,Coal,WECC,12143.0
@@ -8294,87 +8294,87 @@ full-current-policies-commit,2035,Geothermal,PJM,
 full-current-policies-commit,2035,Geothermal,SOU,
 full-current-policies-commit,2035,Geothermal,SPP,
 full-current-policies-commit,2035,Geothermal,TRE,
-full-current-policies-commit,2035,Geothermal,WECC,574.5
+full-current-policies-commit,2035,Geothermal,WECC,567.0
 full-current-policies-commit,2035,Hydro,CA,12084.0
-full-current-policies-commit,2035,Hydro,MISO,10077.5
-full-current-policies-commit,2035,Hydro,NE,7823.0
-full-current-policies-commit,2035,Hydro,PJM,7524.0
+full-current-policies-commit,2035,Hydro,MISO,10076.0
+full-current-policies-commit,2035,Hydro,NE,7822.0
+full-current-policies-commit,2035,Hydro,PJM,7514.0
 full-current-policies-commit,2035,Hydro,SOU,9418.0
-full-current-policies-commit,2035,Hydro,SPP,5139.5
+full-current-policies-commit,2035,Hydro,SPP,5131.5
 full-current-policies-commit,2035,Hydro,TRE,492.5
-full-current-policies-commit,2035,Hydro,WECC,39225.0
-full-current-policies-commit,2035,Hydrogen,CA,28.5
-full-current-policies-commit,2035,Hydrogen,MISO,78.5
-full-current-policies-commit,2035,Hydrogen,NE,85.0
-full-current-policies-commit,2035,Hydrogen,PJM,69.0
-full-current-policies-commit,2035,Hydrogen,SOU,39.0
-full-current-policies-commit,2035,Hydrogen,SPP,43.0
-full-current-policies-commit,2035,Hydrogen,TRE,30.0
-full-current-policies-commit,2035,Hydrogen,WECC,56.0
-full-current-policies-commit,2035,Natural Gas CC,CA,21100.0
-full-current-policies-commit,2035,Natural Gas CC,MISO,51848.5
-full-current-policies-commit,2035,Natural Gas CC,NE,34795.0
-full-current-policies-commit,2035,Natural Gas CC,PJM,60215.5
-full-current-policies-commit,2035,Natural Gas CC,SOU,64616.5
-full-current-policies-commit,2035,Natural Gas CC,SPP,11536.0
-full-current-policies-commit,2035,Natural Gas CC,TRE,40501.5
-full-current-policies-commit,2035,Natural Gas CC,WECC,29907.5
-full-current-policies-commit,2035,Natural Gas CT,CA,10774.5
-full-current-policies-commit,2035,Natural Gas CT,MISO,31584.0
-full-current-policies-commit,2035,Natural Gas CT,NE,4542.0
-full-current-policies-commit,2035,Natural Gas CT,PJM,29939.0
-full-current-policies-commit,2035,Natural Gas CT,SOU,31983.0
-full-current-policies-commit,2035,Natural Gas CT,SPP,9549.5
-full-current-policies-commit,2035,Natural Gas CT,TRE,9992.0
-full-current-policies-commit,2035,Natural Gas CT,WECC,9399.5
-full-current-policies-commit,2035,Nuclear,CA,5.0
-full-current-policies-commit,2035,Nuclear,MISO,20332.0
-full-current-policies-commit,2035,Nuclear,NE,6721.5
-full-current-policies-commit,2035,Nuclear,PJM,33772.0
-full-current-policies-commit,2035,Nuclear,SOU,23932.5
-full-current-policies-commit,2035,Nuclear,SPP,2031.0
-full-current-policies-commit,2035,Nuclear,TRE,5125.5
-full-current-policies-commit,2035,Nuclear,WECC,5187.0
-full-current-policies-commit,2035,Solar,CA,50988.0
-full-current-policies-commit,2035,Solar,MISO,65545.0
-full-current-policies-commit,2035,Solar,NE,21215.0
-full-current-policies-commit,2035,Solar,PJM,48823.0
-full-current-policies-commit,2035,Solar,SOU,87829.0
-full-current-policies-commit,2035,Solar,SPP,6535.5
-full-current-policies-commit,2035,Solar,TRE,25148.5
-full-current-policies-commit,2035,Solar,WECC,46594.0
-full-current-policies-commit,2035,Wind,CA,5306.0
-full-current-policies-commit,2035,Wind,MISO,111318.0
-full-current-policies-commit,2035,Wind,NE,46123.5
-full-current-policies-commit,2035,Wind,PJM,53635.5
-full-current-policies-commit,2035,Wind,SOU,13425.0
-full-current-policies-commit,2035,Wind,SPP,102824.5
-full-current-policies-commit,2035,Wind,TRE,78512.5
-full-current-policies-commit,2035,Wind,WECC,77309.5
-full-current-policies-commit,2040,Battery,CA,11668.0
-full-current-policies-commit,2040,Battery,MISO,16517.0
-full-current-policies-commit,2040,Battery,NE,14913.5
-full-current-policies-commit,2040,Battery,PJM,21693.0
-full-current-policies-commit,2040,Battery,SOU,5026.5
-full-current-policies-commit,2040,Battery,SPP,75.0
-full-current-policies-commit,2040,Battery,TRE,2766.5
-full-current-policies-commit,2040,Battery,WECC,7219.0
-full-current-policies-commit,2040,CCS,CA,1332.0
-full-current-policies-commit,2040,CCS,MISO,368.5
+full-current-policies-commit,2035,Hydro,WECC,39220.0
+full-current-policies-commit,2035,Hydrogen,CA,2.0
+full-current-policies-commit,2035,Hydrogen,MISO,5.0
+full-current-policies-commit,2035,Hydrogen,NE,8.0
+full-current-policies-commit,2035,Hydrogen,PJM,4.0
+full-current-policies-commit,2035,Hydrogen,SOU,3.0
+full-current-policies-commit,2035,Hydrogen,SPP,3.0
+full-current-policies-commit,2035,Hydrogen,TRE,2.0
+full-current-policies-commit,2035,Hydrogen,WECC,4.0
+full-current-policies-commit,2035,Natural Gas CC,CA,20999.5
+full-current-policies-commit,2035,Natural Gas CC,MISO,52003.5
+full-current-policies-commit,2035,Natural Gas CC,NE,34079.5
+full-current-policies-commit,2035,Natural Gas CC,PJM,59799.5
+full-current-policies-commit,2035,Natural Gas CC,SOU,62204.5
+full-current-policies-commit,2035,Natural Gas CC,SPP,11234.0
+full-current-policies-commit,2035,Natural Gas CC,TRE,40126.0
+full-current-policies-commit,2035,Natural Gas CC,WECC,29689.0
+full-current-policies-commit,2035,Natural Gas CT,CA,10582.0
+full-current-policies-commit,2035,Natural Gas CT,MISO,31526.5
+full-current-policies-commit,2035,Natural Gas CT,NE,3949.5
+full-current-policies-commit,2035,Natural Gas CT,PJM,29876.5
+full-current-policies-commit,2035,Natural Gas CT,SOU,31961.5
+full-current-policies-commit,2035,Natural Gas CT,SPP,9430.5
+full-current-policies-commit,2035,Natural Gas CT,TRE,9959.0
+full-current-policies-commit,2035,Natural Gas CT,WECC,9337.5
+full-current-policies-commit,2035,Nuclear,CA,0.0
+full-current-policies-commit,2035,Nuclear,MISO,20319.5
+full-current-policies-commit,2035,Nuclear,NE,6714.5
+full-current-policies-commit,2035,Nuclear,PJM,33762.5
+full-current-policies-commit,2035,Nuclear,SOU,23925.0
+full-current-policies-commit,2035,Nuclear,SPP,2025.0
+full-current-policies-commit,2035,Nuclear,TRE,5120.0
+full-current-policies-commit,2035,Nuclear,WECC,5175.5
+full-current-policies-commit,2035,Solar,CA,47504.0
+full-current-policies-commit,2035,Solar,MISO,71463.5
+full-current-policies-commit,2035,Solar,NE,20703.5
+full-current-policies-commit,2035,Solar,PJM,35890.5
+full-current-policies-commit,2035,Solar,SOU,61618.5
+full-current-policies-commit,2035,Solar,SPP,3000.0
+full-current-policies-commit,2035,Solar,TRE,28418.5
+full-current-policies-commit,2035,Solar,WECC,43857.5
+full-current-policies-commit,2035,Wind,CA,5685.0
+full-current-policies-commit,2035,Wind,MISO,107055.5
+full-current-policies-commit,2035,Wind,NE,47139.0
+full-current-policies-commit,2035,Wind,PJM,49043.0
+full-current-policies-commit,2035,Wind,SOU,13182.5
+full-current-policies-commit,2035,Wind,SPP,76174.5
+full-current-policies-commit,2035,Wind,TRE,79335.0
+full-current-policies-commit,2035,Wind,WECC,80038.0
+full-current-policies-commit,2040,Battery,CA,13759.0
+full-current-policies-commit,2040,Battery,MISO,22647.0
+full-current-policies-commit,2040,Battery,NE,15910.5
+full-current-policies-commit,2040,Battery,PJM,12464.5
+full-current-policies-commit,2040,Battery,SOU,10578.5
+full-current-policies-commit,2040,Battery,SPP,16.0
+full-current-policies-commit,2040,Battery,TRE,6154.5
+full-current-policies-commit,2040,Battery,WECC,9304.5
+full-current-policies-commit,2040,CCS,CA,1037.5
+full-current-policies-commit,2040,CCS,MISO,326.0
 full-current-policies-commit,2040,CCS,NE,
-full-current-policies-commit,2040,CCS,PJM,2679.0
-full-current-policies-commit,2040,CCS,SOU,34.5
-full-current-policies-commit,2040,CCS,SPP,27.5
-full-current-policies-commit,2040,CCS,TRE,21.0
-full-current-policies-commit,2040,CCS,WECC,26.5
+full-current-policies-commit,2040,CCS,PJM,1462.0
+full-current-policies-commit,2040,CCS,SOU,15.0
+full-current-policies-commit,2040,CCS,SPP,3.0
+full-current-policies-commit,2040,CCS,TRE,2.5
+full-current-policies-commit,2040,CCS,WECC,3.0
 full-current-policies-commit,2040,Coal,CA,0.0
-full-current-policies-commit,2040,Coal,MISO,28503.0
+full-current-policies-commit,2040,Coal,MISO,27677.0
 full-current-policies-commit,2040,Coal,NE,0.0
-full-current-policies-commit,2040,Coal,PJM,8826.5
-full-current-policies-commit,2040,Coal,SOU,13999.0
-full-current-policies-commit,2040,Coal,SPP,14518.5
+full-current-policies-commit,2040,Coal,PJM,8128.0
+full-current-policies-commit,2040,Coal,SOU,13002.0
+full-current-policies-commit,2040,Coal,SPP,14126.0
 full-current-policies-commit,2040,Coal,TRE,10731.0
-full-current-policies-commit,2040,Coal,WECC,8760.0
+full-current-policies-commit,2040,Coal,WECC,8750.0
 full-current-policies-commit,2040,Distributed Solar,CA,16402.5
 full-current-policies-commit,2040,Distributed Solar,MISO,18451.5
 full-current-policies-commit,2040,Distributed Solar,NE,8822.0
@@ -8390,87 +8390,87 @@ full-current-policies-commit,2040,Geothermal,PJM,
 full-current-policies-commit,2040,Geothermal,SOU,
 full-current-policies-commit,2040,Geothermal,SPP,
 full-current-policies-commit,2040,Geothermal,TRE,
-full-current-policies-commit,2040,Geothermal,WECC,380.0
-full-current-policies-commit,2040,Hydro,CA,12081.5
-full-current-policies-commit,2040,Hydro,MISO,9554.5
-full-current-policies-commit,2040,Hydro,NE,7775.5
-full-current-policies-commit,2040,Hydro,PJM,7267.0
+full-current-policies-commit,2040,Geothermal,WECC,374.0
+full-current-policies-commit,2040,Hydro,CA,12081.0
+full-current-policies-commit,2040,Hydro,MISO,9466.5
+full-current-policies-commit,2040,Hydro,NE,7751.0
+full-current-policies-commit,2040,Hydro,PJM,7250.5
 full-current-policies-commit,2040,Hydro,SOU,9417.0
-full-current-policies-commit,2040,Hydro,SPP,5042.5
-full-current-policies-commit,2040,Hydro,TRE,447.0
-full-current-policies-commit,2040,Hydro,WECC,37679.0
-full-current-policies-commit,2040,Hydrogen,CA,34.0
-full-current-policies-commit,2040,Hydrogen,MISO,94.0
-full-current-policies-commit,2040,Hydrogen,NE,89.5
-full-current-policies-commit,2040,Hydrogen,PJM,69.5
-full-current-policies-commit,2040,Hydrogen,SOU,54.5
-full-current-policies-commit,2040,Hydrogen,SPP,57.5
-full-current-policies-commit,2040,Hydrogen,TRE,46.0
-full-current-policies-commit,2040,Hydrogen,WECC,84.0
-full-current-policies-commit,2040,Natural Gas CC,CA,26988.0
-full-current-policies-commit,2040,Natural Gas CC,MISO,61701.0
-full-current-policies-commit,2040,Natural Gas CC,NE,37909.5
-full-current-policies-commit,2040,Natural Gas CC,PJM,69556.5
-full-current-policies-commit,2040,Natural Gas CC,SOU,65485.0
-full-current-policies-commit,2040,Natural Gas CC,SPP,11256.0
-full-current-policies-commit,2040,Natural Gas CC,TRE,40002.0
-full-current-policies-commit,2040,Natural Gas CC,WECC,34071.5
-full-current-policies-commit,2040,Natural Gas CT,CA,9041.0
-full-current-policies-commit,2040,Natural Gas CT,MISO,31045.0
-full-current-policies-commit,2040,Natural Gas CT,NE,6532.0
-full-current-policies-commit,2040,Natural Gas CT,PJM,29065.0
-full-current-policies-commit,2040,Natural Gas CT,SOU,31773.0
-full-current-policies-commit,2040,Natural Gas CT,SPP,9171.5
-full-current-policies-commit,2040,Natural Gas CT,TRE,8226.0
-full-current-policies-commit,2040,Natural Gas CT,WECC,9310.5
-full-current-policies-commit,2040,Nuclear,CA,6.0
-full-current-policies-commit,2040,Nuclear,MISO,20333.5
-full-current-policies-commit,2040,Nuclear,NE,6722.0
-full-current-policies-commit,2040,Nuclear,PJM,33772.0
-full-current-policies-commit,2040,Nuclear,SOU,23932.0
-full-current-policies-commit,2040,Nuclear,SPP,2033.5
-full-current-policies-commit,2040,Nuclear,TRE,5127.0
-full-current-policies-commit,2040,Nuclear,WECC,5189.0
-full-current-policies-commit,2040,Solar,CA,56270.5
-full-current-policies-commit,2040,Solar,MISO,94084.5
-full-current-policies-commit,2040,Solar,NE,32740.5
-full-current-policies-commit,2040,Solar,PJM,122999.0
-full-current-policies-commit,2040,Solar,SOU,104672.0
-full-current-policies-commit,2040,Solar,SPP,10512.0
-full-current-policies-commit,2040,Solar,TRE,42313.5
-full-current-policies-commit,2040,Solar,WECC,73837.0
-full-current-policies-commit,2040,Wind,CA,4861.5
-full-current-policies-commit,2040,Wind,MISO,125162.0
-full-current-policies-commit,2040,Wind,NE,47175.5
-full-current-policies-commit,2040,Wind,PJM,63521.5
-full-current-policies-commit,2040,Wind,SOU,20845.0
-full-current-policies-commit,2040,Wind,SPP,107416.0
-full-current-policies-commit,2040,Wind,TRE,83594.5
-full-current-policies-commit,2040,Wind,WECC,94373.5
-full-current-policies-commit,2045,Battery,CA,11742.5
-full-current-policies-commit,2045,Battery,MISO,16989.5
-full-current-policies-commit,2045,Battery,NE,15055.0
-full-current-policies-commit,2045,Battery,PJM,21642.0
-full-current-policies-commit,2045,Battery,SOU,5049.5
-full-current-policies-commit,2045,Battery,SPP,278.0
-full-current-policies-commit,2045,Battery,TRE,3078.5
-full-current-policies-commit,2045,Battery,WECC,10217.5
-full-current-policies-commit,2045,CCS,CA,1339.0
-full-current-policies-commit,2045,CCS,MISO,398.5
+full-current-policies-commit,2040,Hydro,SPP,5000.5
+full-current-policies-commit,2040,Hydro,TRE,444.0
+full-current-policies-commit,2040,Hydro,WECC,37672.5
+full-current-policies-commit,2040,Hydrogen,CA,2.0
+full-current-policies-commit,2040,Hydrogen,MISO,5.5
+full-current-policies-commit,2040,Hydrogen,NE,12.5
+full-current-policies-commit,2040,Hydrogen,PJM,4.5
+full-current-policies-commit,2040,Hydrogen,SOU,3.0
+full-current-policies-commit,2040,Hydrogen,SPP,3.0
+full-current-policies-commit,2040,Hydrogen,TRE,2.0
+full-current-policies-commit,2040,Hydrogen,WECC,4.0
+full-current-policies-commit,2040,Natural Gas CC,CA,25582.5
+full-current-policies-commit,2040,Natural Gas CC,MISO,62487.5
+full-current-policies-commit,2040,Natural Gas CC,NE,38827.0
+full-current-policies-commit,2040,Natural Gas CC,PJM,80012.0
+full-current-policies-commit,2040,Natural Gas CC,SOU,64357.0
+full-current-policies-commit,2040,Natural Gas CC,SPP,10954.0
+full-current-policies-commit,2040,Natural Gas CC,TRE,39475.0
+full-current-policies-commit,2040,Natural Gas CC,WECC,32943.0
+full-current-policies-commit,2040,Natural Gas CT,CA,8920.0
+full-current-policies-commit,2040,Natural Gas CT,MISO,30889.5
+full-current-policies-commit,2040,Natural Gas CT,NE,6467.5
+full-current-policies-commit,2040,Natural Gas CT,PJM,28781.0
+full-current-policies-commit,2040,Natural Gas CT,SOU,31728.0
+full-current-policies-commit,2040,Natural Gas CT,SPP,9028.0
+full-current-policies-commit,2040,Natural Gas CT,TRE,8032.0
+full-current-policies-commit,2040,Natural Gas CT,WECC,9253.5
+full-current-policies-commit,2040,Nuclear,CA,1.0
+full-current-policies-commit,2040,Nuclear,MISO,20321.5
+full-current-policies-commit,2040,Nuclear,NE,6715.0
+full-current-policies-commit,2040,Nuclear,PJM,33762.5
+full-current-policies-commit,2040,Nuclear,SOU,23925.5
+full-current-policies-commit,2040,Nuclear,SPP,2026.5
+full-current-policies-commit,2040,Nuclear,TRE,5121.0
+full-current-policies-commit,2040,Nuclear,WECC,5177.0
+full-current-policies-commit,2040,Solar,CA,53992.5
+full-current-policies-commit,2040,Solar,MISO,92674.5
+full-current-policies-commit,2040,Solar,NE,33069.5
+full-current-policies-commit,2040,Solar,PJM,57883.5
+full-current-policies-commit,2040,Solar,SOU,96615.0
+full-current-policies-commit,2040,Solar,SPP,11249.0
+full-current-policies-commit,2040,Solar,TRE,42855.5
+full-current-policies-commit,2040,Solar,WECC,71903.0
+full-current-policies-commit,2040,Wind,CA,5074.5
+full-current-policies-commit,2040,Wind,MISO,124196.0
+full-current-policies-commit,2040,Wind,NE,47330.0
+full-current-policies-commit,2040,Wind,PJM,51582.5
+full-current-policies-commit,2040,Wind,SOU,24250.0
+full-current-policies-commit,2040,Wind,SPP,86974.0
+full-current-policies-commit,2040,Wind,TRE,86683.0
+full-current-policies-commit,2040,Wind,WECC,99290.5
+full-current-policies-commit,2045,Battery,CA,13782.0
+full-current-policies-commit,2045,Battery,MISO,23220.0
+full-current-policies-commit,2045,Battery,NE,15981.5
+full-current-policies-commit,2045,Battery,PJM,12462.5
+full-current-policies-commit,2045,Battery,SOU,10625.0
+full-current-policies-commit,2045,Battery,SPP,234.0
+full-current-policies-commit,2045,Battery,TRE,6791.5
+full-current-policies-commit,2045,Battery,WECC,13424.5
+full-current-policies-commit,2045,CCS,CA,1044.5
+full-current-policies-commit,2045,CCS,MISO,356.0
 full-current-policies-commit,2045,CCS,NE,
-full-current-policies-commit,2045,CCS,PJM,2686.5
-full-current-policies-commit,2045,CCS,SOU,49.0
-full-current-policies-commit,2045,CCS,SPP,54.0
-full-current-policies-commit,2045,CCS,TRE,37.0
-full-current-policies-commit,2045,CCS,WECC,52.0
+full-current-policies-commit,2045,CCS,PJM,1469.5
+full-current-policies-commit,2045,CCS,SOU,29.5
+full-current-policies-commit,2045,CCS,SPP,29.5
+full-current-policies-commit,2045,CCS,TRE,18.5
+full-current-policies-commit,2045,CCS,WECC,28.5
 full-current-policies-commit,2045,Coal,CA,0.0
-full-current-policies-commit,2045,Coal,MISO,19789.0
+full-current-policies-commit,2045,Coal,MISO,18785.0
 full-current-policies-commit,2045,Coal,NE,0.0
-full-current-policies-commit,2045,Coal,PJM,7196.5
-full-current-policies-commit,2045,Coal,SOU,11958.5
-full-current-policies-commit,2045,Coal,SPP,8788.0
-full-current-policies-commit,2045,Coal,TRE,5763.5
-full-current-policies-commit,2045,Coal,WECC,7620.0
+full-current-policies-commit,2045,Coal,PJM,6529.0
+full-current-policies-commit,2045,Coal,SOU,11603.0
+full-current-policies-commit,2045,Coal,SPP,7843.0
+full-current-policies-commit,2045,Coal,TRE,5176.0
+full-current-policies-commit,2045,Coal,WECC,7397.0
 full-current-policies-commit,2045,Distributed Solar,CA,16592.0
 full-current-policies-commit,2045,Distributed Solar,MISO,20071.0
 full-current-policies-commit,2045,Distributed Solar,NE,9368.5
@@ -8486,85 +8486,85 @@ full-current-policies-commit,2045,Geothermal,PJM,
 full-current-policies-commit,2045,Geothermal,SOU,
 full-current-policies-commit,2045,Geothermal,SPP,
 full-current-policies-commit,2045,Geothermal,TRE,
-full-current-policies-commit,2045,Geothermal,WECC,211.0
+full-current-policies-commit,2045,Geothermal,WECC,193.0
 full-current-policies-commit,2045,Hydro,CA,11621.0
-full-current-policies-commit,2045,Hydro,MISO,8432.5
+full-current-policies-commit,2045,Hydro,MISO,8294.0
 full-current-policies-commit,2045,Hydro,NE,7742.0
 full-current-policies-commit,2045,Hydro,PJM,7250.5
 full-current-policies-commit,2045,Hydro,SOU,9225.0
 full-current-policies-commit,2045,Hydro,SPP,4866.5
-full-current-policies-commit,2045,Hydro,TRE,311.0
-full-current-policies-commit,2045,Hydro,WECC,35603.5
-full-current-policies-commit,2045,Hydrogen,CA,64.0
-full-current-policies-commit,2045,Hydrogen,MISO,193.0
-full-current-policies-commit,2045,Hydrogen,NE,316.5
-full-current-policies-commit,2045,Hydrogen,PJM,152.5
-full-current-policies-commit,2045,Hydrogen,SOU,112.5
-full-current-policies-commit,2045,Hydrogen,SPP,128.0
-full-current-policies-commit,2045,Hydrogen,TRE,89.0
-full-current-policies-commit,2045,Hydrogen,WECC,182.0
-full-current-policies-commit,2045,Natural Gas CC,CA,40767.5
-full-current-policies-commit,2045,Natural Gas CC,MISO,106171.0
-full-current-policies-commit,2045,Natural Gas CC,NE,41851.5
-full-current-policies-commit,2045,Natural Gas CC,PJM,91412.0
-full-current-policies-commit,2045,Natural Gas CC,SOU,91438.0
-full-current-policies-commit,2045,Natural Gas CC,SPP,12505.0
-full-current-policies-commit,2045,Natural Gas CC,TRE,61675.0
-full-current-policies-commit,2045,Natural Gas CC,WECC,55872.5
-full-current-policies-commit,2045,Natural Gas CT,CA,8570.5
-full-current-policies-commit,2045,Natural Gas CT,MISO,29106.5
-full-current-policies-commit,2045,Natural Gas CT,NE,8110.0
-full-current-policies-commit,2045,Natural Gas CT,PJM,26572.5
-full-current-policies-commit,2045,Natural Gas CT,SOU,28485.0
-full-current-policies-commit,2045,Natural Gas CT,SPP,8996.0
-full-current-policies-commit,2045,Natural Gas CT,TRE,7790.0
-full-current-policies-commit,2045,Natural Gas CT,WECC,8666.0
-full-current-policies-commit,2045,Nuclear,CA,11.0
-full-current-policies-commit,2045,Nuclear,MISO,20346.5
-full-current-policies-commit,2045,Nuclear,NE,6730.5
-full-current-policies-commit,2045,Nuclear,PJM,33778.5
-full-current-policies-commit,2045,Nuclear,SOU,23942.0
-full-current-policies-commit,2045,Nuclear,SPP,2041.5
-full-current-policies-commit,2045,Nuclear,TRE,5132.0
-full-current-policies-commit,2045,Nuclear,WECC,5200.0
-full-current-policies-commit,2045,Solar,CA,55634.5
-full-current-policies-commit,2045,Solar,MISO,103439.5
-full-current-policies-commit,2045,Solar,NE,40664.5
-full-current-policies-commit,2045,Solar,PJM,107194.5
-full-current-policies-commit,2045,Solar,SOU,117326.5
-full-current-policies-commit,2045,Solar,SPP,11843.0
-full-current-policies-commit,2045,Solar,TRE,42171.5
-full-current-policies-commit,2045,Solar,WECC,72995.0
-full-current-policies-commit,2045,Wind,CA,1802.0
-full-current-policies-commit,2045,Wind,MISO,119961.0
-full-current-policies-commit,2045,Wind,NE,48823.0
-full-current-policies-commit,2045,Wind,PJM,61215.5
-full-current-policies-commit,2045,Wind,SOU,21983.5
-full-current-policies-commit,2045,Wind,SPP,100405.5
-full-current-policies-commit,2045,Wind,TRE,78014.0
-full-current-policies-commit,2045,Wind,WECC,88908.0
-full-current-policies-commit,2050,Battery,CA,13196.0
-full-current-policies-commit,2050,Battery,MISO,16345.5
-full-current-policies-commit,2050,Battery,NE,15551.0
-full-current-policies-commit,2050,Battery,PJM,24083.0
-full-current-policies-commit,2050,Battery,SOU,10796.0
-full-current-policies-commit,2050,Battery,SPP,817.0
-full-current-policies-commit,2050,Battery,TRE,3073.5
-full-current-policies-commit,2050,Battery,WECC,20177.5
-full-current-policies-commit,2050,CCS,CA,1339.0
-full-current-policies-commit,2050,CCS,MISO,399.0
+full-current-policies-commit,2045,Hydro,TRE,286.0
+full-current-policies-commit,2045,Hydro,WECC,35573.0
+full-current-policies-commit,2045,Hydrogen,CA,31.5
+full-current-policies-commit,2045,Hydrogen,MISO,104.5
+full-current-policies-commit,2045,Hydrogen,NE,215.0
+full-current-policies-commit,2045,Hydrogen,PJM,87.5
+full-current-policies-commit,2045,Hydrogen,SOU,58.5
+full-current-policies-commit,2045,Hydrogen,SPP,73.5
+full-current-policies-commit,2045,Hydrogen,TRE,45.0
+full-current-policies-commit,2045,Hydrogen,WECC,102.0
+full-current-policies-commit,2045,Natural Gas CC,CA,39833.5
+full-current-policies-commit,2045,Natural Gas CC,MISO,107525.0
+full-current-policies-commit,2045,Natural Gas CC,NE,43462.5
+full-current-policies-commit,2045,Natural Gas CC,PJM,102707.0
+full-current-policies-commit,2045,Natural Gas CC,SOU,92290.5
+full-current-policies-commit,2045,Natural Gas CC,SPP,14642.5
+full-current-policies-commit,2045,Natural Gas CC,TRE,60089.0
+full-current-policies-commit,2045,Natural Gas CC,WECC,53411.5
+full-current-policies-commit,2045,Natural Gas CT,CA,8507.0
+full-current-policies-commit,2045,Natural Gas CT,MISO,28597.5
+full-current-policies-commit,2045,Natural Gas CT,NE,6729.0
+full-current-policies-commit,2045,Natural Gas CT,PJM,26323.5
+full-current-policies-commit,2045,Natural Gas CT,SOU,27451.5
+full-current-policies-commit,2045,Natural Gas CT,SPP,8916.0
+full-current-policies-commit,2045,Natural Gas CT,TRE,7682.0
+full-current-policies-commit,2045,Natural Gas CT,WECC,8580.5
+full-current-policies-commit,2045,Nuclear,CA,6.0
+full-current-policies-commit,2045,Nuclear,MISO,20334.0
+full-current-policies-commit,2045,Nuclear,NE,6723.5
+full-current-policies-commit,2045,Nuclear,PJM,33772.5
+full-current-policies-commit,2045,Nuclear,SOU,23934.5
+full-current-policies-commit,2045,Nuclear,SPP,2034.0
+full-current-policies-commit,2045,Nuclear,TRE,5126.0
+full-current-policies-commit,2045,Nuclear,WECC,5188.0
+full-current-policies-commit,2045,Solar,CA,51634.0
+full-current-policies-commit,2045,Solar,MISO,92615.5
+full-current-policies-commit,2045,Solar,NE,40022.0
+full-current-policies-commit,2045,Solar,PJM,57363.5
+full-current-policies-commit,2045,Solar,SOU,95046.5
+full-current-policies-commit,2045,Solar,SPP,13142.0
+full-current-policies-commit,2045,Solar,TRE,42651.0
+full-current-policies-commit,2045,Solar,WECC,73633.5
+full-current-policies-commit,2045,Wind,CA,1942.5
+full-current-policies-commit,2045,Wind,MISO,117331.5
+full-current-policies-commit,2045,Wind,NE,49127.0
+full-current-policies-commit,2045,Wind,PJM,50009.0
+full-current-policies-commit,2045,Wind,SOU,24307.0
+full-current-policies-commit,2045,Wind,SPP,79143.0
+full-current-policies-commit,2045,Wind,TRE,79603.0
+full-current-policies-commit,2045,Wind,WECC,94270.0
+full-current-policies-commit,2050,Battery,CA,15678.5
+full-current-policies-commit,2050,Battery,MISO,20249.0
+full-current-policies-commit,2050,Battery,NE,17636.0
+full-current-policies-commit,2050,Battery,PJM,14934.0
+full-current-policies-commit,2050,Battery,SOU,15310.5
+full-current-policies-commit,2050,Battery,SPP,1014.0
+full-current-policies-commit,2050,Battery,TRE,7106.0
+full-current-policies-commit,2050,Battery,WECC,23448.5
+full-current-policies-commit,2050,CCS,CA,1044.5
+full-current-policies-commit,2050,CCS,MISO,356.5
 full-current-policies-commit,2050,CCS,NE,
-full-current-policies-commit,2050,CCS,PJM,2686.5
-full-current-policies-commit,2050,CCS,SOU,49.0
-full-current-policies-commit,2050,CCS,SPP,54.5
-full-current-policies-commit,2050,CCS,TRE,37.0
-full-current-policies-commit,2050,CCS,WECC,52.0
+full-current-policies-commit,2050,CCS,PJM,1469.5
+full-current-policies-commit,2050,CCS,SOU,29.5
+full-current-policies-commit,2050,CCS,SPP,30.0
+full-current-policies-commit,2050,CCS,TRE,18.5
+full-current-policies-commit,2050,CCS,WECC,28.5
 full-current-policies-commit,2050,Coal,CA,0.0
-full-current-policies-commit,2050,Coal,MISO,8351.5
+full-current-policies-commit,2050,Coal,MISO,8339.0
 full-current-policies-commit,2050,Coal,NE,0.0
-full-current-policies-commit,2050,Coal,PJM,4802.0
-full-current-policies-commit,2050,Coal,SOU,5729.5
-full-current-policies-commit,2050,Coal,SPP,3816.0
+full-current-policies-commit,2050,Coal,PJM,4784.0
+full-current-policies-commit,2050,Coal,SOU,5383.0
+full-current-policies-commit,2050,Coal,SPP,3570.0
 full-current-policies-commit,2050,Coal,TRE,4175.0
 full-current-policies-commit,2050,Coal,WECC,3981.0
 full-current-policies-commit,2050,Distributed Solar,CA,16748.5
@@ -8582,63 +8582,63 @@ full-current-policies-commit,2050,Geothermal,PJM,
 full-current-policies-commit,2050,Geothermal,SOU,
 full-current-policies-commit,2050,Geothermal,SPP,
 full-current-policies-commit,2050,Geothermal,TRE,
-full-current-policies-commit,2050,Geothermal,WECC,88.0
-full-current-policies-commit,2050,Hydro,CA,10841.5
-full-current-policies-commit,2050,Hydro,MISO,7707.5
-full-current-policies-commit,2050,Hydro,NE,7678.0
+full-current-policies-commit,2050,Geothermal,WECC,76.0
+full-current-policies-commit,2050,Hydro,CA,10741.5
+full-current-policies-commit,2050,Hydro,MISO,7600.5
+full-current-policies-commit,2050,Hydro,NE,7654.5
 full-current-policies-commit,2050,Hydro,PJM,7250.5
-full-current-policies-commit,2050,Hydro,SOU,9164.5
-full-current-policies-commit,2050,Hydro,SPP,4780.5
-full-current-policies-commit,2050,Hydro,TRE,237.0
-full-current-policies-commit,2050,Hydro,WECC,34400.5
-full-current-policies-commit,2050,Hydrogen,CA,64.5
-full-current-policies-commit,2050,Hydrogen,MISO,195.0
-full-current-policies-commit,2050,Hydrogen,NE,544.0
-full-current-policies-commit,2050,Hydrogen,PJM,153.0
-full-current-policies-commit,2050,Hydrogen,SOU,112.5
-full-current-policies-commit,2050,Hydrogen,SPP,129.5
-full-current-policies-commit,2050,Hydrogen,TRE,89.0
-full-current-policies-commit,2050,Hydrogen,WECC,186.5
-full-current-policies-commit,2050,Natural Gas CC,CA,47467.5
-full-current-policies-commit,2050,Natural Gas CC,MISO,138617.0
-full-current-policies-commit,2050,Natural Gas CC,NE,41588.0
-full-current-policies-commit,2050,Natural Gas CC,PJM,103984.5
-full-current-policies-commit,2050,Natural Gas CC,SOU,116563.5
-full-current-policies-commit,2050,Natural Gas CC,SPP,19020.5
-full-current-policies-commit,2050,Natural Gas CC,TRE,73741.0
-full-current-policies-commit,2050,Natural Gas CC,WECC,72897.0
-full-current-policies-commit,2050,Natural Gas CT,CA,8353.0
-full-current-policies-commit,2050,Natural Gas CT,MISO,22719.0
-full-current-policies-commit,2050,Natural Gas CT,NE,8654.0
-full-current-policies-commit,2050,Natural Gas CT,PJM,22311.0
-full-current-policies-commit,2050,Natural Gas CT,SOU,22631.0
-full-current-policies-commit,2050,Natural Gas CT,SPP,8223.5
-full-current-policies-commit,2050,Natural Gas CT,TRE,7059.5
-full-current-policies-commit,2050,Natural Gas CT,WECC,8388.0
-full-current-policies-commit,2050,Nuclear,CA,11.0
-full-current-policies-commit,2050,Nuclear,MISO,20051.0
-full-current-policies-commit,2050,Nuclear,NE,5816.0
-full-current-policies-commit,2050,Nuclear,PJM,33310.0
-full-current-policies-commit,2050,Nuclear,SOU,23942.0
-full-current-policies-commit,2050,Nuclear,SPP,2041.5
-full-current-policies-commit,2050,Nuclear,TRE,5132.0
-full-current-policies-commit,2050,Nuclear,WECC,5200.0
-full-current-policies-commit,2050,Solar,CA,62339.0
-full-current-policies-commit,2050,Solar,MISO,123386.5
-full-current-policies-commit,2050,Solar,NE,49958.5
-full-current-policies-commit,2050,Solar,PJM,126199.0
-full-current-policies-commit,2050,Solar,SOU,113105.0
-full-current-policies-commit,2050,Solar,SPP,14038.5
-full-current-policies-commit,2050,Solar,TRE,43210.0
-full-current-policies-commit,2050,Solar,WECC,94807.0
-full-current-policies-commit,2050,Wind,CA,1135.5
-full-current-policies-commit,2050,Wind,MISO,116037.0
-full-current-policies-commit,2050,Wind,NE,52801.0
-full-current-policies-commit,2050,Wind,PJM,58992.5
-full-current-policies-commit,2050,Wind,SOU,21981.5
-full-current-policies-commit,2050,Wind,SPP,87958.5
-full-current-policies-commit,2050,Wind,TRE,65806.5
-full-current-policies-commit,2050,Wind,WECC,85453.5
+full-current-policies-commit,2050,Hydro,SOU,9128.0
+full-current-policies-commit,2050,Hydro,SPP,4756.5
+full-current-policies-commit,2050,Hydro,TRE,228.0
+full-current-policies-commit,2050,Hydro,WECC,34122.0
+full-current-policies-commit,2050,Hydrogen,CA,32.0
+full-current-policies-commit,2050,Hydrogen,MISO,106.5
+full-current-policies-commit,2050,Hydrogen,NE,417.0
+full-current-policies-commit,2050,Hydrogen,PJM,88.0
+full-current-policies-commit,2050,Hydrogen,SOU,58.5
+full-current-policies-commit,2050,Hydrogen,SPP,74.5
+full-current-policies-commit,2050,Hydrogen,TRE,45.0
+full-current-policies-commit,2050,Hydrogen,WECC,103.0
+full-current-policies-commit,2050,Natural Gas CC,CA,45685.5
+full-current-policies-commit,2050,Natural Gas CC,MISO,143796.0
+full-current-policies-commit,2050,Natural Gas CC,NE,42909.0
+full-current-policies-commit,2050,Natural Gas CC,PJM,115666.0
+full-current-policies-commit,2050,Natural Gas CC,SOU,120583.5
+full-current-policies-commit,2050,Natural Gas CC,SPP,22865.0
+full-current-policies-commit,2050,Natural Gas CC,TRE,70533.0
+full-current-policies-commit,2050,Natural Gas CC,WECC,69319.0
+full-current-policies-commit,2050,Natural Gas CT,CA,8335.0
+full-current-policies-commit,2050,Natural Gas CT,MISO,20432.5
+full-current-policies-commit,2050,Natural Gas CT,NE,7320.0
+full-current-policies-commit,2050,Natural Gas CT,PJM,20391.0
+full-current-policies-commit,2050,Natural Gas CT,SOU,19784.5
+full-current-policies-commit,2050,Natural Gas CT,SPP,7966.0
+full-current-policies-commit,2050,Natural Gas CT,TRE,6957.5
+full-current-policies-commit,2050,Natural Gas CT,WECC,8114.5
+full-current-policies-commit,2050,Nuclear,CA,6.0
+full-current-policies-commit,2050,Nuclear,MISO,19743.0
+full-current-policies-commit,2050,Nuclear,NE,5518.5
+full-current-policies-commit,2050,Nuclear,PJM,32828.5
+full-current-policies-commit,2050,Nuclear,SOU,23934.5
+full-current-policies-commit,2050,Nuclear,SPP,2034.0
+full-current-policies-commit,2050,Nuclear,TRE,5126.0
+full-current-policies-commit,2050,Nuclear,WECC,5188.0
+full-current-policies-commit,2050,Solar,CA,57177.5
+full-current-policies-commit,2050,Solar,MISO,90431.5
+full-current-policies-commit,2050,Solar,NE,50390.0
+full-current-policies-commit,2050,Solar,PJM,66606.0
+full-current-policies-commit,2050,Solar,SOU,94063.5
+full-current-policies-commit,2050,Solar,SPP,19177.5
+full-current-policies-commit,2050,Solar,TRE,45209.5
+full-current-policies-commit,2050,Solar,WECC,93550.0
+full-current-policies-commit,2050,Wind,CA,1418.0
+full-current-policies-commit,2050,Wind,MISO,105152.0
+full-current-policies-commit,2050,Wind,NE,52986.0
+full-current-policies-commit,2050,Wind,PJM,47810.0
+full-current-policies-commit,2050,Wind,SOU,24307.0
+full-current-policies-commit,2050,Wind,SPP,67147.5
+full-current-policies-commit,2050,Wind,TRE,68196.5
+full-current-policies-commit,2050,Wind,WECC,89304.0
 full-current-policies-retire,2027,Battery,CA,11588.7
 full-current-policies-retire,2027,Battery,MISO,227.0
 full-current-policies-retire,2027,Battery,NE,588.7
