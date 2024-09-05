@@ -381,7 +381,11 @@ def shrink_model_size(output_path: Path):
 
     for gen_path in gen_files:
         gen_data = pd.read_csv(gen_path, na_filter=False)
-        gen_data = gen_data.loc[gen_data["Existing_Cap_MW"] >= 10, :]
+        gen_data = gen_data.loc[
+            (gen_data["Existing_Cap_MW"] >= 10)
+            | (gen_data["technology"].str.contains("Off", case=False)),
+            :,
+        ]
         gen_data.to_csv(gen_path, index=False)
 
 
