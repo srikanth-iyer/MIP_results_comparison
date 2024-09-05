@@ -351,7 +351,7 @@ def period_weighted_avg_cost(
         new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] = (
             period_fixed_costs[periods[0]][f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
             * frac_build[periods[0]]
-        ).astype(int)
+        ).round(0)
 
     # Fraction built and fractional cost from subsequent periods
     for p1, p2 in zip(periods[:-1], periods[1:]):
@@ -369,7 +369,7 @@ def period_weighted_avg_cost(
             new_gen[final_period].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"] += (
                 period_fixed_costs[p2].loc[:, f"{prefix}Fixed_OM_Cost_per_{kind}yr"]
                 * frac_build[p2]
-            ).astype(int)
+            ).round(0)
 
     return new_gen[final_period]
 
