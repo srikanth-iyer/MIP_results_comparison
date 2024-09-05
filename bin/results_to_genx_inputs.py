@@ -398,13 +398,14 @@ def main(
     model_results = load_final_capacity(Path(results_path), year)
     if (
         "SPPC_landbasedwind_class3_moderate_139_anyQual_1"
-        not in model_results["gens"]["Resource"].to_list()
+        not in model_results["gens"].reset_index()["Resource"].to_list()
     ):
         # Some results have different resource names because of a PG bug. Use corrected
         # inputs where results don't have the very high cluster number
         genx_inputs_path = genx_inputs_path.replace("commit", "commit_corrected")
 
     print("Loading GenX inputs")
+    print(genx_inputs_path)
     genx_inputs = load_genx_inputs(Path(genx_inputs_path))
     genx_inputs["Network"].to_csv(Path(output_path) / "original_network.csv")
 
