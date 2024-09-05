@@ -44,23 +44,26 @@ rule all:
 rule process_results_summary:
     input:
         input_files=[
-            "{dir}/{model}_results_summary/resource_capacity.csv",
-            "{dir}/{model}_results_summary/transmission_expansion.csv",
+            "./{dir}/{model}_results_summary/resource_capacity.csv",
+            "./{dir}/{model}_results_summary/transmission_expansion.csv",
         ]
     output:
         # touch("{dir}/{model}_results_summary.done"),
-        done_file="{dir}/{model}_results_summary.done"
+        done_file="./{dir}/{model}_results_summary.done"
     params:
         dir=lambda wildcards: wildcards.dir,
         model=lambda wildcards: wildcards.model
     run:
         # Check if the .done file exists and compare MD5 hashes
         # Hash both the input data file and the python script
-        hash_files = input.input_files + [str(Path.cwd() / "bin" / "results_to_genx_inputs.py")]
-        print(hash_files)
-        print(output.done_file)
-        print(read_hash(output.done_file))
-        print(md5(hash_files))
+        hash_files = input.input_files + ["./bin/results_to_genx_inputs.py", "./bin/results_to_genx_inputs.sh", "./Snakefile"]
+        for f in hash_files:
+            if not Path(f).exists():
+                print(f"{f} not found by pathlib")
+        print(f"hash files are {hash_files}")
+        print(f"done file is {output.done_file}")
+        print(f"current done hash is {read_hash(output.done_file)}")
+        print(f"hash of hash files is {md5(hash_files)}")
         if check_md5(hash_files, Path(output.done_file)):
             print(f"No changes detected in {input.input_files}. Skipping processing.")
         else:
