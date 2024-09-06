@@ -136,7 +136,7 @@ venv.bak/
 !**/costs.csv
 !**/nse.csv
 !**/capacityfactor.csv
-!**/emissions_plant.csv
+!**/emissions.csv
 
 # User-specific env.yml settings file
 env.yml
