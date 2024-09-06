@@ -516,7 +516,8 @@ def _load_op_data(
     model = f.parts[model_part].split("_")[0]
     _df.loc[:, "model"] = model
     if fn == "costs.csv":
-
+        if not (f.parent / "capacityfactor.csv").exists():
+            return pd.DataFrame()
         # Need to modify so that model costs are reported, then subsidies are also reported
         # as their own bars. Can use the difference between base/policy values.
         fixed_gen_cost = load_op_generators_data(f.parents[1] / "Generators_data.csv")
