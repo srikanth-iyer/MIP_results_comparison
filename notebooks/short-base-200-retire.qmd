@@ -262,7 +262,7 @@ data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "agg
 chart = chart_dispatch(data)
 chart
 ```
-```{python}
+<!-- ```{python}
 # | title: 2030 Wind Dispatch
 wind_dispatch = dispatch.query("resource_name.str.contains('landbasedwind')")
 wind_dispatch["cluster"] = wind_dispatch["resource_name"].str.split("moderate_").str[-1]
@@ -298,7 +298,7 @@ data = (
 )
 chart = chart_wind_dispatch(data)
 chart
-```
+``` -->
 
 # Capacity Factors
 ## Row {.tabset}
