@@ -302,18 +302,18 @@ data = (
 )
 chart = chart_wind_dispatch(data)
 chart
-```
+``` -->
 
-```{python}
+<!-- ```{python}
 # | title: 2040 Wind Dispatch
 data = wind_dispatch.query("planning_year==2040").groupby(by, as_index=False)[
     "value"
 ].sum()
 chart = chart_wind_dispatch(data)
 chart
-```
+``` -->
 
-```{python}
+<!-- ```{python}
 # | title: 2050 Wind Dispatch
 data = (
     wind_dispatch.query("planning_year==2050")
