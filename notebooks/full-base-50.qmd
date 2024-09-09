@@ -427,38 +427,39 @@ chart
 # | title: Generation
 op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
 if not op_gen_cap.empty:
-    op_gen_cap = op_gen_cap.query(
-        "~tech_type.str.contains('Other')"
-    )
+    op_gen_cap = op_gen_cap.query("~tech_type.str.contains('Other')")
     op_gen = op_gen_cap[
-        ["tech_type", "planning_year", "model", "AnnualSum", "resource_name"]
+        [
+            "tech_type",
+            "planning_year",
+            "model",
+            "AnnualSum",
+            "resource_name",
+            "agg_zone",
+        ]
     ].rename(columns={"AnnualSum": "value"})
     op_cap = op_gen_cap[
-        ["tech_type", "planning_year", "model", "Capacity", "resource_name"]
+        ["tech_type", "planning_year", "model", "Capacity", "resource_name", "agg_zone"]
     ].rename(columns={"Capacity": "end_value"})
     op_cap["unit"] = "MW"
-
 
     chart = chart_total_gen(op_gen, op_cap)
     chart
 ```
-
 ```{python}
-# | title: Emissions by tech
-op_emiss = load_genx_operations_data(
-    data_path, "emissions_plant.csv", hourly_data=True
-)
-if not op_emiss.empty:
-    op_emiss = op_emiss.query("~tech_type.str.contains('Other')")
-    chart = chart_op_emiss(op_emiss, col_var="planning_year", color="tech_type")
-    chart
+# | title: Regional Generation
+chart = chart_regional_gen(op_gen, cap)
+chart
 ```
+
 
 ```{python}
 # | title: Emissions by zone
-if not op_emiss.empty:
-    chart = chart_op_emiss(op_emiss, col_var="planning_year", color="Region")
-    chart
+op_emiss = load_genx_operations_data(
+    data_path, "emissions.csv", hourly_data=True
+)
+chart = chart_emissions(op_emiss)
+chart
 ```
 
 ```{python}

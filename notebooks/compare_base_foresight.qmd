@@ -123,13 +123,7 @@ for folder in data_folders:
         op_gen_list.append(op_gen_data)
         op_cap_list.append(op_cap_data)
 
-    op_emiss_data = load_genx_operations_data(
-        folder, "emissions_plant.csv", hourly_data=True
-    )
-    try:
-        op_emiss_data = op_emiss_data.query("~tech_type.str.contains('Other')")
-    except:
-        pass
+    op_emiss_data = load_genx_operations_data(folder, "emissions.csv", hourly_data=True)
     op_emiss_data["case"] = case_id
     op_emiss_list.append(op_emiss_data)
 
@@ -395,12 +389,12 @@ chart
 
 ```{python}
 # | title: Operational costs
-chart = chart_op_cost(op_costs, "case", "model", "planning_year", order=order)
+chart = chart_op_cost(op_costs, col_var="case", x_var="model", row_var="planning_year", order=order)
 chart
 ```
 ```{python}
 # | title: Operational NSE
-chart = chart_op_nse(op_nse, x_var="case", col_var="model", row_var="planning_year", order=order)
+chart = chart_op_nse(op_nse, col_var="case", x_var="model", row_var="planning_year", order=order)
 chart
 ```
 
@@ -408,7 +402,12 @@ chart
 # | title: Generation
 try:
     chart = chart_total_gen(
-        op_gen, op_cap, "case", "model", "planning_year", order=order
+        op_gen,
+        op_cap,
+        col_var="case",
+        x_var="model",
+        row_var="planning_year",
+        order=order,
     )
     chart
 except:
@@ -416,21 +415,13 @@ except:
 ```
 
 ```{python}
-# | title: Emissions by tech
-chart = chart_op_emiss(
-    op_emiss, x_var="case", col_var="model", row_var="planning_year", color="tech_type", order=order
-)
-chart
-```
-
-```{python}
 # | title: Emissions by zone
-chart = chart_op_emiss(
+chart = chart_emissions(
     op_emiss,
-    x_var="case",
-    col_var="model",
-    row_var="planning_year",
-    color="Region",
+    col_var="case",
+    x_var="model",
+    # row_var="planning_year",
+    # color="Region",
     order=order,
 )
 chart
@@ -440,6 +431,8 @@ chart
 # | title: Power cost
 from fig_functions import chart_cost_mwh
 
-chart = chart_cost_mwh(op_costs, "case", "model", "planning_year", order=order)
+chart = chart_cost_mwh(
+    op_costs, col_var="case", x_var="model", row_var="planning_year", order=order
+)
 chart
 ```

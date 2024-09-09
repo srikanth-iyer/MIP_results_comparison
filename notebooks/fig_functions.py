@@ -19,7 +19,7 @@ except:
 region_map = {
     "WECC": ["BASN", "NWPP", "SRSG", "RMRG"],
     "CA": ["CANO", "CASO"],
-    "TRE": ["TRE", "TRE_WEST", "TREW"],
+    "TRE": ["TRE", "TREW"],
     "SPP": ["SPPC", "SPPN", "SPPS"],
     "MISO": ["MISC", "MISE", "MISS", "MISW", "SRCE"],
     "PJM": ["PJMC", "PJMW", "PJME", "PJMD"],
@@ -351,6 +351,7 @@ def load_genx_operations_data(
     if hourly_data:
         nrows = 5
     files = list(data_path.rglob(fn))
+    files = [f for f in files if "op_inputs" in str(f)]
     periods = find_periods(files)
     # if any("p6" in p for p in periods):
     #     period_dict = (
@@ -361,26 +362,6 @@ def load_genx_operations_data(
     df_list = Parallel(n_jobs=1)(
         delayed(_load_op_data)(f, hourly_data, nrows, period_dict) for f in files
     )
-    # model_part = -3
-    # _df = pd.read_csv(f, nrows=nrows)  # , dtype_backend="pyarrow")
-    # if hourly_data:
-    #     if fn == "nse.csv":
-    #         _df = total_from_nse_hourly_data(_df)
-    #     elif "Resource" in _df.columns:
-    #         _df = total_from_resource_op_hourly_data(_df)
-    #     else:
-    #         raise ValueError(f"There is no hourly data function for file {fn}")
-    # if "Results_p" in str(f):
-    #     period = period_dict[f.parent.stem.split("_")[-1]]
-    #     _df.loc[:, "planning_year"] = period
-    #     model_part = -4
-    # elif "Inputs_p" in str(f):
-    #     period = period_dict[f.parents[1].stem.split("_")[-1]]
-    #     _df.loc[:, "planning_year"] = period
-    #     model_part = -5
-    # model = f.parts[model_part].split("_")[0]
-    # _df.loc[:, "model"] = model
-    # df_list.append(_df)
     if not df_list:
         return pd.DataFrame(columns=DATA_COLS.get(fn.split(".")[0], []))
     df = pd.concat(df_list, ignore_index=True)
@@ -397,6 +378,8 @@ def load_genx_operations_data(
         except:
             df.loc[:, "zone"] = df["resource_name"].str.split("_").list[0]
         df.loc[df["resource_name"].str.contains("TRE_WEST"), "zone"] = "TRE_WEST"
+    if "zone" in df.columns:
+        df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
     return df
 
 
@@ -499,6 +482,8 @@ def _load_op_data(
     if hourly_data:
         if fn == "nse.csv":
             _df = total_from_nse_hourly_data(_df)
+        elif fn == "emissions.csv":
+            _df = total_from_emissions_hourly_data(_df)
         elif "Resource" in _df.columns:
             _df = total_from_resource_op_hourly_data(_df)
         else:
@@ -612,6 +597,18 @@ def total_from_nse_hourly_data(df: pd.DataFrame) -> pd.DataFrame:
             "value": df.iloc[1, 1:-1],
         }
     ).reset_index(drop=True)
+    return data
+
+
+def total_from_emissions_hourly_data(df: pd.DataFrame) -> pd.DataFrame:
+    reg_map = {i + 1: r for i, r in enumerate(sorted(sum(region_map.values(), [])))}
+    data = pd.DataFrame(
+        {
+            "Zone": df.columns[1:-1].astype(int).to_list(),
+            "value": df.iloc[1, 1:-1],
+        }
+    ).reset_index(drop=True)
+    data["zone"] = data["Zone"].map(reg_map)
     return data
 
 
@@ -2018,15 +2015,15 @@ def append_npv_cost(op_costs: pd.DataFrame) -> pd.DataFrame:
 def single_op_cost_chart(
     data, x_var="model", col_var=None, row_var=None, order=None
 ) -> alt.Chart:
-    _tooltip = [alt.Tooltip("Total", format=",.0f")]
+    _tooltip = [alt.Tooltip("Total", format=",.0f").title("Cost")]
     chart_cols = ["Costs", "Total", VAR_ABBR_MAP[x_var]]
 
     if "percent_total" in data.columns:
-        _tooltip.append(alt.Tooltip("percent_total:Q", format=".1%"))
+        _tooltip.append(alt.Tooltip("percent_total:Q", format=".1%").title("% Total"))
         chart_cols.append("percent_total")
     if col_var is not None:
         _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[col_var]).title(title_case(col_var)))
-        _tooltip.append(alt.Tooltip("Costs"))
+        _tooltip.append(alt.Tooltip("Costs").title("Category"))
         chart_cols.append(VAR_ABBR_MAP[col_var])
     if row_var is not None:
         _tooltip.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
@@ -2039,7 +2036,7 @@ def single_op_cost_chart(
             # xOffset="model:N",
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("Total").title("Costs (Billion $)"),
-            color="Costs:N",
+            color=alt.Color("Costs:N").title("Category"),
             tooltip=_tooltip,
         )
     )

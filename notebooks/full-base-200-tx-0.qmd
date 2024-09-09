@@ -446,21 +446,12 @@ if not op_gen_cap.empty:
 ```
 
 ```{python}
-# | title: Emissions by tech
-op_emiss = load_genx_operations_data(
-    data_path, "emissions_plant.csv", hourly_data=True
-)
-if not op_emiss.empty:
-    op_emiss = op_emiss.query("~tech_type.str.contains('Other')")
-    chart = chart_op_emiss(op_emiss, col_var="planning_year", color="tech_type")
-    chart
-```
-
-```{python}
 # | title: Emissions by zone
-if not op_emiss.empty:
-    chart = chart_op_emiss(op_emiss, col_var="planning_year", color="Region")
-    chart
+op_emiss = load_genx_operations_data(
+    data_path, "emissions.csv", hourly_data=True
+)
+chart = chart_emissions(op_emiss)
+chart
 ```
 
 ```{python}
