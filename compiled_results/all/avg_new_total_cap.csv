@@ -577,34 +577,34 @@ full-base-200-tx-50,Wind,2045,72790.8,,
 full-base-200-tx-50,Wind,2050,46361.0,553764.0,584312.0
 full-base-50,Battery,2027,19.5,,
 full-base-50,Battery,2030,28.0,,
-full-base-50,Battery,2035,475.7,,
-full-base-50,Battery,2040,1141.0,,
-full-base-50,Battery,2045,25003.0,,
-full-base-50,Battery,2050,66366.0,82529.0,106849.0
+full-base-50,Battery,2035,495.8,,
+full-base-50,Battery,2040,1994.2,,
+full-base-50,Battery,2045,27791.8,,
+full-base-50,Battery,2050,68319.8,82529.0,115449.0
 full-base-50,CCS,2027,0.0,,
 full-base-50,CCS,2030,10.0,,
 full-base-50,CCS,2035,53.0,,
 full-base-50,CCS,2040,153.7,,
-full-base-50,CCS,2045,457.7,,
-full-base-50,CCS,2050,1468.3,1617.0,3149.0
+full-base-50,CCS,2045,436.5,,
+full-base-50,CCS,2050,1815.5,1617.0,3230.0
 full-base-50,Hydrogen,2027,2.0,,
 full-base-50,Hydrogen,2030,24.0,,
 full-base-50,Hydrogen,2035,92.0,,
-full-base-50,Hydrogen,2040,181.7,,
-full-base-50,Hydrogen,2045,554.0,,
-full-base-50,Hydrogen,2050,414.7,314.0,2614.0
-full-base-50,Natural Gas CC,2027,249.7,,
-full-base-50,Natural Gas CC,2030,6043.0,,
-full-base-50,Natural Gas CC,2035,42236.7,,
-full-base-50,Natural Gas CC,2040,99921.0,,
-full-base-50,Natural Gas CC,2045,117496.0,,
-full-base-50,Natural Gas CC,2050,69991.7,330175.0,339275.0
+full-base-50,Hydrogen,2040,136.5,,
+full-base-50,Hydrogen,2045,415.5,,
+full-base-50,Hydrogen,2050,311.0,1.0,2614.0
+full-base-50,Natural Gas CC,2027,1429.5,,
+full-base-50,Natural Gas CC,2030,5339.5,,
+full-base-50,Natural Gas CC,2035,42408.8,,
+full-base-50,Natural Gas CC,2040,99948.5,,
+full-base-50,Natural Gas CC,2045,118861.2,,
+full-base-50,Natural Gas CC,2050,67266.8,330175.0,339275.0
 full-base-50,Natural Gas CT,2027,10.0,,
 full-base-50,Natural Gas CT,2030,4.0,,
-full-base-50,Natural Gas CT,2035,1384.0,,
-full-base-50,Natural Gas CT,2040,6088.7,,
-full-base-50,Natural Gas CT,2045,1948.3,,
-full-base-50,Natural Gas CT,2050,356.0,9040.0,10574.0
+full-base-50,Natural Gas CT,2035,3444.2,,
+full-base-50,Natural Gas CT,2040,6883.8,,
+full-base-50,Natural Gas CT,2045,1972.0,,
+full-base-50,Natural Gas CT,2050,267.0,9040.0,20937.0
 full-base-50,Nuclear,2027,0.0,,
 full-base-50,Nuclear,2030,0.0,,
 full-base-50,Nuclear,2035,13.0,,
@@ -612,17 +612,17 @@ full-base-50,Nuclear,2040,36.0,,
 full-base-50,Nuclear,2045,43.0,,
 full-base-50,Nuclear,2050,19.0,0.0,155.0
 full-base-50,Solar,2027,161.3,,
-full-base-50,Solar,2030,197369.7,,
-full-base-50,Solar,2035,166735.3,,
-full-base-50,Solar,2040,96932.7,,
-full-base-50,Solar,2045,125628.7,,
-full-base-50,Solar,2050,147343.0,726256.0,744207.0
-full-base-50,Wind,2027,118589.7,,
-full-base-50,Wind,2030,159947.3,,
-full-base-50,Wind,2035,77053.3,,
-full-base-50,Wind,2040,60020.7,,
-full-base-50,Wind,2045,64807.7,,
-full-base-50,Wind,2050,42248.3,507951.0,539711.0
+full-base-50,Solar,2030,197842.2,,
+full-base-50,Solar,2035,166112.0,,
+full-base-50,Solar,2040,96980.2,,
+full-base-50,Solar,2045,126320.8,,
+full-base-50,Solar,2050,147518.8,726256.0,744207.0
+full-base-50,Wind,2027,117753.8,,
+full-base-50,Wind,2030,160076.5,,
+full-base-50,Wind,2035,76983.5,,
+full-base-50,Wind,2040,59571.0,,
+full-base-50,Wind,2045,64401.0,,
+full-base-50,Wind,2050,43342.0,507951.0,539711.0
 full-current-policies,Battery,2027,148.3,,
 full-current-policies,Battery,2030,195.8,,
 full-current-policies,Battery,2035,12277.2,,
