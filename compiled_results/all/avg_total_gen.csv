@@ -509,6 +509,12 @@ full-base-200-no-ccs,Battery,2035,36986831.75,26620561.0,46067704.0
 full-base-200-no-ccs,Battery,2040,97467794.0,85925583.0,117989623.0
 full-base-200-no-ccs,Battery,2045,237935302.0,218756042.0,267458765.0
 full-base-200-no-ccs,Battery,2050,383286409.5,349621186.0,426494395.0
+full-base-200-no-ccs,CCS,2027,,,
+full-base-200-no-ccs,CCS,2030,,,
+full-base-200-no-ccs,CCS,2035,,,
+full-base-200-no-ccs,CCS,2040,,,
+full-base-200-no-ccs,CCS,2045,,,
+full-base-200-no-ccs,CCS,2050,,,
 full-base-200-no-ccs,Coal,2027,226780825.25,225504305.0,230260023.0
 full-base-200-no-ccs,Coal,2030,19053.25,4037.0,46161.0
 full-base-200-no-ccs,Coal,2035,711420.0,628884.0,779176.0
