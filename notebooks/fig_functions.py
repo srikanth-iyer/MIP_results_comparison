@@ -1969,7 +1969,9 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
 
 
 # Calculate NPV for each cost category
-def calculate_npv(df, period_len, discount_rate, base_year):
+def calculate_npv(
+    df: pd.DataFrame, period_len: Dict[int, int], discount_rate: float, base_year: int
+):
     "From ChatGPT"
     df["Total"] = 0.0
     for index, row in df.iterrows():
