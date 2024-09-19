@@ -79,6 +79,7 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
     tx_list = []
     tx_exp_list = []
     op_cost_list = []
+    op_cost_model_list = []
     op_nse_list = []
     op_gen_list = []
     op_cap_list = []
@@ -110,7 +111,12 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         try:
             op_cost_data = load_genx_operations_data(folder, "costs.csv")
             op_cost_data["case"] = case_id
+            op_cost_model_data = load_genx_operations_data(
+                folder, "costs.csv", model_costs_only=True
+            )
+            op_cost_model_data["case"] = case_id
             op_cost_list.append(op_cost_data)
+            op_cost_model_list.append(op_cost_model_data)
 
             op_nse_data = load_genx_operations_data(folder, "nse.csv", hourly_data=True)
             op_nse_data["case"] = case_id
@@ -165,6 +171,7 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
     tx = pd.concat(tx_list, ignore_index=True)
     tx_exp = pd.concat(tx_exp_list, ignore_index=True)
     op_costs = pd.concat(op_cost_list, ignore_index=True)
+    op_costs_model = pd.concat(op_cost_model_list, ignore_index=True)
     op_nse = pd.concat(op_nse_list, ignore_index=True)
     op_emiss = pd.concat(op_emiss_list, ignore_index=True)
     if op_cap_list:
@@ -214,6 +221,7 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         "avg_annual_tx_expansion": tx_exp_data,
         "emissions": emiss,
         "operational_costs": op_costs,
+        "operational_costs_model": op_costs_model,
         "operational_nse": op_nse,
         "operational_gen": op_gen,
     }
@@ -232,3 +240,5 @@ if __name__ == "__main__":
         for f, _df in df_dict.items():
             print(f)
             _df.to_csv(save_data_folder / f"{f}.csv", index=False)
+            if f in ["capacity", "generation"] and name == "all":
+                _df.to_csv(save_data_folder / f"{f}.csv.gz")
