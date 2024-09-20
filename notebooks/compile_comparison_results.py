@@ -241,4 +241,4 @@ if __name__ == "__main__":
             print(f)
             _df.to_csv(save_data_folder / f"{f}.csv", index=False)
             if f in ["capacity", "generation"] and name == "all":
-                _df.to_csv(save_data_folder / f"{f}.csv.gz")
+                _df.to_parquet(save_data_folder / f"{f}.parquet")
