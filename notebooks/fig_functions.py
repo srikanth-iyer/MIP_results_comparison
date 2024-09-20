@@ -382,7 +382,10 @@ def load_genx_operations_data(
         df.loc[df["resource_name"].str.contains("TRE_WEST"), "zone"] = "TRE_WEST"
     if "zone" in df.columns:
         df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
-    return df
+    for col in df.columns:
+        if col != "percent_total":
+            df.loc[:, col] = df[col].round(1)
+    return df.round(1)
 
 
 @lru_cache
