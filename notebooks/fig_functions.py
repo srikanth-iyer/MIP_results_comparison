@@ -345,13 +345,14 @@ def load_genx_operations_data(
         "p6": 2050,
     },
     hourly_data: bool = False,
+    model_costs_only: bool = False,
 ) -> pd.DataFrame:
     df_list = []
     nrows = None
     if hourly_data:
         nrows = 5
     files = list(data_path.rglob(fn))
-    files = [f for f in files if "op_inputs" in str(f)]
+    files = [f for f in files if "op_inputs" in str(f) and not "_Results" in str(f)]
     periods = find_periods(files)
     # if any("p6" in p for p in periods):
     #     period_dict = (
@@ -360,7 +361,8 @@ def load_genx_operations_data(
     if not files:
         return pd.DataFrame()
     df_list = Parallel(n_jobs=1)(
-        delayed(_load_op_data)(f, hourly_data, nrows, period_dict) for f in files
+        delayed(_load_op_data)(f, hourly_data, nrows, period_dict, model_costs_only)
+        for f in files
     )
     if not df_list:
         return pd.DataFrame(columns=DATA_COLS.get(fn.split(".")[0], []))
@@ -475,6 +477,7 @@ def _load_op_data(
         "p5": 2045,
         "p6": 2050,
     },
+    model_costs_only: bool = False,
 ) -> pd.DataFrame:
     fn = f.name
     model_part = -3
@@ -500,6 +503,9 @@ def _load_op_data(
         model_part = -5
     model = f.parts[model_part].split("_")[0]
     _df.loc[:, "model"] = model
+    if fn == "costs.csv" and model_costs_only:
+        return _df
+
     if fn == "costs.csv":
         if not (f.parent / "capacityfactor.csv").exists():
             return pd.DataFrame()
@@ -591,12 +597,14 @@ def total_from_resource_op_hourly_data(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def total_from_nse_hourly_data(df: pd.DataFrame) -> pd.DataFrame:
+    reg_map = {i + 1: r for i, r in enumerate(sorted(sum(region_map.values(), [])))}
     data = pd.DataFrame(
         {
-            "zone": df.iloc[0, 1:-1],
+            "Zone": df.iloc[0, 1:-1].astype(int).to_list(),
             "value": df.iloc[1, 1:-1],
         }
     ).reset_index(drop=True)
+    data["zone"] = data["Zone"].map(reg_map)
     return data
 
 
