@@ -7,3 +7,4 @@ geopandas
 tabulate
 itables
 joblib
+fastparquet
