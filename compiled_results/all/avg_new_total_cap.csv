@@ -623,54 +623,54 @@ full-base-50,Natural Gas CT,2050,267.0,9040.0,20937.0
 full-base-50,Nuclear,2050,19.0,0.0,155.0
 full-base-50,Solar,2050,147518.8,726256.0,744207.0
 full-base-50,Wind,2050,43342.0,507951.0,539711.0
-full-current-policies,Battery,2027,68.7,,
+full-current-policies,Battery,2027,102.5,,
 full-current-policies,CCS,2027,10.0,,
 full-current-policies,Hydrogen,2027,26.0,,
 full-current-policies,Natural Gas CC,2027,21.5,,
 full-current-policies,Natural Gas CT,2027,13.0,,
 full-current-policies,Nuclear,2027,0.0,,
-full-current-policies,Solar,2027,12937.2,,
-full-current-policies,Wind,2027,141778.2,,
-full-current-policies,Battery,2030,417.8,,
+full-current-policies,Solar,2027,12925.5,,
+full-current-policies,Wind,2027,141779.8,,
+full-current-policies,Battery,2030,-21.3,,
 full-current-policies,CCS,2030,0.0,,
 full-current-policies,Hydrogen,2030,0.5,,
 full-current-policies,Natural Gas CC,2030,1.0,,
 full-current-policies,Natural Gas CT,2030,0.5,,
 full-current-policies,Nuclear,2030,1.5,,
-full-current-policies,Solar,2030,37615.8,,
-full-current-policies,Wind,2030,78019.8,,
-full-current-policies,Battery,2035,14062.8,,
+full-current-policies,Solar,2030,37618.0,,
+full-current-policies,Wind,2030,78000.2,,
+full-current-policies,Battery,2035,11280.5,,
 full-current-policies,CCS,2035,133.5,,
-full-current-policies,Hydrogen,2035,220.2,,
-full-current-policies,Natural Gas CC,2035,10292.2,,
-full-current-policies,Natural Gas CT,2035,971.5,,
+full-current-policies,Hydrogen,2035,220.0,,
+full-current-policies,Natural Gas CC,2035,10497.2,,
+full-current-policies,Natural Gas CT,2035,1356.0,,
 full-current-policies,Nuclear,2035,42.5,,
-full-current-policies,Solar,2035,217991.2,,
-full-current-policies,Wind,2035,104405.8,,
-full-current-policies,Battery,2040,49422.5,,
-full-current-policies,CCS,2040,4680.0,,
-full-current-policies,Hydrogen,2040,182.8,,
-full-current-policies,Natural Gas CC,2040,58996.2,,
-full-current-policies,Natural Gas CT,2040,4585.0,,
+full-current-policies,Solar,2035,216981.8,,
+full-current-policies,Wind,2035,105009.0,,
+full-current-policies,Battery,2040,44201.5,,
+full-current-policies,CCS,2040,4988.0,,
+full-current-policies,Hydrogen,2040,183.2,,
+full-current-policies,Natural Gas CC,2040,58512.0,,
+full-current-policies,Natural Gas CT,2040,4083.2,,
 full-current-policies,Nuclear,2040,4.5,,
-full-current-policies,Solar,2040,152161.2,,
-full-current-policies,Wind,2040,90366.2,,
-full-current-policies,Battery,2045,3988.8,,
-full-current-policies,CCS,2045,13.8,,
-full-current-policies,Hydrogen,2045,1658.8,,
-full-current-policies,Natural Gas CC,2045,162840.5,,
-full-current-policies,Natural Gas CT,2045,1996.5,,
+full-current-policies,Solar,2040,152305.5,,
+full-current-policies,Wind,2040,89230.8,,
+full-current-policies,Battery,2045,2261.8,,
+full-current-policies,CCS,2045,14.2,,
+full-current-policies,Hydrogen,2045,1497.0,,
+full-current-policies,Natural Gas CC,2045,164247.2,,
+full-current-policies,Natural Gas CT,2045,1707.8,,
 full-current-policies,Nuclear,2045,16.0,,
-full-current-policies,Solar,2045,17850.8,,
-full-current-policies,Wind,2045,3612.5,,
-full-current-policies,Battery,2050,14652.0,63075.0,108312.0
-full-current-policies,CCS,2050,31.5,2255.0,6807.0
-full-current-policies,Hydrogen,2050,1148.8,2098.0,5780.0
-full-current-policies,Natural Gas CC,2050,124158.8,353485.0,357842.0
-full-current-policies,Natural Gas CT,2050,3456.8,7399.0,16722.0
+full-current-policies,Solar,2045,17930.0,,
+full-current-policies,Wind,2045,3630.5,,
+full-current-policies,Battery,2050,13874.2,63075.0,84034.0
+full-current-policies,CCS,2050,31.0,2255.0,6932.0
+full-current-policies,Hydrogen,2050,1214.8,2029.0,5780.0
+full-current-policies,Natural Gas CC,2050,125793.5,356298.0,364534.0
+full-current-policies,Natural Gas CT,2050,2325.0,7399.0,11565.0
 full-current-policies,Nuclear,2050,15.5,0.0,133.0
-full-current-policies,Solar,2050,72046.2,504969.0,523088.0
-full-current-policies,Wind,2050,11899.2,424227.0,438866.0
+full-current-policies,Solar,2050,73455.8,504969.0,523088.0
+full-current-policies,Wind,2050,9866.2,420553.0,438866.0
 full-current-policies-commit,Battery,2027,26.0,,
 full-current-policies-commit,CCS,2027,10.0,,
 full-current-policies-commit,Hydrogen,2027,26.0,,
