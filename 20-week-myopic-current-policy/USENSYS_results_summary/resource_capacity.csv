@@ -1214,33 +1214,35 @@ USENSYS,SRSG,SRSG_batteries_1,Battery,2030,20-week-myopic-current-policy,MWh,419
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2030,20-week-myopic-current-policy,MWh,3353,3353
 USENSYS,TRE,TRE_batteries_1,Battery,2030,20-week-myopic-current-policy,MWh,4619,4619
 USENSYS,TREW,TREW_batteries_1,Battery,2030,20-week-myopic-current-policy,MWh,3481,3481
-USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,2288
-USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,3774
+USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,2289
+USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,3753
 USENSYS,CANO,CANO_utilitypv_class1_moderate_2_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,3885
-USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,8048
-USENSYS,CASO,CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,12607
+USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,8050
+USENSYS,CASO,CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,12608
 USENSYS,FRCC,FRCC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,2785
-USENSYS,FRCC,FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,1767,17417
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MW,0,1653
-USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,5845,9723
-USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2035,20-week-myopic-current-policy,MW,0,5813
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2035,20-week-myopic-current-policy,MW,8916,9600
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2035,20-week-myopic-current-policy,MW,0,3676
+USENSYS,FRCC,FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,1767,17412
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MW,0,5678
+USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,5845,9611
+USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2035,20-week-myopic-current-policy,MW,0,3857
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2035,20-week-myopic-current-policy,MW,8916,9591
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2035,20-week-myopic-current-policy,MW,0,3684
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_1,Wind,2035,20-week-myopic-current-policy,MW,0,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_2,Wind,2035,20-week-myopic-current-policy,MW,0,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_3,Wind,2035,20-week-myopic-current-policy,MW,0,160
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,3842,4027
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,4790
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,3442
-USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,989
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,4011
+USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,2448
+USENSYS,MISE,MISE_landbasedwind_class3_moderate_18_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,5
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,369
 USENSYS,MISE,MISE_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,6482
 USENSYS,MISS,MISS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,508,1740
-USENSYS,MISS,MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,3996
+USENSYS,MISS,MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,3915
 USENSYS,MISS,MISS_utilitypv_class1_moderate_1_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,3113
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MW,0,3082
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,672,1164
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,1941
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,5175
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,2555
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,5416
 USENSYS,MISW,MISW_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,3195
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,1962,7667
@@ -1252,16 +1254,17 @@ USENSYS,PJMD,PJMD_offshorewind_class3_moderate_fixed_0_1,Wind,2035,20-week-myopi
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_2_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,541
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,1160
 USENSYS,PJME,PJME_landbasedwind_class3_moderate_7_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,279
+USENSYS,PJME,PJME_landbasedwind_class3_moderate_8_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,457
 USENSYS,PJME,PJME_offshorewind_class3_moderate_fixed_0_1,Wind,2035,20-week-myopic-current-policy,MW,5522,12700
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,4260
 USENSYS,PJMW,PJMW_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,6500
-USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,173
-USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,1728
+USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,118
+USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,1736
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_6_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,3299,5721
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,2494
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,2441
 USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,2689,3056
-USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,4603,4746
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,330
+USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,4603,4973
+USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,363
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,4196
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_3_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,4378
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,733
@@ -1270,23 +1273,23 @@ USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_12_anyQual_0,Wind,2035,20-week-m
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_15_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,164
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_16_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,84
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_22_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,96
-USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,3769
+USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,3762
 USENSYS,SRCA,SRCA_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,2422
-USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,32
+USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,51
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_5_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,5860
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,5001
+USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,4908
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_0_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,16928
-USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,1026
+USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,1020
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,0,4384
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,2238,4772
-USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,445
-USENSYS,SRSG,SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,6706
+USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,459
+USENSYS,SRSG,SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2035,20-week-myopic-current-policy,MW,0,6701
 USENSYS,SRSG,SRSG_utilitypv_class1_moderate_2_anyQual_1,Solar,2035,20-week-myopic-current-policy,MW,86,4282
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2035,20-week-myopic-current-policy,MW,0,3240
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,5168,9889
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,237
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,0,265
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,8343,9090
-USENSYS,TREW,TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,2986,4291
+USENSYS,TREW,TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2035,20-week-myopic-current-policy,MW,2986,4268
 USENSYS,BASN,BASN_batteries_1,Battery,2035,20-week-myopic-current-policy,MW,935,935
 USENSYS,BASN,BASN_biomass_1,Other,2035,20-week-myopic-current-policy,MW,8,8
 USENSYS,BASN,BASN_biomass_2,Other,2035,20-week-myopic-current-policy,MW,17,17
@@ -1846,12 +1849,13 @@ USENSYS,CASO,CASO_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,325
 USENSYS,CASO,CASO_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,25808,25808
 USENSYS,FRCC,FRCC_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,1032,1032
 USENSYS,ISNE,ISNE_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,512,512
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MWh,0,4388
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MWh,0,16885
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,27916,27916
 USENSYS,MISC,MISC_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,7300,7300
 USENSYS,MISE,MISE_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,32782,32782
 USENSYS,MISS,MISS_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,30,30
 USENSYS,MISW,MISW_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,28,28
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2035,20-week-myopic-current-policy,MWh,0,4285
 USENSYS,NWPP,NWPP_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,321,321
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,4867,4867
 USENSYS,NYCW,NYCW_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,37,37
@@ -1878,97 +1882,110 @@ USENSYS,SRSG,SRSG_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,400
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2035,20-week-myopic-current-policy,MWh,3353,3353
 USENSYS,TRE,TRE_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,4515,4515
 USENSYS,TREW,TREW_batteries_1,Battery,2035,20-week-myopic-current-policy,MWh,3291,3291
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1856
-USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,2288,7607
-USENSYS,BASN,BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,381
-USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,9126
-USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2040,20-week-myopic-current-policy,MW,0,3917
-USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,358
-USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,8048,9886
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,7953
-USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,6444
-USENSYS,CASO,CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,12607,15656
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1254
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,4758
+USENSYS,BASN,BASN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,812
+USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,2289,7607
+USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,5889
+USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,3753,8710
+USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2040,20-week-myopic-current-policy,MW,0,3191
+USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,1263
+USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,8050,9886
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,11804
+USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,4365
+USENSYS,CASO,CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,12608,15656
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1257
 USENSYS,FRCC,FRCC_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2302
 USENSYS,FRCC,FRCC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,100
-USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,9349
-USENSYS,FRCC,FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,17417,17434
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,1653,4847
-USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2040,20-week-myopic-current-policy,MW,0,1560
-USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,5813,12822
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2058
-USENSYS,MISC,MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,3762
-USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,1541
-USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,989,7950
-USENSYS,MISE,MISE_landbasedwind_class3_moderate_18_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,5
-USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,6136
-USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,3026
-USENSYS,MISS,MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,3996,6106
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,5311
+USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,9280
+USENSYS,FRCC,FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,17412,17434
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,5678,6686
+USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,9611,9723
+USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,189
+USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2040,20-week-myopic-current-policy,MW,0,285
+USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,3857,12869
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2040,20-week-myopic-current-policy,MW,9591,9592
+USENSYS,ISNE,ISNE_utilitypv_class1_moderate_2_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,593
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,3073
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,3938
+USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2143
+USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,2448,7950
+USENSYS,MISC,MISC_utilitypv_class1_moderate_5_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,2054
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,500
+USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,5561
+USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,4131
+USENSYS,MISS,MISS_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,3914,6106
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,3082,9641
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_20_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,918
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,2138
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,6166
-USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,7056
-USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2345
-USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2327
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,286
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,8090
+USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,4019
+USENSYS,MISW,MISW_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,1229
+USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,4291
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,482
+USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1521
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_16_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1264
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_21_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,725
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_5_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2056
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,966
-USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,883
-USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,5708
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1853
-USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,1697
-USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,1090,1201
+USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,598
+USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,7644
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,2265
+USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,1213
+USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,1090,1255
 USENSYS,NYUP,NYUP_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,6491,14810
 USENSYS,NYUP,NYUP_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,5284
-USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2099
+USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,2194
 USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_2_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,1627
-USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,14
+USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,37
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1171
-USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,5317
+USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,6904
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_7_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,738
-USENSYS,PJME,PJME_landbasedwind_class3_moderate_8_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1178
-USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,7595
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,2031
+USENSYS,PJME,PJME_landbasedwind_class3_moderate_8_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,457,1178
+USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2040,20-week-myopic-current-policy,MW,0,5560
 USENSYS,PJME,PJME_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,7533
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1327
-USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2040,20-week-myopic-current-policy,MW,0,11390
-USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,173,19091
-USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,1728,6674
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,4924
+USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,1585
+USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2040,20-week-myopic-current-policy,MW,0,8837
+USENSYS,PJMW,PJMW_utilitypv_class1_moderate_2_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,3338
+USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,118,19091
+USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,1736,5246
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_5_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,11270
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,901
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,2494,2785
-USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,2064
-USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,4746,6728
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1019
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,2441,2785
+USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,3499
+USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,4973,6781
 USENSYS,SPPN,SPPN_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,1218
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,330,8865
+USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_1_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,363,8865
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_11_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,3073
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1635
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_9_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,858
-USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2671
+USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2225
 USENSYS,SPPS,SPPS_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,973
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,176
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1090
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_13_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,860
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_18_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,614
-USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,1054
+USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,0,845
 USENSYS,SRCA,SRCA_offshorewind_class3_moderate_fixed_0_1,Wind,2040,20-week-myopic-current-policy,MW,0,5200
-USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,3769,9961
-USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2165
-USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,32,7194
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,5001,9894
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,3181
-USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,1026,8703
-USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,4826
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1317
-USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2358
-USENSYS,SRSG,SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,6706,8134
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,237,1864
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,2986
-USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,995
+USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,3762,9961
+USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,2713
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,1777
+USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,51,6160
+USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,4908,9894
+USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,5127
+USENSYS,SRSE,SRSE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,144
+USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,1020,8703
+USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,5208
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,2711
+USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,3126
+USENSYS,SRSG,SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,6701,8134
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MW,0,231
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,265,1864
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,2524
+USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2040,20-week-myopic-current-policy,MW,0,1526
 USENSYS,TRE,TRE_utilitypv_class1_moderate_3_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,4498
-USENSYS,TREW,TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4291,9111
-USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,3651
-USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,1253
+USENSYS,TREW,TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4268,9111
+USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,0,3376
+USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,0,1136
 USENSYS,BASN,BASN_biomass_1,Other,2040,20-week-myopic-current-policy,MW,8,8
 USENSYS,BASN,BASN_biomass_2,Other,2040,20-week-myopic-current-policy,MW,17,17
 USENSYS,BASN,BASN_conventional_hydroelectric_1,Hydro,2040,20-week-myopic-current-policy,MW,1698,1698
@@ -1988,7 +2005,6 @@ USENSYS,BASN,BASN_onshore_wind_turbine_1,Wind,2040,20-week-myopic-current-policy
 USENSYS,BASN,BASN_petroleum_liquids_1,Other,2040,20-week-myopic-current-policy,MW,14,14
 USENSYS,BASN,BASN_small_hydroelectric_1,Hydro,2040,20-week-myopic-current-policy,MW,162,162
 USENSYS,BASN,BASN_solar_photovoltaic_1,Solar,2040,20-week-myopic-current-policy,MW,7934,7934
-USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2040,20-week-myopic-current-policy,MW,3774,3774
 USENSYS,CANO,CANO_biomass_1,Other,2040,20-week-myopic-current-policy,MW,31,31
 USENSYS,CANO,CANO_biomass_2,Other,2040,20-week-myopic-current-policy,MW,37,37
 USENSYS,CANO,CANO_conventional_hydroelectric_1,Hydro,2040,20-week-myopic-current-policy,MW,6904,6904
@@ -2059,7 +2075,6 @@ USENSYS,ISNE,ISNE_biomass_2,Other,2040,20-week-myopic-current-policy,MW,54,54
 USENSYS,ISNE,ISNE_conventional_hydroelectric_1,Hydro,2040,20-week-myopic-current-policy,MW,517,517
 USENSYS,ISNE,ISNE_distributed_generation_1,Distributed Solar,2040,20-week-myopic-current-policy,MW,5651,5651
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MW,1801,1801
-USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,9723,9723
 USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,274,274
 USENSYS,ISNE,ISNE_natural_gas_fired_combined_cycle_1,Natural Gas,2040,20-week-myopic-current-policy,MW,3166,3166
 USENSYS,ISNE,ISNE_natural_gas_fired_combined_cycle_2,Natural Gas,2040,20-week-myopic-current-policy,MW,10513,10513
@@ -2069,8 +2084,7 @@ USENSYS,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2040,20-w
 USENSYS,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2040,20-week-myopic-current-policy,MW,17,17
 USENSYS,ISNE,ISNE_nuclear_1,Nuclear,2040,20-week-myopic-current-policy,MW,3356,3356
 USENSYS,ISNE,ISNE_offshore_wind_turbine_1,Wind,2040,20-week-myopic-current-policy,MW,29,29
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2040,20-week-myopic-current-policy,MW,9600,9600
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2040,20-week-myopic-current-policy,MW,3676,3676
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2040,20-week-myopic-current-policy,MW,3684,3684
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_1,Wind,2040,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_2,Wind,2040,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_3,Wind,2040,20-week-myopic-current-policy,MW,160,160
@@ -2091,7 +2105,7 @@ USENSYS,MISC,MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-my
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4963,4963
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4867,4867
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4790,4790
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,3442,3442
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,4011,4011
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_1,Natural Gas,2040,20-week-myopic-current-policy,MW,1584,1584
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2040,20-week-myopic-current-policy,MW,3192,3192
 USENSYS,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,20-week-myopic-current-policy,MW,458,458
@@ -2118,6 +2132,7 @@ USENSYS,MISE,MISE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2040,20-week-m
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,558,558
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_16_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,374,374
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,556,556
+USENSYS,MISE,MISE_landbasedwind_class3_moderate_18_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,5,5
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_19_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,4,4
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,87,87
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_22_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,369,369
@@ -2171,7 +2186,7 @@ USENSYS,MISW,MISW_distributed_generation_1,Distributed Solar,2040,20-week-myopic
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,6829,6829
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,1164,1164
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,1941,1941
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,5175,5175
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,2555,2555
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,5416,5416
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_5_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,2034,2034
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_6_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,1167,1167
@@ -2501,7 +2516,7 @@ USENSYS,SRSG,SRSG_geothermal_1,Geothermal,2040,20-week-myopic-current-policy,MW,
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MW,216,216
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2040,20-week-myopic-current-policy,MW,4772,4772
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_1_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,5156,5156
-USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,445,445
+USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2040,20-week-myopic-current-policy,MW,459,459
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_1,Natural Gas,2040,20-week-myopic-current-policy,MW,10557,10557
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2040,20-week-myopic-current-policy,MW,861,861
 USENSYS,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,20-week-myopic-current-policy,MW,2813,2813
@@ -2544,66 +2559,72 @@ USENSYS,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2040,20-w
 USENSYS,TREW,TREW_onshore_wind_turbine_1,TREW_onshore_wind_turbine_1,2040,20-week-myopic-current-policy,MW,18369,18369
 USENSYS,TREW,TREW_petroleum_liquids_1,TREW_petroleum_liquids_1,2040,20-week-myopic-current-policy,MW,54,54
 USENSYS,TREW,TREW_solar_photovoltaic_1,TREW_solar_photovoltaic_1,2040,20-week-myopic-current-policy,MW,9872,9872
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,4036
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,12283
 USENSYS,CANO,CANO_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,35292,35292
 USENSYS,CASO,CASO_batteries_1,Battery,2040,20-week-myopic-current-policy,MWh,336,336
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,20992
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,28234
 USENSYS,CASO,CASO_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,25808,25808
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,1363
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,4388,13075
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,1366
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,16885,20067
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,27916,27916
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,7660
 USENSYS,MISC,MISC_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,7300,7300
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,924
 USENSYS,MISE,MISE_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,32782,32782
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,14595
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,4285,33542
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,524
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,4867,4867
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,2727
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,6690
 USENSYS,NYUP,NYUP_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,21804,21804
 USENSYS,PJMD,PJMD_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,46546,46546
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,4011
 USENSYS,PJME,PJME_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,30101,30101
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,2686
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,10484
 USENSYS,PJMW,PJMW_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,3689,3689
 USENSYS,RMRG,RMRG_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,9002,9002
 USENSYS,SPPS,SPPS_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,7347,7347
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,381
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,2369
 USENSYS,SRCA,SRCA_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,44578,44578
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,3863
 USENSYS,SRCE,SRCE_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,26099,26099
 USENSYS,SRSE,SRSE_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,29391,29391
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,2862
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,5893
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2040,20-week-myopic-current-policy,MWh,3353,3353
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1856,1857
-USENSYS,BASN,BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,381,9348
-USENSYS,CANO,CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,2240
-USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,358,792
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,7953,8925
-USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,6444,16417
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2040,20-week-myopic-current-policy,MWh,0,755
+USENSYS,BASN,BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,6210
+USENSYS,CANO,CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,2689
+USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,4365,14360
 USENSYS,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,FRCC_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,9500
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,4847,5113
 USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,0,1160
-USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,0,189
-USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2045,20-week-myopic-current-policy,MW,1560,2195
-USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,12822,15769
-USENSYS,ISNE,ISNE_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,0,593
-USENSYS,MISC,MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,3762,16535
-USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,6136,8588
-USENSYS,MISS,MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,1777
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,5311,6595
-USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,7056,22477
-USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,883,10293
-USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,1697,3681
-USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1201,2554
+USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2045,20-week-myopic-current-policy,MW,285,906
+USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,12869,15862
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,3073,3148
+USENSYS,MISC,MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,13209
+USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,5561,8307
+USENSYS,MISS,MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,2381
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,9641,11345
+USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,4019,18602
+USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,598,10346
+USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,1213,3497
+USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1255,2554
 USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,0,1081
-USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,0,1366
-USENSYS,NYUP,NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,0,1764
-USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,7595,18193
-USENSYS,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,13550
-USENSYS,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,SPPC_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,4414
-USENSYS,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,SPPN_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,3788
-USENSYS,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,10113
-USENSYS,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,6388
-USENSYS,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,8267
-USENSYS,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,5990
-USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2358,6655
-USENSYS,TRE,TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,21847
+USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,0,1781
+USENSYS,NYUP,NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,0,836
+USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,5560,15723
+USENSYS,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,13160
+USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5246,5764
+USENSYS,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,RMRG_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,1049
+USENSYS,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,SPPC_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,4092
+USENSYS,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,SPPN_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,3222
+USENSYS,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,SPPS_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,295
+USENSYS,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,9661
+USENSYS,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,6157
+USENSYS,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,8064
+USENSYS,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,6623
+USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,3126,6570
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,231,232
+USENSYS,TRE,TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2045,20-week-myopic-current-policy,MW,0,21661
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,4758,4758
 USENSYS,BASN,BASN_biomass_1,Other,2045,20-week-myopic-current-policy,MW,7,7
 USENSYS,BASN,BASN_biomass_2,Other,2045,20-week-myopic-current-policy,MW,17,17
 USENSYS,BASN,BASN_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,1571,1571
@@ -2613,6 +2634,7 @@ USENSYS,BASN,BASN_distributed_generation_1,Distributed Solar,2045,20-week-myopic
 USENSYS,BASN,BASN_geothermal_1,Geothermal,2045,20-week-myopic-current-policy,MW,152,152
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,8527,8527
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,8168,8168
+USENSYS,BASN,BASN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,812,812
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,7607,7607
 USENSYS,BASN,BASN_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,735,735
 USENSYS,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,6794,6794
@@ -2623,8 +2645,8 @@ USENSYS,BASN,BASN_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,BASN,BASN_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,12,12
 USENSYS,BASN,BASN_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,160,160
 USENSYS,BASN,BASN_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,7065,7065
-USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,9126,9126
-USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,3774,3774
+USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,5889,5889
+USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,8710,8710
 USENSYS,CANO,CANO_biomass_1,Other,2045,20-week-myopic-current-policy,MW,31,31
 USENSYS,CANO,CANO_biomass_2,Other,2045,20-week-myopic-current-policy,MW,36,36
 USENSYS,CANO,CANO_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,6456,6456
@@ -2636,13 +2658,15 @@ USENSYS,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-wee
 USENSYS,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,20-week-myopic-current-policy,MW,1114,1114
 USENSYS,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,444,444
 USENSYS,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,3,3
-USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2045,20-week-myopic-current-policy,MW,3917,3917
+USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2045,20-week-myopic-current-policy,MW,3191,3191
 USENSYS,CANO,CANO_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy,MW,115,115
 USENSYS,CANO,CANO_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,170,170
 USENSYS,CANO,CANO_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,201,201
 USENSYS,CANO,CANO_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,4662,4662
+USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,1263,1263
 USENSYS,CANO,CANO_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,3885,3885
 USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,9886,9886
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,11804,11804
 USENSYS,CASO,CASO_biomass_1,Other,2045,20-week-myopic-current-policy,MW,57,57
 USENSYS,CASO,CASO_biomass_2,Other,2045,20-week-myopic-current-policy,MW,9,9
 USENSYS,CASO,CASO_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,955,955
@@ -2660,7 +2684,7 @@ USENSYS,CASO,CASO_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy
 USENSYS,CASO,CASO_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,10708,10708
 USENSYS,CASO,CASO_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,15656,15656
 USENSYS,CASO,CASO_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,4392,4392
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1254,1254
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1257,1257
 USENSYS,FRCC,FRCC_biomass_1,Other,2045,20-week-myopic-current-policy,MW,32,32
 USENSYS,FRCC,FRCC_biomass_2,Other,2045,20-week-myopic-current-policy,MW,85,85
 USENSYS,FRCC,FRCC_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,44,44
@@ -2693,16 +2717,18 @@ USENSYS,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,20-w
 USENSYS,FRCC,FRCC_nuclear_1,Nuclear,2045,20-week-myopic-current-policy,MW,3737,3737
 USENSYS,FRCC,FRCC_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,48,48
 USENSYS,FRCC,FRCC_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,9387,9387
-USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,9349,9349
+USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,9280,9280
 USENSYS,FRCC,FRCC_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,17434,17434
 USENSYS,FRCC,FRCC_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,6613,6613
 USENSYS,FRCC,FRCC_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,293,293
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,6686,6686
 USENSYS,ISNE,ISNE_biomass_2,Other,2045,20-week-myopic-current-policy,MW,39,39
 USENSYS,ISNE,ISNE_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,517,517
 USENSYS,ISNE,ISNE_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,5746,5746
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,1801,1801
 USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,9723,9723
 USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,274,274
+USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,189,189
 USENSYS,ISNE,ISNE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,3166,3166
 USENSYS,ISNE,ISNE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,10513,10513
 USENSYS,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1307,1307
@@ -2711,8 +2737,8 @@ USENSYS,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,20-w
 USENSYS,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,10,10
 USENSYS,ISNE,ISNE_nuclear_1,Nuclear,2045,20-week-myopic-current-policy,MW,3356,3356
 USENSYS,ISNE,ISNE_offshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy,MW,29,29
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2045,20-week-myopic-current-policy,MW,9600,9600
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2045,20-week-myopic-current-policy,MW,3676,3676
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2045,20-week-myopic-current-policy,MW,9592,9592
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2045,20-week-myopic-current-policy,MW,3684,3684
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_1,Wind,2045,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_2,Wind,2045,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_3,Wind,2045,20-week-myopic-current-policy,MW,160,160
@@ -2720,6 +2746,7 @@ USENSYS,ISNE,ISNE_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,ISNE,ISNE_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,763,763
 USENSYS,ISNE,ISNE_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,223,223
 USENSYS,ISNE,ISNE_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,2242,2242
+USENSYS,ISNE,ISNE_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,593,593
 USENSYS,MISC,MISC_biomass_1,Other,2045,20-week-myopic-current-policy,MW,28,28
 USENSYS,MISC,MISC_biomass_2,Other,2045,20-week-myopic-current-policy,MW,42,42
 USENSYS,MISC,MISC_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,280,280
@@ -2731,10 +2758,10 @@ USENSYS,MISC,MISC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-my
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2915,2915
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,4027,4027
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,4963,4963
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2058,2058
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,3938,3938
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,4867,4867
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,4790,4790
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3442,3442
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,4011,4011
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1584,1584
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,3192,3192
 USENSYS,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,458,458
@@ -2746,8 +2773,10 @@ USENSYS,MISC,MISC_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,MISC,MISC_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,66,66
 USENSYS,MISC,MISC_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,14,14
 USENSYS,MISC,MISC_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,3786,3786
-USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,1541,1541
+USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2143,2143
 USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,7950,7950
+USENSYS,MISC,MISC_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,2053,2053
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,500,500
 USENSYS,MISE,MISE_biomass_1,Other,2045,20-week-myopic-current-policy,MW,29,29
 USENSYS,MISE,MISE_biomass_2,Other,2045,20-week-myopic-current-policy,MW,17,17
 USENSYS,MISE,MISE_conventional_steam_coal_1,Coal,2045,20-week-myopic-current-policy,MW,1,1
@@ -2757,7 +2786,7 @@ USENSYS,MISE,MISE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-my
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,60,60
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_10_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,224,224
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_11_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,116,116
-USENSYS,MISE,MISE_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,13,13
+USENSYS,MISE,MISE_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,14,14
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_13_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,15,15
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_14_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5,5
 USENSYS,MISE,MISE_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,558,558
@@ -2785,7 +2814,7 @@ USENSYS,MISE,MISE_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,MISE,MISE_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,12,12
 USENSYS,MISE,MISE_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,11,11
 USENSYS,MISE,MISE_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,1178,1178
-USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,3026,3026
+USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,4131,4131
 USENSYS,MISE,MISE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,6482,6482
 USENSYS,MISS,MISS_biomass_1,Other,2045,20-week-myopic-current-policy,MW,2,2
 USENSYS,MISS,MISS_biomass_2,Other,2045,20-week-myopic-current-policy,MW,40,40
@@ -2819,11 +2848,11 @@ USENSYS,MISW,MISW_distributed_generation_1,Distributed Solar,2045,20-week-myopic
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6829,6829
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1164,1164
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,1941,1941
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5175,5175
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2555,2555
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,918,918
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2138,2138
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,286,286
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5416,5416
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6166,6166
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,8090,8090
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2034,2034
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,1167,1167
 USENSYS,MISW,MISW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1110,1110
@@ -2838,8 +2867,10 @@ USENSYS,MISW,MISW_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,MISW,MISW_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,250,250
 USENSYS,MISW,MISW_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,345,345
 USENSYS,MISW,MISW_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,3124,3124
-USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2345,2345
+USENSYS,MISW,MISW_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,1229,1229
+USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,4291,4291
 USENSYS,MISW,MISW_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,3195,3195
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,482,482
 USENSYS,NWPP,NWPP_biomass_1,Other,2045,20-week-myopic-current-policy,MW,29,29
 USENSYS,NWPP,NWPP_biomass_2,Other,2045,20-week-myopic-current-policy,MW,37,37
 USENSYS,NWPP,NWPP_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,29601,29601
@@ -2849,7 +2880,7 @@ USENSYS,NWPP,NWPP_distributed_generation_1,Distributed Solar,2045,20-week-myopic
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,314,314
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,7667,7667
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5289,5289
-USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2327,2327
+USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1521,1521
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_16_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1264,1264
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2489,2489
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_21_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,725,725
@@ -2866,8 +2897,8 @@ USENSYS,NWPP,NWPP_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,NWPP,NWPP_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,10,10
 USENSYS,NWPP,NWPP_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,409,409
 USENSYS,NWPP,NWPP_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,1610,1610
-USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,5708,5708
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1853,1853
+USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,7644,7644
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,2265,2265
 USENSYS,NYCW,NYCW_biomass_2,Other,2045,20-week-myopic-current-policy,MW,1,1
 USENSYS,NYCW,NYCW_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,1897,1897
 USENSYS,NYCW,NYCW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1503,1503
@@ -2908,7 +2939,7 @@ USENSYS,PJMC,PJMC_biomass_1,Other,2045,20-week-myopic-current-policy,MW,2,2
 USENSYS,PJMC,PJMC_biomass_2,Other,2045,20-week-myopic-current-policy,MW,9,9
 USENSYS,PJMC,PJMC_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,11,11
 USENSYS,PJMC,PJMC_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,2152,2152
-USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2099,2099
+USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,2194,2194
 USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,1627,1627
 USENSYS,PJMC,PJMC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,4839,4839
 USENSYS,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,195,195
@@ -2930,7 +2961,7 @@ USENSYS,PJMD,PJMD_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-curre
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1248,1248
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,237,237
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1426,1426
-USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,14,14
+USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,37,37
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1346,1346
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1171,1171
 USENSYS,PJMD,PJMD_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,6969,6969
@@ -2946,10 +2977,11 @@ USENSYS,PJMD,PJMD_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,PJMD,PJMD_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,10,10
 USENSYS,PJMD,PJMD_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,4,4
 USENSYS,PJMD,PJMD_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,4539,4539
-USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,5317,5317
+USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,6904,6904
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,541,541
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,1160,1160
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_7_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,738,738
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,2031,2031
 USENSYS,PJME,PJME_biomass_1,Other,2045,20-week-myopic-current-policy,MW,47,47
 USENSYS,PJME,PJME_biomass_2,Other,2045,20-week-myopic-current-policy,MW,13,13
 USENSYS,PJME,PJME_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,579,579
@@ -2980,7 +3012,7 @@ USENSYS,PJME,PJME_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,M
 USENSYS,PJME,PJME_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,68,68
 USENSYS,PJME,PJME_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,1563,1563
 USENSYS,PJME,PJME_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,7533,7533
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1327,1327
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,4924,4924
 USENSYS,PJMW,PJMW_biomass_1,Other,2045,20-week-myopic-current-policy,MW,13,13
 USENSYS,PJMW,PJMW_biomass_2,Other,2045,20-week-myopic-current-policy,MW,5,5
 USENSYS,PJMW,PJMW_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,626,626
@@ -2996,19 +3028,21 @@ USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-my
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3934,3934
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,133,133
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,4260,4260
+USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,1585,1585
 USENSYS,PJMW,PJMW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,18211,18211
 USENSYS,PJMW,PJMW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,851,851
 USENSYS,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,550,550
 USENSYS,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,20-week-myopic-current-policy,MW,10182,10182
 USENSYS,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,77,77
 USENSYS,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,34,34
-USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2045,20-week-myopic-current-policy,MW,11390,11390
+USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2045,20-week-myopic-current-policy,MW,8837,8837
 USENSYS,PJMW,PJMW_nuclear_1,Nuclear,2045,20-week-myopic-current-policy,MW,6326,6326
 USENSYS,PJMW,PJMW_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy,MW,1872,1872
 USENSYS,PJMW,PJMW_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,86,86
 USENSYS,PJMW,PJMW_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,157,157
 USENSYS,PJMW,PJMW_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,4054,4054
 USENSYS,PJMW,PJMW_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,6500,6500
+USENSYS,PJMW,PJMW_utilitypv_class1_moderate_2_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,3338,3338
 USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,19091,19091
 USENSYS,RMRG,RMRG_biomass_1,Other,2045,20-week-myopic-current-policy,MW,6,6
 USENSYS,RMRG,RMRG_biomass_2,Other,2045,20-week-myopic-current-policy,MW,2,2
@@ -3018,7 +3052,6 @@ USENSYS,RMRG,RMRG_conventional_steam_coal_2,Coal,2045,20-week-myopic-current-pol
 USENSYS,RMRG,RMRG_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,2049,2049
 USENSYS,RMRG,RMRG_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,581,581
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_1_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,3297,3297
-USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6674,6674
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,409,409
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,11270,11270
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,5721,5721
@@ -3038,7 +3071,7 @@ USENSYS,SPPC,SPPC_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current
 USENSYS,SPPC,SPPC_conventional_steam_coal_1,Coal,2045,20-week-myopic-current-policy,MW,1546,1546
 USENSYS,SPPC,SPPC_conventional_steam_coal_2,Coal,2045,20-week-myopic-current-policy,MW,877,877
 USENSYS,SPPC,SPPC_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,1462,1462
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,901,901
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1019,1019
 USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2785,2785
 USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3056,3056
 USENSYS,SPPC,SPPC_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1560,1560
@@ -3051,14 +3084,14 @@ USENSYS,SPPC,SPPC_nuclear_1,Nuclear,2045,20-week-myopic-current-policy,MW,1255,1
 USENSYS,SPPC,SPPC_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy,MW,5162,5162
 USENSYS,SPPC,SPPC_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,45,45
 USENSYS,SPPC,SPPC_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,90,90
-USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,2064,2064
+USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,3499,3499
 USENSYS,SPPN,SPPN_biomass_1,Other,2045,20-week-myopic-current-policy,MW,4,4
 USENSYS,SPPN,SPPN_biomass_2,Other,2045,20-week-myopic-current-policy,MW,14,14
 USENSYS,SPPN,SPPN_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,2415,2415
 USENSYS,SPPN,SPPN_conventional_steam_coal_1,Coal,2045,20-week-myopic-current-policy,MW,2304,2304
 USENSYS,SPPN,SPPN_conventional_steam_coal_2,Coal,2045,20-week-myopic-current-policy,MW,470,470
 USENSYS,SPPN,SPPN_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,741,741
-USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6728,6728
+USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6781,6781
 USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,1601,1601
 USENSYS,SPPN,SPPN_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,300,300
 USENSYS,SPPN,SPPN_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,345,345
@@ -3084,7 +3117,6 @@ USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-my
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_3_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,4378,4378
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_4_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,733,733
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3143,3143
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1635,1635
 USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_9_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,858,858
 USENSYS,SPPS,SPPS_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,1543,1543
 USENSYS,SPPS,SPPS_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,6888,6888
@@ -3096,9 +3128,9 @@ USENSYS,SPPS,SPPS_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy
 USENSYS,SPPS,SPPS_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,18,18
 USENSYS,SPPS,SPPS_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,39,39
 USENSYS,SPPS,SPPS_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,268,268
-USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2671,2671
+USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2225,2225
 USENSYS,SPPS,SPPS_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,973,973
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,176,176
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1090,1090
 USENSYS,SRCA,SRCA_biomass_1,Other,2045,20-week-myopic-current-policy,MW,29,29
 USENSYS,SRCA,SRCA_biomass_2,Other,2045,20-week-myopic-current-policy,MW,36,36
 USENSYS,SRCA,SRCA_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,1031,1031
@@ -3116,7 +3148,7 @@ USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_15_anyQual_1,Wind,2045,20-week-m
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_16_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,84,84
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_17_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,222,222
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_18_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,614,614
-USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,1054,1054
+USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,845,845
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_2_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,806,806
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_22_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,96,96
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,116,116
@@ -3138,8 +3170,9 @@ USENSYS,SRCA,SRCA_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,M
 USENSYS,SRCA,SRCA_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,23,23
 USENSYS,SRCA,SRCA_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,6534,6534
 USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,9961,9961
-USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2165,2165
+USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,2713,2713
 USENSYS,SRCA,SRCA_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,2422,2422
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1777,1777
 USENSYS,SRCE,SRCE_biomass_1,Other,2045,20-week-myopic-current-policy,MW,8,8
 USENSYS,SRCE,SRCE_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,2756,2756
 USENSYS,SRCE,SRCE_conventional_steam_coal_1,Coal,2045,20-week-myopic-current-policy,MW,2722,2722
@@ -3148,7 +3181,7 @@ USENSYS,SRCE,SRCE_distributed_generation_1,Distributed Solar,2045,20-week-myopic
 USENSYS,SRCE,SRCE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,1684,1684
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,6013,6013
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,7592,7592
-USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,7194,7194
+USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,6160,6160
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_5_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,5860,5860
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,7645,7645
 USENSYS,SRCE,SRCE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,3978,3978
@@ -3162,7 +3195,7 @@ USENSYS,SRCE,SRCE_nuclear_1,Nuclear,2045,20-week-myopic-current-policy,MW,8431,8
 USENSYS,SRCE,SRCE_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,31,31
 USENSYS,SRCE,SRCE_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,1888,1888
 USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,9894,9894
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,3181,3181
+USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,5127,5127
 USENSYS,SRSE,SRSE_biomass_1,Other,2045,20-week-myopic-current-policy,MW,94,94
 USENSYS,SRSE,SRSE_biomass_2,Other,2045,20-week-myopic-current-policy,MW,34,34
 USENSYS,SRSE,SRSE_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,3352,3352
@@ -3171,6 +3204,7 @@ USENSYS,SRSE,SRSE_conventional_steam_coal_2,Coal,2045,20-week-myopic-current-pol
 USENSYS,SRSE,SRSE_distributed_generation_1,Distributed Solar,2045,20-week-myopic-current-policy,MW,2392,2392
 USENSYS,SRSE,SRSE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,1896,1896
 USENSYS,SRSE,SRSE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,4593,4593
+USENSYS,SRSE,SRSE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,144,144
 USENSYS,SRSE,SRSE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,20107,20107
 USENSYS,SRSE,SRSE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,1336,1336
 USENSYS,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,10199,10199
@@ -3183,8 +3217,8 @@ USENSYS,SRSE,SRSE_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,16928,16928
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,8703,8703
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_2_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,4384,4384
-USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,4826,4826
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,1317,1317
+USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,5208,5208
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MW,2711,2711
 USENSYS,SRSG,SRSG_biomass_1,Other,2045,20-week-myopic-current-policy,MW,3,3
 USENSYS,SRSG,SRSG_biomass_2,Other,2045,20-week-myopic-current-policy,MW,8,8
 USENSYS,SRSG,SRSG_conventional_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,1931,1931
@@ -3194,7 +3228,7 @@ USENSYS,SRSG,SRSG_geothermal_1,Geothermal,2045,20-week-myopic-current-policy,MW,
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MW,216,216
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2045,20-week-myopic-current-policy,MW,4771,4771
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,5156,5156
-USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,445,445
+USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,459,459
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,10557,10557
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,861,861
 USENSYS,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,2813,2813
@@ -3220,7 +3254,7 @@ USENSYS,TRE,TRE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2045,20-week-myop
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,9090,9090
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2487,2487
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_6_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3638,3638
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2986,2986
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,2524,2524
 USENSYS,TRE,TRE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,29438,29438
 USENSYS,TRE,TRE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,5134,5134
 USENSYS,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,20-week-myopic-current-policy,MW,6132,6132
@@ -3232,11 +3266,11 @@ USENSYS,TRE,TRE_onshore_wind_turbine_1,Wind,2045,20-week-myopic-current-policy,M
 USENSYS,TRE,TRE_petroleum_liquids_1,Other,2045,20-week-myopic-current-policy,MW,114,114
 USENSYS,TRE,TRE_small_hydroelectric_1,Hydro,2045,20-week-myopic-current-policy,MW,4,4
 USENSYS,TRE,TRE_solar_photovoltaic_1,Solar,2045,20-week-myopic-current-policy,MW,12238,12238
-USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,995,995
+USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2045,20-week-myopic-current-policy,MW,1526,1526
 USENSYS,TRE,TRE_utilitypv_class1_moderate_3_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,4498,4498
 USENSYS,TREW,TREW_distributed_generation_1,TREW_distributed_generation_1,2045,20-week-myopic-current-policy,MW,463,463
 USENSYS,TREW,TREW_landbasedwind_class3_moderate_1_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,9111,9111
-USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3651,3651
+USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2045,20-week-myopic-current-policy,MW,3376,3376
 USENSYS,TREW,TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,20-week-myopic-current-policy,MW,3197,3197
 USENSYS,TREW,TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,20-week-myopic-current-policy,MW,393,393
 USENSYS,TREW,TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,20-week-myopic-current-policy,MW,336,336
@@ -3244,96 +3278,96 @@ USENSYS,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,20-w
 USENSYS,TREW,TREW_onshore_wind_turbine_1,TREW_onshore_wind_turbine_1,2045,20-week-myopic-current-policy,MW,13314,13314
 USENSYS,TREW,TREW_petroleum_liquids_1,TREW_petroleum_liquids_1,2045,20-week-myopic-current-policy,MW,54,54
 USENSYS,TREW,TREW_solar_photovoltaic_1,TREW_solar_photovoltaic_1,2045,20-week-myopic-current-policy,MW,9831,9831
-USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,1253,1253
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,4036,4036
+USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2045,20-week-myopic-current-policy,MW,1136,1136
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,12283,12283
 USENSYS,CANO,CANO_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,35292,35292
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,20992,20992
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,28234,28234
 USENSYS,CASO,CASO_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,25808,25808
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,1363,1363
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,13075,13075
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,1366,1366
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,20067,20067
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,27916,27916
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,7660,7660
 USENSYS,MISC,MISC_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,7300,7300
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,924,924
 USENSYS,MISE,MISE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,32782,32782
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,14595,14595
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,33542,33542
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,524,524
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,4867,4867
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,2727,2727
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,6690,6690
 USENSYS,NYUP,NYUP_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,21804,21804
 USENSYS,PJMD,PJMD_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,46546,46546
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,4011,4011
 USENSYS,PJME,PJME_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,30101,30101
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,2686,2686
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,10484,10484
 USENSYS,PJMW,PJMW_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,3689,3689
 USENSYS,RMRG,RMRG_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,9002,9002
 USENSYS,SPPS,SPPS_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,7347,7347
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,381,381
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,2369,2369
 USENSYS,SRCA,SRCA_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,44578,44578
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,3863,3863
 USENSYS,SRCE,SRCE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,26099,26099
 USENSYS,SRSE,SRSE_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,29391,29391
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,2862,2863
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,5893,5893
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2045,20-week-myopic-current-policy,MWh,3353,3353
-USENSYS,BASN,BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,9348,14434
-USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,9126,11356
-USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,3774,7501
-USENSYS,CANO,CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,2240,6365
-USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,792,8031
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,8925,9656
-USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,16417,21689
-USENSYS,CASO,CASO_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,2723
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1254,2564
-USENSYS,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,FRCC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,9500,18037
-USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,9349,14735
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,3460,4179
-USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1160,6191
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2050,20-week-myopic-current-policy,MW,9600,9629
-USENSYS,ISNE,ISNE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,654
-USENSYS,MISC,MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,16535,26584
-USENSYS,MISE,MISE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,250
-USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,8588,11575
-USENSYS,MISS,MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,1777,10510
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,6595,6714
-USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,22477,31095
-USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,2719
-USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,10293,17859
-USENSYS,NYCW,NYCW_hydrogen_fframe_ct_moderate_0,NYCW_hydrogen_fframe_ct_moderate_0,2050,20-week-myopic-current-policy,MW,0,297
-USENSYS,NYUP,NYUP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,2088
-USENSYS,NYUP,NYUP_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,3670
-USENSYS,NYUP,NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,1764,7992
-USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2099,2194
-USENSYS,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,PJMC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,0,870
-USENSYS,PJMD,PJMD_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,4113
-USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,14,37
-USENSYS,PJMD,PJMD_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,1903
-USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,18193,24839
-USENSYS,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,13550,22023
-USENSYS,RMRG,RMRG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,1788
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2045,20-week-myopic-current-policy,MWh,755,755
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,4758,5409
+USENSYS,BASN,BASN_naturalgas_hframe_cc_moderate_0,BASN_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,6210,11772
+USENSYS,BASN,BASN_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,5890,11356
+USENSYS,CANO,CANO_naturalgas_hframe_cc_moderate_0,CANO_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,2689,6588
+USENSYS,CANO,CANO_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,1263,8244
+USENSYS,CASO,CASO_naturalgas_hframe_cc_moderate_0,CASO_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,14360,19939
+USENSYS,CASO,CASO_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,3472
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1257,1326
+USENSYS,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,FRCC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,9500,19236
+USENSYS,FRCC,FRCC_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,9280,15726
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1008,3421
+USENSYS,ISNE,ISNE_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1160,6448
+USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2050,20-week-myopic-current-policy,MW,906,2330
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_1,Wind,2050,20-week-myopic-current-policy,MW,9592,9621
+USENSYS,ISNE,ISNE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,37
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,3148,3313
+USENSYS,MISC,MISC_naturalgas_hframe_cc_moderate_0,MISC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,13209,23499
+USENSYS,MISE,MISE_naturalgas_hframe_cc_moderate_0,MISE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,8307,11136
+USENSYS,MISS,MISS_naturalgas_hframe_cc_moderate_0,MISS_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,2381,10052
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,8263,12321
+USENSYS,MISW,MISW_naturalgas_hframe_cc_moderate_0,MISW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,18602,29777
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,482,2889
+USENSYS,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,NWPP_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,10346,17273
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,2265,3077
+USENSYS,NYCW,NYCW_hydrogen_fframe_ct_moderate_0,NYCW_hydrogen_fframe_ct_moderate_0,2050,20-week-myopic-current-policy,MW,0,199
+USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1781,1863
+USENSYS,NYUP,NYUP_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,2563
+USENSYS,NYUP,NYUP_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,836,7992
+USENSYS,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,PJMC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,0,347
+USENSYS,PJMD,PJMD_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,3339
+USENSYS,PJME,PJME_naturalgas_hframe_cc_moderate_0,PJME_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,15723,25002
+USENSYS,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,PJMW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,13160,21442
+USENSYS,RMRG,RMRG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,1654
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,0,2227
-USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,0,859
-USENSYS,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,RMRG_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,0,5994
-USENSYS,RMRG,RMRG_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,0,1716
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,901,1633
-USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,0,5572
-USENSYS,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,SPPC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,4414,6439
-USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6728,6781
-USENSYS,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,SPPN_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,3788,5639
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1635,4983
-USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,0,377
-USENSYS,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,SPPS_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,0,2423
-USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2671,12466
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,176,3285
-USENSYS,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,10113,18106
-USENSYS,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,6388,15060
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,1868
-USENSYS,SRSE,SRSE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,9
-USENSYS,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,8267,19267
-USENSYS,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,5990,7855
-USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,6655,17641
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,0,6
+USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,5764,6674
+USENSYS,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,RMRG_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,1049,6504
+USENSYS,RMRG,RMRG_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,0,3153
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1019,5145
+USENSYS,SPPC,SPPC_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,0,1151
+USENSYS,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,SPPC_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,4092,4657
+USENSYS,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,SPPN_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,3222,5155
+USENSYS,SPPS,SPPS_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,0,3402
+USENSYS,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,SPPS_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,295,3233
+USENSYS,SPPS,SPPS_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2225,11396
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1090,3737
+USENSYS,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,SRCA_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,9661,18198
+USENSYS,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,SRCE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,6157,14358
+USENSYS,SRSE,SRSE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,0,1483
+USENSYS,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,SRSE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,8064,19055
+USENSYS,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,SRSG_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,6623,8989
+USENSYS,SRSG,SRSG_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,6570,17474
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,0,88
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_24_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,0,1144
-USENSYS,TRE,TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,21847,33507
-USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,995,4110
-USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,3652,4572
-USENSYS,TREW,TREW_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,2742
-USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,1253,2881
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1857,1857
+USENSYS,TRE,TRE_naturalgas_hframe_cc_moderate_0,TRE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,21661,33520
+USENSYS,TRE,TRE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,1526,6108
+USENSYS,TREW,TREW_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,3376,4572
+USENSYS,TREW,TREW_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,0,1648
+USENSYS,TREW,TREW_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,1136,2881
 USENSYS,BASN,BASN_biomass_1,Other,2050,20-week-myopic-current-policy,MW,5,5
 USENSYS,BASN,BASN_biomass_2,Other,2050,20-week-myopic-current-policy,MW,12,12
 USENSYS,BASN,BASN_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,1419,1419
@@ -3342,6 +3376,7 @@ USENSYS,BASN,BASN_distributed_generation_1,Distributed Solar,2050,20-week-myopic
 USENSYS,BASN,BASN_geothermal_1,Geothermal,2050,20-week-myopic-current-policy,MW,56,56
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,8527,8527
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,8168,8168
+USENSYS,BASN,BASN_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,812,812
 USENSYS,BASN,BASN_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,7607,7607
 USENSYS,BASN,BASN_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,735,735
 USENSYS,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,6794,6794
@@ -3351,6 +3386,7 @@ USENSYS,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-w
 USENSYS,BASN,BASN_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy,MW,520,520
 USENSYS,BASN,BASN_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,142,142
 USENSYS,BASN,BASN_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,4272,4272
+USENSYS,BASN,BASN_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,8710,8710
 USENSYS,CANO,CANO_biomass_1,Other,2050,20-week-myopic-current-policy,MW,31,31
 USENSYS,CANO,CANO_biomass_2,Other,2050,20-week-myopic-current-policy,MW,26,26
 USENSYS,CANO,CANO_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,5619,5619
@@ -3362,13 +3398,14 @@ USENSYS,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-wee
 USENSYS,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,20-week-myopic-current-policy,MW,997,997
 USENSYS,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,434,434
 USENSYS,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,3,3
-USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2050,20-week-myopic-current-policy,MW,3917,3917
+USENSYS,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,2050,20-week-myopic-current-policy,MW,3191,3191
 USENSYS,CANO,CANO_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy,MW,62,62
 USENSYS,CANO,CANO_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,151,151
 USENSYS,CANO,CANO_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,196,196
 USENSYS,CANO,CANO_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,2502,2502
 USENSYS,CANO,CANO_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,3885,3885
 USENSYS,CANO,CANO_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,9886,9886
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,11804,11804
 USENSYS,CASO,CASO_biomass_1,Other,2050,20-week-myopic-current-policy,MW,56,56
 USENSYS,CASO,CASO_biomass_2,Other,2050,20-week-myopic-current-policy,MW,2,2
 USENSYS,CASO,CASO_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,919,919
@@ -3433,10 +3470,9 @@ USENSYS,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-wee
 USENSYS,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,20-week-myopic-current-policy,MW,390,390
 USENSYS,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,50,50
 USENSYS,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,10,10
-USENSYS,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,ISNE_naturalgas_fframe_ct_moderate_0,2050,20-week-myopic-current-policy,MW,2195,2195
-USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,15769,15769
+USENSYS,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,ISNE_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,15862,15862
 USENSYS,ISNE,ISNE_nuclear_1,Nuclear,2050,20-week-myopic-current-policy,MW,3356,3356
-USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2050,20-week-myopic-current-policy,MW,3676,3676
+USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_0_3,Wind,2050,20-week-myopic-current-policy,MW,3684,3684
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_1,Wind,2050,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_2,Wind,2050,20-week-myopic-current-policy,MW,240,240
 USENSYS,ISNE,ISNE_offshorewind_class3_moderate_fixed_1_3,Wind,2050,20-week-myopic-current-policy,MW,160,160
@@ -3456,10 +3492,10 @@ USENSYS,MISC,MISC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-my
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2915,2915
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,4027,4027
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,4963,4963
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2058,2058
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,3938,3938
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,4867,4867
 USENSYS,MISC,MISC_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,4790,4790
-USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,3442,3442
+USENSYS,MISC,MISC_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,4011,4011
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,1550,1550
 USENSYS,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,3192,3192
 USENSYS,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,310,310
@@ -3471,8 +3507,10 @@ USENSYS,MISC,MISC_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy
 USENSYS,MISC,MISC_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,36,36
 USENSYS,MISC,MISC_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,14,14
 USENSYS,MISC,MISC_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,3654,3654
-USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,1541,1541
+USENSYS,MISC,MISC_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2143,2143
 USENSYS,MISC,MISC_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,7950,7950
+USENSYS,MISC,MISC_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,2053,2053
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,500,500
 USENSYS,MISE,MISE_biomass_1,Other,2050,20-week-myopic-current-policy,MW,21,21
 USENSYS,MISE,MISE_biomass_2,Other,2050,20-week-myopic-current-policy,MW,16,16
 USENSYS,MISE,MISE_conventional_steam_coal_1,Coal,2050,20-week-myopic-current-policy,MW,1,1
@@ -3509,7 +3547,7 @@ USENSYS,MISE,MISE_nuclear_1,Nuclear,2050,20-week-myopic-current-policy,MW,1161,1
 USENSYS,MISE,MISE_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy,MW,1071,1071
 USENSYS,MISE,MISE_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,10,10
 USENSYS,MISE,MISE_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,977,977
-USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,3026,3026
+USENSYS,MISE,MISE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,4131,4131
 USENSYS,MISE,MISE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,6482,6482
 USENSYS,MISS,MISS_biomass_1,Other,2050,20-week-myopic-current-policy,MW,1,1
 USENSYS,MISS,MISS_biomass_2,Other,2050,20-week-myopic-current-policy,MW,30,30
@@ -3542,11 +3580,11 @@ USENSYS,MISW,MISW_distributed_generation_1,Distributed Solar,2050,20-week-myopic
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6829,6829
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1164,1164
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_13_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1941,1941
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,5175,5175
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2555,2555
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,918,918
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2138,2138
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_27_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,286,286
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_3_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,5416,5416
-USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6166,6166
+USENSYS,MISW,MISW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,8090,8090
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2034,2034
 USENSYS,MISW,MISW_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1167,1167
 USENSYS,MISW,MISW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,1110,1110
@@ -3561,7 +3599,8 @@ USENSYS,MISW,MISW_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy
 USENSYS,MISW,MISW_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,184,184
 USENSYS,MISW,MISW_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,245,245
 USENSYS,MISW,MISW_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,1893,1893
-USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2345,2345
+USENSYS,MISW,MISW_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,1229,1229
+USENSYS,MISW,MISW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,4291,4291
 USENSYS,MISW,MISW_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,3195,3195
 USENSYS,NWPP,NWPP_biomass_1,Other,2050,20-week-myopic-current-policy,MW,29,29
 USENSYS,NWPP,NWPP_biomass_2,Other,2050,20-week-myopic-current-policy,MW,22,22
@@ -3572,7 +3611,7 @@ USENSYS,NWPP,NWPP_distributed_generation_1,Distributed Solar,2050,20-week-myopic
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MW,314,314
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,7667,7667
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,5289,5289
-USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2327,2327
+USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_12_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1521,1521
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_16_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1264,1264
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2489,2489
 USENSYS,NWPP,NWPP_landbasedwind_class3_moderate_21_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,725,725
@@ -3589,8 +3628,7 @@ USENSYS,NWPP,NWPP_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy
 USENSYS,NWPP,NWPP_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,2,2
 USENSYS,NWPP,NWPP_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,404,404
 USENSYS,NWPP,NWPP_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,1016,1016
-USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,5708,5708
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1853,1853
+USENSYS,NWPP,NWPP_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,7644,7644
 USENSYS,NYCW,NYCW_biomass_2,Other,2050,20-week-myopic-current-policy,MW,1,1
 USENSYS,NYCW,NYCW_distributed_generation_1,Distributed Solar,2050,20-week-myopic-current-policy,MW,2087,2087
 USENSYS,NYCW,NYCW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,1444,1444
@@ -3598,7 +3636,7 @@ USENSYS,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-my
 USENSYS,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,20-week-myopic-current-policy,MW,1037,1037
 USENSYS,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,20-week-myopic-current-policy,MW,1011,1011
 USENSYS,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,37,37
-USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,3681,3681
+USENSYS,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,NYCW_naturalgas_hframe_cc_moderate_0,2050,20-week-myopic-current-policy,MW,3497,3497
 USENSYS,NYCW,NYCW_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,54,54
 USENSYS,NYCW,NYCW_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,27,27
 USENSYS,NYUP,NYUP_biomass_1,Other,2050,20-week-myopic-current-policy,MW,19,19
@@ -3613,7 +3651,6 @@ USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-my
 USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2305,2305
 USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2554,2554
 USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1081,1081
-USENSYS,NYUP,NYUP_landbasedwind_class3_moderate_8_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1366,1366
 USENSYS,NYUP,NYUP_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,6566,6566
 USENSYS,NYUP,NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,1690,1690
 USENSYS,NYUP,NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,20-week-myopic-current-policy,MW,52,52
@@ -3634,6 +3671,7 @@ USENSYS,NYUP,NYUP_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopi
 USENSYS,PJMC,PJMC_biomass_2,Other,2050,20-week-myopic-current-policy,MW,7,7
 USENSYS,PJMC,PJMC_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,11,11
 USENSYS,PJMC,PJMC_distributed_generation_1,Distributed Solar,2050,20-week-myopic-current-policy,MW,2180,2180
+USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,2194,2194
 USENSYS,PJMC,PJMC_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1627,1627
 USENSYS,PJMC,PJMC_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,4839,4839
 USENSYS,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,195,195
@@ -3655,6 +3693,7 @@ USENSYS,PJMD,PJMD_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-curre
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1248,1248
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,237,237
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1426,1426
+USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,37,37
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1346,1346
 USENSYS,PJMD,PJMD_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1171,1171
 USENSYS,PJMD,PJMD_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,6969,6969
@@ -3668,10 +3707,11 @@ USENSYS,PJMD,PJMD_offshorewind_class3_moderate_fixed_0_1,Wind,2050,20-week-myopi
 USENSYS,PJMD,PJMD_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,1,1
 USENSYS,PJMD,PJMD_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,4,4
 USENSYS,PJMD,PJMD_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,2449,2449
-USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,5317,5317
+USENSYS,PJMD,PJMD_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,6904,6904
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,541,541
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,1160,1160
 USENSYS,PJMD,PJMD_utilitypv_class1_moderate_7_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,738,738
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,2031,2031
 USENSYS,PJME,PJME_biomass_1,Other,2050,20-week-myopic-current-policy,MW,23,23
 USENSYS,PJME,PJME_biomass_2,Other,2050,20-week-myopic-current-policy,MW,3,3
 USENSYS,PJME,PJME_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,579,579
@@ -3701,7 +3741,7 @@ USENSYS,PJME,PJME_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,M
 USENSYS,PJME,PJME_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,68,68
 USENSYS,PJME,PJME_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,786,786
 USENSYS,PJME,PJME_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,7533,7533
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1327,1327
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,4924,4924
 USENSYS,PJMW,PJMW_biomass_1,Other,2050,20-week-myopic-current-policy,MW,10,10
 USENSYS,PJMW,PJMW_biomass_2,Other,2050,20-week-myopic-current-policy,MW,2,2
 USENSYS,PJMW,PJMW_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,626,626
@@ -3717,19 +3757,21 @@ USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-my
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,3934,3934
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_6_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,133,133
 USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_7_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,4260,4260
+USENSYS,PJMW,PJMW_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1585,1585
 USENSYS,PJMW,PJMW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,18211,18211
 USENSYS,PJMW,PJMW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,851,851
 USENSYS,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,145,145
 USENSYS,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,20-week-myopic-current-policy,MW,8603,8603
 USENSYS,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,76,76
 USENSYS,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,34,34
-USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2050,20-week-myopic-current-policy,MW,11390,11390
+USENSYS,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,2050,20-week-myopic-current-policy,MW,8837,8837
 USENSYS,PJMW,PJMW_nuclear_1,Nuclear,2050,20-week-myopic-current-policy,MW,6326,6326
 USENSYS,PJMW,PJMW_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy,MW,807,807
 USENSYS,PJMW,PJMW_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,66,66
 USENSYS,PJMW,PJMW_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,157,157
 USENSYS,PJMW,PJMW_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,3782,3782
 USENSYS,PJMW,PJMW_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,6500,6500
+USENSYS,PJMW,PJMW_utilitypv_class1_moderate_2_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,3338,3338
 USENSYS,PJMW,PJMW_utilitypv_class1_moderate_3_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,19091,19091
 USENSYS,RMRG,RMRG_biomass_1,Other,2050,20-week-myopic-current-policy,MW,5,5
 USENSYS,RMRG,RMRG_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,580,580
@@ -3738,7 +3780,6 @@ USENSYS,RMRG,RMRG_conventional_steam_coal_2,Coal,2050,20-week-myopic-current-pol
 USENSYS,RMRG,RMRG_distributed_generation_1,Distributed Solar,2050,20-week-myopic-current-policy,MW,2206,2206
 USENSYS,RMRG,RMRG_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MW,581,581
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_1_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,3297,3297
-USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6674,6674
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_4_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,409,409
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,11270,11270
 USENSYS,RMRG,RMRG_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,5721,5721
@@ -3769,12 +3810,13 @@ USENSYS,SPPC,SPPC_nuclear_1,Nuclear,2050,20-week-myopic-current-policy,MW,1255,1
 USENSYS,SPPC,SPPC_onshore_wind_turbine_1,Wind,2050,20-week-myopic-current-policy,MW,1765,1765
 USENSYS,SPPC,SPPC_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,MW,40,40
 USENSYS,SPPC,SPPC_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,28,28
-USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,2064,2064
+USENSYS,SPPC,SPPC_utilitypv_class1_moderate_1_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,3499,3499
 USENSYS,SPPN,SPPN_biomass_2,Other,2050,20-week-myopic-current-policy,MW,14,14
 USENSYS,SPPN,SPPN_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,2395,2395
 USENSYS,SPPN,SPPN_conventional_steam_coal_1,Coal,2050,20-week-myopic-current-policy,MW,1154,1154
 USENSYS,SPPN,SPPN_conventional_steam_coal_2,Coal,2050,20-week-myopic-current-policy,MW,293,293
 USENSYS,SPPN,SPPN_distributed_generation_1,Distributed Solar,2050,20-week-myopic-current-policy,MW,835,835
+USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6781,6781
 USENSYS,SPPN,SPPN_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,1601,1601
 USENSYS,SPPN,SPPN_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,300,300
 USENSYS,SPPN,SPPN_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,345,345
@@ -3828,7 +3870,7 @@ USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_15_anyQual_1,Wind,2050,20-week-m
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_16_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,84,84
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_17_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,222,222
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_18_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,614,614
-USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,1054,1054
+USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_19_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,845,845
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_2_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,806,806
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_22_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,96,96
 USENSYS,SRCA,SRCA_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,116,116
@@ -3850,8 +3892,9 @@ USENSYS,SRCA,SRCA_petroleum_liquids_1,Other,2050,20-week-myopic-current-policy,M
 USENSYS,SRCA,SRCA_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,21,21
 USENSYS,SRCA,SRCA_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,2829,2829
 USENSYS,SRCA,SRCA_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,9961,9961
-USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2165,2165
+USENSYS,SRCA,SRCA_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,2713,2713
 USENSYS,SRCA,SRCA_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,2422,2422
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1777,1777
 USENSYS,SRCE,SRCE_biomass_1,Other,2050,20-week-myopic-current-policy,MW,7,7
 USENSYS,SRCE,SRCE_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,2176,2176
 USENSYS,SRCE,SRCE_conventional_steam_coal_1,Coal,2050,20-week-myopic-current-policy,MW,1271,1271
@@ -3860,7 +3903,7 @@ USENSYS,SRCE,SRCE_distributed_generation_1,Distributed Solar,2050,20-week-myopic
 USENSYS,SRCE,SRCE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MW,1684,1684
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,6013,6013
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,7592,7592
-USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,7194,7194
+USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_20_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,6160,6160
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_5_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,5860,5860
 USENSYS,SRCE,SRCE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,7645,7645
 USENSYS,SRCE,SRCE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,3978,3978
@@ -3874,7 +3917,7 @@ USENSYS,SRCE,SRCE_nuclear_1,Nuclear,2050,20-week-myopic-current-policy,MW,8431,8
 USENSYS,SRCE,SRCE_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,28,28
 USENSYS,SRCE,SRCE_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,1640,1640
 USENSYS,SRCE,SRCE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,9894,9894
-USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,3181,3181
+USENSYS,SRCE,SRCE_utilitypv_class1_moderate_4_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,5127,5127
 USENSYS,SRSE,SRSE_biomass_1,Other,2050,20-week-myopic-current-policy,MW,69,69
 USENSYS,SRSE,SRSE_biomass_2,Other,2050,20-week-myopic-current-policy,MW,31,31
 USENSYS,SRSE,SRSE_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,3258,3258
@@ -3883,6 +3926,7 @@ USENSYS,SRSE,SRSE_conventional_steam_coal_2,Coal,2050,20-week-myopic-current-pol
 USENSYS,SRSE,SRSE_distributed_generation_1,Distributed Solar,2050,20-week-myopic-current-policy,MW,3104,3104
 USENSYS,SRSE,SRSE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MW,1896,1896
 USENSYS,SRSE,SRSE_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,4593,4593
+USENSYS,SRSE,SRSE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,144,144
 USENSYS,SRSE,SRSE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,20107,20107
 USENSYS,SRSE,SRSE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,1336,1336
 USENSYS,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,6610,6610
@@ -3895,8 +3939,8 @@ USENSYS,SRSE,SRSE_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_0_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,16928,16928
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,8703,8703
 USENSYS,SRSE,SRSE_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,4384,4384
-USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,4826,4826
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,1317,1317
+USENSYS,SRSE,SRSE_utilitypv_class1_moderate_5_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,5208,5208
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,2711,2711
 USENSYS,SRSG,SRSG_biomass_1,Other,2050,20-week-myopic-current-policy,MW,2,2
 USENSYS,SRSG,SRSG_biomass_2,Other,2050,20-week-myopic-current-policy,MW,8,8
 USENSYS,SRSG,SRSG_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,1931,1931
@@ -3906,7 +3950,7 @@ USENSYS,SRSG,SRSG_geothermal_1,Geothermal,2050,20-week-myopic-current-policy,MW,
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MW,216,216
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_0_anyQual_0,Wind,2050,20-week-myopic-current-policy,MW,4771,4771
 USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_1_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,5156,5156
-USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,445,445
+USENSYS,SRSG,SRSG_landbasedwind_class3_moderate_2_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,459,459
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,10557,10557
 USENSYS,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,861,861
 USENSYS,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,2813,2813
@@ -3918,6 +3962,7 @@ USENSYS,SRSG,SRSG_small_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy
 USENSYS,SRSG,SRSG_solar_photovoltaic_1,Solar,2050,20-week-myopic-current-policy,MW,3198,3198
 USENSYS,SRSG,SRSG_utilitypv_class1_moderate_1_anyQual_0,Solar,2050,20-week-myopic-current-policy,MW,8134,8134
 USENSYS,SRSG,SRSG_utilitypv_class1_moderate_2_anyQual_1,Solar,2050,20-week-myopic-current-policy,MW,4282,4282
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MW,232,232
 USENSYS,TRE,TRE_biomass_1,Other,2050,20-week-myopic-current-policy,MW,20,20
 USENSYS,TRE,TRE_biomass_2,Other,2050,20-week-myopic-current-policy,MW,2,2
 USENSYS,TRE,TRE_conventional_hydroelectric_1,Hydro,2050,20-week-myopic-current-policy,MW,224,224
@@ -3932,7 +3977,7 @@ USENSYS,TRE,TRE_landbasedwind_class3_moderate_3_anyQual_1,Wind,2050,20-week-myop
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_4_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,9090,9090
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_5_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2487,2487
 USENSYS,TRE,TRE_landbasedwind_class3_moderate_6_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,3638,3638
-USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2986,2986
+USENSYS,TRE,TRE_landbasedwind_class3_moderate_9_anyQual_1,Wind,2050,20-week-myopic-current-policy,MW,2524,2524
 USENSYS,TRE,TRE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,20-week-myopic-current-policy,MW,28728,28728
 USENSYS,TRE,TRE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,20-week-myopic-current-policy,MW,4185,4185
 USENSYS,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,20-week-myopic-current-policy,MW,5500,5500
@@ -3954,34 +3999,37 @@ USENSYS,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,20-w
 USENSYS,TREW,TREW_onshore_wind_turbine_1,TREW_onshore_wind_turbine_1,2050,20-week-myopic-current-policy,MW,6780,6780
 USENSYS,TREW,TREW_petroleum_liquids_1,TREW_petroleum_liquids_1,2050,20-week-myopic-current-policy,MW,54,54
 USENSYS,TREW,TREW_solar_photovoltaic_1,TREW_solar_photovoltaic_1,2050,20-week-myopic-current-policy,MW,5922,5922
-USENSYS,BASN,BASN_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,4036,4037
+USENSYS,BASN,BASN_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,12283,12283
 USENSYS,CANO,CANO_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,35292,35292
-USENSYS,CASO,CASO_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,20992,20992
+USENSYS,CASO,CASO_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,28234,28234
 USENSYS,CASO,CASO_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,25808,25808
-USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,1363,2787
-USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,8687,9085
+USENSYS,FRCC,FRCC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,1366,1441
+USENSYS,ISNE,ISNE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,3182,7438
 USENSYS,ISNE,ISNE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,27916,27916
+USENSYS,MISC,MISC_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,7660,7660
 USENSYS,MISC,MISC_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,7300,7300
-USENSYS,MISE,MISE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,271
+USENSYS,MISE,MISE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,924,1028
 USENSYS,MISE,MISE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,32782,32782
-USENSYS,MISW,MISW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,14595,14595
-USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,2956
+USENSYS,MISW,MISW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,29257,29257
+USENSYS,NWPP,NWPP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,524,3140
 USENSYS,NWPP,NWPP_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,4867,4867
-USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,2727,3441
-USENSYS,NYUP,NYUP_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,2270
+USENSYS,NYCW,NYCW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,6690,6690
 USENSYS,NYUP,NYUP_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,21804,21804
-USENSYS,PJMD,PJMD_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,8601
+USENSYS,PJMD,PJMD_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,6436
 USENSYS,PJMD,PJMD_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,46546,46546
+USENSYS,PJME,PJME_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,4011,4011
 USENSYS,PJME,PJME_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,30101,30101
-USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,2686,2686
+USENSYS,PJMW,PJMW_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,10484,10484
 USENSYS,PJMW,PJMW_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,3689,3689
-USENSYS,RMRG,RMRG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,3887
+USENSYS,RMRG,RMRG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,3596
 USENSYS,RMRG,RMRG_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,9002,9002
 USENSYS,SPPS,SPPS_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,7347,7347
-USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,381,5074
+USENSYS,SRCA,SRCA_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,2369,5376
 USENSYS,SRCA,SRCA_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,44578,44578
+USENSYS,SRCE,SRCE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,3863,3863
 USENSYS,SRCE,SRCE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,26099,26099
-USENSYS,SRSE,SRSE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,9
+USENSYS,SRSE,SRSE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,0,1612
 USENSYS,SRSE,SRSE_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,29391,29391
-USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,2863,2863
+USENSYS,SRSG,SRSG_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,5893,5893
 USENSYS,SRSG,SRSG_hydroelectric_pumped_storage_1,Hydro,2050,20-week-myopic-current-policy,MWh,3353,3353
+USENSYS,TRE,TRE_battery_moderate_0,Battery,2050,20-week-myopic-current-policy,MWh,755,755
