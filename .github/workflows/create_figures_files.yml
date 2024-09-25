@@ -43,6 +43,11 @@ jobs:
           cd notebooks
           python compile_comparison_results.py
 
+      - name: Create op inputs
+        run: |
+          cd bin
+          python refresh_op_inputs.py
+
       - name: Check for modified files
         id: git-check
         run: |
