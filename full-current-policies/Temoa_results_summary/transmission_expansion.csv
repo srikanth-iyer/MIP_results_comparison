@@ -5,6 +5,7 @@ TEMOA,34,NYCW_to_PJME,2027,current_policies_52_week,MW,362.245
 TEMOA,44,RMRG_to_SPPN,2027,current_policies_52_week,MW,355.856
 TEMOA,46,SPPC_to_SPPN,2027,current_policies_52_week,MW,252.024
 TEMOA,50,SPPS_to_TRE,2027,current_policies_52_week,MW,22.6738
+TEMOA,51,SPPS_to_TREW,2027,current_policies_52_week,MW,567.439
 TEMOA,12,ISNE_to_NYUP,2030,current_policies_52_week,MW,2911.39
 TEMOA,25,MISS_to_SPPS,2030,current_policies_52_week,MW,3849.26
 TEMOA,34,NYCW_to_PJME,2030,current_policies_52_week,MW,1056.61
@@ -15,6 +16,7 @@ TEMOA,46,SPPC_to_SPPN,2030,current_policies_52_week,MW,535.02
 TEMOA,48,SPPN_to_SPPS,2030,current_policies_52_week,MW,309.867
 TEMOA,49,SPPS_to_SRSG,2030,current_policies_52_week,MW,26.4089
 TEMOA,50,SPPS_to_TRE,2030,current_policies_52_week,MW,781.527
+TEMOA,51,SPPS_to_TREW,2030,current_policies_52_week,MW,1152.94
 TEMOA,12,ISNE_to_NYUP,2035,current_policies_52_week,MW,343.732
 TEMOA,13,MISC_to_MISE,2035,current_policies_52_week,MW,29.441
 TEMOA,14,MISC_to_MISS,2035,current_policies_52_week,MW,10.1827
@@ -47,7 +49,9 @@ TEMOA,47,SPPC_to_SPPS,2035,current_policies_52_week,MW,44.5808
 TEMOA,48,SPPN_to_SPPS,2035,current_policies_52_week,MW,2434.13
 TEMOA,49,SPPS_to_SRSG,2035,current_policies_52_week,MW,5559.32
 TEMOA,50,SPPS_to_TRE,2035,current_policies_52_week,MW,1851.15
+TEMOA,51,SPPS_to_TREW,2035,current_policies_52_week,MW,1552.29
 TEMOA,54,SRCE_to_SRSE,2035,current_policies_52_week,MW,15.2336
+TEMOA,55,TRE_to_TREW,2035,current_policies_52_week,MW,21.6447
 TEMOA,56,NWPP_to_SPPN,2035,current_policies_52_week,MW,353.976
 TEMOA,57,SRSG_to_TRE,2035,current_policies_52_week,MW,59.8603
 TEMOA,4,BASN_to_RMRG,2040,current_policies_52_week,MW,260.573
@@ -84,9 +88,11 @@ TEMOA,47,SPPC_to_SPPS,2040,current_policies_52_week,MW,64.7816
 TEMOA,48,SPPN_to_SPPS,2040,current_policies_52_week,MW,201.122
 TEMOA,49,SPPS_to_SRSG,2040,current_policies_52_week,MW,2926.2
 TEMOA,50,SPPS_to_TRE,2040,current_policies_52_week,MW,706.392
+TEMOA,51,SPPS_to_TREW,2040,current_policies_52_week,MW,1876.8
 TEMOA,52,SRCA_to_SRCE,2040,current_policies_52_week,MW,388.49
 TEMOA,53,SRCA_to_SRSE,2040,current_policies_52_week,MW,39.432
 TEMOA,54,SRCE_to_SRSE,2040,current_policies_52_week,MW,169.568
+TEMOA,55,TRE_to_TREW,2040,current_policies_52_week,MW,10.7592
 TEMOA,56,NWPP_to_SPPN,2040,current_policies_52_week,MW,489.502
 TEMOA,57,SRSG_to_TRE,2040,current_policies_52_week,MW,2468.12
 TEMOA,4,BASN_to_RMRG,2045,current_policies_52_week,MW,55.0886
@@ -127,6 +133,7 @@ TEMOA,47,SPPC_to_SPPS,2045,current_policies_52_week,MW,229.348
 TEMOA,48,SPPN_to_SPPS,2045,current_policies_52_week,MW,138.297
 TEMOA,49,SPPS_to_SRSG,2045,current_policies_52_week,MW,304.724
 TEMOA,50,SPPS_to_TRE,2045,current_policies_52_week,MW,31.9626
+TEMOA,51,SPPS_to_TREW,2045,current_policies_52_week,MW,106.798
 TEMOA,52,SRCA_to_SRCE,2045,current_policies_52_week,MW,104.95
 TEMOA,53,SRCA_to_SRSE,2045,current_policies_52_week,MW,75.5945
 TEMOA,54,SRCE_to_SRSE,2045,current_policies_52_week,MW,12.057
@@ -168,6 +175,7 @@ TEMOA,47,SPPC_to_SPPS,2050,current_policies_52_week,MW,41.3111
 TEMOA,48,SPPN_to_SPPS,2050,current_policies_52_week,MW,30.0883
 TEMOA,49,SPPS_to_SRSG,2050,current_policies_52_week,MW,903.76
 TEMOA,50,SPPS_to_TRE,2050,current_policies_52_week,MW,35.5215
+TEMOA,51,SPPS_to_TREW,2050,current_policies_52_week,MW,105.941
 TEMOA,52,SRCA_to_SRCE,2050,current_policies_52_week,MW,27.8463
 TEMOA,53,SRCA_to_SRSE,2050,current_policies_52_week,MW,104.881
 TEMOA,54,SRCE_to_SRSE,2050,current_policies_52_week,MW,14.8691
