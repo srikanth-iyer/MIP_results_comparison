@@ -351,7 +351,7 @@ chart = chart_emissions(emiss, x_var="model", col_var="case", order=order, co2_l
 chart
 ```
 
-# Transmission view 1
+# Transmission
 ## Row
 
 #### Column {.tabset}

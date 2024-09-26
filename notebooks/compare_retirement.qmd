@@ -347,7 +347,7 @@ chart = chart_emissions(emiss, x_var="model", col_var="case", order=order)
 chart
 ```
 
-# Transmission view 1
+# Transmission
 ## Row
 
 #### Column {.tabset}
