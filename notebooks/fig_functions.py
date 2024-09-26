@@ -1749,6 +1749,7 @@ def chart_tx_expansion(
     _tooltip = [
         alt.Tooltip("sum(v)", format=",.0f", title="Period GW"),
         alt.Tooltip("y", title=title_case("planning_year")),
+        alt.Tooltip(VAR_ABBR_MAP["line_name"], title=title_case("line_name")),
     ]
 
     if order is None:
