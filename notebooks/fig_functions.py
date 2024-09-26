@@ -1075,10 +1075,19 @@ def config_chart_row_col(
         titleFontSize=20, labelFontSize=16
     )
     if col_var == "case":
-        chart = chart.configure(lineBreak="\n")
+        chart = (
+            chart.configure(lineBreak="\n")
+            .configure_axis(labelFontSize=15, titleFontSize=15)
+            .configure_legend(titleFontSize=20, labelFontSize=16)
+        )
     if x_var == "case":
-        chart = chart.configure(lineBreak="\n").configure_axisX(
-            labelBaseline="line-bottom", labelFontSize=15, titleFontSize=15
+        chart = (
+            chart.configure(lineBreak="\n")
+            .configure_axis(labelFontSize=15, titleFontSize=15)
+            .configure_legend(titleFontSize=20, labelFontSize=16)
+            .configure_axisX(
+                labelBaseline="line-bottom", labelFontSize=15, titleFontSize=15
+            )
         )
     return chart
 
