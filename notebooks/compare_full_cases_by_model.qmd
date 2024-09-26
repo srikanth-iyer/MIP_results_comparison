@@ -79,6 +79,7 @@ emiss_list = []
 tx_list = []
 tx_exp_list = []
 op_cost_list = []
+op_cost_model_list = []
 op_nse_list = []
 op_gen_list = []
 op_cap_list = []
@@ -110,7 +111,12 @@ for folder in data_folders:
     try:
         op_cost_data = load_genx_operations_data(folder, "costs.csv")
         op_cost_data["case"] = case_id
+        op_cost_model_data = load_genx_operations_data(
+            folder, "costs.csv", model_costs_only=True
+        )
+        op_cost_model_data["case"] = case_id
         op_cost_list.append(op_cost_data)
+        op_cost_model_list.append(op_cost_model_data)
 
         op_nse_data = load_genx_operations_data(folder, "nse.csv", hourly_data=True)
         op_nse_data["case"] = case_id
@@ -152,6 +158,7 @@ emiss = pd.concat(emiss_list, ignore_index=True)
 tx = pd.concat(tx_list, ignore_index=True)
 tx_exp = pd.concat(tx_exp_list, ignore_index=True)
 op_costs = pd.concat(op_cost_list, ignore_index=True)
+op_costs_model = pd.concat(op_cost_model_list, ignore_index=True)
 op_nse = pd.concat(op_nse_list, ignore_index=True)
 op_emiss = pd.concat(op_emiss_list, ignore_index=True)
 if op_cap_list:
@@ -296,13 +303,18 @@ except:
 ## Row {.tabset}
 
 ```{python}
-# | title: Operational costs
-chart = chart_op_cost(op_costs, col_var="case", x_var="model", row_var="planning_year", order=order)
+# | title: Operational costs (model)
+chart = chart_op_cost(
+    op_costs_model, col_var="case", x_var="model", row_var="planning_year", order=order
+)
 chart
 ```
+
 ```{python}
-# | title: Operational NSE
-chart = chart_op_nse(op_nse, col_var="case", x_var="model", row_var="planning_year", order=order)
+# | title: Operational costs (society)
+chart = chart_op_cost(
+    op_costs, col_var="case", x_var="model", row_var="planning_year", order=order
+)
 chart
 ```
 

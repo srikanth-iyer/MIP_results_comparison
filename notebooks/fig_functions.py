@@ -79,7 +79,7 @@ EXISTING_TECH_MAP = {
     "distributed_generation": "Distributed Solar",
 }
 
-COLOR_MAP = {
+_COLOR_MAP = {
     "Battery": "#4379AB",
     "CCS": "#96CCEB",
     "Coal": "#FF8900",
@@ -93,6 +93,58 @@ COLOR_MAP = {
     "Solar": "#F14A54",
     "Wind": "#FF9797",
 }
+
+TECH_ORDER = [
+    "Nuclear",
+    "CCS",
+    "Natural Gas CC",
+    "Natural Gas CT",
+    "Coal",
+    "Geothermal",
+    "Hydro",
+    "Distributed Solar",
+    "Solar",
+    "Wind",
+    "Hydrogen",
+    "Battery",
+]
+
+COLOR_MAP = {k: _COLOR_MAP[k] for k in TECH_ORDER[::-1]}
+
+TECH_STACK_ORDER = {v: i for i, v in enumerate(TECH_ORDER)}
+
+MODEL_ORDER = ["GenX", "SWITCH", "TEMOA", "USENSYS"]
+
+WRAPPED_CASE_NAME_MAP = {
+    "full-base-1000": "CO₂ cap\n$1000",
+    "full-base-200-tx-0": "CO₂ cap\nno tx",
+    "full-base-200-tx-15": "CO₂ cap\n15% tx",
+    "full-base-200-tx-50": "CO₂ cap\n50% tx",
+    "full-base-200": "CO₂ cap",
+    "full-base-200-retire": "CO₂ cap\nretire",
+    "full-base-200-no-ccs": "CO₂ cap\nno CCS",
+    "full-base-200-commit": "CO₂ cap\nunit commit",
+    "full-base-50": "CO₂ cap\n$50",
+    "20-week-foresight": "CO₂ cap\n20-week foresight",
+    "20-week-myopic": "CO₂ cap\n20-week",
+    "full-current-policies": "Current policy",
+    "full-current-policies-retire": "Current policy\nretire",
+    "full-current-policies-commit": "Current policy\nunit commit",
+    "20-week-foresight-current-policy": "Current policy\n20-week foresight",
+    "20-week-myopic-current-policy": "Current policy\n20-week",
+}
+
+
+def order_dict():
+    return {
+        "case": list(WRAPPED_CASE_NAME_MAP.values()),
+        #              [
+        #     WRAPPED_CASE_NAME_MAP[c]
+        #     for c in list(input.base_cases()) + list(input.cp_cases())
+        # ],
+        "model": MODEL_ORDER,
+        "tech_type": TECH_ORDER,
+    }
 
 
 def sort_nested_dict(d: Dict[str, Any]) -> Dict[str, Any]:
@@ -885,7 +937,7 @@ def calc_mean_annual_gen(
 ) -> pd.DataFrame:
     idx = pd.IndexSlice
     years = sorted(gen.planning_year.unique(), reverse=True)
-    by = ["case", "tech_type", "model", "planning_year"]
+    by = ["case", "tech_type", "planning_year"]
     if by_region:
         by.append("zone")
     if by_agg_zone:
@@ -894,21 +946,46 @@ def calc_mean_annual_gen(
         _gen = gen.query("new_build == True")
     else:
         _gen = gen.copy()
-    idx_cols = ["case", "tech_type", "model"]
+    idx_cols = ["case", "tech_type"]
     if by_region:
         idx_cols.append("zone")
     if by_agg_zone:
         idx_cols.append("agg_zone")
-    annual_gen = _gen.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
+    df_list = []
+
+    # Need to make sure that all techs are in all regions for cases submitted by each
+    # model. Reindexing across all models screws up the min/max error bars when a model
+    # has not submitted a case because the minimum becomes 0.
+    for model in gen.model.unique():
+        _model_gen = _gen.query("model==@model")
+        midx = pd.MultiIndex.from_product(
+            [_model_gen[c].unique() for c in by], names=by
+        )
+        _annual_cap = (
+            _model_gen.query("model==@model")
+            .groupby(by)[value_col]
+            .sum()
+            .reindex(midx)  # , fill_value=0)
+            .reset_index()
+            .set_index(idx_cols)
+        )
+        _annual_cap["model"] = model
+        df_list.append(_annual_cap)
+    annual_gen = pd.concat(df_list)
+    # annual_gen = _gen.groupby(by, as_index=False)[value_col].sum().set_index(idx_cols)
     # if not new_build:
     by = ["case", "tech_type", "planning_year"]
     if by_region:
         by.append("zone")
     if by_agg_zone:
         by.append("agg_zone")
-    avg_gen = pd.DataFrame(
-        annual_gen.reset_index().groupby(by)[value_col].agg(["mean", "min", "max"])
-    ).rename(columns={"mean": "value"})
+    avg_gen = (
+        pd.DataFrame(
+            annual_gen.reset_index().groupby(by)[value_col].agg(["mean", "min", "max"])
+        )
+        .rename(columns={"mean": "value"})
+        .round(1)
+    )
     return avg_gen
     # for year, prev_year in zip(years[:-1], years[1:]):
     #     annual_gen.loc[annual_gen["planning_year"] == year, value_col] = annual_gen.loc[
@@ -966,16 +1043,58 @@ VAR_ABBR_TITLE_MAP["v"] = "Capacity (GW)"
 VAR_ABBR_TITLE_MAP["v"] = "Generation (TWh)"
 
 
+def config_chart_row_col(
+    chart: alt.Chart, row_var: str, col_var: str, x_var: str
+) -> alt.Chart:
+    if col_var is not None and row_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order_dict().get(col_var))
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15),
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            .sort(order_dict().get(row_var))
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15),
+        )
+    elif col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .sort(order_dict().get(col_var))
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    elif row_var is not None:
+        chart = chart.facet(
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            .sort(order_dict().get(row_var))
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+        titleFontSize=20, labelFontSize=16
+    )
+    if col_var == "case":
+        chart = chart.configure(lineBreak="\n")
+    if x_var == "case":
+        chart = chart.configure(lineBreak="\n").configure_axisX(
+            labelBaseline="line-bottom", labelFontSize=15, titleFontSize=15
+        )
+    return chart
+
+
 def chart_total_cap(
     cap: pd.DataFrame,
+    mark_type="bar",
     x_var="model",
     col_var=None,
     row_var="planning_year",
+    color="tech_type",
     order=None,
-    width=350,
-    height=250,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
-    group_by = ["tech_type", x_var]
+    group_by = ["tech_type", x_var, color]
     _tooltips = [
         alt.Tooltip(VAR_ABBR_MAP["tech_type"], title="Technology"),
         alt.Tooltip(VAR_ABBR_MAP["end_value"], title="Capacity (GW)", format=",.0f"),
@@ -998,25 +1117,41 @@ def chart_total_cap(
     cap_data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     cap_data["end_value"] /= 1000
     cap_data = cap_data.rename(columns=VAR_ABBR_MAP)
-    chart = (
-        alt.Chart(cap_data)
-        .mark_bar()
-        .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(ev)").title("Capacity (GW)"),
-            color=alt.Color("tt").scale(
-                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
-            )
-            # .scale(scheme="tableau20")
-            .title(title_case("tech_type")),
-            # column="zone",
-            # row=alt.Row(VAR_ABBR_MAP[row_var]
-            # .title(title_case(row_var))
-            # .header(labelFontSize=15, titleFontSize=20),
-            tooltip=_tooltips,
+    cap_data["o"] = cap_data["tt"].map(TECH_STACK_ORDER)
+    if mark_type.lower() == "line":
+        c = alt.Chart(cap_data).mark_line()
+    else:
+        c = alt.Chart(cap_data).mark_bar()
+
+    if color == "tech_type":
+        _color = (
+            alt.Color("tt")
+            .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
+            .title(title_case("tech_type"))
         )
-        .properties(width=width, height=height)
-    )
+    else:
+        # if cap_data[VAR_ABBR_MAP[color]].dtype == "object":
+        #     encode_type = "N"
+        # else:
+        #     encode_type = "Q"
+        _color = alt.Color(f"{VAR_ABBR_MAP[color]}").title(title_case(color))
+    chart = c.encode(
+        x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+        y=alt.Y("sum(ev)").title("Capacity (GW)"),
+        color=_color,
+        # alt.Color("tt").scale(
+        #     domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
+        # )
+        # # .sort(TECH_ORDER)
+        # # .scale(scheme="tableau20")
+        # .title(title_case("tech_type")),
+        # column="zone",
+        # row=alt.Row(VAR_ABBR_MAP[row_var]
+        # .title(title_case(row_var))
+        # .header(labelFontSize=15, titleFontSize=20),
+        tooltip=_tooltips,
+        order=alt.Order("o"),
+    ).properties(width=width, height=height)
     # if "new_build" in cap_data.columns:
     #     chart = chart.encode(
     #         opacity=alt.Opacity(
@@ -1025,22 +1160,23 @@ def chart_total_cap(
     #             scale=alt.Scale(domain=[False, True], range=[0.6, 1]),
     #         ).title("New Build")
     #     )
-    if col_var is not None:
-        chart = chart.encode(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    if row_var is not None:
-        chart = chart.encode(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+    # if col_var is not None:
+    #     chart = chart.encode(
+    #         column=alt.Column(VAR_ABBR_MAP[col_var])
+    #         .sort(order)
+    #         .title(title_case(col_var))
+    #         .header(titleFontSize=20, labelFontSize=15)
+    #     )
+    # if row_var is not None:
+    #     chart = chart.encode(
+    #         row=alt.Row(VAR_ABBR_MAP[row_var])
+    #         .title(title_case(row_var))
+    #         .header(titleFontSize=20, labelFontSize=15)
+    #     )
+    # chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+    #     titleFontSize=20, labelFontSize=16
+    # )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
@@ -1052,6 +1188,8 @@ def chart_avg_new_tech_variation(
     order=None,
     xOffset: str = None,
     bars_only=False,
+    height=200,
+    width=alt.Step(40),
 ) -> alt.Chart:
     data = annual_new_cap_mean.reset_index()
     for col in ["end_value", "min", "max"]:
@@ -1103,36 +1241,12 @@ def chart_avg_new_tech_variation(
             y=alt.Y("max").title("Capacity (GW)"),
             y2=alt.Y2("min"),
         )
-        .properties(width=175, height=200)
+        .properties(width=width, height=height)
     )
     data = data.rename(columns=VAR_ABBR_MAP)
+    # data["o"] = data["tt"].map(TECH_STACK_ORDER)
     chart = alt.layer(bars, error_bars, data=data)
-    if col_var is not None and row_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
-        )
-    elif col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    elif row_var is not None:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
@@ -1142,6 +1256,8 @@ def chart_retirements(
     col_var: str = "case",
     row_var: str = None,
     order=None,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     data = retire_cap.reset_index()
     data["value"] /= 1000
@@ -1176,34 +1292,9 @@ def chart_retirements(
             tooltip=tooltips,
             # xOffset=alt.XOffset(VAR_ABBR_MAP.get(xOffset)),
         )
-        .properties(height=150, width=150)
+        .properties(height=height, width=width)
     )
-    if col_var is not None and row_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
-        )
-    elif col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    elif row_var is not None:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
@@ -1213,11 +1304,14 @@ def chart_regional_cap(
     x_var="model",
     row_var="planning_year",
     order=None,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     data["end_value"] /= 1000
     # data = data.rename(columns={"agg_zone": "Region"})
     data = data.rename(columns=VAR_ABBR_MAP)
+    data["o"] = data["tt"].map(TECH_STACK_ORDER)
     chart = (
         alt.Chart(data)
         .mark_bar()
@@ -1242,8 +1336,9 @@ def chart_regional_cap(
                 alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)),
                 alt.Tooltip(VAR_ABBR_MAP[x_var], title=title_case(x_var)),
             ],
+            order="o",
         )
-        .properties(width=150, height=250)
+        .properties(width=width, height=height)
     )
     chart = (
         chart.configure_axis(labelFontSize=15, titleFontSize=15)
@@ -1260,8 +1355,8 @@ def chart_total_gen(
     col_var=None,
     row_var="planning_year",
     order=None,
-    width=350,
-    height=250,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     if gen.empty:
         return None
@@ -1332,68 +1427,31 @@ def chart_total_gen(
         demand = None
     data["value"] /= 1000000
     data = data.rename(columns=VAR_ABBR_MAP)
+    data["o"] = data["tt"].map(TECH_STACK_ORDER)
     chart = (
-        alt.Chart()  # data)
+        alt.Chart()
         .mark_bar()
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("v").title("Generation (TWh)"),
-            color=alt.Color("tt").scale(
-                domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
-            )
-            # .scale(scheme="tableau20")
+            color=alt.Color("tt")
+            .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
             .title(title_case("tech_type")),
-            # column="zone",
-            # row="planning_year:O",
             tooltip=_tooltips,
+            order="o",
         )
         .properties(width=width, height=height)
     )
-    # if "new_build" in data.columns:
-    #     chart = chart.encode(
-    #         opacity=alt.Opacity(
-    #             "new_build",
-    #             sort="descending",
-    #             scale=alt.Scale(domain=[False, True], range=[0.6, 1]),
-    #         ).title("New Build")
-    #     )
     if demand is not None:
         line = (
             alt.Chart()
             .mark_rule()
             .encode(
                 y=alt.Y("annual_demand"),
-            )  # column="agg_zone", row="planning_year")
-            # .properties(width=150, height=250)
+            )
         )
-        chart = alt.layer(chart, line, data=data)  # .facet(
-        #     column="agg_zone", row="planning_year"
-        # )
-    if col_var is not None and row_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15),
-        )
-    elif row_var is not None:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    elif col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+        chart = alt.layer(chart, line, data=data)
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
@@ -1407,7 +1465,7 @@ def chart_avg_gen_variation(
     order=None,
     bars_only=False,
     height=200,
-    width=alt.Step(20),
+    width=alt.Step(60),
 ) -> alt.Chart:
     data = annual_gen_mean.reset_index()
     for col in ["value", "min", "max"]:
@@ -1459,7 +1517,7 @@ def chart_avg_gen_variation(
     else:
         bars = (
             alt.Chart()
-            .mark_bar()
+            .mark_bar(width=10)
             .encode(
                 y=alt.Y("sum(v)").title("Generation (TWh)"),
                 x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
@@ -1490,36 +1548,81 @@ def chart_avg_gen_variation(
         )
     data = data.rename(columns=VAR_ABBR_MAP)
     chart = alt.layer(bars, error_bars, data=data)
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
+    return chart
+
+
+def chart_gen_line(
+    gen: pd.DataFrame,
+    x_var="planning_year",
+    x_offset=None,
+    col_var="tech_type",
+    row_var=None,
+    color="model",
+    height=150,
+    width=140,
+) -> alt.Chart:
+    by = [x_var]
+    if col_var:
+        by.append(col_var)
+    if row_var:
+        by.append(row_var)
+    if x_offset:
+        by.append(x_offset)
+    if color:
+        by.append(color)
+
+    data = gen.groupby(by, as_index=False)["value"].sum()
+    data["value"] /= 1000000
+    data = data.rename(columns=VAR_ABBR_MAP)
+    if x_var == "planning_year":
+        _x = alt.X(VAR_ABBR_MAP[x_var]).title(title_case(x_var)).axis(format="04d")
+    else:
+        _x = alt.X(VAR_ABBR_MAP[x_var]).title(title_case(x_var))
+    chart = (
+        alt.Chart(data)
+        .mark_line()
+        .encode(
+            x=_x,
+            y=alt.Y("v").title("Generation (TWh)").scale(type="log"),
+            color=alt.Color("m").title("Model"),
+        )
+        .properties(height=height, width=width)
+    )
     if col_var is not None and row_var is not None:
         chart = chart.facet(
             column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15),
             row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15),
-        )
-    elif col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .sort(order)
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15),
         )
     elif row_var is not None:
         chart = chart.facet(
             row=alt.Row(VAR_ABBR_MAP[row_var])
-            # .sort(order)
-            .title(title_case(row_var)).header(titleFontSize=20, labelFontSize=15)
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15)
         )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
+    elif col_var is not None:
+        chart = chart.facet(
+            column=alt.Column(VAR_ABBR_MAP[col_var])
+            .title(title_case(col_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+
+    chart = chart.configure_axis(labelFontSize=13, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
     return chart
 
 
-def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart:
+def chart_regional_gen(
+    gen: pd.DataFrame,
+    cap: pd.DataFrame = None,
+    width=alt.Step(40),
+    height=200,
+) -> alt.Chart:
     if cap is not None:
         _cap = (
             cap.query("unit=='MW'")
@@ -1583,7 +1686,7 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
             # row="planning_year:O",
             tooltip=_tooltips,
         )
-        .properties(width=150, height=250)
+        .properties(width=width, height=height)
     )
 
     if demand is not None:
@@ -1593,7 +1696,7 @@ def chart_regional_gen(gen: pd.DataFrame, cap: pd.DataFrame = None) -> alt.Chart
             .encode(
                 y=alt.Y("annual_demand"),
             )  # column="agg_zone", row="planning_year")
-            .properties(width=150, height=250)
+            .properties(width=width, height=height)
         )
         chart = alt.layer(chart, line, data=data).facet(
             column=alt.Column("az")
@@ -1740,6 +1843,8 @@ def chart_emissions_intensity(
     x_offset=None,
     col_var="model",
     row_var="planning_year",
+    height=150,
+    width=alt.Step(40),
 ) -> alt.Chart:
 
     by = [x_var]
@@ -1768,40 +1873,21 @@ def chart_emissions_intensity(
             x=alt.X(VAR_ABBR_MAP[x_var]).title(title_case(x_var)),
             y=alt.Y("emissions_intensity").title("kg/MWh"),
         )
-        .properties(height=150)
+        .properties(height=height, width=width)
     )
-    # if col_var is not None and row_var is not None:
-    #     text = (
-    #         alt.Chart()
-    #         .mark_text(dy=-5, fontSize=14)
-    #         .encode(
-    #             x=alt.X(x_var).sort(order).title(title_case(x_var)),
-    #             y="sum(value):Q",
-    #             text=alt.Text("sum(value):Q", format=".0f"),
-    #         )
-    #     )
-    #     chart = alt.layer(chart, text, data=data).properties(width=width)
-    if col_var is not None:
-        chart = chart.encode(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    if row_var is not None:
-        chart = chart.encode(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
 
     return chart
 
 
 def chart_emissions(
-    emiss: pd.DataFrame, x_var="model", col_var=None, order=None, co2_limit=True
+    emiss: pd.DataFrame,
+    x_var="model",
+    col_var=None,
+    order=None,
+    co2_limit=True,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     if emiss.empty:
         return None
@@ -1838,8 +1924,6 @@ def chart_emissions(
             # row="planning_year:O",
             tooltip=_tooltips,
         )
-        # .properties(width=350, height=250)
-        # .resolve_scale(y="independent")
     )
     text = (
         alt.Chart()
@@ -1849,7 +1933,7 @@ def chart_emissions(
             y="sum(v):Q",
             text=alt.Text("sum(v):Q", format=".0f"),
         )
-    )  # .properties(width=350, height=250)
+    )
     if co2_limit:
         size = 2
     else:
@@ -1859,13 +1943,12 @@ def chart_emissions(
         .mark_rule(size=size)
         .encode(
             y=alt.Y("limit"),
-        )  # column="agg_zone", row="planning_year")
-        # .properties(width=150, height=250)
+        )
     )
     if col_var is None:
         chart = (
             alt.layer(base, text, line, data=data)
-            .properties(width=350, height=250)
+            .properties(width=width, height=height)
             .facet(
                 row=alt.Row("y:O")
                 .title(title_case("planning_year"))
@@ -1875,7 +1958,7 @@ def chart_emissions(
     else:
         chart = (
             alt.layer(base, text, line, data=data)
-            .properties(width=350, height=250)
+            .properties(width=width, height=height)
             .facet(
                 row=alt.Row("y:O")
                 .title(title_case("planning_year"))
@@ -1907,7 +1990,7 @@ def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
         alt.Chart(data)
         .mark_line()
         .encode(
-            x=alt.X("h").title("Hour"),
+            x=alt.X("h").title("Hour").axis(values=list(range(0, 169, 24))),
             y=alt.Y("v").title("Dispatch (GW)"),
             color=alt.Color("m").legend(title="Model"),
             row=alt.Row("tt")
@@ -1945,7 +2028,7 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
             alt.Chart(data)
             .mark_line()
             .encode(
-                x=alt.X("h").title("Hour"),
+                x=alt.X("h").title("Hour").axis(values=list(range(0, 169, 24))),
                 y=alt.Y("v").title("Dispatch (GW)"),
                 color=alt.Color("m").legend(title="Model"),
                 strokeDash="cluster",
@@ -2026,7 +2109,13 @@ def append_npv_cost(op_costs: pd.DataFrame) -> pd.DataFrame:
 
 
 def single_op_cost_chart(
-    data, x_var="model", col_var=None, row_var=None, order=None
+    data,
+    x_var="model",
+    col_var=None,
+    row_var=None,
+    order=None,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     _tooltip = [alt.Tooltip("Total", format=",.0f").title("Cost")]
     chart_cols = ["Costs", "Total", VAR_ABBR_MAP[x_var]]
@@ -2068,7 +2157,7 @@ def single_op_cost_chart(
         base,
         text,
         data=data[chart_cols].query("Total!=0 and Costs != 'cTotal'"),
-    ).properties(width=alt.Step(40), height=250)
+    ).properties(width=width, height=height)
 
     if row_var is None and col_var is None:
         return chart
@@ -2135,7 +2224,13 @@ def chart_op_cost(
 
 
 def chart_op_nse(
-    op_nse: pd.DataFrame, x_var="model", col_var=None, row_var=None, order=None
+    op_nse: pd.DataFrame,
+    x_var="model",
+    col_var=None,
+    row_var=None,
+    order=None,
+    height=200,
+    width=alt.Step(40),
 ) -> alt.Chart:
     cols = ["Segment", "Total", "model"]
     if "planning_year" in op_nse and row_var != "planning_year":
@@ -2156,26 +2251,12 @@ def chart_op_nse(
             # xOffset="model:N",
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("sum(v)").title("Annual non-served GWh"),
-            color=alt.Color("model:N").title(title_case("model")),
+            # color=alt.Color("model:N").title(title_case("model")),
             tooltip=alt.Tooltip("sum(v)", format=",.0f", title="NSE"),
         )
-        .properties(width=alt.Step(40), height=250)
+        .properties(width=width, height=height)
     )
-    if col_var is not None:
-        chart = chart.encode(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    if row_var is not None:
-        chart = chart.encode(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
@@ -2186,6 +2267,8 @@ def chart_op_emiss(
     col_var=None,
     row_var=None,
     order=None,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     if op_emiss.empty:
         return None
@@ -2244,40 +2327,18 @@ def chart_op_emiss(
         base,
         text,
         data=data,
-    ).properties(width=alt.Step(40), height=250)
+    ).properties(width=width, height=height)
 
-    if row_var is None and col_var is None:
-        return chart
-    elif row_var is None and col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    elif col_var is None and row_var is not None:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    else:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15),
-        )
-    chart = (
-        chart.configure_axis(labelFontSize=15, titleFontSize=15)
-        .configure_axis(labelFontSize=15, titleFontSize=15)
-        .configure_legend(titleFontSize=20, labelFontSize=16)
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 
-gdf = gpd.read_file("conus_26z_latlon_simple.geojson")
+try:
+    gdf = gpd.read_file("conus_26z_latlon_simple.geojson")
+except:
+    gdf = gpd.read_file(
+        "/Users/gs5183/Documents/MIP_results_comparison/notebooks/conus_26z_latlon_simple.geojson"
+    )
 gdf = gdf.rename(columns={"model_region": "zone"})
 
 
@@ -2287,6 +2348,7 @@ def chart_tx_map(
     facet_col="model",
     colormap="magma",
     reverse_colors=True,
+    min_total_expansion=1,
     **kwargs,
 ) -> alt.Chart:
     geoshape_kwargs = {
@@ -2304,21 +2366,28 @@ def chart_tx_map(
     model_figs = []
     data = tx_exp.copy()
     # data["value"] /= 1000
-    for model in tx_exp[facet_col].unique():
+    for model, _data in tx_exp.groupby(facet_col):
         background = (
             alt.Chart(gdf, title=f"{model}")
             .mark_geoshape(**geoshape_kwargs)
             .project(type="albersUsa")
             .properties(height=325, width=400)
         )
+        by = ["line_name", "lat1", "lat2", "lon1", "lon2", facet_col]
+        _data = (
+            _data.query("planning_year >= 2025")
+            .groupby(by, as_index=False)["value"]
+            .sum()
+        )
         lines = (
             alt.Chart(
-                data.loc[
-                    (data["planning_year"] >= 2025)
-                    & (data[facet_col] == model)
-                    & (data["value"] >= 0),
-                    :,
-                ]
+                # data.loc[
+                #     (data["planning_year"] >= 2025)
+                #     # & (data[facet_col] == model)
+                #     & (data["value"] >= 0),
+                #     :,
+                # ]
+                _data.loc[_data["value"] >= min_total_expansion, :]
             )
             .mark_rule()
             .encode(
@@ -2588,7 +2657,13 @@ def chart_cap_factor_scatter(
 
 
 def chart_cost_mwh(
-    op_costs: pd.DataFrame, x_var="model", col_var=None, row_var=None, order=None
+    op_costs: pd.DataFrame,
+    x_var="model",
+    col_var=None,
+    row_var=None,
+    order=None,
+    width=alt.Step(40),
+    height=200,
 ) -> alt.Chart:
     if op_costs.empty:
         return None
@@ -2632,34 +2707,9 @@ def chart_cost_mwh(
         base,
         text,
         data=data,
-    ).properties(width=alt.Step(40), height=250)
+    ).properties(width=width, height=height)
 
-    if row_var is None and col_var is None:
-        return chart
-    elif row_var is None and col_var is not None:
-        chart = chart.facet(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    elif col_var is None and row_var is not None:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    else:
-        chart = chart.facet(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15),
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=28, labelFontSize=24
-    )
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
 

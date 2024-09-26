@@ -76,6 +76,33 @@ emiss.loc[emiss["unit"] == "kg", "value"] /= 1000
 
 dispatch = load_data(data_path, "dispatch.csv")
 
+op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
+op_costs_model = load_genx_operations_data(data_path, "costs.csv", model_costs_only=True)
+op_costs = load_genx_operations_data(data_path, "costs.csv")
+op_emiss = load_genx_operations_data(
+    data_path, "emissions.csv", hourly_data=True
+)
+op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
+
+from fig_functions import WRAPPED_CASE_NAME_MAP
+
+for df in [
+    cap,
+    gen,
+    emiss,
+    starting_tx,
+    tx_exp,
+    op_costs,
+    op_nse,
+    op_costs_model,
+    op_emiss,
+    op_gen_cap
+]:
+    try:
+        df["case"] = df["case"].map(WRAPPED_CASE_NAME_MAP)
+    except KeyError:
+        pass
+
 ```
 
 # Capacity and Generation
@@ -100,7 +127,7 @@ chart
 ```
 ```{python}
 # | title: Total Capacity (wide)
-chart = chart_total_cap(cap, row_var=None, col_var="planning_year", width=250)
+chart = chart_total_cap(cap, row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
@@ -135,7 +162,7 @@ chart
 ```
 ```{python}
 # | title: Total Generation (wide)
-chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year", width=250)
+chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
 chart
 ```
 
@@ -236,6 +263,13 @@ chart
 from fig_functions import chart_tx_map, gdf
 
 chart = chart_tx_map(tx_exp, gdf)
+chart
+```
+```{python}
+# | title: Total expansion map (drop lines < 50MW)
+from fig_functions import chart_tx_map, gdf
+
+chart = chart_tx_map(tx_exp, gdf, min_total_expansion=50)
 chart
 ```
 
@@ -397,6 +431,19 @@ chart = chart_cap_factor_scatter(
 chart
 ```
 ```{python}
+# | title: Coal
+from fig_functions import chart_cap_factor_scatter
+
+chart = chart_cap_factor_scatter(
+    cap.query("tech_type=='Coal'"),
+    gen.query("tech_type=='Coal'"),
+    # dispatch.query("tech_type=='Natural Gas CT'"),
+    col_var="planning_year",
+    frac=0.25,
+)
+chart
+```
+```{python}
 # | title: Hydro
 from fig_functions import chart_cap_factor_scatter
 
@@ -414,22 +461,28 @@ chart
 ## Row {.tabset}
 
 ```{python}
-# | title: Operational costs
-op_costs = load_genx_operations_data(data_path, "costs.csv")
+# | title: Operational costs (model)
+
+chart = chart_op_cost(op_costs_model)
+chart
+```
+```{python}
+# | title: Operational costs (society)
+
 chart = chart_op_cost(op_costs)
 chart
 ```
 
 ```{python}
 # | title: Operational NSE
-op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
+
 chart = chart_op_nse(op_nse)
 chart
 ```
 
 ```{python}
 # | title: Generation
-op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
+
 if not op_gen_cap.empty:
     op_gen_cap = op_gen_cap.query(
         "~tech_type.str.contains('Other')"
@@ -458,7 +511,7 @@ chart
 # | title: Power cost
 from fig_functions import chart_cost_mwh
 
-if not op_costs.empty:
-    chart = chart_cost_mwh(op_costs, col_var="planning_year")
+if not op_costs_model.empty:
+    chart = chart_cost_mwh(op_costs_model, col_var="planning_year")
     chart
 ```
