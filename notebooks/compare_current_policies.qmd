@@ -48,7 +48,6 @@ from fig_functions import (
 )
 
 data_folders = [
-    "full-base-200",
     "full-current-policies",
     "full-current-policies-retire",
     "full-current-policies-commit",
