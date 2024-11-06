@@ -71,78 +71,78 @@ case,tech_type,planning_year,value,min,max
 20-week-foresight,Nuclear,2050,717671031.0,695778158.0,745518514.0
 20-week-foresight,Solar,2050,1955353862.0,1657456282.0,2146890647.0
 20-week-foresight,Wind,2050,2212058971.3,2064096987.0,2377122303.0
-20-week-foresight-current-policy,Battery,2027,14332718.0,9881320.0,26840584.0
-20-week-foresight-current-policy,CCS,2027,811388.5,90772.0,2424285.0
-20-week-foresight-current-policy,Coal,2027,1084144754.4,828273109.0,1210341822.0
-20-week-foresight-current-policy,Distributed Solar,2027,93782259.8,91607603.0,94379497.0
-20-week-foresight-current-policy,Geothermal,2027,6330910.4,5490624.0,7188927.0
-20-week-foresight-current-policy,Hydro,2027,273051612.0,257689777.0,287598870.0
-20-week-foresight-current-policy,Hydrogen,2027,120173.0,49.0,273209.0
-20-week-foresight-current-policy,Natural Gas CC,2027,854898557.0,578396141.0,1011241718.0
-20-week-foresight-current-policy,Natural Gas CT,2027,4261135.4,3210050.0,6319526.0
-20-week-foresight-current-policy,Nuclear,2027,830212994.6,806792273.0,839053650.0
-20-week-foresight-current-policy,Solar,2027,282230354.4,257390231.0,296388743.0
-20-week-foresight-current-policy,Wind,2027,838921972.0,556612848.0,1407287729.0
-20-week-foresight-current-policy,Battery,2030,15640176.2,13323585.0,19131583.0
-20-week-foresight-current-policy,CCS,2030,1021277.2,215517.0,2768351.0
-20-week-foresight-current-policy,Coal,2030,998705872.8,764658494.0,1111477696.0
-20-week-foresight-current-policy,Distributed Solar,2030,141854265.6,138810245.0,142953637.0
-20-week-foresight-current-policy,Geothermal,2030,5833411.6,5165764.0,6588607.0
-20-week-foresight-current-policy,Hydro,2030,271828775.2,258025178.0,283616858.0
-20-week-foresight-current-policy,Hydrogen,2030,155884.5,23190.0,288579.0
-20-week-foresight-current-policy,Natural Gas CC,2030,901439377.8,530605196.0,1101263090.0
-20-week-foresight-current-policy,Natural Gas CT,2030,5740870.2,1172223.0,9072431.0
-20-week-foresight-current-policy,Nuclear,2030,819728437.6,784024276.0,832800000.0
-20-week-foresight-current-policy,Solar,2030,297587135.4,293252399.0,306543982.0
-20-week-foresight-current-policy,Wind,2030,1124620283.4,817203471.0,1807012206.0
-20-week-foresight-current-policy,Battery,2035,28329830.8,23831385.0,31201444.0
-20-week-foresight-current-policy,CCS,2035,1228773.0,536018.0,2710744.0
-20-week-foresight-current-policy,Coal,2035,873080488.6,676560723.0,973339818.0
-20-week-foresight-current-policy,Distributed Solar,2035,183674217.8,177186305.0,185697182.0
-20-week-foresight-current-policy,Geothermal,2035,5480406.4,4627508.0,6257448.0
-20-week-foresight-current-policy,Hydro,2035,290104884.8,275472113.0,301929009.0
-20-week-foresight-current-policy,Hydrogen,2035,59317.0,4945.0,209922.0
-20-week-foresight-current-policy,Natural Gas CC,2035,1204798478.0,688893471.0,1444056707.0
-20-week-foresight-current-policy,Natural Gas CT,2035,43823885.8,6735965.0,70370894.0
-20-week-foresight-current-policy,Nuclear,2035,814544026.8,763223026.0,831122320.0
-20-week-foresight-current-policy,Solar,2035,566882424.0,415756241.0,849322252.0
-20-week-foresight-current-policy,Wind,2035,1489939456.4,1297133609.0,2041975693.0
-20-week-foresight-current-policy,Battery,2040,72803276.2,33288496.0,122178818.0
-20-week-foresight-current-policy,CCS,2040,1371815.8,741795.0,2682748.0
-20-week-foresight-current-policy,Coal,2040,469952546.4,353337459.0,627040192.0
-20-week-foresight-current-policy,Distributed Solar,2040,176513936.6,153763491.0,198026971.0
-20-week-foresight-current-policy,Geothermal,2040,3045825.4,2770673.0,3476928.0
-20-week-foresight-current-policy,Hydro,2040,288423207.0,273311894.0,299389223.0
-20-week-foresight-current-policy,Hydrogen,2040,57538.8,35.0,246680.0
-20-week-foresight-current-policy,Natural Gas CC,2040,1112489963.8,723185728.0,1624146851.0
-20-week-foresight-current-policy,Natural Gas CT,2040,31245200.0,20251096.0,49813374.0
-20-week-foresight-current-policy,Nuclear,2040,744194998.6,659830000.0,819876711.0
-20-week-foresight-current-policy,Solar,2040,1388964245.0,919815761.0,1798496899.0
-20-week-foresight-current-policy,Wind,2040,1855340521.2,1389968914.0,2138181619.0
-20-week-foresight-current-policy,Battery,2045,66549890.6,30662127.0,109672825.0
-20-week-foresight-current-policy,CCS,2045,733204.5,529101.0,834363.0
-20-week-foresight-current-policy,Coal,2045,357690416.2,293375213.0,455701777.0
-20-week-foresight-current-policy,Distributed Solar,2045,198081393.6,188920328.0,204949601.0
-20-week-foresight-current-policy,Geothermal,2045,1849163.6,1815174.0,1895712.0
-20-week-foresight-current-policy,Hydro,2045,275594679.8,269053304.0,280608964.0
-20-week-foresight-current-policy,Hydrogen,2045,78732.6,6652.0,292801.0
-20-week-foresight-current-policy,Natural Gas CC,2045,1881246489.0,1347555112.0,2528678934.0
-20-week-foresight-current-policy,Natural Gas CT,2045,25822239.2,17590398.0,40569078.0
-20-week-foresight-current-policy,Nuclear,2045,785659515.0,724660000.0,837410496.0
-20-week-foresight-current-policy,Solar,2045,1414071824.6,944725038.0,1818771269.0
-20-week-foresight-current-policy,Wind,2045,1817869373.8,1336931180.0,2138369811.0
-20-week-foresight-current-policy,Battery,2050,74929066.0,40372588.0,116029832.0
-20-week-foresight-current-policy,CCS,2050,768466.5,630497.0,865662.0
-20-week-foresight-current-policy,Coal,2050,183691017.8,156150199.0,218885485.0
-20-week-foresight-current-policy,Distributed Solar,2050,218528546.0,214865997.0,221529709.0
-20-week-foresight-current-policy,Geothermal,2050,656203.4,362522.0,873600.0
-20-week-foresight-current-policy,Hydro,2050,261059090.0,253712512.0,266959729.0
-20-week-foresight-current-policy,Hydrogen,2050,114645.0,11754.0,341567.0
-20-week-foresight-current-policy,Natural Gas CC,2050,2341317584.2,1852579976.0,2932956857.0
-20-week-foresight-current-policy,Natural Gas CT,2050,15706048.0,11187027.0,25412468.0
-20-week-foresight-current-policy,Nuclear,2050,782182813.2,740416450.0,817872868.0
-20-week-foresight-current-policy,Solar,2050,1503147406.4,1112680737.0,1777718797.0
-20-week-foresight-current-policy,Wind,2050,1783611614.4,1315059750.0,2105113895.0
+20-week-foresight-current-policy,Battery,2027,15045657.7,8827151.0,26840584.0
+20-week-foresight-current-policy,CCS,2027,691685.0,59215.0,2424285.0
+20-week-foresight-current-policy,Coal,2027,1301851195.7,828273109.0,2398340290.0
+20-week-foresight-current-policy,Distributed Solar,2027,109613764.3,91607603.0,188612187.0
+20-week-foresight-current-policy,Geothermal,2027,7457563.2,5490624.0,14380118.0
+20-week-foresight-current-policy,Hydro,2027,317491105.8,257850957.0,515399444.0
+20-week-foresight-current-policy,Hydrogen,2027,102595.6,49.0,273209.0
+20-week-foresight-current-policy,Natural Gas CC,2027,1043131233.3,578396141.0,2010191680.0
+20-week-foresight-current-policy,Natural Gas CT,2027,5029716.3,3210050.0,6319526.0
+20-week-foresight-current-policy,Nuclear,2027,971801792.2,806792273.0,1677987360.0
+20-week-foresight-current-policy,Solar,2027,332597467.3,257390231.0,566175331.0
+20-week-foresight-current-policy,Wind,2027,885524111.7,540814856.0,1407287729.0
+20-week-foresight-current-policy,Battery,2030,17219489.3,12037104.0,26408666.0
+20-week-foresight-current-policy,CCS,2030,905850.0,65181.0,2768351.0
+20-week-foresight-current-policy,Coal,2030,1193387086.2,764658494.0,2134456850.0
+20-week-foresight-current-policy,Distributed Solar,2030,165780323.2,138810245.0,284298714.0
+20-week-foresight-current-policy,Geothermal,2030,6861594.7,5165764.0,13175008.0
+20-week-foresight-current-policy,Hydro,2030,316198809.3,258025448.0,515889817.0
+20-week-foresight-current-policy,Hydrogen,2030,116312.0,23190.0,288579.0
+20-week-foresight-current-policy,Natural Gas CC,2030,1105407810.5,530605196.0,2059320671.0
+20-week-foresight-current-policy,Natural Gas CT,2030,8299770.5,1172223.0,17721799.0
+20-week-foresight-current-policy,Nuclear,2030,960645724.7,784024276.0,1661035090.0
+20-week-foresight-current-policy,Solar,2030,349114178.3,293252399.0,591369648.0
+20-week-foresight-current-policy,Wind,2030,1216742912.3,662097932.0,1832798196.0
+20-week-foresight-current-policy,Battery,2035,34751563.7,23831385.0,59814340.0
+20-week-foresight-current-policy,CCS,2035,1479287.2,536018.0,2710744.0
+20-week-foresight-current-policy,Coal,2035,1035476341.7,676560723.0,1803169505.0
+20-week-foresight-current-policy,Distributed Solar,2035,214735351.3,177186305.0,368897720.0
+20-week-foresight-current-policy,Geothermal,2035,6458196.7,4627508.0,12476117.0
+20-week-foresight-current-policy,Hydro,2035,337692258.8,275472113.0,552070110.0
+20-week-foresight-current-policy,Hydrogen,2035,161933.8,4945.0,565533.0
+20-week-foresight-current-policy,Natural Gas CC,2035,1497849626.7,688893471.0,2701592878.0
+20-week-foresight-current-policy,Natural Gas CT,2035,63091450.2,6735965.0,124951106.0
+20-week-foresight-current-policy,Nuclear,2035,955001739.3,763223026.0,1651239710.0
+20-week-foresight-current-policy,Solar,2035,618124161.0,405439329.0,884649758.0
+20-week-foresight-current-policy,Wind,2035,1649894630.5,920994660.0,2825999940.0
+20-week-foresight-current-policy,Battery,2040,91090130.0,33288496.0,213074522.0
+20-week-foresight-current-policy,CCS,2040,17619274.2,741795.0,81816637.0
+20-week-foresight-current-policy,Coal,2040,564485025.7,353491449.0,799690483.0
+20-week-foresight-current-policy,Distributed Solar,2040,209980759.2,153763491.0,333597823.0
+20-week-foresight-current-policy,Geothermal,2040,3606700.2,2770673.0,5843635.0
+20-week-foresight-current-policy,Hydro,2040,336222071.3,273311894.0,550745796.0
+20-week-foresight-current-policy,Hydrogen,2040,136078.5,35.0,516981.0
+20-week-foresight-current-policy,Natural Gas CC,2040,1352299196.3,723185728.0,1681077204.0
+20-week-foresight-current-policy,Natural Gas CT,2040,44362169.7,20257476.0,83594348.0
+20-week-foresight-current-policy,Nuclear,2040,881593810.7,659830000.0,1401991305.0
+20-week-foresight-current-policy,Solar,2040,1570768747.5,919815761.0,3260411580.0
+20-week-foresight-current-policy,Wind,2040,2094344354.0,1389968914.0,4033041365.0
+20-week-foresight-current-policy,Battery,2045,84288912.0,30662127.0,196377057.0
+20-week-foresight-current-policy,CCS,2045,18629740.2,529101.0,90238272.0
+20-week-foresight-current-policy,Coal,2045,427531121.8,293375213.0,640101768.0
+20-week-foresight-current-policy,Distributed Solar,2045,232601014.3,188920328.0,389068034.0
+20-week-foresight-current-policy,Geothermal,2045,2172952.3,1815174.0,3743532.0
+20-week-foresight-current-policy,Hydro,2045,319767757.8,269288054.0,531331302.0
+20-week-foresight-current-policy,Hydrogen,2045,93109.0,6652.0,292801.0
+20-week-foresight-current-policy,Natural Gas CC,2045,2276646131.2,1347702072.0,3057711679.0
+20-week-foresight-current-policy,Natural Gas CT,2045,35537969.8,17600958.0,59235729.0
+20-week-foresight-current-policy,Nuclear,2045,926989425.0,724660000.0,1518069303.0
+20-week-foresight-current-policy,Solar,2045,1591869418.7,944725038.0,3280688980.0
+20-week-foresight-current-policy,Wind,2045,2048525401.0,1336785587.0,4003389761.0
+20-week-foresight-current-policy,Battery,2050,90511708.0,40372588.0,209991904.0
+20-week-foresight-current-policy,CCS,2050,19405233.0,558739.0,94259222.0
+20-week-foresight-current-policy,Coal,2050,217800386.5,156216909.0,334431524.0
+20-week-foresight-current-policy,Distributed Solar,2050,255558402.0,214865997.0,433907607.0
+20-week-foresight-current-policy,Geothermal,2050,752949.2,362522.0,873600.0
+20-week-foresight-current-policy,Hydro,2050,302324082.5,253797302.0,501018636.0
+20-week-foresight-current-policy,Hydrogen,2050,120841.7,11754.0,341567.0
+20-week-foresight-current-policy,Natural Gas CC,2050,2833196134.2,1852579976.0,4124081827.0
+20-week-foresight-current-policy,Natural Gas CT,2050,20047327.0,11187027.0,27195237.0
+20-week-foresight-current-policy,Nuclear,2050,920550247.0,740620000.0,1534756731.0
+20-week-foresight-current-policy,Solar,2050,1697508345.8,1112680737.0,3234234803.0
+20-week-foresight-current-policy,Wind,2050,1999050642.7,1277276462.0,3903793447.0
 20-week-myopic,Battery,2027,6488978.7,5191733.0,7694638.0
 20-week-myopic,CCS,2027,14329.0,48.0,28610.0
 20-week-myopic,Coal,2027,367443855.7,213528093.0,671640535.0
@@ -1151,3 +1151,75 @@ full-current-policies-retire,Natural Gas CT,2050,13935677.0,13460619.0,14548135.
 full-current-policies-retire,Nuclear,2050,469739050.2,339860987.0,817422963.0
 full-current-policies-retire,Solar,2050,1336965902.8,1299592940.0,1376358068.0
 full-current-policies-retire,Wind,2050,1905940335.8,1501653578.0,2079694275.0
+full-current-policies-retire-low-gas,Battery,2027,13362039.0,13362039.0,13362039.0
+full-current-policies-retire-low-gas,CCS,2027,1108876.0,1108876.0,1108876.0
+full-current-policies-retire-low-gas,Coal,2027,200645008.0,200645008.0,200645008.0
+full-current-policies-retire-low-gas,Distributed Solar,2027,92837911.0,92837911.0,92837911.0
+full-current-policies-retire-low-gas,Geothermal,2027,16025880.0,16025880.0,16025880.0
+full-current-policies-retire-low-gas,Hydro,2027,304234724.0,304234724.0,304234724.0
+full-current-policies-retire-low-gas,Hydrogen,2027,67312.0,67312.0,67312.0
+full-current-policies-retire-low-gas,Natural Gas CC,2027,1470340254.0,1470340254.0,1470340254.0
+full-current-policies-retire-low-gas,Natural Gas CT,2027,46094974.0,46094974.0,46094974.0
+full-current-policies-retire-low-gas,Nuclear,2027,831012354.0,831012354.0,831012354.0
+full-current-policies-retire-low-gas,Solar,2027,281789200.0,281789200.0,281789200.0
+full-current-policies-retire-low-gas,Wind,2027,1011216977.0,1011216977.0,1011216977.0
+full-current-policies-retire-low-gas,Battery,2030,18638171.0,18638171.0,18638171.0
+full-current-policies-retire-low-gas,CCS,2030,1428824.0,1428824.0,1428824.0
+full-current-policies-retire-low-gas,Coal,2030,217521434.0,217521434.0,217521434.0
+full-current-policies-retire-low-gas,Distributed Solar,2030,139374900.0,139374900.0,139374900.0
+full-current-policies-retire-low-gas,Geothermal,2030,15971115.0,15971115.0,15971115.0
+full-current-policies-retire-low-gas,Hydro,2030,309322321.0,309322321.0,309322321.0
+full-current-policies-retire-low-gas,Hydrogen,2030,93987.0,93987.0,93987.0
+full-current-policies-retire-low-gas,Natural Gas CC,2030,1329438238.0,1329438238.0,1329438238.0
+full-current-policies-retire-low-gas,Natural Gas CT,2030,42127480.0,42127480.0,42127480.0
+full-current-policies-retire-low-gas,Nuclear,2030,815030219.0,815030219.0,815030219.0
+full-current-policies-retire-low-gas,Solar,2030,386694511.0,386694511.0,386694511.0
+full-current-policies-retire-low-gas,Wind,2030,1298381132.0,1298381132.0,1298381132.0
+full-current-policies-retire-low-gas,Battery,2035,46097057.0,46097057.0,46097057.0
+full-current-policies-retire-low-gas,CCS,2035,63615142.0,63615142.0,63615142.0
+full-current-policies-retire-low-gas,Coal,2035,191381735.0,191381735.0,191381735.0
+full-current-policies-retire-low-gas,Distributed Solar,2035,180615994.0,180615994.0,180615994.0
+full-current-policies-retire-low-gas,Geothermal,2035,15632069.0,15632069.0,15632069.0
+full-current-policies-retire-low-gas,Hydro,2035,318004243.0,318004243.0,318004243.0
+full-current-policies-retire-low-gas,Hydrogen,2035,160523.0,160523.0,160523.0
+full-current-policies-retire-low-gas,Natural Gas CC,2035,1386365836.0,1386365836.0,1386365836.0
+full-current-policies-retire-low-gas,Natural Gas CT,2035,38910595.0,38910595.0,38910595.0
+full-current-policies-retire-low-gas,Nuclear,2035,808184373.0,808184373.0,808184373.0
+full-current-policies-retire-low-gas,Solar,2035,822025428.0,822025428.0,822025428.0
+full-current-policies-retire-low-gas,Wind,2035,1636814706.0,1636814706.0,1636814706.0
+full-current-policies-retire-low-gas,Battery,2040,102967756.0,102967756.0,102967756.0
+full-current-policies-retire-low-gas,CCS,2040,745596563.0,745596563.0,745596563.0
+full-current-policies-retire-low-gas,Coal,2040,141563930.0,141563930.0,141563930.0
+full-current-policies-retire-low-gas,Distributed Solar,2040,191342908.0,191342908.0,191342908.0
+full-current-policies-retire-low-gas,Geothermal,2040,15487414.0,15487414.0,15487414.0
+full-current-policies-retire-low-gas,Hydro,2040,320112491.0,320112491.0,320112491.0
+full-current-policies-retire-low-gas,Hydrogen,2040,27277.0,27277.0,27277.0
+full-current-policies-retire-low-gas,Natural Gas CC,2040,1580439097.0,1580439097.0,1580439097.0
+full-current-policies-retire-low-gas,Natural Gas CT,2040,34932891.0,34932891.0,34932891.0
+full-current-policies-retire-low-gas,Nuclear,2040,33050873.0,33050873.0,33050873.0
+full-current-policies-retire-low-gas,Solar,2040,1152340004.0,1152340004.0,1152340004.0
+full-current-policies-retire-low-gas,Wind,2040,1800187362.0,1800187362.0,1800187362.0
+full-current-policies-retire-low-gas,Battery,2045,107023398.0,107023398.0,107023398.0
+full-current-policies-retire-low-gas,CCS,2045,157737802.0,157737802.0,157737802.0
+full-current-policies-retire-low-gas,Coal,2045,116424148.0,116424148.0,116424148.0
+full-current-policies-retire-low-gas,Distributed Solar,2045,201364152.0,201364152.0,201364152.0
+full-current-policies-retire-low-gas,Geothermal,2045,15948672.0,15948672.0,15948672.0
+full-current-policies-retire-low-gas,Hydro,2045,314091124.0,314091124.0,314091124.0
+full-current-policies-retire-low-gas,Hydrogen,2045,234421.0,234421.0,234421.0
+full-current-policies-retire-low-gas,Natural Gas CC,2045,2842311093.0,2842311093.0,2842311093.0
+full-current-policies-retire-low-gas,Natural Gas CT,2045,28969548.0,28969548.0,28969548.0
+full-current-policies-retire-low-gas,Nuclear,2045,33344543.0,33344543.0,33344543.0
+full-current-policies-retire-low-gas,Solar,2045,1170147924.0,1170147924.0,1170147924.0
+full-current-policies-retire-low-gas,Wind,2045,1837287910.0,1837287910.0,1837287910.0
+full-current-policies-retire-low-gas,Battery,2050,112722542.0,112722542.0,112722542.0
+full-current-policies-retire-low-gas,CCS,2050,127864753.0,127864753.0,127864753.0
+full-current-policies-retire-low-gas,Coal,2050,100360971.0,100360971.0,100360971.0
+full-current-policies-retire-low-gas,Distributed Solar,2050,215442665.0,215442665.0,215442665.0
+full-current-policies-retire-low-gas,Geothermal,2050,16018155.0,16018155.0,16018155.0
+full-current-policies-retire-low-gas,Hydro,2050,315265402.0,315265402.0,315265402.0
+full-current-policies-retire-low-gas,Hydrogen,2050,246040.0,246040.0,246040.0
+full-current-policies-retire-low-gas,Natural Gas CC,2050,3134876095.0,3134876095.0,3134876095.0
+full-current-policies-retire-low-gas,Natural Gas CT,2050,25064929.0,25064929.0,25064929.0
+full-current-policies-retire-low-gas,Nuclear,2050,26703375.0,26703375.0,26703375.0
+full-current-policies-retire-low-gas,Solar,2050,1241356402.0,1241356402.0,1241356402.0
+full-current-policies-retire-low-gas,Wind,2050,1854136324.0,1854136324.0,1854136324.0
