@@ -41,6 +41,8 @@ comparison_folders = {
         "full-base-200-retire",
         "full-current-policies",
         "full-current-policies-retire",
+        "full-current-policies-retire-low-gas",
+        "full-current-policies-retire-high-coal",
     ],
     "transmission_expansion": [
         "full-base-200-tx-0",
@@ -56,7 +58,11 @@ comparison_folders = {
         "full-base-50",
         "full-base-1000",
         "full-current-policies",
+        "full-current-policies-low-gas",
+        "full-current-policies-high-coal",
         "full-current-policies-retire",
+        "full-current-policies-retire-low-gas",
+        "full-current-policies-retire-high-coal",
         "full-current-policies-commit",
         "full-base-200-tx-0",
         "full-base-200-tx-15",
@@ -71,6 +77,7 @@ comparison_folders = {
 
 def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
     data_folders = [cwd.parent / f for f in data_folders]
+    data_folders = [f for f in data_folders if f.exists()]
 
     # Compile data from each of the case folders
     cap_list = []
