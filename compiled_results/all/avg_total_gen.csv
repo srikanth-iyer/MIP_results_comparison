@@ -1079,6 +1079,150 @@ full-current-policies-commit,Natural Gas CT,2050,19901917.5,19087623.0,20716212.
 full-current-policies-commit,Nuclear,2050,805030748.5,803433302.0,806628195.0
 full-current-policies-commit,Solar,2050,1172078401.0,1152954613.0,1191202189.0
 full-current-policies-commit,Wind,2050,1750275045.0,1732038045.0,1768512045.0
+full-current-policies-high-coal,Battery,2027,8658386.0,8658386.0,8658386.0
+full-current-policies-high-coal,CCS,2027,81275.0,81275.0,81275.0
+full-current-policies-high-coal,Coal,2027,500013634.0,500013634.0,500013634.0
+full-current-policies-high-coal,Distributed Solar,2027,92093360.0,92093360.0,92093360.0
+full-current-policies-high-coal,Geothermal,2027,5888109.0,5888109.0,5888109.0
+full-current-policies-high-coal,Hydro,2027,274292192.0,274292192.0,274292192.0
+full-current-policies-high-coal,Hydrogen,2027,11757.0,11757.0,11757.0
+full-current-policies-high-coal,Natural Gas CC,2027,1195845204.0,1195845204.0,1195845204.0
+full-current-policies-high-coal,Natural Gas CT,2027,2319881.0,2319881.0,2319881.0
+full-current-policies-high-coal,Nuclear,2027,825062878.0,825062878.0,825062878.0
+full-current-policies-high-coal,Solar,2027,282235916.0,282235916.0,282235916.0
+full-current-policies-high-coal,Wind,2027,1077365282.0,1077365282.0,1077365282.0
+full-current-policies-high-coal,Battery,2030,16212427.0,16212427.0,16212427.0
+full-current-policies-high-coal,CCS,2030,111449.0,111449.0,111449.0
+full-current-policies-high-coal,Coal,2030,674906085.0,674906085.0,674906085.0
+full-current-policies-high-coal,Distributed Solar,2030,138498197.0,138498197.0,138498197.0
+full-current-policies-high-coal,Geothermal,2030,5304098.0,5304098.0,5304098.0
+full-current-policies-high-coal,Hydro,2030,273460764.0,273460764.0,273460764.0
+full-current-policies-high-coal,Hydrogen,2030,13372.0,13372.0,13372.0
+full-current-policies-high-coal,Natural Gas CC,2030,902685076.0,902685076.0,902685076.0
+full-current-policies-high-coal,Natural Gas CT,2030,3684983.0,3684983.0,3684983.0
+full-current-policies-high-coal,Nuclear,2030,813368144.0,813368144.0,813368144.0
+full-current-policies-high-coal,Solar,2030,382486318.0,382486318.0,382486318.0
+full-current-policies-high-coal,Wind,2030,1361097555.0,1361097555.0,1361097555.0
+full-current-policies-high-coal,Battery,2035,33917095.0,33917095.0,33917095.0
+full-current-policies-high-coal,CCS,2035,218903.0,218903.0,218903.0
+full-current-policies-high-coal,Coal,2035,595667551.0,595667551.0,595667551.0
+full-current-policies-high-coal,Distributed Solar,2035,177878410.0,177878410.0,177878410.0
+full-current-policies-high-coal,Geothermal,2035,4808270.0,4808270.0,4808270.0
+full-current-policies-high-coal,Hydro,2035,283545926.0,283545926.0,283545926.0
+full-current-policies-high-coal,Hydrogen,2035,17485.0,17485.0,17485.0
+full-current-policies-high-coal,Natural Gas CC,2035,1001248035.0,1001248035.0,1001248035.0
+full-current-policies-high-coal,Natural Gas CT,2035,18634695.0,18634695.0,18634695.0
+full-current-policies-high-coal,Nuclear,2035,793179134.0,793179134.0,793179134.0
+full-current-policies-high-coal,Solar,2035,882241609.0,882241609.0,882241609.0
+full-current-policies-high-coal,Wind,2035,1706975833.0,1706975833.0,1706975833.0
+full-current-policies-high-coal,Battery,2040,89066204.0,89066204.0,89066204.0
+full-current-policies-high-coal,CCS,2040,26835934.0,26835934.0,26835934.0
+full-current-policies-high-coal,Coal,2040,360497240.0,360497240.0,360497240.0
+full-current-policies-high-coal,Distributed Solar,2040,185237938.0,185237938.0,185237938.0
+full-current-policies-high-coal,Geothermal,2040,3119164.0,3119164.0,3119164.0
+full-current-policies-high-coal,Hydro,2040,283296807.0,283296807.0,283296807.0
+full-current-policies-high-coal,Hydrogen,2040,14963.0,14963.0,14963.0
+full-current-policies-high-coal,Natural Gas CC,2040,1174616201.0,1174616201.0,1174616201.0
+full-current-policies-high-coal,Natural Gas CT,2040,26005442.0,26005442.0,26005442.0
+full-current-policies-high-coal,Nuclear,2040,770905377.0,770905377.0,770905377.0
+full-current-policies-high-coal,Solar,2040,1269259198.0,1269259198.0,1269259198.0
+full-current-policies-high-coal,Wind,2040,1933112117.0,1933112117.0,1933112117.0
+full-current-policies-high-coal,Battery,2045,95039229.0,95039229.0,95039229.0
+full-current-policies-high-coal,CCS,2045,7526793.0,7526793.0,7526793.0
+full-current-policies-high-coal,Coal,2045,233956389.0,233956389.0,233956389.0
+full-current-policies-high-coal,Distributed Solar,2045,201445832.0,201445832.0,201445832.0
+full-current-policies-high-coal,Geothermal,2045,1841609.0,1841609.0,1841609.0
+full-current-policies-high-coal,Hydro,2045,266337379.0,266337379.0,266337379.0
+full-current-policies-high-coal,Hydrogen,2045,307957.0,307957.0,307957.0
+full-current-policies-high-coal,Natural Gas CC,2045,1989761890.0,1989761890.0,1989761890.0
+full-current-policies-high-coal,Natural Gas CT,2045,23120322.0,23120322.0,23120322.0
+full-current-policies-high-coal,Nuclear,2045,815405876.0,815405876.0,815405876.0
+full-current-policies-high-coal,Solar,2045,1303328925.0,1303328925.0,1303328925.0
+full-current-policies-high-coal,Wind,2045,1893652663.0,1893652663.0,1893652663.0
+full-current-policies-high-coal,Battery,2050,97681482.0,97681482.0,97681482.0
+full-current-policies-high-coal,CCS,2050,5063493.0,5063493.0,5063493.0
+full-current-policies-high-coal,Coal,2050,105457501.0,105457501.0,105457501.0
+full-current-policies-high-coal,Distributed Solar,2050,215960215.0,215960215.0,215960215.0
+full-current-policies-high-coal,Geothermal,2050,841387.0,841387.0,841387.0
+full-current-policies-high-coal,Hydro,2050,249957403.0,249957403.0,249957403.0
+full-current-policies-high-coal,Hydrogen,2050,358684.0,358684.0,358684.0
+full-current-policies-high-coal,Natural Gas CC,2050,2469230220.0,2469230220.0,2469230220.0
+full-current-policies-high-coal,Natural Gas CT,2050,14099416.0,14099416.0,14099416.0
+full-current-policies-high-coal,Nuclear,2050,806999450.0,806999450.0,806999450.0
+full-current-policies-high-coal,Solar,2050,1388436620.0,1388436620.0,1388436620.0
+full-current-policies-high-coal,Wind,2050,1812796212.0,1812796212.0,1812796212.0
+full-current-policies-low-gas,Battery,2027,8747580.0,8747580.0,8747580.0
+full-current-policies-low-gas,CCS,2027,81518.0,81518.0,81518.0
+full-current-policies-low-gas,Coal,2027,758269666.0,758269666.0,758269666.0
+full-current-policies-low-gas,Distributed Solar,2027,92697810.0,92697810.0,92697810.0
+full-current-policies-low-gas,Geothermal,2027,5901689.0,5901689.0,5901689.0
+full-current-policies-low-gas,Hydro,2027,274402788.0,274402788.0,274402788.0
+full-current-policies-low-gas,Hydrogen,2027,11126.0,11126.0,11126.0
+full-current-policies-low-gas,Natural Gas CC,2027,1144057762.0,1144057762.0,1144057762.0
+full-current-policies-low-gas,Natural Gas CT,2027,3372240.0,3372240.0,3372240.0
+full-current-policies-low-gas,Nuclear,2027,833928911.0,833928911.0,833928911.0
+full-current-policies-low-gas,Solar,2027,279013157.0,279013157.0,279013157.0
+full-current-policies-low-gas,Wind,2027,859767401.0,859767401.0,859767401.0
+full-current-policies-low-gas,Battery,2030,,,
+full-current-policies-low-gas,CCS,2030,,,
+full-current-policies-low-gas,Coal,2030,,,
+full-current-policies-low-gas,Distributed Solar,2030,,,
+full-current-policies-low-gas,Geothermal,2030,,,
+full-current-policies-low-gas,Hydro,2030,,,
+full-current-policies-low-gas,Hydrogen,2030,,,
+full-current-policies-low-gas,Natural Gas CC,2030,,,
+full-current-policies-low-gas,Natural Gas CT,2030,,,
+full-current-policies-low-gas,Nuclear,2030,,,
+full-current-policies-low-gas,Solar,2030,,,
+full-current-policies-low-gas,Wind,2030,,,
+full-current-policies-low-gas,Battery,2035,76586718.0,76586718.0,76586718.0
+full-current-policies-low-gas,CCS,2035,8872110.0,8872110.0,8872110.0
+full-current-policies-low-gas,Coal,2035,1500424904.0,1500424904.0,1500424904.0
+full-current-policies-low-gas,Distributed Solar,2035,360052150.0,360052150.0,360052150.0
+full-current-policies-low-gas,Geothermal,2035,9888970.0,9888970.0,9888970.0
+full-current-policies-low-gas,Hydro,2035,566056250.0,566056250.0,566056250.0
+full-current-policies-low-gas,Hydrogen,2035,262280.0,262280.0,262280.0
+full-current-policies-low-gas,Natural Gas CC,2035,2208176768.0,2208176768.0,2208176768.0
+full-current-policies-low-gas,Natural Gas CT,2035,58788676.0,58788676.0,58788676.0
+full-current-policies-low-gas,Nuclear,2035,1635215430.0,1635215430.0,1635215430.0
+full-current-policies-low-gas,Solar,2035,1550263508.0,1550263508.0,1550263508.0
+full-current-policies-low-gas,Wind,2035,3015809748.0,3015809748.0,3015809748.0
+full-current-policies-low-gas,Battery,2040,148251024.0,148251024.0,148251024.0
+full-current-policies-low-gas,CCS,2040,509322082.0,509322082.0,509322082.0
+full-current-policies-low-gas,Coal,2040,832476978.0,832476978.0,832476978.0
+full-current-policies-low-gas,Distributed Solar,2040,382195808.0,382195808.0,382195808.0
+full-current-policies-low-gas,Geothermal,2040,6526058.0,6526058.0,6526058.0
+full-current-policies-low-gas,Hydro,2040,565320696.0,565320696.0,565320696.0
+full-current-policies-low-gas,Hydrogen,2040,294144.0,294144.0,294144.0
+full-current-policies-low-gas,Natural Gas CC,2040,2500471738.0,2500471738.0,2500471738.0
+full-current-policies-low-gas,Natural Gas CT,2040,65474728.0,65474728.0,65474728.0
+full-current-policies-low-gas,Nuclear,2040,1608721310.0,1608721310.0,1608721310.0
+full-current-policies-low-gas,Solar,2040,2149333254.0,2149333254.0,2149333254.0
+full-current-policies-low-gas,Wind,2040,3421482112.0,3421482112.0,3421482112.0
+full-current-policies-low-gas,Battery,2045,153614538.0,153614538.0,153614538.0
+full-current-policies-low-gas,CCS,2045,107703300.0,107703300.0,107703300.0
+full-current-policies-low-gas,Coal,2045,534473650.0,534473650.0,534473650.0
+full-current-policies-low-gas,Distributed Solar,2045,403861358.0,403861358.0,403861358.0
+full-current-policies-low-gas,Geothermal,2045,3733050.0,3733050.0,3733050.0
+full-current-policies-low-gas,Hydro,2045,525258308.0,525258308.0,525258308.0
+full-current-policies-low-gas,Hydrogen,2045,607322.0,607322.0,607322.0
+full-current-policies-low-gas,Natural Gas CC,2045,4553848412.0,4553848412.0,4553848412.0
+full-current-policies-low-gas,Natural Gas CT,2045,50261892.0,50261892.0,50261892.0
+full-current-policies-low-gas,Nuclear,2045,1667131236.0,1667131236.0,1667131236.0
+full-current-policies-low-gas,Solar,2045,2261015094.0,2261015094.0,2261015094.0
+full-current-policies-low-gas,Wind,2045,3334170762.0,3334170762.0,3334170762.0
+full-current-policies-low-gas,Battery,2050,156890008.0,156890008.0,156890008.0
+full-current-policies-low-gas,CCS,2050,90933314.0,90933314.0,90933314.0
+full-current-policies-low-gas,Coal,2050,227955010.0,227955010.0,227955010.0
+full-current-policies-low-gas,Distributed Solar,2050,432481458.0,432481458.0,432481458.0
+full-current-policies-low-gas,Geothermal,2050,1738978.0,1738978.0,1738978.0
+full-current-policies-low-gas,Hydro,2050,499095862.0,499095862.0,499095862.0
+full-current-policies-low-gas,Hydrogen,2050,210362.0,210362.0,210362.0
+full-current-policies-low-gas,Natural Gas CC,2050,5532605632.0,5532605632.0,5532605632.0
+full-current-policies-low-gas,Natural Gas CT,2050,26840280.0,26840280.0,26840280.0
+full-current-policies-low-gas,Nuclear,2050,1635314410.0,1635314410.0,1635314410.0
+full-current-policies-low-gas,Solar,2050,2505795850.0,2505795850.0,2505795850.0
+full-current-policies-low-gas,Wind,2050,3171944282.0,3171944282.0,3171944282.0
 full-current-policies-retire,Battery,2027,13565201.0,13229782.0,14048471.0
 full-current-policies-retire,CCS,2027,363235.0,6691.0,719779.0
 full-current-policies-retire,Coal,2027,527476458.8,492610430.0,560513745.0

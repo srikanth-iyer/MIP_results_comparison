@@ -8639,6 +8639,1158 @@ full-current-policies-commit,2050,Wind,SOU,24307.0
 full-current-policies-commit,2050,Wind,SPP,67147.5
 full-current-policies-commit,2050,Wind,TRE,68196.5
 full-current-policies-commit,2050,Wind,WECC,89304.0
+full-current-policies-high-coal,2027,Battery,CA,11587.0
+full-current-policies-high-coal,2027,Battery,MISO,220.0
+full-current-policies-high-coal,2027,Battery,NE,577.0
+full-current-policies-high-coal,2027,Battery,PJM,335.0
+full-current-policies-high-coal,2027,Battery,SOU,880.0
+full-current-policies-high-coal,2027,Battery,SPP,241.0
+full-current-policies-high-coal,2027,Battery,TRE,4714.0
+full-current-policies-high-coal,2027,Battery,WECC,3408.0
+full-current-policies-high-coal,2027,CCS,CA,2.0
+full-current-policies-high-coal,2027,CCS,MISO,5.0
+full-current-policies-high-coal,2027,CCS,NE,
+full-current-policies-high-coal,2027,CCS,PJM,2.0
+full-current-policies-high-coal,2027,CCS,SOU,3.0
+full-current-policies-high-coal,2027,CCS,SPP,3.0
+full-current-policies-high-coal,2027,CCS,TRE,2.0
+full-current-policies-high-coal,2027,CCS,WECC,2.0
+full-current-policies-high-coal,2027,Coal,CA,0.0
+full-current-policies-high-coal,2027,Coal,MISO,47178.0
+full-current-policies-high-coal,2027,Coal,NE,330.0
+full-current-policies-high-coal,2027,Coal,PJM,32702.0
+full-current-policies-high-coal,2027,Coal,SOU,27777.0
+full-current-policies-high-coal,2027,Coal,SPP,19975.0
+full-current-policies-high-coal,2027,Coal,TRE,12980.0
+full-current-policies-high-coal,2027,Coal,WECC,16395.0
+full-current-policies-high-coal,2027,Distributed Solar,CA,11447.0
+full-current-policies-high-coal,2027,Distributed Solar,MISO,5248.0
+full-current-policies-high-coal,2027,Distributed Solar,NE,6061.0
+full-current-policies-high-coal,2027,Distributed Solar,PJM,9958.0
+full-current-policies-high-coal,2027,Distributed Solar,SOU,5464.0
+full-current-policies-high-coal,2027,Distributed Solar,SPP,1242.0
+full-current-policies-high-coal,2027,Distributed Solar,TRE,2996.0
+full-current-policies-high-coal,2027,Distributed Solar,WECC,5470.0
+full-current-policies-high-coal,2027,Geothermal,CA,24.0
+full-current-policies-high-coal,2027,Geothermal,MISO,
+full-current-policies-high-coal,2027,Geothermal,NE,
+full-current-policies-high-coal,2027,Geothermal,PJM,
+full-current-policies-high-coal,2027,Geothermal,SOU,
+full-current-policies-high-coal,2027,Geothermal,SPP,
+full-current-policies-high-coal,2027,Geothermal,TRE,
+full-current-policies-high-coal,2027,Geothermal,WECC,652.0
+full-current-policies-high-coal,2027,Hydro,CA,12410.0
+full-current-policies-high-coal,2027,Hydro,MISO,10658.0
+full-current-policies-high-coal,2027,Hydro,NE,8305.0
+full-current-policies-high-coal,2027,Hydro,PJM,8069.0
+full-current-policies-high-coal,2027,Hydro,SOU,10043.0
+full-current-policies-high-coal,2027,Hydro,SPP,5145.0
+full-current-policies-high-coal,2027,Hydro,TRE,499.0
+full-current-policies-high-coal,2027,Hydro,WECC,39617.0
+full-current-policies-high-coal,2027,Hydrogen,CA,4.0
+full-current-policies-high-coal,2027,Hydrogen,MISO,10.0
+full-current-policies-high-coal,2027,Hydrogen,NE,6.0
+full-current-policies-high-coal,2027,Hydrogen,PJM,8.0
+full-current-policies-high-coal,2027,Hydrogen,SOU,6.0
+full-current-policies-high-coal,2027,Hydrogen,SPP,6.0
+full-current-policies-high-coal,2027,Hydrogen,TRE,4.0
+full-current-policies-high-coal,2027,Hydrogen,WECC,8.0
+full-current-policies-high-coal,2027,Natural Gas CC,CA,20999.0
+full-current-policies-high-coal,2027,Natural Gas CC,MISO,51521.0
+full-current-policies-high-coal,2027,Natural Gas CC,NE,26623.0
+full-current-policies-high-coal,2027,Natural Gas CC,PJM,59240.0
+full-current-policies-high-coal,2027,Natural Gas CC,SOU,64579.0
+full-current-policies-high-coal,2027,Natural Gas CC,SPP,11504.0
+full-current-policies-high-coal,2027,Natural Gas CC,TRE,41445.0
+full-current-policies-high-coal,2027,Natural Gas CC,WECC,30900.0
+full-current-policies-high-coal,2027,Natural Gas CT,CA,11123.0
+full-current-policies-high-coal,2027,Natural Gas CT,MISO,33032.0
+full-current-policies-high-coal,2027,Natural Gas CT,NE,3932.0
+full-current-policies-high-coal,2027,Natural Gas CT,PJM,29936.0
+full-current-policies-high-coal,2027,Natural Gas CT,SOU,32096.0
+full-current-policies-high-coal,2027,Natural Gas CT,SPP,9943.0
+full-current-policies-high-coal,2027,Natural Gas CT,TRE,10310.0
+full-current-policies-high-coal,2027,Natural Gas CT,WECC,10218.0
+full-current-policies-high-coal,2027,Nuclear,CA,0.0
+full-current-policies-high-coal,2027,Nuclear,MISO,20319.0
+full-current-policies-high-coal,2027,Nuclear,NE,6714.0
+full-current-policies-high-coal,2027,Nuclear,PJM,33761.0
+full-current-policies-high-coal,2027,Nuclear,SOU,23924.0
+full-current-policies-high-coal,2027,Nuclear,SPP,2025.0
+full-current-policies-high-coal,2027,Nuclear,TRE,5120.0
+full-current-policies-high-coal,2027,Nuclear,WECC,5175.0
+full-current-policies-high-coal,2027,Solar,CA,20138.0
+full-current-policies-high-coal,2027,Solar,MISO,12398.0
+full-current-policies-high-coal,2027,Solar,NE,16499.0
+full-current-policies-high-coal,2027,Solar,PJM,11487.0
+full-current-policies-high-coal,2027,Solar,SOU,24614.0
+full-current-policies-high-coal,2027,Solar,SPP,565.0
+full-current-policies-high-coal,2027,Solar,TRE,22379.0
+full-current-policies-high-coal,2027,Solar,WECC,21180.0
+full-current-policies-high-coal,2027,Wind,CA,5498.0
+full-current-policies-high-coal,2027,Wind,MISO,88503.0
+full-current-policies-high-coal,2027,Wind,NE,23658.0
+full-current-policies-high-coal,2027,Wind,PJM,29506.0
+full-current-policies-high-coal,2027,Wind,SOU,2230.0
+full-current-policies-high-coal,2027,Wind,SPP,54391.0
+full-current-policies-high-coal,2027,Wind,TRE,64167.0
+full-current-policies-high-coal,2027,Wind,WECC,55991.0
+full-current-policies-high-coal,2030,Battery,CA,11580.0
+full-current-policies-high-coal,2030,Battery,MISO,225.0
+full-current-policies-high-coal,2030,Battery,NE,1379.0
+full-current-policies-high-coal,2030,Battery,PJM,220.0
+full-current-policies-high-coal,2030,Battery,SOU,883.0
+full-current-policies-high-coal,2030,Battery,SPP,244.0
+full-current-policies-high-coal,2030,Battery,TRE,4717.0
+full-current-policies-high-coal,2030,Battery,WECC,3405.0
+full-current-policies-high-coal,2030,CCS,CA,2.0
+full-current-policies-high-coal,2030,CCS,MISO,5.0
+full-current-policies-high-coal,2030,CCS,NE,
+full-current-policies-high-coal,2030,CCS,PJM,2.0
+full-current-policies-high-coal,2030,CCS,SOU,3.0
+full-current-policies-high-coal,2030,CCS,SPP,3.0
+full-current-policies-high-coal,2030,CCS,TRE,2.0
+full-current-policies-high-coal,2030,CCS,WECC,3.0
+full-current-policies-high-coal,2030,Coal,CA,0.0
+full-current-policies-high-coal,2030,Coal,MISO,42731.0
+full-current-policies-high-coal,2030,Coal,NE,330.0
+full-current-policies-high-coal,2030,Coal,PJM,28436.0
+full-current-policies-high-coal,2030,Coal,SOU,26627.0
+full-current-policies-high-coal,2030,Coal,SPP,18737.0
+full-current-policies-high-coal,2030,Coal,TRE,10731.0
+full-current-policies-high-coal,2030,Coal,WECC,14866.0
+full-current-policies-high-coal,2030,Distributed Solar,CA,13621.0
+full-current-policies-high-coal,2030,Distributed Solar,MISO,9891.0
+full-current-policies-high-coal,2030,Distributed Solar,NE,7571.0
+full-current-policies-high-coal,2030,Distributed Solar,PJM,16033.0
+full-current-policies-high-coal,2030,Distributed Solar,SOU,9723.0
+full-current-policies-high-coal,2030,Distributed Solar,SPP,2341.0
+full-current-policies-high-coal,2030,Distributed Solar,TRE,5818.0
+full-current-policies-high-coal,2030,Distributed Solar,WECC,7746.0
+full-current-policies-high-coal,2030,Geothermal,CA,24.0
+full-current-policies-high-coal,2030,Geothermal,MISO,
+full-current-policies-high-coal,2030,Geothermal,NE,
+full-current-policies-high-coal,2030,Geothermal,PJM,
+full-current-policies-high-coal,2030,Geothermal,SOU,
+full-current-policies-high-coal,2030,Geothermal,SPP,
+full-current-policies-high-coal,2030,Geothermal,TRE,
+full-current-policies-high-coal,2030,Geothermal,WECC,597.0
+full-current-policies-high-coal,2030,Hydro,CA,12169.0
+full-current-policies-high-coal,2030,Hydro,MISO,10394.0
+full-current-policies-high-coal,2030,Hydro,NE,7877.0
+full-current-policies-high-coal,2030,Hydro,PJM,7735.0
+full-current-policies-high-coal,2030,Hydro,SOU,9496.0
+full-current-policies-high-coal,2030,Hydro,SPP,5145.0
+full-current-policies-high-coal,2030,Hydro,TRE,499.0
+full-current-policies-high-coal,2030,Hydro,WECC,39401.0
+full-current-policies-high-coal,2030,Hydrogen,CA,4.0
+full-current-policies-high-coal,2030,Hydrogen,MISO,10.0
+full-current-policies-high-coal,2030,Hydrogen,NE,7.0
+full-current-policies-high-coal,2030,Hydrogen,PJM,8.0
+full-current-policies-high-coal,2030,Hydrogen,SOU,6.0
+full-current-policies-high-coal,2030,Hydrogen,SPP,6.0
+full-current-policies-high-coal,2030,Hydrogen,TRE,4.0
+full-current-policies-high-coal,2030,Hydrogen,WECC,8.0
+full-current-policies-high-coal,2030,Natural Gas CC,CA,20999.0
+full-current-policies-high-coal,2030,Natural Gas CC,MISO,51237.0
+full-current-policies-high-coal,2030,Natural Gas CC,NE,26625.0
+full-current-policies-high-coal,2030,Natural Gas CC,PJM,59240.0
+full-current-policies-high-coal,2030,Natural Gas CC,SOU,63392.0
+full-current-policies-high-coal,2030,Natural Gas CC,SPP,11504.0
+full-current-policies-high-coal,2030,Natural Gas CC,TRE,41446.0
+full-current-policies-high-coal,2030,Natural Gas CC,WECC,30807.0
+full-current-policies-high-coal,2030,Natural Gas CT,CA,11117.0
+full-current-policies-high-coal,2030,Natural Gas CT,MISO,32335.0
+full-current-policies-high-coal,2030,Natural Gas CT,NE,3933.0
+full-current-policies-high-coal,2030,Natural Gas CT,PJM,29936.0
+full-current-policies-high-coal,2030,Natural Gas CT,SOU,31966.0
+full-current-policies-high-coal,2030,Natural Gas CT,SPP,9769.0
+full-current-policies-high-coal,2030,Natural Gas CT,TRE,10244.0
+full-current-policies-high-coal,2030,Natural Gas CT,WECC,10081.0
+full-current-policies-high-coal,2030,Nuclear,CA,0.0
+full-current-policies-high-coal,2030,Nuclear,MISO,20320.0
+full-current-policies-high-coal,2030,Nuclear,NE,6714.0
+full-current-policies-high-coal,2030,Nuclear,PJM,33761.0
+full-current-policies-high-coal,2030,Nuclear,SOU,23927.0
+full-current-policies-high-coal,2030,Nuclear,SPP,2025.0
+full-current-policies-high-coal,2030,Nuclear,TRE,5120.0
+full-current-policies-high-coal,2030,Nuclear,WECC,5177.0
+full-current-policies-high-coal,2030,Solar,CA,33379.0
+full-current-policies-high-coal,2030,Solar,MISO,13730.0
+full-current-policies-high-coal,2030,Solar,NE,21126.0
+full-current-policies-high-coal,2030,Solar,PJM,13215.0
+full-current-policies-high-coal,2030,Solar,SOU,42756.0
+full-current-policies-high-coal,2030,Solar,SPP,601.0
+full-current-policies-high-coal,2030,Solar,TRE,22399.0
+full-current-policies-high-coal,2030,Solar,WECC,25588.0
+full-current-policies-high-coal,2030,Wind,CA,5391.0
+full-current-policies-high-coal,2030,Wind,MISO,102964.0
+full-current-policies-high-coal,2030,Wind,NE,35154.0
+full-current-policies-high-coal,2030,Wind,PJM,38179.0
+full-current-policies-high-coal,2030,Wind,SOU,7587.0
+full-current-policies-high-coal,2030,Wind,SPP,66937.0
+full-current-policies-high-coal,2030,Wind,TRE,72055.0
+full-current-policies-high-coal,2030,Wind,WECC,69917.0
+full-current-policies-high-coal,2035,Battery,CA,11100.0
+full-current-policies-high-coal,2035,Battery,MISO,4800.0
+full-current-policies-high-coal,2035,Battery,NE,12724.0
+full-current-policies-high-coal,2035,Battery,PJM,1762.0
+full-current-policies-high-coal,2035,Battery,SOU,831.0
+full-current-policies-high-coal,2035,Battery,SPP,223.0
+full-current-policies-high-coal,2035,Battery,TRE,4540.0
+full-current-policies-high-coal,2035,Battery,WECC,3328.0
+full-current-policies-high-coal,2035,CCS,CA,3.0
+full-current-policies-high-coal,2035,CCS,MISO,11.0
+full-current-policies-high-coal,2035,CCS,NE,
+full-current-policies-high-coal,2035,CCS,PJM,6.0
+full-current-policies-high-coal,2035,CCS,SOU,6.0
+full-current-policies-high-coal,2035,CCS,SPP,3.0
+full-current-policies-high-coal,2035,CCS,TRE,2.0
+full-current-policies-high-coal,2035,CCS,WECC,3.0
+full-current-policies-high-coal,2035,Coal,CA,0.0
+full-current-policies-high-coal,2035,Coal,MISO,37448.0
+full-current-policies-high-coal,2035,Coal,NE,0.0
+full-current-policies-high-coal,2035,Coal,PJM,21756.0
+full-current-policies-high-coal,2035,Coal,SOU,22499.0
+full-current-policies-high-coal,2035,Coal,SPP,17788.0
+full-current-policies-high-coal,2035,Coal,TRE,10731.0
+full-current-policies-high-coal,2035,Coal,WECC,12143.0
+full-current-policies-high-coal,2035,Distributed Solar,CA,15763.0
+full-current-policies-high-coal,2035,Distributed Solar,MISO,16449.0
+full-current-policies-high-coal,2035,Distributed Solar,NE,8818.0
+full-current-policies-high-coal,2035,Distributed Solar,PJM,20222.0
+full-current-policies-high-coal,2035,Distributed Solar,SOU,13538.0
+full-current-policies-high-coal,2035,Distributed Solar,SPP,3750.0
+full-current-policies-high-coal,2035,Distributed Solar,TRE,8596.0
+full-current-policies-high-coal,2035,Distributed Solar,WECC,9887.0
+full-current-policies-high-coal,2035,Geothermal,CA,24.0
+full-current-policies-high-coal,2035,Geothermal,MISO,
+full-current-policies-high-coal,2035,Geothermal,NE,
+full-current-policies-high-coal,2035,Geothermal,PJM,
+full-current-policies-high-coal,2035,Geothermal,SOU,
+full-current-policies-high-coal,2035,Geothermal,SPP,
+full-current-policies-high-coal,2035,Geothermal,TRE,
+full-current-policies-high-coal,2035,Geothermal,WECC,567.0
+full-current-policies-high-coal,2035,Hydro,CA,12084.0
+full-current-policies-high-coal,2035,Hydro,MISO,10099.0
+full-current-policies-high-coal,2035,Hydro,NE,7822.0
+full-current-policies-high-coal,2035,Hydro,PJM,7513.0
+full-current-policies-high-coal,2035,Hydro,SOU,9418.0
+full-current-policies-high-coal,2035,Hydro,SPP,5129.0
+full-current-policies-high-coal,2035,Hydro,TRE,493.0
+full-current-policies-high-coal,2035,Hydro,WECC,39220.0
+full-current-policies-high-coal,2035,Hydrogen,CA,4.0
+full-current-policies-high-coal,2035,Hydrogen,MISO,11.0
+full-current-policies-high-coal,2035,Hydrogen,NE,24.0
+full-current-policies-high-coal,2035,Hydrogen,PJM,10.0
+full-current-policies-high-coal,2035,Hydrogen,SOU,6.0
+full-current-policies-high-coal,2035,Hydrogen,SPP,6.0
+full-current-policies-high-coal,2035,Hydrogen,TRE,4.0
+full-current-policies-high-coal,2035,Hydrogen,WECC,8.0
+full-current-policies-high-coal,2035,Natural Gas CC,CA,21002.0
+full-current-policies-high-coal,2035,Natural Gas CC,MISO,50957.0
+full-current-policies-high-coal,2035,Natural Gas CC,NE,33622.0
+full-current-policies-high-coal,2035,Natural Gas CC,PJM,58724.0
+full-current-policies-high-coal,2035,Natural Gas CC,SOU,62206.0
+full-current-policies-high-coal,2035,Natural Gas CC,SPP,11235.0
+full-current-policies-high-coal,2035,Natural Gas CC,TRE,40128.0
+full-current-policies-high-coal,2035,Natural Gas CC,WECC,29690.0
+full-current-policies-high-coal,2035,Natural Gas CT,CA,10583.0
+full-current-policies-high-coal,2035,Natural Gas CT,MISO,31530.0
+full-current-policies-high-coal,2035,Natural Gas CT,NE,3959.0
+full-current-policies-high-coal,2035,Natural Gas CT,PJM,29879.0
+full-current-policies-high-coal,2035,Natural Gas CT,SOU,31963.0
+full-current-policies-high-coal,2035,Natural Gas CT,SPP,9432.0
+full-current-policies-high-coal,2035,Natural Gas CT,TRE,9960.0
+full-current-policies-high-coal,2035,Natural Gas CT,WECC,9339.0
+full-current-policies-high-coal,2035,Nuclear,CA,2.0
+full-current-policies-high-coal,2035,Nuclear,MISO,20324.0
+full-current-policies-high-coal,2035,Nuclear,NE,6715.0
+full-current-policies-high-coal,2035,Nuclear,PJM,33764.0
+full-current-policies-high-coal,2035,Nuclear,SOU,23927.0
+full-current-policies-high-coal,2035,Nuclear,SPP,2025.0
+full-current-policies-high-coal,2035,Nuclear,TRE,5122.0
+full-current-policies-high-coal,2035,Nuclear,WECC,5178.0
+full-current-policies-high-coal,2035,Solar,CA,53619.0
+full-current-policies-high-coal,2035,Solar,MISO,84133.0
+full-current-policies-high-coal,2035,Solar,NE,21137.0
+full-current-policies-high-coal,2035,Solar,PJM,50174.0
+full-current-policies-high-coal,2035,Solar,SOU,102510.0
+full-current-policies-high-coal,2035,Solar,SPP,4032.0
+full-current-policies-high-coal,2035,Solar,TRE,31093.0
+full-current-policies-high-coal,2035,Solar,WECC,49438.0
+full-current-policies-high-coal,2035,Wind,CA,4943.0
+full-current-policies-high-coal,2035,Wind,MISO,124846.0
+full-current-policies-high-coal,2035,Wind,NE,45710.0
+full-current-policies-high-coal,2035,Wind,PJM,52676.0
+full-current-policies-high-coal,2035,Wind,SOU,12404.0
+full-current-policies-high-coal,2035,Wind,SPP,82100.0
+full-current-policies-high-coal,2035,Wind,TRE,81526.0
+full-current-policies-high-coal,2035,Wind,WECC,82542.0
+full-current-policies-high-coal,2040,Battery,CA,13513.0
+full-current-policies-high-coal,2040,Battery,MISO,24750.0
+full-current-policies-high-coal,2040,Battery,NE,18528.0
+full-current-policies-high-coal,2040,Battery,PJM,16072.0
+full-current-policies-high-coal,2040,Battery,SOU,8853.0
+full-current-policies-high-coal,2040,Battery,SPP,70.0
+full-current-policies-high-coal,2040,Battery,TRE,4719.0
+full-current-policies-high-coal,2040,Battery,WECC,9694.0
+full-current-policies-high-coal,2040,CCS,CA,1177.0
+full-current-policies-high-coal,2040,CCS,MISO,27.0
+full-current-policies-high-coal,2040,CCS,NE,
+full-current-policies-high-coal,2040,CCS,PJM,2155.0
+full-current-policies-high-coal,2040,CCS,SOU,42.0
+full-current-policies-high-coal,2040,CCS,SPP,4.0
+full-current-policies-high-coal,2040,CCS,TRE,4.0
+full-current-policies-high-coal,2040,CCS,WECC,4.0
+full-current-policies-high-coal,2040,Coal,CA,0.0
+full-current-policies-high-coal,2040,Coal,MISO,27677.0
+full-current-policies-high-coal,2040,Coal,NE,0.0
+full-current-policies-high-coal,2040,Coal,PJM,8128.0
+full-current-policies-high-coal,2040,Coal,SOU,13002.0
+full-current-policies-high-coal,2040,Coal,SPP,14126.0
+full-current-policies-high-coal,2040,Coal,TRE,10731.0
+full-current-policies-high-coal,2040,Coal,WECC,8750.0
+full-current-policies-high-coal,2040,Distributed Solar,CA,16425.0
+full-current-policies-high-coal,2040,Distributed Solar,MISO,18455.0
+full-current-policies-high-coal,2040,Distributed Solar,NE,8951.0
+full-current-policies-high-coal,2040,Distributed Solar,PJM,20979.0
+full-current-policies-high-coal,2040,Distributed Solar,SOU,14993.0
+full-current-policies-high-coal,2040,Distributed Solar,SPP,4437.0
+full-current-policies-high-coal,2040,Distributed Solar,TRE,8863.0
+full-current-policies-high-coal,2040,Distributed Solar,WECC,10179.0
+full-current-policies-high-coal,2040,Geothermal,CA,24.0
+full-current-policies-high-coal,2040,Geothermal,MISO,
+full-current-policies-high-coal,2040,Geothermal,NE,
+full-current-policies-high-coal,2040,Geothermal,PJM,
+full-current-policies-high-coal,2040,Geothermal,SOU,
+full-current-policies-high-coal,2040,Geothermal,SPP,
+full-current-policies-high-coal,2040,Geothermal,TRE,
+full-current-policies-high-coal,2040,Geothermal,WECC,374.0
+full-current-policies-high-coal,2040,Hydro,CA,12081.0
+full-current-policies-high-coal,2040,Hydro,MISO,9487.0
+full-current-policies-high-coal,2040,Hydro,NE,7751.0
+full-current-policies-high-coal,2040,Hydro,PJM,7250.0
+full-current-policies-high-coal,2040,Hydro,SOU,9417.0
+full-current-policies-high-coal,2040,Hydro,SPP,4998.0
+full-current-policies-high-coal,2040,Hydro,TRE,444.0
+full-current-policies-high-coal,2040,Hydro,WECC,37672.0
+full-current-policies-high-coal,2040,Hydrogen,CA,4.0
+full-current-policies-high-coal,2040,Hydrogen,MISO,12.0
+full-current-policies-high-coal,2040,Hydrogen,NE,33.0
+full-current-policies-high-coal,2040,Hydrogen,PJM,11.0
+full-current-policies-high-coal,2040,Hydrogen,SOU,6.0
+full-current-policies-high-coal,2040,Hydrogen,SPP,6.0
+full-current-policies-high-coal,2040,Hydrogen,TRE,4.0
+full-current-policies-high-coal,2040,Hydrogen,WECC,10.0
+full-current-policies-high-coal,2040,Natural Gas CC,CA,25524.0
+full-current-policies-high-coal,2040,Natural Gas CC,MISO,62038.0
+full-current-policies-high-coal,2040,Natural Gas CC,NE,37539.0
+full-current-policies-high-coal,2040,Natural Gas CC,PJM,73176.0
+full-current-policies-high-coal,2040,Natural Gas CC,SOU,62110.0
+full-current-policies-high-coal,2040,Natural Gas CC,SPP,10955.0
+full-current-policies-high-coal,2040,Natural Gas CC,TRE,39485.0
+full-current-policies-high-coal,2040,Natural Gas CC,WECC,33026.0
+full-current-policies-high-coal,2040,Natural Gas CT,CA,8920.0
+full-current-policies-high-coal,2040,Natural Gas CT,MISO,30892.0
+full-current-policies-high-coal,2040,Natural Gas CT,NE,6872.0
+full-current-policies-high-coal,2040,Natural Gas CT,PJM,28783.0
+full-current-policies-high-coal,2040,Natural Gas CT,SOU,31728.0
+full-current-policies-high-coal,2040,Natural Gas CT,SPP,9028.0
+full-current-policies-high-coal,2040,Natural Gas CT,TRE,8034.0
+full-current-policies-high-coal,2040,Natural Gas CT,WECC,9257.0
+full-current-policies-high-coal,2040,Nuclear,CA,2.0
+full-current-policies-high-coal,2040,Nuclear,MISO,20324.0
+full-current-policies-high-coal,2040,Nuclear,NE,6716.0
+full-current-policies-high-coal,2040,Nuclear,PJM,33765.0
+full-current-policies-high-coal,2040,Nuclear,SOU,23927.0
+full-current-policies-high-coal,2040,Nuclear,SPP,2028.0
+full-current-policies-high-coal,2040,Nuclear,TRE,5122.0
+full-current-policies-high-coal,2040,Nuclear,WECC,5179.0
+full-current-policies-high-coal,2040,Solar,CA,60759.0
+full-current-policies-high-coal,2040,Solar,MISO,111628.0
+full-current-policies-high-coal,2040,Solar,NE,35019.0
+full-current-policies-high-coal,2040,Solar,PJM,87961.0
+full-current-policies-high-coal,2040,Solar,SOU,131726.0
+full-current-policies-high-coal,2040,Solar,SPP,15248.0
+full-current-policies-high-coal,2040,Solar,TRE,49780.0
+full-current-policies-high-coal,2040,Solar,WECC,80231.0
+full-current-policies-high-coal,2040,Wind,CA,4211.0
+full-current-policies-high-coal,2040,Wind,MISO,133786.0
+full-current-policies-high-coal,2040,Wind,NE,46220.0
+full-current-policies-high-coal,2040,Wind,PJM,53786.0
+full-current-policies-high-coal,2040,Wind,SOU,23111.0
+full-current-policies-high-coal,2040,Wind,SPP,90287.0
+full-current-policies-high-coal,2040,Wind,TRE,88823.0
+full-current-policies-high-coal,2040,Wind,WECC,97323.0
+full-current-policies-high-coal,2045,Battery,CA,14990.0
+full-current-policies-high-coal,2045,Battery,MISO,24822.0
+full-current-policies-high-coal,2045,Battery,NE,18530.0
+full-current-policies-high-coal,2045,Battery,PJM,16128.0
+full-current-policies-high-coal,2045,Battery,SOU,8944.0
+full-current-policies-high-coal,2045,Battery,SPP,412.0
+full-current-policies-high-coal,2045,Battery,TRE,4720.0
+full-current-policies-high-coal,2045,Battery,WECC,10532.0
+full-current-policies-high-coal,2045,CCS,CA,1188.0
+full-current-policies-high-coal,2045,CCS,MISO,83.0
+full-current-policies-high-coal,2045,CCS,NE,
+full-current-policies-high-coal,2045,CCS,PJM,2168.0
+full-current-policies-high-coal,2045,CCS,SOU,65.0
+full-current-policies-high-coal,2045,CCS,SPP,53.0
+full-current-policies-high-coal,2045,CCS,TRE,33.0
+full-current-policies-high-coal,2045,CCS,WECC,53.0
+full-current-policies-high-coal,2045,Coal,CA,0.0
+full-current-policies-high-coal,2045,Coal,MISO,18785.0
+full-current-policies-high-coal,2045,Coal,NE,0.0
+full-current-policies-high-coal,2045,Coal,PJM,6529.0
+full-current-policies-high-coal,2045,Coal,SOU,11603.0
+full-current-policies-high-coal,2045,Coal,SPP,7843.0
+full-current-policies-high-coal,2045,Coal,TRE,5176.0
+full-current-policies-high-coal,2045,Coal,WECC,7397.0
+full-current-policies-high-coal,2045,Distributed Solar,CA,16615.0
+full-current-policies-high-coal,2045,Distributed Solar,MISO,20073.0
+full-current-policies-high-coal,2045,Distributed Solar,NE,9515.0
+full-current-policies-high-coal,2045,Distributed Solar,PJM,21990.0
+full-current-policies-high-coal,2045,Distributed Solar,SOU,15619.0
+full-current-policies-high-coal,2045,Distributed Solar,SPP,5222.0
+full-current-policies-high-coal,2045,Distributed Solar,TRE,8971.0
+full-current-policies-high-coal,2045,Distributed Solar,WECC,10369.0
+full-current-policies-high-coal,2045,Geothermal,CA,24.0
+full-current-policies-high-coal,2045,Geothermal,MISO,
+full-current-policies-high-coal,2045,Geothermal,NE,
+full-current-policies-high-coal,2045,Geothermal,PJM,
+full-current-policies-high-coal,2045,Geothermal,SOU,
+full-current-policies-high-coal,2045,Geothermal,SPP,
+full-current-policies-high-coal,2045,Geothermal,TRE,
+full-current-policies-high-coal,2045,Geothermal,WECC,193.0
+full-current-policies-high-coal,2045,Hydro,CA,11621.0
+full-current-policies-high-coal,2045,Hydro,MISO,8313.0
+full-current-policies-high-coal,2045,Hydro,NE,7742.0
+full-current-policies-high-coal,2045,Hydro,PJM,7250.0
+full-current-policies-high-coal,2045,Hydro,SOU,9225.0
+full-current-policies-high-coal,2045,Hydro,SPP,4864.0
+full-current-policies-high-coal,2045,Hydro,TRE,286.0
+full-current-policies-high-coal,2045,Hydro,WECC,35573.0
+full-current-policies-high-coal,2045,Hydrogen,CA,105.0
+full-current-policies-high-coal,2045,Hydrogen,MISO,344.0
+full-current-policies-high-coal,2045,Hydrogen,NE,893.0
+full-current-policies-high-coal,2045,Hydrogen,PJM,279.0
+full-current-policies-high-coal,2045,Hydrogen,SOU,185.0
+full-current-policies-high-coal,2045,Hydrogen,SPP,273.0
+full-current-policies-high-coal,2045,Hydrogen,TRE,148.0
+full-current-policies-high-coal,2045,Hydrogen,WECC,418.0
+full-current-policies-high-coal,2045,Natural Gas CC,CA,38346.0
+full-current-policies-high-coal,2045,Natural Gas CC,MISO,104418.0
+full-current-policies-high-coal,2045,Natural Gas CC,NE,41466.0
+full-current-policies-high-coal,2045,Natural Gas CC,PJM,94358.0
+full-current-policies-high-coal,2045,Natural Gas CC,SOU,88305.0
+full-current-policies-high-coal,2045,Natural Gas CC,SPP,14260.0
+full-current-policies-high-coal,2045,Natural Gas CC,TRE,59777.0
+full-current-policies-high-coal,2045,Natural Gas CC,WECC,54849.0
+full-current-policies-high-coal,2045,Natural Gas CT,CA,8548.0
+full-current-policies-high-coal,2045,Natural Gas CT,MISO,28744.0
+full-current-policies-high-coal,2045,Natural Gas CT,NE,7435.0
+full-current-policies-high-coal,2045,Natural Gas CT,PJM,26438.0
+full-current-policies-high-coal,2045,Natural Gas CT,SOU,27519.0
+full-current-policies-high-coal,2045,Natural Gas CT,SPP,9067.0
+full-current-policies-high-coal,2045,Natural Gas CT,TRE,7742.0
+full-current-policies-high-coal,2045,Natural Gas CT,WECC,8865.0
+full-current-policies-high-coal,2045,Nuclear,CA,8.0
+full-current-policies-high-coal,2045,Nuclear,MISO,20339.0
+full-current-policies-high-coal,2045,Nuclear,NE,6728.0
+full-current-policies-high-coal,2045,Nuclear,PJM,33777.0
+full-current-policies-high-coal,2045,Nuclear,SOU,23936.0
+full-current-policies-high-coal,2045,Nuclear,SPP,2038.0
+full-current-policies-high-coal,2045,Nuclear,TRE,5129.0
+full-current-policies-high-coal,2045,Nuclear,WECC,5193.0
+full-current-policies-high-coal,2045,Solar,CA,60215.0
+full-current-policies-high-coal,2045,Solar,MISO,111765.0
+full-current-policies-high-coal,2045,Solar,NE,43372.0
+full-current-policies-high-coal,2045,Solar,PJM,87345.0
+full-current-policies-high-coal,2045,Solar,SOU,130300.0
+full-current-policies-high-coal,2045,Solar,SPP,17935.0
+full-current-policies-high-coal,2045,Solar,TRE,49669.0
+full-current-policies-high-coal,2045,Solar,WECC,81408.0
+full-current-policies-high-coal,2045,Wind,CA,1134.0
+full-current-policies-high-coal,2045,Wind,MISO,127125.0
+full-current-policies-high-coal,2045,Wind,NE,47144.0
+full-current-policies-high-coal,2045,Wind,PJM,51524.0
+full-current-policies-high-coal,2045,Wind,SOU,23250.0
+full-current-policies-high-coal,2045,Wind,SPP,82725.0
+full-current-policies-high-coal,2045,Wind,TRE,81908.0
+full-current-policies-high-coal,2045,Wind,WECC,92845.0
+full-current-policies-high-coal,2050,Battery,CA,16522.0
+full-current-policies-high-coal,2050,Battery,MISO,25061.0
+full-current-policies-high-coal,2050,Battery,NE,18545.0
+full-current-policies-high-coal,2050,Battery,PJM,17177.0
+full-current-policies-high-coal,2050,Battery,SOU,9763.0
+full-current-policies-high-coal,2050,Battery,SPP,897.0
+full-current-policies-high-coal,2050,Battery,TRE,5091.0
+full-current-policies-high-coal,2050,Battery,WECC,16483.0
+full-current-policies-high-coal,2050,CCS,CA,1190.0
+full-current-policies-high-coal,2050,CCS,MISO,94.0
+full-current-policies-high-coal,2050,CCS,NE,
+full-current-policies-high-coal,2050,CCS,PJM,2172.0
+full-current-policies-high-coal,2050,CCS,SOU,74.0
+full-current-policies-high-coal,2050,CCS,SPP,59.0
+full-current-policies-high-coal,2050,CCS,TRE,37.0
+full-current-policies-high-coal,2050,CCS,WECC,61.0
+full-current-policies-high-coal,2050,Coal,CA,0.0
+full-current-policies-high-coal,2050,Coal,MISO,8339.0
+full-current-policies-high-coal,2050,Coal,NE,0.0
+full-current-policies-high-coal,2050,Coal,PJM,4784.0
+full-current-policies-high-coal,2050,Coal,SOU,5383.0
+full-current-policies-high-coal,2050,Coal,SPP,3570.0
+full-current-policies-high-coal,2050,Coal,TRE,4175.0
+full-current-policies-high-coal,2050,Coal,WECC,3981.0
+full-current-policies-high-coal,2050,Distributed Solar,CA,16772.0
+full-current-policies-high-coal,2050,Distributed Solar,MISO,22534.0
+full-current-policies-high-coal,2050,Distributed Solar,NE,10072.0
+full-current-policies-high-coal,2050,Distributed Solar,PJM,23002.0
+full-current-policies-high-coal,2050,Distributed Solar,SOU,17352.0
+full-current-policies-high-coal,2050,Distributed Solar,SPP,6128.0
+full-current-policies-high-coal,2050,Distributed Solar,TRE,10109.0
+full-current-policies-high-coal,2050,Distributed Solar,WECC,10744.0
+full-current-policies-high-coal,2050,Geothermal,CA,24.0
+full-current-policies-high-coal,2050,Geothermal,MISO,
+full-current-policies-high-coal,2050,Geothermal,NE,
+full-current-policies-high-coal,2050,Geothermal,PJM,
+full-current-policies-high-coal,2050,Geothermal,SOU,
+full-current-policies-high-coal,2050,Geothermal,SPP,
+full-current-policies-high-coal,2050,Geothermal,TRE,
+full-current-policies-high-coal,2050,Geothermal,WECC,76.0
+full-current-policies-high-coal,2050,Hydro,CA,10742.0
+full-current-policies-high-coal,2050,Hydro,MISO,7614.0
+full-current-policies-high-coal,2050,Hydro,NE,7654.0
+full-current-policies-high-coal,2050,Hydro,PJM,7250.0
+full-current-policies-high-coal,2050,Hydro,SOU,9128.0
+full-current-policies-high-coal,2050,Hydro,SPP,4754.0
+full-current-policies-high-coal,2050,Hydro,TRE,228.0
+full-current-policies-high-coal,2050,Hydro,WECC,34122.0
+full-current-policies-high-coal,2050,Hydrogen,CA,137.0
+full-current-policies-high-coal,2050,Hydrogen,MISO,506.0
+full-current-policies-high-coal,2050,Hydrogen,NE,1233.0
+full-current-policies-high-coal,2050,Hydrogen,PJM,604.0
+full-current-policies-high-coal,2050,Hydrogen,SOU,324.0
+full-current-policies-high-coal,2050,Hydrogen,SPP,355.0
+full-current-policies-high-coal,2050,Hydrogen,TRE,190.0
+full-current-policies-high-coal,2050,Hydrogen,WECC,603.0
+full-current-policies-high-coal,2050,Natural Gas CC,CA,45509.0
+full-current-policies-high-coal,2050,Natural Gas CC,MISO,137655.0
+full-current-policies-high-coal,2050,Natural Gas CC,NE,40870.0
+full-current-policies-high-coal,2050,Natural Gas CC,PJM,109655.0
+full-current-policies-high-coal,2050,Natural Gas CC,SOU,119355.0
+full-current-policies-high-coal,2050,Natural Gas CC,SPP,19930.0
+full-current-policies-high-coal,2050,Natural Gas CC,TRE,70498.0
+full-current-policies-high-coal,2050,Natural Gas CC,WECC,74352.0
+full-current-policies-high-coal,2050,Natural Gas CT,CA,8403.0
+full-current-policies-high-coal,2050,Natural Gas CT,MISO,20759.0
+full-current-policies-high-coal,2050,Natural Gas CT,NE,7463.0
+full-current-policies-high-coal,2050,Natural Gas CT,PJM,21099.0
+full-current-policies-high-coal,2050,Natural Gas CT,SOU,19999.0
+full-current-policies-high-coal,2050,Natural Gas CT,SPP,8227.0
+full-current-policies-high-coal,2050,Natural Gas CT,TRE,7054.0
+full-current-policies-high-coal,2050,Natural Gas CT,WECC,8898.0
+full-current-policies-high-coal,2050,Nuclear,CA,8.0
+full-current-policies-high-coal,2050,Nuclear,MISO,19751.0
+full-current-policies-high-coal,2050,Nuclear,NE,5524.0
+full-current-policies-high-coal,2050,Nuclear,PJM,32835.0
+full-current-policies-high-coal,2050,Nuclear,SOU,23939.0
+full-current-policies-high-coal,2050,Nuclear,SPP,2040.0
+full-current-policies-high-coal,2050,Nuclear,TRE,5130.0
+full-current-policies-high-coal,2050,Nuclear,WECC,5195.0
+full-current-policies-high-coal,2050,Solar,CA,68883.0
+full-current-policies-high-coal,2050,Solar,MISO,109900.0
+full-current-policies-high-coal,2050,Solar,NE,54895.0
+full-current-policies-high-coal,2050,Solar,PJM,84355.0
+full-current-policies-high-coal,2050,Solar,SOU,121300.0
+full-current-policies-high-coal,2050,Solar,SPP,25707.0
+full-current-policies-high-coal,2050,Solar,TRE,52813.0
+full-current-policies-high-coal,2050,Solar,WECC,97118.0
+full-current-policies-high-coal,2050,Wind,CA,643.0
+full-current-policies-high-coal,2050,Wind,MISO,115190.0
+full-current-policies-high-coal,2050,Wind,NE,50647.0
+full-current-policies-high-coal,2050,Wind,PJM,49058.0
+full-current-policies-high-coal,2050,Wind,SOU,23307.0
+full-current-policies-high-coal,2050,Wind,SPP,73052.0
+full-current-policies-high-coal,2050,Wind,TRE,70968.0
+full-current-policies-high-coal,2050,Wind,WECC,87907.0
+full-current-policies-low-gas,2027,Battery,CA,11587.0
+full-current-policies-low-gas,2027,Battery,MISO,220.0
+full-current-policies-low-gas,2027,Battery,NE,575.0
+full-current-policies-low-gas,2027,Battery,PJM,335.0
+full-current-policies-low-gas,2027,Battery,SOU,880.0
+full-current-policies-low-gas,2027,Battery,SPP,240.0
+full-current-policies-low-gas,2027,Battery,TRE,4714.0
+full-current-policies-low-gas,2027,Battery,WECC,3408.0
+full-current-policies-low-gas,2027,CCS,CA,2.0
+full-current-policies-low-gas,2027,CCS,MISO,5.0
+full-current-policies-low-gas,2027,CCS,NE,
+full-current-policies-low-gas,2027,CCS,PJM,2.0
+full-current-policies-low-gas,2027,CCS,SOU,3.0
+full-current-policies-low-gas,2027,CCS,SPP,3.0
+full-current-policies-low-gas,2027,CCS,TRE,2.0
+full-current-policies-low-gas,2027,CCS,WECC,2.0
+full-current-policies-low-gas,2027,Coal,CA,0.0
+full-current-policies-low-gas,2027,Coal,MISO,47178.0
+full-current-policies-low-gas,2027,Coal,NE,330.0
+full-current-policies-low-gas,2027,Coal,PJM,32702.0
+full-current-policies-low-gas,2027,Coal,SOU,27777.0
+full-current-policies-low-gas,2027,Coal,SPP,19975.0
+full-current-policies-low-gas,2027,Coal,TRE,12980.0
+full-current-policies-low-gas,2027,Coal,WECC,16395.0
+full-current-policies-low-gas,2027,Distributed Solar,CA,11447.0
+full-current-policies-low-gas,2027,Distributed Solar,MISO,5248.0
+full-current-policies-low-gas,2027,Distributed Solar,NE,6061.0
+full-current-policies-low-gas,2027,Distributed Solar,PJM,9958.0
+full-current-policies-low-gas,2027,Distributed Solar,SOU,5464.0
+full-current-policies-low-gas,2027,Distributed Solar,SPP,1242.0
+full-current-policies-low-gas,2027,Distributed Solar,TRE,2996.0
+full-current-policies-low-gas,2027,Distributed Solar,WECC,5470.0
+full-current-policies-low-gas,2027,Geothermal,CA,24.0
+full-current-policies-low-gas,2027,Geothermal,MISO,
+full-current-policies-low-gas,2027,Geothermal,NE,
+full-current-policies-low-gas,2027,Geothermal,PJM,
+full-current-policies-low-gas,2027,Geothermal,SOU,
+full-current-policies-low-gas,2027,Geothermal,SPP,
+full-current-policies-low-gas,2027,Geothermal,TRE,
+full-current-policies-low-gas,2027,Geothermal,WECC,652.0
+full-current-policies-low-gas,2027,Hydro,CA,12410.0
+full-current-policies-low-gas,2027,Hydro,MISO,10658.0
+full-current-policies-low-gas,2027,Hydro,NE,8305.0
+full-current-policies-low-gas,2027,Hydro,PJM,8069.0
+full-current-policies-low-gas,2027,Hydro,SOU,10043.0
+full-current-policies-low-gas,2027,Hydro,SPP,5145.0
+full-current-policies-low-gas,2027,Hydro,TRE,499.0
+full-current-policies-low-gas,2027,Hydro,WECC,39617.0
+full-current-policies-low-gas,2027,Hydrogen,CA,3.0
+full-current-policies-low-gas,2027,Hydrogen,MISO,10.0
+full-current-policies-low-gas,2027,Hydrogen,NE,6.0
+full-current-policies-low-gas,2027,Hydrogen,PJM,8.0
+full-current-policies-low-gas,2027,Hydrogen,SOU,6.0
+full-current-policies-low-gas,2027,Hydrogen,SPP,6.0
+full-current-policies-low-gas,2027,Hydrogen,TRE,4.0
+full-current-policies-low-gas,2027,Hydrogen,WECC,8.0
+full-current-policies-low-gas,2027,Natural Gas CC,CA,20999.0
+full-current-policies-low-gas,2027,Natural Gas CC,MISO,51521.0
+full-current-policies-low-gas,2027,Natural Gas CC,NE,26623.0
+full-current-policies-low-gas,2027,Natural Gas CC,PJM,59240.0
+full-current-policies-low-gas,2027,Natural Gas CC,SOU,64579.0
+full-current-policies-low-gas,2027,Natural Gas CC,SPP,11504.0
+full-current-policies-low-gas,2027,Natural Gas CC,TRE,41445.0
+full-current-policies-low-gas,2027,Natural Gas CC,WECC,30900.0
+full-current-policies-low-gas,2027,Natural Gas CT,CA,11123.0
+full-current-policies-low-gas,2027,Natural Gas CT,MISO,33032.0
+full-current-policies-low-gas,2027,Natural Gas CT,NE,3932.0
+full-current-policies-low-gas,2027,Natural Gas CT,PJM,29936.0
+full-current-policies-low-gas,2027,Natural Gas CT,SOU,32096.0
+full-current-policies-low-gas,2027,Natural Gas CT,SPP,9943.0
+full-current-policies-low-gas,2027,Natural Gas CT,TRE,10310.0
+full-current-policies-low-gas,2027,Natural Gas CT,WECC,10218.0
+full-current-policies-low-gas,2027,Nuclear,CA,0.0
+full-current-policies-low-gas,2027,Nuclear,MISO,20319.0
+full-current-policies-low-gas,2027,Nuclear,NE,6714.0
+full-current-policies-low-gas,2027,Nuclear,PJM,33761.0
+full-current-policies-low-gas,2027,Nuclear,SOU,23924.0
+full-current-policies-low-gas,2027,Nuclear,SPP,2025.0
+full-current-policies-low-gas,2027,Nuclear,TRE,5120.0
+full-current-policies-low-gas,2027,Nuclear,WECC,5175.0
+full-current-policies-low-gas,2027,Solar,CA,20127.0
+full-current-policies-low-gas,2027,Solar,MISO,12383.0
+full-current-policies-low-gas,2027,Solar,NE,16170.0
+full-current-policies-low-gas,2027,Solar,PJM,11473.0
+full-current-policies-low-gas,2027,Solar,SOU,24598.0
+full-current-policies-low-gas,2027,Solar,SPP,563.0
+full-current-policies-low-gas,2027,Solar,TRE,22379.0
+full-current-policies-low-gas,2027,Solar,WECC,19621.0
+full-current-policies-low-gas,2027,Wind,CA,5498.0
+full-current-policies-low-gas,2027,Wind,MISO,57270.0
+full-current-policies-low-gas,2027,Wind,NE,23866.0
+full-current-policies-low-gas,2027,Wind,PJM,29506.0
+full-current-policies-low-gas,2027,Wind,SOU,289.0
+full-current-policies-low-gas,2027,Wind,SPP,48211.0
+full-current-policies-low-gas,2027,Wind,TRE,57450.0
+full-current-policies-low-gas,2027,Wind,WECC,41667.0
+full-current-policies-low-gas,2030,Battery,CA,
+full-current-policies-low-gas,2030,Battery,MISO,
+full-current-policies-low-gas,2030,Battery,NE,
+full-current-policies-low-gas,2030,Battery,PJM,
+full-current-policies-low-gas,2030,Battery,SOU,
+full-current-policies-low-gas,2030,Battery,SPP,
+full-current-policies-low-gas,2030,Battery,TRE,
+full-current-policies-low-gas,2030,Battery,WECC,
+full-current-policies-low-gas,2030,CCS,CA,
+full-current-policies-low-gas,2030,CCS,MISO,
+full-current-policies-low-gas,2030,CCS,NE,
+full-current-policies-low-gas,2030,CCS,PJM,
+full-current-policies-low-gas,2030,CCS,SOU,
+full-current-policies-low-gas,2030,CCS,SPP,
+full-current-policies-low-gas,2030,CCS,TRE,
+full-current-policies-low-gas,2030,CCS,WECC,
+full-current-policies-low-gas,2030,Coal,CA,
+full-current-policies-low-gas,2030,Coal,MISO,
+full-current-policies-low-gas,2030,Coal,NE,
+full-current-policies-low-gas,2030,Coal,PJM,
+full-current-policies-low-gas,2030,Coal,SOU,
+full-current-policies-low-gas,2030,Coal,SPP,
+full-current-policies-low-gas,2030,Coal,TRE,
+full-current-policies-low-gas,2030,Coal,WECC,
+full-current-policies-low-gas,2030,Distributed Solar,CA,
+full-current-policies-low-gas,2030,Distributed Solar,MISO,
+full-current-policies-low-gas,2030,Distributed Solar,NE,
+full-current-policies-low-gas,2030,Distributed Solar,PJM,
+full-current-policies-low-gas,2030,Distributed Solar,SOU,
+full-current-policies-low-gas,2030,Distributed Solar,SPP,
+full-current-policies-low-gas,2030,Distributed Solar,TRE,
+full-current-policies-low-gas,2030,Distributed Solar,WECC,
+full-current-policies-low-gas,2030,Geothermal,CA,
+full-current-policies-low-gas,2030,Geothermal,MISO,
+full-current-policies-low-gas,2030,Geothermal,NE,
+full-current-policies-low-gas,2030,Geothermal,PJM,
+full-current-policies-low-gas,2030,Geothermal,SOU,
+full-current-policies-low-gas,2030,Geothermal,SPP,
+full-current-policies-low-gas,2030,Geothermal,TRE,
+full-current-policies-low-gas,2030,Geothermal,WECC,
+full-current-policies-low-gas,2030,Hydro,CA,
+full-current-policies-low-gas,2030,Hydro,MISO,
+full-current-policies-low-gas,2030,Hydro,NE,
+full-current-policies-low-gas,2030,Hydro,PJM,
+full-current-policies-low-gas,2030,Hydro,SOU,
+full-current-policies-low-gas,2030,Hydro,SPP,
+full-current-policies-low-gas,2030,Hydro,TRE,
+full-current-policies-low-gas,2030,Hydro,WECC,
+full-current-policies-low-gas,2030,Hydrogen,CA,
+full-current-policies-low-gas,2030,Hydrogen,MISO,
+full-current-policies-low-gas,2030,Hydrogen,NE,
+full-current-policies-low-gas,2030,Hydrogen,PJM,
+full-current-policies-low-gas,2030,Hydrogen,SOU,
+full-current-policies-low-gas,2030,Hydrogen,SPP,
+full-current-policies-low-gas,2030,Hydrogen,TRE,
+full-current-policies-low-gas,2030,Hydrogen,WECC,
+full-current-policies-low-gas,2030,Natural Gas CC,CA,
+full-current-policies-low-gas,2030,Natural Gas CC,MISO,
+full-current-policies-low-gas,2030,Natural Gas CC,NE,
+full-current-policies-low-gas,2030,Natural Gas CC,PJM,
+full-current-policies-low-gas,2030,Natural Gas CC,SOU,
+full-current-policies-low-gas,2030,Natural Gas CC,SPP,
+full-current-policies-low-gas,2030,Natural Gas CC,TRE,
+full-current-policies-low-gas,2030,Natural Gas CC,WECC,
+full-current-policies-low-gas,2030,Natural Gas CT,CA,
+full-current-policies-low-gas,2030,Natural Gas CT,MISO,
+full-current-policies-low-gas,2030,Natural Gas CT,NE,
+full-current-policies-low-gas,2030,Natural Gas CT,PJM,
+full-current-policies-low-gas,2030,Natural Gas CT,SOU,
+full-current-policies-low-gas,2030,Natural Gas CT,SPP,
+full-current-policies-low-gas,2030,Natural Gas CT,TRE,
+full-current-policies-low-gas,2030,Natural Gas CT,WECC,
+full-current-policies-low-gas,2030,Nuclear,CA,
+full-current-policies-low-gas,2030,Nuclear,MISO,
+full-current-policies-low-gas,2030,Nuclear,NE,
+full-current-policies-low-gas,2030,Nuclear,PJM,
+full-current-policies-low-gas,2030,Nuclear,SOU,
+full-current-policies-low-gas,2030,Nuclear,SPP,
+full-current-policies-low-gas,2030,Nuclear,TRE,
+full-current-policies-low-gas,2030,Nuclear,WECC,
+full-current-policies-low-gas,2030,Solar,CA,
+full-current-policies-low-gas,2030,Solar,MISO,
+full-current-policies-low-gas,2030,Solar,NE,
+full-current-policies-low-gas,2030,Solar,PJM,
+full-current-policies-low-gas,2030,Solar,SOU,
+full-current-policies-low-gas,2030,Solar,SPP,
+full-current-policies-low-gas,2030,Solar,TRE,
+full-current-policies-low-gas,2030,Solar,WECC,
+full-current-policies-low-gas,2030,Wind,CA,
+full-current-policies-low-gas,2030,Wind,MISO,
+full-current-policies-low-gas,2030,Wind,NE,
+full-current-policies-low-gas,2030,Wind,PJM,
+full-current-policies-low-gas,2030,Wind,SOU,
+full-current-policies-low-gas,2030,Wind,SPP,
+full-current-policies-low-gas,2030,Wind,TRE,
+full-current-policies-low-gas,2030,Wind,WECC,
+full-current-policies-low-gas,2035,Battery,CA,22436.0
+full-current-policies-low-gas,2035,Battery,MISO,12064.0
+full-current-policies-low-gas,2035,Battery,NE,26540.0
+full-current-policies-low-gas,2035,Battery,PJM,3026.0
+full-current-policies-low-gas,2035,Battery,SOU,1990.0
+full-current-policies-low-gas,2035,Battery,SPP,750.0
+full-current-policies-low-gas,2035,Battery,TRE,9382.0
+full-current-policies-low-gas,2035,Battery,WECC,7144.0
+full-current-policies-low-gas,2035,CCS,CA,88.0
+full-current-policies-low-gas,2035,CCS,MISO,460.0
+full-current-policies-low-gas,2035,CCS,NE,
+full-current-policies-low-gas,2035,CCS,PJM,286.0
+full-current-policies-low-gas,2035,CCS,SOU,138.0
+full-current-policies-low-gas,2035,CCS,SPP,72.0
+full-current-policies-low-gas,2035,CCS,TRE,68.0
+full-current-policies-low-gas,2035,CCS,WECC,80.0
+full-current-policies-low-gas,2035,Coal,CA,0.0
+full-current-policies-low-gas,2035,Coal,MISO,74896.0
+full-current-policies-low-gas,2035,Coal,NE,0.0
+full-current-policies-low-gas,2035,Coal,PJM,43512.0
+full-current-policies-low-gas,2035,Coal,SOU,44998.0
+full-current-policies-low-gas,2035,Coal,SPP,35576.0
+full-current-policies-low-gas,2035,Coal,TRE,21462.0
+full-current-policies-low-gas,2035,Coal,WECC,24286.0
+full-current-policies-low-gas,2035,Distributed Solar,CA,31526.0
+full-current-policies-low-gas,2035,Distributed Solar,MISO,32898.0
+full-current-policies-low-gas,2035,Distributed Solar,NE,17636.0
+full-current-policies-low-gas,2035,Distributed Solar,PJM,40444.0
+full-current-policies-low-gas,2035,Distributed Solar,SOU,27076.0
+full-current-policies-low-gas,2035,Distributed Solar,SPP,7500.0
+full-current-policies-low-gas,2035,Distributed Solar,TRE,17192.0
+full-current-policies-low-gas,2035,Distributed Solar,WECC,19774.0
+full-current-policies-low-gas,2035,Geothermal,CA,48.0
+full-current-policies-low-gas,2035,Geothermal,MISO,
+full-current-policies-low-gas,2035,Geothermal,NE,
+full-current-policies-low-gas,2035,Geothermal,PJM,
+full-current-policies-low-gas,2035,Geothermal,SOU,
+full-current-policies-low-gas,2035,Geothermal,SPP,
+full-current-policies-low-gas,2035,Geothermal,TRE,
+full-current-policies-low-gas,2035,Geothermal,WECC,1134.0
+full-current-policies-low-gas,2035,Hydro,CA,24168.0
+full-current-policies-low-gas,2035,Hydro,MISO,20198.0
+full-current-policies-low-gas,2035,Hydro,NE,15644.0
+full-current-policies-low-gas,2035,Hydro,PJM,15026.0
+full-current-policies-low-gas,2035,Hydro,SOU,18836.0
+full-current-policies-low-gas,2035,Hydro,SPP,10258.0
+full-current-policies-low-gas,2035,Hydro,TRE,986.0
+full-current-policies-low-gas,2035,Hydro,WECC,78440.0
+full-current-policies-low-gas,2035,Hydrogen,CA,82.0
+full-current-policies-low-gas,2035,Hydrogen,MISO,300.0
+full-current-policies-low-gas,2035,Hydrogen,NE,576.0
+full-current-policies-low-gas,2035,Hydrogen,PJM,262.0
+full-current-policies-low-gas,2035,Hydrogen,SOU,146.0
+full-current-policies-low-gas,2035,Hydrogen,SPP,144.0
+full-current-policies-low-gas,2035,Hydrogen,TRE,104.0
+full-current-policies-low-gas,2035,Hydrogen,WECC,212.0
+full-current-policies-low-gas,2035,Natural Gas CC,CA,42098.0
+full-current-policies-low-gas,2035,Natural Gas CC,MISO,103894.0
+full-current-policies-low-gas,2035,Natural Gas CC,NE,67070.0
+full-current-policies-low-gas,2035,Natural Gas CC,PJM,118886.0
+full-current-policies-low-gas,2035,Natural Gas CC,SOU,124534.0
+full-current-policies-low-gas,2035,Natural Gas CC,SPP,22562.0
+full-current-policies-low-gas,2035,Natural Gas CC,TRE,80348.0
+full-current-policies-low-gas,2035,Natural Gas CC,WECC,59606.0
+full-current-policies-low-gas,2035,Natural Gas CT,CA,21212.0
+full-current-policies-low-gas,2035,Natural Gas CT,MISO,63250.0
+full-current-policies-low-gas,2035,Natural Gas CT,NE,8620.0
+full-current-policies-low-gas,2035,Natural Gas CT,PJM,59914.0
+full-current-policies-low-gas,2035,Natural Gas CT,SOU,64004.0
+full-current-policies-low-gas,2035,Natural Gas CT,SPP,18940.0
+full-current-policies-low-gas,2035,Natural Gas CT,TRE,19978.0
+full-current-policies-low-gas,2035,Natural Gas CT,WECC,18794.0
+full-current-policies-low-gas,2035,Nuclear,CA,22.0
+full-current-policies-low-gas,2035,Nuclear,MISO,40696.0
+full-current-policies-low-gas,2035,Nuclear,NE,13456.0
+full-current-policies-low-gas,2035,Nuclear,PJM,67566.0
+full-current-policies-low-gas,2035,Nuclear,SOU,47886.0
+full-current-policies-low-gas,2035,Nuclear,SPP,4080.0
+full-current-policies-low-gas,2035,Nuclear,TRE,10264.0
+full-current-policies-low-gas,2035,Nuclear,WECC,10396.0
+full-current-policies-low-gas,2035,Solar,CA,99156.0
+full-current-policies-low-gas,2035,Solar,MISO,153782.0
+full-current-policies-low-gas,2035,Solar,NE,49578.0
+full-current-policies-low-gas,2035,Solar,PJM,52240.0
+full-current-policies-low-gas,2035,Solar,SOU,176302.0
+full-current-policies-low-gas,2035,Solar,SPP,4336.0
+full-current-policies-low-gas,2035,Solar,TRE,58954.0
+full-current-policies-low-gas,2035,Solar,WECC,98526.0
+full-current-policies-low-gas,2035,Wind,CA,10194.0
+full-current-policies-low-gas,2035,Wind,MISO,214494.0
+full-current-policies-low-gas,2035,Wind,NE,82530.0
+full-current-policies-low-gas,2035,Wind,PJM,96822.0
+full-current-policies-low-gas,2035,Wind,SOU,13952.0
+full-current-policies-low-gas,2035,Wind,SPP,141098.0
+full-current-policies-low-gas,2035,Wind,TRE,154636.0
+full-current-policies-low-gas,2035,Wind,WECC,148788.0
+full-current-policies-low-gas,2040,Battery,CA,23376.0
+full-current-policies-low-gas,2040,Battery,MISO,38046.0
+full-current-policies-low-gas,2040,Battery,NE,38066.0
+full-current-policies-low-gas,2040,Battery,PJM,17566.0
+full-current-policies-low-gas,2040,Battery,SOU,18754.0
+full-current-policies-low-gas,2040,Battery,SPP,924.0
+full-current-policies-low-gas,2040,Battery,TRE,9800.0
+full-current-policies-low-gas,2040,Battery,WECC,18806.0
+full-current-policies-low-gas,2040,CCS,CA,6556.0
+full-current-policies-low-gas,2040,CCS,MISO,15626.0
+full-current-policies-low-gas,2040,CCS,NE,
+full-current-policies-low-gas,2040,CCS,PJM,34092.0
+full-current-policies-low-gas,2040,CCS,SOU,2854.0
+full-current-policies-low-gas,2040,CCS,SPP,96.0
+full-current-policies-low-gas,2040,CCS,TRE,224.0
+full-current-policies-low-gas,2040,CCS,WECC,118.0
+full-current-policies-low-gas,2040,Coal,CA,0.0
+full-current-policies-low-gas,2040,Coal,MISO,55354.0
+full-current-policies-low-gas,2040,Coal,NE,0.0
+full-current-policies-low-gas,2040,Coal,PJM,16256.0
+full-current-policies-low-gas,2040,Coal,SOU,26004.0
+full-current-policies-low-gas,2040,Coal,SPP,28252.0
+full-current-policies-low-gas,2040,Coal,TRE,21462.0
+full-current-policies-low-gas,2040,Coal,WECC,17500.0
+full-current-policies-low-gas,2040,Distributed Solar,CA,32850.0
+full-current-policies-low-gas,2040,Distributed Solar,MISO,36910.0
+full-current-policies-low-gas,2040,Distributed Solar,NE,17902.0
+full-current-policies-low-gas,2040,Distributed Solar,PJM,41958.0
+full-current-policies-low-gas,2040,Distributed Solar,SOU,29986.0
+full-current-policies-low-gas,2040,Distributed Solar,SPP,8874.0
+full-current-policies-low-gas,2040,Distributed Solar,TRE,17726.0
+full-current-policies-low-gas,2040,Distributed Solar,WECC,20358.0
+full-current-policies-low-gas,2040,Geothermal,CA,48.0
+full-current-policies-low-gas,2040,Geothermal,MISO,
+full-current-policies-low-gas,2040,Geothermal,NE,
+full-current-policies-low-gas,2040,Geothermal,PJM,
+full-current-policies-low-gas,2040,Geothermal,SOU,
+full-current-policies-low-gas,2040,Geothermal,SPP,
+full-current-policies-low-gas,2040,Geothermal,TRE,
+full-current-policies-low-gas,2040,Geothermal,WECC,748.0
+full-current-policies-low-gas,2040,Hydro,CA,24162.0
+full-current-policies-low-gas,2040,Hydro,MISO,18974.0
+full-current-policies-low-gas,2040,Hydro,NE,15502.0
+full-current-policies-low-gas,2040,Hydro,PJM,14500.0
+full-current-policies-low-gas,2040,Hydro,SOU,18834.0
+full-current-policies-low-gas,2040,Hydro,SPP,9996.0
+full-current-policies-low-gas,2040,Hydro,TRE,888.0
+full-current-policies-low-gas,2040,Hydro,WECC,75344.0
+full-current-policies-low-gas,2040,Hydrogen,CA,94.0
+full-current-policies-low-gas,2040,Hydrogen,MISO,318.0
+full-current-policies-low-gas,2040,Hydrogen,NE,700.0
+full-current-policies-low-gas,2040,Hydrogen,PJM,276.0
+full-current-policies-low-gas,2040,Hydrogen,SOU,152.0
+full-current-policies-low-gas,2040,Hydrogen,SPP,150.0
+full-current-policies-low-gas,2040,Hydrogen,TRE,120.0
+full-current-policies-low-gas,2040,Hydrogen,WECC,278.0
+full-current-policies-low-gas,2040,Natural Gas CC,CA,50664.0
+full-current-policies-low-gas,2040,Natural Gas CC,MISO,123570.0
+full-current-policies-low-gas,2040,Natural Gas CC,NE,72456.0
+full-current-policies-low-gas,2040,Natural Gas CC,PJM,138990.0
+full-current-policies-low-gas,2040,Natural Gas CC,SOU,123744.0
+full-current-policies-low-gas,2040,Natural Gas CC,SPP,22024.0
+full-current-policies-low-gas,2040,Natural Gas CC,TRE,80006.0
+full-current-policies-low-gas,2040,Natural Gas CC,WECC,73068.0
+full-current-policies-low-gas,2040,Natural Gas CT,CA,17900.0
+full-current-policies-low-gas,2040,Natural Gas CT,MISO,61988.0
+full-current-policies-low-gas,2040,Natural Gas CT,NE,15920.0
+full-current-policies-low-gas,2040,Natural Gas CT,PJM,57726.0
+full-current-policies-low-gas,2040,Natural Gas CT,SOU,63546.0
+full-current-policies-low-gas,2040,Natural Gas CT,SPP,18142.0
+full-current-policies-low-gas,2040,Natural Gas CT,TRE,16144.0
+full-current-policies-low-gas,2040,Natural Gas CT,WECC,18694.0
+full-current-policies-low-gas,2040,Nuclear,CA,22.0
+full-current-policies-low-gas,2040,Nuclear,MISO,40700.0
+full-current-policies-low-gas,2040,Nuclear,NE,13464.0
+full-current-policies-low-gas,2040,Nuclear,PJM,67568.0
+full-current-policies-low-gas,2040,Nuclear,SOU,47890.0
+full-current-policies-low-gas,2040,Nuclear,SPP,4080.0
+full-current-policies-low-gas,2040,Nuclear,TRE,10264.0
+full-current-policies-low-gas,2040,Nuclear,WECC,10398.0
+full-current-policies-low-gas,2040,Solar,CA,108770.0
+full-current-policies-low-gas,2040,Solar,MISO,192790.0
+full-current-policies-low-gas,2040,Solar,NE,74214.0
+full-current-policies-low-gas,2040,Solar,PJM,84928.0
+full-current-policies-low-gas,2040,Solar,SOU,245568.0
+full-current-policies-low-gas,2040,Solar,SPP,18738.0
+full-current-policies-low-gas,2040,Solar,TRE,86698.0
+full-current-policies-low-gas,2040,Solar,WECC,149660.0
+full-current-policies-low-gas,2040,Wind,CA,8676.0
+full-current-policies-low-gas,2040,Wind,MISO,219756.0
+full-current-policies-low-gas,2040,Wind,NE,86792.0
+full-current-policies-low-gas,2040,Wind,PJM,88734.0
+full-current-policies-low-gas,2040,Wind,SOU,32928.0
+full-current-policies-low-gas,2040,Wind,SPP,170554.0
+full-current-policies-low-gas,2040,Wind,TRE,163964.0
+full-current-policies-low-gas,2040,Wind,WECC,169086.0
+full-current-policies-low-gas,2045,Battery,CA,26690.0
+full-current-policies-low-gas,2045,Battery,MISO,38056.0
+full-current-policies-low-gas,2045,Battery,NE,38068.0
+full-current-policies-low-gas,2045,Battery,PJM,17568.0
+full-current-policies-low-gas,2045,Battery,SOU,19038.0
+full-current-policies-low-gas,2045,Battery,SPP,940.0
+full-current-policies-low-gas,2045,Battery,TRE,9476.0
+full-current-policies-low-gas,2045,Battery,WECC,21648.0
+full-current-policies-low-gas,2045,CCS,CA,6558.0
+full-current-policies-low-gas,2045,CCS,MISO,15634.0
+full-current-policies-low-gas,2045,CCS,NE,
+full-current-policies-low-gas,2045,CCS,PJM,33986.0
+full-current-policies-low-gas,2045,CCS,SOU,2854.0
+full-current-policies-low-gas,2045,CCS,SPP,120.0
+full-current-policies-low-gas,2045,CCS,TRE,224.0
+full-current-policies-low-gas,2045,CCS,WECC,136.0
+full-current-policies-low-gas,2045,Coal,CA,0.0
+full-current-policies-low-gas,2045,Coal,MISO,37570.0
+full-current-policies-low-gas,2045,Coal,NE,0.0
+full-current-policies-low-gas,2045,Coal,PJM,13058.0
+full-current-policies-low-gas,2045,Coal,SOU,23206.0
+full-current-policies-low-gas,2045,Coal,SPP,15686.0
+full-current-policies-low-gas,2045,Coal,TRE,10352.0
+full-current-policies-low-gas,2045,Coal,WECC,14794.0
+full-current-policies-low-gas,2045,Distributed Solar,CA,33230.0
+full-current-policies-low-gas,2045,Distributed Solar,MISO,40146.0
+full-current-policies-low-gas,2045,Distributed Solar,NE,19030.0
+full-current-policies-low-gas,2045,Distributed Solar,PJM,43980.0
+full-current-policies-low-gas,2045,Distributed Solar,SOU,31238.0
+full-current-policies-low-gas,2045,Distributed Solar,SPP,10444.0
+full-current-policies-low-gas,2045,Distributed Solar,TRE,17942.0
+full-current-policies-low-gas,2045,Distributed Solar,WECC,20738.0
+full-current-policies-low-gas,2045,Geothermal,CA,48.0
+full-current-policies-low-gas,2045,Geothermal,MISO,
+full-current-policies-low-gas,2045,Geothermal,NE,
+full-current-policies-low-gas,2045,Geothermal,PJM,
+full-current-policies-low-gas,2045,Geothermal,SOU,
+full-current-policies-low-gas,2045,Geothermal,SPP,
+full-current-policies-low-gas,2045,Geothermal,TRE,
+full-current-policies-low-gas,2045,Geothermal,WECC,386.0
+full-current-policies-low-gas,2045,Hydro,CA,23242.0
+full-current-policies-low-gas,2045,Hydro,MISO,16626.0
+full-current-policies-low-gas,2045,Hydro,NE,15484.0
+full-current-policies-low-gas,2045,Hydro,PJM,14500.0
+full-current-policies-low-gas,2045,Hydro,SOU,18450.0
+full-current-policies-low-gas,2045,Hydro,SPP,9728.0
+full-current-policies-low-gas,2045,Hydro,TRE,572.0
+full-current-policies-low-gas,2045,Hydro,WECC,71146.0
+full-current-policies-low-gas,2045,Hydrogen,CA,218.0
+full-current-policies-low-gas,2045,Hydrogen,MISO,656.0
+full-current-policies-low-gas,2045,Hydrogen,NE,2488.0
+full-current-policies-low-gas,2045,Hydrogen,PJM,514.0
+full-current-policies-low-gas,2045,Hydrogen,SOU,382.0
+full-current-policies-low-gas,2045,Hydrogen,SPP,574.0
+full-current-policies-low-gas,2045,Hydrogen,TRE,308.0
+full-current-policies-low-gas,2045,Hydrogen,WECC,834.0
+full-current-policies-low-gas,2045,Natural Gas CC,CA,76290.0
+full-current-policies-low-gas,2045,Natural Gas CC,MISO,214674.0
+full-current-policies-low-gas,2045,Natural Gas CC,NE,77946.0
+full-current-policies-low-gas,2045,Natural Gas CC,PJM,182364.0
+full-current-policies-low-gas,2045,Natural Gas CC,SOU,176176.0
+full-current-policies-low-gas,2045,Natural Gas CC,SPP,32772.0
+full-current-policies-low-gas,2045,Natural Gas CC,TRE,124750.0
+full-current-policies-low-gas,2045,Natural Gas CC,WECC,122696.0
+full-current-policies-low-gas,2045,Natural Gas CT,CA,17112.0
+full-current-policies-low-gas,2045,Natural Gas CT,MISO,57464.0
+full-current-policies-low-gas,2045,Natural Gas CT,NE,18712.0
+full-current-policies-low-gas,2045,Natural Gas CT,PJM,52844.0
+full-current-policies-low-gas,2045,Natural Gas CT,SOU,55052.0
+full-current-policies-low-gas,2045,Natural Gas CT,SPP,18186.0
+full-current-policies-low-gas,2045,Natural Gas CT,TRE,15502.0
+full-current-policies-low-gas,2045,Natural Gas CT,WECC,17762.0
+full-current-policies-low-gas,2045,Nuclear,CA,26.0
+full-current-policies-low-gas,2045,Nuclear,MISO,40704.0
+full-current-policies-low-gas,2045,Nuclear,NE,13466.0
+full-current-policies-low-gas,2045,Nuclear,PJM,67570.0
+full-current-policies-low-gas,2045,Nuclear,SOU,47892.0
+full-current-policies-low-gas,2045,Nuclear,SPP,4080.0
+full-current-policies-low-gas,2045,Nuclear,TRE,10264.0
+full-current-policies-low-gas,2045,Nuclear,WECC,10402.0
+full-current-policies-low-gas,2045,Solar,CA,99582.0
+full-current-policies-low-gas,2045,Solar,MISO,192462.0
+full-current-policies-low-gas,2045,Solar,NE,87226.0
+full-current-policies-low-gas,2045,Solar,PJM,135256.0
+full-current-policies-low-gas,2045,Solar,SOU,242296.0
+full-current-policies-low-gas,2045,Solar,SPP,22304.0
+full-current-policies-low-gas,2045,Solar,TRE,86120.0
+full-current-policies-low-gas,2045,Solar,WECC,143706.0
+full-current-policies-low-gas,2045,Wind,CA,2372.0
+full-current-policies-low-gas,2045,Wind,MISO,205838.0
+full-current-policies-low-gas,2045,Wind,NE,94320.0
+full-current-policies-low-gas,2045,Wind,PJM,87000.0
+full-current-policies-low-gas,2045,Wind,SOU,32940.0
+full-current-policies-low-gas,2045,Wind,SPP,154638.0
+full-current-policies-low-gas,2045,Wind,TRE,149594.0
+full-current-policies-low-gas,2045,Wind,WECC,158638.0
+full-current-policies-low-gas,2050,Battery,CA,30096.0
+full-current-policies-low-gas,2050,Battery,MISO,38060.0
+full-current-policies-low-gas,2050,Battery,NE,38680.0
+full-current-policies-low-gas,2050,Battery,PJM,17568.0
+full-current-policies-low-gas,2050,Battery,SOU,22256.0
+full-current-policies-low-gas,2050,Battery,SPP,970.0
+full-current-policies-low-gas,2050,Battery,TRE,9476.0
+full-current-policies-low-gas,2050,Battery,WECC,30224.0
+full-current-policies-low-gas,2050,CCS,CA,6558.0
+full-current-policies-low-gas,2050,CCS,MISO,15636.0
+full-current-policies-low-gas,2050,CCS,NE,
+full-current-policies-low-gas,2050,CCS,PJM,34000.0
+full-current-policies-low-gas,2050,CCS,SOU,2854.0
+full-current-policies-low-gas,2050,CCS,SPP,120.0
+full-current-policies-low-gas,2050,CCS,TRE,224.0
+full-current-policies-low-gas,2050,CCS,WECC,136.0
+full-current-policies-low-gas,2050,Coal,CA,0.0
+full-current-policies-low-gas,2050,Coal,MISO,16678.0
+full-current-policies-low-gas,2050,Coal,NE,0.0
+full-current-policies-low-gas,2050,Coal,PJM,9568.0
+full-current-policies-low-gas,2050,Coal,SOU,10766.0
+full-current-policies-low-gas,2050,Coal,SPP,7140.0
+full-current-policies-low-gas,2050,Coal,TRE,8350.0
+full-current-policies-low-gas,2050,Coal,WECC,7962.0
+full-current-policies-low-gas,2050,Distributed Solar,CA,33544.0
+full-current-policies-low-gas,2050,Distributed Solar,MISO,45068.0
+full-current-policies-low-gas,2050,Distributed Solar,NE,20144.0
+full-current-policies-low-gas,2050,Distributed Solar,PJM,46004.0
+full-current-policies-low-gas,2050,Distributed Solar,SOU,34704.0
+full-current-policies-low-gas,2050,Distributed Solar,SPP,12256.0
+full-current-policies-low-gas,2050,Distributed Solar,TRE,20218.0
+full-current-policies-low-gas,2050,Distributed Solar,WECC,21488.0
+full-current-policies-low-gas,2050,Geothermal,CA,48.0
+full-current-policies-low-gas,2050,Geothermal,MISO,
+full-current-policies-low-gas,2050,Geothermal,NE,
+full-current-policies-low-gas,2050,Geothermal,PJM,
+full-current-policies-low-gas,2050,Geothermal,SOU,
+full-current-policies-low-gas,2050,Geothermal,SPP,
+full-current-policies-low-gas,2050,Geothermal,TRE,
+full-current-policies-low-gas,2050,Geothermal,WECC,152.0
+full-current-policies-low-gas,2050,Hydro,CA,21484.0
+full-current-policies-low-gas,2050,Hydro,MISO,15228.0
+full-current-policies-low-gas,2050,Hydro,NE,15308.0
+full-current-policies-low-gas,2050,Hydro,PJM,14500.0
+full-current-policies-low-gas,2050,Hydro,SOU,18256.0
+full-current-policies-low-gas,2050,Hydro,SPP,9508.0
+full-current-policies-low-gas,2050,Hydro,TRE,456.0
+full-current-policies-low-gas,2050,Hydro,WECC,68244.0
+full-current-policies-low-gas,2050,Hydrogen,CA,222.0
+full-current-policies-low-gas,2050,Hydrogen,MISO,668.0
+full-current-policies-low-gas,2050,Hydrogen,NE,3132.0
+full-current-policies-low-gas,2050,Hydrogen,PJM,520.0
+full-current-policies-low-gas,2050,Hydrogen,SOU,398.0
+full-current-policies-low-gas,2050,Hydrogen,SPP,580.0
+full-current-policies-low-gas,2050,Hydrogen,TRE,308.0
+full-current-policies-low-gas,2050,Hydrogen,WECC,848.0
+full-current-policies-low-gas,2050,Natural Gas CC,CA,91384.0
+full-current-policies-low-gas,2050,Natural Gas CC,MISO,280066.0
+full-current-policies-low-gas,2050,Natural Gas CC,NE,76540.0
+full-current-policies-low-gas,2050,Natural Gas CC,PJM,209166.0
+full-current-policies-low-gas,2050,Natural Gas CC,SOU,240012.0
+full-current-policies-low-gas,2050,Natural Gas CC,SPP,52710.0
+full-current-policies-low-gas,2050,Natural Gas CC,TRE,147988.0
+full-current-policies-low-gas,2050,Natural Gas CC,WECC,154514.0
+full-current-policies-low-gas,2050,Natural Gas CT,CA,16768.0
+full-current-policies-low-gas,2050,Natural Gas CT,MISO,41140.0
+full-current-policies-low-gas,2050,Natural Gas CT,NE,18706.0
+full-current-policies-low-gas,2050,Natural Gas CT,PJM,41566.0
+full-current-policies-low-gas,2050,Natural Gas CT,SOU,39738.0
+full-current-policies-low-gas,2050,Natural Gas CT,SPP,16292.0
+full-current-policies-low-gas,2050,Natural Gas CT,TRE,14052.0
+full-current-policies-low-gas,2050,Natural Gas CT,WECC,16892.0
+full-current-policies-low-gas,2050,Nuclear,CA,26.0
+full-current-policies-low-gas,2050,Nuclear,MISO,39522.0
+full-current-policies-low-gas,2050,Nuclear,NE,11056.0
+full-current-policies-low-gas,2050,Nuclear,PJM,65682.0
+full-current-policies-low-gas,2050,Nuclear,SOU,47892.0
+full-current-policies-low-gas,2050,Nuclear,SPP,4080.0
+full-current-policies-low-gas,2050,Nuclear,TRE,10260.0
+full-current-policies-low-gas,2050,Nuclear,WECC,10402.0
+full-current-policies-low-gas,2050,Solar,CA,121316.0
+full-current-policies-low-gas,2050,Solar,MISO,188098.0
+full-current-policies-low-gas,2050,Solar,NE,110022.0
+full-current-policies-low-gas,2050,Solar,PJM,142998.0
+full-current-policies-low-gas,2050,Solar,SOU,223170.0
+full-current-policies-low-gas,2050,Solar,SPP,21716.0
+full-current-policies-low-gas,2050,Solar,TRE,86288.0
+full-current-policies-low-gas,2050,Solar,WECC,210748.0
+full-current-policies-low-gas,2050,Wind,CA,1328.0
+full-current-policies-low-gas,2050,Wind,MISO,181478.0
+full-current-policies-low-gas,2050,Wind,NE,101152.0
+full-current-policies-low-gas,2050,Wind,PJM,88444.0
+full-current-policies-low-gas,2050,Wind,SOU,32946.0
+full-current-policies-low-gas,2050,Wind,SPP,128400.0
+full-current-policies-low-gas,2050,Wind,TRE,126782.0
+full-current-policies-low-gas,2050,Wind,WECC,152318.0
 full-current-policies-retire,2027,Battery,CA,11584.0
 full-current-policies-retire,2027,Battery,MISO,221.8
 full-current-policies-retire,2027,Battery,NE,579.8
