@@ -1199,25 +1199,25 @@ full-current-policies-retire,Nuclear,2027,SOU,3.0,,
 full-current-policies-retire,Nuclear,2027,SPP,3.0,,
 full-current-policies-retire,Nuclear,2027,TRE,2.0,,
 full-current-policies-retire,Nuclear,2027,WECC,4.0,,
-full-current-policies-retire,Solar,2027,CA,2587.2,,
+full-current-policies-retire,Solar,2027,CA,1887.5,,
 full-current-policies-retire,Solar,2027,MISO,255.0,,
-full-current-policies-retire,Solar,2027,NE,12193.5,,
+full-current-policies-retire,Solar,2027,NE,11869.0,,
 full-current-policies-retire,Solar,2027,PJM,188.0,,
 full-current-policies-retire,Solar,2027,SOU,143.0,,
 full-current-policies-retire,Solar,2027,SPP,153.0,,
 full-current-policies-retire,Solar,2027,TRE,79.0,,
 full-current-policies-retire,Solar,2027,WECC,224.3,,
 full-current-policies-retire,Wind,2027,CA,30.0,,
-full-current-policies-retire,Wind,2027,MISO,53612.0,,
-full-current-policies-retire,Wind,2027,NE,18192.8,,
-full-current-policies-retire,Wind,2027,PJM,19102.2,,
-full-current-policies-retire,Wind,2027,SOU,2416.2,,
-full-current-policies-retire,Wind,2027,SPP,23292.2,,
-full-current-policies-retire,Wind,2027,TRE,27837.5,,
-full-current-policies-retire,Wind,2027,WECC,28910.2,,
+full-current-policies-retire,Wind,2027,MISO,55235.2,,
+full-current-policies-retire,Wind,2027,NE,18146.2,,
+full-current-policies-retire,Wind,2027,PJM,19051.8,,
+full-current-policies-retire,Wind,2027,SOU,2520.5,,
+full-current-policies-retire,Wind,2027,SPP,23951.2,,
+full-current-policies-retire,Wind,2027,TRE,28732.0,,
+full-current-policies-retire,Wind,2027,WECC,30480.2,,
 full-current-policies-retire,Battery,2030,CA,20.5,,
 full-current-policies-retire,Battery,2030,MISO,53.0,,
-full-current-policies-retire,Battery,2030,NE,630.8,,
+full-current-policies-retire,Battery,2030,NE,38.7,,
 full-current-policies-retire,Battery,2030,PJM,36.0,,
 full-current-policies-retire,Battery,2030,SOU,27.5,,
 full-current-policies-retire,Battery,2030,SPP,35.5,,
@@ -1263,31 +1263,31 @@ full-current-policies-retire,Nuclear,2030,SOU,2.0,,
 full-current-policies-retire,Nuclear,2030,SPP,1.5,,
 full-current-policies-retire,Nuclear,2030,TRE,1.0,,
 full-current-policies-retire,Nuclear,2030,WECC,2.0,,
-full-current-policies-retire,Solar,2030,CA,11761.2,,
-full-current-policies-retire,Solar,2030,MISO,24919.0,,
-full-current-policies-retire,Solar,2030,NE,4796.2,,
-full-current-policies-retire,Solar,2030,PJM,2336.5,,
-full-current-policies-retire,Solar,2030,SOU,19643.2,,
+full-current-policies-retire,Solar,2030,CA,11660.2,,
+full-current-policies-retire,Solar,2030,MISO,26719.2,,
+full-current-policies-retire,Solar,2030,NE,4689.5,,
+full-current-policies-retire,Solar,2030,PJM,3273.0,,
+full-current-policies-retire,Solar,2030,SOU,21885.2,,
 full-current-policies-retire,Solar,2030,SPP,1117.8,,
-full-current-policies-retire,Solar,2030,TRE,919.0,,
-full-current-policies-retire,Solar,2030,WECC,5645.8,,
+full-current-policies-retire,Solar,2030,TRE,1148.8,,
+full-current-policies-retire,Solar,2030,WECC,5999.0,,
 full-current-policies-retire,Wind,2030,CA,9.0,,
-full-current-policies-retire,Wind,2030,MISO,11749.8,,
-full-current-policies-retire,Wind,2030,NE,10645.5,,
-full-current-policies-retire,Wind,2030,PJM,8366.5,,
-full-current-policies-retire,Wind,2030,SOU,8919.5,,
-full-current-policies-retire,Wind,2030,SPP,12147.2,,
-full-current-policies-retire,Wind,2030,TRE,7940.8,,
-full-current-policies-retire,Wind,2030,WECC,14197.2,,
-full-current-policies-retire,Battery,2035,CA,97.5,,
-full-current-policies-retire,Battery,2035,MISO,5564.8,,
-full-current-policies-retire,Battery,2035,NE,7839.2,,
-full-current-policies-retire,Battery,2035,PJM,987.5,,
-full-current-policies-retire,Battery,2035,SOU,103.3,,
-full-current-policies-retire,Battery,2035,SPP,67.7,,
-full-current-policies-retire,Battery,2035,TRE,34.3,,
-full-current-policies-retire,Battery,2035,WECC,493.8,,
-full-current-policies-retire,CCS,2035,CA,892.3,,
+full-current-policies-retire,Wind,2030,MISO,11283.5,,
+full-current-policies-retire,Wind,2030,NE,10664.2,,
+full-current-policies-retire,Wind,2030,PJM,9546.0,,
+full-current-policies-retire,Wind,2030,SOU,9293.0,,
+full-current-policies-retire,Wind,2030,SPP,14198.0,,
+full-current-policies-retire,Wind,2030,TRE,8483.0,,
+full-current-policies-retire,Wind,2030,WECC,13627.8,,
+full-current-policies-retire,Battery,2035,CA,97.8,,
+full-current-policies-retire,Battery,2035,MISO,4855.8,,
+full-current-policies-retire,Battery,2035,NE,6454.5,,
+full-current-policies-retire,Battery,2035,PJM,247.0,,
+full-current-policies-retire,Battery,2035,SOU,78.5,,
+full-current-policies-retire,Battery,2035,SPP,51.5,,
+full-current-policies-retire,Battery,2035,TRE,26.2,,
+full-current-policies-retire,Battery,2035,WECC,494.0,,
+full-current-policies-retire,CCS,2035,CA,1002.8,,
 full-current-policies-retire,CCS,2035,MISO,53.5,,
 full-current-policies-retire,CCS,2035,NE,,,
 full-current-policies-retire,CCS,2035,PJM,39.5,,
@@ -1303,17 +1303,17 @@ full-current-policies-retire,Hydrogen,2035,SOU,22.0,,
 full-current-policies-retire,Hydrogen,2035,SPP,16.0,,
 full-current-policies-retire,Hydrogen,2035,TRE,13.5,,
 full-current-policies-retire,Hydrogen,2035,WECC,51.5,,
-full-current-policies-retire,Natural Gas CC,2035,CA,7037.0,,
-full-current-policies-retire,Natural Gas CC,2035,MISO,9384.0,,
-full-current-policies-retire,Natural Gas CC,2035,NE,8706.2,,
-full-current-policies-retire,Natural Gas CC,2035,PJM,6318.2,,
-full-current-policies-retire,Natural Gas CC,2035,SOU,5618.0,,
+full-current-policies-retire,Natural Gas CC,2035,CA,6958.8,,
+full-current-policies-retire,Natural Gas CC,2035,MISO,12787.0,,
+full-current-policies-retire,Natural Gas CC,2035,NE,9250.2,,
+full-current-policies-retire,Natural Gas CC,2035,PJM,8735.8,,
+full-current-policies-retire,Natural Gas CC,2035,SOU,6114.2,,
 full-current-policies-retire,Natural Gas CC,2035,SPP,27.0,,
-full-current-policies-retire,Natural Gas CC,2035,TRE,4445.3,,
-full-current-policies-retire,Natural Gas CC,2035,WECC,6752.3,,
+full-current-policies-retire,Natural Gas CC,2035,TRE,5217.8,,
+full-current-policies-retire,Natural Gas CC,2035,WECC,7148.2,,
 full-current-policies-retire,Natural Gas CT,2035,CA,20.0,,
 full-current-policies-retire,Natural Gas CT,2035,MISO,36.5,,
-full-current-policies-retire,Natural Gas CT,2035,NE,521.2,,
+full-current-policies-retire,Natural Gas CT,2035,NE,693.8,,
 full-current-policies-retire,Natural Gas CT,2035,PJM,19.0,,
 full-current-policies-retire,Natural Gas CT,2035,SOU,17.5,,
 full-current-policies-retire,Natural Gas CT,2035,SPP,12.5,,
@@ -1327,35 +1327,35 @@ full-current-policies-retire,Nuclear,2035,SOU,1.0,,
 full-current-policies-retire,Nuclear,2035,SPP,0.0,,
 full-current-policies-retire,Nuclear,2035,TRE,0.0,,
 full-current-policies-retire,Nuclear,2035,WECC,0.0,,
-full-current-policies-retire,Solar,2035,CA,19355.8,,
-full-current-policies-retire,Solar,2035,MISO,45807.2,,
-full-current-policies-retire,Solar,2035,NE,374.0,,
-full-current-policies-retire,Solar,2035,PJM,30591.2,,
-full-current-policies-retire,Solar,2035,SOU,51802.0,,
-full-current-policies-retire,Solar,2035,SPP,6547.0,,
-full-current-policies-retire,Solar,2035,TRE,12791.8,,
-full-current-policies-retire,Solar,2035,WECC,25470.8,,
+full-current-policies-retire,Solar,2035,CA,19244.5,,
+full-current-policies-retire,Solar,2035,MISO,43369.0,,
+full-current-policies-retire,Solar,2035,NE,672.0,,
+full-current-policies-retire,Solar,2035,PJM,28481.5,,
+full-current-policies-retire,Solar,2035,SOU,49078.0,,
+full-current-policies-retire,Solar,2035,SPP,7746.2,,
+full-current-policies-retire,Solar,2035,TRE,14549.5,,
+full-current-policies-retire,Solar,2035,WECC,23741.0,,
 full-current-policies-retire,Wind,2035,CA,59.7,,
-full-current-policies-retire,Wind,2035,MISO,22466.5,,
-full-current-policies-retire,Wind,2035,NE,10530.8,,
-full-current-policies-retire,Wind,2035,PJM,15741.2,,
-full-current-policies-retire,Wind,2035,SOU,5160.5,,
-full-current-policies-retire,Wind,2035,SPP,18398.5,,
-full-current-policies-retire,Wind,2035,TRE,11024.0,,
-full-current-policies-retire,Wind,2035,WECC,15177.5,,
-full-current-policies-retire,Battery,2040,CA,7250.8,,
-full-current-policies-retire,Battery,2040,MISO,10800.8,,
-full-current-policies-retire,Battery,2040,NE,7010.0,,
-full-current-policies-retire,Battery,2040,PJM,9164.2,,
-full-current-policies-retire,Battery,2040,SOU,9330.5,,
-full-current-policies-retire,Battery,2040,SPP,896.8,,
-full-current-policies-retire,Battery,2040,TRE,1586.8,,
-full-current-policies-retire,Battery,2040,WECC,8679.5,,
-full-current-policies-retire,CCS,2040,CA,2482.5,,
+full-current-policies-retire,Wind,2035,MISO,24838.0,,
+full-current-policies-retire,Wind,2035,NE,10894.5,,
+full-current-policies-retire,Wind,2035,PJM,15174.2,,
+full-current-policies-retire,Wind,2035,SOU,6074.8,,
+full-current-policies-retire,Wind,2035,SPP,18355.5,,
+full-current-policies-retire,Wind,2035,TRE,10983.0,,
+full-current-policies-retire,Wind,2035,WECC,18301.8,,
+full-current-policies-retire,Battery,2040,CA,4605.5,,
+full-current-policies-retire,Battery,2040,MISO,7998.0,,
+full-current-policies-retire,Battery,2040,NE,6913.2,,
+full-current-policies-retire,Battery,2040,PJM,6797.0,,
+full-current-policies-retire,Battery,2040,SOU,9056.2,,
+full-current-policies-retire,Battery,2040,SPP,902.0,,
+full-current-policies-retire,Battery,2040,TRE,208.0,,
+full-current-policies-retire,Battery,2040,WECC,6232.8,,
+full-current-policies-retire,CCS,2040,CA,3040.8,,
 full-current-policies-retire,CCS,2040,MISO,277.0,,
 full-current-policies-retire,CCS,2040,NE,,,
-full-current-policies-retire,CCS,2040,PJM,7025.2,,
-full-current-policies-retire,CCS,2040,SOU,143.5,,
+full-current-policies-retire,CCS,2040,PJM,6355.0,,
+full-current-policies-retire,CCS,2040,SOU,143.8,,
 full-current-policies-retire,CCS,2040,SPP,16.0,,
 full-current-policies-retire,CCS,2040,TRE,14.0,,
 full-current-policies-retire,CCS,2040,WECC,7.5,,
@@ -1367,22 +1367,22 @@ full-current-policies-retire,Hydrogen,2040,SOU,9.5,,
 full-current-policies-retire,Hydrogen,2040,SPP,28.5,,
 full-current-policies-retire,Hydrogen,2040,TRE,14.0,,
 full-current-policies-retire,Hydrogen,2040,WECC,65.3,,
-full-current-policies-retire,Natural Gas CC,2040,CA,2474.0,,
-full-current-policies-retire,Natural Gas CC,2040,MISO,22410.8,,
-full-current-policies-retire,Natural Gas CC,2040,NE,6132.2,,
-full-current-policies-retire,Natural Gas CC,2040,PJM,10726.5,,
-full-current-policies-retire,Natural Gas CC,2040,SOU,9563.2,,
+full-current-policies-retire,Natural Gas CC,2040,CA,2230.5,,
+full-current-policies-retire,Natural Gas CC,2040,MISO,24024.2,,
+full-current-policies-retire,Natural Gas CC,2040,NE,6262.5,,
+full-current-policies-retire,Natural Gas CC,2040,PJM,10111.2,,
+full-current-policies-retire,Natural Gas CC,2040,SOU,10799.2,,
 full-current-policies-retire,Natural Gas CC,2040,SPP,114.0,,
-full-current-policies-retire,Natural Gas CC,2040,TRE,10214.5,,
-full-current-policies-retire,Natural Gas CC,2040,WECC,9261.5,,
+full-current-policies-retire,Natural Gas CC,2040,TRE,12030.2,,
+full-current-policies-retire,Natural Gas CC,2040,WECC,12050.8,,
 full-current-policies-retire,Natural Gas CT,2040,CA,11.0,,
 full-current-policies-retire,Natural Gas CT,2040,MISO,22.7,,
-full-current-policies-retire,Natural Gas CT,2040,NE,3406.8,,
+full-current-policies-retire,Natural Gas CT,2040,NE,3517.8,,
 full-current-policies-retire,Natural Gas CT,2040,PJM,13.5,,
 full-current-policies-retire,Natural Gas CT,2040,SOU,8.5,,
 full-current-policies-retire,Natural Gas CT,2040,SPP,24.7,,
 full-current-policies-retire,Natural Gas CT,2040,TRE,10.7,,
-full-current-policies-retire,Natural Gas CT,2040,WECC,104.0,,
+full-current-policies-retire,Natural Gas CT,2040,WECC,78.5,,
 full-current-policies-retire,Nuclear,2040,CA,1.0,,
 full-current-policies-retire,Nuclear,2040,MISO,2.5,,
 full-current-policies-retire,Nuclear,2040,NE,3.0,,
@@ -1391,62 +1391,62 @@ full-current-policies-retire,Nuclear,2040,SOU,1.5,,
 full-current-policies-retire,Nuclear,2040,SPP,1.5,,
 full-current-policies-retire,Nuclear,2040,TRE,1.0,,
 full-current-policies-retire,Nuclear,2040,WECC,2.0,,
-full-current-policies-retire,Solar,2040,CA,6058.0,,
-full-current-policies-retire,Solar,2040,MISO,20186.2,,
-full-current-policies-retire,Solar,2040,NE,11975.8,,
-full-current-policies-retire,Solar,2040,PJM,37850.5,,
-full-current-policies-retire,Solar,2040,SOU,35791.2,,
-full-current-policies-retire,Solar,2040,SPP,8146.8,,
-full-current-policies-retire,Solar,2040,TRE,12596.8,,
-full-current-policies-retire,Solar,2040,WECC,27623.5,,
-full-current-policies-retire,Wind,2040,CA,117.8,,
-full-current-policies-retire,Wind,2040,MISO,13278.0,,
-full-current-policies-retire,Wind,2040,NE,3078.8,,
-full-current-policies-retire,Wind,2040,PJM,4286.2,,
-full-current-policies-retire,Wind,2040,SOU,8157.8,,
-full-current-policies-retire,Wind,2040,SPP,7716.2,,
-full-current-policies-retire,Wind,2040,TRE,7708.8,,
-full-current-policies-retire,Wind,2040,WECC,15083.8,,
-full-current-policies-retire,Battery,2045,CA,851.0,,
-full-current-policies-retire,Battery,2045,MISO,418.2,,
-full-current-policies-retire,Battery,2045,NE,-533.8,,
-full-current-policies-retire,Battery,2045,PJM,29.0,,
-full-current-policies-retire,Battery,2045,SOU,-3.5,,
-full-current-policies-retire,Battery,2045,SPP,33.0,,
-full-current-policies-retire,Battery,2045,TRE,21.2,,
-full-current-policies-retire,Battery,2045,WECC,1605.2,,
-full-current-policies-retire,CCS,2045,CA,-237.2,,
+full-current-policies-retire,Solar,2040,CA,6973.2,,
+full-current-policies-retire,Solar,2040,MISO,16033.8,,
+full-current-policies-retire,Solar,2040,NE,11011.2,,
+full-current-policies-retire,Solar,2040,PJM,35641.8,,
+full-current-policies-retire,Solar,2040,SOU,35765.8,,
+full-current-policies-retire,Solar,2040,SPP,7130.8,,
+full-current-policies-retire,Solar,2040,TRE,9947.0,,
+full-current-policies-retire,Solar,2040,WECC,25362.5,,
+full-current-policies-retire,Wind,2040,CA,30.0,,
+full-current-policies-retire,Wind,2040,MISO,9537.2,,
+full-current-policies-retire,Wind,2040,NE,2742.8,,
+full-current-policies-retire,Wind,2040,PJM,3175.8,,
+full-current-policies-retire,Wind,2040,SOU,6573.8,,
+full-current-policies-retire,Wind,2040,SPP,8329.2,,
+full-current-policies-retire,Wind,2040,TRE,5187.2,,
+full-current-policies-retire,Wind,2040,WECC,10653.8,,
+full-current-policies-retire,Battery,2045,CA,852.5,,
+full-current-policies-retire,Battery,2045,MISO,-581.2,,
+full-current-policies-retire,Battery,2045,NE,-887.0,,
+full-current-policies-retire,Battery,2045,PJM,26.8,,
+full-current-policies-retire,Battery,2045,SOU,-4.5,,
+full-current-policies-retire,Battery,2045,SPP,34.5,,
+full-current-policies-retire,Battery,2045,TRE,21.0,,
+full-current-policies-retire,Battery,2045,WECC,1424.5,,
+full-current-policies-retire,CCS,2045,CA,-1129.0,,
 full-current-policies-retire,CCS,2045,MISO,2.0,,
 full-current-policies-retire,CCS,2045,NE,,,
-full-current-policies-retire,CCS,2045,PJM,-668.0,,
-full-current-policies-retire,CCS,2045,SOU,1.0,,
+full-current-policies-retire,CCS,2045,PJM,2.2,,
+full-current-policies-retire,CCS,2045,SOU,0.8,,
 full-current-policies-retire,CCS,2045,SPP,5.5,,
 full-current-policies-retire,CCS,2045,TRE,1.3,,
 full-current-policies-retire,CCS,2045,WECC,9.0,,
 full-current-policies-retire,Hydrogen,2045,CA,61.0,,
 full-current-policies-retire,Hydrogen,2045,MISO,153.5,,
-full-current-policies-retire,Hydrogen,2045,NE,227.0,,
+full-current-policies-retire,Hydrogen,2045,NE,203.5,,
 full-current-policies-retire,Hydrogen,2045,PJM,145.0,,
 full-current-policies-retire,Hydrogen,2045,SOU,97.0,,
 full-current-policies-retire,Hydrogen,2045,SPP,133.0,,
 full-current-policies-retire,Hydrogen,2045,TRE,66.0,,
-full-current-policies-retire,Hydrogen,2045,WECC,194.3,,
-full-current-policies-retire,Natural Gas CC,2045,CA,12348.0,,
-full-current-policies-retire,Natural Gas CC,2045,MISO,36704.0,,
-full-current-policies-retire,Natural Gas CC,2045,NE,4108.8,,
-full-current-policies-retire,Natural Gas CC,2045,PJM,22579.5,,
-full-current-policies-retire,Natural Gas CC,2045,SOU,24774.0,,
-full-current-policies-retire,Natural Gas CC,2045,SPP,2691.5,,
-full-current-policies-retire,Natural Gas CC,2045,TRE,14069.2,,
-full-current-policies-retire,Natural Gas CC,2045,WECC,21132.8,,
+full-current-policies-retire,Hydrogen,2045,WECC,146.0,,
+full-current-policies-retire,Natural Gas CC,2045,CA,12613.2,,
+full-current-policies-retire,Natural Gas CC,2045,MISO,34608.5,,
+full-current-policies-retire,Natural Gas CC,2045,NE,4565.2,,
+full-current-policies-retire,Natural Gas CC,2045,PJM,19954.5,,
+full-current-policies-retire,Natural Gas CC,2045,SOU,24514.0,,
+full-current-policies-retire,Natural Gas CC,2045,SPP,2815.5,,
+full-current-policies-retire,Natural Gas CC,2045,TRE,11571.8,,
+full-current-policies-retire,Natural Gas CC,2045,WECC,20705.5,,
 full-current-policies-retire,Natural Gas CT,2045,CA,33.0,,
 full-current-policies-retire,Natural Gas CT,2045,MISO,78.0,,
-full-current-policies-retire,Natural Gas CT,2045,NE,1051.8,,
+full-current-policies-retire,Natural Gas CT,2045,NE,1710.0,,
 full-current-policies-retire,Natural Gas CT,2045,PJM,105.5,,
 full-current-policies-retire,Natural Gas CT,2045,SOU,64.5,,
 full-current-policies-retire,Natural Gas CT,2045,SPP,84.0,,
 full-current-policies-retire,Natural Gas CT,2045,TRE,31.7,,
-full-current-policies-retire,Natural Gas CT,2045,WECC,323.2,,
+full-current-policies-retire,Natural Gas CT,2045,WECC,325.0,,
 full-current-policies-retire,Nuclear,2045,CA,0.0,,
 full-current-policies-retire,Nuclear,2045,MISO,0.0,,
 full-current-policies-retire,Nuclear,2045,NE,0.5,,
@@ -1455,30 +1455,30 @@ full-current-policies-retire,Nuclear,2045,SOU,0.0,,
 full-current-policies-retire,Nuclear,2045,SPP,0.0,,
 full-current-policies-retire,Nuclear,2045,TRE,0.5,,
 full-current-policies-retire,Nuclear,2045,WECC,0.0,,
-full-current-policies-retire,Solar,2045,CA,1770.5,,
-full-current-policies-retire,Solar,2045,MISO,-7545.2,,
-full-current-policies-retire,Solar,2045,NE,8460.2,,
-full-current-policies-retire,Solar,2045,PJM,-5175.0,,
-full-current-policies-retire,Solar,2045,SOU,-3051.8,,
-full-current-policies-retire,Solar,2045,SPP,2982.0,,
-full-current-policies-retire,Solar,2045,TRE,-1490.0,,
-full-current-policies-retire,Solar,2045,WECC,498.0,,
-full-current-policies-retire,Wind,2045,CA,-85.5,,
-full-current-policies-retire,Wind,2045,MISO,-13513.2,,
-full-current-policies-retire,Wind,2045,NE,3357.5,,
-full-current-policies-retire,Wind,2045,PJM,-1888.8,,
-full-current-policies-retire,Wind,2045,SOU,-3401.2,,
-full-current-policies-retire,Wind,2045,SPP,-53.2,,
-full-current-policies-retire,Wind,2045,TRE,-3060.0,,
-full-current-policies-retire,Wind,2045,WECC,-4360.2,,
-full-current-policies-retire,Battery,2050,CA,1152.5,5223.0,15663.0
-full-current-policies-retire,Battery,2050,MISO,-3279.0,9252.0,21073.0
-full-current-policies-retire,Battery,2050,NE,-3794.0,9207.0,13376.0
-full-current-policies-retire,Battery,2050,PJM,765.5,7148.0,17958.0
-full-current-policies-retire,Battery,2050,SOU,292.2,7554.0,10549.0
-full-current-policies-retire,Battery,2050,SPP,371.0,10.0,2397.0
-full-current-policies-retire,Battery,2050,TRE,285.8,192.0,6595.0
-full-current-policies-retire,Battery,2050,WECC,4601.8,8433.0,21965.0
+full-current-policies-retire,Solar,2045,CA,385.8,,
+full-current-policies-retire,Solar,2045,MISO,-3619.5,,
+full-current-policies-retire,Solar,2045,NE,7747.5,,
+full-current-policies-retire,Solar,2045,PJM,-3999.5,,
+full-current-policies-retire,Solar,2045,SOU,-2832.5,,
+full-current-policies-retire,Solar,2045,SPP,2331.8,,
+full-current-policies-retire,Solar,2045,TRE,-344.2,,
+full-current-policies-retire,Solar,2045,WECC,303.5,,
+full-current-policies-retire,Wind,2045,CA,13.0,,
+full-current-policies-retire,Wind,2045,MISO,-14868.8,,
+full-current-policies-retire,Wind,2045,NE,3293.5,,
+full-current-policies-retire,Wind,2045,PJM,-1486.0,,
+full-current-policies-retire,Wind,2045,SOU,-2658.2,,
+full-current-policies-retire,Wind,2045,SPP,-4881.8,,
+full-current-policies-retire,Wind,2045,TRE,-4553.5,,
+full-current-policies-retire,Wind,2045,WECC,-3827.2,,
+full-current-policies-retire,Battery,2050,CA,1492.2,5223.0,9526.0
+full-current-policies-retire,Battery,2050,MISO,-2809.8,4905.0,12279.0
+full-current-policies-retire,Battery,2050,NE,-3495.5,2248.0,13376.0
+full-current-policies-retire,Battery,2050,PJM,1172.8,7147.0,9663.0
+full-current-policies-retire,Battery,2050,SOU,-1765.2,1222.0,10437.0
+full-current-policies-retire,Battery,2050,SPP,385.0,96.0,2397.0
+full-current-policies-retire,Battery,2050,TRE,16.2,3.0,504.0
+full-current-policies-retire,Battery,2050,WECC,3030.2,5170.0,16339.0
 full-current-policies-retire,CCS,2050,CA,1.3,0.0,4176.0
 full-current-policies-retire,CCS,2050,MISO,5.0,0.0,788.0
 full-current-policies-retire,CCS,2050,NE,,0.0,0.0
@@ -1489,28 +1489,28 @@ full-current-policies-retire,CCS,2050,TRE,2.3,0.0,66.0
 full-current-policies-retire,CCS,2050,WECC,7.0,0.0,72.0
 full-current-policies-retire,Hydrogen,2050,CA,20.0,0.0,218.0
 full-current-policies-retire,Hydrogen,2050,MISO,49.0,0.0,519.0
-full-current-policies-retire,Hydrogen,2050,NE,523.8,87.0,1871.0
-full-current-policies-retire,Hydrogen,2050,PJM,44.7,0.0,482.0
+full-current-policies-retire,Hydrogen,2050,NE,80.0,2.0,836.0
+full-current-policies-retire,Hydrogen,2050,PJM,66.5,0.0,482.0
 full-current-policies-retire,Hydrogen,2050,SOU,30.0,0.0,310.0
 full-current-policies-retire,Hydrogen,2050,SPP,38.0,0.0,407.0
 full-current-policies-retire,Hydrogen,2050,TRE,19.0,0.0,225.0
-full-current-policies-retire,Hydrogen,2050,WECC,55.0,1.0,901.0
-full-current-policies-retire,Natural Gas CC,2050,CA,6479.5,23130.0,28668.0
-full-current-policies-retire,Natural Gas CC,2050,MISO,20891.2,82476.0,104193.0
-full-current-policies-retire,Natural Gas CC,2050,NE,57.5,16114.0,21279.0
-full-current-policies-retire,Natural Gas CC,2050,PJM,14505.0,50883.0,56797.0
-full-current-policies-retire,Natural Gas CC,2050,SOU,23133.5,59954.0,63247.0
-full-current-policies-retire,Natural Gas CC,2050,SPP,3265.5,4159.0,9285.0
-full-current-policies-retire,Natural Gas CC,2050,TRE,8014.8,33508.0,37182.0
-full-current-policies-retire,Natural Gas CC,2050,WECC,13359.5,48061.0,50153.0
-full-current-policies-retire,Natural Gas CT,2050,CA,17.0,0.0,192.0
+full-current-policies-retire,Hydrogen,2050,WECC,55.5,4.0,901.0
+full-current-policies-retire,Natural Gas CC,2050,CA,5795.8,23130.0,32744.0
+full-current-policies-retire,Natural Gas CC,2050,MISO,15657.2,82476.0,94941.0
+full-current-policies-retire,Natural Gas CC,2050,NE,309.2,18677.0,21644.0
+full-current-policies-retire,Natural Gas CC,2050,PJM,12840.5,46784.0,56797.0
+full-current-policies-retire,Natural Gas CC,2050,SOU,21258.5,60704.0,63961.0
+full-current-policies-retire,Natural Gas CC,2050,SPP,2063.2,4159.0,6240.0
+full-current-policies-retire,Natural Gas CC,2050,TRE,7254.8,35276.0,37182.0
+full-current-policies-retire,Natural Gas CC,2050,WECC,11610.0,48061.0,59353.0
+full-current-policies-retire,Natural Gas CT,2050,CA,13.0,1.0,192.0
 full-current-policies-retire,Natural Gas CT,2050,MISO,29.0,0.0,397.0
-full-current-policies-retire,Natural Gas CT,2050,NE,1488.2,4641.0,10932.0
+full-current-policies-retire,Natural Gas CT,2050,NE,712.5,4641.0,11596.0
 full-current-policies-retire,Natural Gas CT,2050,PJM,43.8,1.0,401.0
 full-current-policies-retire,Natural Gas CT,2050,SOU,22.7,0.0,233.0
 full-current-policies-retire,Natural Gas CT,2050,SPP,23.0,1.0,356.0
 full-current-policies-retire,Natural Gas CT,2050,TRE,10.0,0.0,159.0
-full-current-policies-retire,Natural Gas CT,2050,WECC,1702.2,4.0,3790.0
+full-current-policies-retire,Natural Gas CT,2050,WECC,2854.8,2097.0,4623.0
 full-current-policies-retire,Nuclear,2050,CA,1.0,2.0,8.0
 full-current-policies-retire,Nuclear,2050,MISO,3.5,5.0,22.0
 full-current-policies-retire,Nuclear,2050,NE,1.5,3.0,14.0
@@ -1519,22 +1519,22 @@ full-current-policies-retire,Nuclear,2050,SOU,1.5,3.0,15.0
 full-current-policies-retire,Nuclear,2050,SPP,3.5,3.0,16.0
 full-current-policies-retire,Nuclear,2050,TRE,1.5,2.0,10.0
 full-current-policies-retire,Nuclear,2050,WECC,4.0,4.0,20.0
-full-current-policies-retire,Solar,2050,CA,9181.0,46009.0,62551.0
-full-current-policies-retire,Solar,2050,MISO,5901.5,85807.0,92520.0
-full-current-policies-retire,Solar,2050,NE,9734.8,45632.0,51067.0
-full-current-policies-retire,Solar,2050,PJM,2074.8,64275.0,72624.0
-full-current-policies-retire,Solar,2050,SOU,6145.8,109777.0,110961.0
-full-current-policies-retire,Solar,2050,SPP,2067.0,17448.0,29689.0
-full-current-policies-retire,Solar,2050,TRE,6135.5,27171.0,37820.0
-full-current-policies-retire,Solar,2050,WECC,13780.0,65688.0,90624.0
+full-current-policies-retire,Solar,2050,CA,7198.0,46009.0,49093.0
+full-current-policies-retire,Solar,2050,MISO,2417.8,74448.0,92520.0
+full-current-policies-retire,Solar,2050,NE,8761.8,35918.0,51067.0
+full-current-policies-retire,Solar,2050,PJM,2098.2,55543.0,72624.0
+full-current-policies-retire,Solar,2050,SOU,4791.5,104099.0,110961.0
+full-current-policies-retire,Solar,2050,SPP,1248.8,17448.0,24548.0
+full-current-policies-retire,Solar,2050,TRE,4367.0,27171.0,32680.0
+full-current-policies-retire,Solar,2050,WECC,12097.0,65688.0,69793.0
 full-current-policies-retire,Wind,2050,CA,77.0,0.0,230.0
-full-current-policies-retire,Wind,2050,MISO,1075.5,51322.0,102774.0
-full-current-policies-retire,Wind,2050,NE,5612.5,50126.0,52167.0
-full-current-policies-retire,Wind,2050,PJM,914.2,42935.0,48300.0
-full-current-policies-retire,Wind,2050,SOU,172.2,11263.0,25932.0
-full-current-policies-retire,Wind,2050,SPP,2195.0,58862.0,68271.0
-full-current-policies-retire,Wind,2050,TRE,2097.2,52924.0,54763.0
-full-current-policies-retire,Wind,2050,WECC,3357.8,68619.0,75346.0
+full-current-policies-retire,Wind,2050,MISO,474.8,42648.0,102774.0
+full-current-policies-retire,Wind,2050,NE,4941.5,47186.0,52167.0
+full-current-policies-retire,Wind,2050,PJM,122.0,39183.0,48300.0
+full-current-policies-retire,Wind,2050,SOU,-110.8,12335.0,25932.0
+full-current-policies-retire,Wind,2050,SPP,500.8,51090.0,68271.0
+full-current-policies-retire,Wind,2050,TRE,716.2,36935.0,54763.0
+full-current-policies-retire,Wind,2050,WECC,1802.5,63309.0,75346.0
 full-current-policies-retire-high-coal,Battery,2027,CA,51.0,,
 full-current-policies-retire-high-coal,Battery,2027,MISO,137.0,,
 full-current-policies-retire-high-coal,Battery,2027,NE,88.0,,
