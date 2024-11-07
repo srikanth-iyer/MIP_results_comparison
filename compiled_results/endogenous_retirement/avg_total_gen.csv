@@ -287,6 +287,78 @@ full-current-policies-retire,Natural Gas CT,2050,13935677.0,13460619.0,14548135.
 full-current-policies-retire,Nuclear,2050,469739050.2,339860987.0,817422963.0
 full-current-policies-retire,Solar,2050,1336965902.8,1299592940.0,1376358068.0
 full-current-policies-retire,Wind,2050,1905940335.8,1501653578.0,2079694275.0
+full-current-policies-retire-high-coal,Battery,2027,14030681.0,14030681.0,14030681.0
+full-current-policies-retire-high-coal,CCS,2027,947154.0,947154.0,947154.0
+full-current-policies-retire-high-coal,Coal,2027,58380775.0,58380775.0,58380775.0
+full-current-policies-retire-high-coal,Distributed Solar,2027,92438865.0,92438865.0,92438865.0
+full-current-policies-retire-high-coal,Geothermal,2027,15956542.0,15956542.0,15956542.0
+full-current-policies-retire-high-coal,Hydro,2027,304793431.0,304793431.0,304793431.0
+full-current-policies-retire-high-coal,Hydrogen,2027,53638.0,53638.0,53638.0
+full-current-policies-retire-high-coal,Natural Gas CC,2027,1405643436.0,1405643436.0,1405643436.0
+full-current-policies-retire-high-coal,Natural Gas CT,2027,47086737.0,47086737.0,47086737.0
+full-current-policies-retire-high-coal,Nuclear,2027,817053291.0,817053291.0,817053291.0
+full-current-policies-retire-high-coal,Solar,2027,324994754.0,324994754.0,324994754.0
+full-current-policies-retire-high-coal,Wind,2027,1193071475.0,1193071475.0,1193071475.0
+full-current-policies-retire-high-coal,Battery,2030,18266598.0,18266598.0,18266598.0
+full-current-policies-retire-high-coal,CCS,2030,1068900.0,1068900.0,1068900.0
+full-current-policies-retire-high-coal,Coal,2030,53189931.0,53189931.0,53189931.0
+full-current-policies-retire-high-coal,Distributed Solar,2030,138717298.0,138717298.0,138717298.0
+full-current-policies-retire-high-coal,Geothermal,2030,15783844.0,15783844.0,15783844.0
+full-current-policies-retire-high-coal,Hydro,2030,311709962.0,311709962.0,311709962.0
+full-current-policies-retire-high-coal,Hydrogen,2030,12352.0,12352.0,12352.0
+full-current-policies-retire-high-coal,Natural Gas CC,2030,1209897434.0,1209897434.0,1209897434.0
+full-current-policies-retire-high-coal,Natural Gas CT,2030,35607563.0,35607563.0,35607563.0
+full-current-policies-retire-high-coal,Nuclear,2030,795545540.0,795545540.0,795545540.0
+full-current-policies-retire-high-coal,Solar,2030,543390886.0,543390886.0,543390886.0
+full-current-policies-retire-high-coal,Wind,2030,1463702751.0,1463702751.0,1463702751.0
+full-current-policies-retire-high-coal,Battery,2035,49111713.0,49111713.0,49111713.0
+full-current-policies-retire-high-coal,CCS,2035,12473931.0,12473931.0,12473931.0
+full-current-policies-retire-high-coal,Coal,2035,46715942.0,46715942.0,46715942.0
+full-current-policies-retire-high-coal,Distributed Solar,2035,178673560.0,178673560.0,178673560.0
+full-current-policies-retire-high-coal,Geothermal,2035,15363947.0,15363947.0,15363947.0
+full-current-policies-retire-high-coal,Hydro,2035,319137637.0,319137637.0,319137637.0
+full-current-policies-retire-high-coal,Hydrogen,2035,43685.0,43685.0,43685.0
+full-current-policies-retire-high-coal,Natural Gas CC,2035,1369508559.0,1369508559.0,1369508559.0
+full-current-policies-retire-high-coal,Natural Gas CT,2035,31939008.0,31939008.0,31939008.0
+full-current-policies-retire-high-coal,Nuclear,2035,784928049.0,784928049.0,784928049.0
+full-current-policies-retire-high-coal,Solar,2035,914436512.0,914436512.0,914436512.0
+full-current-policies-retire-high-coal,Wind,2035,1799609724.0,1799609724.0,1799609724.0
+full-current-policies-retire-high-coal,Battery,2040,130652337.0,130652337.0,130652337.0
+full-current-policies-retire-high-coal,CCS,2040,93911603.0,93911603.0,93911603.0
+full-current-policies-retire-high-coal,Coal,2040,43308030.0,43308030.0,43308030.0
+full-current-policies-retire-high-coal,Distributed Solar,2040,186434724.0,186434724.0,186434724.0
+full-current-policies-retire-high-coal,Geothermal,2040,15115961.0,15115961.0,15115961.0
+full-current-policies-retire-high-coal,Hydro,2040,318817871.0,318817871.0,318817871.0
+full-current-policies-retire-high-coal,Hydrogen,2040,18422.0,18422.0,18422.0
+full-current-policies-retire-high-coal,Natural Gas CC,2040,1606793688.0,1606793688.0,1606793688.0
+full-current-policies-retire-high-coal,Natural Gas CT,2040,24148188.0,24148188.0,24148188.0
+full-current-policies-retire-high-coal,Nuclear,2040,398841490.0,398841490.0,398841490.0
+full-current-policies-retire-high-coal,Solar,2040,1338967096.0,1338967096.0,1338967096.0
+full-current-policies-retire-high-coal,Wind,2040,1999615033.0,1999615033.0,1999615033.0
+full-current-policies-retire-high-coal,Battery,2045,134501458.0,134501458.0,134501458.0
+full-current-policies-retire-high-coal,CCS,2045,20268551.0,20268551.0,20268551.0
+full-current-policies-retire-high-coal,Coal,2045,42000294.0,42000294.0,42000294.0
+full-current-policies-retire-high-coal,Distributed Solar,2045,200569038.0,200569038.0,200569038.0
+full-current-policies-retire-high-coal,Geothermal,2045,15906849.0,15906849.0,15906849.0
+full-current-policies-retire-high-coal,Hydro,2045,316097768.0,316097768.0,316097768.0
+full-current-policies-retire-high-coal,Hydrogen,2045,32313.0,32313.0,32313.0
+full-current-policies-retire-high-coal,Natural Gas CC,2045,2284587815.0,2284587815.0,2284587815.0
+full-current-policies-retire-high-coal,Natural Gas CT,2045,21402894.0,21402894.0,21402894.0
+full-current-policies-retire-high-coal,Nuclear,2045,409871557.0,409871557.0,409871557.0
+full-current-policies-retire-high-coal,Solar,2045,1362886717.0,1362886717.0,1362886717.0
+full-current-policies-retire-high-coal,Wind,2045,2053059043.0,2053059043.0,2053059043.0
+full-current-policies-retire-high-coal,Battery,2050,143168331.0,143168331.0,143168331.0
+full-current-policies-retire-high-coal,CCS,2050,18016546.0,18016546.0,18016546.0
+full-current-policies-retire-high-coal,Coal,2050,37516639.0,37516639.0,37516639.0
+full-current-policies-retire-high-coal,Distributed Solar,2050,214690589.0,214690589.0,214690589.0
+full-current-policies-retire-high-coal,Geothermal,2050,15924925.0,15924925.0,15924925.0
+full-current-policies-retire-high-coal,Hydro,2050,316530172.0,316530172.0,316530172.0
+full-current-policies-retire-high-coal,Hydrogen,2050,236964.0,236964.0,236964.0
+full-current-policies-retire-high-coal,Natural Gas CC,2050,2596510624.0,2596510624.0,2596510624.0
+full-current-policies-retire-high-coal,Natural Gas CT,2050,20949184.0,20949184.0,20949184.0
+full-current-policies-retire-high-coal,Nuclear,2050,333623824.0,333623824.0,333623824.0
+full-current-policies-retire-high-coal,Solar,2050,1438618551.0,1438618551.0,1438618551.0
+full-current-policies-retire-high-coal,Wind,2050,2071463793.0,2071463793.0,2071463793.0
 full-current-policies-retire-low-gas,Battery,2027,13362039.0,13362039.0,13362039.0
 full-current-policies-retire-low-gas,CCS,2027,1108876.0,1108876.0,1108876.0
 full-current-policies-retire-low-gas,Coal,2027,200645008.0,200645008.0,200645008.0

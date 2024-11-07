@@ -47,54 +47,54 @@ case,tech_type,planning_year,end_value,min,max
 20-week-foresight,Nuclear,2050,1.5,87.0,116.0
 20-week-foresight,Solar,2050,173674.7,663304.0,907846.0
 20-week-foresight,Wind,2050,34893.7,560295.0,644172.0
-20-week-foresight-current-policy,Battery,2027,1015.2,,
-20-week-foresight-current-policy,CCS,2027,258.5,,
-20-week-foresight-current-policy,Hydrogen,2027,695.5,,
-20-week-foresight-current-policy,Natural Gas CC,2027,633.5,,
-20-week-foresight-current-policy,Natural Gas CT,2027,458.0,,
-20-week-foresight-current-policy,Nuclear,2027,138.0,,
-20-week-foresight-current-policy,Solar,2027,16257.5,,
-20-week-foresight-current-policy,Wind,2027,120439.6,,
-20-week-foresight-current-policy,Battery,2030,323.8,,
-20-week-foresight-current-policy,CCS,2030,15.5,,
-20-week-foresight-current-policy,Hydrogen,2030,-60.5,,
-20-week-foresight-current-policy,Natural Gas CC,2030,791.0,,
-20-week-foresight-current-policy,Natural Gas CT,2030,15.5,,
-20-week-foresight-current-policy,Nuclear,2030,-0.5,,
-20-week-foresight-current-policy,Solar,2030,6792.6,,
-20-week-foresight-current-policy,Wind,2030,73520.4,,
-20-week-foresight-current-policy,Battery,2035,6007.8,,
-20-week-foresight-current-policy,CCS,2035,17.8,,
-20-week-foresight-current-policy,Hydrogen,2035,24.0,,
-20-week-foresight-current-policy,Natural Gas CC,2035,9822.4,,
-20-week-foresight-current-policy,Natural Gas CT,2035,141.6,,
+20-week-foresight-current-policy,Battery,2027,813.2,,
+20-week-foresight-current-policy,CCS,2027,101.5,,
+20-week-foresight-current-policy,Hydrogen,2027,318.5,,
+20-week-foresight-current-policy,Natural Gas CC,2027,495.0,,
+20-week-foresight-current-policy,Natural Gas CT,2027,225.0,,
+20-week-foresight-current-policy,Nuclear,2027,82.5,,
+20-week-foresight-current-policy,Solar,2027,18682.0,,
+20-week-foresight-current-policy,Wind,2027,118963.2,,
+20-week-foresight-current-policy,Battery,2030,868.0,,
+20-week-foresight-current-policy,CCS,2030,20.5,,
+20-week-foresight-current-policy,Hydrogen,2030,30.5,,
+20-week-foresight-current-policy,Natural Gas CC,2030,977.2,,
+20-week-foresight-current-policy,Natural Gas CT,2030,18.5,,
+20-week-foresight-current-policy,Nuclear,2030,12.5,,
+20-week-foresight-current-policy,Solar,2030,6883.5,,
+20-week-foresight-current-policy,Wind,2030,69330.5,,
+20-week-foresight-current-policy,Battery,2035,5784.8,,
+20-week-foresight-current-policy,CCS,2035,16.3,,
+20-week-foresight-current-policy,Hydrogen,2035,24.3,,
+20-week-foresight-current-policy,Natural Gas CC,2035,10564.5,,
+20-week-foresight-current-policy,Natural Gas CT,2035,153.0,,
 20-week-foresight-current-policy,Nuclear,2035,0.5,,
-20-week-foresight-current-policy,Solar,2035,118000.8,,
-20-week-foresight-current-policy,Wind,2035,102474.0,,
-20-week-foresight-current-policy,Battery,2040,62393.2,,
-20-week-foresight-current-policy,CCS,2040,60.8,,
-20-week-foresight-current-policy,Hydrogen,2040,37.4,,
-20-week-foresight-current-policy,Natural Gas CC,2040,35015.6,,
-20-week-foresight-current-policy,Natural Gas CT,2040,1210.0,,
-20-week-foresight-current-policy,Nuclear,2040,14.5,,
-20-week-foresight-current-policy,Solar,2040,377626.2,,
-20-week-foresight-current-policy,Wind,2040,136134.8,,
-20-week-foresight-current-policy,Battery,2045,608.6,,
-20-week-foresight-current-policy,CCS,2045,22.8,,
-20-week-foresight-current-policy,Hydrogen,2045,359.4,,
-20-week-foresight-current-policy,Natural Gas CC,2045,148634.8,,
-20-week-foresight-current-policy,Natural Gas CT,2045,2047.6,,
-20-week-foresight-current-policy,Nuclear,2045,0.0,,
-20-week-foresight-current-policy,Solar,2045,12551.4,,
-20-week-foresight-current-policy,Wind,2045,3356.4,,
-20-week-foresight-current-policy,Battery,2050,10772.6,57944.0,112663.0
-20-week-foresight-current-policy,CCS,2050,22.8,0.0,412.0
-20-week-foresight-current-policy,Hydrogen,2050,404.2,683.0,1643.0
-20-week-foresight-current-policy,Natural Gas CC,2050,124505.8,275567.0,392540.0
-20-week-foresight-current-policy,Natural Gas CT,2050,2215.8,2602.0,11851.0
-20-week-foresight-current-policy,Nuclear,2050,0.0,108.0,197.0
-20-week-foresight-current-policy,Solar,2050,68796.0,419890.0,725730.0
-20-week-foresight-current-policy,Wind,2050,13609.4,316972.0,534676.0
+20-week-foresight-current-policy,Solar,2035,122592.0,,
+20-week-foresight-current-policy,Wind,2035,106707.5,,
+20-week-foresight-current-policy,Battery,2040,80408.5,,
+20-week-foresight-current-policy,CCS,2040,45.7,,
+20-week-foresight-current-policy,Hydrogen,2040,36.5,,
+20-week-foresight-current-policy,Natural Gas CC,2040,34145.5,,
+20-week-foresight-current-policy,Natural Gas CT,2040,1493.8,,
+20-week-foresight-current-policy,Nuclear,2040,15.0,,
+20-week-foresight-current-policy,Solar,2040,378002.8,,
+20-week-foresight-current-policy,Wind,2040,118564.8,,
+20-week-foresight-current-policy,Battery,2045,1048.0,,
+20-week-foresight-current-policy,CCS,2045,16.7,,
+20-week-foresight-current-policy,Hydrogen,2045,422.2,,
+20-week-foresight-current-policy,Natural Gas CC,2045,141543.2,,
+20-week-foresight-current-policy,Natural Gas CT,2045,2004.8,,
+20-week-foresight-current-policy,Nuclear,2045,1.5,,
+20-week-foresight-current-policy,Solar,2045,10649.2,,
+20-week-foresight-current-policy,Wind,2045,3231.5,,
+20-week-foresight-current-policy,Battery,2050,7218.8,57944.0,152427.0
+20-week-foresight-current-policy,CCS,2050,17.3,0.0,214.0
+20-week-foresight-current-policy,Hydrogen,2050,311.2,483.0,1643.0
+20-week-foresight-current-policy,Natural Gas CC,2050,123385.0,246921.0,392540.0
+20-week-foresight-current-policy,Natural Gas CT,2050,1577.5,444.0,11851.0
+20-week-foresight-current-policy,Nuclear,2050,0.5,108.0,117.0
+20-week-foresight-current-policy,Solar,2050,64798.5,419890.0,725730.0
+20-week-foresight-current-policy,Wind,2050,14995.0,316972.0,534676.0
 20-week-myopic,Battery,2027,14.0,,
 20-week-myopic,CCS,2027,0.0,,
 20-week-myopic,Hydrogen,2027,0.5,,

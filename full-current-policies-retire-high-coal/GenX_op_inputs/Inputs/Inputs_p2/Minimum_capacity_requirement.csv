@@ -1,0 +1,6 @@
+MinCapReqConstraint,Constraint_Description,Min_MW,PriceCap
+1,NY_offshorewind,4360.0,500000
+2,PJME_offshorewind,5522.5,500000
+3,PJMD_offshorewind,2640.0,500000
+4,ISNE_offshorewind,8945.0,500000
+5,SRCA_offshorewind,2800.0,500000
