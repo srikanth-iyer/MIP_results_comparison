@@ -557,6 +557,8 @@ def _load_op_data(
         _df.loc[:, "planning_year"] = period
         model_part = -5
     model = f.parts[model_part].split("_")[0]
+    if model.lower() == "temoa":
+        model == "TEMOA"
     _df.loc[:, "model"] = model
     if fn == "costs.csv" and model_costs_only:
         return _df
