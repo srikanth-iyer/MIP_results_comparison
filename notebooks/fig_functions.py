@@ -129,6 +129,7 @@ WRAPPED_CASE_NAME_MAP = {
     "20-week-myopic": "CO₂ cap\n20-week",
     "full-current-policies": "Current policy",
     "full-current-policies-retire": "Current policy\nretire",
+    "full-current-policies-retire-low-gas": "Current policy\nretire low gas",
     "full-current-policies-commit": "Current policy\nunit commit",
     "20-week-foresight-current-policy": "Current policy\n20-week foresight",
     "20-week-myopic-current-policy": "Current policy\n20-week",
@@ -307,7 +308,23 @@ DATA_COLS = {
 }
 
 
-def load_data(data_path: Path, fn: str) -> pd.DataFrame:
+# @lru_cache
+def load_tx_line_length(folder: Path, line_names: List[str]) -> pd.DataFrame:
+    df = pd.read_csv(
+        folder / "network_costs_conus_26_zone.csv",
+        usecols=["start_region", "dest_region", "total_mw-km_per_mw"],
+    ).rename(columns={"total_mw-km_per_mw": "km"})
+    df["line_name"] = df["dest_region"] + "_to_" + df["start_region"]
+    for idx, row in df.iterrows():
+        if row["line_name"] not in line_names:
+            df.loc[:, "line_name"] = df["line_name"].str.replace(
+                row["line_name"], reverse_line_name(row["line_name"])
+            )
+
+    return df  # .drop(columns=["start_region", "dest_region"])
+
+
+def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
     df_list = []
     fn = f"{fn.split('.')[0]}.*"
     for f in data_path.rglob(fn):
@@ -316,6 +333,8 @@ def load_data(data_path: Path, fn: str) -> pd.DataFrame:
             _df = pd.read_csv(f)  # , engine="pyarrow")
             # , skip_blank_lines=True, engine="pyarrow" na_filter=False, )
             _df = _df.dropna(how="all")
+            if case_name is not None:
+                _df["case"] = case_name
             df_list.append(_df)
     if not df_list:
         return pd.DataFrame(columns=DATA_COLS[fn.split(".")[0]])
@@ -325,6 +344,18 @@ def load_data(data_path: Path, fn: str) -> pd.DataFrame:
         df = df.query("~tech_type.str.contains('Other')")
     if "line_name" in df.columns:
         df = fix_tx_line_names(df)
+        line_length = load_tx_line_length(
+            data_path.parent / "notebooks", set(df["line_name"].to_list())
+        )
+        df = pd.merge(df, line_length, on=["line_name"])
+        if "end_value" in df.columns:
+            df["end_cap"] = df["end_value"].copy()
+            df["start_cap"] = df["start_value"].copy()
+            df["end_value"] = df["end_value"] * df["km"]
+            df["start_value"] = df["start_value"] * df["km"]
+        else:
+            df["cap"] = df["value"].copy()
+            df["value"] = df["value"] * df["km"]
     if "zone" in df.columns:
         df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
     for col in ["value", "start_value", "end_value"]:
@@ -1749,7 +1780,7 @@ def chart_tx_expansion(
     data = tx_data.groupby(by, as_index=False)["value"].sum()
 
     _tooltip = [
-        alt.Tooltip("sum(v)", format=",.0f", title="Period GW"),
+        alt.Tooltip("sum(v)", format=",.0f", title="Period GW-km"),
         alt.Tooltip("y", title=title_case("planning_year")),
     ]
     if any([i == "line_name" for i in [facet_col, row_var, col_var]]):
@@ -1792,7 +1823,7 @@ def chart_tx_expansion(
         .encode(
             # xOffset="model:N",
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(v)").title("Transmission (GW)"),
+            y=alt.Y("sum(v)").title("Transmission (GW-km)"),
             color=alt.Color("m:N").title(title_case("model")),
             opacity=alt.Opacity("y:O", sort="descending").title(
                 title_case("planning_year")
