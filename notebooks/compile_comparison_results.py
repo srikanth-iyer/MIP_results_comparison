@@ -46,10 +46,32 @@ _scenarios = {
 
 scenarios = reverse_dict_of_lists(_scenarios)
 
+_child_scenarios = {
+    "carbon_price": [
+        "full-base-200",
+        "full-base-50",
+        "full-base-1000",
+    ],
+    "transmission": [
+        "full-base-200-tx-0",
+        "full-base-200-tx-15",
+        "full-base-200-tx-50",
+    ],
+    "ccs": ["full-base-200-no-ccs"],
+}
+
+child_scenarios = reverse_dict_of_lists(_child_scenarios)
+
 _configurations = {
     "base": [
         "full-base-200",
+        "full-base-50",
+        "full-base-1000",
         "full-current-policies",
+        "full-base-200-tx-0",
+        "full-base-200-tx-15",
+        "full-base-200-tx-50",
+        "full-base-200-no-ccs",
     ],
     "unit_commit": [
         "full-base-200-commit",
@@ -131,7 +153,7 @@ comparison_folders = {
 }
 
 
-def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
+def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
     data_folders = [cwd.parent / f for f in data_folders]
     data_folders = [f for f in data_folders if f.exists()]
 
@@ -152,53 +174,65 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         cap_data = load_data(folder, "resource_capacity.csv")
         cap_data = cap_data.query("unit=='MW' and not tech_type.isna()")
         cap_data["case"] = case_id
-        cap_data["scenario"] = scenarios[folder]
-        cap_data["configuration"] = configurations[folder]
+        cap_data["scenario"] = scenarios.get(folder.name, "none")
+        cap_data["configuration"] = configurations.get(folder.name, "none")
+        cap_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         cap_list.append(cap_data)
 
         gen_data = load_data(folder, "generation.csv")
         gen_data["case"] = case_id
-        gen_data["scenario"] = scenarios[folder]
-        gen_data["configuration"] = configurations[folder]
+        gen_data["scenario"] = scenarios.get(folder.name, "none")
+        gen_data["configuration"] = configurations.get(folder.name, "none")
+        gen_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         gen_list.append(gen_data)
 
         emiss_data = load_data(folder, "emissions.csv")
         emiss_data.loc[emiss_data["unit"] == "kg", "value"] /= 1000
         emiss_data["case"] = case_id
-        emiss_data["scenario"] = scenarios[folder]
-        emiss_data["configuration"] = configurations[folder]
+        emiss_data["scenario"] = scenarios.get(folder.name, "none")
+        emiss_data["configuration"] = configurations.get(folder.name, "none")
+        emiss_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         emiss_list.append(emiss_data)
 
         tx_data = load_data(folder, "transmission.csv")
         tx_data["case"] = case_id
-        tx_data["scenario"] = scenarios[folder]
-        tx_data["configuration"] = configurations[folder]
+        tx_data["scenario"] = scenarios.get(folder.name, "none")
+        tx_data["configuration"] = configurations.get(folder.name, "none")
+        tx_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         tx_list.append(tx_data)
 
         tx_exp_data = load_data(folder, "transmission_expansion.csv")
         tx_exp_data["case"] = case_id
-        tx_exp_data["scenario"] = scenarios[folder]
-        tx_exp_data["configuration"] = configurations[folder]
+        tx_exp_data["scenario"] = scenarios.get(folder.name, "none")
+        tx_exp_data["configuration"] = configurations.get(folder.name, "none")
+        tx_exp_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         tx_exp_list.append(tx_exp_data)
 
         try:
             op_cost_data = load_genx_operations_data(folder, "costs.csv")
             op_cost_data["case"] = case_id
-            op_cost_data["scenario"] = scenarios[folder]
-            op_cost_data["configuration"] = configurations[folder]
+            op_cost_data["scenario"] = scenarios.get(folder.name, "none")
+            op_cost_data["configuration"] = configurations.get(folder.name, "none")
+            op_cost_data["child_scenario"] = child_scenarios.get(folder.name, "none")
             op_cost_model_data = load_genx_operations_data(
                 folder, "costs.csv", model_costs_only=True
             )
             op_cost_model_data["case"] = case_id
-            op_cost_model_data["configuration"] = configurations[folder]
-            op_cost_model_data["scenario"] = scenarios[folder]
+            op_cost_model_data["configuration"] = configurations.get(
+                folder.name, "none"
+            )
+            op_cost_model_data["scenario"] = scenarios.get(folder.name, "none")
+            op_cost_model_data["child_scenario"] = child_scenarios.get(
+                folder.name, "none"
+            )
             op_cost_list.append(op_cost_data)
             op_cost_model_list.append(op_cost_model_data)
 
             op_nse_data = load_genx_operations_data(folder, "nse.csv", hourly_data=True)
             op_nse_data["case"] = case_id
-            op_nse_data["scenario"] = scenarios[folder]
-            op_nse_data["configuration"] = configurations[folder]
+            op_nse_data["scenario"] = scenarios.get(folder.name, "none")
+            op_nse_data["configuration"] = configurations.get(folder.name, "none")
+            op_nse_data["child_scenario"] = child_scenarios.get(folder.name, "none")
             op_nse_list.append(op_nse_data)
         except:
             pass
@@ -239,8 +273,9 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         except:
             pass
         op_emiss_data["case"] = case_id
-        op_emiss_data["scenario"] = scenarios[folder]
-        op_emiss_data["configuration"] = configurations[folder]
+        op_emiss_data["scenario"] = scenarios.get(folder.name, "none")
+        op_emiss_data["configuration"] = configurations.get(folder.name, "none")
+        op_emiss_data["child_scenario"] = child_scenarios.get(folder.name, "none")
         op_emiss_list.append(op_emiss_data)
 
     cap = pd.concat(cap_list, ignore_index=True)
