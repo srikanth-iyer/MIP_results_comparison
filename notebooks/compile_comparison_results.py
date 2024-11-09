@@ -12,9 +12,65 @@ from fig_functions import (
     fix_tx_line_names,
     load_data,
     load_genx_operations_data,
+    reverse_dict_of_lists,
 )
 
 cwd = Path.cwd()
+
+_scenarios = {
+    "base": [
+        "full-base-200",
+        "full-base-200-retire",
+        "full-base-200-no-ccs",
+        "full-base-200-commit",
+        "full-base-50",
+        "full-base-1000",
+        "full-base-200-tx-0",
+        "full-base-200-tx-15",
+        "full-base-200-tx-50",
+        "20-week-foresight",
+        "20-week-myopic",
+    ],
+    "current_policies": [
+        "full-current-policies",
+        "full-current-policies-low-gas",
+        "full-current-policies-high-coal",
+        "full-current-policies-retire",
+        "full-current-policies-retire-low-gas",
+        "full-current-policies-retire-high-coal",
+        "full-current-policies-commit",
+        "20-week-foresight-current-policy",
+        "20-week-myopic-current-policy",
+    ],
+}
+
+scenarios = reverse_dict_of_lists(_scenarios)
+
+_configurations = {
+    "base": [
+        "full-base-200",
+        "full-current-policies",
+    ],
+    "unit_commit": [
+        "full-base-200-commit",
+        "full-current-policies-commit",
+    ],
+    "retirement": [
+        "full-base-200-retire",
+        "full-current-policies-retire",
+        "full-current-policies-retire-low-gas",
+        "full-current-policies-retire-high-coal",
+    ],
+    "20-week": [
+        "20-week-myopic-current-policy",
+        "20-week-myopic",
+    ],
+    "foresight": [
+        "20-week-foresight-current-policy",
+        "20-week-foresight",
+    ],
+}
+configurations = reverse_dict_of_lists(_configurations)
 
 comparison_folders = {
     "carbon_price": [
@@ -96,37 +152,53 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         cap_data = load_data(folder, "resource_capacity.csv")
         cap_data = cap_data.query("unit=='MW' and not tech_type.isna()")
         cap_data["case"] = case_id
+        cap_data["scenario"] = scenarios[folder]
+        cap_data["configuration"] = configurations[folder]
         cap_list.append(cap_data)
 
         gen_data = load_data(folder, "generation.csv")
         gen_data["case"] = case_id
+        gen_data["scenario"] = scenarios[folder]
+        gen_data["configuration"] = configurations[folder]
         gen_list.append(gen_data)
 
         emiss_data = load_data(folder, "emissions.csv")
         emiss_data.loc[emiss_data["unit"] == "kg", "value"] /= 1000
         emiss_data["case"] = case_id
+        emiss_data["scenario"] = scenarios[folder]
+        emiss_data["configuration"] = configurations[folder]
         emiss_list.append(emiss_data)
 
         tx_data = load_data(folder, "transmission.csv")
         tx_data["case"] = case_id
+        tx_data["scenario"] = scenarios[folder]
+        tx_data["configuration"] = configurations[folder]
         tx_list.append(tx_data)
 
         tx_exp_data = load_data(folder, "transmission_expansion.csv")
         tx_exp_data["case"] = case_id
+        tx_exp_data["scenario"] = scenarios[folder]
+        tx_exp_data["configuration"] = configurations[folder]
         tx_exp_list.append(tx_exp_data)
 
         try:
             op_cost_data = load_genx_operations_data(folder, "costs.csv")
             op_cost_data["case"] = case_id
+            op_cost_data["scenario"] = scenarios[folder]
+            op_cost_data["configuration"] = configurations[folder]
             op_cost_model_data = load_genx_operations_data(
                 folder, "costs.csv", model_costs_only=True
             )
             op_cost_model_data["case"] = case_id
+            op_cost_model_data["configuration"] = configurations[folder]
+            op_cost_model_data["scenario"] = scenarios[folder]
             op_cost_list.append(op_cost_data)
             op_cost_model_list.append(op_cost_model_data)
 
             op_nse_data = load_genx_operations_data(folder, "nse.csv", hourly_data=True)
             op_nse_data["case"] = case_id
+            op_nse_data["scenario"] = scenarios[folder]
+            op_nse_data["configuration"] = configurations[folder]
             op_nse_list.append(op_nse_data)
         except:
             pass
@@ -167,6 +239,8 @@ def create_dataframes(data_folders: List[str]) -> Dict[str, pd.DataFrame]:
         except:
             pass
         op_emiss_data["case"] = case_id
+        op_emiss_data["scenario"] = scenarios[folder]
+        op_emiss_data["configuration"] = configurations[folder]
         op_emiss_list.append(op_emiss_data)
 
     cap = pd.concat(cap_list, ignore_index=True)
