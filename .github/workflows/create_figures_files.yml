@@ -38,10 +38,10 @@ jobs:
           python extra_capacity_calcs.py
           cd ..
 
-      - name: Create compilation data files
-        run: |
-          cd notebooks
-          python compile_comparison_results.py
+      # - name: Create compilation data files
+      #   run: |
+      #     cd notebooks
+      #     python compile_comparison_results.py
 
       - name: Create op inputs
         run: |
