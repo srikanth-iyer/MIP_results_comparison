@@ -749,6 +749,8 @@ def add_genx_op_network_cost(
             f.parent / final_network_fn, usecols=read_cols
         ).set_index("Network_Lines")
         model = f.parts[model_part].split("_")[0]
+        if model.lower() == "temoa":
+            model == "TEMOA"
         new_tx_cost = (
             (final_df["Line_Max_Flow_MW"] - original_df["Line_Max_Flow_MW"])
             * original_df["Line_Reinforcement_Cost_per_MWyr"]
