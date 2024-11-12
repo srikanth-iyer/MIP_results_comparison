@@ -215,7 +215,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2027,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,2194.55
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,26567.1
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,3884.4
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,139.215
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,28337.3
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2027,current_policies_20_week_foresight,all,MWh,2.87459e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2027,current_policies_20_week_foresight,all,MWh,106742
@@ -274,7 +273,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2027,current_
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,125.278
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,991.245
 TEMOA,MISC,MISC_natural_gas_steam_turbine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,101284
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,144.533
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2027,current_policies_20_week_foresight,all,MWh,5235.74
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,13511.4
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2027,current_policies_20_week_foresight,all,MWh,2.0572e+07
@@ -333,7 +331,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2027,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,459.921
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,53546.6
 TEMOA,MISE,MISE_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,46415.3
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,109.425
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2027,current_policies_20_week_foresight,all,MWh,7646.4
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,28466.7
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2027,current_policies_20_week_foresight,all,MWh,1.00614e+07
@@ -451,7 +448,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,43223.4
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,575784
 TEMOA,MISW,MISW_natural_gas_steam_turbine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,94355.6
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,819.161
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2027,current_policies_20_week_foresight,all,MWh,7266.26
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,18451.1
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2027,current_policies_20_week_foresight,all,MWh,2.53147e+07
@@ -553,7 +549,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2027,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,217652
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,850968
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,93253.8
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,1186.42
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,14864.9
 TEMOA,NYCW,NYCW_petroleum_liquids_1,Other,2027,current_policies_20_week_foresight,all,MWh,12860
 TEMOA,NYCW,NYCW_solar_photovoltaic_1,Solar,2027,current_policies_20_week_foresight,all,MWh,288341
@@ -744,7 +739,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2027,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,80.7962
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,77557.2
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,8705
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2027,current_policies_20_week_foresight,all,MWh,276.703
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2027,current_policies_20_week_foresight,all,MWh,22426.4
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2027,current_policies_20_week_foresight,all,MWh,1.11255e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_1_1,Wind,2027,current_policies_20_week_foresight,all,MWh,7972.43
@@ -1462,7 +1456,6 @@ TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_1,Natural Gas,2030,current_poli
 TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,4.05145e+07
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,1262.53
 TEMOA,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,44715.5
-TEMOA,BASN,BASN_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,347.998
 TEMOA,BASN,BASN_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,35370.8
 TEMOA,BASN,BASN_onshore_wind_turbine_1,Wind,2030,current_policies_20_week_foresight,all,MWh,3.76368e+06
 TEMOA,BASN,BASN_small_hydroelectric_1,Hydro,2030,current_policies_20_week_foresight,all,MWh,1.62615e+06
@@ -1613,7 +1606,6 @@ TEMOA,FRCC,FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,22470.9
 TEMOA,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,30530.9
 TEMOA,FRCC,FRCC_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,134.146
-TEMOA,FRCC,FRCC_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,20.3659
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,19826.4
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,38110.5
 TEMOA,FRCC,FRCC_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,3.27325e+07
@@ -1670,7 +1662,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,6579.92
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,9839.28
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,3298.81
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,230.336
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,68897.8
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,2.62224e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2030,current_policies_20_week_foresight,all,MWh,100446
@@ -1730,7 +1721,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,228302
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,10287.8
 TEMOA,MISC,MISC_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,179890
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,1754.09
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,13303.9
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,30992.4
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,2.05751e+07
@@ -1791,7 +1781,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,13026.2
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,620811
 TEMOA,MISE,MISE_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,153854
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,2656.47
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,19756.6
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,88724.1
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,1.00649e+07
@@ -1911,7 +1900,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,225882
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,1.01455e+06
 TEMOA,MISW,MISW_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,135390
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,3152.72
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,17500.3
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,50522.9
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,2.5246e+07
@@ -2020,7 +2008,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,27709.5
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,337854
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,41760.7
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,869.354
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,41740.8
 TEMOA,NYCW,NYCW_petroleum_liquids_1,Other,2030,current_policies_20_week_foresight,all,MWh,2650.16
 TEMOA,NYCW,NYCW_solar_photovoltaic_1,Solar,2030,current_policies_20_week_foresight,all,MWh,288496
@@ -2101,7 +2088,6 @@ TEMOA,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,74402.1
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,652691
 TEMOA,PJMC,PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,144473
-TEMOA,PJMC,PJMC_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,717.588
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,9287.39
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,13479.4
 TEMOA,PJMC,PJMC_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,9.44868e+07
@@ -2151,7 +2137,6 @@ TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_
 TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,74.1739
 TEMOA,PJMD,PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,494.689
 TEMOA,PJMD,PJMD_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,5951.72
-TEMOA,PJMD,PJMD_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,33.4071
 TEMOA,PJMD,PJMD_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,18154.9
 TEMOA,PJMD,PJMD_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,3.21544e+07
 TEMOA,PJMD,PJMD_offshorewind_class12_moderate_floating_1_1,Wind,2030,current_policies_20_week_foresight,all,MWh,2409.63
@@ -2216,7 +2201,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,119.352
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,126553
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,6405.5
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,928.41
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,66281.4
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,1.11258e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_0_1,Wind,2030,current_policies_20_week_foresight,all,MWh,72.7746
@@ -2271,7 +2255,6 @@ TEMOA,PJMW,PJMW_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,115.225
 TEMOA,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,24046.1
 TEMOA,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,78769.7
-TEMOA,PJMW,PJMW_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,351.428
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,18215.1
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,39516.4
 TEMOA,PJMW,PJMW_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,5.48582e+07
@@ -2445,7 +2428,6 @@ TEMOA,SPPC,SPPC_landbasedwind_class3_moderate_9_anyQual_0,Wind,2030,current_poli
 TEMOA,SPPC,SPPC_natural_gas_fired_combined_cycle_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,2.63264e+06
 TEMOA,SPPC,SPPC_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,229096
 TEMOA,SPPC,SPPC_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,6166.42
-TEMOA,SPPC,SPPC_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,40.2356
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,6879.67
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,9694.58
 TEMOA,SPPC,SPPC_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,1.05771e+07
@@ -2490,7 +2472,6 @@ TEMOA,SPPN,SPPN_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,200744
 TEMOA,SPPN,SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,346114
 TEMOA,SPPN,SPPN_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,9374.9
-TEMOA,SPPN,SPPN_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,493.879
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,2701.56
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,10447.7
 TEMOA,SPPN,SPPN_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,6.59634e+06
@@ -2698,7 +2679,6 @@ TEMOA,SRCE,SRCE_natural_gas_fired_combined_cycle_2,Natural Gas,2030,current_poli
 TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,10935.9
 TEMOA,SRCE,SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,1045.5
 TEMOA,SRCE,SRCE_natural_gas_steam_turbine_1,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,52253.2
-TEMOA,SRCE,SRCE_naturalgas_fframe_ct_moderate_0,nan,2030,current_policies_20_week_foresight,all,MWh,121.993
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2030,current_policies_20_week_foresight,all,MWh,15064.9
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,Natural Gas,2030,current_policies_20_week_foresight,all,MWh,28911.6
 TEMOA,SRCE,SRCE_nuclear_1,Nuclear,2030,current_policies_20_week_foresight,all,MWh,7.31165e+07
@@ -2966,7 +2946,6 @@ TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,371296
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,81449.1
 TEMOA,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,168275
-TEMOA,BASN,BASN_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,1642
 TEMOA,BASN,BASN_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,56983.7
 TEMOA,BASN,BASN_onshore_wind_turbine_1,Wind,2035,current_policies_20_week_foresight,all,MWh,4.20369e+06
 TEMOA,BASN,BASN_petroleum_liquids_1,Other,2035,current_policies_20_week_foresight,all,MWh,824.145
@@ -3011,7 +2990,6 @@ TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,996826
 TEMOA,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,710076
 TEMOA,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,4731.16
-TEMOA,CANO,CANO_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,259.665
 TEMOA,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,44323.8
 TEMOA,CANO,CANO_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,32515.2
 TEMOA,CANO,CANO_offshorewind_class12_moderate_floating_1_2,Wind,2035,current_policies_20_week_foresight,all,MWh,1027.68
@@ -3072,7 +3050,6 @@ TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3.43147e+06
 TEMOA,CASO,CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,164411
 TEMOA,CASO,CASO_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1258.82
-TEMOA,CASO,CASO_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,966.522
 TEMOA,CASO,CASO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,21637.7
 TEMOA,CASO,CASO_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,72802.7
 TEMOA,CASO,CASO_offshorewind_class3_moderate_fixed_0_1,Wind,2035,current_policies_20_week_foresight,all,MWh,7540.5
@@ -3131,7 +3108,6 @@ TEMOA,FRCC,FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,4.67596e+06
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,33196.7
 TEMOA,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,365200
-TEMOA,FRCC,FRCC_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,3374.74
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,43942.3
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,91044.8
 TEMOA,FRCC,FRCC_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,3.27322e+07
@@ -3189,7 +3165,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,15173.5
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,14105.8
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,5491.96
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,11333.9
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3.60837e+07
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,2.7338e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2035,current_policies_20_week_foresight,all,MWh,104680
@@ -3259,7 +3234,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,8.19177e+06
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,94989.3
 TEMOA,MISC,MISC_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,402235
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,6218.64
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,31323.9
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,78239.2
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,2.05747e+07
@@ -3324,7 +3298,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,126473
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,2.78556e+06
 TEMOA,MISE,MISE_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,186400
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,6637.61
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,58606.8
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3.19481e+07
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,1.0064e+07
@@ -3375,7 +3348,6 @@ TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,551487
 TEMOA,MISS,MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,174444
 TEMOA,MISS,MISS_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,38860
-TEMOA,MISS,MISS_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2511.46
 TEMOA,MISS,MISS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,22637.6
 TEMOA,MISS,MISS_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,34303
 TEMOA,MISS,MISS_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,4.70522e+07
@@ -3453,7 +3425,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,6.31022e+06
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,571570
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1.53895e+06
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,11606.8
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,49664.3
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,2.86378e+06
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,2.41081e+07
@@ -3527,7 +3498,6 @@ TEMOA,NWPP,NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,NWPP,NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,375411
 TEMOA,NWPP,NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,579724
 TEMOA,NWPP,NWPP_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3494.4
-TEMOA,NWPP,NWPP_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,1656.38
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,15415.4
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,131619
 TEMOA,NWPP,NWPP_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,1.01505e+07
@@ -3574,7 +3544,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,490444
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1.37637e+06
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,84728.9
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,6835.1
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,308425
 TEMOA,NYCW,NYCW_petroleum_liquids_1,Other,2035,current_policies_20_week_foresight,all,MWh,12452.1
 TEMOA,NYCW,NYCW_solar_photovoltaic_1,Solar,2035,current_policies_20_week_foresight,all,MWh,291380
@@ -3606,7 +3575,6 @@ TEMOA,NYUP,NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,NYUP,NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,9024.94
 TEMOA,NYUP,NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,22788.8
 TEMOA,NYUP,NYUP_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,64945.3
-TEMOA,NYUP,NYUP_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,697.338
 TEMOA,NYUP,NYUP_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,57571.9
 TEMOA,NYUP,NYUP_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,2.71627e+07
 TEMOA,NYUP,NYUP_offshorewind_class12_moderate_floating_0_1,Wind,2035,current_policies_20_week_foresight,all,MWh,2.10566e+07
@@ -3660,7 +3628,6 @@ TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,7.35061e+06
 TEMOA,PJMC,PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,273465
 TEMOA,PJMC,PJMC_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3499.53
-TEMOA,PJMC,PJMC_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,4590.04
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,23110.7
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,29624.7
 TEMOA,PJMC,PJMC_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,9.42354e+07
@@ -3714,7 +3681,6 @@ TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_
 TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,327517
 TEMOA,PJMD,PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1590.17
 TEMOA,PJMD,PJMD_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,23669.2
-TEMOA,PJMD,PJMD_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,1357.5
 TEMOA,PJMD,PJMD_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,31958.9
 TEMOA,PJMD,PJMD_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,3.21541e+07
 TEMOA,PJMD,PJMD_offshorewind_class12_moderate_floating_0_1,Wind,2035,current_policies_20_week_foresight,all,MWh,1362.75
@@ -3784,7 +3750,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,288602
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,485764
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,102671
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,8356.27
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,7.30507e+06
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,1.11258e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_0_1,Wind,2035,current_policies_20_week_foresight,all,MWh,1483.05
@@ -3844,7 +3809,6 @@ TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,8.56813e+06
 TEMOA,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,158471
 TEMOA,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,206268
-TEMOA,PJMW,PJMW_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,7143.6
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,73544
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,535865
 TEMOA,PJMW,PJMW_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,5.48576e+07
@@ -3943,7 +3907,6 @@ TEMOA,RMRG,RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,148226
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,4834.27
 TEMOA,RMRG,RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,95872.8
-TEMOA,RMRG,RMRG_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,652.331
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,8044.59
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,17455.3
 TEMOA,RMRG,RMRG_onshore_wind_turbine_1,Wind,2035,current_policies_20_week_foresight,all,MWh,3.37267e+07
@@ -4031,7 +3994,6 @@ TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,78443.1
 TEMOA,SPPC,SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,38295.2
 TEMOA,SPPC,SPPC_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,12600.5
-TEMOA,SPPC,SPPC_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2354.54
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,10561.8
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,18315.3
 TEMOA,SPPC,SPPC_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,1.01827e+07
@@ -4080,7 +4042,6 @@ TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,4688.48
 TEMOA,SPPN,SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,559488
 TEMOA,SPPN,SPPN_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,12609.1
-TEMOA,SPPN,SPPN_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2218.81
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,7713.56
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,19472.2
 TEMOA,SPPN,SPPN_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,6.11302e+06
@@ -4170,7 +4131,6 @@ TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1.33941e+06
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,11063.7
 TEMOA,SPPS,SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,415132
-TEMOA,SPPS,SPPS_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2068.5
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,16423.3
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,24631.6
 TEMOA,SPPS,SPPS_onshore_wind_turbine_1,Wind,2035,current_policies_20_week_foresight,all,MWh,5.32956e+07
@@ -4234,7 +4194,6 @@ TEMOA,SRCA,SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3231.52
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,2.27352e+06
 TEMOA,SRCA,SRCA_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,904283
-TEMOA,SRCA,SRCA_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,3024.77
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,22401.3
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,42927.3
 TEMOA,SRCA,SRCA_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,1.04991e+08
@@ -4299,7 +4258,6 @@ TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_
 TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,59590.6
 TEMOA,SRCE,SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,3803.12
 TEMOA,SRCE,SRCE_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,139042
-TEMOA,SRCE,SRCE_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,4450.3
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,29339.6
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,60254.8
 TEMOA,SRCE,SRCE_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,7.31157e+07
@@ -4349,7 +4307,6 @@ TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_
 TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,335950
 TEMOA,SRSE,SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,32923.7
 TEMOA,SRSE,SRSE_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,147305
-TEMOA,SRSE,SRSE_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,3004.96
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,28138
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,42091.5
 TEMOA,SRSE,SRSE_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,7.07744e+07
@@ -4409,7 +4366,6 @@ TEMOA,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,764659
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,68332.4
 TEMOA,SRSG,SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,147183
-TEMOA,SRSG,SRSG_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2242.17
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,3163.55
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,52882.6
 TEMOA,SRSG,SRSG_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,3.48083e+07
@@ -4462,7 +4418,6 @@ TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2035,current_poli
 TEMOA,TREW,TREW_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,787.118
 TEMOA,TREW,TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,20919
 TEMOA,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,11447.2
-TEMOA,TREW,TREW_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2404.04
 TEMOA,TREW,TREW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,9379.42
 TEMOA,TREW,TREW_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,27522
 TEMOA,TREW,TREW_onshore_wind_turbine_1,Wind,2035,current_policies_20_week_foresight,all,MWh,7.01316e+07
@@ -4533,7 +4488,6 @@ TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2035,current_po
 TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1.16807e+06
 TEMOA,TRE,TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,1.11869e+06
 TEMOA,TRE,TRE_natural_gas_steam_turbine_1,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,19793.1
-TEMOA,TRE,TRE_naturalgas_fframe_ct_moderate_0,nan,2035,current_policies_20_week_foresight,all,MWh,2294.59
 TEMOA,TRE,TRE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2035,current_policies_20_week_foresight,all,MWh,16645.3
 TEMOA,TRE,TRE_naturalgas_hframe_cc_moderate_0,Natural Gas,2035,current_policies_20_week_foresight,all,MWh,34155.8
 TEMOA,TRE,TRE_nuclear_1,Nuclear,2035,current_policies_20_week_foresight,all,MWh,3.94497e+07
@@ -4592,7 +4546,6 @@ TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,90201.5
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,22625.5
 TEMOA,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,32843.5
-TEMOA,BASN,BASN_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,223.556
 TEMOA,BASN,BASN_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,40204
 TEMOA,BASN,BASN_onshore_wind_turbine_1,Wind,2040,current_policies_20_week_foresight,all,MWh,2.28611e+06
 TEMOA,BASN,BASN_petroleum_liquids_1,Other,2040,current_policies_20_week_foresight,all,MWh,387.956
@@ -4635,7 +4588,6 @@ TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,192653
 TEMOA,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,234523
 TEMOA,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1129.93
-TEMOA,CANO,CANO_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,10.7119
 TEMOA,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,57390.4
 TEMOA,CANO,CANO_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,30195.2
 TEMOA,CANO,CANO_offshorewind_class12_moderate_floating_1_1,Wind,2040,current_policies_20_week_foresight,all,MWh,693.331
@@ -4696,7 +4648,6 @@ TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,977524
 TEMOA,CASO,CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,62765.2
 TEMOA,CASO,CASO_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,59.1276
-TEMOA,CASO,CASO_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,308.022
 TEMOA,CASO,CASO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,21803.8
 TEMOA,CASO,CASO_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,65939.7
 TEMOA,CASO,CASO_offshorewind_class3_moderate_fixed_0_1,Wind,2040,current_policies_20_week_foresight,all,MWh,9471.21
@@ -4755,7 +4706,6 @@ TEMOA,FRCC,FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,2.01176e+06
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,17936.3
 TEMOA,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,178592
-TEMOA,FRCC,FRCC_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,1688.19
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,102244
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,138114
 TEMOA,FRCC,FRCC_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.73218e+07
@@ -4811,7 +4761,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,11400.8
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,16892.6
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,9019.95
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,20390.6
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,2.00248e+07
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.29179e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2040,current_policies_20_week_foresight,all,MWh,97297.1
@@ -4879,7 +4828,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,184927
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.31645e+06
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,14853.8
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,1822.85
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,39735.4
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,63017.2
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,1.49164e+07
@@ -4939,7 +4887,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_1,Natural Gas,2040,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,872283
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,56702.2
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.14132e+06
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,3350.23
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,96038.9
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,2.27201e+07
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,8.79513e+06
@@ -4990,7 +4937,6 @@ TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,68246.7
 TEMOA,MISS,MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,47123
 TEMOA,MISS,MISS_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,5658.52
-TEMOA,MISS,MISS_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,290.25
 TEMOA,MISS,MISS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,30621.3
 TEMOA,MISS,MISS_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,31823.5
 TEMOA,MISS,MISS_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,3.53075e+07
@@ -5068,7 +5014,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.4727e+06
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,147767
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,528259
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,3839.49
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,46363.2
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.52446e+06
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,1.63387e+07
@@ -5141,7 +5086,6 @@ TEMOA,NWPP,NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,NWPP,NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,139277
 TEMOA,NWPP,NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,123936
 TEMOA,NWPP,NWPP_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,748.975
-TEMOA,NWPP,NWPP_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,717.802
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,9181.12
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,75469.4
 TEMOA,NWPP,NWPP_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,6.38965e+06
@@ -5188,7 +5132,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,387357
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,788107
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,61551.4
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,3630.43
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,460084
 TEMOA,NYCW,NYCW_petroleum_liquids_1,Other,2040,current_policies_20_week_foresight,all,MWh,9017.97
 TEMOA,NYCW,NYCW_solar_photovoltaic_1,Solar,2040,current_policies_20_week_foresight,all,MWh,282119
@@ -5219,7 +5162,6 @@ TEMOA,NYUP,NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,NYUP,NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,15923.2
 TEMOA,NYUP,NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,16550.7
 TEMOA,NYUP,NYUP_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,53835.8
-TEMOA,NYUP,NYUP_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,1419.38
 TEMOA,NYUP,NYUP_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,66398.4
 TEMOA,NYUP,NYUP_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.12029e+07
 TEMOA,NYUP,NYUP_offshorewind_class12_moderate_floating_0_1,Wind,2040,current_policies_20_week_foresight,all,MWh,2.01096e+07
@@ -5269,7 +5211,6 @@ TEMOA,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.7754e+06
 TEMOA,PJMC,PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,116472
 TEMOA,PJMC,PJMC_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1236.37
-TEMOA,PJMC,PJMC_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,1112.72
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,32626.2
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,32363.8
 TEMOA,PJMC,PJMC_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,7.63199e+07
@@ -5321,7 +5262,6 @@ TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_
 TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,272167
 TEMOA,PJMD,PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,291.969
 TEMOA,PJMD,PJMD_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,11837.6
-TEMOA,PJMD,PJMD_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,495.435
 TEMOA,PJMD,PJMD_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,29056.3
 TEMOA,PJMD,PJMD_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.72686e+07
 TEMOA,PJMD,PJMD_offshorewind_class12_moderate_floating_0_1,Wind,2040,current_policies_20_week_foresight,all,MWh,1253.92
@@ -5389,7 +5329,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,274752
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,296744
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,74096.6
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,6051.3
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,7.04687e+06
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,1.00487e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_0_1,Wind,2040,current_policies_20_week_foresight,all,MWh,1439.07
@@ -5448,7 +5387,6 @@ TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,3.26656e+06
 TEMOA,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,63737
 TEMOA,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,118858
-TEMOA,PJMW,PJMW_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,3379.52
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,136038
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,504102
 TEMOA,PJMW,PJMW_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,4.62724e+07
@@ -5547,7 +5485,6 @@ TEMOA,RMRG,RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,68046.5
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,7789.46
 TEMOA,RMRG,RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,21950
-TEMOA,RMRG,RMRG_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,160.519
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,4584.13
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,8052.78
 TEMOA,RMRG,RMRG_onshore_wind_turbine_1,Wind,2040,current_policies_20_week_foresight,all,MWh,1.53744e+07
@@ -5633,7 +5570,6 @@ TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,14833.6
 TEMOA,SPPC,SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,11436.9
 TEMOA,SPPC,SPPC_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,2472.83
-TEMOA,SPPC,SPPC_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,131.668
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,8747.03
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,13031.1
 TEMOA,SPPC,SPPC_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,5.89337e+06
@@ -5680,7 +5616,6 @@ TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,2639.5
 TEMOA,SPPN,SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,122047
 TEMOA,SPPN,SPPN_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,3281.29
-TEMOA,SPPN,SPPN_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,243.729
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,5201.93
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,13153.1
 TEMOA,SPPN,SPPN_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,3.25011e+06
@@ -5769,7 +5704,6 @@ TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,230818
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,3125.24
 TEMOA,SPPS,SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,66915.3
-TEMOA,SPPS,SPPS_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,116.851
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,14318
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,19023.1
 TEMOA,SPPS,SPPS_onshore_wind_turbine_1,Wind,2040,current_policies_20_week_foresight,all,MWh,2.49563e+07
@@ -5832,7 +5766,6 @@ TEMOA,SRCA,SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,7592.72
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,1.30943e+06
 TEMOA,SRCA,SRCA_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,327181
-TEMOA,SRCA,SRCA_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,654.845
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,30227.3
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,40244.7
 TEMOA,SRCA,SRCA_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,8.69387e+07
@@ -5894,7 +5827,6 @@ TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_
 TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,16920.1
 TEMOA,SRCE,SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,760.215
 TEMOA,SRCE,SRCE_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,45808.2
-TEMOA,SRCE,SRCE_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,916.411
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,38571.2
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,47414.5
 TEMOA,SRCE,SRCE_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,5.74228e+07
@@ -5943,7 +5875,6 @@ TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_
 TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,48933.7
 TEMOA,SRSE,SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,12243.2
 TEMOA,SRSE,SRSE_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,54742.1
-TEMOA,SRSE,SRSE_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,781.458
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,45026.9
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,48486.6
 TEMOA,SRSE,SRSE_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,5.84774e+07
@@ -6000,7 +5931,6 @@ TEMOA,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_poli
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,113556
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,12573
 TEMOA,SRSG,SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,20922.9
-TEMOA,SRSG,SRSG_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,180.419
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,1036.33
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,34080.8
 TEMOA,SRSG,SRSG_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.26478e+07
@@ -6050,7 +5980,6 @@ TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2040,current_poli
 TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,47798.2
 TEMOA,TREW,TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,9373.18
 TEMOA,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,3140.1
-TEMOA,TREW,TREW_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,180.999
 TEMOA,TREW,TREW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,7279.37
 TEMOA,TREW,TREW_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,22620.4
 TEMOA,TREW,TREW_onshore_wind_turbine_1,Wind,2040,current_policies_20_week_foresight,all,MWh,2.06841e+07
@@ -6121,7 +6050,6 @@ TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2040,current_po
 TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,118455
 TEMOA,TRE,TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,219100
 TEMOA,TRE,TRE_natural_gas_steam_turbine_1,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,8243.19
-TEMOA,TRE,TRE_naturalgas_fframe_ct_moderate_0,nan,2040,current_policies_20_week_foresight,all,MWh,121.529
 TEMOA,TRE,TRE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2040,current_policies_20_week_foresight,all,MWh,14762.9
 TEMOA,TRE,TRE_naturalgas_hframe_cc_moderate_0,Natural Gas,2040,current_policies_20_week_foresight,all,MWh,29498.8
 TEMOA,TRE,TRE_nuclear_1,Nuclear,2040,current_policies_20_week_foresight,all,MWh,2.23301e+07
@@ -6182,7 +6110,6 @@ TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,68421.7
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,18321.7
 TEMOA,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,28420.5
-TEMOA,BASN,BASN_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1070.6
 TEMOA,BASN,BASN_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,2.64543e+07
 TEMOA,BASN,BASN_onshore_wind_turbine_1,Wind,2045,current_policies_20_week_foresight,all,MWh,1.0626e+06
 TEMOA,BASN,BASN_petroleum_liquids_1,Other,2045,current_policies_20_week_foresight,all,MWh,387.997
@@ -6226,7 +6153,6 @@ TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,142301
 TEMOA,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,206274
 TEMOA,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1678.35
-TEMOA,CANO,CANO_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,779.787
 TEMOA,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,68735.6
 TEMOA,CANO,CANO_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.47448e+07
 TEMOA,CANO,CANO_offshorewind_class12_moderate_floating_1_1,Wind,2045,current_policies_20_week_foresight,all,MWh,888.63
@@ -6288,7 +6214,6 @@ TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,761507
 TEMOA,CASO,CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,40147.1
 TEMOA,CASO,CASO_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,60.2854
-TEMOA,CASO,CASO_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1439.32
 TEMOA,CASO,CASO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,26986.6
 TEMOA,CASO,CASO_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,6.29117e+07
 TEMOA,CASO,CASO_offshorewind_class3_moderate_fixed_0_1,Wind,2045,current_policies_20_week_foresight,all,MWh,12274.2
@@ -6347,7 +6272,6 @@ TEMOA,FRCC,FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.68603e+06
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,11185.3
 TEMOA,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,146906
-TEMOA,FRCC,FRCC_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2742.8
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,105233
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,6.23681e+07
 TEMOA,FRCC,FRCC_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.86506e+07
@@ -6403,7 +6327,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,12994.4
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,15899
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,8161.03
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,226510
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,3.2087e+07
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.50196e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2045,current_policies_20_week_foresight,all,MWh,97409.8
@@ -6473,7 +6396,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,192275
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.51548e+06
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,20646.6
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,4877.45
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,45316.9
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,6.76616e+07
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,1.70686e+07
@@ -6534,7 +6456,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_1,Natural Gas,2045,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,559710
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,47628.2
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,720446
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,4260.97
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,100453
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,4.58948e+07
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,9.27142e+06
@@ -6587,7 +6508,6 @@ TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,176323
 TEMOA,MISS,MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,63002.2
 TEMOA,MISS,MISS_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,16149.4
-TEMOA,MISS,MISS_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2442.62
 TEMOA,MISS,MISS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,34542.6
 TEMOA,MISS,MISS_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,333615
 TEMOA,MISS,MISS_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,4.00949e+07
@@ -6666,7 +6586,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,726944
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,94101.4
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,345485
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,7591.76
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,56503.1
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,8.27378e+07
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,1.98255e+07
@@ -6740,7 +6659,6 @@ TEMOA,NWPP,NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,NWPP,NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,52466.3
 TEMOA,NWPP,NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,87720.4
 TEMOA,NWPP,NWPP_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,542.712
-TEMOA,NWPP,NWPP_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,3749.71
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,12950.7
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,4.59449e+07
 TEMOA,NWPP,NWPP_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,8.62614e+06
@@ -6788,7 +6706,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,258627
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,592569
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,50265.8
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,5692.26
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,3.9126e+06
 TEMOA,NYCW,NYCW_petroleum_liquids_1,Other,2045,current_policies_20_week_foresight,all,MWh,4168.96
 TEMOA,NYCW,NYCW_solar_photovoltaic_1,Solar,2045,current_policies_20_week_foresight,all,MWh,191635
@@ -6820,7 +6737,6 @@ TEMOA,NYUP,NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,NYUP,NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,11826.2
 TEMOA,NYUP,NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,16147.9
 TEMOA,NYUP,NYUP_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,52376
-TEMOA,NYUP,NYUP_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2295.51
 TEMOA,NYUP,NYUP_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,148148
 TEMOA,NYUP,NYUP_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.5618e+07
 TEMOA,NYUP,NYUP_offshorewind_class12_moderate_floating_0_1,Wind,2045,current_policies_20_week_foresight,all,MWh,2.07435e+07
@@ -6871,7 +6787,6 @@ TEMOA,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.40868e+06
 TEMOA,PJMC,PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,93908.5
 TEMOA,PJMC,PJMC_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1196.43
-TEMOA,PJMC,PJMC_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2709.37
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,36923.5
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,121305
 TEMOA,PJMC,PJMC_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,8.38286e+07
@@ -6924,7 +6839,6 @@ TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_
 TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,229921
 TEMOA,PJMD,PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,234.225
 TEMOA,PJMD,PJMD_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,8124.97
-TEMOA,PJMD,PJMD_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,910.073
 TEMOA,PJMD,PJMD_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,44318.7
 TEMOA,PJMD,PJMD_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.9042e+07
 TEMOA,PJMD,PJMD_offshorewind_class12_moderate_floating_0_1,Wind,2045,current_policies_20_week_foresight,all,MWh,1257.22
@@ -6993,7 +6907,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,133524
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,180900
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,49168.8
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,7583.23
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,9.63141e+07
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,1.05253e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_0_1,Wind,2045,current_policies_20_week_foresight,all,MWh,1440.68
@@ -7051,7 +6964,6 @@ TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.91347e+06
 TEMOA,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,40582
 TEMOA,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,80431.9
-TEMOA,PJMW,PJMW_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,4659.59
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,148485
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,9.40927e+07
 TEMOA,PJMW,PJMW_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,4.94623e+07
@@ -7150,7 +7062,6 @@ TEMOA,RMRG,RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,104049
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,10096.2
 TEMOA,RMRG,RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,27397.8
-TEMOA,RMRG,RMRG_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2411.68
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,5744.65
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,51038.4
 TEMOA,RMRG,RMRG_onshore_wind_turbine_1,Wind,2045,current_policies_20_week_foresight,all,MWh,1.77819e+07
@@ -7238,7 +7149,6 @@ TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,19662
 TEMOA,SPPC,SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,12863.3
 TEMOA,SPPC,SPPC_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,3185.28
-TEMOA,SPPC,SPPC_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1684.16
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,12168.7
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,40198.2
 TEMOA,SPPC,SPPC_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,7.44397e+06
@@ -7285,7 +7195,6 @@ TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,2524.52
 TEMOA,SPPN,SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,132783
 TEMOA,SPPN,SPPN_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,3404.59
-TEMOA,SPPN,SPPN_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1441.5
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,6847.51
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,43648.2
 TEMOA,SPPN,SPPN_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,4.21619e+06
@@ -7376,7 +7285,6 @@ TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,301079
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,4593.38
 TEMOA,SPPS,SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,155272
-TEMOA,SPPS,SPPS_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2311.29
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,19340.5
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,108029
 TEMOA,SPPS,SPPS_onshore_wind_turbine_1,Wind,2045,current_policies_20_week_foresight,all,MWh,2.70717e+07
@@ -7441,7 +7349,6 @@ TEMOA,SRCA,SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,28101.8
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.29578e+06
 TEMOA,SRCA,SRCA_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,236529
-TEMOA,SRCA,SRCA_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,3486.32
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,33095.2
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.89202e+07
 TEMOA,SRCA,SRCA_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,9.17931e+07
@@ -7504,7 +7411,6 @@ TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_
 TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,19849.7
 TEMOA,SRCE,SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,944.246
 TEMOA,SRCE,SRCE_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,51631.1
-TEMOA,SRCE,SRCE_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,3955.03
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,42894
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,1.84629e+07
 TEMOA,SRCE,SRCE_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,6.26393e+07
@@ -7554,7 +7460,6 @@ TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_
 TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,103886
 TEMOA,SRSE,SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,14720.1
 TEMOA,SRSE,SRSE_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,65177.6
-TEMOA,SRSE,SRSE_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2839.69
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,48565.8
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,3.20902e+07
 TEMOA,SRSE,SRSE_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,6.19333e+07
@@ -7611,7 +7516,6 @@ TEMOA,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_poli
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,134246
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,16532.5
 TEMOA,SRSG,SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,31639.3
-TEMOA,SRSG,SRSG_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1513.67
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,877.462
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,9.42719e+06
 TEMOA,SRSG,SRSG_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.70823e+07
@@ -7663,7 +7567,6 @@ TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2045,current_poli
 TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,101567
 TEMOA,TREW,TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,17978.8
 TEMOA,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,5201.71
-TEMOA,TREW,TREW_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,1625.73
 TEMOA,TREW,TREW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,9286.53
 TEMOA,TREW,TREW_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,83572.7
 TEMOA,TREW,TREW_onshore_wind_turbine_1,Wind,2045,current_policies_20_week_foresight,all,MWh,2.23316e+07
@@ -7736,7 +7639,6 @@ TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2045,current_po
 TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,188427
 TEMOA,TRE,TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,406364
 TEMOA,TRE,TRE_natural_gas_steam_turbine_1,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,12306.1
-TEMOA,TRE,TRE_naturalgas_fframe_ct_moderate_0,nan,2045,current_policies_20_week_foresight,all,MWh,2301.08
 TEMOA,TRE,TRE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2045,current_policies_20_week_foresight,all,MWh,19409.5
 TEMOA,TRE,TRE_naturalgas_hframe_cc_moderate_0,Natural Gas,2045,current_policies_20_week_foresight,all,MWh,4.73475e+07
 TEMOA,TRE,TRE_nuclear_1,Nuclear,2045,current_policies_20_week_foresight,all,MWh,2.8085e+07
@@ -7801,7 +7703,6 @@ TEMOA,BASN,BASN_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,61801.5
 TEMOA,BASN,BASN_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,16292.7
 TEMOA,BASN,BASN_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,23373.5
-TEMOA,BASN,BASN_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2308.29
 TEMOA,BASN,BASN_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4.27822e+07
 TEMOA,BASN,BASN_onshore_wind_turbine_1,Wind,2050,current_policies_20_week_foresight,all,MWh,997245
 TEMOA,BASN,BASN_petroleum_liquids_1,Other,2050,current_policies_20_week_foresight,all,MWh,387.994
@@ -7845,7 +7746,6 @@ TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,CANO,CANO_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,112668
 TEMOA,CANO,CANO_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,140879
 TEMOA,CANO,CANO_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1109.99
-TEMOA,CANO,CANO_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,1338.52
 TEMOA,CANO,CANO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,77090.6
 TEMOA,CANO,CANO_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,3.94343e+07
 TEMOA,CANO,CANO_offshorewind_class12_moderate_floating_1_1,Wind,2050,current_policies_20_week_foresight,all,MWh,2502.61
@@ -7906,7 +7806,6 @@ TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,CASO,CASO_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,764904
 TEMOA,CASO,CASO_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,29801.7
 TEMOA,CASO,CASO_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,59.4026
-TEMOA,CASO,CASO_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2432.08
 TEMOA,CASO,CASO_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,28895.6
 TEMOA,CASO,CASO_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,9.88211e+07
 TEMOA,CASO,CASO_offshorewind_class12_moderate_floating_1_1,Wind,2050,current_policies_20_week_foresight,all,MWh,314.022
@@ -7967,7 +7866,6 @@ TEMOA,FRCC,FRCC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,965120
 TEMOA,FRCC,FRCC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4363.97
 TEMOA,FRCC,FRCC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,99118.2
-TEMOA,FRCC,FRCC_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2717.82
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,108219
 TEMOA,FRCC,FRCC_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.30703e+08
 TEMOA,FRCC,FRCC_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,3.04125e+07
@@ -8023,7 +7921,6 @@ TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,ISNE,ISNE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,18456.1
 TEMOA,ISNE,ISNE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,13151.8
 TEMOA,ISNE,ISNE_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,6706.06
-TEMOA,ISNE,ISNE_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,496930
 TEMOA,ISNE,ISNE_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,3.9756e+07
 TEMOA,ISNE,ISNE_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,2.72498e+07
 TEMOA,ISNE,ISNE_offshore_wind_turbine_1,Wind,2050,current_policies_20_week_foresight,all,MWh,245372
@@ -8092,7 +7989,6 @@ TEMOA,MISC,MISC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,94899.7
 TEMOA,MISC,MISC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,527426
 TEMOA,MISC,MISC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,9353.15
-TEMOA,MISC,MISC_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,5697.05
 TEMOA,MISC,MISC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,45717.5
 TEMOA,MISC,MISC_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.33471e+08
 TEMOA,MISC,MISC_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,1.81113e+07
@@ -8153,7 +8049,6 @@ TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_1,Natural Gas,2050,current_poli
 TEMOA,MISE,MISE_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,347783
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,28997.9
 TEMOA,MISE,MISE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,402944
-TEMOA,MISE,MISE_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,5865.41
 TEMOA,MISE,MISE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,99991.2
 TEMOA,MISE,MISE_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,6.60605e+07
 TEMOA,MISE,MISE_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,9.51545e+06
@@ -8205,7 +8100,6 @@ TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,MISS,MISS_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,117983
 TEMOA,MISS,MISS_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,51329
 TEMOA,MISS,MISS_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,13518.4
-TEMOA,MISS,MISS_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3265.03
 TEMOA,MISS,MISS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,35265.7
 TEMOA,MISS,MISS_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,3.83179e+07
 TEMOA,MISS,MISS_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,4.17913e+07
@@ -8284,7 +8178,6 @@ TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,481990
 TEMOA,MISW,MISW_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,59024.7
 TEMOA,MISW,MISW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,241545
-TEMOA,MISW,MISW_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,10369.1
 TEMOA,MISW,MISW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,57145.3
 TEMOA,MISW,MISW_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.31461e+08
 TEMOA,MISW,MISW_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,1.74474e+07
@@ -8360,7 +8253,6 @@ TEMOA,NWPP,NWPP_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,NWPP,NWPP_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,46642.8
 TEMOA,NWPP,NWPP_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,76092.9
 TEMOA,NWPP,NWPP_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,354.852
-TEMOA,NWPP,NWPP_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,7598.95
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,14896.3
 TEMOA,NWPP,NWPP_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,8.25044e+07
 TEMOA,NWPP,NWPP_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,9.55118e+06
@@ -8410,7 +8302,6 @@ TEMOA,NYCW,NYCW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,202695
 TEMOA,NYCW,NYCW_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,395910
 TEMOA,NYCW,NYCW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,45760.6
-TEMOA,NYCW,NYCW_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,5341.66
 TEMOA,NYCW,NYCW_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4.70125e+06
 TEMOA,NYUP,NYUP_battery_moderate_0_10hour,Battery,2050,current_policies_20_week_foresight,all,MWh,9040.01
 TEMOA,NYUP,NYUP_battery_moderate_0_2hour,Battery,2050,current_policies_20_week_foresight,all,MWh,3.50776e+06
@@ -8441,7 +8332,6 @@ TEMOA,NYUP,NYUP_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,NYUP,NYUP_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,11082.7
 TEMOA,NYUP,NYUP_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,15630.8
 TEMOA,NYUP,NYUP_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,50766.5
-TEMOA,NYUP,NYUP_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3462.68
 TEMOA,NYUP,NYUP_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,317832
 TEMOA,NYUP,NYUP_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,1.75231e+07
 TEMOA,NYUP,NYUP_offshorewind_class12_moderate_floating_0_1,Wind,2050,current_policies_20_week_foresight,all,MWh,2.12252e+07
@@ -8493,7 +8383,6 @@ TEMOA,PJMC,PJMC_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,PJMC,PJMC_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,877029
 TEMOA,PJMC,PJMC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,59886.9
 TEMOA,PJMC,PJMC_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1363.18
-TEMOA,PJMC,PJMC_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,4332.57
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,37393.8
 TEMOA,PJMC,PJMC_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,660067
 TEMOA,PJMC,PJMC_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,7.97081e+07
@@ -8550,7 +8439,6 @@ TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_
 TEMOA,PJMD,PJMD_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,129156
 TEMOA,PJMD,PJMD_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,153.836
 TEMOA,PJMD,PJMD_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4858.87
-TEMOA,PJMD,PJMD_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,1773.17
 TEMOA,PJMD,PJMD_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,69550.2
 TEMOA,PJMD,PJMD_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,3.00204e+07
 TEMOA,PJMD,PJMD_offshorewind_class12_moderate_floating_0_1,Wind,2050,current_policies_20_week_foresight,all,MWh,1897.25
@@ -8619,7 +8507,6 @@ TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_
 TEMOA,PJME,PJME_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,70929
 TEMOA,PJME,PJME_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,100093
 TEMOA,PJME,PJME_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,28097.5
-TEMOA,PJME,PJME_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,6969.99
 TEMOA,PJME,PJME_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.48348e+08
 TEMOA,PJME,PJME_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,1.06679e+08
 TEMOA,PJME,PJME_offshorewind_class12_moderate_floating_0_1,Wind,2050,current_policies_20_week_foresight,all,MWh,2033.17
@@ -8677,7 +8564,6 @@ TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,PJMW,PJMW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.0208e+06
 TEMOA,PJMW,PJMW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,27004.3
 TEMOA,PJMW,PJMW_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,56912.6
-TEMOA,PJMW,PJMW_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,5021.63
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,150821
 TEMOA,PJMW,PJMW_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.45714e+08
 TEMOA,PJMW,PJMW_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,5.09175e+07
@@ -8776,7 +8662,6 @@ TEMOA,RMRG,RMRG_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,94685.2
 TEMOA,RMRG,RMRG_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,6427.11
 TEMOA,RMRG,RMRG_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,20630.5
-TEMOA,RMRG,RMRG_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,96547.2
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,6600.4
 TEMOA,RMRG,RMRG_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,7.38353e+06
 TEMOA,RMRG,RMRG_onshore_wind_turbine_1,Wind,2050,current_policies_20_week_foresight,all,MWh,1.22572e+07
@@ -8864,7 +8749,6 @@ TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,SPPC,SPPC_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,9316.4
 TEMOA,SPPC,SPPC_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,13410.6
 TEMOA,SPPC,SPPC_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,2470.71
-TEMOA,SPPC,SPPC_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3107.45
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,14093.6
 TEMOA,SPPC,SPPC_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,91252.7
 TEMOA,SPPC,SPPC_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,8.35902e+06
@@ -8911,7 +8795,6 @@ TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,SPPN,SPPN_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,2179.15
 TEMOA,SPPN,SPPN_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,93946.2
 TEMOA,SPPN,SPPN_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,2836.71
-TEMOA,SPPN,SPPN_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2676.75
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,7570.37
 TEMOA,SPPN,SPPN_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,122005
 TEMOA,SPPN,SPPN_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,5.0931e+06
@@ -9001,7 +8884,6 @@ TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,262274
 TEMOA,SPPS,SPPS_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,5476.37
 TEMOA,SPPS,SPPS_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,120745
-TEMOA,SPPS,SPPS_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3518.93
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,22816.3
 TEMOA,SPPS,SPPS_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,347634
 TEMOA,SPPS,SPPS_onshore_wind_turbine_1,Wind,2050,current_policies_20_week_foresight,all,MWh,1.53691e+07
@@ -9064,7 +8946,6 @@ TEMOA,SRCA,SRCA_natural_gas_fired_combined_cycle_1,Natural Gas,2050,current_poli
 TEMOA,SRCA,SRCA_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,42783.2
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,16066.6
 TEMOA,SRCA,SRCA_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,578614
-TEMOA,SRCA,SRCA_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3361.76
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,33255
 TEMOA,SRCA,SRCA_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4.84338e+07
 TEMOA,SRCA,SRCA_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,9.72375e+07
@@ -9126,7 +9007,6 @@ TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,SRCE,SRCE_natural_gas_fired_combustion_turbine_3,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,7905.54
 TEMOA,SRCE,SRCE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,616.807
 TEMOA,SRCE,SRCE_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,33645.6
-TEMOA,SRCE,SRCE_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,4981.55
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,43351.8
 TEMOA,SRCE,SRCE_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4.8483e+07
 TEMOA,SRCE,SRCE_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,6.49935e+07
@@ -9176,7 +9056,6 @@ TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_
 TEMOA,SRSE,SRSE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,29393.3
 TEMOA,SRSE,SRSE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,11197.6
 TEMOA,SRSE,SRSE_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,53920.1
-TEMOA,SRSE,SRSE_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2793.22
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,49541.9
 TEMOA,SRSE,SRSE_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,8.2495e+07
 TEMOA,SRSE,SRSE_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,6.44767e+07
@@ -9233,7 +9112,6 @@ TEMOA,SRSG,SRSG_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_poli
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,168575
 TEMOA,SRSG,SRSG_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,16818.7
 TEMOA,SRSG,SRSG_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,25091.3
-TEMOA,SRSG,SRSG_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2675.99
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,628.783
 TEMOA,SRSG,SRSG_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,2.1038e+07
 TEMOA,SRSG,SRSG_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,3.02746e+07
@@ -9285,7 +9163,6 @@ TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_1,Natural Gas,2050,current_poli
 TEMOA,TREW,TREW_natural_gas_fired_combined_cycle_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,21711.5
 TEMOA,TREW,TREW_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,18012.5
 TEMOA,TREW,TREW_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,4457.08
-TEMOA,TREW,TREW_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,2632.81
 TEMOA,TREW,TREW_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,10678.8
 TEMOA,TREW,TREW_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,166198
 TEMOA,TREW,TREW_onshore_wind_turbine_1,Wind,2050,current_policies_20_week_foresight,all,MWh,1.84812e+07
@@ -9358,7 +9235,6 @@ TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_1,Natural Gas,2050,current_po
 TEMOA,TRE,TRE_natural_gas_fired_combustion_turbine_2,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,128669
 TEMOA,TRE,TRE_natural_gas_internal_combustion_engine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,297240
 TEMOA,TRE,TRE_natural_gas_steam_turbine_1,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,10039.8
-TEMOA,TRE,TRE_naturalgas_fframe_ct_moderate_0,nan,2050,current_policies_20_week_foresight,all,MWh,3076.75
 TEMOA,TRE,TRE_naturalgas_hframe_cc_95_ccs_moderate_0,CCS,2050,current_policies_20_week_foresight,all,MWh,21687.9
 TEMOA,TRE,TRE_naturalgas_hframe_cc_moderate_0,Natural Gas,2050,current_policies_20_week_foresight,all,MWh,1.04021e+08
 TEMOA,TRE,TRE_nuclear_1,Nuclear,2050,current_policies_20_week_foresight,all,MWh,3.1055e+07
