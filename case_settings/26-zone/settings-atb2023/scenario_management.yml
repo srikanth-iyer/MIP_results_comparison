@@ -1098,7 +1098,6 @@ settings_management:
                 max: 150
               - feature: d_shore_m
                 min: 15
-                weights: "mw"
             bin:
               - feature: interconnect_capex_mw
                 q: 3
