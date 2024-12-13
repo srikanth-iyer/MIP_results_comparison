@@ -137,6 +137,7 @@ venv.bak/
 !**/nse.csv
 !**/capacityfactor.csv
 !**/emissions.csv
+!**/average_annual_prices.csv
 
 # User-specific env.yml settings file
 env.yml
