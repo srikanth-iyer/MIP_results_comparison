@@ -345,6 +345,8 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
     return df_dict
 
 
+MODEL_NAMES = ["GenX", "Switch", "TEMOA", "USENSYS"]
+
 if __name__ == "__main__":
     sort_by = ["case", "model", "planning_year"]
     for name, data_folders in comparison_folders.items():
@@ -357,6 +359,11 @@ if __name__ == "__main__":
         for f, _df in df_dict.items():
             print(f)
             _df.sort_values([c for c in sort_by if c in _df.columns], inplace=True)
+            if "model" in _df.columns:
+                for m_name in MODEL_NAMES:
+                    _df.loc[_df["model"].str.lower() == m_name.lower(), "model"] = (
+                        m_name
+                    )
             _df.to_csv(save_data_folder / f"{f}.csv", index=False)
             if f in ["capacity", "generation"] and name == "all":
                 _df.to_parquet(save_data_folder / f"{f}.parquet")
