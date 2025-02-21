@@ -1,5 +1,5 @@
 ---
-title: "52-week current policies"
+title: "52-week Current Policies"
 format: dashboard
 #   dashboard:
 #     scrolling: false

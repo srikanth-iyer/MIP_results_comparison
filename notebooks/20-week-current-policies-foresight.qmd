@@ -1,5 +1,5 @@
 ---
-title: "20-week current policies foresight"
+title: "20-week Current Policies Foresight"
 format: dashboard
 #   dashboard:
 #     scrolling: false

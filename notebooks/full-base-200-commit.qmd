@@ -1,13 +1,12 @@
 ---
-title: "52-week base $200 unit commit"
+title: "52-week Net-zero $200 Unit Commit"
 format: dashboard
 #   dashboard:
 #     scrolling: false
 jupyter: python3
 categories:
     - 52-week
-    - Base
-    - CO2 cap
+    - Net-zero
     - Unit commit
 ---
 

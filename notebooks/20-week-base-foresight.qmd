@@ -1,13 +1,12 @@
 ---
-title: "20-week base foresight"
+title: "20-week Net-zero Foresight"
 format: dashboard
 #   dashboard:
 #     scrolling: false
 jupyter: python3
 categories:
     - 20-week
-    - Base
-    - CO2 cap
+    - Net-zero
     - Foresight
 ---
 
@@ -15,7 +14,7 @@ categories:
 # | output: false
 %load_ext autoreload
 %autoreload 2
-folder = "20-week-foresight"
+folder = "20-week-Foresight"
 import os
 from typing import Dict, List
 from IPython.display import Markdown, display

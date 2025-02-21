@@ -1,5 +1,5 @@
 ---
-title: "Compare current policies foresight and 52-week scenario results"
+title: "Compare Current Policies Foresight and 52-week scenario results"
 format: dashboard
 jupyter: python3
 categories:
@@ -49,9 +49,11 @@ from fig_functions import (
 )
 
 data_folders = [
-    "full-current-policies",
+    # "full-current-policies",
     "20-week-myopic-current-policy",
     "20-week-foresight-current-policy",
+    # "20-week-foresight-current-policy-ptc-capex",
+    # "20-week-foresight-current-policy-20-weeks",
     # "20-week-cp-foresight-test",
     # "20-week-cp-myopic-test",
 ]
@@ -167,20 +169,20 @@ tx_exp["dest_region"] = tx_exp["line_name"].str.split("_to_").str[1]
 
 from fig_functions import WRAPPED_CASE_NAME_MAP
 
-for df in [
-    cap,
-    gen,
-    emiss,
-    starting_tx,
-    tx_exp,
-    op_costs,
-    op_nse,
-    op_costs_model,
-    op_emiss,
-    op_gen,
-    op_cap,
-]:
-    df["case"] = df["case"].map(WRAPPED_CASE_NAME_MAP)
+# for df in [
+#     cap,
+#     gen,
+#     emiss,
+#     starting_tx,
+#     tx_exp,
+#     op_costs,
+#     op_nse,
+#     op_costs_model,
+#     op_emiss,
+#     op_gen,
+#     op_cap,
+# ]:
+#     df["case"] = df["case"].map(WRAPPED_CASE_NAME_MAP)
 
 ```
 

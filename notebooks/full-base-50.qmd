@@ -1,13 +1,12 @@
 ---
-title: "52-week base $50"
+title: "52-week Net-zero $50"
 format: dashboard
 #   dashboard:
 #     scrolling: false
 jupyter: python3
 categories:
     - 52-week
-    - Base
-    - CO2 cap
+    - Net-zero
 ---
 
 ```{python}

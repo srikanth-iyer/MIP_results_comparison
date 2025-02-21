@@ -6,8 +6,7 @@ format: dashboard
 jupyter: python3
 categories:
     - 20-week
-    - Base
-    - CO2 cap
+    - Net-zero
     - Myopic
 ---
 

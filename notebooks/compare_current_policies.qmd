@@ -1,5 +1,5 @@
 ---
-title: "Compare current policies"
+title: "Compare Current Policies"
 format: dashboard
 jupyter: python3
 categories:
@@ -50,7 +50,8 @@ from fig_functions import (
 data_folders = [
     "full-current-policies",
     "full-current-policies-retire",
-    "full-current-policies-commit",
+    "full-current-policies-retire-low-gas",
+    # "full-current-policies-commit",
 ]
 order = [f for f in data_folders]
 data_folders = [cwd.parent / f for f in data_folders]
@@ -194,7 +195,17 @@ chart
 ```
 ```{python}
 # | title: Total Capacity
-chart = chart_total_cap(cap, mark_type="line", x_var="planning_year", col_var="tech_type", row_var="case", color="model", order=order, width=125, height=200)
+chart = chart_total_cap(
+    cap,
+    mark_type="line",
+    x_var="planning_year",
+    col_var="tech_type",
+    row_var="case",
+    color="model",
+    order=order,
+    width=125,
+    height=200,
+)
 chart
 ```
 ```{python}

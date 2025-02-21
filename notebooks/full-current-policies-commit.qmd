@@ -1,5 +1,5 @@
 ---
-title: "52-week current policies unit commit"
+title: "52-week Current Policies Unit Commit"
 format: dashboard
 #   dashboard:
 #     scrolling: false
