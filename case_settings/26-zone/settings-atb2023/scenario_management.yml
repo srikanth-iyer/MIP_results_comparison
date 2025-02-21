@@ -12,6 +12,53 @@
 # case.
 settings_management:
   all_years:
+    coal_price:
+      high:
+        regional_fuel_adjustments:
+          ISNE:
+            coal: [add, 0.5]
+          BASN:
+            coal: [add, 0.5]
+          MISC:
+            coal: [add, 0.5]
+          MISE:
+            coal: [add, 0.5]
+          MISS:
+            coal: [add, 0.5]
+          MISW:
+            coal: [add, 0.5]
+          NWPP:
+            coal: [add, 0.5]
+          NYUP:
+            coal: [add, 0.5]
+          PJMC:
+            coal: [add, 0.5]
+          PJMD:
+            coal: [add, 0.5]
+          PJME:
+            coal: [add, 0.5]
+          PJMW:
+            coal: [add, 0.5]
+          RMRG:
+            coal: [add, 0.5]
+          SPPC:
+            coal: [add, 0.5]
+          SPPN:
+            coal: [add, 0.5]
+          SPPS:
+            coal: [add, 0.5]
+          SRCA:
+            coal: [add, 0.5]
+          SRCE:
+            coal: [add, 0.5]
+          SRSE:
+            coal: [add, 0.5]
+          SRSG:
+            coal: [add, 0.5]
+          TRE:
+            coal: [add, 0.5]
+          TREW:
+            coal: [add, 0.5]
     period_years:
       five:
         model_year: [2027, 2030, 2035, 2040, 2045, 2050]
