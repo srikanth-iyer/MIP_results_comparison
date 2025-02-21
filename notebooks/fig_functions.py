@@ -1,7 +1,7 @@
 import os
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Set
 
 import altair as alt
 import geopandas as gpd
@@ -116,23 +116,91 @@ TECH_STACK_ORDER = {v: i for i, v in enumerate(TECH_ORDER)}
 MODEL_ORDER = ["GenX", "SWITCH", "TEMOA", "USENSYS"]
 
 WRAPPED_CASE_NAME_MAP = {
-    "full-base-1000": "CO₂ cap\n$1000",
-    "full-base-200-tx-0": "CO₂ cap\nno tx",
-    "full-base-200-tx-15": "CO₂ cap\n15% tx",
-    "full-base-200-tx-50": "CO₂ cap\n50% tx",
-    "full-base-200": "CO₂ cap",
-    "full-base-200-retire": "CO₂ cap\nretire",
-    "full-base-200-no-ccs": "CO₂ cap\nno CCS",
-    "full-base-200-commit": "CO₂ cap\nunit commit",
-    "full-base-50": "CO₂ cap\n$50",
-    "20-week-foresight": "CO₂ cap\n20-week foresight",
-    "20-week-myopic": "CO₂ cap\n20-week",
+    "full-base-1000": "Net-zero\n$1000",
+    "full-base-200-tx-0": "Net-zero\nno tx",
+    "full-base-200-tx-15": "Net-zero\n15% tx",
+    "full-base-200-tx-50": "Net-zero\n50% tx",
+    "full-base-200": "Net-zero",
+    "full-base-200-retire": "Net-zero\nretire",
+    "full-base-200-no-ccs": "Net-zero\nno CCS",
+    "full-base-200-commit": "Net-zero\nunit commit",
+    "full-base-50": "Net-zero\n$50",
+    "20-week-foresight": "Net-zero\n20-week foresight",
+    "20-week-myopic": "Net-zero\n20-week",
     "full-current-policies": "Current policy",
     "full-current-policies-retire": "Current policy\nretire",
     "full-current-policies-retire-low-gas": "Current policy\nretire low gas",
     "full-current-policies-commit": "Current policy\nunit commit",
     "20-week-foresight-current-policy": "Current policy\n20-week foresight",
     "20-week-myopic-current-policy": "Current policy\n20-week",
+}
+
+LINE_NAMES = [
+    "BASN_to_CANO",
+    "BASN_to_CASO",
+    "BASN_to_NWPP",
+    "BASN_to_RMRG",
+    "BASN_to_SRSG",
+    "CANO_to_CASO",
+    "CANO_to_NWPP",
+    "CASO_to_NWPP",
+    "CASO_to_SRSG",
+    "FRCC_to_SRSE",
+    "ISNE_to_NYCW",
+    "ISNE_to_NYUP",
+    "MISC_to_MISE",
+    "MISC_to_MISS",
+    "MISC_to_MISW",
+    "MISC_to_PJMC",
+    "MISC_to_PJMW",
+    "MISC_to_SPPC",
+    "MISC_to_SPPN",
+    "MISC_to_SPPS",
+    "MISC_to_SRCE",
+    "MISE_to_MISW",
+    "MISE_to_PJMW",
+    "MISS_to_SPPC",
+    "MISS_to_SPPS",
+    "MISS_to_SRCE",
+    "MISS_to_SRSE",
+    "MISW_to_NWPP",
+    "MISW_to_PJMC",
+    "MISW_to_SPPC",
+    "MISW_to_SPPN",
+    "NWPP_to_RMRG",
+    "NYCW_to_NYUP",
+    "NYCW_to_PJME",
+    "NYUP_to_PJME",
+    "PJMC_to_PJMW",
+    "PJMD_to_PJME",
+    "PJMD_to_PJMW",
+    "PJMD_to_SRCA",
+    "PJME_to_PJMW",
+    "PJMW_to_SRCA",
+    "PJMW_to_SRCE",
+    "RMRG_to_SPPC",
+    "RMRG_to_SPPN",
+    "RMRG_to_SRSG",
+    "SPPC_to_SPPN",
+    "SPPC_to_SPPS",
+    "SPPN_to_SPPS",
+    "SPPS_to_SRSG",
+    "SPPS_to_TRE",
+    "SPPS_to_TREW",
+    "SRCA_to_SRCE",
+    "SRCA_to_SRSE",
+    "SRCE_to_SRSE",
+    "TRE_to_TREW",
+    "NWPP_to_SPPN",
+    "SRSG_to_TRE",
+]
+
+
+MODEL_NAMES = {
+    "temoa": "TEMOA",
+    "genx": "GenX",
+    "switch": "Switch",
+    "usensys": "USENSYS",
 }
 
 
@@ -344,9 +412,7 @@ def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
         df = df.query("~tech_type.str.contains('Other')")
     if "line_name" in df.columns:
         df = fix_tx_line_names(df)
-        line_length = load_tx_line_length(
-            data_path.parent / "notebooks", set(df["line_name"].to_list())
-        )
+        line_length = load_tx_line_length(data_path.parent / "notebooks", LINE_NAMES)
         df = pd.merge(df, line_length, on=["line_name"])
         if "end_value" in df.columns:
             df["end_cap"] = df["end_value"].copy()
@@ -587,9 +653,7 @@ def _load_op_data(
         period = period_dict[period_str]
         _df.loc[:, "planning_year"] = period
         model_part = -5
-    model = f.parts[model_part].split("_")[0]
-    if model.lower() == "temoa":
-        model == "TEMOA"
+    model = MODEL_NAMES[f.parts[model_part].split("_")[0].lower()]
     _df.loc[:, "model"] = model
     if fn == "costs.csv" and model_costs_only:
         return _df
@@ -748,9 +812,7 @@ def add_genx_op_network_cost(
         final_df = pd.read_csv(
             f.parent / final_network_fn, usecols=read_cols
         ).set_index("Network_Lines")
-        model = f.parts[model_part].split("_")[0]
-        if model.lower() == "temoa":
-            model == "TEMOA"
+        model = MODEL_NAMES[f.parts[model_part].split("_")[0].lower()]
         new_tx_cost = (
             (final_df["Line_Max_Flow_MW"] - original_df["Line_Max_Flow_MW"])
             * original_df["Line_Reinforcement_Cost_per_MWyr"]
@@ -777,14 +839,19 @@ def reverse_line_name(s: str) -> str:
 
 
 def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
-    line_count = df.groupby("line_name", as_index=False)["model"].count()
-    median_count = line_count["model"].median()
-    reversed_lines = line_count.query("model < @median_count")
+    for idx, row in df.iterrows():
+        if row["line_name"] not in LINE_NAMES:
+            df.loc[:, "line_name"] = df["line_name"].str.replace(
+                row["line_name"], reverse_line_name(row["line_name"])
+            )
+    # line_count = df.groupby("line_name", as_index=False)["model"].count()
+    # median_count = line_count["model"].median()
+    # reversed_lines = line_count.query("model < @median_count")
 
-    for idx, row in reversed_lines.iterrows():
-        df.loc[:, "line_name"] = df["line_name"].str.replace(
-            row["line_name"], reverse_line_name(row["line_name"])
-        )
+    # for idx, row in reversed_lines.iterrows():
+    #     df.loc[:, "line_name"] = df["line_name"].str.replace(
+    #         row["line_name"], reverse_line_name(row["line_name"])
+    #     )
 
     return df
 
@@ -1174,52 +1241,14 @@ def chart_total_cap(
             .title(title_case("tech_type"))
         )
     else:
-        # if cap_data[VAR_ABBR_MAP[color]].dtype == "object":
-        #     encode_type = "N"
-        # else:
-        #     encode_type = "Q"
         _color = alt.Color(f"{VAR_ABBR_MAP[color]}").title(title_case(color))
     chart = c.encode(
         x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
         y=alt.Y("sum(ev)").title("Capacity (GW)"),
         color=_color,
-        # alt.Color("tt").scale(
-        #     domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
-        # )
-        # # .sort(TECH_ORDER)
-        # # .scale(scheme="tableau20")
-        # .title(title_case("tech_type")),
-        # column="zone",
-        # row=alt.Row(VAR_ABBR_MAP[row_var]
-        # .title(title_case(row_var))
-        # .header(labelFontSize=15, titleFontSize=20),
         tooltip=_tooltips,
         order=alt.Order("o"),
     ).properties(width=width, height=height)
-    # if "new_build" in cap_data.columns:
-    #     chart = chart.encode(
-    #         opacity=alt.Opacity(
-    #             "new_build",
-    #             sort="descending",
-    #             scale=alt.Scale(domain=[False, True], range=[0.6, 1]),
-    #         ).title("New Build")
-    #     )
-    # if col_var is not None:
-    #     chart = chart.encode(
-    #         column=alt.Column(VAR_ABBR_MAP[col_var])
-    #         .sort(order)
-    #         .title(title_case(col_var))
-    #         .header(titleFontSize=20, labelFontSize=15)
-    #     )
-    # if row_var is not None:
-    #     chart = chart.encode(
-    #         row=alt.Row(VAR_ABBR_MAP[row_var])
-    #         .title(title_case(row_var))
-    #         .header(titleFontSize=20, labelFontSize=15)
-    #     )
-    # chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-    #     titleFontSize=20, labelFontSize=16
-    # )
     chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
@@ -2397,6 +2426,7 @@ def chart_tx_map(
     colormap="magma",
     reverse_colors=True,
     min_total_expansion=1,
+    result_col: str = "cap",
     **kwargs,
 ) -> alt.Chart:
     geoshape_kwargs = {
@@ -2424,7 +2454,7 @@ def chart_tx_map(
         by = ["line_name", "lat1", "lat2", "lon1", "lon2", facet_col]
         _data = (
             _data.query("planning_year >= 2025")
-            .groupby(by, as_index=False)["value"]
+            .groupby(by, as_index=False)[["value", "cap"]]
             .sum()
         )
         lines = (
@@ -2443,13 +2473,15 @@ def chart_tx_map(
                 longitude="lon1",
                 latitude2="lat2",
                 longitude2="lon2",
-                strokeWidth="sum(value)",
-                color=alt.Color("sum(value):Q")
-                .scale(scheme=colormap, reverse=reverse_colors)
-                .title("Expansion (MW)"),
+                # strokeWidth="sum(cap)",
+                strokeWidth=f"sum({result_col})",
+                color=alt.Color(f"sum({result_col})")
+                # color=alt.Color(f"sum(cap)")
+                .scale(scheme=colormap, reverse=reverse_colors).title("Expansion (MW)"),
                 tooltip=[
                     alt.Tooltip("line_name"),
-                    alt.Tooltip("sum(value)", title="Expansion (MW)"),
+                    # alt.Tooltip("sum(cap)", title="Expansion (MW)"),
+                    alt.Tooltip(f"sum({result_col})", title="Expansion (MW)"),
                 ],
             )
             .project(type="albersUsa")
@@ -2469,7 +2501,11 @@ def chart_tx_map(
 
 
 def chart_tx_scenario_map(
-    tx_exp: pd.DataFrame, gdf: gpd.GeoDataFrame, order=list, colormap="plasma"
+    tx_exp: pd.DataFrame,
+    gdf: gpd.GeoDataFrame,
+    order=list,
+    colormap="plasma",
+    result_col="value",
 ) -> alt.Chart:
     gdf["lat"] = gdf.geometry.centroid.y
     gdf["lon"] = gdf.geometry.centroid.x
@@ -2503,13 +2539,13 @@ def chart_tx_scenario_map(
                     longitude="lon1",
                     latitude2="lat2",
                     longitude2="lon2",
-                    strokeWidth="sum(value)",
-                    color=alt.Color("sum(value):Q")
+                    strokeWidth=f"sum({result_col})",
+                    color=alt.Color(f"sum({result_col}):Q")
                     .scale(scheme="plasma")
                     .title("Expansion (MW)"),
                     tooltip=[
                         alt.Tooltip("line_name"),
-                        alt.Tooltip("sum(value)", title="Expansion (MW)"),
+                        alt.Tooltip(f"sum({result_col})", title="Expansion (MW)"),
                     ],
                 )
                 .project(type="albersUsa")
@@ -2700,6 +2736,20 @@ def chart_cap_factor_scatter(
             )
 
         chart = alt.vconcat(chart, timeseries)
+
+    cap_factor = (
+        alt.Chart(data)
+        .mark_bar()
+        .encode(
+            x="mean(cf)",
+            y=alt.Y("model"),
+            column=alt.Column("y").title("Planning Year"),
+            tooltip=["name", "cf", "v"],
+            color="sum(v)",
+        )
+        .transform_filter(selector)
+    )
+    chart = alt.vconcat(chart, cap_factor)
 
     return chart  # | timeseries
 
