@@ -1,0 +1,57 @@
+{
+    "creators": [
+        {
+            "affiliation": "Princeton University",
+            "name": "Greg Schivley",
+            "orcid": "0000-0002-8947-694X"
+        },
+        {
+            "affiliation": "Carnegie Mellon University",
+            "name": "Michael Blackhurst",
+            "orcid": "0000-0001-8193-1365"
+        },
+        {
+            "name": "Patricia Hidalgo-Gonzalez",
+            "affiliation": "University of California San Diego",
+            "orcid": "0000-0003-3635-8285"
+        },
+        {
+            "name": "Patricia Hidalgo-Gonzalez",
+            "affiliation": "University of California San Diego",
+            "orcid": "0000-0003-3635-8285"
+        },
+        {
+            "name": "Jesse D. Jenkins",
+            "affiliation": "Princeton University",
+            "orcid": "0000-0002-9670-7793"
+        },
+        {
+            "name": "Oleg Lugovoy",
+            "affiliation": "Optimal Solution LLC",
+            "orcid": "0000-0001-5546-9875"
+        },
+        {
+            "name": "Qian Luo",
+            "affiliation": "Princeton University",
+            "orcid": "0000-0003-3894-4093"
+        },
+        {
+            "name": "Michael J. Roberts",
+            "affiliation": "University of Hawai'i",
+            "orcid": "0000-0002-1741-7780"
+        },
+        {
+            "name": "Rangrang Zheng",
+            "affiliation": "University of Hawai'i"
+        },
+        {
+            "name": "Cameron Wade",
+            "affiliation": "Sutubra Research Inc.",
+            "orcid": "0000-0003-2680-6881"
+        },
+        {
+            "name": "Matthias Fripp",
+            "affiliation": "Energy Innovation Policy and Technology LLC"
+        }
+    ]
+}
