@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/679337145.svg)](https://doi.org/10.5281/zenodo.14907273)
+
 # Model Intercomparison Project Results Comparison
 
 Automatically create comparison figures for MIP runs from GenX, Switch, TEMOA and USENSYS results. Upload a folder with your results summary files to the appropriate top-level folder (e.g. `full-base-200`) and a GitHub Action will create comparison figures.
