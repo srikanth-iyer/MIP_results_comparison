@@ -12,9 +12,15 @@ The folders with model results for each case either start with `full` (52-weeks 
 
 Data folders contains summary results for a capacity expansion run by each model (`<model>_results_summary`), the translation of those results into GenX operational model inputs (`<model>_op_inputs`), and selected outputs of the GenX operational model.
 
+Compiled data files with results from all all models are available in the `compiled_results` folder.
+
 ## PowerGenome settings and inputs
 
 PowerGenome is used to create all model inputs. The settings for PowerGenome are in `case_settings/26-zone/settings-atb2023`. Data inputs used by PowerGenome in this study are available at doi:10.5281/zenodo.14906951.
+
+## Example GenX inputs
+
+For easier access to a set of model inputs, GenX inputs for the base configuration of the "Current policies" and "Net-zero" scenarios have been included in the `case_settings/26-zone/example-genx-inputs` folder.
 
 ## Dashboard results
 
