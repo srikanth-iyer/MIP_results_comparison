@@ -6,6 +6,7 @@ dependencies:
   - python=3.10 # Remove for tox.ini & setup.py
   - pip
   - altair
+  - vegafusion
   - pandas
   - pyarrow
   - geopandas
