@@ -165,6 +165,7 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
     tx_exp_list = []
     op_cost_list = []
     op_cost_model_list = []
+    # op_marginal_price_list = []
     op_nse_list = []
     op_gen_list = []
     op_cap_list = []
@@ -237,6 +238,22 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
         except:
             pass
 
+        # try:
+        #     op_marginal_price_data = load_genx_operations_data(
+        #         folder, "average_annual_prices.csv"
+        #     )
+        #     op_marginal_price_data["case"] = case_id
+        #     op_marginal_price_data["scenario"] = scenarios.get(folder.name, "none")
+        #     op_marginal_price_data["configuration"] = configurations.get(
+        #         folder.name, "none"
+        #     )
+        #     op_marginal_price_data["child_scenario"] = child_scenarios.get(
+        #         folder.name, "none"
+        #     )
+        #     op_marginal_price_list.append(op_marginal_price_data)
+        # except:
+        #     pass
+
         op_gen_cap_data = load_genx_operations_data(folder, "capacityfactor.csv")
         if not op_gen_cap_data.empty:
             op_gen_cap_data = op_gen_cap_data.query("~tech_type.str.contains('Other')")
@@ -266,12 +283,12 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
             op_cap_list.append(op_cap_data)
 
         op_emiss_data = load_genx_operations_data(
-            folder, "emissions_plant.csv", hourly_data=True
+            folder, "emissions.csv", hourly_data=True
         )
-        try:
-            op_emiss_data = op_emiss_data.query("~tech_type.str.contains('Other')")
-        except:
-            pass
+        # try:
+        #     op_emiss_data = op_emiss_data.query("~tech_type.str.contains('Other')")
+        # except:
+        #     pass
         op_emiss_data["case"] = case_id
         op_emiss_data["scenario"] = scenarios.get(folder.name, "none")
         op_emiss_data["configuration"] = configurations.get(folder.name, "none")
@@ -288,6 +305,7 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
     tx_exp = pd.concat(tx_exp_list, ignore_index=True)
     op_costs = pd.concat(op_cost_list, ignore_index=True)
     op_costs_model = pd.concat(op_cost_model_list, ignore_index=True)
+    # op_marginal_price = pd.concat(op_marginal_price_list, ignore_index=True)
     op_nse = pd.concat(op_nse_list, ignore_index=True)
     op_emiss = pd.concat(op_emiss_list, ignore_index=True)
     if op_cap_list:
@@ -338,6 +356,8 @@ def create_dataframes(data_folders: List[Path]) -> Dict[str, pd.DataFrame]:
         "emissions": emiss,
         "operational_costs": op_costs,
         "operational_costs_model": op_costs_model,
+        # "operational_marginal_price": op_marginal_price,
+        "operational_emissions": op_emiss,
         "operational_nse": op_nse,
         "operational_gen": op_gen,
     }
