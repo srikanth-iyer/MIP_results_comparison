@@ -18,6 +18,4 @@ PowerGenome is used to create all model inputs. The settings for PowerGenome are
 
 ## Dashboard results
 
-The results are compiled as dashboards. A static version with results for each case and a series of comparisons can be accessed at <https://gschivley.github.io/MIP_results_comparison>. An interactive version that lets the user select cases for comparison and modify figures is available at <https://mip-results.shinyapps.io/mip-results>.
-
-If the interactive shinyapps website does not work, an experimental version is also available at <https://gschivley.github.io/test-shinylive>.
+The results are compiled as dashboards. A static version with results for each case and a series of comparisons can be accessed at <https://gschivley.github.io/MIP_results_comparison>. An interactive version that lets the user select cases for comparison and modify figures is available at <https://gschivley.github.io/MIP-shinylive>.
