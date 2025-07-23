@@ -532,7 +532,7 @@ def load_genx_operations_data(
     if "zone" in df.columns:
         df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
     for col in df.columns:
-        if col != "percent_total":
+        if col != "percent_total" and pd.api.types.is_numeric_dtype(df[col]):
             df.loc[:, col] = df[col].round(1)
     return df.round(1)
 
