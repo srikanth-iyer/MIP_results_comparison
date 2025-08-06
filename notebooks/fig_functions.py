@@ -2436,6 +2436,9 @@ def chart_tx_map(
     geoshape_kwargs.update(kwargs)
     gdf["lat"] = gdf.geometry.centroid.y
     gdf["lon"] = gdf.geometry.centroid.x
+    # ensure result_col exists, e.g. 'cap', by copying 'value' if absent
+    if result_col not in tx_exp.columns:
+        tx_exp[result_col] = tx_exp["value"] #NOTE: Temp change to remove the error 'cap' not found.
     tx_exp["lat1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lat"])
     tx_exp["lon1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lon"])
     tx_exp["lat2"] = tx_exp["dest_region"].map(gdf.set_index("zone")["lat"])
