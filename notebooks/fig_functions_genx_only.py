@@ -16,34 +16,66 @@ try:
 except:
     pass
 
+# region_map = {
+#     "WECC": ["BASN", "NWPP", "SRSG", "RMRG"],
+#     "CA": ["CANO", "CASO"],
+#     "TRE": ["TRE", "TREW"],
+#     "SPP": ["SPPC", "SPPN", "SPPS"],
+#     "MISO": ["MISC", "MISE", "MISS", "MISW", "SRCE"],
+#     "PJM": ["PJMC", "PJMW", "PJME", "PJMD"],
+#     "SOU": ["SRSE", "SRCA", "FRCC"],
+#     "NE": ["ISNE", "NYUP", "NYCW"],
+# }
+# NENG_Rest,z1,1.0,-1.0
+# NY_Z_A,z2,1.0,-1.0
+# NY_Z_B,z3,1.0,-1.0
+# NY_Z_C&E,z4,1.0,-1.0
+# NY_Z_D,z5,1.0,-1.0
+# NY_Z_F,z6,1.0,-1.0
+# NY_Z_G-I,z7,1.0,-1.0
+# NY_Z_J,z8,1.0,-1.0
+# NY_Z_K,z9,1.0,-1.0
+# PJM_EMAC,z10,1.0,-1.0
+# PJM_Rest,z11,1.0,-1.0
 region_map = {
-    "WECC": ["BASN", "NWPP", "SRSG", "RMRG"],
-    "CA": ["CANO", "CASO"],
-    "TRE": ["TRE", "TREW"],
-    "SPP": ["SPPC", "SPPN", "SPPS"],
-    "MISO": ["MISC", "MISE", "MISS", "MISW", "SRCE"],
-    "PJM": ["PJMC", "PJMW", "PJME", "PJMD"],
-    "SOU": ["SRSE", "SRCA", "FRCC"],
-    "NE": ["ISNE", "NYUP", "NYCW"],
+    1: [1],
+    2: [2],
+    3: [3],
+    4: [4],
+    5: [5],
+    6: [6],
+    7: [7],
+    8: [8],
+    9: [9],
+    10: [10],
+    11: [11],
 }
 
 TECH_MAP = {
     "batteries": "Battery",
     "biomass_": "Other",
     "conventional_hydroelectric": "Hydro",
+    "hydroelectric": "Hydro",
     "conventional_steam_coal": "Coal",
+    "conventional steam coal": "Coal",
     "geothermal": "Geothermal",
     "natural_gas_fired_combined_cycle": "Natural Gas CC",
+    "natural gas fired combined cycle": "Natural Gas CC",
     "natural_gas_fired_combustion_turbine": "Natural Gas CT",
+    "natural gas fired combustion turbine": "Natural Gas CT",
     "natural_gas_internal_combustion_engine": "Natural Gas Other",
     "natural_gas_steam_turbine": "Natural Gas Other",
+    "natural gas steam turbine": "Natural Gas Other",
     "onshore_wind_turbine": "Wind",
+    "onshore wind": "Wind",
     "petroleum_liquids": "Other",
     "small_hydroelectric": "Hydro",
     "solar_photovoltaic": "Solar",
+    "photovoltaic": "Solar",
     "hydroelectric_pumped_storage": "Hydro",
     "nuclear_nuclear": "Nuclear",
     "nuclear_1": "Nuclear",
+    "nuclear": "Nuclear",
     "offshore_wind_turbine": "Wind",
     "distributed_generation": "Distributed Solar",
     "naturalgas_ccavgcf": "Natural Gas CC",
@@ -56,7 +88,11 @@ TECH_MAP = {
     "naturalgas_ccccsavgcf": "CCS",
     "ccs": "CCS",
     "offshorewind": "Wind",
+    "offshore wind": "Wind",
     "hydrogen": "Hydrogen",
+    "res_water_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category. keep a seperate flex demand category
+    "trans_light_duty": "Flex Demand" # TODO: does this go in Other or some other category. Need to change it from current category.
+
 }
 
 EXISTING_TECH_MAP = {
@@ -90,11 +126,15 @@ _COLOR_MAP = {
     "Natural Gas CC": "#F7CD4B",
     "Natural Gas CT": "#249A95",
     "Nuclear": "#77BEB6",
-    "Solar": "#F14A54",
+    "Other": "#000000", 
+    "Solar": "#C44AF1",
     "Wind": "#FF9797",
+    "Flex Demand": "#868686",
 }
 
 TECH_ORDER = [
+    "Other",
+    "Flex Demand",
     "Nuclear",
     "CCS",
     "Natural Gas CC",
@@ -260,8 +300,8 @@ def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
 
     # Map the tech_type and existence to the DataFrame using vectorized operations
     df["tech_type"] = df["resource_name"].map(tech_type_map)
-    df["existing"] = df["resource_name"].map(existence_map)
-    df["new_build"] = ~df["existing"]
+    # df["existing"] = df["resource_name"].map(existence_map)
+    # df["new_build"] = ~df["existing"]
 
     return df
 
@@ -300,6 +340,7 @@ DATA_COLS = {
         "resource_name",
         "start_value",
         "end_value",
+        "new_build",
         "existing",
     ],
     "generation": [
@@ -328,7 +369,14 @@ DATA_COLS = {
         "unit",
         "value",
     ],
-    "emissions": ["model", "zone", "agg_zone", "planning_year", "unit", "value"],
+    "emissions": [
+        "model", 
+        "zone", 
+        "agg_zone", 
+        "planning_year", 
+        "unit", 
+        "value"
+        ],
     "dispatch": [
         "model",
         "resource_name",
@@ -386,10 +434,11 @@ def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
                 _df["case"] = case_name
             df_list.append(_df)
     if not df_list:
+        print(f"Warning: No files matching pattern '{fn}' found in {data_path}")
         return pd.DataFrame(columns=DATA_COLS[fn.split(".")[0]])
     df = pd.concat(df_list, ignore_index=True)
     if "resource_name" in df.columns:
-        df = tech_to_type(df)
+        df = tech_to_type(df) #NOTE: acquiring tech_type from the csv file itself
         df = df.query("~tech_type.str.contains('Other')")
     if "line_name" in df.columns:
         df = fix_tx_line_names(df)
@@ -404,7 +453,8 @@ def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
             df["cap"] = df["value"].copy()
             df["value"] = df["value"] * df["km"]
     if "zone" in df.columns:
-        df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
+        # df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
+        df.loc[:, "agg_zone"] = df.loc[:, "zone"].copy()
     for col in ["value", "start_value", "end_value"]:
         if col in df.columns:
             df.loc[:, col] = df[col].round(0)
@@ -429,7 +479,13 @@ def fill_dispatch_hours(dispatch: pd.DataFrame) -> pd.DataFrame:
         ],
         as_index=False,
     )["value"].sum()
-    group_cols = ["planning_year", "model", "agg_zone", "zone", "tech_type"]
+    group_cols = [
+        "planning_year", 
+        "model", 
+        "agg_zone", 
+        "zone", 
+        "tech_type"
+        ]
     hours = dispatch["hour"].unique()
     index_cols = ["resource_name"]
     df_list = []
@@ -467,12 +523,12 @@ def load_genx_operations_data(
     data_path: Path,
     fn: str,
     period_dict={
-        "p1": 2027,
-        "p2": 2030,
-        "p3": 2035,
-        "p4": 2040,
-        "p5": 2045,
-        "p6": 2050,
+        "p1": 2030,
+        # "p2": 2030,# NOTE: Modified this to only keep 2030 as p1 for genx simulations
+        # "p3": 2035,
+        # "p4": 2040,
+        # "p5": 2045,
+        # "p6": 2050,
     },
     hourly_data: bool = False,
     model_costs_only: bool = False,
@@ -500,7 +556,7 @@ def load_genx_operations_data(
     if fn == "costs.csv":
         try:
             df = add_genx_op_network_cost(df, data_path).pipe(calc_op_percent_total)
-            df = append_npv_cost(df)
+            # df = append_npv_cost(df) # NOTE: Commenting this out for now . Check if we need NPV
         except FileNotFoundError:
             pass
     if "Resource" in df.columns:
@@ -603,12 +659,12 @@ def _load_op_data(
     hourly_data: bool,
     nrows=None,
     period_dict={
-        "p1": 2027,
-        "p2": 2030,
-        "p3": 2035,
-        "p4": 2040,
-        "p5": 2045,
-        "p6": 2050,
+        "p1": 2030, # NOTE: Updated to 2030 from 2027 for new genx data
+        # "p2": 2030,
+        # "p3": 2035,
+        # "p4": 2040,
+        # "p5": 2045,
+        # "p6": 2050,
     },
     model_costs_only: bool = False,
 ) -> pd.DataFrame:
@@ -771,12 +827,12 @@ def add_genx_op_network_cost(
     original_network_fn: str = "original_network.csv",
     final_network_fn: str = "Network.csv",
     period_dict={
-        "p1": 2027,
-        "p2": 2030,
-        "p3": 2035,
-        "p4": 2040,
-        "p5": 2045,
-        "p6": 2050,
+        "p1": 2030, # NOTE: Updated to 2030 from 2027 for new genx data
+        # "p2": 2030,
+        # "p3": 2035,
+        # "p4": 2040,
+        # "p5": 2045,
+        # "p6": 2050,
     },
 ) -> pd.DataFrame:
     read_cols = [
@@ -1204,9 +1260,9 @@ def chart_total_cap(
     if row_var is not None:
         group_by.append(row_var)
         _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var)))
-    # if "new_build" in cap.columns:
-    #     group_by.append("new_build")
-    #     _tooltips.append(alt.Tooltip("new_build").title("New Build"))
+    if "new_build" in cap.columns:
+        group_by.append("new_build")
+        _tooltips.append(alt.Tooltip("new_build").title("New Build"))
     group_by = [c for c in set(group_by) if c in cap.columns]
     cap_data = cap.groupby(group_by, as_index=False)["end_value"].sum()
     cap_data["end_value"] /= 1000
@@ -1916,6 +1972,7 @@ def chart_emissions_intensity(
         by.append(x_offset)
     emiss["Region"] = emiss["zone"].map(rev_region_map)
     gen["Region"] = gen["zone"].map(rev_region_map)
+
     emiss_data = emiss.groupby(by, as_index=False)["value"].sum()
     emiss_data = emiss_data.rename(columns={"value": "emissions"})
     gen_data = gen.groupby(by, as_index=False)["value"].sum()
@@ -2039,7 +2096,7 @@ def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
         columns={
             "model": "m",
             "tech_type": "tt",
-            "agg_zone": "az",
+            "zone": "z",
             "hour": "h",
             "value": "v",
         }
@@ -2056,7 +2113,7 @@ def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
             row=alt.Row("tt")
             .title("Tech Type")
             .header(titleFontSize=20, labelFontSize=15),
-            column=alt.Column("az")
+            column=alt.Column("z")
             .title("Region")
             .header(titleFontSize=20, labelFontSize=15),
             opacity=alt.condition(selection, alt.value(1), alt.value(0.2)),
@@ -2122,10 +2179,14 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
     return chart
 
 
-# Calculate NPV for each cost category
+# Calculate NPV for each cost category 
+#
 def calculate_npv(
     df: pd.DataFrame, period_len: Dict[int, int], discount_rate: float, base_year: int
 ):
+    ''' 
+    NPV is a financial metric used to evaluate the profitability of an investment by discounting future cash flows to their present value. 
+    '''
     "From ChatGPT"
     df["Total"] = 0.0
     for index, row in df.iterrows():
@@ -2143,7 +2204,7 @@ def calculate_npv(
 
 def append_npv_cost(op_costs: pd.DataFrame) -> pd.DataFrame:
     period_len = {
-        2027: 4,
+        # 2027: 4,
         2030: 3,
         2035: 5,
         2040: 5,
@@ -2275,6 +2336,8 @@ def chart_op_cost(
             final_chart = chart & npv_chart
         else:
             final_chart = chart
+    else:
+        final_chart = chart # NOTE: Keeping the original chart if no NPV data is present. Added this to avoid error ehn disabling calculate npv func in load_genx_operations_data()
     final_chart = (
         final_chart.configure_axis(labelFontSize=15, titleFontSize=15)
         .configure_axis(labelFontSize=15, titleFontSize=15)
@@ -2547,14 +2610,14 @@ def chart_tx_scenario_map(
     return chart
 
 
-def chart_cap_factor_scatter(
+def chart_cap_factor_scatter( 
     cap: pd.DataFrame,
     gen: pd.DataFrame,
     dispatch: pd.DataFrame = None,
     color="model",
     col_var=None,
     row_var=None,
-    frac=None,
+    frac=None, # NOTE: frac value of less than 1.0 will make the plot sample vary each time.
     name_str_replace=None,
 ) -> alt.Chart:
     if name_str_replace is not None:
@@ -2595,6 +2658,7 @@ def chart_cap_factor_scatter(
             merge_by,
             # ["tech_type", "resource_name", "model", "planning_year"],
             as_index=False,
+            sort=True,
         )["end_value"]
         .sum()
     )
@@ -2610,7 +2674,7 @@ def chart_cap_factor_scatter(
     _gen.fillna({"end_value": 0}, inplace=True)
     _gen["potential_gen"] = _gen["end_value"] * 8760
 
-    data = _gen.groupby(group_by, as_index=False)[
+    data = _gen.groupby(group_by, as_index=False, sort=True)[
         ["value", "potential_gen", "end_value"]
     ].sum()
     data["capacity_factor"] = (data["value"] / data["potential_gen"]).round(3)
@@ -2622,8 +2686,8 @@ def chart_cap_factor_scatter(
     if frac:
         resources = data.sample(frac=frac)["resource_name"].unique()
         data = data.loc[data["resource_name"].isin(resources)]
-
-    name_id_map = {name: idx for idx, name in enumerate(data["resource_name"].unique())}
+    # Stable ID mapping: sort resource names
+    name_id_map = {name: idx for idx, name in enumerate(sorted(data["resource_name"].unique()))}
     data["id"] = data["resource_name"].map(name_id_map)
     data = data.rename(
         columns={
@@ -2723,6 +2787,8 @@ def chart_cap_factor_scatter(
 
         chart = alt.vconcat(chart, timeseries)
 
+    # Order data consistently for the small bar chart, too
+    data = data.sort_values(["model", "y", "name"]) if {"model", "y", "name"}.issubset(data.columns) else data
     cap_factor = (
         alt.Chart(data)
         .mark_bar()
