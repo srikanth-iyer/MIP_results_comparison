@@ -71,6 +71,9 @@ def create_resource_capacity(
     df["planning_year"] = int(planning_year)
     df["tech_type"] = generators_df["technology"]
     df["unit"] = unit
+    
+    df["new_build"] = generators_df["New_Build"]
+    df["existing"] = (df["new_build"] == 0).astype(int)
 
     # Read capacity results
     capacity_df = pd.read_csv(genx_scenario_results_path / "results" / capacity_filename)
