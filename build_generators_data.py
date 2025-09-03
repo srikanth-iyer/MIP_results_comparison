@@ -64,6 +64,7 @@ import re
 #%%
 # Load the target generator data and columns
 target_df_columns = ['Resource', 'region', 'technology', 'cluster', 'R_ID', 'Zone', 'Num_VRE_Bins', 'THERM', 'VRE', 'MUST_RUN', 'STOR', 'FLEX', 'HYDRO', 'LDS', 'CapRes_1', 'CapRes_2', 'Min_Share', 'Max_Share', 'Existing_Cap_MWh', 'Existing_Cap_MW', 'Existing_Charge_Cap_MW', 'num_units', 'unmodified_existing_cap_mw', 'New_Build', 'Cap_Size', 'Min_Cap_MW', 'Max_Cap_MW', 'Max_Cap_MWh', 'Min_Cap_MWh', 'Max_Charge_Cap_MW', 'Min_Charge_Cap_MW', 'Min_Share_percent', 'Max_Share_percent', 'capex_mw', 'Inv_Cost_per_MWyr', 'Fixed_OM_Cost_per_MWyr', 'capex_mwh', 'Inv_Cost_per_MWhyr', 'Fixed_OM_Cost_per_MWhyr', 'Var_OM_Cost_per_MWh', 'Var_OM_Cost_per_MWh_In', 'Inv_Cost_Charge_per_MWyr', 'Fixed_OM_Cost_Charge_per_MWyr', 'Start_Cost_per_MW', 'Start_Fuel_MMBTU_per_MW', 'Heat_Rate_MMBTU_per_MWh', 'heat_rate_mmbtu_mwh_iqr', 'heat_rate_mmbtu_mwh_std', 'Fuel', 'Min_Power', 'Self_Disch', 'Eff_Up', 'Eff_Down', 'Hydro_Energy_to_Power_Ratio', 'Min_Duration', 'Max_Duration', 'Reg_Max', 'Rsv_Max', 'Reg_Cost', 'Rsv_Cost', 'Max_Flexible_Demand_Delay', 'Max_Flexible_Demand_Advance', 'Flexible_Demand_Energy_Eff', 'CO2_Capture_Rate', 'CO2_Capture_Cost_per_Metric_Ton', 'co2_pipeline_annuity_mw', 'co2_pipeline_capex_mw', 'storage_cost_tonne', 'tonne_co2_captured_mwh', 'co2_cost_mwh', 'Ramp_Up_Percentage', 'Ramp_Dn_Percentage', 'Up_Time', 'Down_Time', 'spur_miles', 'spur_capex', 'offshore_spur_miles', 'offshore_spur_capex', 'tx_miles', 'tx_capex', 'interconnect_annuity', 'interconnect_capex_mw', 'regional_cost_multiplier', 'variable_CF', 'RETRO', 'Num_RETRO_Sources', 'Retro1_Source', 'Retro1_Efficiency', 'Retro1_Inv_Cost_per_MWyr', 'Retro2_Source', 'Retro2_Efficiency', 'Retro2_Inv_Cost_per_MWyr', 'MinCapTag_1', 'MinCapTag_2', 'ESR_12', 'Retro3_Efficiency', 'CapRes_7', 'CapRes_9', 'ESR_2', 'ESR_14', 'ESR_10', 'MinCapTag_3', 'ESR_8', 'ESR_1', 'ESR_6', 'gen_is_variable', 'ESR_16', 'ESR_13', 'Retro3_Source', 'CapRes_6', 'ESR_5', 'CapRes_4', 'CapRes_8', 'ESR_15', 'CapRes_5', 'MinCapTag_5', 'ESR_3', 'CapRes_3', 'MinCapTag_4', 'ESR_4', 'ESR_7', 'ESR_9', 'CapRes_10', 'ESR_11', 'Min_Retired_Cap_MW', 'Min_Retired_Energy_Cap_MW', 'Min_Retired_Charge_Cap_MW', 'Capital_Recovery_Period', 'WACC', 'Lifetime', 'old_Inv_Cost_per_MWyr', 'old_Inv_Cost_per_MWhyr', 'original_Fixed_OM_Cost_per_MWyr', 'original_Fixed_OM_Cost_per_MWhyr']
+
 def _read_table(path: Path) -> pd.DataFrame:
     """Read CSV or Excel into DataFrame based on extension."""
     if path.suffix.lower() == ".csv":
@@ -78,6 +79,7 @@ def build_generators_data(
     save_file_path: str | Path,
     *,
     compare_to_target: bool = False,
+    debug_overwrites: bool = False,
 ) -> pd.DataFrame:
     """Build and save Generators_Data from resources for a scenario.
 
@@ -96,6 +98,7 @@ def build_generators_data(
     if not resource_path.exists():
         raise FileNotFoundError(f"Resource folder not found: {resource_path}")
 
+    # Collect all resource files (CSV/Excel) and sort deterministically.
     resource_files = [
         p for p in resource_path.iterdir() if p.is_file() and p.suffix.lower() in [".csv", ".xlsx", ".xls"]
     ]
@@ -104,10 +107,35 @@ def build_generators_data(
         resource_files += [
             p for p in policy_assignment_folder.iterdir() if p.is_file() and p.suffix.lower() in [".csv", ".xlsx", ".xls"]
         ]
-    print("Files in resources:", [p.name for p in resource_files])
+
+    # Deterministic precedence/order:
+    # 1) Base resource files first (resources/)
+    # 2) Policy assignment files after (resources/policy_assignments/) so they override on conflicts
+    # 3) Within each group, sort by lowercase filename to keep runs stable
+    resource_files = sorted(
+        resource_files,
+        key=lambda p: (
+            1 if p.parent.name == "policy_assignments" else 0,
+            p.name.lower(),
+        ),
+    )
+    print("Files in resources (ordered):", [str(p.relative_to(scenario_folder)) for p in resource_files])
 
     # Gather unique resource names
     new_gen_data = {}
+    # For debugging: track last source file for each (resource, column)
+    last_source: dict[tuple[str, str], str] = {}
+    overwrite_events: list[dict] = []
+    file_order_index = {str(p): i for i, p in enumerate(resource_files)}
+
+    def _values_equal(a, b) -> bool:
+        try:
+            if pd.isna(a) and pd.isna(b):
+                return True
+        except Exception:
+            pass
+        return a == b
+    
     resource_names = set()
     for p in resource_files:
         try:
@@ -121,7 +149,9 @@ def build_generators_data(
         resource_names.update(df['Resource'].dropna().astype(str).tolist())
     print(f"Total unique resources found: {len(resource_names)}")
 
-    for r in resource_names:
+    # Use a stable, sorted order for resources to avoid run-to-run differences
+    resource_names_sorted = sorted(resource_names)
+    for r in resource_names_sorted:
         if r not in new_gen_data:
             new_gen_data[r] = {}
 
@@ -142,7 +172,22 @@ def build_generators_data(
                 new_gen_data[resource] = {}
             for col, value in row.items():
                 if col != 'Resource':
-                    new_gen_data[resource][col] = value
+                    # Deterministic "last-wins" based on sorted resource_files order
+                    col_str = str(col)
+                    prev_val = new_gen_data[resource].get(col_str, None)
+                    prev_src = last_source.get((resource, col_str), None)
+                    if col_str in new_gen_data[resource] and not _values_equal(prev_val, value):
+                        overwrite_events.append({
+                            'resource': resource,
+                            'column': col_str,
+                            'previous_value': prev_val,
+                            'new_value': value,
+                            'previous_source': prev_src,
+                            'new_source': str(Path(p).relative_to(scenario_folder)),
+                            'file_order_index': file_order_index[str(p)],
+                        })
+                    new_gen_data[resource][col_str] = value
+                    last_source[(resource, col_str)] = str(Path(p).relative_to(scenario_folder))
 
     category_dict = {
         "Thermal.csv": "THERM",
@@ -160,8 +205,23 @@ def build_generators_data(
                 print(f"Warning: Could not read {file.name} for category mapping: {e}")
                 continue
             present = set(df['Resource'].astype(str)) if 'Resource' in df.columns else set()
-            for r in resource_names:
-                new_gen_data[r][category_dict[file.name]] = 1 if r in present else 0
+            for r in resource_names_sorted:
+                col = category_dict[file.name]
+                val = 1 if r in present else 0
+                prev_val = new_gen_data[r].get(col, None)
+                prev_src = last_source.get((r, col), None)
+                if col in new_gen_data[r] and not _values_equal(prev_val, val):
+                    overwrite_events.append({
+                        'resource': r,
+                        'column': col,
+                        'previous_value': prev_val,
+                        'new_value': val,
+                        'previous_source': prev_src,
+                        'new_source': str(Path(file).relative_to(scenario_folder)),
+                        'file_order_index': file_order_index[str(file)],
+                    })
+                new_gen_data[r][col] = val
+                last_source[(r, col)] = str(Path(file).relative_to(scenario_folder))
 
     # Add R_ID from results/NetRevenue.csv if present
     net_revenue_file = scenario_folder / "results" / "NetRevenue.csv"
@@ -172,6 +232,7 @@ def build_generators_data(
             if 'Resource' in net_revenue_df.columns and 'R_ID' in net_revenue_df.columns:
                 for _, row in net_revenue_df.iterrows():
                     rid_mapping[str(row['Resource'])] = row['R_ID']
+            print(f"Mapped R_IDs for {len(rid_mapping)} resources from NetRevenue.csv")
         except Exception as e:
             print(f"Warning: Failed to read NetRevenue.csv: {e}")
     else:
@@ -179,8 +240,22 @@ def build_generators_data(
 
     for r in new_gen_data:
         if r in rid_mapping:
-            new_gen_data[r]['R_ID'] = rid_mapping[r]
-        # else: leave missing
+            col = 'R_ID'
+            val = rid_mapping[r]
+            prev_val = new_gen_data[r].get(col, None)
+            prev_src = last_source.get((r, col), None)
+            if col in new_gen_data[r] and not _values_equal(prev_val, val):
+                overwrite_events.append({
+                    'resource': r,
+                    'column': col,
+                    'previous_value': prev_val,
+                    'new_value': val,
+                    'previous_source': prev_src,
+                    'new_source': str(Path('results/NetRevenue.csv')),
+                    'file_order_index': -1,  # after resource files
+                })
+            new_gen_data[r][col] = val
+            last_source[(r, col)] = str(Path('results/NetRevenue.csv'))
 
     # Key renames
     for r in new_gen_data:
@@ -199,12 +274,29 @@ def build_generators_data(
 
     # To DataFrame
     new_gen_data_df = pd.DataFrame.from_dict(new_gen_data, orient='index').rename_axis('Resource')
+    # Stabilize row index order
+    new_gen_data_df = new_gen_data_df.sort_index()
     new_gen_data_df = new_gen_data_df.fillna(0)
+
+    # Stabilize column order: target columns first (if present), then any extras sorted
+    target_cols_present = [c for c in target_df_columns if c in new_gen_data_df.columns]
+    extra_cols = sorted([c for c in new_gen_data_df.columns if c not in target_cols_present])
+    ordered_cols = target_cols_present + extra_cols
+    new_gen_data_df = new_gen_data_df.reindex(columns=ordered_cols)
 
     # Save
     save_path.parent.mkdir(parents=True, exist_ok=True)
     new_gen_data_df.to_csv(save_path, index=True, encoding="utf-8")
     print(f"Saved combined generators data to: {save_path}")
+
+    # Optional overwrite report for debugging
+    if debug_overwrites and overwrite_events:
+        report_path = save_path.with_name(save_path.stem + "_overwrites.csv")
+        pd.DataFrame(overwrite_events).sort_values(
+            by=["resource", "column", "file_order_index", "new_source"],
+            kind="mergesort",
+        ).to_csv(report_path, index=False, encoding="utf-8")
+        print(f"Wrote overwrite debug report to: {report_path}")
 
     # Optional compare
     if compare_to_target:
@@ -246,5 +338,6 @@ if __name__ == "__main__":
     df = build_generators_data(
     r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\p1_High_Elect_Mid_RE",
     r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\GenX_op_inputs\Inputs\Inputs_p1\Generators_Data.csv",
-    compare_to_target=True,  # optional schema check
+    compare_to_target=False,  # optional schema check,
+    debug_overwrites=True,  # optional overwrite report
     )
