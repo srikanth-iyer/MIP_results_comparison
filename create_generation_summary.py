@@ -3,7 +3,7 @@ from typing import Union
 import pandas as pd
 
 
-def create_generations_summary(
+def create_generation_summary(
     genx_scenario_results_path: Union[str, Path],
     scenario_name: str,
     output_folder_path: Union[str, Path],
@@ -66,7 +66,10 @@ def create_generations_summary(
         )
 
     tech_map = gen_df.set_index("Resource")[tech_col]
-
+    # Map new_build values from gen_df to cap resources
+    new_build_map = gen_df.set_index("Resource")["New_Build"]
+    # Map existing values (inverse of new_build) from gen_df to cap resources
+    existing_map = gen_df.set_index("Resource")["New_Build"].apply(lambda x: 0 if x == 1 else 1)
     # Build summary
     summary = pd.DataFrame({
         "model": scenario_name,
@@ -76,6 +79,8 @@ def create_generations_summary(
         "planning_year": planning_year,
         "case": case,
         "timestep": "all",
+        "new_build": cap["Resource"].map(new_build_map),
+        "existing": cap["Resource"].map(existing_map),
         "unit": unit,
         "value": cap["AnnualSum"],
     })
@@ -91,7 +96,7 @@ def create_generations_summary(
 if __name__ == "__main__":
     # Example direct run (adjust scenario as needed)
     scenario = "p4_Mod_Elect_Low_RE"
-    out = create_generations_summary(
+    out = create_generation_summary(
         genx_scenario_results_path=Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results") / scenario,
         scenario_name=scenario,
         output_folder_path=Path(r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx"),
