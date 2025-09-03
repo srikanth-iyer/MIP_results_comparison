@@ -3,7 +3,7 @@ import shutil
 from build_generators_data import build_generators_data
 from create_resource_capacity import create_resource_capacity
 from create_emissions_summary import create_emissions_summary
-from create_generations_summary import create_generations_summary   
+from create_generation_summary import create_generation_summary   
 from create_dispatch_summary import create_dispatch_summary
 
 all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results")
@@ -78,7 +78,7 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
     # BUILD GENERATORS_DATA.CSV FILE from build_generators_data.py file==========================
     # Create generators_data.csv file
     generators_data_file = op_inputs_path / "Generators_data.csv"
-    build_generators_data(genx_result_scenario_path, generators_data_file)
+    build_generators_data(genx_result_scenario_path, generators_data_file, debug_overwrites=True)
 
     #===================================================================================
     # RESULTS SUMMARY CREATION
@@ -88,7 +88,7 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
     # Create resource capacity file in results summary folder
     output = create_resource_capacity(
         model_name=model_name,
-        case_name="p1",
+        case_name="Results_p1",
         scenario_folder_path=op_inputs_path,
         genx_scenario_results_path=genx_result_scenario_path,
         results_summary_folder_path=results_summary_path,
@@ -109,7 +109,7 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
     print(f"Wrote emissions summary CSV to: {emissions_output}")
 
     # Create generations summary
-    generations_output = create_generations_summary(
+    generations_output = create_generation_summary(
         genx_scenario_results_path=genx_result_scenario_path,
         scenario_name=model_name,
         output_folder_path=output_folder_path,
