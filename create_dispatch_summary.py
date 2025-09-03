@@ -14,7 +14,7 @@ def create_dispatch_summary(
 ) -> Path:
     """
     Create dispatch.csv with columns:
-    hour, resource_name, value, zone, planning_year, model, case
+    hour, resource_name, tech_type, value, zone, planning_year, model, case
 
     Parsing rules (tailored to GenX power.csv structure):
     - Read power.csv from <genx_scenario_results_path>/results/power.csv
@@ -27,8 +27,14 @@ def create_dispatch_summary(
       and select time periods where Weight == weight_value (default 1.0). The selected
       time period integers are printed for debug visibility.
 
-    Output path:
-    - <output_folder_path>/<scenario_name>_results_summary/dispatch.csv
+                Output path:
+                - <output_folder_path>/<scenario_name>_results_summary/dispatch.csv
+
+                tech_type mapping:
+                - tech_type is mapped from Generators_data.csv located at
+                    <output_folder_path>/<scenario_name>_op_inputs/Inputs/Inputs_p1/Generators_data.csv
+                    using the Resource -> technology mapping. If the file or required columns
+                    are missing, an informative error is raised.
     """
 
     genx_scenario_results_path = Path(genx_scenario_results_path)
@@ -104,7 +110,37 @@ def create_dispatch_summary(
     long_df["model"] = scenario_name
     long_df["case"] = case
 
-    dispatch = long_df[["hour", "resource_name", "value", "zone", "planning_year", "model", "case"]].copy()
+    # Map tech_type from Generators_data.csv under op_inputs
+    gen_data_path = (
+        Path(output_folder_path)
+        / f"{scenario_name}_op_inputs"
+        / "Inputs"
+        / "Inputs_p1"
+        / "Generators_data.csv"
+    )
+
+    if not gen_data_path.exists():
+        raise FileNotFoundError(
+            "Generators_data.csv not found. Ensure export_genx_for_plotting created it before calling this function: "
+            f"{gen_data_path}"
+        )
+
+    gen_df = pd.read_csv(gen_data_path)
+    # Be tolerant to capitalization of 'technology'
+    tech_col = (
+        "technology"
+        if "technology" in gen_df.columns
+        else ("Technology" if "Technology" in gen_df.columns else None)
+    )
+    if tech_col is None or "Resource" not in gen_df.columns:
+        raise ValueError(
+            "Generators_data.csv must contain 'Resource' and 'technology' (or 'Technology') columns."
+        )
+
+    tech_map = gen_df.set_index("Resource")[tech_col]
+    long_df["tech_type"] = long_df["resource_name"].map(tech_map)
+
+    dispatch = long_df[["hour", "resource_name", "tech_type", "value", "zone", "planning_year", "model", "case"]].copy()
 
     # Write output
     results_summary_folder_path = output_folder_path / f"{scenario_name}_results_summary"
