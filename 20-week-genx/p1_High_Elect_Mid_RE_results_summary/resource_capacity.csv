@@ -1,0 +1,386 @@
+model,zone,resource_name,tech_type,planning_year,case,unit,start_value,end_value,new_build,existing
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,1067.6,1067.6,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_biomass_1,Biomass,2030,Results_p1,MW,2434.9,2434.9,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_biomass_2,Biomass,2030,Results_p1,MW,0.0,0.0,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_biomass_3,Biomass,2030,Results_p1,MW,63.3,63.3,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,809.6,809.6,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_conventional_steam_coal_1,Conventional Steam Coal,2030,Results_p1,MW,274.6,274.6,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_distributed_generation_1,distributed_generation,2030,Results_p1,MW,572.0,572.0,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_hydroelectric_pumped_storage_1,Hydroelectric Pumped Storage,2030,Results_p1,MW,1507.8,1507.8,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,438.0,437.9999998284624,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,3721.9,3721.899999155548,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,10513.3,10513.299998776058,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,933.2,933.1999668017472,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,602.4,602.3999610515416,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,3355.5,3355.49943892034,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,444.8,444.79999933924944,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,47.0,46.999986626206216,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,45.0,44.99999835909051,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,119.1,119.09999872555676,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,119.6,119.5999982136735,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,581.3,0.0007484298426563,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_nuclear_1,Nuclear,2030,Results_p1,MW,1768.2,1768.1999992496703,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,106.3,106.29999836646132,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshore_wind_turbine_1,Offshore Wind Turbine,2030,Results_p1,MW,2777.0,2699.9980817119654,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_0,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,280.0,279.9999994747791,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_1,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,91.0,90.99999932404349,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_2,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,3499.8,3499.799917686667,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_3,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,293.3,293.29999934354475,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_4,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_0_5,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,746.5,746.4999724100578,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_0,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,21.7,21.699992359979596,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_1,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,83.8,83.79997229483875,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_2,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,24.8,24.799973997278585,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_3,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,756.6,756.5999991828883,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_4,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,2828.4,2828.3999333203933,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class12_moderate_floating_1_5,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,756.4,756.3999582371666,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_0,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,1621.0,1620.999977820942,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_1,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,220.1,220.09999889282284,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_2,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,527.9,527.899986864613,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_3,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,335.2,335.1999597198771,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_4,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,533.5,533.4999772230373,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_0_5,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_0,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,1958.7,1958.6999147579547,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_1,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,11865.3,11865.299954703054,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_2,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,772.2,772.1999702664353,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_3,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,549.9,549.899965751338,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_4,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,2932.1,2932.099981300405,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_offshorewind_class3_moderate_fixed_1_5,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,1526.6,1526.5999994110546,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,7347.7,7347.6999831160765,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_res_water_heat_1,res_water_heat,2030,Results_p1,MW,1172.0,0.0024508466138772,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,29603.6,29603.59999621882,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,2133.9,2133.8999995502927,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,24246.8,24246.799979176583,0,1
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,614.8,614.7999586797047,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,24327.8,24327.79998759801,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,834.5,834.4999669396312,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,361.9,361.8999691394301,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,22747.8,22747.79989706669,1,0
+p1_High_Elect_Mid_RE,NENG_Rest,NENG_Rest_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0016903328370163,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0009522595786595,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_biomass_1,Biomass,2030,Results_p1,MW,0.0,0.0001548709156183,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,0.0002406315837998,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0011881238744109,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_hydroelectric_pumped_storage_1,Hydroelectric Pumped Storage,2030,Results_p1,MW,0.0,0.0009947143014712,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001617940161988,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002279362319336,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0012437246354878,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0009957506124496,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001622378105435,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002286024025362,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0014917765274464,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.0010100967005137,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_natural_gas_steam_turbine_1,Natural Gas Steam Turbine,2030,Results_p1,MW,0.0,0.0001661763114234,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0002325992669496,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.0013730836121888,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0009977532957369,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0001638615147641,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,0.0,0.0002297450300903,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0017443709100863,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,0.0010225992697708,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.000170397523283,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.000236741319197,0,1
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0028315071956863,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0010647763932458,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001767362149192,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002430139962518,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0009068907436256,1,0
+p1_High_Elect_Mid_RE,NY_Z_A,NY_Z_A_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0006713118610403,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.00013584968933,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_biomass_1,Biomass,2030,Results_p1,MW,0.0,0.0002200779715558,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,0.0010482975777868,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0006944530930399,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001398197634647,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002262738946031,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,6246.065014212163,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0024302632481153,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001691694130227,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002843603431951,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0003313568769208,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.30720085659902,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_natural_gas_steam_turbine_1,Natural Gas Steam Turbine,2030,Results_p1,MW,0.0,0.0162530601212423,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0001914799828232,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.000295789242577,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,29.3,29.299998411652837,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_nuclear_1,Nuclear,2030,Results_p1,MW,1369.2,1369.1999993900931,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,627.3,627.2999992777591,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,135.5,135.49999927891233,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_res_water_heat_1,res_water_heat,2030,Results_p1,MW,3.5,3.499999580649482,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,0.0,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,2.0,1.99999935473282,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,1011.1,1011.099998987073,0,1
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,42.6,42.599999043274,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,678.5,678.4999987621378,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,2.0,1.9999996653306835,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,9.1,9.099999157061507,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,6.9,6.899999334500495,1,0
+p1_High_Elect_Mid_RE,NY_Z_B,NY_Z_B_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,856.1,856.0999810452217,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,7080.5,7080.499997771074,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_biomass_1,Biomass,2030,Results_p1,MW,776.2,776.1999864764077,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,2395.601663189152,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0036047875678849,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0014240612407304,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0814848389736863,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0014800159896911,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.000456351600994,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,803.7998092983325,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0079366481682009,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,1499.9992098941643,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_natural_gas_steam_turbine_1,Natural Gas Steam Turbine,2030,Results_p1,MW,0.0,271.1999972787124,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0011060423844509,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.0004360218250175,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,8.25972695118506e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_nuclear_1,Nuclear,2030,Results_p1,MW,0.0,6.98017698157283e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0001309861857085,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,0.0,0.0001043877804229,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0001635032062531,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,7.843979418349002e-05,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.0001217813966349,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0001520464727076,0,1
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001309509529818,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001250327608719,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,9.822089673274988e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001457661969804,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,45.39778259946996,1,0
+p1_High_Elect_Mid_RE,NY_Z_C&E,NY_Z_C&E_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,6585.399623692345,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0009124772527582,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,0.0007158390170366,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0004879790038717,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0005062435817313,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0008126005630513,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,2572.6984494843946,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002887074868058,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002651073026049,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001642708331734,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0001908393822596,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0003930672695768,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0005155267632559,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.0002060333530557,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0006491153832986,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0001474389074619,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,0.0,0.0003904414772998,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0012765066557909,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,3050.444937106086,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.0004945681296692,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0003007331484445,0,1
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001900223804324,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001938110051768,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0005466325294983,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,211.5978317825144,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0004845079388744,1,0
+p1_High_Elect_Mid_RE,NY_Z_D,NY_Z_D_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0014896700012834,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0002126623541084,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,0.0004321009210873,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,2226.712686002351,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_hydroelectric_pumped_storage_1,Hydroelectric Pumped Storage,2030,Results_p1,MW,0.0,0.0027058364063847,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.000686061182026,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0006004112146599,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002608349959955,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0003085332075083,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0008261412066792,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,696.6999912604801,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0004579453758422,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0007392813902296,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.0002487530845041,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.000316317346336,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,15226.310823485166,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0027523491708337,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0007142955865629,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0007251328237113,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,0.0003827355359235,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.0002379959366421,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0008226354908196,0,1
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0019960680949744,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0005141178121415,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0006675405425807,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002268137130934,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002309841633448,1,0
+p1_High_Elect_Mid_RE,NY_Z_F,NY_Z_F_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,51.003707472629365,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.002621736241393,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0009422846230797,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0007756225641038,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0004078477476565,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002611072374341,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0003740609175263,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0009987546410481,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002719819726964,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0006129699180598,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0002038190425555,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.0002655749412406,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,6246.627934619871,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0029056021153162,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.001359614122284,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0007046726280684,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0004128246973388,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0002603650776564,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,0.0,6.799995696393208,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.0003047424426059,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0001079683827626,0,1
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0003034622815763,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,8.268323465027312e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,7.51113111737665e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,711.499994072906,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,1048.3999942151154,1,0
+p1_High_Elect_Mid_RE,NY_Z_G-I,NY_Z_G-I_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0012139742386276,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0032738707702785,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0003737012967909,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0007365400657133,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,694.9998920126784,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,808.7997601466203,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,1033.599650637512,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,464.99990398216494,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,1130.0967317356874,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,300.09678698936887,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,422.49999031404985,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_0,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,121.19999664276862,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_1,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,388.79998625130577,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_2,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,198.7999876309845,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_3,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,60.305517957747625,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_4,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,113.79998859038812,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_0_5,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0001702751524274,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_0,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001155897057491,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_1,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001516838735695,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_2,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001323850354412,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_3,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001552380418867,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_4,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.000152513474258,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class12_moderate_floating_1_5,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001544724234321,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_0,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0001345599652478,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_1,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.000162906205982,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_2,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0001604446528766,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_3,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0001615436800472,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_4,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0001566320591025,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_0_5,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0001513555590677,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_0,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,731.7948626316168,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_1,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0009219507925672,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_2,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0012832951453723,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_3,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,3968.19775364048,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_4,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0010330896860939,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_offshorewind_class3_moderate_fixed_1_5,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0001729498854414,1,0
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0006840791287846,0,1
+p1_High_Elect_Mid_RE,NY_Z_J,NY_Z_J_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0014954631555801,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0003242965761237,1,0
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0001065444206921,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,6.912828205358546e-05,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,7.02309345584386e-05,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.0001110969224277,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,9.804431451605644e-05,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,4.646277754175023e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,9.628114215316308e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,4.706950649677964e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,3.77622033528658e-05,1,0
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_res_water_heat_1,res_water_heat,2030,Results_p1,MW,0.0,0.0001409094726129,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,0.0001433218042895,0,1
+p1_High_Elect_Mid_RE,NY_Z_K,NY_Z_K_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001188509490411,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0001263968180236,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_biomass_1,Biomass,2030,Results_p1,MW,0.0,0.0001166689978334,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,0.0,0.0001421449876849,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_conventional_steam_coal_1,Conventional Steam Coal,2030,Results_p1,MW,0.0,0.0005011515896514,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_distributed_generation_1,distributed_generation,2030,Results_p1,MW,0.0,0.0004839294810033,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_hydroelectric_pumped_storage_1,Hydroelectric Pumped Storage,2030,Results_p1,MW,0.0,0.0003271586223832,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0003750814888308,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0001935506904729,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0002327405859467,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0005678309001867,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0021878400491883,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0004223359578488,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0006033886276418,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.0003500154807736,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_fired_combined_cycle_3,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,0.0,0.000453162467598,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,0.0031418913032862,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,0.0,574.3991880440209,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_natural_gas_steam_turbine_1,Natural Gas Steam Turbine,2030,Results_p1,MW,0.0,443.97163031395314,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0048206297699776,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,0.0,0.0019022138053135,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,0.0,0.0004712641849157,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_nuclear_1,Nuclear,2030,Results_p1,MW,0.0,2831.6102153984048,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_nuclear_2,Nuclear,2030,Results_p1,MW,0.0,0.0007227115981344,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,0.0,0.0013965713602587,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_0,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0042540166295885,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_1,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0011581765929556,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_2,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0003940529793383,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_3,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0001615654081873,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_4,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0001187868697175,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_0_5,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,0.0,0.0001105041919652,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_0,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,9.995515362261784e-05,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_1,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001132369149663,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_2,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0001007472930969,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_3,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0074099974878645,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_4,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,9408.41439153776,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class12_moderate_floating_1_5,OffShoreWind_Class12_Moderate_floating_1,2030,Results_p1,MW,0.0,0.0012641351268763,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_0,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0055273358069284,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_1,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.000403970422024,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_2,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.000921500306359,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_3,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.001661313007332,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_4,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,37190.12321106232,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_0_5,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,0.0,0.0005104879388534,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_0,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0004958056048565,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_1,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.0001623141083549,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_2,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,0.0,0.000183108243505,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_3,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,1830.0,1830.0,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_4,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,240.0,240.0,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_offshorewind_class3_moderate_fixed_1_5,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,1166.7,1166.7,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_res_water_heat_1,res_water_heat,2030,Results_p1,MW,1490.0,1490.0,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,3693.0,3693.0,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,0.0,0.0012762924648347,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,0.0,247.40204606630968,0,1
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,1768.0253424128216,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,3984.08468339112,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.1774885235509229,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0913484091013229,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.1450697972397713,1,0
+p1_High_Elect_Mid_RE,PJM_EMAC,PJM_EMAC_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,0.0,0.0257348874784296,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_battery_moderate_0,Battery_*_Moderate,2030,Results_p1,MW,0.0,0.0491154010032629,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_biomass_1,Biomass,2030,Results_p1,MW,0.0,1580.0000926972418,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_biomass_2,Biomass,2030,Results_p1,MW,0.0,1440.000307999575,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_conventional_hydroelectric_1,Conventional Hydroelectric,2030,Results_p1,MW,9.8,9.8,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_conventional_steam_coal_1,Conventional Steam Coal,2030,Results_p1,MW,7.4,7.4,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_distributed_generation_1,distributed_generation,2030,Results_p1,MW,14.7,14.7,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_hydroelectric_pumped_storage_1,Hydroelectric Pumped Storage,2030,Results_p1,MW,1.7,1.7,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_1,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,9.0,9.0,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_2,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,16.6,16.6,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_3,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,59.6,59.6,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_4,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,20.3,20.3,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_5,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,164.2,164.2,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_landbasedwind_class1_moderate_6,LandbasedWind_Class1_Moderate_,2030,Results_p1,MW,665.5,665.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combined_cycle_1,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,122.8,122.8,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combined_cycle_2,Natural Gas Fired Combined Cycle,2030,Results_p1,MW,240.2,240.2,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combustion_turbine_1,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,182.0,182.0,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combustion_turbine_2,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,360.2,360.2,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combustion_turbine_3,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,41.6,41.6,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_natural_gas_fired_combustion_turbine_4,Natural Gas Fired Combustion Turbine,2030,Results_p1,MW,220.1,220.1,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_naturalgas_ccavgcf_moderate_0,NaturalGas_CCAvgCF_Moderate,2030,Results_p1,MW,407.2,407.2,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_naturalgas_ccccsavgcf_moderate_0,NaturalGas_CCCCSAvgCF_Moderate,2030,Results_p1,MW,1458.7,1458.7,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_naturalgas_ccs100_moderate_0,NaturalGas_CCS100_Moderate,2030,Results_p1,MW,497.1,497.1,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_naturalgas_ctavgcf_moderate_0,NaturalGas_CTAvgCF_Moderate,2030,Results_p1,MW,4652.1,4652.1,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_nuclear_1,Nuclear,2030,Results_p1,MW,13706.4,13706.4,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_nuclear_nuclear_moderate_0,Nuclear_Nuclear_Moderate,2030,Results_p1,MW,3904.7,3904.7,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_0,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,30.5,30.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_1,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,57.9,57.9,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_2,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,108.5,108.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_3,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,418.6,418.6,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_4,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,24.7,24.7,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class12_moderate_floating_0_5,OffShoreWind_Class12_Moderate_floating_0,2030,Results_p1,MW,1.0,1.0,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_0,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,11.3,11.3,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_1,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,285.5,285.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_2,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,75.8,75.8,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_3,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,277.6,277.6,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_4,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,30.2,30.2,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_0_5,OffShoreWind_Class3_Moderate_fixed_0,2030,Results_p1,MW,111.8,111.8,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_0,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,32.0,32.0,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_1,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,155.2,155.2,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_2,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,5.1,5.1,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_3,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,134.2,134.2,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_4,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,77.5,77.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_offshorewind_class3_moderate_fixed_1_5,OffShoreWind_Class3_Moderate_fixed_1,2030,Results_p1,MW,301.5,301.5,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_onshore_wind_turbine_1,Onshore Wind Turbine,2030,Results_p1,MW,5017.0,5016.99998340926,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_res_water_heat_1,res_water_heat,2030,Results_p1,MW,180.0,179.9999971584598,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_small_hydroelectric_1,Small Hydroelectric,2030,Results_p1,MW,136.0,135.99999722758224,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_solar_photovoltaic_1,Solar Photovoltaic,2030,Results_p1,MW,270.0,269.9999964849304,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_trans_light_duty_1,trans_light_duty,2030,Results_p1,MW,31.0,30.99999900567941,0,1
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_1,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,165.0,164.9999987210916,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_2,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,305.0,304.9999195374836,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_3,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,1094.0,1093.999860905713,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_4,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,373.0,372.9999989529859,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_5,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,5972.0,5971.99998162613,1,0
+p1_High_Elect_Mid_RE,PJM_Rest,PJM_Rest_utilitypv_class1_moderate_6,UtilityPV_Class1_Moderate_,2030,Results_p1,MW,8622.0,8621.999930900323,1,0

@@ -1,0 +1,30 @@
+Resource,Zone,New_Build,Can_Retire,Existing_Cap_MW,region,technology,cluster,Cap_Size,minimum_load_mw,Heat_Rate_MMBTU_per_MWh,Fixed_OM_Cost_per_MWyr,Var_OM_Cost_per_MWh,heat_rate_mmbtu_mwh_iqr,heat_rate_mmbtu_mwh_std,num_units,capacity_factor,unmodified_cap_size,unmodified_existing_cap_mw,variable_CF,Unnamed: 21
+NENG_Rest_biomass_1,1,0,0,30.5,NENG_Rest,Biomass,1,6.11,4.82,29.2,150850,12.55,3.126,3.358,5.0,0.189,32.36,161.8,0.0,-1.0
+NENG_Rest_biomass_2,1,0,0,57.9,NENG_Rest,Biomass,2,1.52,4.379,12.27,150850,5.27,2.765,1.401,38.0,0.189,8.068,306.584,0.0,-1.0
+NENG_Rest_biomass_3,1,0,0,108.5,NENG_Rest,Biomass,3,4.93,7.973,17.3,150850,7.43,3.508,2.487,22.0,0.189,26.136,574.992,0.0,-1.0
+NENG_Rest_small_hydroelectric_1,1,0,0,418.6,NENG_Rest,Small Hydroelectric,1,0.94,0.467,8.84,53201,0.0,0.0,0.0,443.0,0.469,2.014,892.202,0.4469697298845211,-1.0
+NY_Z_A_biomass_1,2,0,0,24.7,NY_Z_A,Biomass,1,0.95,0.854,11.9,150850,5.11,1.819,0.981,26.0,0.386,2.462,64.012,0.0,-1.0
+NY_Z_A_small_hydroelectric_1,2,0,0,1.0,NY_Z_A,Small Hydroelectric,1,0.97,1.8,8.84,53201,0.0,0.0,0.0,1.0,0.402,2.4,2.4,0.6264021857923497,-1.0
+NY_Z_B_biomass_1,3,0,0,11.3,NY_Z_B,Biomass,1,0.94,0.6,13.22,150850,5.68,1.657,0.926,12.0,0.908,1.033,12.396,0.0,-1.0
+NY_Z_B_small_hydroelectric_1,3,0,0,285.5,NY_Z_B,Small Hydroelectric,1,31.72,0.344,8.84,53201,0.0,0.0,0.0,9.0,8.348,3.8,34.2,0.10942095856102002,-1.0
+NY_Z_C&E_biomass_1,4,0,0,75.8,NY_Z_C&E,Biomass,1,2.0,1.139,16.14,150850,6.94,1.327,1.662,38.0,0.568,3.511,133.418,0.0,-1.0
+NY_Z_C&E_small_hydroelectric_1,4,0,0,277.6,NY_Z_C&E,Small Hydroelectric,1,1.38,0.801,8.84,53201,0.0,0.0,0.0,201.0,0.551,2.507,503.907,0.393033310564663,-1.0
+NY_Z_D_small_hydroelectric_1,5,0,0,30.2,NY_Z_D,Small Hydroelectric,1,0.86,0.351,8.84,53201,0.0,0.0,0.0,35.0,0.475,1.814,63.49,0.8089198201275046,-1.0
+NY_Z_F_small_hydroelectric_1,6,0,0,111.8,NY_Z_F,Small Hydroelectric,1,1.64,0.685,8.84,53201,0.0,0.0,0.0,68.0,0.553,2.975,202.3,0.43371556238615666,-1.0
+NY_Z_G-I_small_hydroelectric_1,7,0,0,32.0,NY_Z_G-I,Small Hydroelectric,1,1.33,1.479,8.84,53201,0.0,0.0,0.0,24.0,0.294,4.529,108.696,0.2950762067395264,-1.0
+PJM_EMAC_biomass_1,10,0,0,155.2,PJM_EMAC,Biomass,1,2.16,1.604,16.73,150850,7.19,1.826,2.625,72.0,0.393,5.483,394.776,0.0,-1.0
+PJM_EMAC_small_hydroelectric_1,10,0,0,5.1,PJM_EMAC,Small Hydroelectric,1,1.69,0.3,8.84,53201,0.0,0.0,0.0,3.0,0.513,3.3,9.9,0.4854487021857924,-1.0
+PJM_Rest_biomass_1,11,0,0,134.2,PJM_Rest,Biomass,1,0.3,0.405,12.12,150850,5.21,0.688,0.848,440.0,0.231,1.321,581.24,0.0,-1.0
+PJM_Rest_biomass_2,11,0,0,77.5,PJM_Rest,Biomass,2,1.41,1.125,20.43,150850,8.78,3.557,3.1,55.0,0.231,6.093,335.115,0.0,-1.0
+PJM_Rest_small_hydroelectric_1,11,0,0,301.5,PJM_Rest,Small Hydroelectric,1,1.4,0.552,8.84,53201,0.0,0.0,0.001,216.0,0.535,2.611,563.976,0.25029685642854055,-1.0
+NENG_Rest_distributed_generation_1,1,0,1,5017.0,NENG_Rest,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.187671803652968,0.0
+NY_Z_A_distributed_generation_1,2,0,1,180.0,NY_Z_A,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_B_distributed_generation_1,3,0,1,136.0,NY_Z_B,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_C&E_distributed_generation_1,4,0,1,270.0,NY_Z_C&E,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_D_distributed_generation_1,5,0,1,31.0,NY_Z_D,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_F_distributed_generation_1,6,0,1,165.0,NY_Z_F,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_G-I_distributed_generation_1,7,0,1,305.0,NY_Z_G-I,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_J_distributed_generation_1,8,0,1,1094.0,NY_Z_J,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+NY_Z_K_distributed_generation_1,9,0,1,373.0,NY_Z_K,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.18983253424657534,0.0
+PJM_EMAC_distributed_generation_1,10,0,1,5972.0,PJM_EMAC,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.19024589041095888,0.0
+PJM_Rest_distributed_generation_1,11,0,1,8622.0,PJM_Rest,distributed_generation,1,0.0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1923302511415525,0.0
