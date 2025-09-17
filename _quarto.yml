@@ -7,10 +7,11 @@ project:
     - "!*short*.qmd"
 
 website:
-  title: "MIP"
+  title: "Srikanth-MIP"
   navbar:
     left:
       - blog.qmd
+      - "20-week-genx_simulations.qmd"
       # - about.qmd
       # - text: Cars
       #   href: posts/other-notebook.ipynb
