@@ -1,0 +1,160 @@
+model,zone,tech_type,planning_year,existing,unit,start_value,end_value,retired_value,new_build_value
+p4_Mod_Elect_Low_RE,NENG_Rest,Battery,2030,False,MW,1067.6,1067.6,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,CCS,2030,False,MW,119.6,0.0,119.6,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Coal,2030,True,MW,0.0,274.6,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Distributed Solar,2030,True,MW,0.0,572.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Hydro,2030,True,MW,0.0,31921.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Natural Gas CC,2030,True,MW,0.0,491.8,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Natural Gas CT,2030,False,MW,581.3,0.0,581.3,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Natural Gas CT,2030,True,MW,0.0,164.1,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Not Specified,2030,False,MW,25418.8,24246.8,1172.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Nuclear,2030,False,MW,106.3,0.0,106.3,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Nuclear,2030,True,MW,0.0,1768.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Other,2030,True,MW,0.0,2498.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Solar,2030,False,MW,48886.8,44571.2,4315.6,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Solar,2030,True,MW,0.0,2133.9,0.0,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Wind,2030,False,MW,51789.1,49300.3,2488.8,0.0
+p4_Mod_Elect_Low_RE,NENG_Rest,Wind,2030,True,MW,0.0,10047.7,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Hydro,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Natural Gas CT,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Natural Gas Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Solar,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Wind,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_A,Wind,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Hydro,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Natural Gas CT,2030,False,MW,29.3,29.3,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Natural Gas CT,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Natural Gas Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Not Specified,2030,False,MW,1014.6,1014.6,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Nuclear,2030,False,MW,627.3,627.3,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Nuclear,2030,True,MW,0.0,1369.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Solar,2030,False,MW,1595.2,1595.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Solar,2030,True,MW,0.0,2.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Wind,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_B,Wind,2030,True,MW,0.0,135.5,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Battery,2030,False,MW,7080.5,7080.5,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Hydro,2030,True,MW,0.0,2935.5,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Natural Gas CC,2030,True,MW,0.0,960.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Natural Gas Other,2030,True,MW,0.0,271.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Nuclear,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Other,2030,True,MW,0.0,776.2,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Solar,2030,False,MW,0.0,6630.8,0.0,6630.8
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Wind,2030,False,MW,0.0,803.8,0.0,803.8
+p4_Mod_Elect_Low_RE,NY_Z_C&E,Wind,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Hydro,2030,True,MW,0.0,4124.3,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Solar,2030,False,MW,0.0,357.6,0.0,357.6
+p4_Mod_Elect_Low_RE,NY_Z_D,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_D,Wind,2030,False,MW,0.0,2572.7,0.0,2572.7
+p4_Mod_Elect_Low_RE,NY_Z_D,Wind,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,CCS,2030,False,MW,0.0,8707.5,0.0,8707.5
+p4_Mod_Elect_Low_RE,NY_Z_F,Distributed Solar,2030,True,MW,0.0,46.9,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Hydro,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Natural Gas CT,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Solar,2030,False,MW,0.0,1301.2,0.0,1301.2
+p4_Mod_Elect_Low_RE,NY_Z_F,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_F,Wind,2030,False,MW,0.0,696.7,0.0,696.7
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Hydro,2030,True,MW,0.0,6.8,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Natural Gas CT,2030,True,MW,0.0,7595.3,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Solar,2030,False,MW,0.0,1759.9,0.0,1759.9
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_G-I,Wind,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,CCS,2030,False,MW,0.0,1130.1,0.0,1130.1
+p4_Mod_Elect_Low_RE,NY_Z_J,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Natural Gas CC,2030,False,MW,0.0,465.0,0.0,465.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Natural Gas CC,2030,True,MW,0.0,695.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Natural Gas CT,2030,False,MW,0.0,82.8,0.0,82.8
+p4_Mod_Elect_Low_RE,NY_Z_J,Natural Gas CT,2030,True,MW,0.0,1842.4,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_J,Nuclear,2030,False,MW,0.0,422.5,0.0,422.5
+p4_Mod_Elect_Low_RE,NY_Z_J,Wind,2030,False,MW,0.0,5800.2,0.0,5800.2
+p4_Mod_Elect_Low_RE,NY_Z_K,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Natural Gas CT,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Not Specified,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,NY_Z_K,Solar,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,CCS,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Coal,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Distributed Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Hydro,2030,True,MW,0.0,3693.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Natural Gas CC,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Natural Gas CC,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Natural Gas CT,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Natural Gas CT,2030,True,MW,0.0,574.4,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Natural Gas Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Not Specified,2030,False,MW,1490.0,3096.3,0.0,1606.3
+p4_Mod_Elect_Low_RE,PJM_EMAC,Nuclear,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Nuclear,2030,True,MW,0.0,3275.6,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Other,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Solar,2030,False,MW,0.0,4393.7,0.0,4393.7
+p4_Mod_Elect_Low_RE,PJM_EMAC,Solar,2030,True,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_EMAC,Wind,2030,False,MW,3236.7,41257.9,0.0,38021.2
+p4_Mod_Elect_Low_RE,PJM_Rest,Battery,2030,False,MW,0.0,0.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,CCS,2030,False,MW,355.3,355.3,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Coal,2030,True,MW,0.0,7.2,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Distributed Solar,2030,True,MW,0.0,14.3,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Hydro,2030,True,MW,0.0,147.1,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Natural Gas CC,2030,False,MW,74.0,74.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Natural Gas CC,2030,True,MW,0.0,165.8,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Natural Gas CT,2030,False,MW,844.8,844.8,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Natural Gas CT,2030,True,MW,0.0,146.1,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Not Specified,2030,False,MW,211.0,211.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Nuclear,2030,False,MW,708.7,708.7,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Nuclear,2030,True,MW,0.0,2488.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Other,2030,True,MW,0.0,3020.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Solar,2030,False,MW,16531.0,16531.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Solar,2030,True,MW,0.0,270.0,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Wind,2030,False,MW,3073.9,3073.9,0.0,0.0
+p4_Mod_Elect_Low_RE,PJM_Rest,Wind,2030,True,MW,0.0,5017.0,0.0,0.0
