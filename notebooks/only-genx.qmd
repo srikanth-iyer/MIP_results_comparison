@@ -279,7 +279,13 @@ chart
 #### Column {.tabset}
 ```{python}
 # | title: Emissions
-chart = chart_emissions(emiss)
+chart = chart_emissions(emiss, co2_limit=False)
+chart
+```
+```{python}
+# | title: Emissions without PJM and NENG
+emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
+chart = chart_emissions(emiss_only_ny, co2_limit=False,)
 chart
 ```
 
@@ -290,7 +296,13 @@ from fig_functions_genx_only import chart_emissions_intensity
 chart = chart_emissions_intensity(emiss, gen, x_var="model", col_var="Region")
 chart
 ```
-
+```{python}
+# | title: Emissions intensity without PJM and NENG
+from fig_functions_genx_only import chart_emissions_intensity
+emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
+chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Region")
+chart
+```
 # Dispatch
 
 ## Row {.tabset}
