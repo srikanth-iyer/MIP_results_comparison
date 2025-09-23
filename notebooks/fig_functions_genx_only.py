@@ -8,6 +8,7 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
+import warnings
 
 # alt.data_transformers.enable("vegafusion")
 
@@ -41,6 +42,20 @@ region_map = {
     "PJM_Rest": [11],
 }
 
+# Explicit region color map (edit as needed)
+REGION_COLOR_MAP = {
+    "NENG_Rest": "#4E79A7",  # blue
+    "NY_Z_A": "#F28E2B",     # orange
+    "NY_Z_B": "#E15759",     # red
+    "NY_Z_C&E": "#76B7B2",   # teal
+    "NY_Z_D": "#59A14F",     # green
+    "NY_Z_F": "#EDC948",     # yellow
+    "NY_Z_G-I": "#B07AA1",   # purple
+    "NY_Z_J": "#FF9DA7",     # pink
+    "NY_Z_K": "#9C755F",     # brown
+    "PJM_EMAC": "#86BCB6",   # light teal
+    "PJM_Rest": "#BAB0AC",   # gray
+}
 # region_map = {
 #     1: [1],
 #     2: [2],
@@ -1739,6 +1754,7 @@ def chart_regional_gen(
     width=alt.Step(40),
     height=200,
 ) -> alt.Chart:
+
     if cap is not None:
         _cap = (
             cap.query("unit=='MW'")
@@ -2029,20 +2045,34 @@ def chart_emissions(
     if order is None:
         order = sorted(data[x_var].unique())
     data["value"] /= 1e6
-    data["limit"] = 0
-    data.loc[data["planning_year"] == 2027, "limit"] = 873
-    data.loc[data["planning_year"] == 2030, "limit"] = 186
-    data.loc[data["planning_year"] == 2035, "limit"] = 130
-    data.loc[data["planning_year"] == 2040, "limit"] = 86.7
-    data.loc[data["planning_year"] == 2045, "limit"] = 43.3
+    data["limit"] = 0 # NOTE: this is for the horizontal black line denoting co2 limit for a given year
+    # data.loc[data["planning_year"] == 2027, "limit"] = 873 #NOTE: these are for the co2 limits for each year. Currently commented out as these values need verifying
+    # data.loc[data["planning_year"] == 2030, "limit"] = 186
+    # data.loc[data["planning_year"] == 2035, "limit"] = 130
+    # data.loc[data["planning_year"] == 2040, "limit"] = 86.7
+    # data.loc[data["planning_year"] == 2045, "limit"] = 43.3
     data = data.rename(columns=VAR_ABBR_MAP)
+    # Only include colors (and legend entries) for regions present in this dataset
+    data_regions = [r for r in data["r"].unique().tolist() if pd.notna(r)]
+    present_regions = [r for r in REGION_COLOR_MAP.keys() if r in data_regions]
+    missing_regions = [r for r in data_regions if r not in REGION_COLOR_MAP]
+    if missing_regions:
+        warnings.warn(
+            f"chart_emissions: Regions missing from REGION_COLOR_MAP: {missing_regions}. "
+            "They will not use the explicit palette."
+        )
     base = (
         alt.Chart()
         .mark_bar()
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("sum(v)").title("CO2 (Million Tonnes)"),
-            color=alt.Color("r").title("Region"),  # .scale(scheme="tableau20"),
+            color=alt.Color("r")
+            .scale(
+                domain=present_regions,
+                range=[REGION_COLOR_MAP[r] for r in present_regions],
+            )
+            .title("Region"),
             # column="agg_zone",
             # row="planning_year:O",
             tooltip=_tooltips,
@@ -2428,6 +2458,30 @@ def chart_op_emiss(
     data = op_emiss.groupby(by, as_index=False)["value"].sum().query("value>0")
     data["value"] /= 1e6
     data = data.rename(columns=VAR_ABBR_MAP)
+    # If coloring by Region, use explicit palette and limit legend to present regions
+    if color == "Region":
+        data_regions = [r for r in data["r"].unique().tolist() if pd.notna(r)]
+        present_regions = [r for r in REGION_COLOR_MAP.keys() if r in data_regions]
+        missing_regions = [r for r in data_regions if r not in REGION_COLOR_MAP]
+        if missing_regions:
+            warnings.warn(
+                f"chart_op_emiss: Regions missing from REGION_COLOR_MAP: {missing_regions}. "
+                "They will not use the explicit palette."
+            )
+        region_color_encoding = (
+            alt.Color(VAR_ABBR_MAP[color])
+            .scale(
+                domain=present_regions,
+                range=[REGION_COLOR_MAP[r] for r in present_regions],
+            )
+            .title(title_case(color))
+        )
+    else:
+        region_color_encoding = (
+            alt.Color(VAR_ABBR_MAP[color]).scale(scheme=color_scale).title(
+                title_case(color)
+            )
+        )
     base = (
         alt.Chart()
         .mark_bar()
@@ -2435,9 +2489,7 @@ def chart_op_emiss(
             # xOffset="model:N",
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y=alt.Y("v").title("CO2 (Million Tonnes)"),
-            color=alt.Color(VAR_ABBR_MAP[color])
-            .scale(scheme=color_scale)
-            .title(title_case(color)),
+            color=region_color_encoding,
             tooltip=_tooltip,
         )
     )
