@@ -26,30 +26,34 @@ except:
 #     "SOU": ["SRSE", "SRCA", "FRCC"],
 #     "NE": ["ISNE", "NYUP", "NYCW"],
 # }
-# NENG_Rest,z1,1.0,-1.0
-# NY_Z_A,z2,1.0,-1.0
-# NY_Z_B,z3,1.0,-1.0
-# NY_Z_C&E,z4,1.0,-1.0
-# NY_Z_D,z5,1.0,-1.0
-# NY_Z_F,z6,1.0,-1.0
-# NY_Z_G-I,z7,1.0,-1.0
-# NY_Z_J,z8,1.0,-1.0
-# NY_Z_K,z9,1.0,-1.0
-# PJM_EMAC,z10,1.0,-1.0
-# PJM_Rest,z11,1.0,-1.0
+
 region_map = {
-    1: [1],
-    2: [2],
-    3: [3],
-    4: [4],
-    5: [5],
-    6: [6],
-    7: [7],
-    8: [8],
-    9: [9],
-    10: [10],
-    11: [11],
+    "NENG_Rest": [1],
+    "NY_Z_A": [2],
+    "NY_Z_B": [3],
+    "NY_Z_C&E": [4],
+    "NY_Z_D": [5],
+    "NY_Z_F": [6],
+    "NY_Z_G-I": [7],
+    "NY_Z_J": [8],
+    "NY_Z_K": [9],
+    "PJM_EMAC": [10],
+    "PJM_Rest": [11],
 }
+
+# region_map = {
+#     1: [1],
+#     2: [2],
+#     3: [3],
+#     4: [4],
+#     5: [5],
+#     6: [6],
+#     7: [7],
+#     8: [8],
+#     9: [9],
+#     10: [10],
+#     11: [11],
+# }
 
 TECH_MAP = {
     "batteries": "Battery",
@@ -454,7 +458,7 @@ def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
             df["value"] = df["value"] * df["km"]
     if "zone" in df.columns:
         # df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
-        df.loc[:, "agg_zone"] = df.loc[:, "zone"].copy()
+        df.loc[:, "agg_zone"] = df.loc[:, "zone"].copy() # NOTE: cap takes input from resource_capacity that already has zone in name form 
     for col in ["value", "start_value", "end_value"]:
         if col in df.columns:
             df.loc[:, col] = df[col].round(0)
@@ -1526,8 +1530,8 @@ def chart_total_gen(
     else:
         data = gen.groupby(group_by, as_index=False)["value"].sum()
 
-    if (Path.cwd() / "annual_demand.csv").exists():
-        demand = pd.read_csv(Path.cwd() / "annual_demand.csv")
+    if (Path.cwd() / "annual_demand_genx.csv").exists():
+        demand = pd.read_csv(Path.cwd() / "annual_demand_genx.csv")
         demand.loc[:, "agg_zone"] = demand.loc[:, "zone"].map(rev_region_map)
         data = pd.merge(
             data,
@@ -1768,8 +1772,10 @@ def chart_regional_gen(
             alt.Tooltip("tt", title="Technology"),
             alt.Tooltip("value", title="Generation (MWh)", format=",.0f"),
         ]
-    if (Path.cwd() / "annual_demand.csv").exists():
-        demand = pd.read_csv(Path.cwd() / "annual_demand.csv")
+    data['agg_zone']= data['agg_zone'].map(rev_region_map) # NOTE: agg zone is in numbers here because gen has aggzone in numbers. (this is because  some zones are numbers some are names so aggzone is numbers)
+    # TODO: Ensure that agg zone is consistently in name form all the time in gen, cap etc. When doing so, check that all the plot funcs still work.
+    if (Path.cwd() / "annual_demand_genx.csv").exists():
+        demand = pd.read_csv(Path.cwd() / "annual_demand_genx.csv")
         demand.loc[:, "agg_zone"] = demand.loc[:, "zone"].map(rev_region_map)
         data = pd.merge(
             data,
