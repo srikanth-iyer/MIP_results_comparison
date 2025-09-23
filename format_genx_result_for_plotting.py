@@ -5,9 +5,43 @@ from create_resource_capacity import create_resource_capacity
 from create_emissions_summary import create_emissions_summary
 from create_generation_summary import create_generation_summary   
 from create_dispatch_summary import create_dispatch_summary
-
+import pandas as pd
 all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results")
 scenario_name = "p4_Mod_Elect_Low_RE"
+
+
+def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_year: int) -> None:
+    """
+    Create an annual_demand.csv file from the Demand_data.csv in the GenX scenario.
+
+    Args:
+        scenario_path: Path to the GenX scenario folder containing 'system/Demand_data.csv'.
+        output_path: Path where the annual_demand.csv will be saved.
+        planning_year: Planning year to annotate in the output rows.
+    """
+    demand_data_file = scenario_path / "system" / "Demand_data.csv"
+    if not demand_data_file.exists():
+        raise FileNotFoundError(f"Demand data file not found: {demand_data_file}")
+
+    demand_df = pd.read_csv(demand_data_file)
+    zone_cols = [c for c in demand_df.columns if c.startswith("Demand_MW_z")]
+    if not zone_cols:
+        raise ValueError("No demand zone columns found matching prefix 'Demand_MW_z'")
+
+    rows: list[dict] = []
+    for col in zone_cols:
+        zone = col.replace("Demand_MW_", "")
+        total_demand_mwh = float(demand_df[col].sum())
+        rows.append({
+            "zone": zone,
+            "annual_demand": total_demand_mwh,
+            "planning_year": planning_year,
+        })
+
+    annual_demand_df = pd.DataFrame(rows, columns=["zone", "annual_demand", "planning_year"])
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    annual_demand_df.to_csv(output_path, index=False)
+    print(f"Wrote annual demand CSV to: {output_path}")
 
 
 def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, output_folder_path: Path) -> Path:
@@ -84,6 +118,16 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
     # RESULTS SUMMARY CREATION
     results_summary_path = output_folder_path / f"{model_name}_results_summary"
     results_summary_path.mkdir(parents=True, exist_ok=True)
+
+    # Create annual demand CSV in results summary folder (from system/Demand_data.csv)
+    try:
+        create_annual_demand_csv(
+            genx_result_scenario_path,
+            results_summary_path / "annual_demand.csv",
+            planning_year=2030,
+        )
+    except Exception as e:
+        print(f"Warning: Could not create annual_demand.csv: {e}")
 
     # Create resource capacity file in results summary folder
     output = create_resource_capacity(
