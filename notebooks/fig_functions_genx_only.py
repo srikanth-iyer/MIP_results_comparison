@@ -2876,6 +2876,197 @@ def chart_cap_factor_scatter(
 
     return chart  # | timeseries
 
+def chart_cap_factor_scatter_genx( 
+    cap: pd.DataFrame,
+    gen: pd.DataFrame,
+    dispatch: pd.DataFrame = None,
+    color="model",
+    col_var=None,
+    row_var=None,
+    frac=None, # NOTE: frac value of less than 1.0 will make the plot sample vary each time.
+    name_str_replace=None,
+) -> alt.Chart:
+    if name_str_replace is not None:
+        for k, v in name_str_replace.items():
+            gen["resource_name"] = gen["resource_name"].str.replace(k, v)
+            cap["resource_name"] = cap["resource_name"].str.replace(k, v)
+            if dispatch is not None:
+                dispatch["resource_name"] = dispatch["resource_name"].str.replace(k, v)
+
+    for hour in [2, 4, 6, 8]:
+        cap["resource_name"] = cap["resource_name"].str.replace(f"_{hour}hour", "")
+        gen["resource_name"] = gen["resource_name"].str.replace(f"_{hour}hour", "")
+        if dispatch is not None:
+            dispatch["resource_name"] = dispatch["resource_name"].str.replace(
+                f"_{hour}hour", ""
+            )
+
+    merge_by = ["tech_type", "resource_name", "planning_year", "model"]
+    group_by = ["resource_name", "planning_year", "model"]
+    _tooltips = [
+        alt.Tooltip("name").title("Resource"),
+        alt.Tooltip(color),
+    ]
+    if col_var is not None:
+        group_by.append(col_var)
+        merge_by.append(col_var)
+        # _tooltips.append(alt.Tooltip(col_var))
+    if row_var is not None:
+        _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[row_var]).title(title_case(row_var)))
+        merge_by.append(row_var)
+        group_by.append(row_var)
+    merge_by = list(set(merge_by))
+    group_by = list(set(group_by))
+    _cap = (
+        cap.query("unit=='MW'")
+        .groupby(
+            merge_by+['capacity_factor'],
+            # ["tech_type", "resource_name", "model", "planning_year"],
+            as_index=False,
+            sort=True,
+        )["end_value"]
+        .sum()
+    )
+    
+    _cap = _cap.query("end_value >= 50")
+    _gen = pd.merge(
+        gen,
+        _cap,
+        # on=["tech_type", "resource_name", "model", "planning_year"],
+        on=merge_by,
+        how="left",
+    )
+    _gen = _gen.query("value >= 0")
+    _gen.fillna({"end_value": 0, "capacity_factor": 0.0}, inplace=True)
+    _gen["potential_gen"] = _gen["end_value"] * 8760
+    data = _gen.groupby(group_by+['capacity_factor'], as_index=False, sort=True)[
+        ["value", "potential_gen", "end_value"]
+    ].sum()
+    data = data.query("end_value >= 50").drop(columns=["potential_gen", "value"])
+    # selection = alt.selection_point(fields=["model"], bind="legend")
+    selector = alt.selection_point(fields=["id"])  # , "model", "planning_year"
+    data["end_value"] = data["end_value"].astype(int)
+    if frac:
+        resources = data.sample(frac=frac)["resource_name"].unique()
+        data = data.loc[data["resource_name"].isin(resources)]
+    # Stable ID mapping: sort resource names
+    name_id_map = {name: idx for idx, name in enumerate(sorted(data["resource_name"].unique()))}
+    data["id"] = data["resource_name"].map(name_id_map)
+    data = data.rename(
+        columns={
+            "planning_year": "y",
+            "resource_name": "name",
+            "capacity_factor": "cf",
+            "end_value": "v",
+        }
+    )
+    _tooltips.extend(
+        [
+            alt.Tooltip("cf", title="Capacity Factor"),
+            alt.Tooltip("v", title="Capacity (MW)", format=",.0f"),
+        ]
+    )
+    chart = (
+        alt.Chart(data)
+        .mark_point()
+        .encode(
+            x=alt.X("v").title("Capacity (MW)").scale(type="log"),
+            y=alt.Y("cf").title("Capacity Factor"),
+            color=color,
+            shape=color,
+            tooltip=_tooltips,
+            opacity=alt.condition(selector, alt.value(1), alt.value(0.2)),
+        )
+        .add_params(selector)
+        .properties(width=300, height=250)
+        .interactive()
+        # .transform_filter(selector)
+    )
+    if col_var is not None:
+        if col_var == "planning_year":
+            chart = chart.encode(column=alt.Column("y").title("Planning Year"))
+        else:
+            chart = chart.encode(
+                column=alt.Column(VAR_ABBR_MAP[col_var])
+                .title(title_case(col_var))
+                .header(titleFontSize=20, labelFontSize=15)
+            )
+    if row_var is not None:
+        chart = chart.encode(
+            row=alt.Row(VAR_ABBR_MAP[row_var])
+            .title(title_case(row_var))
+            .header(titleFontSize=20, labelFontSize=15)
+        )
+    if dispatch is not None:
+        hours = list(range(120))[::2]
+        _dispatch = dispatch.query("hour.isin(@hours)")
+        _dispatch = _dispatch.groupby(
+            ["model", "planning_year", "resource_name", "hour"], as_index=False
+        )["value"].sum()
+        # _dispatch = _dispatch.query("value > 5")
+        _dispatch = _dispatch.loc[
+            _dispatch["resource_name"].isin(data["name"].unique())
+        ]
+        _dispatch["value"] = _dispatch["value"].astype(int)
+        _dispatch["id"] = _dispatch["resource_name"].map(name_id_map)
+        _dispatch = _dispatch.drop(columns=["resource_name"])
+        _dispatch = _dispatch.rename(
+            columns={"planning_year": "y", "hour": "h", "value": "v"}
+        )
+        timeseries = (
+            alt.Chart(_dispatch)
+            .mark_line()
+            .encode(
+                x=alt.X("h").title("Hour"),
+                y=alt.Y("v:Q", impute=alt.ImputeParams(value=None)).title(
+                    "Dispatch (MW)"
+                ),
+                color=alt.Color(color),
+                # opacity=alt.condition(selector, alt.value(1), alt.value(0)),
+                # tooltip=["resource_name"],
+            )
+            # .add_params(selection, selector)
+            .transform_filter(selector)
+            .interactive()
+        )
+        if col_var is not None:
+
+            if col_var == "planning_year":
+                timeseries = timeseries.encode(
+                    column=alt.Column("y").title("Planning Year")
+                )
+            else:
+                timeseries = timeseries.encode(
+                    column=alt.Column(VAR_ABBR_MAP[col_var])
+                    .title(title_case(col_var))
+                    .header(titleFontSize=20, labelFontSize=15)
+                )
+        if row_var is not None:
+            timeseries = timeseries.encode(
+                row=alt.Row(VAR_ABBR_MAP[row_var])
+                .title(title_case(row_var))
+                .header(titleFontSize=20, labelFontSize=15)
+            )
+
+        chart = alt.vconcat(chart, timeseries)
+
+    # Order data consistently for the small bar chart, too
+    data = data.sort_values(["model", "y", "name"]) if {"model", "y", "name"}.issubset(data.columns) else data
+    cap_factor = (
+        alt.Chart(data)
+        .mark_bar()
+        .encode(
+            x="mean(cf)",
+            y=alt.Y("model"),
+            column=alt.Column("y").title("Planning Year"),
+            tooltip=["name", "cf", "v"],
+            color="sum(v)",
+        )
+        .transform_filter(selector)
+    )
+    chart = alt.vconcat(chart, cap_factor)
+
+    return chart  # | timeseries
 
 def chart_cost_mwh(
     op_costs: pd.DataFrame,
