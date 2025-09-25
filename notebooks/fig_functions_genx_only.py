@@ -2128,6 +2128,8 @@ def chart_emissions(
 
 
 def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
+    # Map zone numbers to region names
+    data["zone"] = data["zone"].map(rev_region_map)
     data = data.rename(
         columns={
             "model": "m",
@@ -2162,8 +2164,19 @@ def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
     )
     return chart
 
-
-def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
+def chart_dispatch_single_tech(data: pd.DataFrame) -> alt.Chart:
+    # Map zone numbers to region names
+    data["zone"] = data["zone"].map(rev_region_map)
+    if "tech_type" not in data.columns:
+        raise ValueError(
+            "chart_dispatch_single_tech requires a 'tech_type' column to verify a single technology."
+        )
+    unique_techs = data["tech_type"].dropna().unique()
+    if len(unique_techs) != 1:
+        raise ValueError(
+            "chart_dispatch_single_tech expects data for exactly one tech_type, "
+            f"but received {len(unique_techs)} unique values: {unique_techs.tolist()}"
+        )
     data = data.rename(
         columns={
             "model": "m",
@@ -2173,7 +2186,7 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
             "value": "v",
         }
     )
-    data = data.drop(columns=["tech_type"], errors="ignore")
+    data = data.drop(columns=["tt"], errors="ignore")
     data["v"] /= 1000
     selection = alt.selection_point(fields=["model"], bind="legend")
     if "cluster" in data.columns:
@@ -2185,7 +2198,7 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
                 y=alt.Y("v").title("Dispatch (GW)"),
                 color=alt.Color("m").legend(title="Model"),
                 strokeDash="cluster",
-                facet=alt.Facet("z", columns=5)
+                facet=alt.Facet("z", columns=3)
                 .title("Zone")
                 .header(titleFontSize=20, labelFontSize=15),
                 opacity=alt.condition(selection, alt.value(1), alt.value(0.2)),
@@ -2201,7 +2214,7 @@ def chart_wind_dispatch(data: pd.DataFrame) -> alt.Chart:
                 x=alt.X("h").title("Hour"),
                 y=alt.Y("v").title("Dispatch (GW)"),
                 color=alt.Color("m").legend(title="Model"),
-                facet=alt.Facet("z", columns=5)
+                facet=alt.Facet("z", columns=3)
                 .title("Zone")
                 .header(titleFontSize=20, labelFontSize=15),
                 opacity=alt.condition(selection, alt.value(1), alt.value(0.2)),
