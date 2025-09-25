@@ -6,9 +6,93 @@ This module exposes a function `create_resource_capacity` and a sample usage in 
 """
 
 from pathlib import Path
-from typing import Union
+from typing import Union, Iterable, Tuple
 
 import pandas as pd
+import warnings
+import traceback
+
+
+def map_capacity_to_resources(
+    resource_names: Iterable[str],
+    capacity_df: pd.DataFrame,
+    start_col: str = "StartCap",
+    end_col: str = "EndCap",
+    resource_col: str | None = "Resource",
+    infer_resource_col: bool = True,
+    error_on_duplicates: bool = True,
+) -> Tuple[pd.Series, pd.Series]:
+    """Return start and end capacity Series aligned to ``resource_names``.
+
+    Parameters
+    - resource_names: Iterable of resource identifiers to map.
+    - capacity_df: DataFrame containing at least start/end capacity columns and a resource column.
+    - start_col: Column name for starting capacity. Default 'StartCap'.
+    - end_col: Column name for ending capacity. Default 'EndCap'.
+    - resource_col: Column name for resource identifiers. If None, inference will run when enabled.
+    - infer_resource_col: If True and ``resource_col`` not found, attempt to infer from common variants.
+    - error_on_duplicates: If True, raise ValueError when duplicate resource rows found.
+
+    Returns
+    - (start_capacity_series, end_capacity_series) mapped to the provided resource_names order.
+
+    Raises
+    - ValueError: On missing required columns, ambiguous resource column, or duplicates when disallowed.
+    """
+    resource_series = pd.Series(list(resource_names), name="resource_name")
+
+    if resource_col is not None and resource_col not in capacity_df.columns:
+        if infer_resource_col:
+            lower_map = {c.lower(): c for c in capacity_df.columns}
+            candidates_priority = [
+                "resource",
+                "resource_name",
+                "generator",
+                "gen",
+                "name",
+            ]
+            inferred = next((lower_map[c] for c in candidates_priority if c in lower_map), None)
+            if inferred is None:
+                raise ValueError(
+                    "Could not locate a resource column in capacity_df. Available columns: "
+                    f"{list(capacity_df.columns)}"
+                )
+            resource_col = inferred
+        else:
+            raise ValueError(
+                f"Specified resource_col '{resource_col}' not in capacity_df columns: {list(capacity_df.columns)}"
+            )
+
+    if resource_col is None:
+        raise ValueError("resource_col could not be resolved.")
+
+    missing_cols = {start_col, end_col} - set(capacity_df.columns)
+    if missing_cols:
+        raise ValueError(
+            f"Missing required capacity columns {missing_cols}. Available: {list(capacity_df.columns)}"
+        )
+
+    if error_on_duplicates:
+        dup = capacity_df[resource_col][capacity_df[resource_col].duplicated(keep=False)].unique()
+        if len(dup) > 0:
+            raise ValueError(
+                "Duplicate resource entries in capacity_df for: " + ", ".join(map(str, dup))
+            )
+
+    indexed = capacity_df.set_index(resource_col)
+    start_mapped = resource_series.map(indexed[start_col])  # type: ignore[index]
+    end_mapped = resource_series.map(indexed[end_col])  # type: ignore[index]
+
+    unmapped = resource_series[start_mapped.isna() | end_mapped.isna()].unique()
+    if len(unmapped) > 0:
+        warnings.warn(
+            "Unmapped resources (NaN capacity values): " + ", ".join(map(str, unmapped)),
+            RuntimeWarning,
+        )
+
+    start_mapped.name = start_col
+    end_mapped.name = end_col
+    return start_mapped, end_mapped
 
 
 def create_resource_capacity(
@@ -21,6 +105,7 @@ def create_resource_capacity(
     unit: str = "MW",
     generators_filename: str = "Generators_data.csv",
     capacity_filename: str = "capacity.csv",
+    capacity_factor_filename: str = "capacityfactor.csv",
     output_filename: str = "resource_capacity.csv",
 ) -> Path:
     """
@@ -40,6 +125,9 @@ def create_resource_capacity(
 
     Returns
     - Path to the written CSV file.
+
+    Notes
+    - Capacity alignment uses the local helper `map_capacity_to_resources` to avoid order-dependent mismatches.
     """
 
     scenario_folder_path = Path(scenario_folder_path)
@@ -75,10 +163,60 @@ def create_resource_capacity(
     df["new_build"] = generators_df["New_Build"]
     df["existing"] = (df["new_build"] == 0).astype(int)
 
-    # Read capacity results
-    capacity_df = pd.read_csv(genx_scenario_results_path / "results" / capacity_filename)
-    df["start_value"] = capacity_df["StartCap"]
-    df["end_value"] = capacity_df["EndCap"]
+    # Wrap capacity reading, mapping and merging in try/except to surface debug info
+    try:
+        capacity_df = pd.read_csv(genx_scenario_results_path / "results" / capacity_filename)
+
+        start_series, end_series = map_capacity_to_resources(
+            df["resource_name"], capacity_df, start_col="StartCap", end_col="EndCap", resource_col="Resource"
+        )
+        df["start_value"] = start_series.values
+        df["end_value"] = end_series.values
+
+        # Read capacity factor and merge
+        capacity_factor_df = pd.read_csv(genx_scenario_results_path / "results" / capacity_factor_filename)
+
+        # Ensure capacity_factor_df has Resource column, infer if needed
+        if "Resource" not in capacity_factor_df.columns:
+            candidate_cols = [c for c in capacity_factor_df.columns if c.lower() in {"resource", "generator", "name", "resource_name"}]
+            if candidate_cols:
+                capacity_factor_df = capacity_factor_df.rename(columns={candidate_cols[0]: "Resource"})
+            else:
+                warnings.warn("Could not find Resource column in capacity_factor file, setting capacity_factor to NaN")
+                df["capacity_factor"] = float('nan')
+
+        if "Resource" in capacity_factor_df.columns:
+            # Check for capacity factor column (common names)
+            cf_col = None
+            for col in ["capacity_factor", "CapacityFactor", "CF", "cf"]:
+                if col in capacity_factor_df.columns:
+                    cf_col = col
+                    break
+
+            if cf_col is None:
+                warnings.warn("Could not find capacity factor column in capacity_factor file, setting to NaN")
+                df["capacity_factor"] = float('nan')
+            else:
+                # Use pandas merge to join capacity factor data
+                df = df.merge(
+                    capacity_factor_df[["Resource", cf_col]].rename(columns={cf_col: "capacity_factor"}),
+                    left_on="resource_name",
+                    right_on="Resource",
+                    how="left"
+                ).drop(columns=["Resource"])
+
+                # Warn about unmapped capacity factors
+                unmapped_cf = df[df["capacity_factor"].isna()]["resource_name"].unique()
+                if len(unmapped_cf) > 0:
+                    warnings.warn(
+                        f"Resources without capacity factor data: {', '.join(map(str, unmapped_cf))}",
+                        RuntimeWarning
+                    )
+    except Exception as e:
+        print("[ERROR] Exception during capacity read/map/merge:")
+        print("[ERROR] ", str(e))
+        print("[ERROR] Traceback:\n", traceback.format_exc())
+        raise
 
     # Ensure output directory exists
     results_summary_folder_path.mkdir(parents=True, exist_ok=True)
@@ -93,13 +231,13 @@ if __name__ == "__main__":
     case_name = "p1"
 
     scenario_folder_path = Path(
-        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\GenX_op_inputs\Inputs\Inputs_p1"
+        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx\GenX_op_inputs\Inputs\Inputs_p1"
     )
     results_summary_folder_path = Path(
-        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\GenX_results_summary"
+        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx\GenX_results_summary"
     )
     genx_scenario_results_path = Path(
-        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\p1_High_Elect_Mid_RE"
+        r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx\p1_High_Elect_Mid_RE"
     )
 
     output = create_resource_capacity(
