@@ -34,10 +34,11 @@ from fig_functions_genx_only import (
     chart_tx_expansion,
     chart_emissions,
     chart_dispatch,
-    chart_wind_dispatch,
+    # chart_wind_dispatch,
     chart_op_cost,
     chart_op_nse,
     chart_op_emiss,
+    chart_dispatch_single_tech
 )
 
 alt.renderers.enable("html")
@@ -52,7 +53,6 @@ fig_num = 0
 cap = load_data(data_path, "resource_capacity.csv")
 cap = cap.query("unit=='MW' and not tech_type.isna()")
 cap["additions"] = cap["end_value"] - cap["start_value"]
-
 gen = load_data(data_path, "generation.csv")
 if gen.empty:
     raise ValueError("Generation data is empty")
@@ -166,7 +166,6 @@ chart
 chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
 chart
 ```
-
 
 ```{python}
 # | title: Regional Generation
@@ -288,7 +287,6 @@ emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
 chart = chart_emissions(emiss_only_ny, co2_limit=False,)
 chart
 ```
-
 ```{python}
 # | title: Emissions intensity
 from fig_functions_genx_only import chart_emissions_intensity
@@ -317,6 +315,7 @@ data = dispatch.query("planning_year==2030").groupby([
     ], as_index=False)[
     "value"
 ].sum()
+print(data.head())
 chart = chart_dispatch(data)
 chart
 ```
@@ -341,7 +340,7 @@ chart
 # chart
 ```
 ```{python}
-# | title: 2030 Wind Dispatch
+# | title: 2030 Landbased Wind Dispatch
 wind_dispatch = dispatch.query("resource_name.str.contains('landbasedwind')")
 wind_dispatch["cluster"] = wind_dispatch["resource_name"].str.split("moderate_").str[-1]
 if wind_dispatch["cluster"].nunique() <= 3:
@@ -354,10 +353,25 @@ data = (
     .groupby(by, as_index=False)["value"]
     .sum()
 )
-chart = chart_wind_dispatch(data)
+chart = chart_dispatch_single_tech(data)
 chart
 ```
-
+```{python}
+# | title: 2030 Wind Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Wind'")
+# chart = chart_dispatch(data)
+# chart = chart_dispatch_single_tech(data)
+chart = chart_dispatch_single_tech(data)
+chart
+```
 ```{python}
 # # | title: 2040 Wind Dispatch
 # data = wind_dispatch.query("planning_year==2040").groupby(by, as_index=False)[
@@ -378,26 +392,57 @@ chart
 # chart
 ```
 
+```{python}
+
+# | title: 2030 Solar Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Solar'")
+# print(data.head())
+chart = chart_dispatch_single_tech(data)
+chart
+```
+```{python}
+
+# | title: 2030 Nuclear Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Nuclear'")
+# print(data.head())
+chart = chart_dispatch_single_tech(data)
+chart
+```
 # Capacity Factors
 ## Row {.tabset}
 ```{python}
 # | title: Battery
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Battery'"),
     gen.query("tech_type=='Battery'"),
-    # # dispatch.query("tech_type=='Battery'"),
+    # dispatch.query("tech_type=='Battery'"),
     col_var="planning_year",
 )
 chart
 ```
-
 ```{python}
 # | title: Solar
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Solar'"),
     gen.query("tech_type=='Solar'"),
     # # dispatch.query("tech_type=='Solar'"),
@@ -409,9 +454,9 @@ chart
 
 ```{python}
 # | title: Wind
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Wind'"),
     gen.query("tech_type=='Wind'"),
     # dispatch.query("tech_type=='Wind'"),
@@ -423,9 +468,9 @@ chart
 
 ```{python}
 # | title: Natural Gas CC
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Natural Gas CC'"),
     gen.query("tech_type=='Natural Gas CC'"),
     # dispatch.query("tech_type=='Natural Gas CC'"),
@@ -437,9 +482,9 @@ chart
 
 ```{python}
 # | title: Natural Gas CT
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Natural Gas CT'"),
     gen.query("tech_type=='Natural Gas CT'"),
     # dispatch.query("tech_type=='Natural Gas CT'"),
@@ -450,9 +495,9 @@ chart
 ```
 ```{python}
 # | title: Coal
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Coal'"),
     gen.query("tech_type=='Coal'"),
     # dispatch.query("tech_type=='Natural Gas CT'"),
@@ -463,9 +508,9 @@ chart
 ```
 ```{python}
 # | title: Hydro
-from fig_functions_genx_only import chart_cap_factor_scatter
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
-chart = chart_cap_factor_scatter(
+chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
     gen.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
     # dispatch.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
@@ -493,19 +538,17 @@ chart
 
 ```{python}
 # | title: Generation
-
 if not op_gen_cap.empty:
-    op_gen_cap = op_gen_cap.query(
+    op_gen_cap_generation = op_gen_cap.query(
         "~tech_type.str.contains('Other')"
     )
-    op_gen = op_gen_cap[
+    op_gen = op_gen_cap_generation[
         ["tech_type", "planning_year", "model", "AnnualSum", "resource_name"]
     ].rename(columns={"AnnualSum": "value"})
-    op_cap = op_gen_cap[
+    op_cap = op_gen_cap_generation[
         ["tech_type", "planning_year", "model", "Capacity", "resource_name"]
     ].rename(columns={"Capacity": "end_value"})
     op_cap["unit"] = "MW"
-
 
     chart = chart_total_gen(op_gen, op_cap)
     chart
