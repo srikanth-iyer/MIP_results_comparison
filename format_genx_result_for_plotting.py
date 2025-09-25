@@ -6,8 +6,7 @@ from create_emissions_summary import create_emissions_summary
 from create_generation_summary import create_generation_summary   
 from create_dispatch_summary import create_dispatch_summary
 import pandas as pd
-all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results")
-scenario_name = "p4_Mod_Elect_Low_RE"
+
 
 
 def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_year: int) -> None:
@@ -209,7 +208,16 @@ def export_all_genx_scenarios(scenarios_root: Path, output_folder_path: Path) ->
 
 
 if __name__ == "__main__":
+    # all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results")
+    # scenario_name = "p4_Mod_Elect_Low_RE"
+    # export_all_genx_scenarios(
+    #     all_genx_scenarios_path,
+    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx"),
+    # )
+
+    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_baseline_results")
+    scenario_name = "p4_Mod_Elect_Low_RE"
     export_all_genx_scenarios(
         all_genx_scenarios_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx"),
+        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-baseline"),
     )
