@@ -584,7 +584,7 @@ def load_genx_operations_data(
             df.loc[:, "zone"] = df["resource_name"].str.split("_").str[0]
         except:
             df.loc[:, "zone"] = df["resource_name"].str.split("_").list[0]
-        df.loc[df["resource_name"].str.contains("TRE_WEST"), "zone"] = "TRE_WEST"
+        # df.loc[df["resource_name"].str.contains("TRE_WEST"), "zone"] = "TRE_WEST"
     if "zone" in df.columns:
         df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
     for col in df.columns:
