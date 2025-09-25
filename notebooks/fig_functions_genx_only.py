@@ -110,8 +110,9 @@ TECH_MAP = {
     "offshore wind": "Wind",
     "hydrogen": "Hydrogen",
     "res_water_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category. keep a seperate flex demand category
-    "trans_light_duty": "Flex Demand" # TODO: does this go in Other or some other category. Need to change it from current category.
-
+    "trans_light_duty": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
+    "space_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
+    "water_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
 }
 
 EXISTING_TECH_MAP = {
