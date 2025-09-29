@@ -5,12 +5,15 @@ project:
     - "!more_figures_n_checks.qmd"
     - "!26z*.qmd"
     - "!*short*.qmd"
+    - genx-baseline-app.qmd
 
 website:
   title: "MIP"
   navbar:
     left:
       - blog.qmd
+      - text: "GenX baseline explorer"
+        href: genx-baseline-app.qmd
       # - about.qmd
       # - text: Cars
       #   href: posts/other-notebook.ipynb
