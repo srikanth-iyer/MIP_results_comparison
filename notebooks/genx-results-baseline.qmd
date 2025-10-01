@@ -4,10 +4,10 @@ format: dashboard
 #   dashboard:
 #     scrolling: false
 jupyter: python3
-categories:
-    - 20-week
-    - Net-zero
-    - Foresight
+# categories:
+#     - 20-week
+#     - Net-zero
+#     - Foresight
 ---
     
 
@@ -112,63 +112,66 @@ for df in [
 #### Column {.tabset}
 ```{python}
 # | title: Total Capacity
-chart = chart_total_cap(cap)
+chart = chart_total_cap(cap, row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: New-build Capacity
-chart = chart_total_cap(cap.loc[cap["new_build"] == True, :])
+chart = chart_total_cap(cap.loc[cap["new_build"] == True, :], row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: Existing Capacity
-chart = chart_total_cap(cap.loc[cap["new_build"] == False, :])
+chart = chart_total_cap(cap.loc[cap["new_build"] == False, :], row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: Total Capacity (wide)
+# | fig-cap: "This chart shows total capacity by model and planning year."
 chart = chart_total_cap(cap, row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: Regional Capacity
-chart = chart_regional_cap(cap)
+chart = chart_regional_cap(cap,width=alt.Step(60))
 chart
 ```
 ```{python}
 # | title: Regional New-buid Capacity
-chart = chart_regional_cap(cap.loc[cap["new_build"] == True, :])
+chart = chart_regional_cap(cap.loc[cap["new_build"] == True, :],width=alt.Step(60))
 chart
 ```
 ```{python}
 # | title: Regional Capacity only NY
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
-chart = chart_regional_cap(cap_only_ny)
+chart = chart_regional_cap(cap_only_ny,width=alt.Step(60))
 chart
 ```
 ```{python}
 # | title: Regional New-buid Capacity only NY
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
-chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :])
+chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :],width=alt.Step(60))
 chart
 ```
 #### Column {.tabset}
 ```{python}
 # | title: Total Generation
-chart = chart_total_gen(gen, cap)
+chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: New-build Generation
 chart = chart_total_gen(
-    gen.loc[gen["new_build"] == True, :], cap.loc[cap["new_build"] == True, :]
+    gen.loc[gen["new_build"] == True, :], cap.loc[cap["new_build"] == True, :],
+    row_var=None, col_var="planning_year"
 )
 chart
 ```
 ```{python}
 # | title: Existing Generation
 chart = chart_total_gen(
-    gen.loc[gen["new_build"] == False, :], cap.loc[cap["new_build"] == False, :]
+    gen.loc[gen["new_build"] == False, :], cap.loc[cap["new_build"] == False, :],
+    row_var=None, col_var="planning_year"
 )
 chart
 ```
@@ -180,7 +183,7 @@ chart
 
 ```{python}
 # | title: Regional Generation
-chart = chart_regional_gen(gen, cap)
+chart = chart_regional_gen(gen, cap,width=alt.Step(60))
 chart
 ```
 ```{python}
@@ -188,7 +191,7 @@ chart
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 gen_only_ny = gen.loc[~gen['zone'].isin([1,10,11])] # gen has a zone column with numbers instead of names. 1, 10, 11 are non-NY zones.
 
-chart = chart_regional_gen(gen_only_ny, cap_only_ny)
+chart = chart_regional_gen(gen_only_ny, cap_only_ny,width=alt.Step(60))
 chart
 ```
 
@@ -297,27 +300,27 @@ chart
 #### Column {.tabset}
 ```{python}
 # | title: Emissions
-chart = chart_emissions(emiss, co2_limit=False)
+chart = chart_emissions(emiss, co2_limit=False,col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: Emissions without PJM and NENG
 emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
-chart = chart_emissions(emiss_only_ny, co2_limit=False,)
+chart = chart_emissions(emiss_only_ny, co2_limit=False,col_var="planning_year")
 chart
 ```
 ```{python}
 # | title: Emissions intensity
 from fig_functions_genx_only import chart_emissions_intensity
 
-chart = chart_emissions_intensity(emiss, gen, x_var="model", col_var="Region")
+chart = chart_emissions_intensity(emiss, gen, x_var="model", col_var="Region", width=alt.Step(60),)
 chart
 ```
 ```{python}
 # | title: Emissions intensity without PJM and NENG
 from fig_functions_genx_only import chart_emissions_intensity
 emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
-chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Region")
+chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Region",width=alt.Step(60),)
 chart
 ```
 # Dispatch
@@ -334,29 +337,29 @@ data = dispatch.query("planning_year==2030").groupby([
     ], as_index=False)[
     "value"
 ].sum()
-print(data.head())
+# print(data.head())
 chart = chart_dispatch(data)
 chart
 ```
 
 ```{python}
 # | title: 2040 Dispatch
-# data = (
-#     dispatch.query("planning_year==2040")
-#     .groupby(["model", "tech_type", "agg_zone", "hour"], as_index=False)["value"]
-#     .sum()
-# )
-# chart = chart_dispatch(data)
-# chart
+data = (
+    dispatch.query("planning_year==2040")
+    .groupby(["model", "tech_type", "zone", "hour"], as_index=False)["value"]
+    .sum()
+)
+chart = chart_dispatch(data)
+chart
 ```
 
 ```{python}
-# # | title: 2050 Dispatch
-# data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "agg_zone", "hour"], as_index=False)[
-#     "value"
-# ].sum()
-# chart = chart_dispatch(data)
-# chart
+# | title: 2050 Dispatch
+data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "zone", "hour"], as_index=False)[
+    "value"
+].sum()
+chart = chart_dispatch(data)
+chart
 ```
 ```{python}
 # | title: 2030 Landbased Wind Dispatch
@@ -386,29 +389,37 @@ data = dispatch.query("planning_year==2030").groupby([
     "value"
 ].sum()
 data = data.query("tech_type=='Wind'")
-# chart = chart_dispatch(data)
-# chart = chart_dispatch_single_tech(data)
 chart = chart_dispatch_single_tech(data)
 chart
 ```
 ```{python}
-# # | title: 2040 Wind Dispatch
-# data = wind_dispatch.query("planning_year==2040").groupby(by, as_index=False)[
-#     "value"
-# ].sum()
-# chart = chart_wind_dispatch(data)
-# chart
+# | title: 2040 Wind Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Wind'")
+chart = chart_dispatch_single_tech(data)
+chart
 ```
 
 ```{python}
-# # | title: 2050 Wind Dispatch
-# data = (
-#     wind_dispatch.query("planning_year==2050")
-#     .groupby(by, as_index=False)["value"]
-#     .sum()
-# )
-# chart = chart_wind_dispatch(data)
-# chart
+# | title: 2050 Wind Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Wind'")
+chart = chart_dispatch_single_tech(data)
+chart
 ```
 
 ```{python}
@@ -689,7 +700,7 @@ if not op_gen_cap.empty:
 ```{python}
 # | title: Emissions by zone
 
-chart = chart_emissions(op_emiss)
+chart = chart_emissions(op_emiss,col_var="planning_year")
 chart
 ```
 
