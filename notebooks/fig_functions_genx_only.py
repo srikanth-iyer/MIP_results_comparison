@@ -539,17 +539,67 @@ def find_periods(files: List[Path]) -> List[str]:
     return periods
 
 
+def _case_year_mapping_from_csv(csv_path: Path) -> Dict[str, int]:
+    try:
+        df = pd.read_csv(csv_path, usecols=["case", "planning_year"])
+    except (FileNotFoundError, ValueError):
+        return {}
+
+    if df.empty or "case" not in df or "planning_year" not in df:
+        return {}
+
+    mapping: Dict[str, int] = {}
+    rows = (
+        df[["case", "planning_year"]]
+        .dropna(subset=["case", "planning_year"])
+        .drop_duplicates(subset=["case"])
+    )
+
+    for case, planning_year in rows.itertuples(index=False):
+        case_str = str(case)
+        if not case_str:
+            continue
+        suffix = case_str.split("_", 1)[-1].lower() if "_" in case_str else case_str.lower()
+        if suffix and suffix not in mapping:
+            try:
+                mapping[suffix] = int(planning_year)
+            except (TypeError, ValueError):
+                continue
+
+    return mapping
+
+
+@lru_cache(maxsize=None)
+def _discover_period_mapping(data_path_str: str) -> Dict[str, int]:
+    data_path = Path(data_path_str)
+    mapping: Dict[str, int] = {}
+
+    summary_dirs = sorted(data_path.glob("*_results_summary"))
+    summary_files = (
+        "resource_capacity.csv",
+        "generation.csv",
+        "emissions.csv",
+        "dispatch.csv",
+        "annual_demand.csv",
+    )
+
+    for summary_dir in summary_dirs:
+        for filename in summary_files:
+            summary_path = summary_dir / filename
+            if suffix_mapping := _case_year_mapping_from_csv(summary_path):
+                for key, value in suffix_mapping.items():
+                    mapping.setdefault(key, value)
+
+    if not mapping:
+        mapping["p1"] = 2030
+
+    return mapping
+
+
 def load_genx_operations_data(
     data_path: Path,
     fn: str,
-    period_dict={
-        "p1": 2030,
-        # "p2": 2030,# NOTE: Modified this to only keep 2030 as p1 for genx simulations
-        # "p3": 2035,
-        # "p4": 2040,
-        # "p5": 2045,
-        # "p6": 2050,
-    },
+    period_dict: Dict[str, int] | None = None,
     hourly_data: bool = False,
     model_costs_only: bool = False,
 ) -> pd.DataFrame:
@@ -558,16 +608,40 @@ def load_genx_operations_data(
     if hourly_data:
         nrows = 5
     files = list(data_path.rglob(fn))
-    files = [f for f in files if "op_inputs" in str(f) and not "_Results" in str(f)]
+    files = [f for f in files if "op_inputs" in str(f) and "_Results" not in str(f)]
     periods = find_periods(files)
+    period_keys = {
+        p.split("_", 1)[-1].lower()
+        for p in periods
+        if "_" in p
+    }
     # if any("p6" in p for p in periods):
     #     period_dict = (
     #         {"p1": 2027, "p2": 2030, "p3": 2035, "p4": 2040, "p5": 2045, "p6": 2050},
     #     )
     if not files:
         return pd.DataFrame()
+    inferred_periods = _discover_period_mapping(str(data_path.resolve()))
+    combined_period_dict: Dict[str, int] = {**inferred_periods}
+    if period_dict:
+        combined_period_dict.update({k.lower(): v for k, v in period_dict.items()})
+
+    missing_periods = sorted(period_keys - combined_period_dict.keys())
+    if missing_periods:
+        raise KeyError(
+            "Missing planning year mapping for period(s): "
+            + ", ".join(missing_periods)
+            + f" in {data_path}. Provide period_dict or ensure results summary files include planning_year values."
+        )
+
     df_list = Parallel(n_jobs=1)(
-        delayed(_load_op_data)(f, hourly_data, nrows, period_dict, model_costs_only)
+        delayed(_load_op_data)(
+            f,
+            hourly_data,
+            nrows,
+            combined_period_dict,
+            model_costs_only,
+        )
         for f in files
     )
     if not df_list:
@@ -678,16 +752,11 @@ def _load_op_data(
     f: Path,
     hourly_data: bool,
     nrows=None,
-    period_dict={
-        "p1": 2030, # NOTE: Updated to 2030 from 2027 for new genx data
-        # "p2": 2030,
-        # "p3": 2035,
-        # "p4": 2040,
-        # "p5": 2045,
-        # "p6": 2050,
-    },
+    period_dict: Dict[str, int] | None = None,
     model_costs_only: bool = False,
 ) -> pd.DataFrame:
+    if period_dict is None:
+        raise ValueError("period_dict must be provided when loading GenX operations data")
     fn = f.name
     model_part = -3
     _df = pd.read_csv(f, nrows=nrows)  # , dtype_backend="pyarrow")
@@ -1207,6 +1276,8 @@ VAR_ABBR_TITLE_MAP["v"] = "Generation (TWh)"
 def config_chart_row_col(
     chart: alt.Chart, row_var: str, col_var: str, x_var: str
 ) -> alt.Chart:
+    if row_var is not None and col_var is not None and row_var == col_var:
+        row_var = None
     if col_var is not None and row_var is not None:
         chart = chart.facet(
             column=alt.Column(VAR_ABBR_MAP[col_var])
@@ -1549,19 +1620,23 @@ def chart_total_gen(
     if (Path.cwd() / "annual_demand_genx.csv").exists():
         demand = pd.read_csv(Path.cwd() / "annual_demand_genx.csv")
         demand.loc[:, "agg_zone"] = demand.loc[:, "zone"].map(rev_region_map)
+        demand_by_year = demand.groupby(["planning_year"], as_index=False)[
+            "annual_demand"
+        ].sum()
         data = pd.merge(
             data,
-            demand.groupby(["planning_year"], as_index=False)["annual_demand"].sum(),
+            demand_by_year,
             on=["planning_year"],
+            how="left",
         )
-        data["annual_demand"] /= 1000000
+        data.loc[:, "annual_demand"] = data["annual_demand"] / 1_000_000
     else:
         demand = None
-    data["value"] /= 1000000
+    data["value"] /= 1_000_000
     data = data.rename(columns=VAR_ABBR_MAP)
     data["o"] = data["tt"].map(TECH_STACK_ORDER)
     chart = (
-        alt.Chart()
+        alt.Chart(data)
         .mark_bar()
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
@@ -1787,27 +1862,38 @@ def chart_regional_gen(
         )["value"].sum()
         _tooltips = [
             alt.Tooltip("tt", title="Technology"),
-            alt.Tooltip("value", title="Generation (MWh)", format=",.0f"),
+            alt.Tooltip("value", title="Generation (TWh)", format=",.0f"),
         ]
-    data['agg_zone']= data['agg_zone'].map(rev_region_map) # NOTE: agg zone is in numbers here because gen has aggzone in numbers. (this is because  some zones are numbers some are names so aggzone is numbers)
+    data = data.astype({"agg_zone": "object"})
+    mapped_zones = data["agg_zone"].map(rev_region_map)
+    data.loc[:, "agg_zone"] = mapped_zones.where(mapped_zones.notna(), data["agg_zone"])
+    data.loc[:, "agg_zone"] = data["agg_zone"].astype(str)
     # TODO: Ensure that agg zone is consistently in name form all the time in gen, cap etc. When doing so, check that all the plot funcs still work.
     if (Path.cwd() / "annual_demand_genx.csv").exists():
         demand = pd.read_csv(Path.cwd() / "annual_demand_genx.csv")
-        demand.loc[:, "agg_zone"] = demand.loc[:, "zone"].map(rev_region_map)
+        zone_idx = demand["zone"].astype(str).str.extract(r"(\d+)")[0].astype("Int64")
+        mapped_demand_zones = zone_idx.map(
+            lambda z: rev_region_map.get(int(z)) if pd.notna(z) else None
+        )
+        demand.loc[:, "agg_zone"] = mapped_demand_zones.where(
+            mapped_demand_zones.notna(), demand["zone"]
+        )
+        demand_totals = (
+            demand.groupby(["agg_zone", "planning_year"], as_index=False)["annual_demand"].sum()
+        )
         data = pd.merge(
             data,
-            demand.groupby(["agg_zone", "planning_year"], as_index=False)[
-                "annual_demand"
-            ].sum(),
+            demand_totals,
             on=["agg_zone", "planning_year"],
+            how="left",
         )
-        data["annual_demand"] /= 1000000
+        data.loc[:, "annual_demand"] = data["annual_demand"] / 1_000_000
     else:
         demand = None
-    data["value"] /= 1000000
-    data = data.rename(columns=VAR_ABBR_MAP)
+    data["value"] /= 1_000_000
+    data = data.rename(mapper=VAR_ABBR_MAP, axis="columns")
     chart = (
-        alt.Chart()
+        alt.Chart(data)
         .mark_bar()
         .encode(
             x=alt.X("m").title("Model"),
@@ -1826,22 +1912,24 @@ def chart_regional_gen(
 
     if demand is not None:
         line = (
-            alt.Chart()
+            alt.Chart(data)
             .mark_rule()
             .encode(
                 y=alt.Y("annual_demand"),
-            )  # column="agg_zone", row="planning_year")
+            )
             .properties(width=width, height=height)
         )
-        chart = alt.layer(chart, line, data=data).facet(
-            column=alt.Column("az")
-            .title("Region")
-            .header(titleFontSize=20, labelFontSize=15),
-            row=alt.Row("y")
-            .title(title_case("planning_year"))
-            .header(titleFontSize=20, labelFontSize=15),
-        )
-    # chart = chart.encode(column="agg_zone:N", row="planning_year:O")
+        chart = alt.layer(chart, line)
+
+    chart = chart.facet(
+        column=alt.Column("az")
+        .title("Region")
+        .header(titleFontSize=20, labelFontSize=15),
+        row=alt.Row("y")
+        .title(title_case("planning_year"))
+        .header(titleFontSize=20, labelFontSize=15),
+    )
+
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
@@ -2023,12 +2111,48 @@ def chart_emissions_intensity(
 def chart_emissions(
     emiss: pd.DataFrame,
     x_var="model",
+    row_var="planning_year",
     col_var=None,
     order=None,
     co2_limit=True,
     width=alt.Step(40),
     height=200,
-) -> alt.Chart:
+) -> alt.FacetChart | alt.LayerChart:
+    """
+    Create a faceted or layered Altair chart visualizing CO2 emissions by region and model.
+
+    Parameters
+    ----------
+    emiss : pd.DataFrame
+        DataFrame containing emissions data with columns including 'zone', 'model', 'planning_year', and 'value'.
+    x_var : str, optional
+        The variable to use for the x-axis (default is "model").
+    row_var : str, optional
+        The variable to facet rows by (default is "planning_year").
+    col_var : str, optional
+        The variable to facet columns by (default is None).
+    order : list or None, optional
+        Order for sorting x-axis values (default is None).
+    co2_limit : bool, optional
+        Whether to display a CO2 limit line (default is True).
+    width : int or alt.Step, optional
+        Chart width (default is alt.Step(40)).
+    height : int, optional
+        Chart height (default is 200).
+
+    Returns
+    -------
+    alt.FacetChart or alt.LayerChart
+        An Altair chart object visualizing emissions by region and model, faceted by planning year and optionally by column variable.
+
+    Expected DataFrame Structure
+    ---------------------------
+    emiss should contain at least the following columns:
+        - 'zone': Region identifier (numeric or string)
+        - 'model': Model name
+        - 'planning_year': Year of planning (int)
+        - 'value': Emissions value (numeric)
+    """
     if emiss.empty:
         return None
     _tooltips = [
@@ -2036,8 +2160,10 @@ def chart_emissions(
         alt.Tooltip("r", title="Region"),
     ]
     emiss["Region"] = emiss["zone"].map(rev_region_map)
-    group_by = ["Region", x_var, "planning_year"]
-    if col_var is not None:
+    group_by = ["Region", x_var]
+    if row_var is not None and row_var not in group_by:
+        group_by.append(row_var)
+    if col_var is not None and col_var not in group_by:
         group_by.append(col_var)
 
     data = emiss.groupby(group_by, as_index=False)["value"].sum()
@@ -2045,7 +2171,7 @@ def chart_emissions(
         _tooltips.append(alt.Tooltip(VAR_ABBR_MAP[col_var]))
     if order is None:
         order = sorted(data[x_var].unique())
-    data["value"] /= 1e6
+    data.loc[:, "value"] = data["value"] / 1e6
     data["limit"] = 0 # NOTE: this is for the horizontal black line denoting co2 limit for a given year
     # data.loc[data["planning_year"] == 2027, "limit"] = 873 #NOTE: these are for the co2 limits for each year. Currently commented out as these values need verifying
     # data.loc[data["planning_year"] == 2030, "limit"] = 186
@@ -2063,7 +2189,7 @@ def chart_emissions(
             "They will not use the explicit palette."
         )
     base = (
-        alt.Chart()
+        alt.Chart(data)
         .mark_bar()
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
@@ -2074,18 +2200,16 @@ def chart_emissions(
                 range=[REGION_COLOR_MAP[r] for r in present_regions],
             )
             .title("Region"),
-            # column="agg_zone",
-            # row="planning_year:O",
             tooltip=_tooltips,
         )
     )
     text = (
-        alt.Chart()
+        alt.Chart(data)
         .mark_text(dy=-5)
         .encode(
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
             y="sum(v):Q",
-            text=alt.Text("sum(v):Q", format=".0f"),
+            text=alt.Text("sum(v):Q", format=",.0f"),
         )
     )
     if co2_limit:
@@ -2093,35 +2217,14 @@ def chart_emissions(
     else:
         size = 0
     line = (
-        alt.Chart()
+        alt.Chart(data)
         .mark_rule(size=size)
         .encode(
             y=alt.Y("limit"),
         )
     )
-    if col_var is None:
-        chart = (
-            alt.layer(base, text, line, data=data)
-            .properties(width=width, height=height)
-            .facet(
-                row=alt.Row("y:O")
-                .title(title_case("planning_year"))
-                .header(titleFontSize=20, labelFontSize=15)
-            )
-        )
-    else:
-        chart = (
-            alt.layer(base, text, line, data=data)
-            .properties(width=width, height=height)
-            .facet(
-                row=alt.Row("y:O")
-                .title(title_case("planning_year"))
-                .header(titleFontSize=20, labelFontSize=15),
-                column=alt.Column(VAR_ABBR_MAP[col_var])
-                .title(title_case(col_var))
-                .header(titleFontSize=20, labelFontSize=15),
-            )
-        )
+    chart = alt.layer(base, text, line).properties(width=width, height=height)
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
