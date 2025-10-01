@@ -38,7 +38,7 @@ def gz_to_csv(gz_file_path):
 
 if __name__ == "__main__":
     # Sample usage
-    gz_file = "C:\\Users\\Sriki\\MIP_results_comparison-1\\20-week-foresight\\GenX_results_summary\\dispatch.csv.gz"  # Replace with your actual .gz file path
+    gz_file = "C:\\Users\\Sriki\\MIP_results_comparison-1\\20-week-genx\\p4_Mod_Elect_Low_RE_results_summary\\dispatch.csv.gz"  # Replace with your actual .gz file path
     csv_output = gz_to_csv(gz_file)
     if csv_output:
         print(f"CSV file created at: {csv_output}")

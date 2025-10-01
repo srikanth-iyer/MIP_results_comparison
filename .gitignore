@@ -100,6 +100,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
+_site/
 
 # mypy
 .mypy_cache/
@@ -119,6 +120,7 @@ venv.bak/
 # extra_outputs files for GenX inputs
 **/extra_outputs/*
 /.quarto/
+*.quarto_ipynb
 
 # RStudio
 .Rproj.user
@@ -145,3 +147,19 @@ env.yml
 
 # snakemake
 .snakemake/*
+
+/README_files/**/*
+
+# GenX results folder
+/genx_results/
+/genx_results/**/*
+/20-week-genx/
+/20-week-genx/**/*
+/genx-baseline/
+/genx-baseline/**/*
+/genx_baseline_results/
+/genx_baseline_results/**/*
+
+# Ignore all files named dispatch.csv.csv
+**/dispatch.csv.csv
+dispatch.csv.csv

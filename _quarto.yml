@@ -1,16 +1,17 @@
 project:
   type: website
   render:
-    - "*.qmd"
-    - "!more_figures_n_checks.qmd"
-    - "!26z*.qmd"
-    - "!*short*.qmd"
+    - "genx-results-baseline.qmd"
+    # - "*.qmd"
+    # - "!more_figures_n_checks.qmd"
+    # - "!26z*.qmd"
+    # - "!*short*.qmd"
 
 website:
-  title: "MIP"
-  navbar:
-    left:
-      - blog.qmd
+  title: "Srikanth-MIP"
+  # navbar:
+  #   left:
+      # - blog.qmd
       # - about.qmd
       # - text: Cars
       #   href: posts/other-notebook.ipynb
