@@ -43,7 +43,12 @@ def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_ye
     print(f"Wrote annual demand CSV to: {output_path}")
 
 
-def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, output_folder_path: Path) -> Path:
+def export_genx_for_plotting(
+    scenario_data_path: Path,
+    scenario_name: str,
+    output_folder_path: Path,
+    scenario_to_year_map: dict[str, int] | None = None,
+) -> Path:
     """
     Prepare GenX scenario outputs for plotting by copying inputs/results and building summaries.
 
@@ -51,38 +56,45 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
         scenario_data_path: Path to the root folder containing all GenX scenarios (e.g., .../genx_results).
         scenario_name: Name of the scenario folder inside scenario_data_path.
         output_folder_path: Destination root where op_inputs and results_summary will be written.
+        scenario_to_year_map: Mapping from period label (e.g., "p1") to planning year.
 
     Returns:
-        Path to the created resource capacity CSV file.
+        Path to the aggregated resource capacity CSV file.
     """
     genx_result_scenario_path = scenario_data_path / scenario_name
-
     model_name = scenario_name
-    op_inputs_path = output_folder_path / f"{model_name}_op_inputs" / "Inputs" / "Inputs_p1"
-    op_inputs_path.mkdir(parents=True, exist_ok=True)
-    results_subfolder = op_inputs_path / "Results"
-    results_subfolder.mkdir(parents=True, exist_ok=True)
 
-    # FROM POLICIES SUBFOLDER ================================================================
-    # transfer CO2_cap and CO2_cap_slack from GenX results to output folder
-    # Transfer policy files from GenX results to output folder
+    if scenario_to_year_map is None:
+        scenario_to_year_map = {"p1": 2030}
+    # Normalize keys for case-insensitive lookup
+    scenario_to_year_map = {k.lower(): v for k, v in scenario_to_year_map.items()}
+
+    period_dirs = sorted(
+        [
+            p
+            for p in genx_result_scenario_path.iterdir()
+            if p.is_dir() and p.name.lower().startswith("inputs_p")
+        ],
+        key=lambda p: p.name.lower(),
+    )
+
+    # Fallback: treat the root scenario as a single period if no Inputs_p* folders are present
+    use_single_period = False
+    if not period_dirs:
+        period_dirs = [genx_result_scenario_path]
+        use_single_period = True
+
+    op_inputs_root = output_folder_path / f"{model_name}_op_inputs" / "Inputs"
+    results_summary_path = output_folder_path / f"{model_name}_results_summary"
+    op_inputs_root.mkdir(parents=True, exist_ok=True)
+    results_summary_path.mkdir(parents=True, exist_ok=True)
+
     policy_files = [
         "CO2_cap.csv",
         "Capacity_reserve_margin.csv",
         "Energy_share_requirement.csv",
         "Minimum_capacity_requirement.csv",
     ]
-
-    for filename in policy_files:
-        file_path = genx_result_scenario_path / "policies" / filename
-        if file_path.exists():
-            print(f"DEBUG: Copying {filename}")
-            shutil.copy2(file_path, op_inputs_path)
-
-    print(f"DEBUG: Copied policy files to {op_inputs_path}")
-
-    # FROM SYSTEM SUBFOLDER =============================================================================
-    # Define file mappings: (source_name, destination_name)
     system_files = [
         ("Fuels_data.csv", "Fuels_data.csv"),
         ("Demand_data.csv", "Load_data.csv"),
@@ -90,92 +102,169 @@ def export_genx_for_plotting(scenario_data_path: Path, scenario_name: str, outpu
         ("Network.csv", "Network.csv"),
         ("Representative_periods.csv", "Representative_periods.csv"),
     ]
-
-    for source_name, dest_name in system_files:
-        source_file = genx_result_scenario_path / "system" / source_name
-        if source_file.exists():
-            print(f"DEBUG: Copying {source_name}")
-            shutil.copy2(source_file, op_inputs_path / dest_name)
-
-    print(f"DEBUG: Copied system files to {op_inputs_path}")
-
-    # TO THE RESULTS SUBFOLDER ================================================================
-    # Copy all CSV files from Results subfolder
     results_files = ["capacityfactor.csv", "costs.csv", "emissions.csv", "nse.csv"]
-    for filename in results_files:
-        file_path = genx_result_scenario_path / "results" / filename
-        if file_path.exists():
-            print(f"DEBUG: Copying {filename}")
-            shutil.copy2(file_path, results_subfolder)
 
-    # BUILD GENERATORS_DATA.CSV FILE from build_generators_data.py file==========================
-    # Create generators_data.csv file
-    generators_data_file = op_inputs_path / "Generators_data.csv"
-    build_generators_data(genx_result_scenario_path, generators_data_file, debug_overwrites=True)
+    annual_demand_frames = []
+    resource_capacity_frames = []
+    emissions_frames = []
+    generation_frames = []
+    dispatch_frames = []
 
-    #===================================================================================
-    # RESULTS SUMMARY CREATION
-    results_summary_path = output_folder_path / f"{model_name}_results_summary"
-    results_summary_path.mkdir(parents=True, exist_ok=True)
+    for period_dir in period_dirs:
+        if use_single_period:
+            period_name = "Inputs_p1"
+            period_key = "p1"
+        else:
+            period_name = period_dir.name
+            period_identifier = period_name.split("_", 1)[-1]
+            period_key = period_identifier.lower()
 
-    # Create annual demand CSV in results summary folder (from system/Demand_data.csv)
-    try:
-        create_annual_demand_csv(
-            genx_result_scenario_path,
-            results_summary_path / "annual_demand.csv",
-            planning_year=2030,
-        )
-    except Exception as e:
-        print(f"Warning: Could not create annual_demand.csv: {e}")
+        planning_year = scenario_to_year_map.get(period_key)
+        if planning_year is None:
+            print(
+                f"Warning: Skipping {period_name} because no planning year mapping was found in scenario_to_year_map."
+            )
+            continue
 
-    # Create resource capacity file in results summary folder
-    output = create_resource_capacity(
-        model_name=model_name,
-        case_name="Results_p1",
-        scenario_folder_path=op_inputs_path,
-        genx_scenario_results_path=genx_result_scenario_path,
-        results_summary_folder_path=results_summary_path,
-        planning_year=2030,
-        unit="MW",
-    )
-    print(f"Wrote resource capacity CSV to: {output}")
+        print(f"Processing {period_name} -> planning year {planning_year}")
 
-    # Also create emissions summary (uses default case "Results_p1")
-    emissions_output = create_emissions_summary(
-        genx_scenario_results_path=genx_result_scenario_path,
-        scenario_name=model_name,
-        output_folder_path=output_folder_path,
-        planning_year=2030,
-        case="Results_p1",
-        unit="tons",
-    )
-    print(f"Wrote emissions summary CSV to: {emissions_output}")
+        op_inputs_path = op_inputs_root / period_name
+        op_inputs_path.mkdir(parents=True, exist_ok=True)
+        results_subfolder = op_inputs_path / "Results"
+        results_subfolder.mkdir(parents=True, exist_ok=True)
 
-    # Create generations summary
-    generations_output = create_generation_summary(
-        genx_scenario_results_path=genx_result_scenario_path,
-        scenario_name=model_name,
-        output_folder_path=output_folder_path,
-        planning_year=2030,
-        case="Results_p1",
-        unit="MWh",
-    )
-    print(f"Wrote generations summary CSV to: {generations_output}")
+        # Copy policy files specific to this period
+        for filename in policy_files:
+            file_path = period_dir / "policies" / filename
+            if file_path.exists():
+                shutil.copy2(file_path, op_inputs_path / filename)
 
-    # Create dispatch summary (filters hours to Weight == 1.0 by default)
-    dispatch_output = create_dispatch_summary(
-        genx_scenario_results_path=genx_result_scenario_path,
-        scenario_name=model_name,
-        output_folder_path=output_folder_path,
-        planning_year=2030,
-        case="Results_p1",
-        weight_value=1.0,
-    )
-    print(f"Wrote dispatch summary CSV to: {dispatch_output}")
-    return output
+        # Copy select system files for this period
+        for source_name, dest_name in system_files:
+            source_file = period_dir / "system" / source_name
+            if source_file.exists():
+                shutil.copy2(source_file, op_inputs_path / dest_name)
+
+        # Copy select results files into Results subfolder
+        for filename in results_files:
+            file_path = period_dir / "results" / filename
+            if file_path.exists():
+                shutil.copy2(file_path, results_subfolder / filename)
+
+        # Build generators data for this period
+        generators_data_file = op_inputs_path / "Generators_data.csv"
+        try:
+            build_generators_data(period_dir, generators_data_file, debug_overwrites=True)
+        except Exception as e:
+            print(f"Warning: Could not build Generators_data.csv for {period_name}: {e}")
+
+        # Annual demand aggregation
+        annual_tmp_path = results_summary_path / f"annual_demand_{period_key}.csv"
+        try:
+            create_annual_demand_csv(period_dir, annual_tmp_path, planning_year=planning_year)
+            annual_demand_frames.append(pd.read_csv(annual_tmp_path))
+        except Exception as e:
+            print(f"Warning: Could not create annual_demand.csv for {period_name}: {e}")
+        finally:
+            if annual_tmp_path.exists():
+                try:
+                    annual_tmp_path.unlink()
+                except Exception:
+                    pass
+
+        case_label = f"Results_{period_key}"
+
+        # Resource capacity summary
+        try:
+            resource_capacity_path = create_resource_capacity(
+                model_name=model_name,
+                case_name=case_label,
+                scenario_folder_path=op_inputs_path,
+                genx_scenario_results_path=period_dir,
+                results_summary_folder_path=results_summary_path,
+                planning_year=planning_year,
+                unit="MW",
+            )
+            resource_capacity_frames.append(pd.read_csv(resource_capacity_path))
+        except Exception as e:
+            print(f"Warning: Could not create resource capacity summary for {period_name}: {e}")
+
+        # Emissions summary
+        try:
+            emissions_path = create_emissions_summary(
+                genx_scenario_results_path=period_dir,
+                scenario_name=model_name,
+                output_folder_path=output_folder_path,
+                planning_year=planning_year,
+                case=case_label,
+                unit="tons",
+            )
+            emissions_frames.append(pd.read_csv(emissions_path))
+        except Exception as e:
+            print(f"Warning: Could not create emissions summary for {period_name}: {e}")
+
+        # Generation summary
+        try:
+            generation_path = create_generation_summary(
+                genx_scenario_results_path=period_dir,
+                scenario_name=model_name,
+                output_folder_path=output_folder_path,
+                planning_year=planning_year,
+                case=case_label,
+                unit="MWh",
+            )
+            generation_frames.append(pd.read_csv(generation_path))
+        except Exception as e:
+            print(f"Warning: Could not create generation summary for {period_name}: {e}")
+
+        # Dispatch summary
+        try:
+            dispatch_path = create_dispatch_summary(
+                genx_scenario_results_path=period_dir,
+                scenario_name=model_name,
+                output_folder_path=output_folder_path,
+                planning_year=planning_year,
+                case=case_label,
+                weight_value=1.0,
+            )
+            dispatch_frames.append(pd.read_csv(dispatch_path))
+        except Exception as e:
+            print(f"Warning: Could not create dispatch summary for {period_name}: {e}")
+
+    # Aggregate and overwrite final summary files
+    if annual_demand_frames:
+        annual_demand = pd.concat(annual_demand_frames, ignore_index=True)
+        annual_demand.to_csv(results_summary_path / "annual_demand.csv", index=False)
+
+    if resource_capacity_frames:
+        resource_capacity = pd.concat(resource_capacity_frames, ignore_index=True)
+        resource_capacity_output = results_summary_path / "resource_capacity.csv"
+        resource_capacity.to_csv(resource_capacity_output, index=False)
+    else:
+        resource_capacity_output = results_summary_path / "resource_capacity.csv"
+
+    if emissions_frames:
+        emissions = pd.concat(emissions_frames, ignore_index=True)
+        emissions.to_csv(results_summary_path / "emissions.csv", index=False)
+
+    if generation_frames:
+        generation = pd.concat(generation_frames, ignore_index=True)
+        generation.to_csv(results_summary_path / "generation.csv", index=False)
+
+    if dispatch_frames:
+        dispatch = pd.concat(dispatch_frames, ignore_index=True)
+        dispatch_path = results_summary_path / "dispatch.csv"
+        dispatch.to_csv(dispatch_path, index=False)
+        dispatch.to_csv(dispatch_path.with_suffix(".csv.gz"), index=False, compression="gzip")
+
+    return resource_capacity_output
 
 
-def export_all_genx_scenarios(scenarios_root: Path, output_folder_path: Path) -> dict[str, Path]:
+def export_all_genx_scenarios(
+    scenarios_root: Path,
+    output_folder_path: Path,
+    scenario_to_year_map: dict[str, int] | None = None,
+) -> dict[str, Path]:
     """
     Iterate through all scenario folders in scenarios_root and export each for plotting.
 
@@ -196,7 +285,12 @@ def export_all_genx_scenarios(scenarios_root: Path, output_folder_path: Path) ->
         print("=" * 80)
         print(f"[{idx}/{total}] Processing scenario '{scenario_name}'...")
         try:
-            out_path = export_genx_for_plotting(scenarios_root, scenario_name, output_folder_path)
+            out_path = export_genx_for_plotting(
+                scenarios_root,
+                scenario_name,
+                output_folder_path,
+                scenario_to_year_map=scenario_to_year_map,
+            )
             results[scenario_name] = out_path
             print(f"\n\n[{idx}/{total}] Completed '{scenario_name}' -> {out_path}")
         except Exception as e:  # keep going on failure
@@ -214,10 +308,15 @@ if __name__ == "__main__":
     #     all_genx_scenarios_path,
     #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx"),
     # )
-
+    scenario_to_year_map={
+        "p1": 2030,
+        "p2": 2040,
+        "p3": 2050,
+    }
     all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_baseline_results")
-    scenario_name = "p4_Mod_Elect_Low_RE"
+    scenario_name = "baseline"
     export_all_genx_scenarios(
         all_genx_scenarios_path,
         Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-baseline"),
+        scenario_to_year_map=scenario_to_year_map,
     )
