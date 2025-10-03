@@ -1,7 +1,8 @@
 project:
   type: website
+  output-dir: docs
   render:
-    - "genx-results-baseline.qmd"
+    - "notebooks/genx-results-baseline.qmd"
     # - "*.qmd"
     # - "!more_figures_n_checks.qmd"
     # - "!26z*.qmd"
