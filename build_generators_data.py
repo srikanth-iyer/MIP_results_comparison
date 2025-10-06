@@ -61,6 +61,7 @@ Output:
 import pandas as pd
 from pathlib import Path
 import re
+from typing import Callable
 #%%
 # Load the target generator data and columns
 target_df_columns = ['Resource', 'region', 'technology', 'cluster', 'R_ID', 'Zone', 'Num_VRE_Bins', 'THERM', 'VRE', 'MUST_RUN', 'STOR', 'FLEX', 'HYDRO', 'LDS', 'CapRes_1', 'CapRes_2', 'Min_Share', 'Max_Share', 'Existing_Cap_MWh', 'Existing_Cap_MW', 'Existing_Charge_Cap_MW', 'num_units', 'unmodified_existing_cap_mw', 'New_Build', 'Cap_Size', 'Min_Cap_MW', 'Max_Cap_MW', 'Max_Cap_MWh', 'Min_Cap_MWh', 'Max_Charge_Cap_MW', 'Min_Charge_Cap_MW', 'Min_Share_percent', 'Max_Share_percent', 'capex_mw', 'Inv_Cost_per_MWyr', 'Fixed_OM_Cost_per_MWyr', 'capex_mwh', 'Inv_Cost_per_MWhyr', 'Fixed_OM_Cost_per_MWhyr', 'Var_OM_Cost_per_MWh', 'Var_OM_Cost_per_MWh_In', 'Inv_Cost_Charge_per_MWyr', 'Fixed_OM_Cost_Charge_per_MWyr', 'Start_Cost_per_MW', 'Start_Fuel_MMBTU_per_MW', 'Heat_Rate_MMBTU_per_MWh', 'heat_rate_mmbtu_mwh_iqr', 'heat_rate_mmbtu_mwh_std', 'Fuel', 'Min_Power', 'Self_Disch', 'Eff_Up', 'Eff_Down', 'Hydro_Energy_to_Power_Ratio', 'Min_Duration', 'Max_Duration', 'Reg_Max', 'Rsv_Max', 'Reg_Cost', 'Rsv_Cost', 'Max_Flexible_Demand_Delay', 'Max_Flexible_Demand_Advance', 'Flexible_Demand_Energy_Eff', 'CO2_Capture_Rate', 'CO2_Capture_Cost_per_Metric_Ton', 'co2_pipeline_annuity_mw', 'co2_pipeline_capex_mw', 'storage_cost_tonne', 'tonne_co2_captured_mwh', 'co2_cost_mwh', 'Ramp_Up_Percentage', 'Ramp_Dn_Percentage', 'Up_Time', 'Down_Time', 'spur_miles', 'spur_capex', 'offshore_spur_miles', 'offshore_spur_capex', 'tx_miles', 'tx_capex', 'interconnect_annuity', 'interconnect_capex_mw', 'regional_cost_multiplier', 'variable_CF', 'RETRO', 'Num_RETRO_Sources', 'Retro1_Source', 'Retro1_Efficiency', 'Retro1_Inv_Cost_per_MWyr', 'Retro2_Source', 'Retro2_Efficiency', 'Retro2_Inv_Cost_per_MWyr', 'MinCapTag_1', 'MinCapTag_2', 'ESR_12', 'Retro3_Efficiency', 'CapRes_7', 'CapRes_9', 'ESR_2', 'ESR_14', 'ESR_10', 'MinCapTag_3', 'ESR_8', 'ESR_1', 'ESR_6', 'gen_is_variable', 'ESR_16', 'ESR_13', 'Retro3_Source', 'CapRes_6', 'ESR_5', 'CapRes_4', 'CapRes_8', 'ESR_15', 'CapRes_5', 'MinCapTag_5', 'ESR_3', 'CapRes_3', 'MinCapTag_4', 'ESR_4', 'ESR_7', 'ESR_9', 'CapRes_10', 'ESR_11', 'Min_Retired_Cap_MW', 'Min_Retired_Energy_Cap_MW', 'Min_Retired_Charge_Cap_MW', 'Capital_Recovery_Period', 'WACC', 'Lifetime', 'old_Inv_Cost_per_MWyr', 'old_Inv_Cost_per_MWhyr', 'original_Fixed_OM_Cost_per_MWyr', 'original_Fixed_OM_Cost_per_MWhyr']
@@ -80,13 +81,18 @@ def build_generators_data(
     *,
     compare_to_target: bool = False,
     debug_overwrites: bool = False,
+    verbose: bool = False,
+    warning_callback: Callable[[str], None] | None = None,
 ) -> pd.DataFrame:
     """Build and save Generators_Data from resources for a scenario.
 
     Args:
         scenario_folder_path: Path to scenario folder containing 'resources' and optionally 'results/NetRevenue.csv'.
         save_file_path: Output CSV path to write the combined Generators_Data.
-        compare_to_target: If True, prints a column diff vs target_df_columns.
+    compare_to_target: If True, prints a column diff vs target_df_columns.
+    debug_overwrites: When True, write debug report about overwritten values.
+    verbose: When True, emit informational log messages. Defaults to False.
+    warning_callback: Optional callable to receive warning messages. When absent, warnings print.
 
     Returns:
         The combined generators DataFrame.
@@ -119,7 +125,25 @@ def build_generators_data(
             p.name.lower(),
         ),
     )
-    print("Files in resources (ordered):", [str(p.relative_to(scenario_folder)) for p in resource_files])
+
+    def emit_info(message: str) -> None:
+        if verbose:
+            print(message)
+
+    def emit_warning(message: str) -> None:
+        normalized = message.strip()
+        if warning_callback is not None:
+            warning_callback(normalized)
+        else:
+            if normalized.lower().startswith("warning"):
+                print(normalized)
+            else:
+                print(f"Warning: {normalized}")
+
+    emit_info(
+        "Files in resources (ordered): "
+        + str([str(p.relative_to(scenario_folder)) for p in resource_files])
+    )
 
     # Gather unique resource names
     new_gen_data = {}
@@ -141,13 +165,13 @@ def build_generators_data(
         try:
             df = _read_table(p)
         except Exception as e:
-            print(f"Warning: Skipping {p.name}: {e}")
+            emit_warning(f"Skipping {p.name}: {e}")
             continue
         if 'Resource' not in df.columns:
-            print(f"Warning: {p.name} missing 'Resource' column; skipping.")
+            emit_warning(f"{p.name} missing 'Resource' column; skipping.")
             continue
         resource_names.update(df['Resource'].dropna().astype(str).tolist())
-    print(f"Total unique resources found: {len(resource_names)}")
+    emit_info(f"Total unique resources found: {len(resource_names)}")
 
     # Use a stable, sorted order for resources to avoid run-to-run differences
     resource_names_sorted = sorted(resource_names)
@@ -157,14 +181,14 @@ def build_generators_data(
 
     # Merge attributes from each file
     for p in resource_files:
-        print(f"Processing file: {p.name}")
+        emit_info(f"Processing file: {p.name}")
         try:
             df = _read_table(p)
         except Exception as e:
-            print(f"Warning: Skipping {p.name}: {e}")
+            emit_warning(f"Skipping {p.name}: {e}")
             continue
         if 'Resource' not in df.columns:
-            print(f"Warning: {p.name} missing 'Resource' column; skipping.")
+            emit_warning(f"{p.name} missing 'Resource' column; skipping.")
             continue
         for _, row in df.iterrows():
             resource = str(row['Resource'])
@@ -202,7 +226,7 @@ def build_generators_data(
             try:
                 df = _read_table(file)
             except Exception as e:
-                print(f"Warning: Could not read {file.name} for category mapping: {e}")
+                emit_warning(f"Could not read {file.name} for category mapping: {e}")
                 continue
             present = set(df['Resource'].astype(str)) if 'Resource' in df.columns else set()
             for r in resource_names_sorted:
@@ -232,11 +256,11 @@ def build_generators_data(
             if 'Resource' in net_revenue_df.columns and 'R_ID' in net_revenue_df.columns:
                 for _, row in net_revenue_df.iterrows():
                     rid_mapping[str(row['Resource'])] = row['R_ID']
-            print(f"Mapped R_IDs for {len(rid_mapping)} resources from NetRevenue.csv")
+            emit_info(f"Mapped R_IDs for {len(rid_mapping)} resources from NetRevenue.csv")
         except Exception as e:
-            print(f"Warning: Failed to read NetRevenue.csv: {e}")
+            emit_warning(f"Failed to read NetRevenue.csv: {e}")
     else:
-        print(f"Warning: NetRevenue.csv not found at {net_revenue_file}")
+        emit_warning(f"NetRevenue.csv not found at {net_revenue_file}")
 
     for r in new_gen_data:
         if r in rid_mapping:
@@ -287,7 +311,7 @@ def build_generators_data(
     # Save
     save_path.parent.mkdir(parents=True, exist_ok=True)
     new_gen_data_df.to_csv(save_path, index=True, encoding="utf-8")
-    print(f"Saved combined generators data to: {save_path}")
+    emit_info(f"Saved combined generators data to: {save_path}")
 
     # Optional overwrite report for debugging
     if debug_overwrites and overwrite_events:
@@ -296,23 +320,36 @@ def build_generators_data(
             by=["resource", "column", "file_order_index", "new_source"],
             kind="mergesort",
         ).to_csv(report_path, index=False, encoding="utf-8")
-        print(f"Wrote overwrite debug report to: {report_path}")
+        emit_info(f"Wrote overwrite debug report to: {report_path}")
 
     # Optional compare
     if compare_to_target:
         target_df = pd.DataFrame(columns=target_df_columns)
-        compare_columns(target_df, new_gen_data_df, df_name="combined_generators")
+        compare_columns(
+            target_df,
+            new_gen_data_df,
+            df_name="combined_generators",
+            print_fn=emit_info,
+        )
 
     return new_gen_data_df
 
 
 #%%
 # Check if the combined generators DataFrame has the same columns as the target DataFrame
-def compare_columns(target_df, combined_df, df_name="combined_generators", normalize=True, collapse_ws=True):
+def compare_columns(
+    target_df,
+    combined_df,
+    df_name="combined_generators",
+    normalize=True,
+    collapse_ws=True,
+    print_fn: Callable[[str], None] | None = print,
+):
     target_columns = target_df.columns.tolist()
     combined_columns = combined_df.columns.tolist()
-    print(f"\nTarget columns: {target_columns}")
-    print(f"\nCombined columns: {combined_columns}")
+    if print_fn is not None:
+        print_fn(f"\nTarget columns: {target_columns}")
+        print_fn(f"\nCombined columns: {combined_columns}")
     if normalize:
         target_columns = [col.strip() for col in target_columns]
         combined_columns = [col.strip() for col in combined_columns]
@@ -326,9 +363,10 @@ def compare_columns(target_df, combined_df, df_name="combined_generators", norma
     # Sort both containers for consistent comparison
     missing_cols = sorted(list(missing_cols))
     extra_cols = sorted(list(extra_cols))
-    print(f"\n{df_name} column comparison:")
-    print(f"\nMissing columns: {missing_cols}")
-    print(f"\nExtra columns: {extra_cols}")
+    if print_fn is not None:
+        print_fn(f"\n{df_name} column comparison:")
+        print_fn(f"\nMissing columns: {missing_cols}")
+        print_fn(f"\nExtra columns: {extra_cols}")
 
     return missing_cols, extra_cols
 
@@ -340,4 +378,5 @@ if __name__ == "__main__":
     r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx_simulations\GenX_op_inputs\Inputs\Inputs_p1\Generators_Data.csv",
     compare_to_target=False,  # optional schema check,
     debug_overwrites=True,  # optional overwrite report
+    verbose=True,
     )
