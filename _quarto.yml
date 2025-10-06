@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
-    - "notebooks/genx-results-baseline.qmd"
+    - "notebooks/genx-results-scenarios.qmd"
     # - "*.qmd"
     # - "!more_figures_n_checks.qmd"
     # - "!26z*.qmd"
