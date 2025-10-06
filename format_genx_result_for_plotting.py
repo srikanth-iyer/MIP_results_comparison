@@ -9,7 +9,13 @@ import pandas as pd
 
 
 
-def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_year: int) -> None:
+def create_annual_demand_csv(
+    scenario_path: Path,
+    output_path: Path,
+    planning_year: int,
+    *,
+    verbose: bool = False,
+) -> None:
     """
     Create an annual_demand.csv file from the Demand_data.csv in the GenX scenario.
 
@@ -17,6 +23,7 @@ def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_ye
         scenario_path: Path to the GenX scenario folder containing 'system/Demand_data.csv'.
         output_path: Path where the annual_demand.csv will be saved.
         planning_year: Planning year to annotate in the output rows.
+        verbose: When True, log a message after writing the CSV (defaults to False).
     """
     demand_data_file = scenario_path / "system" / "Demand_data.csv"
     if not demand_data_file.exists():
@@ -40,7 +47,8 @@ def create_annual_demand_csv(scenario_path: Path, output_path: Path, planning_ye
     annual_demand_df = pd.DataFrame(rows, columns=["zone", "annual_demand", "planning_year"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
     annual_demand_df.to_csv(output_path, index=False)
-    print(f"Wrote annual demand CSV to: {output_path}")
+    if verbose:
+        print(f"Wrote annual demand CSV to: {output_path}")
 
 
 def export_genx_for_plotting(
@@ -48,7 +56,10 @@ def export_genx_for_plotting(
     scenario_name: str,
     output_folder_path: Path,
     scenario_to_year_map: dict[str, int] | None = None,
-) -> Path:
+    *,
+    debug_overwrites: bool = False,
+    verbose: bool = False,
+) -> tuple[Path, list[dict[str, str | None]]]:
     """
     Prepare GenX scenario outputs for plotting by copying inputs/results and building summaries.
 
@@ -57,9 +68,11 @@ def export_genx_for_plotting(
         scenario_name: Name of the scenario folder inside scenario_data_path.
         output_folder_path: Destination root where op_inputs and results_summary will be written.
         scenario_to_year_map: Mapping from period label (e.g., "p1") to planning year.
+    debug_overwrites: When True, produce overwrite debug reports from generator builds.
+        verbose: When False, suppress informational logging (warnings still print). Defaults to False.
 
     Returns:
-        Path to the aggregated resource capacity CSV file.
+        Tuple of (resource_capacity_csv_path, warning_messages).
     """
     genx_result_scenario_path = scenario_data_path / scenario_name
     model_name = scenario_name
@@ -69,16 +82,63 @@ def export_genx_for_plotting(
     # Normalize keys for case-insensitive lookup
     scenario_to_year_map = {k.lower(): v for k, v in scenario_to_year_map.items()}
 
-    period_dirs = sorted(
-        [
-            p
-            for p in genx_result_scenario_path.iterdir()
-            if p.is_dir() and p.name.lower().startswith("inputs_p")
-        ],
-        key=lambda p: p.name.lower(),
-    )
+    warnings: list[dict[str, str | None]] = []
 
-    # Fallback: treat the root scenario as a single period if no Inputs_p* folders are present
+    def record_warning(
+        message: str,
+        *,
+        period_name: str | None = None,
+        period_key: str | None = None,
+    ) -> None:
+        normalized = message.strip()
+        if normalized.lower().startswith("warning:"):
+            normalized = normalized.split(":", 1)[1].strip() if ":" in normalized else normalized
+
+        warnings.append(
+            {
+                "scenario": model_name,
+                "period_name": period_name,
+                "period_key": period_key,
+                "message": normalized,
+            }
+        )
+
+        label_parts = [model_name]
+        if period_name:
+            label_parts.append(period_name)
+        elif period_key:
+            label_parts.append(period_key)
+        label = " / ".join(label_parts)
+        print(f"Warning: {label}: {normalized}")
+
+    # Discover Inputs_p* period directories. Check the scenario root first,
+    # then (case-insensitively) an `Inputs` subfolder if present. Stop at the
+    # first parent that contains matching Inputs_p* folders. If none are found,
+    # fall back to treating the scenario root as a single-period case.
+    # Find an Inputs subfolder if it exists (case-insensitive)
+    inputs_folder = None
+    for p in genx_result_scenario_path.iterdir():
+        if p.is_dir() and p.name.lower() == "inputs":
+            inputs_folder = p
+            break
+
+    candidate_parents = [genx_result_scenario_path]
+    if inputs_folder is not None:
+        candidate_parents.append(inputs_folder)
+
+    period_dirs = []
+    for parent in candidate_parents:
+        period_dirs = sorted(
+            [
+                p
+                for p in parent.iterdir()
+                if p.is_dir() and p.name.lower().startswith("inputs_p")
+            ],
+            key=lambda p: p.name.lower(),
+        )
+        if period_dirs:
+            break
+
     use_single_period = False
     if not period_dirs:
         period_dirs = [genx_result_scenario_path]
@@ -121,11 +181,13 @@ def export_genx_for_plotting(
 
         planning_year = scenario_to_year_map.get(period_key)
         if planning_year is None:
-            print(
-                f"Warning: Skipping {period_name} because no planning year mapping was found in scenario_to_year_map."
+            record_warning(
+                "Skipped because no planning year mapping was found in scenario_to_year_map.",
+                period_name=period_name,
+                period_key=period_key,
             )
             continue
-
+        print("=" * 40)
         print(f"Processing {period_name} -> planning year {planning_year}")
 
         op_inputs_path = op_inputs_root / period_name
@@ -154,17 +216,40 @@ def export_genx_for_plotting(
         # Build generators data for this period
         generators_data_file = op_inputs_path / "Generators_data.csv"
         try:
-            build_generators_data(period_dir, generators_data_file, debug_overwrites=True)
+            build_generators_data(
+                period_dir,
+                generators_data_file,
+                debug_overwrites=debug_overwrites,
+                verbose=verbose,
+                warning_callback=lambda msg, p=period_name, k=period_key: record_warning(
+                    msg,
+                    period_name=p,
+                    period_key=k,
+                ),
+            )
         except Exception as e:
-            print(f"Warning: Could not build Generators_data.csv for {period_name}: {e}")
+            record_warning(
+                f"Could not build Generators_data.csv ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
 
         # Annual demand aggregation
         annual_tmp_path = results_summary_path / f"annual_demand_{period_key}.csv"
         try:
-            create_annual_demand_csv(period_dir, annual_tmp_path, planning_year=planning_year)
+            create_annual_demand_csv(
+                period_dir,
+                annual_tmp_path,
+                planning_year=planning_year,
+                verbose=verbose,
+            )
             annual_demand_frames.append(pd.read_csv(annual_tmp_path))
         except Exception as e:
-            print(f"Warning: Could not create annual_demand.csv for {period_name}: {e}")
+            record_warning(
+                f"Could not create annual_demand.csv ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
         finally:
             if annual_tmp_path.exists():
                 try:
@@ -187,7 +272,11 @@ def export_genx_for_plotting(
             )
             resource_capacity_frames.append(pd.read_csv(resource_capacity_path))
         except Exception as e:
-            print(f"Warning: Could not create resource capacity summary for {period_name}: {e}")
+            record_warning(
+                f"Could not create resource capacity summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
 
         # Emissions summary
         try:
@@ -201,7 +290,11 @@ def export_genx_for_plotting(
             )
             emissions_frames.append(pd.read_csv(emissions_path))
         except Exception as e:
-            print(f"Warning: Could not create emissions summary for {period_name}: {e}")
+            record_warning(
+                f"Could not create emissions summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
 
         # Generation summary
         try:
@@ -215,7 +308,11 @@ def export_genx_for_plotting(
             )
             generation_frames.append(pd.read_csv(generation_path))
         except Exception as e:
-            print(f"Warning: Could not create generation summary for {period_name}: {e}")
+            record_warning(
+                f"Could not create generation summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
 
         # Dispatch summary
         try:
@@ -229,7 +326,11 @@ def export_genx_for_plotting(
             )
             dispatch_frames.append(pd.read_csv(dispatch_path))
         except Exception as e:
-            print(f"Warning: Could not create dispatch summary for {period_name}: {e}")
+            record_warning(
+                f"Could not create dispatch summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
 
     # Aggregate and overwrite final summary files
     if annual_demand_frames:
@@ -257,13 +358,16 @@ def export_genx_for_plotting(
         dispatch.to_csv(dispatch_path, index=False)
         dispatch.to_csv(dispatch_path.with_suffix(".csv.gz"), index=False, compression="gzip")
 
-    return resource_capacity_output
+    return resource_capacity_output, warnings
 
 
 def export_all_genx_scenarios(
     scenarios_root: Path,
     output_folder_path: Path,
     scenario_to_year_map: dict[str, int] | None = None,
+    *,
+    debug_overwrites: bool = False,
+    verbose: bool = False,
 ) -> dict[str, Path]:
     """
     Iterate through all scenario folders in scenarios_root and export each for plotting.
@@ -271,6 +375,9 @@ def export_all_genx_scenarios(
     Args:
         scenarios_root: Path containing one subfolder per GenX scenario (e.g., .../genx_results).
         output_folder_path: Destination root where outputs will be written.
+        scenario_to_year_map: Optional mapping from period label to planning year.
+        debug_overwrites: When True, generator builds write overwrite debug reports.
+        verbose: When False, suppress informational logging (warnings still print). Defaults to False.
 
     Returns:
         Mapping from scenario name to the created resource capacity CSV path (only successful ones).
@@ -279,25 +386,60 @@ def export_all_genx_scenarios(
     print(f"Detected {len(scenario_dirs)} scenario folder(s) in {scenarios_root}")
 
     results: dict[str, Path] = {}
+    warnings_by_scenario: dict[str, list[dict[str, str | None]]] = {}
+
+    def group_warnings_by_period(
+        warning_entries: list[dict[str, str | None]]
+    ) -> dict[str, list[str]]:
+        groups: dict[str, list[str]] = {}
+        for entry in warning_entries:
+            period_label = entry.get("period_name") or entry.get("period_key") or "unspecified"
+            message = entry.get("message") or ""
+            groups.setdefault(str(period_label), []).append(message)
+        return groups
     total = len(scenario_dirs)
     for idx, scenario_dir in enumerate(scenario_dirs, start=1):
         scenario_name = scenario_dir.name
         print("=" * 80)
         print(f"[{idx}/{total}] Processing scenario '{scenario_name}'...")
         try:
-            out_path = export_genx_for_plotting(
+            out_path, warnings = export_genx_for_plotting(
                 scenarios_root,
                 scenario_name,
                 output_folder_path,
                 scenario_to_year_map=scenario_to_year_map,
+                debug_overwrites=debug_overwrites,
+                verbose=verbose,
             )
             results[scenario_name] = out_path
-            print(f"\n\n[{idx}/{total}] Completed '{scenario_name}' -> {out_path}")
+            if warnings:
+                warnings_by_scenario[scenario_name] = warnings
+                if verbose:
+                    print(f"\n\n[{idx}/{total}] Finished '{scenario_name}' WITH WARNINGS -> {out_path}")
+                    print("Warnings summary:")
+                    grouped = group_warnings_by_period(warnings)
+                    for period_label in sorted(grouped.keys()):
+                        print(f"  - {scenario_name} / {period_label}:")
+                        for msg in grouped[period_label]:
+                            print(f"      • {msg}")
         except Exception as e:  # keep going on failure
             print(f"\n\n[{idx}/{total}] FAILED '{scenario_name}': {e}")
-        print("=" * 80)
+        if verbose:
+            print("=" * 80)
 
     print(f"Finished exporting {len(results)}/{total} scenarios to {output_folder_path}")
+    if warnings_by_scenario:
+        print("\nSummary of warnings:")
+        for scenario_name, scenario_warnings in warnings_by_scenario.items():
+            print(f"\n- {scenario_name}:")
+            grouped = group_warnings_by_period(scenario_warnings)
+            for period_label in sorted(grouped.keys()):
+                print(f"  - {period_label}:")
+                for msg in grouped[period_label]:
+                    print(f"    • {msg}")
+    else:
+        print("No warnings encountered across processed scenarios.")
+
     return results
 
 
@@ -313,10 +455,11 @@ if __name__ == "__main__":
         "p2": 2040,
         "p3": 2050,
     }
-    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_baseline_results")
-    scenario_name = "baseline"
+    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results")
+
     export_all_genx_scenarios(
         all_genx_scenarios_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-baseline"),
+        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
         scenario_to_year_map=scenario_to_year_map,
+        debug_overwrites=False,
     )
