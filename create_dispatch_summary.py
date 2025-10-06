@@ -1,7 +1,9 @@
 from pathlib import Path
-from typing import Optional, Union
+from typing import Union
 
 import pandas as pd
+
+from create_time_weights import create_time_weights
 
 
 def create_dispatch_summary(
@@ -47,7 +49,9 @@ def create_dispatch_summary(
 
     weights_path = results_dir / "time_weights.csv"
     if not weights_path.exists():
-        raise FileNotFoundError(f"Missing time_weights.csv at: {weights_path}")
+        weights_path = create_time_weights(
+            genx_scenario_results_path, output_path=weights_path, verbose=True
+        )
 
     # Read inputs
     power_df = pd.read_csv(power_path)
