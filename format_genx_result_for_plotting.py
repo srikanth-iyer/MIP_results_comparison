@@ -111,6 +111,79 @@ def export_genx_for_plotting(
         label = " / ".join(label_parts)
         print(f"Warning: {label}: {normalized}")
 
+    def _extract_period_key_from_results_name(folder_name: str) -> str | None:
+        lower = folder_name.lower()
+        for prefix in ("results_", "results-"):
+            if lower.startswith(prefix):
+                suffix = lower[len(prefix) :].strip()
+                return suffix or None
+        return None
+
+    def _collect_results_period_dirs(*roots: Path | None) -> dict[str, Path]:
+        mapping: dict[str, Path] = {}
+        for root in roots:
+            if root is None:
+                continue
+            try:
+                children = list(root.iterdir())
+            except (FileNotFoundError, PermissionError, NotADirectoryError):
+                continue
+            for child in children:
+                if not child.is_dir():
+                    continue
+                child_lower = child.name.lower()
+                if child_lower == "results":
+                    try:
+                        sub_children = list(child.iterdir())
+                    except (FileNotFoundError, PermissionError, NotADirectoryError):
+                        continue
+                    for sub in sub_children:
+                        if not sub.is_dir():
+                            continue
+                        key = _extract_period_key_from_results_name(sub.name)
+                        if key and key not in mapping:
+                            mapping[key] = sub
+                else:
+                    key = _extract_period_key_from_results_name(child.name)
+                    if key and key not in mapping:
+                        mapping[key] = child
+        return mapping
+
+    def _ensure_period_results_folder(
+        period_dir: Path,
+        *,
+        period_key: str,
+        period_name: str,
+        results_mapping: dict[str, Path],
+    ) -> Path:
+        target_results_dir = period_dir / "results"
+        source_results_dir = results_mapping.get(period_key)
+        if source_results_dir and source_results_dir.exists():
+            same_location = False
+            if target_results_dir.exists():
+                try:
+                    same_location = target_results_dir.resolve() == source_results_dir.resolve()
+                except (FileNotFoundError, PermissionError):
+                    same_location = False
+            if not same_location:
+                try:
+                    if target_results_dir.exists():
+                        shutil.rmtree(target_results_dir)
+                    shutil.copytree(source_results_dir, target_results_dir)
+                    if verbose:
+                        print(
+                            f"Copied standalone results folder from {source_results_dir} to {target_results_dir}"
+                        )
+                except Exception as copy_err:
+                    record_warning(
+                        f"Failed to copy results from {source_results_dir} ({copy_err})",
+                        period_name=period_name,
+                        period_key=period_key,
+                    )
+        if not target_results_dir.exists():
+            target_results_dir.mkdir(parents=True, exist_ok=True)
+        return target_results_dir
+
     # Discover Inputs_p* period directories. Check the scenario root first,
     # then (case-insensitively) an `Inputs` subfolder if present. Stop at the
     # first parent that contains matching Inputs_p* folders. If none are found,
@@ -143,6 +216,14 @@ def export_genx_for_plotting(
     if not period_dirs:
         period_dirs = [genx_result_scenario_path]
         use_single_period = True
+
+    search_roots: list[Path] = [genx_result_scenario_path]
+    if inputs_folder is not None:
+        search_roots.append(inputs_folder)
+        inputs_parent = inputs_folder.parent
+        if inputs_parent != genx_result_scenario_path:
+            search_roots.append(inputs_parent)
+    results_period_dirs = _collect_results_period_dirs(*search_roots)
 
     op_inputs_root = output_folder_path / f"{model_name}_op_inputs" / "Inputs"
     results_summary_path = output_folder_path / f"{model_name}_results_summary"
@@ -195,6 +276,13 @@ def export_genx_for_plotting(
         results_subfolder = op_inputs_path / "Results"
         results_subfolder.mkdir(parents=True, exist_ok=True)
 
+        period_results_dir = _ensure_period_results_folder(
+            period_dir,
+            period_key=period_key,
+            period_name=period_name,
+            results_mapping=results_period_dirs,
+        )
+
         # Copy policy files specific to this period
         for filename in policy_files:
             file_path = period_dir / "policies" / filename
@@ -209,7 +297,7 @@ def export_genx_for_plotting(
 
         # Copy select results files into Results subfolder
         for filename in results_files:
-            file_path = period_dir / "results" / filename
+            file_path = period_results_dir / filename
             if file_path.exists():
                 shutil.copy2(file_path, results_subfolder / filename)
 
@@ -323,6 +411,7 @@ def export_genx_for_plotting(
                 planning_year=planning_year,
                 case=case_label,
                 weight_value=1.0,
+                verbose=verbose,
             )
             dispatch_frames.append(pd.read_csv(dispatch_path))
         except Exception as e:
@@ -461,5 +550,5 @@ if __name__ == "__main__":
         all_genx_scenarios_path,
         Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
         scenario_to_year_map=scenario_to_year_map,
-        debug_overwrites=False,
+        debug_overwrites=True,
     )
