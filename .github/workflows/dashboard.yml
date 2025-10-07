@@ -52,10 +52,15 @@ jobs:
         # with:
           # version: pre-release
 
+      - name: Render site
+        run: quarto render
+
       # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
-      - name: Publish to GitHub Pages (and render) 
+      - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
+          path: _site
+          render: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

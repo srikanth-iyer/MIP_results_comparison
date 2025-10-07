@@ -1,0 +1,14 @@
+---
+title: "GenX baseline explorer"
+---
+
+The interactive explorer below loads the compiled GenX baseline results from `compiled_results/all/*.csv` and lets you filter the cases, planning years, regions, technologies, and scenarios that are of interest.
+
+::: callout-tip
+Use the selectors on the left to narrow the dataset before exploring the chart or table. By default every available value is selected so the initial view matches the full CSV contents.
+:::
+
+The plots and tabular view update live as you adjust the controls, and the counters above the chart summarize how many rows, cases, and planning years remain after filtering.
+
+{{< shinylive-python src="shinylive/genx_baseline/app.py" >}}
+

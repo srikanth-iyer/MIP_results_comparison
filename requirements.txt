@@ -1,4 +1,3 @@
-
 altair==5.0.1
 pandas
 nbformat
@@ -8,3 +7,5 @@ tabulate
 itables
 joblib
 fastparquet
+shiny
+shinylive
