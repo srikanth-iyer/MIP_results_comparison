@@ -13,6 +13,7 @@ def create_dispatch_summary(
     planning_year: int,
     case: str = "Results_p1",
     weight_value: float = 1.0,
+    verbose: bool = False,
 ) -> Path:
     """
     Create dispatch.csv with columns:
@@ -50,7 +51,7 @@ def create_dispatch_summary(
     weights_path = results_dir / "time_weights.csv"
     if not weights_path.exists():
         weights_path = create_time_weights(
-            genx_scenario_results_path, output_path=weights_path, verbose=True
+            genx_scenario_results_path, output_path=weights_path, verbose=verbose
         )
 
     # Read inputs
