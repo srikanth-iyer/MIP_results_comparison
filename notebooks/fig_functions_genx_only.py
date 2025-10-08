@@ -1,7 +1,7 @@
 import os
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Dict, List, Set
+from typing import Any, Dict, List, Optional, Set
 
 import altair as alt
 import geopandas as gpd
@@ -83,6 +83,7 @@ TECH_MAP = {
     "natural_gas_fired_combustion_turbine": "Natural Gas CT",
     "natural gas fired combustion turbine": "Natural Gas CT",
     "natural_gas_internal_combustion_engine": "Natural Gas Other",
+    "natural gas internal combustion engine": "Natural Gas Other",
     "natural_gas_steam_turbine": "Natural Gas Other",
     "natural gas steam turbine": "Natural Gas Other",
     "onshore_wind_turbine": "Wind",
@@ -109,22 +110,26 @@ TECH_MAP = {
     "offshorewind": "Wind",
     "offshore wind": "Wind",
     "hydrogen": "Hydrogen",
-    "res_water_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category. keep a seperate flex demand category
-    "trans_light_duty": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
-    "space_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
-    "water_heat": "Flex Demand", # TODO: does this go in Other or some other category. Need to change it from current category.
+    "res_water_heat": "Flex Demand", 
+    "trans_light_duty": "Flex Demand", 
+    "space_heat": "Flex Demand", 
+    "water_heat": "Flex Demand", 
 }
 
-EXISTING_TECH_MAP = {
+EXISTING_TECH_MAP = { # NOTE: temporarily disabled to use the new tech maps NOTE: THIS is mostly for the tech_to_type func and we no longer use this to label whetther the generator is existing or not. we take theat directly from the generators data or resource files
     "batteries": "Battery",
     "biomass_": "Other",
     "conventional_hydroelectric": "Hydro",
     "conventional_steam_coal": "Coal",
     "geothermal": "Geothermal",
     "natural_gas_fired_combined_cycle": "Natural Gas CC",
+    "natural gas fired combined cycle": "Natural Gas CC",
     "natural_gas_fired_combustion_turbine": "Natural Gas CT",
+    "natural gas fired combustion turbine": "Natural Gas CT",
     "natural_gas_internal_combustion_engine": "Natural Gas Other",
+    "natural gas internal combustion engine": "Natural Gas Other",
     "natural_gas_steam_turbine": "Natural Gas Other",
+    "natural gas steam turbine": "Natural Gas Other",
     "onshore_wind_turbine": "Wind",
     "petroleum_liquids": "Other",
     "small_hydroelectric": "Hydro",
@@ -135,7 +140,65 @@ EXISTING_TECH_MAP = {
     "distributed_generation": "Distributed Solar",
 }
 
-_COLOR_MAP = {
+# # mapping = { # from Kavi # NOTE: FROM KAVI
+TECH_MAPPING_FROM_KAVI={
+    'battery': 'Battery',
+    'natural_gas_fired': 'Existing_NG',
+    'solar': 'Existing_Solar',
+    'wind_turbine': 'Existing_Wind',
+    'naturalgas_ccccsavgcf': 'NG_CCS',
+    'naturalgas_ccs100': 'NG_CCS',
+    'naturalgas_ccavgcf': 'NG_CCS',
+    'naturalgas_ctavgcf': 'NG',
+    'nuclear': 'Nuclear',
+    'offshorewind': 'Offshore_Wind',
+    'landbasedwind': 'Onshore_Wind',
+    'natural_gas_steam_turbine':'Existing_NG',
+    'utilitypv': 'Utility_PV',
+    'biomass': 'Other_Renewables',
+    'small_hydroelectric': 'Other_Renewables',
+    'conventional_hydroelectric': 'Other_Renewables',
+    'hydroelectric_pumped': 'Pumped Hydro Storage',
+    'distributed_generation': 'on-roof solar',
+    'trans_light_duty': 'Generation',
+    'res_water_heat': 'Generation',
+}
+
+
+# color_map = { # from Kavi
+# _COLOR_MAP={
+#     "Other_Renewables": "#800080",  
+#     "Existing_NG": "#ff7f0e",      
+#     "None": "#FF0000",            
+#     "Nuclear": "#0000FF",          
+#     "Existing_Wind": "#9467bd",    
+#     "Existing_Solar": "#8c564b",  
+#     "NG": "#e377c2",              
+#     "Battery": "#FFFF00",          
+#     "NG_CCS": "#c5b0d5",            
+#     "Onshore_Wind": "#00FF00",      
+#     "Offshore_Wind": "#FF00FF",    
+#     "Utility_PV": "#bcbd22",        
+# }
+
+# def get_resource_type(resource):
+#     for key, value in mapping.items():
+#         if key in resource:
+#             return value
+#     return 'None'
+
+# df['Resource_Type'] = df['Resource'].apply(get_resource_type)
+
+# fig = px.bar(df_subset_2_9 ,
+#                x="region",
+#                y="Capacity (MW)",
+#                color="Resource_Type",
+#                color_discrete_map=color_map,
+#                title="Iter 0",
+#                width=900,  
+#                height=800)  
+
+_COLOR_MAP = { # NOTE: temporarily disabled to use the new tech maps
     "Battery": "#4379AB",
     "CCS": "#96CCEB",
     "Coal": "#FF8900",
@@ -154,7 +217,7 @@ _COLOR_MAP = {
 
 TECH_ORDER = [
     "Other",
-    "Flex Demand",
+    # "Flex Demand", # NOTE: temporarily disabled because we don't want to plot Flex Demand
     "Nuclear",
     "CCS",
     "Natural Gas CC",
@@ -168,7 +231,8 @@ TECH_ORDER = [
     "Hydrogen",
     "Battery",
 ]
-
+# TECH_ORDER = list(dict.fromkeys(TECH_MAP.values())) # NOTE: modified to make nice with the new mapping from Kavi
+# COLOR_MAP = {k: _COLOR_MAP.get(k, "#000000") for k in TECH_ORDER[::-1]} # NOTE: modified to make nice with the new mapping from Kavi
 COLOR_MAP = {k: _COLOR_MAP[k] for k in TECH_ORDER[::-1]}
 
 TECH_STACK_ORDER = {v: i for i, v in enumerate(TECH_ORDER)}
@@ -176,8 +240,9 @@ TECH_STACK_ORDER = {v: i for i, v in enumerate(TECH_ORDER)}
 # MODEL_ORDER = ["GenX", "SWITCH", "TEMOA", "USENSYS"]
 
 WRAPPED_CASE_NAME_MAP = {
-    "20-week-genx_simulation": "GenX\n20-week simulation", # NOTE: [SRI] newly added case
-    "20-week-genx": "Only GenX\n20-week simulation", # NOTE: [SRI] newly added case
+    "genx-scenarios-10-days": "GenX\nScenarios 10 Days", # NOTE: [SRI] newly added case
+    "genx-scenarios-20-weeks": "GenX\nScenarios 20 Weeks", # NOTE: [SRI] newly added case
+    # "20-week-genx": "Only GenX\n20-week simulation", # NOTE: [SRI] newly added case
 
 }
 
@@ -285,18 +350,28 @@ def sort_nested_dict(d: Dict[str, Any]) -> Dict[str, Any]:
 
 
 _TECH_MAP = {}
-for k, v in sort_nested_dict(TECH_MAP).items():
-    if k in EXISTING_TECH_MAP.keys():
+existing_tech_map = { # NOTE: getting all the tech in the tech_map with the word 'existing' somewhere in the label
+    k: v
+    for k, v in sort_nested_dict(TECH_MAP).items()
+    if "existing" in str(k).lower()
+}
+
+for k, v in sort_nested_dict(TECH_MAP).items(): # NOTE: new method to label existing tech (they should have the word 'existing' somewhere in the label)
+    if "existing" in str(k).lower():
         _TECH_MAP[k] = (v, True)
     else:
         _TECH_MAP[k] = (v, False)
+    # if k in EXISTING_TECH_MAP.keys(): # NOTE: modified to make nice with the new mapping from Kavi
+    #     _TECH_MAP[k] = (v, True)
+    # else:
+    #     _TECH_MAP[k] = (v, False)
 _TECH_MAP = sort_nested_dict(_TECH_MAP)
 
 
 def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
     # Create dictionaries to map unique resource names to their tech types and existence
     tech_type_map = {}
-    existence_map = {}
+    # existence_map = {}
 
     # Get unique resource names
     unique_resource_names = sorted(
@@ -308,11 +383,11 @@ def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
         for tech, (tech_type, existing) in _TECH_MAP.items():
             if tech.lower() in resource_name.lower():
                 tech_type_map[resource_name] = tech_type
-                existence_map[resource_name] = existing
+                # existence_map[resource_name] = existing
                 break
         else:  # If no tech match, set to default
             tech_type_map[resource_name] = "Not Specified"
-            existence_map[resource_name] = False
+            # existence_map[resource_name] = False
 
     # Special case for 'unserved_load'
     if "unserved_load" in tech_type_map:
@@ -1273,6 +1348,15 @@ VAR_ABBR_TITLE_MAP["v"] = "Capacity (GW)"
 VAR_ABBR_TITLE_MAP["v"] = "Generation (TWh)"
 
 
+def configure_full_label_display(chart: alt.Chart) -> alt.Chart:
+    """Ensure long labels (e.g., model names) render in full across axes, legends, and headers."""
+    return (
+        chart.configure_axis(labelLimit=0, labelPadding=4, titlePadding=55)
+        .configure_legend(labelLimit=0)
+        .configure_header(labelLimit=0)
+    )
+
+
 def config_chart_row_col(
     chart: alt.Chart, row_var: str, col_var: str, x_var: str
 ) -> alt.Chart:
@@ -1321,6 +1405,7 @@ def config_chart_row_col(
                 labelBaseline="line-bottom", labelFontSize=15, titleFontSize=15
             )
         )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -1372,8 +1457,15 @@ def chart_total_cap(
         )
     else:
         _color = alt.Color(f"{VAR_ABBR_MAP[color]}").title(title_case(color))
+    x_axis = alt.Axis(title=title_case(x_var))
+    if x_var == "model":
+        x_axis = alt.Axis(
+            title="Scenarios",
+            # titlePadding=45,
+            # labelPadding=10,
+        )
     chart = c.encode(
-        x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+        x=alt.X(VAR_ABBR_MAP[x_var], sort=order, axis=x_axis),
         y=alt.Y("sum(ev)").title("Capacity (GW)"),
         color=_color,
         tooltip=_tooltips,
@@ -1515,11 +1607,16 @@ def chart_regional_cap(
     # data = data.rename(columns={"agg_zone": "Region"})
     data = data.rename(columns=VAR_ABBR_MAP)
     data["o"] = data["tt"].map(TECH_STACK_ORDER)
+
+    if x_var=="model": #NOTE: Temp fix where model is named Scenarios. this is because we are using diff scenarios as "models" in this plotting function and csv files
+        x_title = "Scenarios"
+    else:
+        x_title = title_case(x_var)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(x_title),
             y=alt.Y("ev").title("Capacity (GW)"),
             color=alt.Color("tt").scale(
                 domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values())
@@ -1548,6 +1645,7 @@ def chart_regional_cap(
         .configure_axis(labelFontSize=15, titleFontSize=15)
         .configure_legend(titleFontSize=20, labelFontSize=16)
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -1635,11 +1733,13 @@ def chart_total_gen(
     data["value"] /= 1_000_000
     data = data.rename(columns=VAR_ABBR_MAP)
     data["o"] = data["tt"].map(TECH_STACK_ORDER)
+    if x_var =="model":
+        x_var_title = "Scenarios"
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var_title)),
             y=alt.Y("v").title("Generation (TWh)"),
             color=alt.Color("tt")
             .scale(domain=list(COLOR_MAP.keys()), range=list(COLOR_MAP.values()))
@@ -1649,15 +1749,15 @@ def chart_total_gen(
         )
         .properties(width=width, height=height)
     )
-    if demand is not None:
-        line = (
-            alt.Chart()
-            .mark_rule()
-            .encode(
-                y=alt.Y("annual_demand"),
-            )
-        )
-        chart = alt.layer(chart, line, data=data)
+    # if demand is not None:
+    #     line = (
+    #         alt.Chart()
+    #         .mark_rule()
+    #         .encode(
+    #             y=alt.Y("annual_demand"),
+    #         )
+    #     )
+    #     chart = alt.layer(chart, line, data=data)
     chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
@@ -1821,12 +1921,13 @@ def chart_gen_line(
     chart = chart.configure_axis(labelFontSize=13, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
 def chart_regional_gen(
     gen: pd.DataFrame,
-    cap: pd.DataFrame = None,
+    cap: pd.DataFrame,
     width=alt.Step(40),
     height=200,
 ) -> alt.Chart:
@@ -1892,6 +1993,7 @@ def chart_regional_gen(
         demand = None
     data["value"] /= 1_000_000
     data = data.rename(mapper=VAR_ABBR_MAP, axis="columns")
+
     chart = (
         alt.Chart(data)
         .mark_bar()
@@ -1910,16 +2012,16 @@ def chart_regional_gen(
         .properties(width=width, height=height)
     )
 
-    if demand is not None:
-        line = (
-            alt.Chart(data)
-            .mark_rule()
-            .encode(
-                y=alt.Y("annual_demand"),
-            )
-            .properties(width=width, height=height)
-        )
-        chart = alt.layer(chart, line)
+    # if demand is not None:
+    #     line = (
+    #         alt.Chart(data)
+    #         .mark_rule()
+    #         .encode(
+    #             y=alt.Y("annual_demand"),
+    #         )
+    #         .properties(width=width, height=height)
+    #     )
+    #     chart = alt.layer(chart, line)
 
     chart = chart.facet(
         column=alt.Column("az")
@@ -1933,6 +2035,7 @@ def chart_regional_gen(
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -2060,6 +2163,7 @@ def chart_tx_expansion(
             .configure_axis(labelFontSize=16, titleFontSize=18)
             .configure_legend(titleFontSize=20, labelFontSize=16)
         )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -2093,12 +2197,15 @@ def chart_emissions_intensity(
     data["emissions_intensity"] = data["emissions"] / data["generation"]
     data["emissions_intensity"] *= 1000
     data = data.rename(columns=VAR_ABBR_MAP)
-
+    if x_var == "model":
+        x_title = "Scenarios"
+    else:
+        x_title = title_case(x_var)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).title(title_case(x_var)),
+            x=alt.X(VAR_ABBR_MAP[x_var]).title(x_title),
             y=alt.Y("emissions_intensity").title("kg/MWh"),
         )
         .properties(height=height, width=width)
@@ -2188,11 +2295,20 @@ def chart_emissions(
             f"chart_emissions: Regions missing from REGION_COLOR_MAP: {missing_regions}. "
             "They will not use the explicit palette."
         )
+    x_axis = alt.Axis(title=title_case(x_var))
+    if x_var == "model":
+        x_axis = alt.Axis(
+            title="Scenarios", # NOTE: Temporary fix where model is named Scenarios. This is because we are using different scenarios as "models" in this plotting function and csv files
+            # titlePadding=35,
+            # labelPadding=10,
+        )
+    x_encoding = alt.X(VAR_ABBR_MAP[x_var], sort=order, axis=x_axis)
+
     base = (
         alt.Chart(data)
         .mark_bar()
         .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            x=x_encoding,
             y=alt.Y("sum(v)").title("CO2 (Million Tonnes)"),
             color=alt.Color("r")
             .scale(
@@ -2207,7 +2323,7 @@ def chart_emissions(
         alt.Chart(data)
         .mark_text(dy=-5)
         .encode(
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
+            x=x_encoding,
             y="sum(v):Q",
             text=alt.Text("sum(v):Q", format=",.0f"),
         )
@@ -2228,9 +2344,18 @@ def chart_emissions(
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=20, labelFontSize=16
     )
+    chart = configure_full_label_display(chart)
     return chart
 
-
+def safe_chart_dispatch_single_tech(data: pd.DataFrame, context: Optional[str] = None):
+    """Render chart_dispatch_single_tech while keeping the notebook resilient."""
+    try:
+        return chart_dispatch_single_tech(data)
+    except Exception as exc:  # pragma: no cover - VIS chart helper
+        context_msg = f" for {context}" if context else ""
+        print(f"chart_dispatch_single_tech failed{context_msg}: {exc}")
+        return None
+    
 def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
     # Map zone numbers to region names
     data["zone"] = data["zone"].map(rev_region_map)
@@ -2266,6 +2391,7 @@ def chart_dispatch(data: pd.DataFrame) -> alt.Chart:
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=18, labelFontSize=16
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 def chart_dispatch_single_tech(data: pd.DataFrame) -> alt.Chart:
@@ -2329,6 +2455,7 @@ def chart_dispatch_single_tech(data: pd.DataFrame) -> alt.Chart:
     chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
         titleFontSize=18, labelFontSize=16
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -2433,22 +2560,23 @@ def single_op_cost_chart(
         data=data[chart_cols].query("Total!=0 and Costs != 'cTotal'"),
     ).properties(width=width, height=height)
 
+    final_chart = chart
     if row_var is None and col_var is None:
-        return chart
+        pass
     elif row_var is None and col_var is not None:
-        chart = chart.facet(
+        final_chart = chart.facet(
             column=alt.Column(VAR_ABBR_MAP[col_var])
             .title(title_case(col_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     elif col_var is None and row_var is not None:
-        chart = chart.facet(
+        final_chart = chart.facet(
             row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15)
         )
     else:
-        chart = chart.facet(
+        final_chart = chart.facet(
             row=alt.Row(VAR_ABBR_MAP[row_var])
             .title(title_case(row_var))
             .header(titleFontSize=20, labelFontSize=15),
@@ -2457,7 +2585,7 @@ def single_op_cost_chart(
             .header(titleFontSize=20, labelFontSize=15),
         )
 
-    return chart
+    return configure_full_label_display(final_chart)
 
 
 def chart_op_cost(
@@ -2496,6 +2624,7 @@ def chart_op_cost(
         .configure_axis(labelFontSize=15, titleFontSize=15)
         .configure_legend(titleFontSize=20, labelFontSize=16)
     )
+    final_chart = configure_full_label_display(final_chart)
     return final_chart
 
 
@@ -2530,7 +2659,7 @@ def chart_op_nse(
             # color=alt.Color("model:N").title(title_case("model")),
             tooltip=alt.Tooltip("sum(v)", format=",.0f", title="NSE"),
         )
-        .properties(width=width, height=height)
+    .properties(width=width_px, height=height_px)
     )
     chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
@@ -2721,6 +2850,7 @@ def chart_tx_map(
         .configure_legend(titleFontSize=20, labelFontSize=18)
         .configure_title(fontSize=20, dy=35)
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -2782,6 +2912,7 @@ def chart_tx_scenario_map(
     chart = chart.configure_title(fontSize=20, dy=35).configure_legend(
         titleFontSize=20, labelFontSize=18
     )
+    chart = configure_full_label_display(chart)
     return chart
 
 
@@ -2978,6 +3109,7 @@ def chart_cap_factor_scatter(
     )
     chart = alt.vconcat(chart, cap_factor)
 
+    chart = configure_full_label_display(chart)
     return chart  # | timeseries
 
 def chart_cap_factor_scatter_genx( 
@@ -3154,22 +3286,23 @@ def chart_cap_factor_scatter_genx(
 
         chart = alt.vconcat(chart, timeseries)
 
-    # Order data consistently for the small bar chart, too
-    data = data.sort_values(["model", "y", "name"]) if {"model", "y", "name"}.issubset(data.columns) else data
-    cap_factor = (
-        alt.Chart(data)
-        .mark_bar()
-        .encode(
-            x="mean(cf)",
-            y=alt.Y("model"),
-            column=alt.Column("y").title("Planning Year"),
-            tooltip=["name", "cf", "v"],
-            color="sum(v)",
-        )
-        .transform_filter(selector)
-    )
-    chart = alt.vconcat(chart, cap_factor)
+    # # Order data consistently for the small bar chart, too
+    # data = data.sort_values(["model", "y", "name"]) if {"model", "y", "name"}.issubset(data.columns) else data
+    # cap_factor = (
+    #     alt.Chart(data)
+    #     .mark_bar()
+    #     .encode(
+    #         x="mean(cf)",
+    #         y=alt.Y("model"),
+    #         column=alt.Column("y").title("Planning Year"),
+    #         tooltip=["name", "cf", "v"],
+    #         color="sum(v)",
+    #     )
+    #     .transform_filter(selector)
+    # )
+    # chart = alt.vconcat(chart, cap_factor)
 
+    chart = configure_full_label_display(chart)
     return chart  # | timeseries
 
 def chart_cost_mwh(
