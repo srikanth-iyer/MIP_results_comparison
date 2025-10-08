@@ -539,11 +539,11 @@ if __name__ == "__main__":
         "p2": 2040,
         "p3": 2050,
     }
-    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results")
+    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_10_days")
 
     export_all_genx_scenarios(
         all_genx_scenarios_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
+        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-10-days"),
         scenario_to_year_map=scenario_to_year_map,
         debug_overwrites=True,
     )
