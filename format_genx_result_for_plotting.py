@@ -533,12 +533,7 @@ def export_all_genx_scenarios(
 
 
 if __name__ == "__main__":
-    # all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_results")
-    # scenario_name = "p4_Mod_Elect_Low_RE"
-    # export_all_genx_scenarios(
-    #     all_genx_scenarios_path,
-    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\20-week-genx"),
-    # )
+
     scenario_to_year_map={
         "p1": 2030,
         "p2": 2040,
@@ -549,6 +544,14 @@ if __name__ == "__main__":
     export_all_genx_scenarios(
         all_genx_scenarios_path,
         Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
+        scenario_to_year_map=scenario_to_year_map,
+        debug_overwrites=True,
+    )
+
+    all_genx_scenarios_20_weeks_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_20_weeks")
+    export_all_genx_scenarios(
+        all_genx_scenarios_20_weeks_path,
+        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-20-weeks"),
         scenario_to_year_map=scenario_to_year_map,
         debug_overwrites=True,
     )
