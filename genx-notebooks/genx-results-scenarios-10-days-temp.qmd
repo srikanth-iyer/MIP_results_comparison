@@ -1,5 +1,5 @@
 ---
-title: "genx-scenarios"
+title: "genx-scenarios-10-days"
 format: dashboard
 #   dashboard:
 #     scrolling: false
@@ -15,7 +15,7 @@ jupyter: python3
 # | output: false
 %load_ext autoreload
 %autoreload 2
-folder = "genx-scenarios"
+folder = "genx-scenarios-10-days"
 import os
 from typing import Dict, List, Optional
 from IPython.display import Markdown, display
@@ -23,7 +23,7 @@ from IPython.display import Markdown, display
 import pandas as pd
 import altair as alt
 from pathlib import Path
-from fig_functions_genx_only import (
+from fig_functions_genx_only_wip import (
     fix_tx_line_names,
     load_genx_operations_data,
     load_data,
@@ -38,37 +38,35 @@ from fig_functions_genx_only import (
     chart_op_cost,
     chart_op_nse,
     chart_op_emiss,
-    chart_dispatch_single_tech
+    chart_dispatch_single_tech,
+    safe_chart_dispatch_single_tech
 )
+```
+```{python}
+# | output: false
 
 alt.renderers.enable("html")
+# alt.renderers.set_embed_options(renderer="svg", scaleFactor=1)
 alt.data_transformers.disable_max_rows()
-
+# alt.data_transformers.enable("json", prefix="altair-data")
+# alt.data_transformers.enable("vegafusion")
 cwd = Path.cwd()
 data_path = cwd.parent / folder
-# print(f"DEBUG: DATA PATH - {data_path}")
-
-fig_num = 0
-
-
-def safe_chart_dispatch_single_tech(data: pd.DataFrame, context: Optional[str] = None):
-    """Render chart_dispatch_single_tech while keeping the notebook resilient."""
-    try:
-        return chart_dispatch_single_tech(data)
-    except Exception as exc:  # pragma: no cover - VIS chart helper
-        context_msg = f" for {context}" if context else ""
-        print(f"chart_dispatch_single_tech failed{context_msg}: {exc}")
-        return None
 
 cap = load_data(data_path, "resource_capacity.csv")
 cap = cap.query("unit=='MW' and not tech_type.isna()")
 cap["additions"] = cap["end_value"] - cap["start_value"]
+cap = cap[~cap['tech_type'].isin(['Flex Demand', 'Distributed Solar'])] # removing flex demand and distributed solar from capacity plots.
+
+# print("Cap shape:", cap.shape)
 gen = load_data(data_path, "generation.csv")
 if gen.empty:
     raise ValueError("Generation data is empty")
+gen = gen[~gen['tech_type'].isin(['Flex Demand', 'Distributed Solar'])] # removing flex demand and distributed solar from capacity plots.
+
+# print("Gen shape:", gen.shape)
+
 tx = load_data(data_path, "transmission.csv")
-
-
 tx["start_region"] = tx["line_name"].str.split("_to_").str[0]
 tx["dest_region"] = tx["line_name"].str.split("_to_").str[1]
 
@@ -83,9 +81,10 @@ tx_exp["dest_region"] = tx_exp["line_name"].str.split("_to_").str[1]
 
 emiss = load_data(data_path, "emissions.csv")
 emiss.loc[emiss["unit"] == "kg", "value"] /= 1000
+# print("Emiss shape:", emiss.shape)
 
-
-dispatch = load_data(data_path, "dispatch.csv")
+dispatch = load_data(data_path, "dispatch.csv", )
+# print("Dispatch shape:", dispatch.shape)
 
 op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
 op_costs_model = load_genx_operations_data(data_path, "costs.csv", model_costs_only=True)
@@ -94,6 +93,11 @@ op_emiss = load_genx_operations_data(
     data_path, "emissions.csv", hourly_data=True
 )
 op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
+# print("Op gen cap shape:", op_gen_cap.shape)
+# print("Op costs model shape:", op_costs_model.shape)
+# print("Op costs shape:", op_costs.shape)
+# print("Op emiss shape:", op_emiss.shape)
+# print("Op nse shape:", op_nse.shape)
 
 from fig_functions_genx_only import WRAPPED_CASE_NAME_MAP
 
@@ -115,11 +119,8 @@ for df in [
         pass
 ```
 
-# Capacity and Generation
-
-## Row
-
-#### Column {.tabset}
+# Capacity
+## Row{.tabset}
 ```{python}
 # | title: Total Capacity
 chart = chart_total_cap(cap, row_var=None, col_var="planning_year")
@@ -136,34 +137,29 @@ chart = chart_total_cap(cap.loc[cap["new_build"] == False, :], row_var=None, col
 chart
 ```
 ```{python}
-# | title: Total Capacity (wide)
-# | fig-cap: "This chart shows total capacity by model and planning year."
-chart = chart_total_cap(cap, row_var=None, col_var="planning_year")
-chart
-```
-```{python}
 # | title: Regional Capacity
-chart = chart_regional_cap(cap,width=alt.Step(40))
+chart = chart_regional_cap(cap)
 chart
 ```
 ```{python}
 # | title: Regional New-build Capacity
-chart = chart_regional_cap(cap.loc[cap["new_build"] == True, :],width=alt.Step(40))
+chart = chart_regional_cap(cap.loc[cap["new_build"] == True, :])
 chart
 ```
 ```{python}
 # | title: Regional Capacity only NY
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
-chart = chart_regional_cap(cap_only_ny,width=alt.Step(40))
+chart = chart_regional_cap(cap_only_ny)
 chart
 ```
 ```{python}
 # | title: Regional New-build Capacity only NY
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
-chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :],width=alt.Step(40))
+chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :])
 chart
 ```
-#### Column {.tabset}
+# Generation
+## Row{.tabset}
 ```{python}
 # | title: Total Generation
 chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
@@ -190,10 +186,9 @@ chart
 chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
 chart
 ```
-
 ```{python}
 # | title: Regional Generation
-chart = chart_regional_gen(gen, cap,width=alt.Step(40))
+chart = chart_regional_gen(gen, cap,)
 chart
 ```
 ```{python}
@@ -201,7 +196,7 @@ chart
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 gen_only_ny = gen.loc[~gen['zone'].isin([1,10,11])] # gen has a zone column with numbers instead of names. 1, 10, 11 are non-NY zones.
 
-chart = chart_regional_gen(gen_only_ny, cap_only_ny,width=alt.Step(40))
+chart = chart_regional_gen(gen_only_ny, cap_only_ny)
 chart
 ```
 
@@ -274,7 +269,7 @@ from itables import init_notebook_mode
 init_notebook_mode(all_interactive=True, connected=True)
 ex_reg_cap_sum
 ```
-
+<!-- 
 # Transmission Expansion
 ## Row
 #### Column {.tabset}
@@ -303,7 +298,8 @@ from fig_functions_genx_only import chart_tx_map, gdf
 
 chart = chart_tx_map(tx_exp, gdf, min_total_expansion=50)
 chart
-```
+``` 
+-->
 
 # Emissions
 ## Row
@@ -323,17 +319,17 @@ chart
 # | title: Emissions intensity
 from fig_functions_genx_only import chart_emissions_intensity
 
-chart = chart_emissions_intensity(emiss, gen, x_var="model", col_var="Region", width=alt.Step(40),)
+chart = chart_emissions_intensity(emiss, gen, x_var="model", col_var="Region")
 chart
 ```
 ```{python}
 # | title: Emissions intensity without PJM and NENG
 from fig_functions_genx_only import chart_emissions_intensity
 emiss_only_ny = emiss[emiss['Region'].str.contains('NY', na=False)]
-chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Region",width=alt.Step(40),)
+chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Region")
 chart
 ```
-# Dispatch
+<!-- # Dispatch
 
 ## Row {.tabset}
 
@@ -347,7 +343,7 @@ data = dispatch.query("planning_year==2030").groupby([
     ], as_index=False)[
     "value"
 ].sum()
-# print(data.head())
+
 chart = chart_dispatch(data)
 chart
 ```
@@ -371,6 +367,7 @@ data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "zon
 chart = chart_dispatch(data)
 chart
 ```
+
 ```{python}
 # | title: 2030 Landbased Wind Dispatch
 wind_dispatch = dispatch.query("resource_name.str.contains('landbasedwind')")
@@ -389,6 +386,7 @@ data = (
 chart = safe_chart_dispatch_single_tech(data, context="2030 Landbased Wind Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Wind Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -403,6 +401,7 @@ data = data.query("tech_type=='Wind'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Wind Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2040 Wind Dispatch
 data = dispatch.query("planning_year==2040").groupby([
@@ -448,6 +447,7 @@ data = data.query("tech_type=='Solar'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Solar Dispatch")
 chart
 ```
+
 ```{python}
 
 # | title: 2030 Nuclear Dispatch
@@ -463,6 +463,7 @@ data = data.query("tech_type=='Nuclear'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Nuclear Dispatch")
 chart
 ```
+
 ```{python}
 
 # | title: 2030 Battery Dispatch
@@ -478,6 +479,7 @@ data = data.query("tech_type=='Battery'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Battery Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 CCS Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -488,11 +490,11 @@ data = dispatch.query("planning_year==2030").groupby([
     ], as_index=False)[
     "value"
 ].sum()
-print(data['tech_type'].unique())
 data = data.query("tech_type=='CCS'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 CCS Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Coal Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -507,6 +509,7 @@ data = data.query("tech_type=='Coal'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Coal Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Distributed Solar Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -521,6 +524,7 @@ data = data.query("tech_type=='Distributed Solar'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Distributed Solar Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Flex Demand Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -535,6 +539,7 @@ data = data.query("tech_type=='Flex Demand'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Flex Demand Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Hydro Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -549,6 +554,7 @@ data = data.query("tech_type=='Hydro'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Hydro Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Natural Gas CC Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -563,6 +569,7 @@ data = data.query("tech_type=='Natural Gas CC'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CC Dispatch")
 chart
 ```
+
 ```{python}
 # | title: 2030 Natural Gas CT Dispatch
 data = dispatch.query("planning_year==2030").groupby([
@@ -576,7 +583,8 @@ data = dispatch.query("planning_year==2030").groupby([
 data = data.query("tech_type=='Natural Gas CT'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CT Dispatch")
 chart
-```
+```  
+-->
 
 # Capacity Factors
 ## Row {.tabset}
@@ -674,6 +682,7 @@ chart = chart_cap_factor_scatter_genx(
 chart
 ```
 
+<!-- 
 # Operational Results
 ## Row {.tabset}
 
@@ -723,3 +732,4 @@ if not op_costs_model.empty:
     chart = chart_cost_mwh(op_costs_model, col_var="planning_year")
     chart
 ```
+-->

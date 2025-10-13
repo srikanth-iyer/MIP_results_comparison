@@ -536,22 +536,31 @@ if __name__ == "__main__":
 
     scenario_to_year_map={
         "p1": 2030,
-        "p2": 2040,
-        "p3": 2050,
+        "p2": 2035,
+        "p3": 2040,
+        "p4": 2050,
     }
-    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_10_days")
+    # all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_10_days")
+
+    # export_all_genx_scenarios(
+    #     all_genx_scenarios_path,
+    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-10-days"),
+    #     scenario_to_year_map=scenario_to_year_map,
+    #     debug_overwrites=True,
+    # )
+
+    # all_genx_scenarios_20_weeks_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_20_weeks")
+    # export_all_genx_scenarios(
+    #     all_genx_scenarios_20_weeks_path,
+    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-20-weeks"),
+    #     scenario_to_year_map=scenario_to_year_map,
+    #     debug_overwrites=True,
+    # )
+    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results")
 
     export_all_genx_scenarios(
         all_genx_scenarios_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-10-days"),
-        scenario_to_year_map=scenario_to_year_map,
-        debug_overwrites=True,
-    )
-
-    all_genx_scenarios_20_weeks_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_20_weeks")
-    export_all_genx_scenarios(
-        all_genx_scenarios_20_weeks_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-20-weeks"),
+        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
         scenario_to_year_map=scenario_to_year_map,
         debug_overwrites=True,
     )
