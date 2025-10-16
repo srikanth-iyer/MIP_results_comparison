@@ -64,13 +64,13 @@ data_path = cwd.parent / folder
 cap = load_data(data_path, "resource_capacity.csv")
 cap = cap.query("unit=='MW' and not tech_type.isna()")
 cap["additions"] = cap["end_value"] - cap["start_value"]
-cap = cap[~cap['tech_type'].isin(['Flex Demand', 'Distributed Solar'])] # removing flex demand and distributed solar from capacity plots.
+cap = cap[~cap['tech_type'].isin(['Flex_Demand'])] # removing flex demand and distributed solar from capacity plots.
 
 # print("Cap shape:", cap.shape)
 gen = load_data(data_path, "generation.csv")
 if gen.empty:
     raise ValueError("Generation data is empty")
-gen = gen[~gen['tech_type'].isin(['Flex Demand', 'Distributed Solar'])] # removing flex demand and distributed solar from capacity plots.
+gen = gen[~gen['tech_type'].isin(['Flex_Demand'])] # removing flex demand and distributed solar from capacity plots.
 
 # print("Gen shape:", gen.shape)
 
@@ -96,7 +96,7 @@ emiss.loc[emiss["unit"] == "kg", "value"] /= 1000
 
 op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
 op_costs_model = load_genx_operations_data(data_path, "costs.csv", model_costs_only=True)
-op_costs = load_genx_operations_data(data_path, "costs.csv")
+# op_costs = load_genx_operations_data(data_path, "costs.csv")
 op_emiss = load_genx_operations_data(
     data_path, "emissions.csv", hourly_data=True
 )
@@ -107,7 +107,7 @@ op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
 # print("Op emiss shape:", op_emiss.shape)
 # print("Op nse shape:", op_nse.shape)
 
-from fig_functions_genx_only import WRAPPED_CASE_NAME_MAP
+from fig_functions_genx_only import WRAPPED_CASE_NAME_MAP, SCENARIO_MAPPING_AND_ORDER
 
 for df in [
     cap,
@@ -115,14 +115,18 @@ for df in [
     emiss,
     # starting_tx,
     # tx_exp,
-    op_costs,
+    # op_costs,
     op_nse,
-    op_costs_model,
+    # op_costs_model,
     op_emiss,
     op_gen_cap
 ]:
     try:
         df["case"] = df["case"].map(WRAPPED_CASE_NAME_MAP)
+    except KeyError:
+        pass
+    try:
+        df["model"] = df["model"].map(SCENARIO_MAPPING_AND_ORDER)
     except KeyError:
         pass
 ```
@@ -599,20 +603,33 @@ chart
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Battery'"),
-    gen.query("tech_type=='Battery'"),
+    cap.query("tech_type=='Li-ion_Battery'"),
+    gen.query("tech_type=='Li-ion_Battery'"),
     # dispatch.query("tech_type=='Battery'"),
     col_var="planning_year",
 )
 chart
 ```
 ```{python}
-# | title: Solar
+# | title: SolarPV
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
+# SolarPV
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Solar'"),
-    gen.query("tech_type=='Solar'"),
+    cap.query("tech_type=='SolarPV'"),
+    gen.query("tech_type=='SolarPV'"),
+    # # dispatch.query("tech_type=='Solar'"),
+    col_var="planning_year",
+    # frac=0.5,
+)
+chart
+```
+```{python}
+# | title: Distributed Solar
+# Distributed Solar
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='Distributed_Solar'"),
+    gen.query("tech_type=='Distributed_Solar'"),
     # # dispatch.query("tech_type=='Solar'"),
     col_var="planning_year",
     # frac=0.5,
@@ -621,12 +638,25 @@ chart
 ```
 
 ```{python}
-# | title: Wind
+# | title: Offshore Wind
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
+# Offshore Wind
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Wind'"),
-    gen.query("tech_type=='Wind'"),
+    cap.query("tech_type=='Offshore_Wind'"),
+    gen.query("tech_type=='Offshore_Wind'"),
+    # dispatch.query("tech_type=='Wind'"),
+    col_var="planning_year",
+    # frac=0.1,
+)
+chart
+```
+```{python}
+# | title: Onshore Wind
+# Onshore Wind
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='Onshore_Wind'"),
+    gen.query("tech_type=='Onshore_Wind'"),
     # dispatch.query("tech_type=='Wind'"),
     col_var="planning_year",
     # frac=0.1,
@@ -638,29 +668,53 @@ chart
 # | title: Natural Gas CC
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
+# Natural Gas CC
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Natural Gas CC'"),
-    gen.query("tech_type=='Natural Gas CC'"),
+    cap.query("tech_type=='NGCC'"),
+    gen.query("tech_type=='NGCC'"),
     # dispatch.query("tech_type=='Natural Gas CC'"),
     col_var="planning_year",
     # frac=0.25,
 )
 chart
 ```
-
 ```{python}
 # | title: Natural Gas CT
-from fig_functions_genx_only import chart_cap_factor_scatter_genx
-
+# Natural Gas CT
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Natural Gas CT'"),
-    gen.query("tech_type=='Natural Gas CT'"),
+    cap.query("tech_type=='NGCT'"),
+    gen.query("tech_type=='NGCT'"),
     # dispatch.query("tech_type=='Natural Gas CT'"),
     col_var="planning_year",
     # frac=0.25,
 )
 chart
 ```
+```{python}
+# | title: Natural Gas ST
+# Natural Gas ST
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='NGST'"),
+    gen.query("tech_type=='NGST'"),
+    # dispatch.query("tech_type=='Natural Gas CT'"),
+    col_var="planning_year",
+    # frac=0.25,
+)
+chart
+```
+```{python}
+# | title: Natural Gas CCS
+# Natural Gas CCS
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='NGCCS'"),
+    gen.query("tech_type=='NGCCS'"),
+    # dispatch.query("tech_type=='Natural Gas CT'"),
+    col_var="planning_year",
+    # frac=0.25,
+)
+chart
+```
+
 ```{python}
 # | title: Coal
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
@@ -679,63 +733,11 @@ chart
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
 
 chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
-    gen.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
+    cap.query("tech_type=='Hydro'"),
+    gen.query("tech_type=='Hydro'"),
     # dispatch.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
     col_var="planning_year",
     # frac=0.5,
 )
 chart
 ```
-
-<!-- 
-# Operational Results
-## Row {.tabset}
-
-```{python}
-# | title: Operational costs (model)
-
-chart = chart_op_cost(op_costs_model)
-chart
-```
-```{python}
-# | title: Operational costs (society)
-
-chart = chart_op_cost(op_costs)
-chart
-```
-
-```{python}
-# | title: Generation
-if not op_gen_cap.empty:
-    op_gen_cap_generation = op_gen_cap.query(
-        "~tech_type.str.contains('Other')"
-    )
-    op_gen = op_gen_cap_generation[
-        ["tech_type", "planning_year", "model", "AnnualSum", "resource_name"]
-    ].rename(columns={"AnnualSum": "value"})
-    op_cap = op_gen_cap_generation[
-        ["tech_type", "planning_year", "model", "Capacity", "resource_name"]
-    ].rename(columns={"Capacity": "end_value"})
-    op_cap["unit"] = "MW"
-
-    chart = chart_total_gen(op_gen, op_cap)
-    chart
-```
-
-```{python}
-# | title: Emissions by zone
-
-chart = chart_emissions(op_emiss,col_var="planning_year")
-chart
-```
-
-```{python}
-# | title: Power cost
-#from fig_functions_genx_only import chart_cost_mwh
-
-#if not op_costs_model.empty:
- #   chart = chart_cost_mwh(op_costs_model, col_var="planning_year")
- #   chart
-```
--->
