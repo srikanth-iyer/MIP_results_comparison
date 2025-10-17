@@ -54,9 +54,6 @@ from fig_functions_genx_only import (
 # | output: false
 
 alt.renderers.enable("html")
-# Configure Altair to embed data directly in HTML (no separate files)
-# alt.renderers.set_embed_options(renderer="svg", scaleFactor=1)
-# alt.data_transformers.enable("json")
 alt.data_transformers.disable_max_rows()
 cwd = Path.cwd()
 data_path = cwd.parent / folder
@@ -91,7 +88,7 @@ emiss = load_data(data_path, "emissions.csv")
 emiss.loc[emiss["unit"] == "kg", "value"] /= 1000
 # print("Emiss shape:", emiss.shape)
 
-# dispatch = load_data(data_path, "dispatch.csv", )
+dispatch = load_data(data_path, "dispatch.csv", )
 # print("Dispatch shape:", dispatch.shape)
 
 op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
@@ -338,44 +335,45 @@ chart = chart_emissions_intensity(emiss_only_ny, gen, x_var="model", col_var="Re
 chart
 ```
 
-<!-- 
+ 
 # Dispatch
 
 ## Row {.tabset}
 
+### Overall Dispatch {.tabset}
 ```{python}
 # | title: 2030 Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
 
-# chart = chart_dispatch(data)
-# chart
+chart = chart_dispatch(data)
+chart
 ```
 
 ```{python}
 # | title: 2040 Dispatch
-# data = (
-#     dispatch.query("planning_year==2040")
-#     .groupby(["model", "tech_type", "zone", "hour"], as_index=False)["value"]
-#     .sum()
-# )
-# chart = chart_dispatch(data)
-# chart
+data = (
+    dispatch.query("planning_year==2040")
+    .groupby(["model", "tech_type", "zone", "hour"], as_index=False)["value"]
+    .sum()
+)
+chart = chart_dispatch(data)
+chart
 ```
 
 ```{python}
 # | title: 2050 Dispatch
-# data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "zone", "hour"], as_index=False)[
-#     "value"
-# ].sum()
-# chart = chart_dispatch(data)
-# chart
+data = dispatch.query("planning_year==2050").groupby(["model", "tech_type", "zone", "hour"], as_index=False)[
+    "value"
+].sum()
+chart = chart_dispatch(data)
+chart
 ```
 
 ```{python}
@@ -397,127 +395,344 @@ chart
 # chart
 ```
 
+### Offshore Wind {.tabset}
 ```{python}
-# | title: 2030 Wind Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Wind'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Wind Dispatch")
-# chart
+# | title: 2030 Offshore Wind Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Offshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Offshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+```{python}
+# | title: 2040 Offshore Wind Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Offshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Offshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+```{python}
+# | title: 2050 Offshore Wind Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Offshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Offshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+
+### Onshore Wind {.tabset}
+```{python}
+# | title: 2030 Onshore Wind Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Onshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Onshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+```{python}
+# | title: 2040 Onshore Wind Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Onshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Onshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
 ```
 
 ```{python}
-# | title: 2040 Wind Dispatch
-# data = dispatch.query("planning_year==2040").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Wind'")
-# chart = safe_chart_dispatch_single_tech(data, context="2040 Wind Dispatch")
-# chart
+# | title: 2050 Onshore Wind Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Onshore_Wind'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Onshore Wind Dispatch")
+# chart = chart_dispatch(data)
+chart
 ```
 
-```{python}
-# | title: 2050 Wind Dispatch
-# data = dispatch.query("planning_year==2050").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Wind'")
-# chart = safe_chart_dispatch_single_tech(data, context="2050 Wind Dispatch")
-# chart
-```
-
+### Solar {.tabset}
 ```{python}
 
-# | title: 2030 Solar Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Solar'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Solar Dispatch")
-# chart
+# | title: 2030 SolarPV Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='SolarPV'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 SolarPV Dispatch")
+# chart = chart_dispatch(data)
+chart
 ```
+```{python}
 
+# | title: 2040 SolarPV Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='SolarPV'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 SolarPV Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+```{python}
+
+# | title: 2050 SolarPV Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='SolarPV'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 SolarPV Dispatch")
+# chart = chart_dispatch(data)
+chart
+```
+### Nuclear {.tabset}
 ```{python}
 
 # | title: 2030 Nuclear Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Nuclear'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Nuclear Dispatch")
-# chart
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Nuclear'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Nuclear Dispatch")
+chart
+```
+```{python}
+
+# | title: 2040 Nuclear Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Nuclear'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Nuclear Dispatch")
+chart
+```
+```{python}
+
+# | title: 2050 Nuclear Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Nuclear'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Nuclear Dispatch")
+chart
 ```
 
+### Battery {.tabset}
 ```{python}
 
 # | title: 2030 Battery Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Battery'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Battery Dispatch")
-# chart
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Li-ion_Battery'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Li-ion_Battery Dispatch")
+chart
 ```
-
 ```{python}
-# | title: 2030 CCS Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='CCS'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 CCS Dispatch")
-# chart
-```
 
+# | title: 2040 Battery Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Li-ion_Battery'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Li-ion_Battery Dispatch")
+chart
+```
+```{python}
+
+# | title: 2050 Battery Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Li-ion_Battery'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Li-ion_Battery Dispatch")
+chart
+```
+### Hydro {.tabset}
+```{python}
+# | title: 2030 Hydro Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Hydro'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Hydro Dispatch")
+chart
+```
+### Coal {.tabset}
 ```{python}
 # | title: 2030 Coal Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Coal'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Coal Dispatch")
-# chart
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Coal'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Coal Dispatch")
+chart
+```
+```{python}
+# | title: 2040 Coal Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Coal'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Coal Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Coal Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Coal'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Coal Dispatch")
+chart
+```
+
+### NGCCS {.tabset}
+```{python}
+# | title: 2030 NGCCS Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCCS'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 NGCCS Dispatch")
+chart
+```
+```{python}
+# | title: 2040 NGCCS Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCCS'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 NGCCS Dispatch")
+chart
+```
+```{python}
+# | title: 2050 NGCCS Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCCS'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 NGCCS Dispatch")
+chart
 ```
 
 ```{python}
@@ -550,51 +765,92 @@ chart
 # chart
 ```
 
-```{python}
-# | title: 2030 Hydro Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Hydro'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Hydro Dispatch")
-# chart
-```
-
+### NGCC {.tabset}
 ```{python}
 # | title: 2030 Natural Gas CC Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Natural Gas CC'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CC Dispatch")
-# chart
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCC'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CC Dispatch")
+chart
 ```
-
+```{python}
+# | title: 2040 Natural Gas CC Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCC'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Natural Gas CC Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Natural Gas CC Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCC'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Natural Gas CC Dispatch")
+chart
+```
+### NGCT {.tabset}
 ```{python}
 # | title: 2030 Natural Gas CT Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Natural Gas CT'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CT Dispatch")
-# chart
-```  
--->
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCT'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Natural Gas CT Dispatch")
+chart
+```
+```{python}
+# | title: 2040 Natural Gas CT Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCT'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Natural Gas CT Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Natural Gas CT Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='NGCT'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Natural Gas CT Dispatch")
+chart
+```
 
 # Capacity Factors
 ## Row {.tabset}
