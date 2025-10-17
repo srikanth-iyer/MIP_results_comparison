@@ -156,13 +156,13 @@ chart = chart_regional_cap(cap.loc[cap["new_build"] == True, :])
 chart
 ```
 ```{python}
-# | title: Regional Capacity only NY
+# | title: Regional Capacity (only NY)
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 chart = chart_regional_cap(cap_only_ny)
 chart
 ```
 ```{python}
-# | title: Regional New-build Capacity only NY
+# | title: Regional New-build Capacity (only NY)
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :])
 chart
@@ -196,7 +196,7 @@ chart = chart_regional_gen(gen, cap,)
 chart
 ```
 ```{python}
-# | title: Regional Generation only NY
+# | title: Regional Generation (only NY)
 cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 gen_only_ny = gen.loc[~gen['zone'].isin([1,10,11])] # gen has a zone column with numbers instead of names. 1, 10, 11 are non-NY zones.
 

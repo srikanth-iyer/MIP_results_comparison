@@ -149,4 +149,5 @@ SCENARIO_MAPPING_AND_ORDER = {
     "And_No_IRA": "And No IRA",
     "And_Optimistic": "And Optimistic",
     "And_Transmission_Constrained": "And Transmission Constrained",
+    "Or_Big_Wires_Act": "Or Big Wires Act",
 }
