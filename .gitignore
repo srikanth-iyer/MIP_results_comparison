@@ -151,33 +151,14 @@ env.yml
 /README_files/**/*
 
 # GenX results folder
-/genx_results/
-/genx_results/**/*
-/20-week-genx/
-/20-week-genx/**/*
-/genx-baseline/
-/genx-baseline/**/*
-/genx_baseline_results/
-/genx_baseline_results/**/*
 /genx_scenarios_results/
 /genx_scenarios_results/**/*
 /genx-scenarios/
 /genx-scenarios/**/*
-/genx_scenarios_results_10_days/
-/genx_scenarios_results_10_days/**/*
-/genx-scenarios-10-days/
-/genx-scenarios-10-days/**/*
-/genx_scenarios_results_20_weeks/
-/genx_scenarios_results_20_weeks/**/*
-/genx-scenarios-20-weeks/
-/genx-scenarios-20-weeks/**/*
-/genx_scenarios_results_all/
-/genx_scenarios_results_all/**/*
-/genx-scenarios-all/
-/genx-scenarios-all/**/*
+
 # Ignore all files named dispatch.csv.csv
 **/dispatch.csv.csv
 dispatch.csv.csv
 
-# altair data files
-# altair-data*
+# temp workbench files
+temp_*.ipynb
