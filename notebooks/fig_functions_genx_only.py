@@ -166,7 +166,7 @@ TECH_MAPPING_FROM_KAVI={
 
 
 # color_map = { # from Kavi
-# _COLOR_MAP={
+# _COLOR_MAP_from_kavi={
 #     "Other_Renewables": "#800080",  
 #     "Existing_NG": "#ff7f0e",      
 #     "None": "#FF0000",            

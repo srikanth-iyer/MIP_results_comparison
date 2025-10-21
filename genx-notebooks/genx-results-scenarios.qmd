@@ -47,9 +47,11 @@ from fig_functions_genx_only import (
     chart_op_nse,
     chart_op_emiss,
     chart_dispatch_single_tech,
-    safe_chart_dispatch_single_tech
+    safe_chart_dispatch_single_tech,
+    chart_cap_factor_scatter_genx
 )
 ```
+
 ```{python}
 # | output: false
 
@@ -167,8 +169,11 @@ cap_only_ny = cap[cap['zone'].str.contains('NY', na=False)]
 chart = chart_regional_cap(cap_only_ny.loc[cap_only_ny["new_build"] == True, :])
 chart
 ```
+
 # Generation
+
 ## Row{.tabset}
+
 ```{python}
 # | title: Total Generation
 chart = chart_total_gen(gen, cap, row_var=None, col_var="planning_year")
@@ -376,25 +381,6 @@ chart = chart_dispatch(data)
 chart
 ```
 
-```{python}
-# | title: 2030 Landbased Wind Dispatch
-# wind_dispatch = dispatch.query("resource_name.str.contains('landbasedwind')")
-# wind_dispatch["cluster"] = wind_dispatch["resource_name"].str.split("moderate_").str[-1]
-# if wind_dispatch["cluster"].nunique() <= 3:
-#     by = ["model", "tech_type", "cluster", "zone", "hour"]
-# else:
-#     by = ["model", "tech_type", "zone", "hour"]
-
-# data = (
-#     wind_dispatch.query("planning_year==2030")
-#     .groupby(by, as_index=False)["value"]
-#     .sum()
-# )
-
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Landbased Wind Dispatch")
-# chart
-```
-
 ### Offshore Wind {.tabset}
 ```{python}
 # | title: 2030 Offshore Wind Dispatch
@@ -539,6 +525,7 @@ chart = safe_chart_dispatch_single_tech(data, context="2050 SolarPV Dispatch")
 # chart = chart_dispatch(data)
 chart
 ```
+
 ### Nuclear {.tabset}
 ```{python}
 
@@ -632,6 +619,7 @@ data = data.query("tech_type=='Li-ion_Battery'")
 chart = safe_chart_dispatch_single_tech(data, context="2050 Li-ion_Battery Dispatch")
 chart
 ```
+
 ### Hydro {.tabset}
 ```{python}
 # | title: 2030 Hydro Dispatch
@@ -647,6 +635,7 @@ data = data.query("tech_type=='Hydro'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Hydro Dispatch")
 chart
 ```
+
 ### Coal {.tabset}
 ```{python}
 # | title: 2030 Coal Dispatch
@@ -735,36 +724,6 @@ chart = safe_chart_dispatch_single_tech(data, context="2050 NGCCS Dispatch")
 chart
 ```
 
-```{python}
-# | title: 2030 Distributed Solar Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Distributed Solar'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Distributed Solar Dispatch")
-# chart
-```
-
-```{python}
-# | title: 2030 Flex Demand Dispatch
-# data = dispatch.query("planning_year==2030").groupby([
-#     "model", 
-#     "tech_type", 
-#     "zone", 
-#     "hour"
-#     ], as_index=False)[
-#     "value"
-# ].sum()
-# data = data.query("tech_type=='Flex Demand'")
-# chart = safe_chart_dispatch_single_tech(data, context="2030 Flex Demand Dispatch")
-# chart
-```
-
 ### NGCC {.tabset}
 ```{python}
 # | title: 2030 Natural Gas CC Dispatch
@@ -808,6 +767,7 @@ data = data.query("tech_type=='NGCC'")
 chart = safe_chart_dispatch_single_tech(data, context="2050 Natural Gas CC Dispatch")
 chart
 ```
+
 ### NGCT {.tabset}
 ```{python}
 # | title: 2030 Natural Gas CT Dispatch
@@ -854,18 +814,6 @@ chart
 
 # Capacity Factors
 ## Row {.tabset}
-```{python}
-# | title: Battery
-from fig_functions_genx_only import chart_cap_factor_scatter_genx
-
-chart = chart_cap_factor_scatter_genx(
-    cap.query("tech_type=='Li-ion_Battery'"),
-    gen.query("tech_type=='Li-ion_Battery'"),
-    # dispatch.query("tech_type=='Battery'"),
-    col_var="planning_year",
-)
-chart
-```
 ```{python}
 # | title: SolarPV
 from fig_functions_genx_only import chart_cap_factor_scatter_genx
