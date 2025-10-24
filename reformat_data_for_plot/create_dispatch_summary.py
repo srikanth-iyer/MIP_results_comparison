@@ -3,7 +3,7 @@ from typing import Union
 
 import pandas as pd
 
-from create_time_weights import create_time_weights
+from .create_time_weights import create_time_weights
 
 
 def create_dispatch_summary(
@@ -40,6 +40,8 @@ def create_dispatch_summary(
                     are missing, an informative error is raised.
     """
 
+    import warnings
+
     genx_scenario_results_path = Path(genx_scenario_results_path)
     output_folder_path = Path(output_folder_path)
 
@@ -59,10 +61,13 @@ def create_dispatch_summary(
     weights_df = pd.read_csv(weights_path)
 
     # Identify label column (expected to be 'Resource')
-    import warnings
     label_col = power_df.columns[0]
     if str(label_col).lower() != "resource":
-        warnings.warn(f"First column in power.csv is '{label_col}', expected 'Resource'. Proceeding but results may be incorrect.")
+        warnings.warn(
+            "First column in power.csv is '{label_col}', expected 'Resource'. Proceeding but results may be incorrect.".format(
+                label_col=label_col
+            )
+        )
 
     # Extract resource columns (exclude the label column and 'Total' aggregate column if present)
     resource_cols = [c for c in power_df.columns if c not in (label_col, "Total")]
@@ -86,9 +91,6 @@ def create_dispatch_summary(
     if not {"Time", "Weight"}.issubset(set(weights_df.columns)):
         raise ValueError("time_weights.csv must contain columns 'Time' and 'Weight'")
     selected_hours = weights_df.loc[weights_df["Weight"] == weight_value, "Time"].astype(int).tolist()
-
-    # Debug print of selected time periods
-    # print(f"Selected time periods (Weight == {weight_value}): {selected_hours}")
 
     # Filter time rows to only selected hours
     time_rows = time_rows[time_rows["hour"].isin(selected_hours)]

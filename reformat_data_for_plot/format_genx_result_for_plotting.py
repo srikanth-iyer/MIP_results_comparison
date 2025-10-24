@@ -1,12 +1,19 @@
+import argparse
 from pathlib import Path
 import shutil
-from build_generators_data import build_generators_data
-from create_resource_capacity import create_resource_capacity
-from create_emissions_summary import create_emissions_summary
-from create_generation_summary import create_generation_summary   
-from create_dispatch_summary import create_dispatch_summary
+import sys
+
+# Add parent directory to path so imports work when running as script
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import pandas as pd
 
+from reformat_data_for_plot.build_generators_data import build_generators_data
+from reformat_data_for_plot.check_tech_map_coverage_in_generators_data import check_tech_map_coverage
+from reformat_data_for_plot.create_dispatch_summary import create_dispatch_summary
+from reformat_data_for_plot.create_emissions_summary import create_emissions_summary
+from reformat_data_for_plot.create_generation_summary import create_generation_summary
+from reformat_data_for_plot.create_resource_capacity import create_resource_capacity
 
 
 def create_annual_demand_csv(
@@ -16,15 +23,8 @@ def create_annual_demand_csv(
     *,
     verbose: bool = False,
 ) -> None:
-    """
-    Create an annual_demand.csv file from the Demand_data.csv in the GenX scenario.
+    """Create an annual_demand.csv using the scenario demand inputs."""
 
-    Args:
-        scenario_path: Path to the GenX scenario folder containing 'system/Demand_data.csv'.
-        output_path: Path where the annual_demand.csv will be saved.
-        planning_year: Planning year to annotate in the output rows.
-        verbose: When True, log a message after writing the CSV (defaults to False).
-    """
     demand_data_file = scenario_path / "system" / "Demand_data.csv"
     if not demand_data_file.exists():
         raise FileNotFoundError(f"Demand data file not found: {demand_data_file}")
@@ -60,26 +60,13 @@ def export_genx_for_plotting(
     debug_overwrites: bool = False,
     verbose: bool = False,
 ) -> tuple[Path, list[dict[str, str | None]]]:
-    """
-    Prepare GenX scenario outputs for plotting by copying inputs/results and building summaries.
+    """Prepare GenX scenario outputs for plotting by copying inputs/results and building summaries."""
 
-    Args:
-        scenario_data_path: Path to the root folder containing all GenX scenarios (e.g., .../genx_results).
-        scenario_name: Name of the scenario folder inside scenario_data_path.
-        output_folder_path: Destination root where op_inputs and results_summary will be written.
-        scenario_to_year_map: Mapping from period label (e.g., "p1") to planning year.
-    debug_overwrites: When True, produce overwrite debug reports from generator builds.
-        verbose: When False, suppress informational logging (warnings still print). Defaults to False.
-
-    Returns:
-        Tuple of (resource_capacity_csv_path, warning_messages).
-    """
     genx_result_scenario_path = scenario_data_path / scenario_name
     model_name = scenario_name
 
     if scenario_to_year_map is None:
         scenario_to_year_map = {"p1": 2030}
-    # Normalize keys for case-insensitive lookup
     scenario_to_year_map = {k.lower(): v for k, v in scenario_to_year_map.items()}
 
     warnings: list[dict[str, str | None]] = []
@@ -184,11 +171,6 @@ def export_genx_for_plotting(
             target_results_dir.mkdir(parents=True, exist_ok=True)
         return target_results_dir
 
-    # Discover Inputs_p* period directories. Check the scenario root first,
-    # then (case-insensitively) an `Inputs` subfolder if present. Stop at the
-    # first parent that contains matching Inputs_p* folders. If none are found,
-    # fall back to treating the scenario root as a single-period case.
-    # Find an Inputs subfolder if it exists (case-insensitive)
     inputs_folder = None
     for p in genx_result_scenario_path.iterdir():
         if p.is_dir() and p.name.lower() == "inputs":
@@ -250,6 +232,7 @@ def export_genx_for_plotting(
     emissions_frames = []
     generation_frames = []
     dispatch_frames = []
+    generators_csv_entries: list[tuple[Path, str, str | None, str | None]] = []
 
     for period_dir in period_dirs:
         if use_single_period:
@@ -283,25 +266,21 @@ def export_genx_for_plotting(
             results_mapping=results_period_dirs,
         )
 
-        # Copy policy files specific to this period
         for filename in policy_files:
             file_path = period_dir / "policies" / filename
             if file_path.exists():
                 shutil.copy2(file_path, op_inputs_path / filename)
 
-        # Copy select system files for this period
         for source_name, dest_name in system_files:
             source_file = period_dir / "system" / source_name
             if source_file.exists():
                 shutil.copy2(source_file, op_inputs_path / dest_name)
 
-        # Copy select results files into Results subfolder
         for filename in results_files:
             file_path = period_results_dir / filename
             if file_path.exists():
                 shutil.copy2(file_path, results_subfolder / filename)
 
-        # Build generators data for this period
         generators_data_file = op_inputs_path / "Generators_data.csv"
         try:
             build_generators_data(
@@ -321,8 +300,10 @@ def export_genx_for_plotting(
                 period_name=period_name,
                 period_key=period_key,
             )
+        else:
+            if generators_data_file.exists():
+                generators_csv_entries.append((generators_data_file, model_name, period_name, period_key))
 
-        # Annual demand aggregation
         annual_tmp_path = results_summary_path / f"annual_demand_{period_key}.csv"
         try:
             create_annual_demand_csv(
@@ -347,7 +328,6 @@ def export_genx_for_plotting(
 
         case_label = f"Results_{period_key}"
 
-        # Resource capacity summary
         try:
             resource_capacity_path = create_resource_capacity(
                 model_name=model_name,
@@ -366,7 +346,6 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
-        # Emissions summary
         try:
             emissions_path = create_emissions_summary(
                 genx_scenario_results_path=period_dir,
@@ -384,7 +363,6 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
-        # Generation summary
         try:
             generation_path = create_generation_summary(
                 genx_scenario_results_path=period_dir,
@@ -402,7 +380,6 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
-        # Dispatch summary
         try:
             dispatch_path = create_dispatch_summary(
                 genx_scenario_results_path=period_dir,
@@ -421,7 +398,18 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
-    # Aggregate and overwrite final summary files
+    if generators_csv_entries:
+        coverage_output = output_folder_path / f"incomplete_tech_mapping_{model_name}.csv"
+        check_tech_map_coverage(
+            generators_csv_entries,
+            output_csv=coverage_output,
+            warning_callback=lambda message, scenario, p_name, p_key: record_warning(
+                message,
+                period_name=p_name,
+                period_key=p_key,
+            ),
+        )
+
     if annual_demand_frames:
         annual_demand = pd.concat(annual_demand_frames, ignore_index=True)
         annual_demand.to_csv(results_summary_path / "annual_demand.csv", index=False)
@@ -458,19 +446,8 @@ def export_all_genx_scenarios(
     debug_overwrites: bool = False,
     verbose: bool = False,
 ) -> dict[str, Path]:
-    """
-    Iterate through all scenario folders in scenarios_root and export each for plotting.
+    """Iterate through all scenario folders in scenarios_root and export each for plotting."""
 
-    Args:
-        scenarios_root: Path containing one subfolder per GenX scenario (e.g., .../genx_results).
-        output_folder_path: Destination root where outputs will be written.
-        scenario_to_year_map: Optional mapping from period label to planning year.
-        debug_overwrites: When True, generator builds write overwrite debug reports.
-        verbose: When False, suppress informational logging (warnings still print). Defaults to False.
-
-    Returns:
-        Mapping from scenario name to the created resource capacity CSV path (only successful ones).
-    """
     scenario_dirs = sorted([p for p in scenarios_root.iterdir() if p.is_dir()])
     print(f"Detected {len(scenario_dirs)} scenario folder(s) in {scenarios_root}")
 
@@ -486,6 +463,7 @@ def export_all_genx_scenarios(
             message = entry.get("message") or ""
             groups.setdefault(str(period_label), []).append(message)
         return groups
+
     total = len(scenario_dirs)
     for idx, scenario_dir in enumerate(scenario_dirs, start=1):
         scenario_name = scenario_dir.name
@@ -511,7 +489,7 @@ def export_all_genx_scenarios(
                         print(f"  - {scenario_name} / {period_label}:")
                         for msg in grouped[period_label]:
                             print(f"      • {msg}")
-        except Exception as e:  # keep going on failure
+        except Exception as e:
             print(f"\n\n[{idx}/{total}] FAILED '{scenario_name}': {e}")
         if verbose:
             print("=" * 80)
@@ -533,34 +511,59 @@ def export_all_genx_scenarios(
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Export GenX scenarios so they can be used for plotting."
+    )
 
-    scenario_to_year_map={
+    repo_root = Path(__file__).resolve().parent.parent
+    default_input_root = repo_root / "genx_scenarios_results"
+    default_output_folder = repo_root / "genx-scenarios"
+
+    parser.add_argument(
+        "--input-folder",
+        dest="input_path",
+        type=Path,
+        default=default_input_root,
+        help="Path to the root folder containing GenX scenario results. Defaults to 'genx_scenarios_results' relative to the repository root.",
+    )
+    parser.add_argument(
+        "--output-folder",
+        type=Path,
+        default=default_output_folder,
+        help="Path to the folder where processed scenarios are written. Defaults to 'genx-scenarios' relative to the repository root.",
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Enable verbose logging for troubleshooting.",
+    )
+    parser.add_argument(
+        "--debug-overwrites",
+        dest="debug_overwrites",
+        action="store_true",
+        default=False,
+        help="Allow overwriting generated files when they already exist (default: disabled).",
+    )
+
+    args = parser.parse_args()
+
+    scenario_to_year_map = {
         "p1": 2030,
         "p2": 2035,
         "p3": 2040,
         "p4": 2050,
     }
-    # all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_10_days")
 
-    # export_all_genx_scenarios(
-    #     all_genx_scenarios_path,
-    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-10-days"),
-    #     scenario_to_year_map=scenario_to_year_map,
-    #     debug_overwrites=True,
-    # )
+    input_root = args.input_path.expanduser()
+    output_folder = args.output_folder.expanduser()
 
-    # all_genx_scenarios_20_weeks_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results_20_weeks")
-    # export_all_genx_scenarios(
-    #     all_genx_scenarios_20_weeks_path,
-    #     Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios-20-weeks"),
-    #     scenario_to_year_map=scenario_to_year_map,
-    #     debug_overwrites=True,
-    # )
-    all_genx_scenarios_path = Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx_scenarios_results")
+    if not input_root.exists():
+        parser.error(f"Input root not found: {input_root}")
 
     export_all_genx_scenarios(
-        all_genx_scenarios_path,
-        Path(r"C:\Users\Sriki\MIP_results_comparison-1\genx-scenarios"),
+        input_root,
+        output_folder,
         scenario_to_year_map=scenario_to_year_map,
-        debug_overwrites=True,
+        debug_overwrites=args.debug_overwrites,
+        verbose=args.verbose,
     )

@@ -22,23 +22,8 @@ def map_capacity_to_resources(
     infer_resource_col: bool = True,
     error_on_duplicates: bool = True,
 ) -> Tuple[pd.Series, pd.Series]:
-    """Return start and end capacity Series aligned to ``resource_names``.
+    """Return start and end capacity Series aligned to ``resource_names``."""
 
-    Parameters
-    - resource_names: Iterable of resource identifiers to map.
-    - capacity_df: DataFrame containing at least start/end capacity columns and a resource column.
-    - start_col: Column name for starting capacity. Default 'StartCap'.
-    - end_col: Column name for ending capacity. Default 'EndCap'.
-    - resource_col: Column name for resource identifiers. If None, inference will run when enabled.
-    - infer_resource_col: If True and ``resource_col`` not found, attempt to infer from common variants.
-    - error_on_duplicates: If True, raise ValueError when duplicate resource rows found.
-
-    Returns
-    - (start_capacity_series, end_capacity_series) mapped to the provided resource_names order.
-
-    Raises
-    - ValueError: On missing required columns, ambiguous resource column, or duplicates when disallowed.
-    """
     resource_series = pd.Series(list(resource_names), name="resource_name")
 
     if resource_col is not None and resource_col not in capacity_df.columns:
@@ -108,27 +93,7 @@ def create_resource_capacity(
     capacity_factor_filename: str = "capacityfactor.csv",
     output_filename: str = "resource_capacity.csv",
 ) -> Path:
-    """
-    Build a resource capacity dataframe and write it to CSV.
-
-    Parameters
-    - model_name: Model identifier (e.g., "GenX").
-    - case_name: Case identifier (e.g., "p1").
-    - scenario_folder_path: Path to GenX Inputs folder that contains generators.csv.
-    - genx_scenario_results_path: Path to the scenario folder that contains results/capacity.csv.
-    - results_summary_folder_path: Output directory where the CSV will be written.
-    - planning_year: Planning year to stamp on the output rows. Default 2030.
-    - unit: Capacity unit. Default "MW".
-    - generators_filename: Name of the generators file. Default "generators.csv".
-    - capacity_filename: Name of the capacity results file. Default "capacity.csv".
-    - output_filename: Name of the output CSV file. Default "resource_capacity.csv".
-
-    Returns
-    - Path to the written CSV file.
-
-    Notes
-    - Capacity alignment uses the local helper `map_capacity_to_resources` to avoid order-dependent mismatches.
-    """
+    """Build a resource capacity dataframe and write it to CSV."""
 
     scenario_folder_path = Path(scenario_folder_path)
     genx_scenario_results_path = Path(genx_scenario_results_path)
@@ -250,4 +215,3 @@ if __name__ == "__main__":
         unit="MW",
     )
     print(f"Wrote resource capacity CSV to: {output}")
-

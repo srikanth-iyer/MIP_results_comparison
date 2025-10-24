@@ -94,20 +94,7 @@ def create_time_weights(
     overwrite: bool = True,
     verbose: bool = False,
 ) -> Path:
-    """Rebuild the GenX ``time_weights.csv`` file from representative-period data.
-
-    Args:
-        genx_scenario_results_path: Path to the root of an exported GenX scenario. The
-            directory must contain ``system`` and ``results`` subdirectories.
-        output_path: Optional explicit path for the output CSV. Defaults to
-            ``<genx_scenario_results_path>/results/time_weights.csv``.
-        overwrite: When ``False``, an existing output file will be preserved and simply
-            returned. Defaults to ``True``.
-        verbose: Emit an informational message describing the write location when ``True``.
-
-    Returns:
-        The path to the generated ``time_weights.csv`` file.
-    """
+    """Rebuild the GenX ``time_weights.csv`` file from representative-period data."""
 
     scenario_path = Path(genx_scenario_results_path)
     if not scenario_path.exists():
