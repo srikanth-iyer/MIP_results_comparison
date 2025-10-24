@@ -156,10 +156,16 @@ _TECH_MAP = sort_nested_dict(_TECH_MAP)
 
 
 def tech_to_type(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()  # avoid fragmented frames before mutating
     # Create dictionaries to map unique resource names to their tech types and existence
     tech_type_map = {}
     # existence_map = {}
-
+    if "resource_name" not in df.columns:
+        for column_str in df.columns:
+            if "resource" in column_str.lower():
+                # add a new column instead of renaming the existing one
+                df["resource_name"] = df[column_str].copy()
+                break
     # Get unique resource names
     unique_resource_names = sorted(
         df["resource_name"].unique().tolist(), key=lambda x: len(str(x[0]))
