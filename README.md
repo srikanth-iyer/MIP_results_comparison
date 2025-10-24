@@ -12,8 +12,8 @@ conda activate mip_figures
 # Or using pip in an existing Python 3.10+ environment
 pip install -r requirements.txt
 
-# Export GenX scenario results with default paths
-python reformat_data_for_plot/format_genx_result_for_plotting.py
+# Export GenX scenario results with default paths (default input: (genx_scenarios_results); default output:(genx-scenarios))
+python reformat_data_for_plot/format_genx_result_for_plotting.py 
 
 # Or specify custom input and output folders
 python reformat_data_for_plot/format_genx_result_for_plotting.py --input path/to/scenarios --output-folder path/to/output
