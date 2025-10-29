@@ -152,8 +152,8 @@ env.yml
 
 # GenX results folder
 # inputs
-/genx_scenarios_results/
-/genx_scenarios_results/**/*
+/genx_scenarios_inputs/
+/genx_scenarios_inputs/**/*
 # reformatted data for plotting
 /genx-scenarios/
 /genx-scenarios/**/*
