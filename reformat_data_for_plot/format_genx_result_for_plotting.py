@@ -516,7 +516,7 @@ if __name__ == "__main__":
     )
 
     repo_root = Path(__file__).resolve().parent.parent
-    default_input_root = repo_root / "genx_scenarios_results"
+    default_input_root = repo_root / "genx_scenarios_inputs"
     default_output_folder = repo_root / "genx-scenarios"
 
     parser.add_argument(
@@ -524,7 +524,7 @@ if __name__ == "__main__":
         dest="input_path",
         type=Path,
         default=default_input_root,
-        help="Path to the root folder containing GenX scenario results. Defaults to 'genx_scenarios_results' relative to the repository root.",
+        help="Path to the root folder containing GenX scenario results. Defaults to 'genx_scenarios_inputs' relative to the repository root.",
     )
     parser.add_argument(
         "--output-folder",

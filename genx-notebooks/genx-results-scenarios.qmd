@@ -635,6 +635,34 @@ data = data.query("tech_type=='Hydro'")
 chart = safe_chart_dispatch_single_tech(data, context="2030 Hydro Dispatch")
 chart
 ```
+```{python}
+# | title: 2040 Hydro Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Hydro'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Hydro Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Hydro Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Hydro'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Hydro Dispatch")
+chart
+```
 
 ### Coal {.tabset}
 ```{python}
@@ -812,6 +840,94 @@ chart = safe_chart_dispatch_single_tech(data, context="2050 Natural Gas CT Dispa
 chart
 ```
 
+### Hydrogen {.tabset}
+```{python}
+# | title: 2030 Hydrogen Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='New_zero_carbon_fuel'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Hydrogen Dispatch")
+chart
+```
+```{python}
+# | title: 2040 Hydrogen Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='New_zero_carbon_fuel'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Hydrogen Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Hydrogen Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='New_zero_carbon_fuel'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Hydrogen Dispatch")
+chart
+```
+
+### Retrofit {.tabset}
+```{python}
+# | title: 2030 Retrofit Dispatch
+data = dispatch.query("planning_year==2030").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Retrofit'")
+chart = safe_chart_dispatch_single_tech(data, context="2030 Retrofit Dispatch")
+chart
+```
+```{python}
+# | title: 2040 Retrofit Dispatch
+data = dispatch.query("planning_year==2040").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Retrofit'")
+chart = safe_chart_dispatch_single_tech(data, context="2040 Retrofit Dispatch")
+chart
+```
+```{python}
+# | title: 2050 Retrofit Dispatch
+data = dispatch.query("planning_year==2050").groupby([
+    "model", 
+    "tech_type", 
+    "zone", 
+    "hour"
+    ], as_index=False)[
+    "value"
+].sum()
+data = data.query("tech_type=='Retrofit'")
+chart = safe_chart_dispatch_single_tech(data, context="2050 Retrofit Dispatch")
+chart
+```
+
 # Capacity Factors
 ## Row {.tabset}
 ```{python}
@@ -939,6 +1055,32 @@ from fig_functions_genx_only import chart_cap_factor_scatter_genx
 chart = chart_cap_factor_scatter_genx(
     cap.query("tech_type=='Hydro'"),
     gen.query("tech_type=='Hydro'"),
+    # dispatch.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
+    col_var="planning_year",
+    # frac=0.5,
+)
+chart
+```
+```{python}
+# | title: Hydrogen
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
+
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='New_zero_carbon_fuel'"),
+    gen.query("tech_type=='New_zero_carbon_fuel'"),
+    # dispatch.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
+    col_var="planning_year",
+    # frac=0.5,
+)
+chart
+```
+```{python}
+# | title: Retrofit
+from fig_functions_genx_only import chart_cap_factor_scatter_genx
+
+chart = chart_cap_factor_scatter_genx(
+    cap.query("tech_type=='Retrofit'"),
+    gen.query("tech_type=='Retrofit'"),
     # dispatch.query("tech_type=='Hydro' and ~resource_name.str.contains('small')"),
     col_var="planning_year",
     # frac=0.5,
