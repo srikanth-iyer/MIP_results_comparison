@@ -19,7 +19,7 @@ except:
 
 
 
-WRAPPED_CASE_NAME_MAP = {
+# WRAPPED_CASE_NAME_MAP = {
     # "genx-scenarios-10-days": "GenX\nScenarios 10 Days", # NOTE: [SRI] newly added case
     # "genx-scenarios-20-weeks": "GenX\nScenarios 20 Weeks", # NOTE: [SRI] newly added case
     # "20-week-genx": "Only GenX\n20-week simulation", # NOTE: [SRI] newly added case
@@ -28,7 +28,7 @@ WRAPPED_CASE_NAME_MAP = {
     # "And_No_IRA": "And No IRA",
     # "And_Optimistic": "And Optimistic",
     # "And_Transmission_Constrained": "And Transmission Constrained",
-}
+# }
 
 
 # LINE_NAMES = [

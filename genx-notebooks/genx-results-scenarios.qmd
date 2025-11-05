@@ -106,7 +106,7 @@ op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
 # print("Op emiss shape:", op_emiss.shape)
 # print("Op nse shape:", op_nse.shape)
 
-from fig_functions_genx_only import WRAPPED_CASE_NAME_MAP, SCENARIO_MAPPING_AND_ORDER
+from fig_functions_genx_only import SCENARIO_MAPPING_AND_ORDER
 
 for df in [
     cap,
@@ -121,10 +121,7 @@ for df in [
     op_emiss,
     op_gen_cap
 ]:
-    try:
-        df["case"] = df["case"].map(WRAPPED_CASE_NAME_MAP)
-    except KeyError:
-        pass
+
     try:
         df["model"] = df["model"].map(SCENARIO_MAPPING_AND_ORDER)
     except KeyError:
@@ -279,7 +276,47 @@ from itables import init_notebook_mode
 init_notebook_mode(all_interactive=True, connected=True)
 ex_reg_cap_sum
 ```
+```{python}
+# | title: Transmission Capacity Expansion
+tx_cols = [
+    "model",
+    "planning_year",
+    "Network_Lines",
+    "transmission_path_name",
+    "unit",
+    "start_value",
+    "end_value",
+    "New_Trans_Capacity",
+    "Cost_Trans_Capacity",
+]
+missing_tx_cols = [col for col in tx_cols if col not in tx.columns]
+if missing_tx_cols:
+    raise ValueError(f"Missing expected transmission columns: {missing_tx_cols}")
 
+tx_table = (
+    tx.loc[:, tx_cols]
+    .rename(
+    columns={
+        "model": "Scenario",
+        "planning_year": "Planning Year",
+        "Network_Lines": "Line No.",
+        "transmission_path_name": "Line Name",
+        "unit": "Unit",
+        "start_value": "Starting Line Capacity",
+        "end_value": "Final Line Capacity",
+        "New_Trans_Capacity": "Expansion value",
+        "Cost_Trans_Capacity": "Reinforcement Cost / MW-yr",
+    }
+    )
+    .copy()
+)
+numeric_cols = tx_table.select_dtypes(include="number").columns
+tx_table[numeric_cols] = tx_table[numeric_cols].round(1)
+from itables import init_notebook_mode
+
+init_notebook_mode(all_interactive=True, connected=True)
+tx_table
+```
  
 # Transmission Expansion
 ## Row
