@@ -14,6 +14,7 @@ from reformat_data_for_plot.create_dispatch_summary import create_dispatch_summa
 from reformat_data_for_plot.create_emissions_summary import create_emissions_summary
 from reformat_data_for_plot.create_generation_summary import create_generation_summary
 from reformat_data_for_plot.create_resource_capacity import create_resource_capacity
+from reformat_data_for_plot.create_transmission_summary import create_transmission_summary
 
 
 def create_annual_demand_csv(
@@ -232,6 +233,7 @@ def export_genx_for_plotting(
     emissions_frames = []
     generation_frames = []
     dispatch_frames = []
+    transmission_frames = []
     generators_csv_entries: list[tuple[Path, str, str | None, str | None]] = []
 
     for period_dir in period_dirs:
@@ -398,6 +400,23 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
+        try:
+            transmission_path = create_transmission_summary(
+                genx_scenario_results_path=period_dir,
+                scenario_name=model_name,
+                output_folder_path=output_folder_path,
+                planning_year=planning_year,
+                case=case_label,
+                unit="MW",
+            )
+            transmission_frames.append(pd.read_csv(transmission_path))
+        except Exception as e:
+            record_warning(
+                f"Could not create transmission summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
+
     if generators_csv_entries:
         coverage_output = output_folder_path / f"incomplete_tech_mapping_{model_name}.csv"
         check_tech_map_coverage(
@@ -434,6 +453,11 @@ def export_genx_for_plotting(
         dispatch_path = results_summary_path / "dispatch.csv"
         dispatch.to_csv(dispatch_path, index=False)
         dispatch.to_csv(dispatch_path.with_suffix(".csv.gz"), index=False, compression="gzip")
+
+    if transmission_frames:
+        transmission = pd.concat(transmission_frames, ignore_index=True)
+        transmission_path = results_summary_path / "transmission.csv"
+        transmission.to_csv(transmission_path, index=False)
 
     return resource_capacity_output, warnings
 

@@ -243,7 +243,7 @@ DATA_COLS = {
     "transmission": [
         "model",
         "line",
-        "line_name",
+        "transmission_path_name",
         "planning_year",
         "unit",
         "start_value",
@@ -294,19 +294,19 @@ DATA_COLS = {
 
 
 # @lru_cache
-def load_tx_line_length(folder: Path, line_names: List[str]) -> pd.DataFrame:
-    df = pd.read_csv(
-        folder / "network_costs_conus_26_zone.csv",
-        usecols=["start_region", "dest_region", "total_mw-km_per_mw"],
-    ).rename(columns={"total_mw-km_per_mw": "km"})
-    df["line_name"] = df["dest_region"] + "_to_" + df["start_region"]
-    for idx, row in df.iterrows():
-        if row["line_name"] not in line_names:
-            df.loc[:, "line_name"] = df["line_name"].str.replace(
-                row["line_name"], reverse_line_name(row["line_name"])
-            )
+# def load_tx_line_length(folder: Path, line_names: List[str]) -> pd.DataFrame:
+#     df = pd.read_csv(
+#         folder / "network_costs_conus_26_zone.csv",
+#         usecols=["start_region", "dest_region", "total_mw-km_per_mw"],
+#     ).rename(columns={"total_mw-km_per_mw": "km"})
+#     df["transmission_path_name"] = df["dest_region"] + "_to_" + df["start_region"]
+#     for idx, row in df.iterrows():
+#         if row["transmission_path_name"] not in line_names:
+#             df.loc[:, "transmission_path_name"] = df["transmission_path_name"].str.replace(
+#                 row["transmission_path_name"], reverse_line_name(row["transmission_path_name"])
+#             )
 
-    return df  # .drop(columns=["start_region", "dest_region"])
+#     return df  # .drop(columns=["start_region", "dest_region"])
 
 
 def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
@@ -328,18 +328,18 @@ def load_data(data_path: Path, fn: str, case_name: str = None) -> pd.DataFrame:
     if "resource_name" in df.columns:
         df = tech_to_type(df) #NOTE: acquiring tech_type from the csv file itself
         df = df.query("~tech_type.str.contains('Other')")
-    if "line_name" in df.columns:
-        df = fix_tx_line_names(df)
-        line_length = load_tx_line_length(data_path.parent / "notebooks", LINE_NAMES)
-        df = pd.merge(df, line_length, on=["line_name"])
+    if "transmission_path_name" in df.columns:
+        # df = fix_tx_line_names(df)
+        # line_length = load_tx_line_length(data_path.parent / "notebooks", LINE_NAMES)
+        # df = pd.merge(df, line_length, on=["transmission_path_name"])
         if "end_value" in df.columns:
             df["end_cap"] = df["end_value"].copy()
             df["start_cap"] = df["start_value"].copy()
-            df["end_value"] = df["end_value"] * df["km"]
-            df["start_value"] = df["start_value"] * df["km"]
+            # df["end_value"] = df["end_value"] * df["km"]
+            # df["start_value"] = df["start_value"] * df["km"]
         else:
             df["cap"] = df["value"].copy()
-            df["value"] = df["value"] * df["km"]
+            # df["value"] = df["value"] * df["km"]
     if "zone" in df.columns:
         # df.loc[:, "agg_zone"] = df.loc[:, "zone"].map(rev_region_map)
         df.loc[:, "agg_zone"] = df.loc[:, "zone"].copy() # NOTE: cap takes input from resource_capacity that already has zone in name form 
@@ -829,17 +829,17 @@ def add_genx_op_network_cost(
     return op_costs
 
 
-def reverse_line_name(s: str) -> str:
-    segments = s.split("_to_")
-    return segments[-1] + "_to_" + segments[0]
+# def reverse_line_name(s: str) -> str:
+#     segments = s.split("_to_")
+#     return segments[-1] + "_to_" + segments[0]
 
 
-def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
-    for idx, row in df.iterrows():
-        if row["line_name"] not in LINE_NAMES:
-            df.loc[:, "line_name"] = df["line_name"].str.replace(
-                row["line_name"], reverse_line_name(row["line_name"])
-            )
+# def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
+#     for idx, row in df.iterrows():
+#         if row["line_name"] not in LINE_NAMES:
+#             df.loc[:, "line_name"] = df["line_name"].str.replace(
+#                 row["line_name"], reverse_line_name(row["line_name"])
+            # )
     # line_count = df.groupby("line_name", as_index=False)["model"].count()
     # median_count = line_count["model"].median()
     # reversed_lines = line_count.query("model < @median_count")
@@ -849,7 +849,7 @@ def fix_tx_line_names(df: pd.DataFrame) -> pd.DataFrame:
     #         row["line_name"], reverse_line_name(row["line_name"])
     #     )
 
-    return df
+    # return df
 
 
 def calc_period_retirements(
@@ -1133,6 +1133,7 @@ VAR_ABBR_MAP = {
     "value": "v",
     "end_value": "ev",
     "line_name": "ln",
+    "transmission_path_name": "tpn",
     "Region": "r",
 }
 
@@ -1844,10 +1845,8 @@ def chart_regional_gen(
 def chart_tx_expansion(
     tx_data: pd.DataFrame,
     x_var="model",
-    facet_col="line_name",
+    facet_col="transmission_path_name",
     n_cols=10,
-    col_var=None,
-    row_var=None,
     order=None,
     height=200,
     width=alt.Step(20),
@@ -1856,64 +1855,71 @@ def chart_tx_expansion(
         return None
     if tx_data[x_var].nunique() < 4:
         width = 80
-    tx_data["line_name"] = tx_data["line_name"].str.replace("_to_", " | ")
+        
+    tx_data["transmission_path_name"] = tx_data["transmission_path_name"].str.replace("_to_", " | ")
 
-    by = [
-        c
-        for c in [x_var, facet_col, col_var, row_var, "planning_year"]
-        if c is not None
-    ]
-    data = tx_data.groupby(by, as_index=False)["value"].sum()
+    group_cols = [x_var, "planning_year"]
+    if facet_col is not None:
+        group_cols.append(facet_col)
+    data = tx_data.groupby(group_cols, as_index=False)["New_Trans_Capacity"].sum()
 
     _tooltip = [
-        alt.Tooltip("sum(v)", format=",.0f", title="Period GW-km"),
+        alt.Tooltip("sum(New_Trans_Capacity):Q", format=",.0f", title="Transmission Expansion MW"),
         alt.Tooltip("y", title=title_case("planning_year")),
     ]
-    if any([i == "line_name" for i in [facet_col, row_var, col_var]]):
+    if facet_col == "transmission_path_name":
         _tooltip.append(
-            alt.Tooltip(VAR_ABBR_MAP["line_name"], title=title_case("line_name"))
+            alt.Tooltip(VAR_ABBR_MAP["transmission_path_name"], title=title_case("transmission_path_name"))
         )
 
     if order is None:
         order = sorted(data[x_var].unique())
-    if col_var is None or row_var is None:
-        first_year = data["planning_year"].min()
-        idx_cols = [c for c in [x_var, facet_col, col_var, row_var] if c is not None]
-        data = data.set_index(idx_cols)
-        first_data = data.query("planning_year == @first_year")
-        df_list = []
-        for year in data["planning_year"].unique():
-            _df = data.query("planning_year == @year")
-            if year == first_year:
-                _df["line_growth"] = 0
-                # df_list.append(_df)
-            else:
-                try:
-                    _df["line_growth"] = (_df["value"] / first_data["value"]).fillna(0)
-                except:
-                    _df["line_growth"] = 0
-            df_list.append(_df)
-        data = pd.concat(df_list).reset_index()
-        if not (col_var is None and row_var is None):
-            _tooltip.append(alt.Tooltip("line_growth", format=".1%"))
+
+    x_title = "Scenario" if x_var == "model" else title_case(x_var)
+
+    first_year = tx_data["planning_year"].min()
+    key_cols = [c for c in group_cols if c != "planning_year"]
+    if "start_value" not in tx_data.columns:
+        raise KeyError("chart_tx_expansion requires 'start_value' to compute the baseline capacity.")
+    baseline = (
+        tx_data.loc[tx_data["planning_year"] == first_year, key_cols + ["start_value"]]
+        .groupby(key_cols, as_index=False)
+        .agg(baseline_start_value=("start_value", "sum"))
+    )
+    data = data.merge(baseline, on=key_cols, how="left")
+    data["baseline_start_value"] = data["baseline_start_value"].replace([np.inf, -np.inf], np.nan).fillna(0.0)
+    data["pct_of_start_value"] = 0.0
+    mask = data["baseline_start_value"] > 0
+    data.loc[mask, "pct_of_start_value"] = (
+        data.loc[mask, "New_Trans_Capacity"] / data.loc[mask, "baseline_start_value"]
+    )
+    _tooltip.append(
+        alt.Tooltip("baseline_start_value:Q", format=",.0f", title="Start value (MW)")
+    )
+    _tooltip.append(
+        alt.Tooltip("pct_of_start_value", format=".1%", title="Share of start value")
+    )
 
     if x_var == "case":
-        _tooltip.append(
-            alt.Tooltip("c").title("Case"),
-        )
-    data["value"] /= 1000
+        _tooltip.append(alt.Tooltip("c", title="Case"))
+
+    scenario_field = VAR_ABBR_MAP.get(x_var, x_var)
+    _tooltip.append(alt.Tooltip(scenario_field, title=x_title))
+    # data["New_Trans_Capacity"] /= 1000
     data = data.rename(columns=VAR_ABBR_MAP)
     chart = (
         alt.Chart(data)
         .mark_bar()
         .encode(
             # xOffset="model:N",
-            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-            y=alt.Y("sum(v)").title("Transmission (GW-km)"),
-            color=alt.Color("m:N").title(title_case("model")),
-            opacity=alt.Opacity("y:O", sort="descending").title(
+            x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(x_title),
+            y=alt.Y("sum(New_Trans_Capacity):Q").title("New Transmission Capacity (MW)"),
+            color=alt.Color("y:O", sort="descending").title(
                 title_case("planning_year")
             ),
+            # opacity=alt.Opacity("y:O", sort="descending").title(
+            #     title_case("planning_year")
+            # ),
             # facet=alt.Facet("line_name", columns=n_cols),
             order=alt.Order(
                 # Sort the segments of the bars by this field
@@ -1931,41 +1937,37 @@ def chart_tx_expansion(
         chart = chart.encode(
             facet=alt.Facet(VAR_ABBR_MAP[facet_col], columns=n_cols)
             .title(title_case(facet_col))
-            .header(titleFontSize=20, labelFontSize=15)
+            .header(titleFontSize=20, labelFontSize=12)
         )
-    elif col_var is None and row_var is None:
+    else:
         text = (
-            alt.Chart()
+            alt.Chart(data)
             .mark_text(dy=-5, fontSize=14)
             .encode(
-                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(title_case(x_var)),
-                y="sum(v):Q",
-                text=alt.Text("sum(v):Q", format=".0f"),
+                x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(x_title),
+                y="sum(New_Trans_Capacity):Q",
+                text=alt.Text("sum(New_Trans_Capacity):Q", format=".0f"),
             )
         )
-        chart = alt.layer(chart, text, data=data).properties(width=width)
-    if col_var is not None:
-        chart = chart.encode(
-            column=alt.Column(VAR_ABBR_MAP[col_var])
-            .title(title_case(col_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    if row_var is not None:
-        chart = chart.encode(
-            row=alt.Row(VAR_ABBR_MAP[row_var])
-            .title(title_case(row_var))
-            .header(titleFontSize=20, labelFontSize=15)
-        )
-    chart = chart.configure_axis(labelFontSize=15, titleFontSize=15).configure_legend(
-        titleFontSize=20, labelFontSize=16
+        chart = alt.layer(chart, text).properties(width=width)
+    chart = chart.configure_axis(labelFontSize=12, titleFontSize=13,titlePadding=10).configure_legend(
+        titleFontSize=15, labelFontSize=15
     )
-    if all([i is None for i in [facet_col, row_var, col_var]]):
+    if facet_col is None:
         chart = (
             chart.properties(height=400, width=300)
-            .configure_axis(labelFontSize=16, titleFontSize=18)
-            .configure_legend(titleFontSize=20, labelFontSize=16)
+            .configure_axis(labelFontSize=12, titleFontSize=16,titlePadding=15)
         )
-    chart = configure_full_label_display(chart)
+    # chart = configure_full_label_display(chart)
+    # chart = (
+    #     chart.configure_axis(
+            # labelLimit=0,
+    #         labelPadding=2, 
+    #         titlePadding=10
+    #         )
+    #     # .configure_legend(labelLimit=0)
+    #     # .configure_header(labelLimit=0)
+    # )
     return chart
 
 

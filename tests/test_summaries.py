@@ -9,6 +9,7 @@ Tests the summary generation functions:
 """
 import pytest
 import pandas as pd
+import numpy as np
 from pathlib import Path
 
 from reformat_data_for_plot import (
@@ -16,6 +17,7 @@ from reformat_data_for_plot import (
     create_emissions_summary,
     create_generation_summary,
     create_resource_capacity,
+    create_transmission_summary,
 )
 
 
@@ -105,6 +107,27 @@ class TestDispatchSummary:
         assert 'genx_scenario_results_path' in params
         assert 'scenario_name' in params
         assert 'planning_year' in params
+
+
+@pytest.mark.unit
+class TestTransmissionSummary:
+    """Tests for create_transmission_summary function."""
+
+    def test_module_imports(self):
+        """Test that the module can be imported."""
+        assert callable(create_transmission_summary)
+
+    def test_function_signature(self):
+        """Test that function has expected parameters."""
+        import inspect
+
+        sig = inspect.signature(create_transmission_summary)
+        params = list(sig.parameters.keys())
+
+        assert 'genx_scenario_results_path' in params
+        assert 'scenario_name' in params
+        assert 'planning_year' in params
+        assert 'unit' in params
 
 
 @pytest.mark.integration
@@ -253,6 +276,39 @@ class TestSummaryIntegration:
 
         # Verify emission values
         assert all(df['value'] > 0), "All emission values should be positive"
+
+    def test_transmission_summary_with_complete_data(self, complete_scenario_for_summaries, temp_dir):
+        """Test transmission summary with complete data files."""
+        output_folder = temp_dir / "summaries"
+        output_folder.mkdir()
+
+        output_path = create_transmission_summary(
+            genx_scenario_results_path=complete_scenario_for_summaries,
+            scenario_name="TestScenario",
+            output_folder_path=output_folder,
+            planning_year=2030,
+            case="Results_p1",
+            unit="MW",
+        )
+
+        assert output_path.exists()
+
+        df = pd.read_csv(output_path)
+
+        expected_cols = [
+            'model', 'case', 'planning_year', 'unit',
+            'Network_zones', 'Network_Lines', 'transmission_path_name',
+            'start_value', 'New_Trans_Capacity', 'Cost_Trans_Capacity', 'end_value',
+        ]
+        for col in expected_cols:
+            assert col in df.columns, f"Missing column: {col}"
+
+        assert len(df) == 2
+        assert all(df['planning_year'] == 2030)
+        assert all(df['case'] == "Results_p1")
+        assert all(df['unit'] == "MW")
+        assert all(df['model'] == "TestScenario")
+        assert all(np.isclose(df['end_value'], df['start_value'] + df['New_Trans_Capacity']))
 
 
 @pytest.mark.unit

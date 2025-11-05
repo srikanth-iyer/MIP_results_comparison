@@ -238,6 +238,8 @@ def complete_scenario_for_summaries(temp_dir, sample_thermal_data, sample_vre_da
     # Create directory structure
     results_dir = scenario_path / "results"
     results_dir.mkdir(parents=True, exist_ok=True)
+    system_dir = scenario_path / "system"
+    system_dir.mkdir(parents=True, exist_ok=True)
 
     # Create Generators_data.csv (as output from build_generators_data)
     # Must have 'Resource' column for create_resource_capacity to work
@@ -279,6 +281,23 @@ def complete_scenario_for_summaries(temp_dir, sample_thermal_data, sample_vre_da
         'AnnualSum': [5000.0, 8000.0, 3000.0, 6000.0],
     })
     capacityfactor_data.to_csv(results_dir / "capacityfactor.csv", index=False)
+
+    # Create Network.csv for transmission summary tests
+    network_data = pd.DataFrame({
+        'Network_zones': ['Zone1', 'Zone2'],
+        'Network_Lines': [1, 2],
+        'Line_Max_Flow_MW': [100.0, 200.0],
+        'Line_Min_Flow_MW': [100.0, 200.0],
+        'transmission_path_name': ['PathA', 'PathB'],
+    })
+    network_data.to_csv(system_dir / "Network.csv", index=False)
+
+    network_expansion = pd.DataFrame({
+        'Line': [1, 2],
+        'New_Trans_Capacity': [10.0, 20.0],
+        'Cost_Trans_Capacity': [1000.0, 2000.0],
+    })
+    network_expansion.to_csv(results_dir / "network_expansion.csv", index=False)
 
     return scenario_path
 

@@ -39,7 +39,7 @@ from fig_functions_genx_only import (
     chart_regional_cap,
     chart_total_gen,
     chart_regional_gen,
-    # chart_tx_expansion,
+    chart_tx_expansion,
     chart_emissions,
     chart_dispatch,
     # chart_wind_dispatch,
@@ -73,14 +73,14 @@ gen = gen[~gen['tech_type'].isin(['Flex_Demand'])] # removing flex demand and di
 
 # print("Gen shape:", gen.shape)
 
-# tx = load_data(data_path, "transmission.csv")
-# tx["start_region"] = tx["line_name"].str.split("_to_").str[0]
-# tx["dest_region"] = tx["line_name"].str.split("_to_").str[1]
+tx = load_data(data_path, "transmission.csv")
+tx["start_region"] = tx["transmission_path_name"].str.split("_to_").str[0]
+tx["dest_region"] = tx["transmission_path_name"].str.split("_to_").str[1]
 
 # first_year = tx["planning_year"].min()
 # starting_tx = tx.loc[tx["planning_year"] == first_year, :]
 # starting_tx = starting_tx.rename(columns={"start_value": "value"})
-# starting_tx["planning_year"] = 2023
+# starting_tx["planning_year"] = first_year
 
 # tx_exp = load_data(data_path, "transmission_expansion.csv")
 # tx_exp["start_region"] = tx_exp["line_name"].str.split("_to_").str[0]
@@ -112,6 +112,7 @@ for df in [
     cap,
     gen,
     emiss,
+    tx,
     # starting_tx,
     # tx_exp,
     # op_costs,
@@ -279,7 +280,7 @@ init_notebook_mode(all_interactive=True, connected=True)
 ex_reg_cap_sum
 ```
 
-<!-- 
+ 
 # Transmission Expansion
 ## Row
 #### Column {.tabset}
@@ -287,13 +288,15 @@ ex_reg_cap_sum
 # | title: Expansion by line
 # data = pd.concat([starting_tx, tx_exp])
 # chart = chart_tx_expansion(data)
-# chart
+chart = chart_tx_expansion(tx,n_cols=10)
+chart
 ```
 ```{python}
 # | title: Total expansion
-#data = pd.concat([starting_tx, tx_exp])
-#chart = chart_tx_expansion(data, facet_col=None)
-#chart
+# data = pd.concat([starting_tx, tx_exp])
+# chart = chart_tx_expansion(data, facet_col=None)
+chart = chart_tx_expansion(tx, facet_col=None)
+chart
 ```
 ```{python}
 # | title: Total expansion map
@@ -309,7 +312,7 @@ ex_reg_cap_sum
 #chart = chart_tx_map(tx_exp, gdf, min_total_expansion=50)
 #chart
 ``` 
--->
+
 
 # Emissions
 ## Row
