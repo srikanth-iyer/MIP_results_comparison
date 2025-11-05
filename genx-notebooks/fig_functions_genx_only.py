@@ -1864,7 +1864,7 @@ def chart_tx_expansion(
     data = tx_data.groupby(group_cols, as_index=False)["New_Trans_Capacity"].sum()
 
     _tooltip = [
-        alt.Tooltip("sum(New_Trans_Capacity):Q", format=",.0f", title="Transmission Expansion MW"),
+        alt.Tooltip("sum(New_Trans_Capacity):Q", format=",.0f", title="Transmission Expansion (MW)"),
         alt.Tooltip("y", title=title_case("planning_year")),
     ]
     if facet_col == "transmission_path_name":
@@ -1913,7 +1913,7 @@ def chart_tx_expansion(
         .encode(
             # xOffset="model:N",
             x=alt.X(VAR_ABBR_MAP[x_var]).sort(order).title(x_title),
-            y=alt.Y("sum(New_Trans_Capacity):Q").title("New Transmission Capacity (MW)"),
+            y=alt.Y("sum(New_Trans_Capacity):Q").title("Transmission Expansion (MW)"),
             color=alt.Color("y:O", sort="descending").title(
                 title_case("planning_year")
             ),
