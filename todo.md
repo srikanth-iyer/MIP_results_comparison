@@ -22,11 +22,15 @@ DONE: remove the "Model" term from x axis
 
 DONE:  remove the black lines from the bar plots
 
+DONE: CLEAN UP THE REPO TO MAKE IT PEOPLE FACING
+
 ## CURRENT PRIORITY
 
-TODO: CLEAN UP THE REPO TO MAKE IT PEOPLE FACING
+TODO: Add retrofit and hydrogen to the capacity factors and dispatch plots
 
 TODO: Add transmission data table
+
+TODO: take a sample netrevenue file and plot them
 
 TODO: operational nse like the one on greg's plots online (compare current policies file )
 
@@ -39,6 +43,6 @@ TODO: OPERATIONAL costs check the diff between model and society
 ## LOW PRIORITY
 
 TODO: for genx visualizations, have an option to only specify a few regions in the regional plots
-TODO: turn to a github page so everyone can view
+DONE: turn to a github page so everyone can view
 TODO:  do transmission mapping
 TODO: IMPORT/EXPORTS tab. imports into any NY region and export out of any NY region - x axis should be region. +ve y axis should show import and -ve y axis should show exports
