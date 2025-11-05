@@ -310,6 +310,96 @@ class TestSummaryIntegration:
         assert all(df['model'] == "TestScenario")
         assert all(np.isclose(df['end_value'], df['start_value'] + df['New_Trans_Capacity']))
 
+    def test_generation_summary_output_columns(self, complete_scenario_for_summaries, temp_dir):
+        """Ensure generation summary output includes all required columns."""
+        scenario_name = "TestScenario"
+        output_root = temp_dir / "generation_outputs"
+        output_root.mkdir()
+
+        op_inputs_dir = output_root / f"{scenario_name}_op_inputs" / "Inputs" / "Inputs_p1"
+        op_inputs_dir.mkdir(parents=True, exist_ok=True)
+
+        generators_src = complete_scenario_for_summaries / "Generators_data.csv"
+        generators_df = pd.read_csv(generators_src)
+        generators_df.to_csv(op_inputs_dir / "Generators_data.csv", index=False)
+
+        output_path = create_generation_summary(
+            genx_scenario_results_path=complete_scenario_for_summaries,
+            scenario_name=scenario_name,
+            output_folder_path=output_root,
+            planning_year=2040,
+            case="TestCase",
+            unit="MWh",
+        )
+
+        assert output_path.exists()
+
+        df = pd.read_csv(output_path)
+        required_columns = {
+            "model",
+            "zone",
+            "resource_name",
+            "tech_type",
+            "planning_year",
+            "case",
+            "timestep",
+            "new_build",
+            "existing",
+            "unit",
+            "value",
+        }
+        missing = required_columns.difference(df.columns)
+        assert not missing, f"Missing columns in generation summary: {sorted(missing)}"
+
+    def test_dispatch_summary_output_columns(self, complete_scenario_for_summaries, temp_dir):
+        """Ensure dispatch summary output includes all required columns."""
+        scenario_name = "TestScenario"
+        output_root = temp_dir / "dispatch_outputs"
+        output_root.mkdir()
+
+        op_inputs_dir = output_root / f"{scenario_name}_op_inputs" / "Inputs" / "Inputs_p1"
+        op_inputs_dir.mkdir(parents=True, exist_ok=True)
+
+        generators_src = complete_scenario_for_summaries / "Generators_data.csv"
+        generators_df = pd.read_csv(generators_src)
+        generators_df.to_csv(op_inputs_dir / "Generators_data.csv", index=False)
+
+        results_dir = complete_scenario_for_summaries / "results"
+
+        power_df = pd.DataFrame({
+            "Resource": ["Zone", "t1", "t2"],
+            "Gen1": [1, 100, 110],
+            "Gen2": [2, 200, 210],
+        })
+        power_df.to_csv(results_dir / "power.csv", index=False)
+
+        weights_df = pd.DataFrame({"Time": [1, 2], "Weight": [1.0, 1.0]})
+        weights_df.to_csv(results_dir / "time_weights.csv", index=False)
+
+        output_path = create_dispatch_summary(
+            genx_scenario_results_path=complete_scenario_for_summaries,
+            scenario_name=scenario_name,
+            output_folder_path=output_root,
+            planning_year=2040,
+            case="TestCase",
+        )
+
+        assert output_path.exists()
+
+        df = pd.read_csv(output_path)
+        required_columns = {
+            "hour",
+            "resource_name",
+            "tech_type",
+            "value",
+            "zone",
+            "planning_year",
+            "model",
+            "case",
+        }
+        missing = required_columns.difference(df.columns)
+        assert not missing, f"Missing columns in dispatch summary: {sorted(missing)}"
+
 
 @pytest.mark.unit
 class TestTimeWeights:
