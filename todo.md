@@ -24,9 +24,9 @@ DONE:  remove the black lines from the bar plots
 
 DONE: CLEAN UP THE REPO TO MAKE IT PEOPLE FACING
 
-## CURRENT PRIORITY
+DONE: Add retrofit and hydrogen to the capacity factors and dispatch plots
 
-TODO: Add retrofit and hydrogen to the capacity factors and dispatch plots
+## CURRENT PRIORITY
 
 TODO: Add transmission data table
 
