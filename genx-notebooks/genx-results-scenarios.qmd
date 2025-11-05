@@ -293,6 +293,7 @@ missing_tx_cols = [col for col in tx_cols if col not in tx.columns]
 if missing_tx_cols:
     raise ValueError(f"Missing expected transmission columns: {missing_tx_cols}")
 
+# renaming columns for better readability
 tx_table = (
     tx.loc[:, tx_cols]
     .rename(
@@ -310,10 +311,12 @@ tx_table = (
     )
     .copy()
 )
+
+# rounding floats to 1 decimal place
 numeric_cols = tx_table.select_dtypes(include="number").columns
 tx_table[numeric_cols] = tx_table[numeric_cols].round(1)
-from itables import init_notebook_mode
 
+from itables import init_notebook_mode
 init_notebook_mode(all_interactive=True, connected=True)
 tx_table
 ```
