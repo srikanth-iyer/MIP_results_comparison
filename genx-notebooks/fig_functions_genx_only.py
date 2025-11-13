@@ -1,4 +1,5 @@
 import os
+import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -216,6 +217,31 @@ def reverse_dict_of_lists(d: Dict[str, list]) -> Dict[str, List[str]]:
 
 
 rev_region_map = reverse_dict_of_lists(region_map)
+
+
+def map_zone_values_to_regions(series: pd.Series) -> pd.Series:
+    """Translate numeric or labelled zone identifiers to region names."""
+
+    def _translate(value: Any) -> Any:
+        if pd.isna(value):
+            return value
+
+        if isinstance(value, (int, np.integer)):
+            return rev_region_map.get(int(value), value)
+
+        value_str = str(value).strip()
+        match = re.search(r"(\d+)", value_str)
+        if match:
+            zone_id = int(match.group(1))
+            return rev_region_map.get(zone_id, value_str)
+
+        try:
+            zone_id = int(value_str)
+        except ValueError:
+            return rev_region_map.get(value_str, value_str)
+        return rev_region_map.get(zone_id, value_str)
+
+    return series.apply(_translate)
 
 DATA_COLS = {
     "resource_capacity": [
@@ -1130,6 +1156,7 @@ VAR_ABBR_MAP = {
     "agg_zone": "az",
     "zone": "z",
     "tech_type": "tt",
+    "cost_type": "ct",
     "value": "v",
     "end_value": "ev",
     "line_name": "ln",
@@ -1565,6 +1592,116 @@ def chart_total_gen(
     return chart
 
 
+def chart_costs(
+    costs: pd.DataFrame,
+    x_var: str = "model",
+    col_var: Optional[str] = "planning_year",
+    row_var: Optional[str] = None,
+    order: Optional[List[str]] = None,
+    width=alt.Step(40),
+    height=200,
+) -> Optional[alt.Chart]:
+    """Stacked bar chart of cost breakdowns by scenario and planning year."""
+    cost_type_color_map = {
+        "cCO2": "#af5da4",
+        "cFix": "#68A8E4",
+        "cVar": "#54B750",
+        "cStart": "#DB6565",
+        "cNSE": "#EB9696",
+        "cFuel": "#F7CD4B",
+    }
+    if costs.empty:
+        return None
+    if "cost_type" not in costs.columns:
+        raise KeyError("chart_costs requires a 'cost_type' column")
+
+    data = costs.loc[costs["cost_type"] != "cTotal"].copy()
+    if data.empty:
+        return None
+
+    if "model" in data.columns:
+        data["model"] = data["model"].map(SCENARIO_MAPPING_AND_ORDER).fillna(data["model"])
+
+    if "zone" in data.columns:
+        data["zone"] = map_zone_values_to_regions(data["zone"])
+
+    if col_var is not None and col_var not in data.columns:
+        col_var = None
+    if row_var is not None and row_var not in data.columns:
+        row_var = None
+
+    if order is None and x_var in order_dict():
+        order = order_dict()[x_var]
+    if order:
+        present = set(data[x_var].unique())
+        order = [val for val in order if val in present]
+        if not order:
+            order = None
+
+    group_by = ["cost_type", x_var]
+    for axis in (col_var, row_var):
+        if axis is not None:
+            group_by.append(axis)
+    group_by = [c for c in dict.fromkeys(group_by) if c in data.columns]
+
+    grouped = data.groupby(group_by, as_index=False)["value"].sum()
+    grouped["value"] = grouped["value"] / 1e9
+
+    cost_sort = list(dict.fromkeys(grouped["cost_type"].tolist()))
+
+    grouped = grouped.rename(columns=VAR_ABBR_MAP)
+
+    x_field = VAR_ABBR_MAP.get(x_var, x_var)
+    x_title = "Scenarios" if x_var == "model" else title_case(x_var)
+    x_kwargs: Dict[str, Any] = {"title": x_title}
+    if order:
+        x_kwargs["sort"] = order
+    x_encoding = alt.X(x_field, **x_kwargs)
+
+    y_encoding = alt.Y("v", stack="zero").title("Cost ( Billion USD )")
+
+    color_kwargs: Dict[str, Any] = {"title": "Cost Type"}
+    if cost_sort:
+        color_kwargs["sort"] = cost_sort
+    scale_domain = cost_sort if cost_sort else list(cost_type_color_map.keys())
+    if scale_domain:
+        color_kwargs["scale"] = alt.Scale(
+            domain=scale_domain,
+            range=[cost_type_color_map.get(ct, "#999999") for ct in scale_domain],
+        )
+    color_encoding = alt.Color("ct", **color_kwargs)
+
+    _tooltips = [
+        alt.Tooltip("ct", title="Cost Type"),
+        alt.Tooltip("v", title="Cost ( Billion USD )", format=",.2f"),
+    ]
+    scenario_field = VAR_ABBR_MAP.get(x_var, x_var)
+    _tooltips.append(alt.Tooltip(scenario_field, title=x_title))
+    if col_var is not None:
+        _tooltips.append(
+            alt.Tooltip(VAR_ABBR_MAP[col_var], title=title_case(col_var))
+        )
+    if row_var is not None:
+        _tooltips.append(
+            alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var))
+        )
+
+    chart = (
+        alt.Chart(grouped)
+        .mark_bar()
+        .encode(
+            x=x_encoding,
+            y=y_encoding,
+            color=color_encoding,
+            tooltip=_tooltips,
+        )
+        .properties(width=width, height=height)
+    )
+
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
+    return chart
+
+
 def chart_avg_gen_variation(
     annual_gen_mean: pd.DataFrame,
     x_var: str = "tech_type",
@@ -1772,7 +1909,6 @@ def chart_regional_gen(
     mapped_zones = data["agg_zone"].map(rev_region_map)
     data.loc[:, "agg_zone"] = mapped_zones.where(mapped_zones.notna(), data["agg_zone"])
     data.loc[:, "agg_zone"] = data["agg_zone"].astype(str)
-    # TODO: Ensure that agg zone is consistently in name form all the time in gen, cap etc. When doing so, check that all the plot funcs still work.
     if (Path.cwd() / "annual_demand_genx.csv").exists():
         demand = pd.read_csv(Path.cwd() / "annual_demand_genx.csv")
         zone_idx = demand["zone"].astype(str).str.extract(r"(\d+)")[0].astype("Int64")

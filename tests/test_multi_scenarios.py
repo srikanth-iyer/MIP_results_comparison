@@ -195,6 +195,12 @@ class TestFullExportPipeline:
         unique_years = sorted(annual_demand['planning_year'].unique())
         print(f"   Planning years in demand: {unique_years}")
 
+        costs_summary_path = results_summary / "costs.csv"
+        assert costs_summary_path.exists()
+        costs_summary_df = pd.read_csv(costs_summary_path)
+        cost_years = sorted(costs_summary_df['planning_year'].unique())
+        assert cost_years == [2030, 2035, 2040, 2050]
+
     def test_export_scenario_2_multi_period(self, real_sample_scenario_2, temp_dir):
         """Test exporting scenario 2 with all 4 periods."""
         output_folder = temp_dir / "output"
@@ -231,6 +237,7 @@ class TestFullExportPipeline:
         # Check results_summary
         results_summary = output_folder / f"{real_sample_scenario_2.name}_results_summary"
         assert results_summary.exists()
+        assert (results_summary / "costs.csv").exists()
 
     def test_export_both_scenarios_batch(self, temp_dir):
         """Test batch export of both scenarios."""
@@ -367,6 +374,11 @@ class TestComprehensiveValidation:
         assert (results_summary / "annual_demand.csv").exists()
         annual_demand = pd.read_csv(results_summary / "annual_demand.csv")
         print(f"[OK] Annual demand: {len(annual_demand)} records across all periods")
+
+        costs_summary_path = results_summary / "costs.csv"
+        assert costs_summary_path.exists()
+        costs_summary_df = pd.read_csv(costs_summary_path)
+        print(f"[OK] Costs summary: {len(costs_summary_df)} records across all periods")
 
         print("[OK] Complete pipeline test passed for scenario 1")
         print(f"   Total warnings: {len(warnings)}")

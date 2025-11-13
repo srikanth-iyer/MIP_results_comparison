@@ -59,7 +59,6 @@ alt.renderers.enable("html")
 alt.data_transformers.disable_max_rows()
 cwd = Path.cwd()
 data_path = cwd.parent / folder
-
 cap = load_data(data_path, "resource_capacity.csv")
 cap = cap.query("unit=='MW' and not tech_type.isna()")
 cap["additions"] = cap["end_value"] - cap["start_value"]
@@ -72,7 +71,7 @@ if gen.empty:
 gen = gen[~gen['tech_type'].isin(['Flex_Demand'])] # removing flex demand and distributed solar from capacity plots.
 
 # print("Gen shape:", gen.shape)
-
+costs = load_data(data_path, "costs.csv")
 tx = load_data(data_path, "transmission.csv")
 tx["start_region"] = tx["transmission_path_name"].str.split("_to_").str[0]
 tx["dest_region"] = tx["transmission_path_name"].str.split("_to_").str[1]
@@ -93,19 +92,20 @@ emiss.loc[emiss["unit"] == "kg", "value"] /= 1000
 dispatch = load_data(data_path, "dispatch.csv", )
 # print("Dispatch shape:", dispatch.shape)
 
-op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
-op_costs_model = load_genx_operations_data(data_path, "costs.csv", model_costs_only=True)
+# op_gen_cap = load_genx_operations_data(data_path, "capacityfactor.csv")
+# op_costs_model = load_genx_operations_data(data_path, "costs.csv", model_costs_only=True)
 # op_costs = load_genx_operations_data(data_path, "costs.csv")
-op_emiss = load_genx_operations_data(
-    data_path, "emissions.csv", hourly_data=True
-)
-op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
+# op_emiss = load_genx_operations_data(
+#     data_path, "emissions.csv", hourly_data=True
+# )
+# op_nse = load_genx_operations_data(data_path, "nse.csv", hourly_data=True)
 # print("Op gen cap shape:", op_gen_cap.shape)
 # print("Op costs model shape:", op_costs_model.shape)
+# print(op_costs_model.head())
 # print("Op costs shape:", op_costs.shape)
 # print("Op emiss shape:", op_emiss.shape)
 # print("Op nse shape:", op_nse.shape)
-
+# print(op_nse.head())
 from fig_functions_genx_only import SCENARIO_MAPPING_AND_ORDER
 
 for df in [
@@ -116,10 +116,10 @@ for df in [
     # starting_tx,
     # tx_exp,
     # op_costs,
-    op_nse,
+    # op_nse,
     # op_costs_model,
-    op_emiss,
-    op_gen_cap
+    # op_emiss,
+    # op_gen_cap
 ]:
 
     try:
@@ -1128,5 +1128,146 @@ chart = chart_cap_factor_scatter_genx(
     col_var="planning_year",
     # frac=0.5,
 )
+chart
+```
+
+
+# Operational Results
+## Row {.tabset}
+
+```{python}
+# | title: Operational costs
+from fig_functions_genx_only import chart_costs
+# display(costs)
+chart = chart_costs(costs)
+chart
+```
+
+```{python}
+# | title: NSE costs
+from fig_functions_genx_only import chart_costs
+nse_costs = costs[costs['cost_type']=='cNSE']
+chart = chart_costs(nse_costs)
+chart
+```
+
+```{python}
+# | title: CO2 costs
+from fig_functions_genx_only import chart_costs
+co2_costs = costs[costs['cost_type']=='cCO2']
+chart = chart_costs(co2_costs)
+chart
+```
+
+```{python}
+# | title: Var costs
+from fig_functions_genx_only import chart_costs
+var_costs = costs[costs['cost_type']=='cVar']
+chart = chart_costs(var_costs)
+chart
+```
+
+```{python}
+# | title: Fuel costs
+from fig_functions_genx_only import chart_costs
+fuel_costs = costs[costs['cost_type']=='cFuel']
+chart = chart_costs(fuel_costs)
+chart
+```
+
+```{python}
+# | title: Fixed costs
+from fig_functions_genx_only import chart_costs
+fix_costs = costs[costs['cost_type']=='cFix']
+chart = chart_costs(fix_costs)
+chart
+```
+
+```{python}
+# | title: Network Expansion costs
+from fig_functions_genx_only import chart_costs
+network_expansion_costs = costs[costs['cost_type']=='cNetworkExp']
+chart = chart_costs(network_expansion_costs)
+chart
+```
+
+```{python}
+# | title: Unmet Rsv costs
+from fig_functions_genx_only import chart_costs
+unmet_rsv_costs = costs[costs['cost_type']=='cUnmetRsv']
+chart = chart_costs(unmet_rsv_costs)
+chart
+```
+
+```{python}
+# | title: Operational costs (Regional)
+from fig_functions_genx_only import chart_costs
+# display(costs)
+# Filtering out Total, NENG, and PJM zones
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+chart = chart_costs(zcosts, row_var='zone')
+chart
+```
+
+```{python}
+# | title: NSE costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+nse_costs = zcosts[zcosts['cost_type']=='cNSE']
+chart = chart_costs(nse_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: Fixed costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+fixed_costs = zcosts[zcosts['cost_type']=='cFix']
+chart = chart_costs(fixed_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: Fuel costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+fuel_costs = zcosts[zcosts['cost_type']=='cFuel']
+chart = chart_costs(fuel_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: Var costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+var_costs = zcosts[zcosts['cost_type']=='cVar']
+chart = chart_costs(var_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: CO2 costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+co2_costs = zcosts[zcosts['cost_type']=='cCO2']
+chart = chart_costs(co2_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: Network Expansion costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+network_expansion_costs = zcosts[zcosts['cost_type']=='cNetworkExp']
+chart = chart_costs(network_expansion_costs, row_var='zone')
+chart
+```
+
+```{python}
+# | title: Unmet Rsv costs (Regional)
+from fig_functions_genx_only import chart_costs
+zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
+unmet_rsv_costs = zcosts[zcosts['cost_type']=='cUnmetRsv']
+chart = chart_costs(unmet_rsv_costs, row_var='zone')
 chart
 ```

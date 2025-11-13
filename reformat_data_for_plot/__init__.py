@@ -2,6 +2,7 @@
 
 from .build_generators_data import build_generators_data, compare_columns
 from .check_tech_map_coverage_in_generators_data import check_tech_map_coverage
+from .create_costs_summary import create_costs_summary
 from .create_dispatch_summary import create_dispatch_summary
 from .create_emissions_summary import create_emissions_summary
 from .create_generation_summary import create_generation_summary
@@ -19,6 +20,7 @@ __all__ = [
     "build_generators_data",
     "compare_columns",
     "check_tech_map_coverage",
+    "create_costs_summary",
     "create_dispatch_summary",
     "create_emissions_summary",
     "create_generation_summary",

@@ -10,6 +10,7 @@ import pandas as pd
 
 from reformat_data_for_plot.build_generators_data import build_generators_data
 from reformat_data_for_plot.check_tech_map_coverage_in_generators_data import check_tech_map_coverage
+from reformat_data_for_plot.create_costs_summary import create_costs_summary
 from reformat_data_for_plot.create_dispatch_summary import create_dispatch_summary
 from reformat_data_for_plot.create_emissions_summary import create_emissions_summary
 from reformat_data_for_plot.create_generation_summary import create_generation_summary
@@ -233,6 +234,7 @@ def export_genx_for_plotting(
     emissions_frames = []
     generation_frames = []
     dispatch_frames = []
+    costs_frames = []
     transmission_frames = []
     generators_csv_entries: list[tuple[Path, str, str | None, str | None]] = []
 
@@ -417,6 +419,22 @@ def export_genx_for_plotting(
                 period_key=period_key,
             )
 
+        try:
+            costs_summary_df = create_costs_summary(
+                genx_scenario_results_path=period_dir,
+                scenario_name=model_name,
+                planning_year=planning_year,
+                case=case_label,
+                unit="USD",
+            )
+            costs_frames.append(costs_summary_df)
+        except Exception as e:
+            record_warning(
+                f"Could not create costs summary ({e})",
+                period_name=period_name,
+                period_key=period_key,
+            )
+
     if generators_csv_entries:
         coverage_output = output_folder_path / f"incomplete_tech_mapping_{model_name}.csv"
         check_tech_map_coverage(
@@ -458,6 +476,11 @@ def export_genx_for_plotting(
         transmission = pd.concat(transmission_frames, ignore_index=True)
         transmission_path = results_summary_path / "transmission.csv"
         transmission.to_csv(transmission_path, index=False)
+
+    if costs_frames:
+        costs_summary = pd.concat(costs_frames, ignore_index=True)
+        costs_summary_path = results_summary_path / "costs.csv"
+        costs_summary.to_csv(costs_summary_path, index=False)
 
     return resource_capacity_output, warnings
 
