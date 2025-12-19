@@ -1133,7 +1133,7 @@ chart
 ```
 
 
-# Operational Results
+# Operational Costs/Revenue
 ## Row {.tabset}
 
 ### Costs {.tabset}
@@ -1275,25 +1275,13 @@ chart
 ```
 
 
-### Revenue/Costs {.tabset}
+### NetRevenue/Costs {.tabset}
 ```{python}
 # | title: Revenue & Costs by Technology
 from fig_functions_genx_only import chart_revenue_costs
 
 chart = chart_revenue_costs(
     revenue[~revenue["netrevenue_component"].isin(["Profit","Cost", "Revenue"])],
-    x_var="tech_type",
-    col_var="planning_year",
-    row_var="model",
-)
-chart
-```
-```{python}
-# | title: Revenue & Costs NO SPLIT by Technology
-from fig_functions_genx_only import chart_revenue_costs
-
-chart = chart_revenue_costs(
-    revenue[revenue["netrevenue_component"].isin(["Cost", "Revenue"])],
     x_var="tech_type",
     col_var="planning_year",
     row_var="model",
