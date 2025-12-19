@@ -11,6 +11,7 @@ This package groups together the scripts that turn raw GenX scenario exports int
 | `create_dispatch_summary.py` | `create_dispatch_summary` | Convert hourly `power.csv` results into a long-form dispatch table with resource, zone, tech type, and planning year metadata. |
 | `create_emissions_summary.py` | `create_emissions_summary` | Extract annual zone-level emissions totals from `results/emissions.csv`. |
 | `create_generation_summary.py` | `create_generation_summary` | Summarize annual generation by resource and technology from `capacityfactor.csv`. |
+| `create_netrevenue_summary.py` | `create_netrevenue_summary` | Reshape `results/NetRevenue.csv` into a tidy per-resource breakdown for plotting. |
 | `create_resource_capacity.py` | `create_resource_capacity`, `map_capacity_to_resources` | Combine GenX input metadata with `capacity.csv` and `capacityfactor.csv` to track start/end capacity, new build flags, and capacity factors. |
 | `create_time_weights.py` | `create_time_weights` | Rebuild `time_weights.csv` when it is missing using representative period metadata. |
 | `format_genx_result_for_plotting.py` | `create_annual_demand_csv`, `export_genx_for_plotting`, `export_all_genx_scenarios` | Orchestrate the full export pipeline that copies inputs/results, regenerates derived tables, and aggregates summaries for every scenario. |
@@ -39,6 +40,7 @@ The summaries produced by this package are CSV files ready for visualization not
 - `emissions.csv`: columns `model`, `zone`, `planning_year`, `case`, `unit`, `value`.
 - `generation.csv`: columns `model`, `zone`, `resource_name`, `tech_type`, `planning_year`, `case`, `timestep`, `new_build`, `existing`, `unit`, `value`.
 - `resource_capacity.csv`: columns `model`, `zone`, `resource_name`, `tech_type`, `planning_year`, `case`, `unit`, `start_value`, `end_value`, `new_build`, `existing`, and optional `capacity_factor`.
+- `netrevenue.csv`: columns `model`, `planning_year`, `case`, `resource_name`, optional `zone/region/cluster/r_id`, `netrevenue_component`, `unit`, `value`.
 - `Generators_data.csv`: wide table keyed by `Resource` with the union of attributes drawn from input resource files.
 
 Refer to individual docstrings for additional details on optional parameters and logging behaviour.
