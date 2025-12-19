@@ -1,3 +1,4 @@
+import math
 import os
 import re
 from functools import lru_cache
@@ -10,7 +11,17 @@ import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
 import warnings
-from fig_functions_config import region_map, REGION_COLOR_MAP, TECH_MAP, TECH_ORDER, COLOR_MAP, TECH_STACK_ORDER, SCENARIO_MAPPING_AND_ORDER
+from fig_functions_config import (
+    region_map,
+    REGION_COLOR_MAP,
+    TECH_MAP,
+    TECH_ORDER,
+    COLOR_MAP,
+    TECH_STACK_ORDER,
+    SCENARIO_MAPPING_AND_ORDER,
+    NET_REVENUE_COMPONENT_ORDER,
+    NET_REVENUE_COLOR_MAP,
+)
 # alt.data_transformers.enable("vegafusion")
 
 try:
@@ -1157,6 +1168,7 @@ VAR_ABBR_MAP = {
     "zone": "z",
     "tech_type": "tt",
     "cost_type": "ct",
+    "netrevenue_component": "nrc",
     "value": "v",
     "end_value": "ev",
     "line_name": "ln",
@@ -1167,6 +1179,35 @@ VAR_ABBR_MAP = {
 VAR_ABBR_TITLE_MAP = {v: title_case(k) for k, v in VAR_ABBR_MAP.items()}
 VAR_ABBR_TITLE_MAP["v"] = "Capacity (GW)"
 VAR_ABBR_TITLE_MAP["v"] = "Generation (TWh)"
+VAR_ABBR_TITLE_MAP["nrc"] = "Net Revenue Component"
+
+
+
+
+def _ordered_netrev_components(values: List[str]) -> List[str]:
+    ordered = [comp for comp in NET_REVENUE_COMPONENT_ORDER if comp in values]
+    remainder = [comp for comp in values if comp not in ordered]
+    return ordered + remainder
+
+
+def _apply_netrev_sign(df: pd.DataFrame) -> pd.DataFrame:
+    component_col = "netrevenue_component"
+    if component_col not in df.columns or "value" not in df.columns:
+        return df
+
+    data = df.copy()
+    components = data[component_col].astype(str)
+
+    cost_mask = components.str.contains("cost", case=False, na=False)
+    data.loc[cost_mask, "value"] = -data.loc[cost_mask, "value"].abs()
+
+    # revenue_mask = components.str.contains("revenue", case=False, na=False)
+    # data.loc[revenue_mask, "value"] = data.loc[revenue_mask, "value"].abs()
+
+    # profit_mask = components.str.fullmatch("profit", case=False)
+    # data.loc[profit_mask, "value"] = data.loc[profit_mask, "value"].abs()
+
+    return data
 
 
 def configure_full_label_display(chart: alt.Chart) -> alt.Chart:
@@ -1694,6 +1735,216 @@ def chart_costs(
             y=y_encoding,
             color=color_encoding,
             tooltip=_tooltips,
+        )
+        .properties(width=width, height=height)
+    )
+
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
+    return chart
+
+
+def chart_revenue(
+    revenue: pd.DataFrame,
+    x_var: str = "model",
+    col_var: Optional[str] = "planning_year",
+    row_var: Optional[str] = None,
+    order: Optional[List[str]] = None,
+    width=alt.Step(40),
+    height=200,
+) -> Optional[alt.Chart]:
+    """Stacked bar chart of net-revenue components by scenario and planning year."""
+
+    component_col = "netrevenue_component"
+    if revenue.empty:
+        return None
+    if component_col not in revenue.columns:
+        raise KeyError("chart_revenue requires a 'netrevenue_component' column")
+
+    data = _apply_netrev_sign(revenue)
+    if "model" in data.columns:
+        data["model"] = data["model"].map(SCENARIO_MAPPING_AND_ORDER).fillna(data["model"])
+
+    if "zone" in data.columns:
+        data["zone"] = map_zone_values_to_regions(data["zone"])
+
+    if col_var is not None and col_var not in data.columns:
+        col_var = None
+    if row_var is not None and row_var not in data.columns:
+        row_var = None
+
+    if order is None and x_var in order_dict():
+        order = order_dict()[x_var]
+    if order:
+        present = set(data[x_var].unique())
+        order = [val for val in order if val in present]
+        if not order:
+            order = None
+
+    group_by = [component_col, x_var]
+    for axis in (col_var, row_var):
+        if axis is not None:
+            group_by.append(axis)
+    group_by = [c for c in dict.fromkeys(group_by) if c in data.columns]
+
+    grouped = data.groupby(group_by, as_index=False)["value"].sum()
+    grouped["value"] = grouped["value"] / 1e9
+
+    component_sort = list(dict.fromkeys(grouped[component_col].tolist()))
+
+    grouped = grouped.rename(columns=VAR_ABBR_MAP)
+
+    x_field = VAR_ABBR_MAP.get(x_var, x_var)
+    x_title = "Scenarios" if x_var == "model" else title_case(x_var)
+    x_kwargs: Dict[str, Any] = {"title": x_title}
+    if order:
+        x_kwargs["sort"] = order
+    x_encoding = alt.X(x_field, **x_kwargs)
+
+    y_encoding = alt.Y("v", stack="zero").title("Revenue (Billion USD)")
+
+    color_kwargs: Dict[str, Any] = {"title": "Revenue Component"}
+    if component_sort:
+        color_kwargs["sort"] = component_sort
+    color_kwargs["scale"] = alt.Scale(scheme="category20")
+    color_encoding = alt.Color("nrc", **color_kwargs)
+
+    tooltips = [
+        alt.Tooltip("nrc", title="Revenue Component"),
+        alt.Tooltip("v", title="Revenue (Billion USD)", format=",.2f"),
+    ]
+    scenario_field = VAR_ABBR_MAP.get(x_var, x_var)
+    tooltips.append(alt.Tooltip(scenario_field, title=x_title))
+    if col_var is not None:
+        tooltips.append(
+            alt.Tooltip(VAR_ABBR_MAP[col_var], title=title_case(col_var))
+        )
+    if row_var is not None:
+        tooltips.append(
+            alt.Tooltip(VAR_ABBR_MAP[row_var], title=title_case(row_var))
+        )
+
+    chart = (
+        alt.Chart(grouped)
+        .mark_bar()
+        .encode(
+            x=x_encoding,
+            y=y_encoding,
+            color=color_encoding,
+            tooltip=tooltips,
+        )
+        .properties(width=width, height=height)
+    )
+
+    chart = config_chart_row_col(chart, row_var, col_var, x_var)
+    return chart
+
+
+def chart_revenue_costs(
+    revenue: pd.DataFrame,
+    x_var: str = "tech_type",
+    col_var: Optional[str] = None,
+    row_var: Optional[str] = "model",
+    order: Optional[List[str]] = None,
+    width=alt.Step(32),
+    height=180,
+    scale_divisor: float = 1_000_000,
+) -> Optional[alt.Chart]:
+    """Facet chart of revenue and cost components by technology with rows per scenario."""
+
+    component_col = "netrevenue_component"
+    if revenue.empty:
+        return None
+    for required in (component_col, x_var):
+        if required not in revenue.columns:
+            raise KeyError(
+                f"chart_revenue_costs requires a '{required}' column"
+            )
+
+    data = _apply_netrev_sign(revenue)
+    if "model" in data.columns:
+        data["model"] = data["model"].map(SCENARIO_MAPPING_AND_ORDER).fillna(data["model"])
+
+    if "zone" in data.columns:
+        data["zone"] = map_zone_values_to_regions(data["zone"])
+
+    if col_var is not None and col_var not in data.columns:
+        col_var = None
+    if row_var is not None and row_var not in data.columns:
+        row_var = None
+
+    if order is None and x_var in order_dict():
+        order = order_dict()[x_var]
+    if order:
+        present = set(data[x_var].dropna().unique())
+        order = [val for val in order if val in present]
+        if not order:
+            order = None
+
+    group_by = [component_col, x_var]
+    for axis in (row_var, col_var):
+        if axis is not None:
+            group_by.append(axis)
+    if "planning_year" in data.columns:
+        group_by.append("planning_year")
+    group_by = [c for c in dict.fromkeys(group_by) if c in data.columns]
+
+    grouped = data.groupby(group_by, as_index=False)["value"].sum()
+    grouped = grouped.dropna(subset=[x_var])
+    if scale_divisor != 0:
+        grouped["value"] = grouped["value"] / scale_divisor
+
+    present_components = list(dict.fromkeys(grouped[component_col].tolist()))
+    component_sort = _ordered_netrev_components(present_components)
+
+    grouped = grouped.rename(columns=VAR_ABBR_MAP)
+
+    x_field = VAR_ABBR_MAP.get(x_var, x_var)
+    x_kwargs: Dict[str, Any] = {"title": title_case(x_var)}
+    if order:
+        x_kwargs["sort"] = order
+    x_encoding = alt.X(x_field, **x_kwargs)
+
+    if math.isclose(scale_divisor, 1_000_000):
+        unit_label = "Net Revenue (Million USD)"
+    elif math.isclose(scale_divisor, 1_000_000_000):
+        unit_label = "Net Revenue (Billion USD)"
+    else:
+        unit_label = "Net Revenue (USD)"
+    y_encoding = alt.Y("v", stack="zero").title(unit_label)
+
+    color_kwargs: Dict[str, Any] = {"title": "Revenue / Cost Type"}
+    if component_sort:
+        color_kwargs["sort"] = component_sort
+        color_kwargs["scale"] = alt.Scale(
+            domain=component_sort,
+            range=[NET_REVENUE_COLOR_MAP.get(c, "#888888") for c in component_sort],
+        )
+    color_encoding = alt.Color("nrc", **color_kwargs)
+
+    tooltips = [
+        alt.Tooltip("nrc", title="Component"),
+        alt.Tooltip("v", title=unit_label, format=",.2f"),
+        alt.Tooltip(x_field, title=title_case(x_var)),
+    ]
+    tooltip_axes = [
+        axis
+        for axis in (row_var, col_var, "planning_year")
+        if axis and axis in data.columns
+    ]
+    for axis in tooltip_axes:
+        if axis != x_var and axis in VAR_ABBR_MAP:
+            tooltips.append(
+                alt.Tooltip(VAR_ABBR_MAP[axis], title=title_case(axis))
+            )
+
+    chart = (
+        alt.Chart(grouped)
+        .mark_bar()
+        .encode(
+            x=x_encoding,
+            y=y_encoding,
+            color=color_encoding,
+            tooltip=tooltips,
         )
         .properties(width=width, height=height)
     )

@@ -72,6 +72,7 @@ gen = gen[~gen['tech_type'].isin(['Flex_Demand'])] # removing flex demand and di
 
 # print("Gen shape:", gen.shape)
 costs = load_data(data_path, "costs.csv")
+revenue = load_data(data_path, "netrevenue.csv")
 tx = load_data(data_path, "transmission.csv")
 tx["start_region"] = tx["transmission_path_name"].str.split("_to_").str[0]
 tx["dest_region"] = tx["transmission_path_name"].str.split("_to_").str[1]
@@ -1135,6 +1136,7 @@ chart
 # Operational Results
 ## Row {.tabset}
 
+### Costs {.tabset}
 ```{python}
 # | title: Operational costs
 from fig_functions_genx_only import chart_costs
@@ -1269,5 +1271,57 @@ from fig_functions_genx_only import chart_costs
 zcosts = costs.loc[~costs["zone"].isin(["Total", "Zone1", "Zone10", "Zone11"])]
 unmet_rsv_costs = zcosts[zcosts['cost_type']=='cUnmetRsv']
 chart = chart_costs(unmet_rsv_costs, row_var='zone')
+chart
+```
+
+
+### Revenue/Costs {.tabset}
+```{python}
+# | title: Revenue & Costs by Technology
+from fig_functions_genx_only import chart_revenue_costs
+
+chart = chart_revenue_costs(
+    revenue[~revenue["netrevenue_component"].isin(["Profit","Cost", "Revenue"])],
+    x_var="tech_type",
+    col_var="planning_year",
+    row_var="model",
+)
+chart
+```
+```{python}
+# | title: Revenue & Costs NO SPLIT by Technology
+from fig_functions_genx_only import chart_revenue_costs
+
+chart = chart_revenue_costs(
+    revenue[revenue["netrevenue_component"].isin(["Cost", "Revenue"])],
+    x_var="tech_type",
+    col_var="planning_year",
+    row_var="model",
+)
+chart
+```
+```{python}
+# | title: Profit by Technology
+from fig_functions_genx_only import chart_revenue_costs
+
+chart = chart_revenue_costs(
+    revenue[revenue["netrevenue_component"].isin(["Profit"])],
+    x_var="tech_type",
+    col_var="planning_year",
+    row_var="model",
+)
+chart
+```
+```{python}
+# | title: Revenue by Scenario
+from fig_functions_genx_only import chart_revenue
+
+chart = chart_revenue(revenue[~revenue["netrevenue_component"].isin(["Profit","Cost", "Revenue"])])
+chart
+```
+```{python}
+# | title: Profit by Scenario
+profit_revenue = revenue[revenue["netrevenue_component"] == "Profit"]
+chart = chart_revenue(profit_revenue)
 chart
 ```
