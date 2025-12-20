@@ -31,6 +31,7 @@ from pathlib import Path
 import uuid
 import posixpath
 import shutil
+import geopandas as gpd
 from fig_functions_genx_only import (
     # fix_tx_line_names,
     load_genx_operations_data,
@@ -40,6 +41,8 @@ from fig_functions_genx_only import (
     chart_total_gen,
     chart_regional_gen,
     chart_tx_expansion,
+    chart_tx_map,
+    chart_tx_line_trends,
     chart_emissions,
     chart_dispatch,
     # chart_wind_dispatch,
@@ -76,7 +79,8 @@ revenue = load_data(data_path, "netrevenue.csv")
 tx = load_data(data_path, "transmission.csv")
 tx["start_region"] = tx["transmission_path_name"].str.split("_to_").str[0]
 tx["dest_region"] = tx["transmission_path_name"].str.split("_to_").str[1]
-
+tx["value"]= tx["New_Trans_Capacity"]
+# print(tx.head())
 # first_year = tx["planning_year"].min()
 # starting_tx = tx.loc[tx["planning_year"] == first_year, :]
 # starting_tx = starting_tx.rename(columns={"start_value": "value"})
@@ -341,18 +345,90 @@ chart
 ```
 ```{python}
 # | title: Total expansion map
-#from fig_functions_genx_only import chart_tx_map, gdf
-
-#chart = chart_tx_map(tx_exp, gdf)
-#chart
+from fig_functions_genx_only import chart_tx_map
+# # print(tx.head())
+# filtered_tx=tx.query('model == "Current Policy"')
+chart = chart_tx_map(
+    tx,
+    region_simplify_tol=0.1,
+    line_simplify_tol=0.05,
+    show_full_map=False,
+    bbox_buffer=0.1,
+    )
+chart
 ```
 ```{python}
-# | title: Total expansion map (drop lines < 50MW)
-#from fig_functions_genx_only import chart_tx_map, gdf
+# | title: Total expansion map (light)
+from fig_functions_genx_only import chart_tx_map_light
+# print(tx.query('model == "Current Policy" and planning_year == 2030').head()) # see if anything’s > 25 MW
+policy = "And Optimistic"
+year = 2050
+light_map = chart_tx_map_light(
+    tx,
+    scenario_value=policy,
+    year_value=year,
+    min_total_expansion=10,
+    title=f"Transmission expansion - Scenario: {policy} {year}",
+    region_simplify_tol=0.04,
+    line_simplify_tol=0,
+    show_full_map=False,
+)
+light_map
+```
+```{python}
+# | title: Line expansion trends by scenario
+from fig_functions_genx_only import chart_tx_line_trends
 
-#chart = chart_tx_map(tx_exp, gdf, min_total_expansion=50)
-#chart
-``` 
+line_trend_chart = chart_tx_line_trends(
+    tx,
+    min_total_expansion=10,
+    width=180,
+    height=260,
+)
+line_trend_chart
+```
+```{python}
+# # | title: Total expansion map (drop lines < 50MW)
+# from fig_functions_genx_only import chart_tx_map
+
+# chart = chart_tx_map(tx_exp, min_total_expansion=50)
+# chart
+```
+```{python}
+# | title: Map by case
+# from fig_functions_genx_only import chart_tx_map
+
+# tx_exp_data = (
+#     tx.groupby(
+#         ["transmission_path_name", "planning_year", "case", "start_region", "dest_region"],
+#         as_index=False,
+#     )["value"]
+#     .mean()
+#     .sort_values("case")
+# )
+
+# chart = chart_tx_map(
+#     tx_exp_data,
+#     facet_col="case",
+# )
+# chart
+```
+
+```{python}
+# | title: Map by case, drop lines < 50 MW
+# tx_exp_data = (
+#     tx_exp.groupby(
+#         ["line_name", "planning_year", "case", "start_region", "dest_region"],
+#         as_index=False,
+#     )["value"]
+#     .mean()
+#     .query("value >= 50")
+#     .sort_values("case")
+# )
+
+# chart = chart_tx_map(tx_exp_data, facet_col="case")
+# chart
+```
 
 
 # Emissions

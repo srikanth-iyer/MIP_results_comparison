@@ -1,9 +1,10 @@
 import math
 import os
 import re
+import json
 from functools import lru_cache
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set
+from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
 
 import altair as alt
 import geopandas as gpd
@@ -11,6 +12,8 @@ import numpy as np
 import pandas as pd
 from joblib import Parallel, delayed
 import warnings
+from shapely import wkt
+from shapely.geometry.base import BaseGeometry
 from fig_functions_config import (
     region_map,
     REGION_COLOR_MAP,
@@ -876,17 +879,17 @@ def add_genx_op_network_cost(
 #         if row["line_name"] not in LINE_NAMES:
 #             df.loc[:, "line_name"] = df["line_name"].str.replace(
 #                 row["line_name"], reverse_line_name(row["line_name"])
-            # )
-    # line_count = df.groupby("line_name", as_index=False)["model"].count()
-    # median_count = line_count["model"].median()
-    # reversed_lines = line_count.query("model < @median_count")
+#             )
+#     line_count = df.groupby("line_name", as_index=False)["model"].count()
+#     median_count = line_count["model"].median()
+#     reversed_lines = line_count.query("model < @median_count")
 
-    # for idx, row in reversed_lines.iterrows():
-    #     df.loc[:, "line_name"] = df["line_name"].str.replace(
-    #         row["line_name"], reverse_line_name(row["line_name"])
-    #     )
+#     for idx, row in reversed_lines.iterrows():
+#         df.loc[:, "line_name"] = df["line_name"].str.replace(
+#             row["line_name"], reverse_line_name(row["line_name"])
+#         )
 
-    # return df
+#     return df
 
 
 def calc_period_retirements(
@@ -2957,99 +2960,712 @@ def chart_op_emiss(
     chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
 
+# Geospatial utilities for transmission lines and regions
+TX_LINE_SHP_PATH = (
+    Path(__file__).parent
+    / "interregional_connections_NYISO"
+    / "interregional_connections_NYISO_neha.shp"
+)
 
-# try:
-#     gdf = gpd.read_file("conus_26z_latlon_simple.geojson")
-# except:
-#     gdf = gpd.read_file(
-#         "/Users/gs5183/Documents/MIP_results_comparison/notebooks/conus_26z_latlon_simple.geojson"
-#     )
-# gdf = gdf.rename(columns={"model_region": "zone"})
+REGION_SHP_PATH = (
+    Path(__file__).parent
+    / "agg_IMP_Region"
+    / "aggregated_regions.shp"
+)
+
+# transmission map functions
+
+DEFAULT_REGION_COLOR = "#E2E6EC"
+
+def _region_key(df: pd.DataFrame, start_col: str, end_col: str, sep: str = "||") -> pd.Series:
+    cols = df[[start_col, end_col]].astype(str).fillna("")
+    return cols.apply(lambda row: sep.join(sorted(row.tolist())), axis=1)
 
 
-# def chart_tx_map(
-#     tx_exp: pd.DataFrame,
-#     gdf: gpd.GeoDataFrame,
-#     facet_col="model",
-#     colormap="magma",
-#     reverse_colors=True,
-#     min_total_expansion=1,
-#     result_col: str = "cap",
-#     **kwargs,
-# ) -> alt.Chart:
-#     geoshape_kwargs = {
-#         "stroke": "white",
-#         "fill": "silver",
-#     }
-#     geoshape_kwargs.update(kwargs)
-#     gdf["lat"] = gdf.geometry.centroid.y
-#     gdf["lon"] = gdf.geometry.centroid.x
-#     # ensure result_col exists, e.g. 'cap', by copying 'value' if absent
-#     if result_col not in tx_exp.columns:
-#         tx_exp[result_col] = tx_exp["value"] #NOTE: Temp change to remove the error 'cap' not found.
-#     tx_exp["lat1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lat"])
-#     tx_exp["lon1"] = tx_exp["start_region"].map(gdf.set_index("zone")["lon"])
-#     tx_exp["lat2"] = tx_exp["dest_region"].map(gdf.set_index("zone")["lat"])
-#     tx_exp["lon2"] = tx_exp["dest_region"].map(gdf.set_index("zone")["lon"])
+def _resolve_column_name(
+    columns: Iterable[str],
+    preferred: Optional[str],
+    fallbacks: Iterable[str],
+) -> Optional[str]:
+    """Return the first column present in *columns* from preferred+fallback candidates."""
+    seen: Set[str] = set()
+    candidates: List[Optional[str]] = []
+    if preferred:
+        candidates.append(preferred)
+    candidates.extend(fallbacks)
+    for candidate in candidates:
+        if candidate and candidate not in seen and candidate in columns:
+            return candidate
+        if candidate:
+            seen.add(candidate)
+    return None
 
-#     model_figs = []
-#     data = tx_exp.copy()
-#     # data["value"] /= 1000
-#     for model, _data in tx_exp.groupby(facet_col):
-#         background = (
-#             alt.Chart(gdf, title=f"{model}")
-#             .mark_geoshape(**geoshape_kwargs)
-#             .project(type="albersUsa")
-#             .properties(height=325, width=400)
-#         )
-#         by = ["line_name", "lat1", "lat2", "lon1", "lon2", facet_col]
-#         _data = (
-#             _data.query("planning_year >= 2025")
-#             .groupby(by, as_index=False)[["value", "cap"]]
-#             .sum()
-#         )
-#         lines = (
-#             alt.Chart(
-#                 # data.loc[
-#                 #     (data["planning_year"] >= 2025)
-#                 #     # & (data[facet_col] == model)
-#                 #     & (data["value"] >= 0),
-#                 #     :,
-#                 # ]
-#                 _data.loc[_data["value"] >= min_total_expansion, :]
-#             )
-#             .mark_rule()
-#             .encode(
-#                 latitude="lat1",
-#                 longitude="lon1",
-#                 latitude2="lat2",
-#                 longitude2="lon2",
-#                 # strokeWidth="sum(cap)",
-#                 strokeWidth=f"sum({result_col})",
-#                 color=alt.Color(f"sum({result_col})")
-#                 # color=alt.Color(f"sum(cap)")
-#                 .scale(scheme=colormap, reverse=reverse_colors).title("Expansion (MW)"),
-#                 tooltip=[
-#                     alt.Tooltip("line_name"),
-#                     # alt.Tooltip("sum(cap)", title="Expansion (MW)"),
-#                     alt.Tooltip(f"sum({result_col})", title="Expansion (MW)"),
-#                 ],
-#             )
-#             .project(type="albersUsa")
-#         )
 
-#         model_figs.append(background + lines)
-#     num_cols = int(len(model_figs) / 2)
-#     chart = alt.vconcat(
-#         alt.hconcat(*model_figs[:num_cols]), alt.hconcat(*model_figs[num_cols:])
-#     ).configure_concat(spacing=-50)
-#     chart = (
-#         chart.configure_axis(labelFontSize=15, titleFontSize=15)
-#         .configure_legend(titleFontSize=20, labelFontSize=18)
-#         .configure_title(fontSize=20, dy=35)
-#     )
-#     chart = configure_full_label_display(chart)
-#     return chart
+def _prepare_tx_exp_data(
+    tx_exp: pd.DataFrame,
+    scenario_field: str,
+    year_field: str,
+    result_col: str,
+    *,
+    require_scenario: bool,
+    require_year: bool,
+    missing_scenario_msg: str,
+    missing_year_msg: str,
+    missing_result_msg: str,
+    missing_path_msg: str,
+) -> Tuple[pd.DataFrame, Optional[str], Optional[str], str]:
+    """Normalize transmission expansion inputs and resolve column names."""
+    data = tx_exp.copy()
+
+    scenario_col = _resolve_column_name(data.columns, scenario_field, ["case", "model"])
+    if scenario_col is None and require_scenario:
+        raise KeyError(missing_scenario_msg)
+
+    year_col = _resolve_column_name(data.columns, year_field, ["planning_year"])
+    if year_col is None and require_year:
+        raise KeyError(missing_year_msg)
+
+    result_candidates = [result_col, "value", "New_Trans_Capacity"]
+    result_resolved = _resolve_column_name(data.columns, result_candidates[0], result_candidates[1:])
+    if result_resolved is None:
+        raise KeyError(missing_result_msg)
+
+    if "line_name" not in data.columns:
+        fallback_line_col = next(
+            (col for col in ("transmission_path_name", "line") if col in data.columns),
+            None,
+        )
+        if fallback_line_col is not None:
+            data["line_name"] = data[fallback_line_col]
+        elif {"start_region", "dest_region"}.issubset(data.columns):
+            data["line_name"] = data["start_region"].astype(str) + "_to_" + data["dest_region"].astype(str)
+        else:
+            data["line_name"] = "line"
+
+    if "start_region" not in data.columns or "dest_region" not in data.columns:
+        path_col = next((col for col in ("line_name", "transmission_path_name") if col in data.columns), None)
+        if path_col is None:
+            raise KeyError(missing_path_msg)
+        regions = data[path_col].astype(str).str.split("_to_", n=1, expand=True)
+        data["start_region"] = regions[0]
+        data["dest_region"] = regions[1]
+
+    data["start_region"] = data["start_region"].apply(_normalize_zone_name)
+    data["dest_region"] = data["dest_region"].apply(_normalize_zone_name)
+
+    return data, scenario_col, year_col, result_resolved
+
+
+def _build_tx_map_assets(
+    grouped: pd.DataFrame,
+    result_col: str,
+    focus_regions: Tuple[str, ...],
+    bbox_buffer: float,
+    region_simplify_tol: Optional[float],
+    line_simplify_tol: Optional[float],
+    show_full_map: bool,
+    *,
+    simplify_lines_when_full_map: bool,
+) -> Optional[Tuple[gpd.GeoDataFrame, List[Dict[str, Any]], Dict[str, Any]]]:
+    """Return merged line geometries plus background features and projection settings."""
+    gdf = load_tx_line_geometries()
+    if "region_key" not in gdf.columns:
+        gdf = gdf.copy()
+        gdf["region_key"] = _region_key(gdf, "region_1", "region_2")
+
+    grouped = grouped.copy()
+    if "region_key" not in grouped.columns:
+        grouped["region_key"] = _region_key(grouped, "start_region", "dest_region")
+
+    extent_keys = grouped["region_key"].unique().tolist()
+    merged = (
+        grouped.merge(
+            gdf[["region_key", "geometry"]],
+            on="region_key",
+            how="left",
+        )
+        .dropna(subset=["geometry"])
+        .reset_index(drop=True)
+    )
+    merged = gpd.GeoDataFrame(merged, geometry="geometry", crs=getattr(gdf, "crs", None))
+    if merged.empty:
+        raise ValueError("No transmission lines matched the shapefile geometries.")
+
+    simplify_lines = (
+        line_simplify_tol is not None
+        and line_simplify_tol > 0
+        and (simplify_lines_when_full_map or not show_full_map)
+    )
+    if simplify_lines:
+        merged = merged.copy()
+        merged["geometry"] = merged.geometry.simplify(line_simplify_tol, preserve_topology=False)
+        merged = merged.loc[~merged.geometry.is_empty]
+        if merged.empty:
+            return None
+
+    if show_full_map:
+        line_extent_subset = gdf.geometry
+    else:
+        line_extent_subset = gdf.loc[gdf["region_key"].isin(extent_keys)].geometry
+        if line_extent_subset.empty:
+            line_extent_subset = gdf.geometry
+    line_extent_union = line_extent_subset.unary_union
+    if isinstance(line_extent_union, (list, tuple)):
+        line_extent_union = gpd.GeoSeries(line_extent_subset).unary_union
+    if hasattr(line_extent_union, "is_empty") and line_extent_union.is_empty:
+        line_extent_union = None
+
+    _, (region_extent_geom, region_extent_crs) = _region_background_cache(focus_regions, bbox_buffer)
+    extent_geom = region_extent_geom
+    if not show_full_map and line_extent_union is not None and extent_geom is not None:
+        extent_geom = extent_geom.union(line_extent_union)
+    if bbox_buffer and bbox_buffer > 0 and extent_geom is not None:
+        extent_geom = extent_geom.buffer(bbox_buffer)
+
+    extent_crs = region_extent_crs or "EPSG:4326"
+    extent_df = gpd.GeoDataFrame({"id": [0]}, geometry=[extent_geom], crs=extent_crs)
+    if extent_df.crs is None:
+        extent_df.set_crs(epsg=4326, inplace=True)
+    elif extent_df.crs.to_epsg() != 4326:
+        extent_df = extent_df.to_crs(epsg=4326)
+    projection_fit = _geodf_to_feature_collection(extent_df)
+    projection_kwargs = {"type": "mercator", "fit": projection_fit}
+
+    region_gdf_full = load_region_geometries()
+    if show_full_map or extent_geom is None:
+        background_gdf = region_gdf_full.copy()
+    else:
+        background_gdf = region_gdf_full.loc[region_gdf_full.geometry.intersects(extent_geom)].copy()
+        if background_gdf.empty:
+            background_gdf = region_gdf_full.copy()
+
+    if region_simplify_tol and region_simplify_tol > 0:
+        simplified = background_gdf.copy()
+        simplified["geometry"] = simplified.geometry.simplify(
+            region_simplify_tol,
+            preserve_topology=False,
+        )
+        simplified = simplified.loc[~simplified.geometry.is_empty]
+        if not simplified.empty:
+            background_gdf = simplified
+
+    base_region_features = _geodf_to_feature_values(background_gdf)
+    return merged, base_region_features, projection_kwargs
+
+
+@lru_cache(maxsize=1)
+def load_tx_line_geometries(shapefile_path: str | Path = TX_LINE_SHP_PATH) -> gpd.GeoDataFrame:
+    path = Path(shapefile_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Transmission shapefile not found at {path}")
+
+    geodf = gpd.read_file(path)
+    rename_map = {
+        "Region_1": "region_1",
+        "Region_2": "region_2",
+        "REGION_1": "region_1",
+        "REGION_2": "region_2",
+        "region1": "region_1",
+        "region2": "region_2",
+        "Line_Name": "line_name",
+        "LINE_NAME": "line_name",
+        "LineName": "line_name",
+    }
+    geodf = geodf.rename(columns={k: v for k, v in rename_map.items() if k in geodf.columns})
+
+    required_cols = {"region_1", "region_2", "geometry"}
+    missing_cols = required_cols - set(geodf.columns)
+    if missing_cols:
+        raise ValueError(
+            f"Missing expected columns {missing_cols} in transmission shapefile {path}"
+        )
+
+    if geodf.crs is not None and geodf.crs.to_epsg() != 4326:
+        geodf = geodf.to_crs(epsg=4326)
+
+    geodf = geodf.copy()
+    for col in ("region_1", "region_2"):
+        if col in geodf.columns:
+            geodf[col] = geodf[col].apply(_normalize_zone_name)
+    geodf["region_key"] = _region_key(geodf, "region_1", "region_2")
+    return geodf
+def _geodf_to_feature_collection(df: gpd.GeoDataFrame) -> Dict[str, Any]:
+    if df.empty:
+        return {"type": "FeatureCollection", "features": []}
+    return json.loads(df.to_json())
+
+
+def _geodf_to_feature_values(df: gpd.GeoDataFrame) -> List[Dict[str, Any]]:
+    return _geodf_to_feature_collection(df).get("features", [])
+
+
+def _normalize_zone_name(value: Any) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    if pd.notna(value):
+        return str(value).strip()
+    return ""
+
+
+@lru_cache(maxsize=1)
+def load_region_geometries(shapefile_path: str | Path = REGION_SHP_PATH) -> gpd.GeoDataFrame:
+    path = Path(shapefile_path)
+    if not path.exists():
+        raise FileNotFoundError(f"Region shapefile not found at {path}")
+
+    geodf = gpd.read_file(path)
+    rename_map = {
+        "IPM_Region": "zone",
+        "region": "zone",
+        "Region": "zone",
+        "ZONE": "zone",
+        "name": "zone",
+    }
+    geodf = geodf.rename(columns={k: v for k, v in rename_map.items() if k in geodf.columns})
+    if "zone" not in geodf.columns:
+        raise ValueError("Region shapefile must contain an 'IPM_Region' or 'zone' column")
+
+    if geodf.crs is not None and geodf.crs.to_epsg() != 4326:
+        geodf = geodf.to_crs(epsg=4326)
+
+    geodf = geodf.loc[:, ["zone", "geometry"]].copy()
+    geodf["zone"] = geodf["zone"].apply(_normalize_zone_name)
+    return geodf
+
+
+@lru_cache(maxsize=64)
+def _region_background_cache(
+    focus_regions_key: Tuple[str, ...],
+    bbox_buffer: float,
+) -> Tuple[List[Dict[str, Any]], Tuple[BaseGeometry, Any]]:
+    region_gdf = load_region_geometries()
+    if "__all__" in focus_regions_key or not focus_regions_key:
+        subset = region_gdf.copy()
+    else:
+        subset = region_gdf.loc[region_gdf["zone"].isin(focus_regions_key)].copy()
+        if subset.empty:
+            subset = region_gdf.copy()
+
+    extent_source = subset if not subset.empty else region_gdf
+    extent_geom = extent_source.geometry.unary_union.convex_hull
+    if bbox_buffer and bbox_buffer > 0:
+        extent_geom = extent_geom.buffer(bbox_buffer)
+    features = _geodf_to_feature_values(subset)
+    extent_crs = extent_source.crs or "EPSG:4326"
+    return features, (extent_geom, extent_crs)
+
+
+def chart_tx_map(
+    tx_exp: pd.DataFrame,
+    scenario_field: str = "model",
+    year_field: str = "planning_year",
+    colormap: str = "magma",
+    reverse_colors: bool = False,
+    min_total_expansion: float = 1,
+    result_col: str = "value",
+    order: Optional[List[Any]] = None,
+    year_order: Optional[List[Any]] = None,
+    height: int = 220,
+    width: int = 320,
+    background_fill: str = "#CCCCCC",
+    background_stroke: str = "white",
+    bbox_buffer: float = 0.1,
+    region_simplify_tol: Optional[float] = None,
+    line_simplify_tol: Optional[float] = None,
+    show_full_map: bool = False,
+    **kwargs,
+) -> Optional[alt.Chart]:
+    if tx_exp.empty:
+        return None
+
+    data, scenario_field, year_field, result_col = _prepare_tx_exp_data(
+        tx_exp,
+        scenario_field,
+        year_field,
+        result_col,
+        require_scenario=True,
+        require_year=True,
+        missing_scenario_msg="chart_tx_map requires a 'case' or 'model' column.",
+        missing_year_msg="chart_tx_map requires a planning year column.",
+        missing_result_msg=f"chart_tx_map could not find '{result_col}' or a fallback metric column.",
+        missing_path_msg="chart_tx_map needs either explicit start/dest columns or *_to_* names.",
+    )
+
+    focus_regions = pd.unique(
+        pd.concat([data["start_region"], data["dest_region"]], ignore_index=True).dropna()
+    )
+    focus_regions = tuple(sorted({_normalize_zone_name(region) for region in focus_regions if region}))
+    if show_full_map or not focus_regions:
+        focus_regions = ("__all__",)
+
+    group_cols = [
+        scenario_field,
+        year_field,
+        "line_name",
+        "start_region",
+        "dest_region",
+    ]
+    grouped = data.groupby(group_cols, as_index=False)[result_col].sum()
+    grouped = grouped.query(f"{result_col} >= @min_total_expansion")
+    if grouped.empty:
+        return None
+
+    assets = _build_tx_map_assets(
+        grouped,
+        result_col,
+        focus_regions,
+        bbox_buffer,
+        region_simplify_tol,
+        line_simplify_tol,
+        show_full_map,
+        simplify_lines_when_full_map=True,
+    )
+    if assets is None:
+        return None
+    merged, base_region_features, projection_kwargs = assets
+
+    base_region_data = alt.Data(values=base_region_features)
+    region_fill_color = background_fill or DEFAULT_REGION_COLOR
+
+    scenario_order = order or sorted(merged[scenario_field].unique())
+    column_order = year_order or sorted(merged[year_field].unique())
+    if not column_order:
+        return None
+
+    color_scale = alt.Scale(
+        scheme=colormap,
+        reverse=reverse_colors,
+        domain=[merged[result_col].min(), merged[result_col].max()],
+    )
+
+    tooltip_fields = [
+        alt.Tooltip("properties.line_name:N", title="Line"),
+        alt.Tooltip(f"properties.{result_col}:Q", title="Expansion (MW)", format=",.0f"),
+        alt.Tooltip(f"properties.{scenario_field}:N", title=title_case(scenario_field)),
+        alt.Tooltip(f"properties.{year_field}:N", title=title_case(year_field)),
+    ]
+
+    mark_kwargs = {"filled": False}
+    mark_kwargs.update(kwargs)
+
+    def _base_map_panel(title: Optional[str] = None) -> alt.Chart:
+        chart = (
+            alt.Chart(data=base_region_data)
+            .mark_geoshape(stroke=background_stroke, fill=region_fill_color)
+            .project(**projection_kwargs)
+            .properties(width=width, height=height)
+        )
+        if title is not None:
+            chart = chart.properties(title=title)
+        return chart
+
+    row_charts = []
+    for scenario in scenario_order:
+        scenario_subset = merged.loc[merged[scenario_field] == scenario]
+        panels = []
+        for year_idx, year_value in enumerate(column_order):
+            year_subset = scenario_subset.loc[scenario_subset[year_field] == year_value]
+            column_title = str(year_value)
+            if year_subset.empty:
+                panels.append(_base_map_panel(column_title))
+                continue
+
+            feature_collection = json.loads(year_subset.to_json())
+            feature_values = feature_collection.get("features", [])
+            if not feature_values:
+                panels.append(_base_map_panel(column_title))
+                continue
+
+            data_source = alt.Data(values=feature_values)
+            lines = (
+                alt.Chart(data=data_source)
+                .mark_geoshape(**mark_kwargs)
+                .encode(
+                    stroke=alt.Stroke(
+                        f"properties.{result_col}:Q",
+                        scale=color_scale,
+                        title="Expansion (MW)",
+                    ),
+                    strokeWidth=alt.StrokeWidth(
+                        f"properties.{result_col}:Q",
+                        scale=alt.Scale(range=[2, 5]),
+                        legend=None,
+                    ),
+                    tooltip=tooltip_fields,
+                )
+                .project(**projection_kwargs)
+                .properties(width=width, height=height)
+            )
+            panel = alt.layer(_base_map_panel(column_title), lines)
+            panels.append(panel)
+
+        if panels:
+            row_chart = alt.hconcat(*panels).properties(title=str(scenario))
+            row_charts.append(row_chart)
+
+    if not row_charts:
+        return None
+
+    chart = alt.vconcat(*row_charts, spacing=25).resolve_scale(color="shared", strokeWidth="shared")
+    chart = chart.configure_concat(spacing=20)
+    chart = chart.configure_axis(labelFontSize=12, titleFontSize=14).configure_legend(
+        titleFontSize=15, labelFontSize=13
+    )
+    chart = configure_full_label_display(chart)
+    return chart
+
+
+def chart_tx_map_light(
+    tx_exp: pd.DataFrame,
+    scenario_field: str = "model",
+    year_field: str = "planning_year",
+    result_col: str = "value",
+    scenario_value: Optional[Any] = None,
+    year_value: Optional[Any] = None,
+    min_total_expansion: float = 10,
+    bbox_buffer: float = 0.1,
+    width: int = 560,
+    height: int = 430,
+    colormap: str = "magma",
+    reverse_colors: bool = False,
+    line_width_range: Tuple[int, int] = (1, 6),
+    background_fill: str = "#B9B9B9",
+    background_stroke: str = "#FFFFFF",
+    title: Optional[str] = None,
+    region_simplify_tol: Optional[float] = 0.1,
+    line_simplify_tol: Optional[float] = 0.04,
+    show_full_map: bool = False,
+) -> Optional[alt.Chart]:
+    """Render a lightweight single-map view with aggressively simplified geometry."""
+    if tx_exp.empty:
+        return None
+
+    data, scenario_field, year_field, result_col = _prepare_tx_exp_data(
+        tx_exp,
+        scenario_field,
+        year_field,
+        result_col,
+        require_scenario=False,
+        require_year=False,
+        missing_scenario_msg="chart_tx_map_light requires a 'case' or 'model' column.",
+        missing_year_msg="chart_tx_map_light requires a planning year column.",
+        missing_result_msg=f"chart_tx_map_light could not find '{result_col}' or a fallback metric column.",
+        missing_path_msg="chart_tx_map_light needs either start/dest columns or *_to_* names.",
+    )
+
+    if scenario_value is not None and scenario_field and scenario_field in data.columns:
+        data = data.loc[data[scenario_field] == scenario_value]
+    if year_value is not None and year_field and year_field in data.columns:
+        data = data.loc[data[year_field] == year_value]
+    if data.empty:
+        return None
+
+    focus_regions = pd.unique(
+        pd.concat([data["start_region"], data["dest_region"]], ignore_index=True).dropna()
+    )
+    focus_regions = tuple(sorted({_normalize_zone_name(region) for region in focus_regions if region}))
+    if show_full_map:
+        focus_regions = ("__all__",)
+    elif not focus_regions:
+        focus_regions = ("__all__",)
+
+    group_cols = ["line_name", "start_region", "dest_region"]
+    grouped = data.groupby(group_cols, as_index=False)[result_col].sum()
+    grouped = grouped.query(f"{result_col} >= @min_total_expansion")
+    if grouped.empty:
+        return None
+    assets = _build_tx_map_assets(
+        grouped,
+        result_col,
+        focus_regions,
+        bbox_buffer,
+        region_simplify_tol,
+        line_simplify_tol,
+        show_full_map,
+        simplify_lines_when_full_map=False,
+    )
+    if assets is None:
+        return None
+    merged, base_region_features, projection_kwargs = assets
+
+    base_region_data = alt.Data(values=base_region_features)
+    feature_collection = json.loads(merged.to_json())
+    feature_values = feature_collection.get("features", [])
+
+    base_map = (
+        alt.Chart(data=base_region_data)
+        .mark_geoshape(fill=background_fill, stroke=background_stroke)
+        .project(**projection_kwargs)
+        .properties(width=width, height=height)
+    )
+
+    if not feature_values:
+        chart = base_map
+    else:
+        data_source = alt.Data(values=feature_values)
+        value_min = grouped[result_col].min()
+        value_max = grouped[result_col].max()
+        if value_min == value_max:
+            value_min = 0
+            value_max = value_max if value_max != 0 else 1
+        color_scale = alt.Scale(
+            scheme=colormap,
+            reverse=reverse_colors,
+            domain=[value_min, value_max],
+        )
+        lines = (
+            alt.Chart(data=data_source)
+            .mark_geoshape(filled=False, strokeCap="round")
+            .encode(
+                stroke=alt.Stroke(f"properties.{result_col}:Q", scale=color_scale, title="Expansion (MW)"),
+                strokeWidth=alt.StrokeWidth(
+                    f"properties.{result_col}:Q",
+                    scale=alt.Scale(range=list(line_width_range)),
+                    legend=None,
+                ),
+                tooltip=[
+                    alt.Tooltip("properties.line_name:N", title="Line"),
+                    alt.Tooltip(f"properties.{result_col}:Q", title="Expansion (MW)", format=",.0f"),
+                    alt.Tooltip("properties.start_region:N", title="From"),
+                    alt.Tooltip("properties.dest_region:N", title="To"),
+                ],
+            )
+            .project(**projection_kwargs)
+            .properties(width=width, height=height)
+        )
+        chart = alt.layer(base_map, lines)
+
+    if title is not None:
+        chart = chart.properties(title=title)
+
+    return chart.configure_view(stroke=None)
+
+
+def chart_tx_line_trends(
+    tx_exp: pd.DataFrame,
+    scenario_field: str = "model",
+    year_field: str = "planning_year",
+    line_field: str = "transmission_path_name",
+    result_col: str = "New_Trans_Capacity",
+    min_total_expansion: float = 0.0,
+    scenario_order: Optional[List[Any]] = None,
+    height: int = 280,
+    width: int = 360,
+) -> Optional[alt.Chart]:
+    """Plot per-line transmission expansion trends per scenario across planning years."""
+    if tx_exp.empty:
+        return None
+
+    data = tx_exp.copy()
+
+    if scenario_field not in data.columns:
+        if "model" in data.columns:
+            scenario_field = "model"
+        elif "case" in data.columns:
+            scenario_field = "case"
+        else:
+            raise KeyError("chart_tx_line_trends requires a scenario column such as 'model'.")
+
+    if year_field not in data.columns:
+        if "planning_year" in data.columns:
+            year_field = "planning_year"
+        else:
+            raise KeyError("chart_tx_line_trends requires a planning year column.")
+
+    candidate_line_fields = [line_field, "transmission_path_name", "line_name"]
+    line_field = next((field for field in candidate_line_fields if field and field in data.columns), None)
+    if line_field is None:
+        if {"start_region", "dest_region"}.issubset(data.columns):
+            line_field = "line_name"
+            data[line_field] = (
+                data["start_region"].apply(_normalize_zone_name)
+                + "_to_"
+                + data["dest_region"].apply(_normalize_zone_name)
+            )
+        else:
+            raise KeyError(
+                "chart_tx_line_trends needs a line identifier column such as 'transmission_path_name'."
+            )
+
+    if result_col not in data.columns:
+        fallback_cols = [col for col in ("New_Trans_Capacity", "value") if col in data.columns]
+        if not fallback_cols:
+            raise KeyError(
+                f"chart_tx_line_trends could not find '{result_col}' or a fallback capacity column."
+            )
+        result_col = fallback_cols[0]
+
+    data[result_col] = pd.to_numeric(data[result_col], errors="coerce").fillna(0)
+
+    group_cols = [scenario_field, year_field, line_field]
+    summary = data.groupby(group_cols, as_index=False)[result_col].sum()
+    summary = summary.query(f"{result_col} >= @min_total_expansion")
+    if summary.empty:
+        return None
+
+    summary[line_field] = summary[line_field].fillna("Unknown path").astype(str)
+    summary["line_label"] = summary[line_field].str.replace("_to_", " -> ", regex=False)
+    summary["line_label"] = summary["line_label"].str.strip().replace("", "Unknown path")
+    summary["year_label"] = summary[year_field].astype(str)
+    summary["capacity_gw"] = summary[result_col] / 1000.0
+
+    year_sort = [str(value) for value in sorted(summary[year_field].unique())]
+
+    unique_scenarios = summary[scenario_field].unique().tolist()
+    if scenario_order:
+        scenario_values = [scenario for scenario in scenario_order if scenario in unique_scenarios]
+        if not scenario_values:
+            scenario_values = [scenario for scenario in unique_scenarios]
+    else:
+        if pd.api.types.is_categorical_dtype(summary[scenario_field]):
+            scenario_values = [cat for cat in summary[scenario_field].cat.categories if cat in unique_scenarios]
+        else:
+            scenario_values = sorted(unique_scenarios, key=lambda value: str(value))
+
+    selection = alt.selection_multi(fields=["line_label"], bind="legend", empty="all")
+    has_costs = "Cost_Trans_Capacity" in summary.columns
+    tooltip_fields = [
+        alt.Tooltip("line_label:N", title="Path"),
+        alt.Tooltip("year_label:N", title="Planning Year"),
+        alt.Tooltip(f"{result_col}:Q", title="New Capacity (MW)", format=",.1f"),
+        alt.Tooltip("capacity_gw:Q", title="New Capacity (GW)", format=",.3f"),
+    ]
+    if has_costs:
+        tooltip_fields.append(
+            alt.Tooltip("Cost_Trans_Capacity:Q", title="CapEx ($)", format=",.0f")
+        )
+
+    scenario_charts: List[alt.Chart] = []
+    for scenario in scenario_values:
+        scenario_df = summary.loc[summary[scenario_field] == scenario]
+        if scenario_df.empty:
+            continue
+
+        chart = (
+            alt.Chart(scenario_df)
+            .mark_line(point=True)
+            .encode(
+                x=alt.X("year_label:O", title="Planning Year", sort=year_sort),
+                y=alt.Y(f"{result_col}:Q", title="New Capacity (MW)"),
+                color=alt.Color("line_label:N", title="Transmission Path"),
+                tooltip=tooltip_fields,
+                opacity=alt.condition(selection, alt.value(1), alt.value(0.2)),
+            )
+            .properties(width=width, height=height, title=str(scenario))
+        )
+        scenario_charts.append(chart)
+
+    if not scenario_charts:
+        return None
+
+    combined = alt.hconcat(*scenario_charts, spacing=30).resolve_scale(y="shared")
+    combined = combined.add_params(selection)
+    combined = combined.configure_axis(labelFontSize=12, titleFontSize=13).configure_legend(
+        titleFontSize=13,
+        labelFontSize=12,
+    )
+    # combined = configure_full_label_display(combined)
+    return combined
 
 
 # def chart_tx_scenario_map(
