@@ -26,23 +26,25 @@ DONE: CLEAN UP THE REPO TO MAKE IT PEOPLE FACING
 
 DONE: Add retrofit and hydrogen to the capacity factors and dispatch plots
 
+DONE: Add transmission data table
+
+DONE: take a sample netrevenue file and plot them
+
 ## CURRENT PRIORITY
-
-TODO: Add transmission data table
-
-TODO: take a sample netrevenue file and plot them
 
 TODO: operational nse like the one on greg's plots online (compare current policies file )
 
-TODO: Seperate tab for cost related resuls and add costs by zone (operational costs)
+TODO: revenue & costs by technology sub tab add a marker or dot for total profit (merge the profit by tech tab onto this by adding a dot in the exiwting plot))
 
-TODO: check all operational results plots some look iffy
+TODO: cost assumptions(input costs)(this is in the resources subfolder)), demand profiles, fuel prices
 
-TODO: OPERATIONAL costs check the diff between model and society
+TODO: get map plotting from kavi
+
+TODO: add the substation as a dot on the starting point and ending point of the transmission mapping lines 
 
 ## LOW PRIORITY
 
 TODO: for genx visualizations, have an option to only specify a few regions in the regional plots
 DONE: turn to a github page so everyone can view
-TODO:  do transmission mapping
-TODO: IMPORT/EXPORTS tab. imports into any NY region and export out of any NY region - x axis should be region. +ve y axis should show import and -ve y axis should show exports
+DONE:  do transmission mapping
+DONE: IMPORT/EXPORTS tab. imports into any NY region and export out of any NY region - x axis should be region. +ve y axis should show import and -ve y axis should show exports

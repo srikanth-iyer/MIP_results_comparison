@@ -367,7 +367,7 @@ light_map = chart_tx_map_light(
     tx,
     scenario_value=policy,
     year_value=year,
-    min_total_expansion=10,
+    min_total_expansion=1,
     title=f"Transmission expansion - Scenario: {policy} {year}",
     region_simplify_tol=0.04,
     line_simplify_tol=0,

@@ -1940,7 +1940,7 @@ def chart_revenue_costs(
                 alt.Tooltip(VAR_ABBR_MAP[axis], title=title_case(axis))
             )
 
-    chart = (
+    bar_chart = (
         alt.Chart(grouped)
         .mark_bar()
         .encode(
@@ -1951,6 +1951,43 @@ def chart_revenue_costs(
         )
         .properties(width=width, height=height)
     )
+
+    total_group_fields: List[str] = []
+    for col in (x_var, row_var, col_var, "planning_year"):
+        col_field = VAR_ABBR_MAP.get(col, col)
+        if col and col_field in grouped.columns and col_field not in total_group_fields:
+            total_group_fields.append(col_field)
+
+    point_chart = (
+        alt.Chart(grouped)
+        .transform_aggregate(
+            net_total="sum(v)",
+            groupby=total_group_fields,
+        )
+        .mark_point(
+            filled=True,
+            color="#1F1F1F",
+            size=60,
+            stroke="#FFFFFF",
+            strokeWidth=0.5,
+        )
+        .encode(
+            x=alt.X(x_field, **x_kwargs),
+            y=alt.Y("net_total:Q").title(unit_label),
+            tooltip=[
+                alt.Tooltip(x_field, title=title_case(x_var)),
+                alt.Tooltip("net_total:Q", title="Net Total", format=",.2f"),
+                *[
+                    alt.Tooltip(VAR_ABBR_MAP.get(axis, axis), title=title_case(axis))
+                    for axis in tooltip_axes
+                    if VAR_ABBR_MAP.get(axis, axis) != x_field
+                ],
+            ],
+        )
+        .properties(width=width, height=height)
+    )
+
+    chart = alt.layer(bar_chart, point_chart)
 
     chart = config_chart_row_col(chart, row_var, col_var, x_var)
     return chart
