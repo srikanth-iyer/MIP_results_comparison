@@ -1,9 +1,0 @@
-ARCH: x86_64
-CPU_THREADS: 16
-JULIA_STDLIB: "/data/home/smenezes/.julia/juliaup/julia-1.11.7+0.x64.linux.gnu/share/julia/stdlib/v1.11"
-JULIA_VERSION: 1.11.7
-KERNEL: Linux
-GENX_VERSION: 0.4.5
-MACHINE: "x86_64-linux-gnu"
-JIT: "ORCJIT"
-CPU_NAME: "ivybridge"
